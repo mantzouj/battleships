@@ -2,7 +2,7 @@ library IEEE;
 
 use IEEE.std_logic_1164.all;
 use IEEE.numeric_std.all;
-use WORK.VGA_const.all;
+use WORK.battleships_const.all;
 
 entity pixelGenerator is
 	port(

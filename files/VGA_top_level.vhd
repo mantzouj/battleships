@@ -1,7 +1,7 @@
 library IEEE;
 
 use IEEE.std_logic_1164.all;
-use WORK.VGA_const.all;
+use WORK.battleships_const.all;
 
 entity VGA_top_level is
 	port(
