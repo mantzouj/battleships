@@ -1,0 +1,4 @@
+#git ignore file
+
+#ignore db directory
+db/
