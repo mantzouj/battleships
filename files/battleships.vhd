@@ -61,12 +61,10 @@ component ps2 is
 		);  
 end component;
 
-component slow_clock IS
-	PORT(clock_50MHz, reset : IN STD_LOGIC;
-			clock : OUT STD_LOGIC);
-END component slow_clock;
+signal myVGA	: VGA_vector(99 downto 0);
+signal oppVGA	: VGA_vector(99 downto 0);
+signal phase	: integer;
 
-signal slow_clk: std_logic;
 signal scan_code : std_logic_vector(7 downto 0);
 signal scan_readyo : std_logic;
 signal hist3, hist2, hist1, hist0 : std_logic_vector(7 downto 0);
@@ -103,8 +101,7 @@ begin
 
 LCDscreen : de2lcd port map (tie, waiting, res_lcd, clk, game_over, winner, LCD_RS, LCD_E, LCD_ON, RESET_LED, SEC_LED,light, LCD_RW,DATA_BUS);
 keyboard_0 : ps2 port map (keyboard_clk, keyboard_data, clk, '1', scan_code, scan_readyo, hist3, hist2, hist1, hist0, LEDs);
-vga_0 : VGA_top_level port map (T1_position_x, T1_position_y, T1_bullet_x, T1_bullet_y, T2_position_x, T2_position_y, T2_bullet_x, T2_bullet_y, clk, reset, game_over, winner, tie, VGA_RED, VGA_GREEN, VGA_BLUE, HORIZ_SYNC, VERT_SYNC, VGA_BLANK, VGA_CLK);
-slow_clock_map: slow_clock port map(clock_50MHz=> clk, reset=>init, clock=>slow_clk);
+vga_0 : VGA_top_level port map (clk, reset, VGA_RED, VGA_GREEN, VGA_BLUE, HORIZ_SYNC, VERT_SYNC, VGA_BLANK, VGA_CLK, myVGA, oppVGA);
 conv0 : leddcd port map (T1_score,led_seq(48 downto 42));
 conv1 : leddcd port map (T2_score,led_seq(34 downto 28));
 conv2 : leddcd port map ("0000",led_seq(55 downto 49));
@@ -142,18 +139,18 @@ if (rising_edge(clk)) then
 			      T1_speed <= 4;
 			WHEN X"0D" =>					--T1 reverse (tab)
 			      T1_reverse <= '1';
-			WHEN X"69" =>					--T2 low speed (Numpad 1)
-				    T2_speed <= 2;
-			WHEN X"72" =>					--T2 middle speed (Numpad 2)
-			      T2_speed <= 3;
-			WHEN X"7A" =>					--T2 top speed (Numpad 3)
+			WHEN X"69" =>					--LEFT (Numpad 1)
+				   left_press <= '1';
+			WHEN X"7A" =>					--RIGHT (Numpad 3)
+			      right_press <= '1';
+			WHEN X"72" =>					--DOWN (Numpad 2)
 			      T2_speed <= 4;
-			WHEN X"4A" =>					--T2 reverses (question-mark)
+			WHEN X"73" =>					--UP (Numpad 5)
 					T2_reverse <= '1';
 			WHEN X"29" =>  				--T1 shoots (space)
 			      command_T1_shoots <= '1';
-			WHEN X"59" =>  				--T2 shoots (r shift)
-			      command_T2_shoots <= '1';
+			WHEN X"5A" =>  				--ENTER
+			      enter_press <= '1';
 			WHEN X"66" => 					--reset button (backspace)
 					init <= '0';
 					res_lcd <= '0';
@@ -172,74 +169,112 @@ if (rising_edge(clk)) then
 	end if;
 	
 	if (a='1') then			--T1_reverse acknowledged?
-		T1_reverse <= '0';
+		left_press <= '0';
 	end if;
 	
 	if (b='1') then			--T2_reverse acknowledged?
-		T2_reverse <= '0';
+		right_press <= '0';
 	end if;
 	
 	if (c='1') then			--T2 shot acknowledged?
-		command_T2_shoots <= '0';
+		up_press <= '0';
 	end if;
 	
 	if (d='1') then			--T1 shot acknowledged?
-		command_T1_shoots <= '0';
+		down_press <= '0';
+	end if;
+	
+	if (e='1') then			--T1 shot acknowledged?
+		enter_press <= '0';
 	end if;
 end if;
 end process key_press;
 
 
-game: process(reset,slow_clk,done) is
-  variable T1_direction : std_logic;
-  variable T2_direction : std_logic;
-  variable T1_pos_x : integer;
-  variable T1_pos_y : integer;
-  variable T2_pos_x : integer;
-  variable T2_pos_y : integer;
-  variable T1_score_int : integer;
-  variable T2_score_int : integer;
+game: process(reset,clk,done) is
+  variable ship1_x : integer;
+  variable ship1_y : integer;
+  
   begin
 	done <= '0';
 	
   if (init='0') then
-     
-				done <= '1';
-				T2_score <= "0000";
-				T1_score <= "0000";
-				T1_is_hit <= '0';
-				T1_score_int := 0;
-				T2_score_int := 0;
-				T2_is_hit <= '0';
-				T2_created<='0';
-				T1_created<='0';
-	         winner <= '0';
-				game_over <= '0'; tie <= '0';
-            T1_direction   := '1';              T2_direction  := '0';
-            T1_pos_x  := 320-T_SIZE/2;     	     T2_pos_x := 320-T_SIZE/2;
-            T1_pos_y  := 480-T_SIZE;              T2_pos_y := 0;
-            T1_bullet_exists <= '0';            T2_bullet_exists <= '0';
-            T1_bullet_x    <= 318;              T2_bullet_x   <= 318;
-            T1_bullet_y    <= 480-T_SIZE-C_LENGTH+5;   T2_bullet_y   <= T_SIZE+C_LENGTH-5;
+		myVGA 	<= (others => WATER);
+		oppVGA 	<= (others => WATER);
+		ship1_x 	:= 0;
+		ship1_y 	:= 0;
+		ship1_or <= 1;
+		done 		<= '1';
+		phase 	<= PLACE_S1;
 	  
-	  
-    --Control T1-----------------------------------------------------------    
-    elsif (rising_edge(slow_clk)) then
-	 --T1_pos_x := T1_position_x;
-	 --T1_pox_y := T1_position_y;
+    --Phases-----------------------------------------------------------    
+  elsif (rising_edge(clk)) then
 		a	<='0';
 		b	<='0';
 		c  <='0';
 		d  <='0';
+		e	<='0';
+		
+		
+		
+		
+		
+		
+		case phase is
+			WHEN PLACE_S1 =>
+				if (left_press='1') then
+					a<='1';
+					if (ship1_y>0)
+						ship1_y := ship1_y - 1;
+					end if;
+				end if;				
+
+				if (right_press='1') then
+					b<='1';
+					if (ship1_y<9) then
+						ship1_y := ship1_y + 1;
+					end if;
+				end if;	
+
+				if (up_press='1') then
+					c<='1';
+					if (ship1_x>0) then
+						ship1_x := ship1_x - 1;
+					end if;
+				end if;	
+
+				if (down_press='1') then
+					d<='1';
+					if (ship1_x<9) then
+						ship1_x := ship1_x + 1;
+					end if;
+				end if;					
+				
+				if (ship1_or=1) then
+					myVGA(ship1_x + 10*ship1_y) <= SHIP;
+					myVGA(ship1_x + 20*ship1_y) <= SHIP;
+				else
+					myVGA(ship1_x + 10*ship1_y) <= SHIP;
+					myVGA(ship1_x + 1 + 10*ship1_y) <= SHIP;		
+				end if;				
+				
+
+				if (enter_press='1') then
+					e		<= '1';
+					state	<= COMM_1;
+				end if;
+			
+			WHEN COMM_1 =>
+				null;
+			
+			WHEN others =>
+				null;
+	   end CASE;
+	 
+
       if (T1_reverse='1') then
 			a<='1';--done <= '1';
 			T1_direction := not T1_direction;
-		end if;
-		
-		
-		if (T2_reverse='1') then
-			b<='1';
-			T2_direction := not T2_direction;
 		end if;
 		
 		if (T1_direction='1') then  --right
@@ -258,28 +293,6 @@ game: process(reset,slow_clk,done) is
         else
           T1_pos_x  := T1_pos_x - T1_speed;
           T1_direction := '0';
-        end if;
-      end if;
-    
-    --Control T2-----------------------------------------------------------
- 
-
-	 if (T2_direction='1') then  --right
-        if (T2_pos_x > 639-T_SIZE-T2_speed) then --if going to go past end of screen, invert direction
-          T2_direction := '0';
-          T2_pos_x := 639-T_SIZE;
-        else
-          T2_pos_x  := T2_pos_x + T2_speed;
-          T2_direction := '1';
-        end if;
-        
-      else --going left
-        if (T2_pos_x < T2_speed) then --if going to go past end of screen, invert direction
-          T2_direction := '1';
-          T2_pos_x := 0;
-        else
-          T2_pos_x  := T2_pos_x - T2_speed;
-          T2_direction := '0';
         end if;
       end if;
     
@@ -308,31 +321,6 @@ game: process(reset,slow_clk,done) is
             T1_bullet_y <= T1_bullet_y - BULLET_TRAVEL;
       end if;
       
-    --Control T2 Bullet-----------------------------------------------------------  
-
-      if(T2_bullet_exists = '1') then  -- if the bullet exists
-		  if((T2_bullet_y>479-BULLET_TRAVEL) or (T1_is_hit='1')) then
-			 T2_bullet_exists <= '0';
-          T2_bullet_x <= T2_pos_x+T_SIZE/2-3;   --Do not display bullet
-          T2_bullet_y <= T_SIZE+C_LENGTH-5;
-			 T1_is_hit <= '0';
-			 c <= '1';
-		  else
-          T2_bullet_y <= T2_bullet_y + BULLET_TRAVEL;
-			 c <= '1';
-        end if; 
-      elsif(command_T2_shoots = '0' and T2_bullet_exists = '0') then --if no command to shoot and bullet does not exist, hide bullet in tank
-        T2_bullet_x <= T2_pos_x+T_SIZE/2-3; ---might need to get updated to get new position
-      end if;
-      
-      if (command_T2_shoots = '1' and T2_bullet_exists='0') then  --if the bullet does not exist and there is a command to shoot
-            c <= '1';
-				T2_bullet_exists <= '1';
-				T2_created <= '1';
-            T2_bullet_x <= T2_pos_x+T_SIZE/2-3;
-            T2_bullet_y <= T2_bullet_y + BULLET_TRAVEL;
-      end if;
-
     --Tank Explosion Test-----------------------------------------------------------
     
       if((game_over='0') and (T2_created='1') and (T2_bullet_x >= T1_pos_x) and (T2_bullet_x < T1_pos_x+T_size)) then   --if in x-range
@@ -344,28 +332,6 @@ game: process(reset,slow_clk,done) is
         end if;
       end if;
 
-      if((game_over='0') and (T1_created='1') and (T1_bullet_x >= T2_pos_x) and (T1_bullet_x < T2_pos_x+T_size)) then   --if in x-range
-        if ((T1_bullet_y >= T2_pos_y) and (T1_bullet_y < T2_pos_y+T_size)) then
-			 T1_created <= '0';
-          T1_score_int := T1_score_int + 1;
-			 T1_score <= std_logic_vector(to_signed(T1_score_int,4));
-			 T2_is_hit<='1';
-        end if;
-     end if;  
-
-	  if (T1_score_int = 3) then
-		  game_over <= '1';
-		  winner    <= '0';
-	  end if;	
-			
-     if (T2_score_int = 3) then
-		  game_over <= '1';
-		  winner    <= '1';
-	  end if;
-	  
-	  if ((T2_score_int = 3) and (T1_score_int = 3)) then  --in the very rare case that it happens to be a tie.
-		  tie <= '1';
-	  end if;
 			 
   end if; -- end rising edge
 	--put variables in signals
