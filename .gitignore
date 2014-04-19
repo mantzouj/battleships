@@ -4,4 +4,4 @@
 db/
 
 #ignore backup files
-.bak
+*.bak
