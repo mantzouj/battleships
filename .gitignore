@@ -5,3 +5,8 @@ db/
 
 #ignore backup files
 *.bak
+
+#ignore project related files
+*.qpf
+*.qsf
+*.qws
