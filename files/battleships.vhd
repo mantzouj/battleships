@@ -6,7 +6,8 @@ use WORK.battleships_const.all;
 entity battleships is 
  port( 
  --Inputs 
- keyboard_clk, keyboard_data, clk : in std_logic; 
+			data_in 									: in std_logic;
+			keyboard_clk, keyboard_data, clk : in std_logic; 
  
  --Outputs 
 			LCD_RS, LCD_E, LCD_ON, RESET_LED, SEC_LED,light	: OUT	STD_LOGIC;
@@ -14,7 +15,9 @@ entity battleships is
 			DATA_BUS														: INOUT	STD_LOGIC_VECTOR(7 DOWNTO 0);
 			VGA_RED, VGA_GREEN, VGA_BLUE 							: out std_logic_vector(9 downto 0); 
 			HORIZ_SYNC, VERT_SYNC, VGA_BLANK, VGA_CLK			: out std_logic;
+			data_out 													: out std_logic;
 			led_seq														: out std_logic_vector (55 downto 0)
+			
  ); 
 end entity battleships; 
 
@@ -61,9 +64,12 @@ component ps2 is
 		);  
 end component;
 
-signal myVGA	: VGA_vector(99 downto 0);
-signal oppVGA	: VGA_vector(99 downto 0);
-signal phase	: integer;
+signal myVGA			: VGA_vector;
+signal oppVGA			: VGA_vector;
+signal phase			: integer;
+signal ship1_x_vect 	: std_logic_vector(3 downto 0);
+signal ship1_y_vect 	: std_logic_vector(3 downto 0);
+
 
 signal scan_code : std_logic_vector(7 downto 0);
 signal scan_readyo : std_logic;
@@ -91,7 +97,7 @@ signal T1_bullet_x 	 : integer;
 signal T1_bullet_y 	 : integer;
 signal T2_bullet_x 	 : integer;
 signal T2_bullet_y 	 : integer;
-signal init,a,b,c,d,waiting,res_lcd : std_logic;
+signal init,a,b,c,d,e,waiting,res_lcd : std_logic;
 
 signal T1_reverse,T2_reverse 			: std_logic;
 
@@ -116,12 +122,8 @@ if (rising_edge(clk)) then
 	waiting <= '0';
 	
 	if (hist1=X"00") then
-	 T1_speed <= 2;
-	 T2_speed <= 2;
 	 init <= '0';
 	 waiting <= '1';
-	 command_T2_shoots <= '0';
-	 command_T1_shoots <= '0';
 	end if;
   
  	if (hist1/=X"F0") then
@@ -131,14 +133,6 @@ if (rising_edge(clk)) then
     		go <= '0';
 	 CASE hist0 IS
 
-			WHEN X"16" =>					--T1 low speed (key 1)
-				   T1_speed <= 2;
-			WHEN X"1E" =>					--T1 middle speed (key 2)
-			      T1_speed <= 3;
-			WHEN X"26" =>					--T1 top speed (key 3)
-			      T1_speed <= 4;
-			WHEN X"0D" =>					--T1 reverse (tab)
-			      T1_reverse <= '1';
 			WHEN X"69" =>					--LEFT (Numpad 1)
 				   left_press <= '1';
 			WHEN X"7A" =>					--RIGHT (Numpad 3)
@@ -154,8 +148,6 @@ if (rising_edge(clk)) then
 			WHEN X"66" => 					--reset button (backspace)
 					init <= '0';
 					res_lcd <= '0';
-					T1_speed <= 2;
-					T2_speed <= 2;
 			WHEN others =>
 					null;
 	   end CASE;
@@ -192,8 +184,9 @@ end process key_press;
 
 
 game: process(reset,clk,done) is
-  variable ship1_x : integer;
-  variable ship1_y : integer;
+  variable ship1_x : natural;
+  variable ship1_y : natural;
+  variable S1_placed : std_logic;
   
   begin
 	done <= '0';
@@ -260,12 +253,27 @@ game: process(reset,clk,done) is
 				
 
 				if (enter_press='1') then
-					e		<= '1';
-					state	<= COMM_1;
+					e			<= '1';
+					data_out	<= '0';
+					state		<= PRE_COMM_1;
+					--S1_placed:= '1';
 				end if;
+				
+				--if (data_in='0' & S1_placed='1') then
+					
+				--end if;
+			
+			WHEN PRE_COMM_1 =>
+				if (data_in='0') then
+					data_out <= --useful info
+					state <= COMM_1;
+				end if;
+				
 			
 			WHEN COMM_1 =>
-				null;
+				
+				
+				
 			
 			WHEN others =>
 				null;
@@ -335,10 +343,8 @@ game: process(reset,clk,done) is
 			 
   end if; -- end rising edge
 	--put variables in signals
-    T1_position_x <= T1_pos_x;
-	 T1_position_y <= T1_pos_y;
-	 T2_position_x <= T2_pos_x;
-	 T2_position_y <= T2_pos_y;
+	 ship1_x_vector <= std_logic_vector(to_unsigned(ship1_x,4));
+	 ship1_y_vector <= std_logic_vector(to_unsigned(ship1_y,4));
 -------    
 end process game;
 
