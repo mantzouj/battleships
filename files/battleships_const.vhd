@@ -16,7 +16,22 @@ constant WATER		: integer := 0;
 constant OVERLAP	: integer := 5;
 constant SHIP		: integer := 1;
 
-type VGA_vector is array (99 downto 0) of integer range 0 to 7;
+
+constant PLACE_S1 : integer := 0;
+constant PRE_COMM_S1 : integer := 1;
+constant COMM_S1_1 : integer := 2;
+constant COMM_S1_2 : integer := 3;
+constant COMM_S1_3 : integer := 4;
+constant COMM_S1_4 : integer := 5;
+constant COMM_S1_5 : integer := 6;
+constant COMM_S1_6 : integer := 7;
+constant COMM_S1_7 : integer := 8;
+constant COMM_S1_8 : integer := 9;
+constant COMM_S1_9 : integer := 10;
+constant TESTING1 : integer := 20;
+
+
+type VGA_vector is array (99 downto 0) of natural range 0 to 7;
 
 --Other constants, types, subroutines, components go here
 end package battleships_const;
