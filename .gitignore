@@ -10,3 +10,8 @@ db/
 *.qpf
 *.qsf
 *.qws
+
+#things to be ignored during open project
+incremental_db/
+output_files/
+simulation/
