@@ -215,7 +215,7 @@ game: process(reset,clk,done) is
 		e	<='0';
 		f	<='0';
 		
-		data_out <= data1;
+		--data_out <= data1;
 		
 		if (data_in='0') then
 			test4 <= '0';
@@ -236,7 +236,7 @@ game: process(reset,clk,done) is
 
 				if (right_press='1') then
 					b<='1';
-					if (ship1_x<8) then
+					if ((ship1_x<8 and ship1_or='0') or (ship1_x<9 and ship1_or='1')) then
 						ship1_x := ship1_x + 1;
 					end if;
 				end if;	
@@ -250,7 +250,7 @@ game: process(reset,clk,done) is
 
 				if (down_press='1') then
 					d<='1';
-					if (ship1_y<8) then	--2 length ship
+					if ((ship1_y<9 and ship1_or='0') or (ship1_y<8 and ship1_or='1')) then	--2 length ship
 						ship1_y := ship1_y + 1;
 					end if;
 				end if;
@@ -304,22 +304,22 @@ game: process(reset,clk,done) is
 			WHEN COMM_S1_1 =>
 				test3 <= '1';
 				data_out <= ship1_x_vector(2);
-				opp_ship1_x_vector(3) <= '1';--data_in;
+				opp_ship1_x_vector(3) <= data_in;
 				state <= COMM_S1_2;
 
 			WHEN COMM_S1_2 =>
 				data_out <= ship1_x_vector(1);
-				opp_ship1_x_vector(2) <= '0';--data_in;
+				opp_ship1_x_vector(2) <= data_in;
 				state <= COMM_S1_3;
 				
 			WHEN COMM_S1_3 =>
 				data_out <= ship1_x_vector(0);
-				opp_ship1_x_vector(1) <= '1';--data_in;
+				opp_ship1_x_vector(1) <= data_in;
 				state <= COMM_S1_4;
 
 			WHEN COMM_S1_4 =>
 				data_out <= ship1_y_vector(3);
-				opp_ship1_x_vector(0) <= '0';--data_in;
+				opp_ship1_x_vector(0) <= data_in;
 				state <= COMM_S1_5;
 
 			WHEN COMM_S1_5 =>
