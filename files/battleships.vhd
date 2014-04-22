@@ -215,6 +215,7 @@ game: process(reset,clk,done) is
 		e	<='0';
 		f	<='0';
 		
+		data_out <= data1;
 		
 		if (data_in='0') then
 			test4 <= '0';
@@ -292,7 +293,7 @@ game: process(reset,clk,done) is
 			
 			WHEN PRE_COMM_S1 =>
 				test1 <= '1';
-				if (data0='0') then --data_in
+				if (data_in='0') then --data0
 					test2 <= '1';
 					data_out <= ship1_x_vector(3);--useful info
 					state <= COMM_S1_1;
@@ -348,9 +349,11 @@ game: process(reset,clk,done) is
 				
 			WHEN TESTING1 =>
 				if (opp_ship1_or='1') then
+					oppVGA <= (others => WATER);
 					oppVGA(opp_ship1_x + 10*opp_ship1_y) <= SHIP;
-					oppVGA(opp_ship1_x + 20*opp_ship1_y) <= SHIP;
+					oppVGA(opp_ship1_x + 10*(opp_ship1_y+1)) <= SHIP;
 				else
+					oppVGA <= (others => WATER);
 					oppVGA(opp_ship1_x + 10*opp_ship1_y) <= SHIP;
 					oppVGA(opp_ship1_x + 1 + 10*opp_ship1_y) <= SHIP;		
 				end if;
