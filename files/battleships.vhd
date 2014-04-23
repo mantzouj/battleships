@@ -17,7 +17,7 @@ entity battleships is
 			VGA_RED, VGA_GREEN, VGA_BLUE 							: out std_logic_vector(9 downto 0); 
 			HORIZ_SYNC, VERT_SYNC, VGA_BLANK, VGA_CLK			: out std_logic;
 			data_out 													: out std_logic;
-			test0, test1, test2, test3, test4					: out std_logic;
+			test0, test1, test2, test3, test4, test5, test6, test7, test8, test9, test10, test11, test12, test13, test14 : out std_logic;
 			led_seq														: out std_logic_vector (55 downto 0)
 			
  ); 
@@ -66,6 +66,7 @@ end component;
 
 signal myVGA			: VGA_vector;
 signal oppVGA			: VGA_vector;
+signal counter			: integer;
 signal left_press, up_press, down_press, right_press, flip, enter_press : std_logic;
 signal phase, state	: integer;
 signal ship1_x_vector: std_logic_vector(3 downto 0);
@@ -187,6 +188,8 @@ game: process(reset,clk,done) is
   if (init='0') then
 		myVGA 	<= (others => WATER);
 		oppVGA 	<= (others => WATER);
+		counter  <= 0;
+		phase <= 0;
 		data_out <= '1';
 		test0		<= '0'; test1		<= '0'; test2		<= '0'; test3		<= '0'; test4 <= '0';
 		ship1_x 	:= 0;
@@ -293,10 +296,18 @@ game: process(reset,clk,done) is
 			
 			WHEN PRE_COMM_S1 =>
 				test1 <= '1';
-				if (data_in='0') then --data0
+				if (data_in='0') then
+					phase <= 1;
+				end if;
+				if (phase=1) then
+					counter <= counter + 1;
+				end if;
+				--counter <= counter + 1;
+				if (counter=50000000) then --data0
 					test2 <= '1';
 					data_out <= ship1_x_vector(3);--useful info
 					state <= COMM_S1_1;
+					counter <= 0;
 				else
 					state <= PRE_COMM_S1;
 				end if;
