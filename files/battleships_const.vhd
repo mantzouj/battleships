@@ -29,8 +29,10 @@ constant COMM_S1_6 : integer := 7;
 constant COMM_S1_7 : integer := 8;
 constant COMM_S1_8 : integer := 9;
 constant COMM_S1_9 : integer := 10;
-constant TESTING1 : integer := 20;
 
+constant SHOT_SELECT : integer := 100;
+constant TESTING1 : integer := 2000;
+constant XXXX : integer := 9999; --dummy
 
 type VGA_vector is array (99 downto 0) of natural range 0 to 7;
 
