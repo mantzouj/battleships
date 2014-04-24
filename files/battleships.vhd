@@ -184,7 +184,11 @@ game: process(reset,clk,done) is
   
   begin
 	done <= '0';
-	
+		if (data_in='0') then
+			test4 <= '0';
+		else
+			test4 <= '1';
+		end if;
   if (init='0') then
 		myVGA 	<= (others => WATER);
 		oppVGA 	<= (others => WATER);
@@ -218,15 +222,7 @@ game: process(reset,clk,done) is
 		e	<='0';
 		f	<='0';
 		
-		--data_out <= data1;
-		
-		if (data_in='0') then
-			test4 <= '0';
-		else
-			test4 <= '1';
-		end if;
-		
-		
+		--data_out <= data1;		
 		
 		case state is
 			WHEN PLACE_S1 =>
@@ -285,14 +281,8 @@ game: process(reset,clk,done) is
 					data_out	<= '0';
 					state		<= PRE_COMM_S1;
 					test0 <= '1';
-					--S1_placed:= '1';
 				end if;
 				
-				
-				
-				--if (data_in='0' & S1_placed='1') then
-					
-				--end if;
 			
 			WHEN PRE_COMM_S1 =>
 				test1 <= '1';
@@ -302,37 +292,73 @@ game: process(reset,clk,done) is
 				if (phase=1) then
 					counter <= counter + 1;
 				end if;
-				--counter <= counter + 1;
-				if (counter=50000000) then --data0
+				if (counter=(DELAY/4)) then
+					data_out <= ship1_x_vector(3);--useful info-----------------------------
+				end if;
+				if (counter=(DELAY/2)) then
+					opp_ship1_x_vector(3) <= data_in;
+				end if;
+				
+				if (counter=DELAY) then --data0
 					test2 <= '1';
-					data_out <= ship1_x_vector(3);--useful info
+					--data_out <= ship1_x_vector(3);--useful info
 					state <= COMM_S1_1;
 					counter <= 0;
-				else
-					state <= PRE_COMM_S1;
+					phase <= 0;
 				end if;
 				
 			WHEN COMM_S1_1 =>
 				test3 <= '1';
-				data_out <= ship1_x_vector(2);
-				opp_ship1_x_vector(3) <= data_in;
-				state <= COMM_S1_2;
+				data_out <= ship1_x_vector(2);-------------------
+				if (counter=(DELAY/2)) then
+					opp_ship1_x_vector(2) <= data_in;
+				end if;
+				
+				if (counter=DELAY) then
+					counter <= 0;
+					state <= COMM_S1_2;
+				else
+					counter <= counter + 1;
+				end if;
+
 
 			WHEN COMM_S1_2 =>
-				data_out <= ship1_x_vector(1);
-				opp_ship1_x_vector(2) <= data_in;
-				state <= COMM_S1_3;
+				data_out <= ship1_x_vector(1);---------------------
+				if (counter=(DELAY/2)) then
+					opp_ship1_x_vector(1) <= data_in;
+				end if;
+				
+				if (counter=DELAY) then
+					counter <= 0;
+					state <= COMM_S1_3;
+				else
+					counter <= counter + 1;
+				end if;
+				
 				
 			WHEN COMM_S1_3 =>
-				data_out <= ship1_x_vector(0);
-				opp_ship1_x_vector(1) <= data_in;
-				state <= COMM_S1_4;
+				data_out <= ship1_x_vector(0);-----------------------
+				if (counter=(DELAY/2)) then
+					opp_ship1_x_vector(0) <= data_in;
+				end if;
+				
+				if (counter=DELAY) then
+					counter <= 0;
+					state <= COMM_S1_4;
+				else
+					counter <= counter + 1;
+				end if;
 
 			WHEN COMM_S1_4 =>
 				data_out <= ship1_y_vector(3);
-				opp_ship1_x_vector(0) <= data_in;
-				state <= COMM_S1_5;
-
+				if (counter=50000000) then
+					--opp_ship1_x_vector(0) <= data_in;----------------WRONG!!!!!
+					counter <= 0;
+					state <= COMM_S1_5;
+				else
+					counter <= counter + 1;
+				end if;
+					
 			WHEN COMM_S1_5 =>
 				data_out <= ship1_y_vector(2);
 				opp_ship1_y_vector(3) <= data_in;
@@ -354,7 +380,7 @@ game: process(reset,clk,done) is
 				state <= COMM_S1_9;
 
 			WHEN COMM_S1_9 =>
-				data_out <= '1';--------------------------------ship1_y_vector(0);
+				data_out <= '0';--------------------------------ship1_y_vector(0);
 				opp_ship1_or <= data_in;
 				state <= TESTING1;				
 				

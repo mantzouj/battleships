@@ -15,6 +15,7 @@ constant CURSOR	: integer := 4;
 constant WATER		: integer := 0;
 constant OVERLAP	: integer := 5;
 constant SHIP		: integer := 1;
+constant DELAY		: integer := 50000;
 
 
 constant PLACE_S1 : integer := 0;
