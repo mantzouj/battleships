@@ -7,10 +7,10 @@ entity ps2 is
 	port( 	keyboard_clk, keyboard_data, clock_50MHz ,
 			reset : in std_logic;
 			--read : in std_logic;
-			scan_code : out std_logic_vector( 7 downto 0 );
-			scan_readyo : out std_logic;
-			hist3 : out std_logic_vector(7 downto 0);
-			hist2 : out std_logic_vector(7 downto 0);
+			--scan_code : out std_logic_vector( 7 downto 0 );
+			--scan_readyo : out std_logic;
+			--hist3 : out std_logic_vector(7 downto 0);
+			--hist2 : out std_logic_vector(7 downto 0);
 			hist1 : out std_logic_vector(7 downto 0);
 			hist0 : out std_logic_vector(7 downto 0);
 			led_seq: out std_logic_vector (55 downto 0)
@@ -77,13 +77,13 @@ pulser: oneshot port map(
    clk => clock_50MHz
 			);
 
-scan_readyo <= scan2;
-scan_code <= scan_code2;
+--scan_readyo <= scan2;
+--scan_code <= scan_code2;
 
 hist0<=history0;
 hist1<=history1;
-hist2<=history2;
-hist3<=history3;
+--hist2<=history2;
+--hist3<=history3;
 
 a1 : process(scan2)
 begin

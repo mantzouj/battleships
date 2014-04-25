@@ -8,7 +8,7 @@ entity battleships is
  --Inputs 
 			data_in 									: in std_logic;
 			keyboard_clk, keyboard_data, clk : in std_logic;
-			data0, data1, data2, data3, data4, data5 : in std_logic;
+			--data0, data1, data2, data3, data4, data5 : in std_logic;
  
  --Outputs 
 			LCD_RS, LCD_E, LCD_ON, RESET_LED, SEC_LED,light	: OUT	STD_LOGIC;
@@ -17,7 +17,7 @@ entity battleships is
 			VGA_RED, VGA_GREEN, VGA_BLUE 							: out std_logic_vector(9 downto 0); 
 			HORIZ_SYNC, VERT_SYNC, VGA_BLANK, VGA_CLK			: out std_logic;
 			data_out 													: out std_logic;
-			test0, test1, test2, test3, test4, test5, test6, test7, test8, test9, test10, test11, test12, test13, test14 : out std_logic;
+			test0, test1, test2, test3, test4 					: out std_logic; --, test5, test6, test7, test8, test9, test10, test11, test12, test13, test14 
 			led_seq														: out std_logic_vector (55 downto 0)
 			
  ); 
@@ -54,10 +54,10 @@ end component leddcd;
 component ps2 is 
 	port( 	keyboard_clk, keyboard_data, clock_50MHz ,
 			reset : in std_logic;
-			scan_code : out std_logic_vector( 7 downto 0 );
-			scan_readyo : out std_logic;
-			hist3 : out std_logic_vector(7 downto 0);
-			hist2 : out std_logic_vector(7 downto 0);
+			--scan_code : out std_logic_vector( 7 downto 0 );
+			--scan_readyo : out std_logic;
+			--hist3 : out std_logic_vector(7 downto 0);
+			--hist2 : out std_logic_vector(7 downto 0);
 			hist1 : out std_logic_vector(7 downto 0);
 			hist0 : out std_logic_vector(7 downto 0);
 			led_seq: out std_logic_vector (55 downto 0)
@@ -88,14 +88,14 @@ signal LEDs				 : std_logic_vector (55 downto 0);
 signal temp_1 			 : std_logic_vector (5 downto 0);
 signal activate 		 : std_logic;
 signal reset, tie		 : std_logic;
-signal init,a,b,c,d,e,f,waiting,res_lcd : std_logic;
+signal init,waiting,res_lcd : std_logic; --,a,b,c,d,e,f
 
 signal go 					: std_logic;
 
 begin 
 
 LCDscreen : de2lcd port map (tie, waiting, res_lcd, clk, game_over, winner, LCD_RS, LCD_E, LCD_ON, RESET_LED, SEC_LED,light, LCD_RW,DATA_BUS);
-keyboard_0 : ps2 port map (keyboard_clk, keyboard_data, clk, '1', scan_code, scan_readyo, hist3, hist2, hist1, hist0, LEDs);
+keyboard_0 : ps2 port map (keyboard_clk, keyboard_data, clk, '1', hist1, hist0, LEDs);
 vga_0 : VGA_top_level port map (clk, reset, VGA_RED, VGA_GREEN, VGA_BLUE, HORIZ_SYNC, VERT_SYNC, VGA_BLANK, VGA_CLK, myVGA, oppVGA);
 conv0 : leddcd port map (ship1_y_vector,led_seq(48 downto 42));
 conv1 : leddcd port map (opp_ship1_y_vector,led_seq(34 downto 28));
@@ -176,7 +176,7 @@ end if;
 end process key_press;
 
 
-game: process(reset,clk,done) is
+game: process(reset,init,data_in,ship1_or,clk,done) is
   variable ship1_x : natural;
   variable ship1_y : natural;
   variable opp_ship1_x : natural;
@@ -219,47 +219,47 @@ game: process(reset,clk,done) is
 	  
     --Phases-----------------------------------------------------------    
   elsif (rising_edge(clk)) then
-		a	<='0';
-		b	<='0';
-		c  <='0';
-		d  <='0';
-		e	<='0';
-		f	<='0';
+--		a	<='0';
+--		b	<='0';
+--		c  <='0';
+--		d  <='0';
+--		e	<='0';
+--		f	<='0';
 		
 		--data_out <= data1;		
 		
 		case state is
 			WHEN PLACE_S1 =>
 				if (left_press='1') then
-					a<='1';
+					--a<='1';
 					if (ship1_x>0) then
 						ship1_x := ship1_x - 1;
 					end if;
 				end if;				
 
 				if (right_press='1') then
-					b<='1';
+					--b<='1';
 					if ((ship1_x<8 and ship1_or='0') or (ship1_x<9 and ship1_or='1')) then
 						ship1_x := ship1_x + 1;
 					end if;
 				end if;	
 
 				if (up_press='1') then
-					c<='1';
+					--c<='1';
 					if (ship1_y>0) then
 						ship1_y := ship1_y - 1;
 					end if;
 				end if;	
 
 				if (down_press='1') then
-					d<='1';
+					--d<='1';
 					if ((ship1_y<9 and ship1_or='0') or (ship1_y<8 and ship1_or='1')) then	--2 length ship
 						ship1_y := ship1_y + 1;
 					end if;
 				end if;
 				
 				if (flip='1') then
-					f<='1';
+					--f<='1';
 					if ((ship1_or='1') and (ship1_x<9)) then			--potentially make ship1_or a variable
 						ship1_or<='0';
 					end if;
@@ -281,7 +281,7 @@ game: process(reset,clk,done) is
 										--		myVGA <= ((ship1_x + 10*(ship1_y+1)) => SHIP, others => WATER);
 
 				if (enter_press='1') then
-					e			<= '1';
+					--e			<= '1';
 					data_out	<= '0';
 					state		<= PRE_COMM_S1;
 					test0 <= '1';
@@ -476,8 +476,8 @@ game: process(reset,clk,done) is
 										--		myVGA <= ((ship1_x + 10*ship1_y) => SHIP, others => WATER);
 										--		myVGA <= ((ship1_x + 10*(ship1_y+1)) => SHIP, others => WATER);
 
-				if (enter_press='1') then  --transmit shot coordinates to opponent -&- test for hit/miss ---if all ships hit, go to game-over phase, otherwise wait for opponent
-					e			<= '1';
+				if (enter_press='1') then --*do not allow enter on already clicked-on box, and perhaps show illegal color too  --transmit shot coordinates to opponent -&- test for hit/miss ---if all ships hit, go to game-over phase, otherwise wait for opponent
+					--e			<= '1';
 					state		<= XXXX;
 					test0 <= '1';
 				end if;
@@ -501,3 +501,53 @@ end process game;
 
 
 end architecture behavioral;
+
+
+
+
+-----
+
+--if (rising_edge(clk)) then
+--	if (press='0') then
+--		counter <= 0;
+--		delay_cnt <= 0;
+--	end if;
+--	
+--	if (delay_cnt=DELAY_SND) then
+--		delay_cnt <= 0;
+--		counter <= counter + 1;
+--		if (counter=0) then
+--			snd <= VALUE0;
+--		end if;
+--		--...........--
+--		if (counter=29999) then
+--			snd <= VALUE29999;
+--		end if;
+--		
+--	else
+--		delay_cnt <= delay_cnt+1;
+--	end if;
+--
+--end if;
+--
+----in verilog:
+--
+--always @(posedge CLOCK_50)
+--	if(press == 0) begin
+--		counter <= 0;
+--		delay_cnt <= 0;
+--	end
+--	if (delay_cnt==DELAY_SND) then
+--		case counter
+--			0: snd <= VALUE0;
+--			1: snd <= VALUE1;
+--			2: snd <= VALUE2;
+--			--...
+--			29999: snd <= VALUE29999;
+--			default: snd <= 0;
+--		endcase;
+--		
+--		delay_cnt <= 0;
+--		counter <= counter + 1;
+--		
+--	end else delay_cnt <= delay_cnt + 1;
