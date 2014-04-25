@@ -11,7 +11,7 @@ entity battleships is
 			--data0, data1, data2, data3, data4, data5 : in std_logic;
  
  --Outputs 
-			LCD_RS, LCD_E, LCD_ON, RESET_LED, SEC_LED,light	: OUT	STD_LOGIC;
+			LCD_RS, LCD_E, LCD_ON, RESET_LED, SEC_LED			: OUT	STD_LOGIC;
 			LCD_RW														: BUFFER STD_LOGIC;
 			DATA_BUS														: INOUT	STD_LOGIC_VECTOR(7 DOWNTO 0);
 			VGA_RED, VGA_GREEN, VGA_BLUE 							: out std_logic_vector(9 downto 0); 
@@ -27,7 +27,7 @@ architecture behavioral of battleships is
 
 component de2lcd IS
 	PORT(tie, waiting, reset, clk_50Mhz, game_over, winner					: IN	STD_LOGIC;
-		 LCD_RS, LCD_E, LCD_ON, RESET_LED, SEC_LED,light	: OUT	STD_LOGIC;
+		 LCD_RS, LCD_E, LCD_ON, RESET_LED, SEC_LED			: OUT	STD_LOGIC;
 		 LCD_RW															: BUFFER STD_LOGIC;
 		 DATA_BUS														: INOUT	STD_LOGIC_VECTOR(7 DOWNTO 0));
 END component;
@@ -69,24 +69,24 @@ signal oppVGA			: VGA_vector;
 signal counter			: integer;
 signal left_press, up_press, down_press, right_press, flip, enter_press : std_logic;
 signal phase, state	: integer;
-signal ship1_x_vector: std_logic_vector(3 downto 0);
-signal ship1_y_vector: std_logic_vector(3 downto 0);
+signal ship1_x_vector, cursor_x_vector: std_logic_vector(3 downto 0);
+signal ship1_y_vector, cursor_y_vector: std_logic_vector(3 downto 0);
 signal ship1_or		: std_logic;
 signal opp_ship1_or	: std_logic;
-signal opp_ship1_x_vector: std_logic_vector(3 downto 0);
-signal opp_ship1_y_vector: std_logic_vector(3 downto 0);
+signal opp_ship1_x_vector, opp_cursor_x_vector: std_logic_vector(3 downto 0);
+signal opp_ship1_y_vector, opp_cursor_y_vector: std_logic_vector(3 downto 0);
 signal saved1			: integer;
+signal myHits, oppHits : integer;
 
 
-signal scan_code : std_logic_vector(7 downto 0);
-signal scan_readyo : std_logic;
-signal hist3, hist2, hist1, hist0 : std_logic_vector(7 downto 0);
+--signal scan_code : std_logic_vector(7 downto 0);
+--signal scan_readyo : std_logic;
+--signal hist3, hist2 : std_logic_vector(7 downto 0);
+signal hist1, hist0 : std_logic_vector(7 downto 0);
 signal winner         : std_logic;
 signal game_over      : std_logic;
 signal done           : std_logic;
 signal LEDs				 : std_logic_vector (55 downto 0);
-signal temp_1 			 : std_logic_vector (5 downto 0);
-signal activate 		 : std_logic;
 signal reset, tie		 : std_logic;
 signal init,waiting,res_lcd : std_logic; --,a,b,c,d,e,f
 
@@ -94,7 +94,7 @@ signal go 					: std_logic;
 
 begin 
 
-LCDscreen : de2lcd port map (tie, waiting, res_lcd, clk, game_over, winner, LCD_RS, LCD_E, LCD_ON, RESET_LED, SEC_LED,light, LCD_RW,DATA_BUS);
+LCDscreen : de2lcd port map (tie, waiting, res_lcd, clk, game_over, winner, LCD_RS, LCD_E, LCD_ON, RESET_LED, SEC_LED,LCD_RW,DATA_BUS);
 keyboard_0 : ps2 port map (keyboard_clk, keyboard_data, clk, '1', hist1, hist0, LEDs);
 vga_0 : VGA_top_level port map (clk, reset, VGA_RED, VGA_GREEN, VGA_BLUE, HORIZ_SYNC, VERT_SYNC, VGA_BLANK, VGA_CLK, myVGA, oppVGA);
 conv0 : leddcd port map (ship1_y_vector,led_seq(48 downto 42));
@@ -179,10 +179,11 @@ end process key_press;
 game: process(reset,init,data_in,ship1_or,clk,done) is
   variable ship1_x : natural;
   variable ship1_y : natural;
-  variable opp_ship1_x : natural;
-  variable opp_ship1_y : natural;
+  variable opp_ship1_x, opp_cursor_x : natural;
+  variable opp_ship1_y, opp_cursor_y : natural;
   variable S1_placed : std_logic;
-  variable cursor_x, cursor_y : integer;
+  variable cursor_x, cursor_y : natural;
+  
   
   begin
 	done <= '0';
@@ -194,7 +195,7 @@ game: process(reset,init,data_in,ship1_or,clk,done) is
   if (init='0') then
 		myVGA 	<= (others => WATER);
 		oppVGA 	<= (others => WATER);
-		counter  <= 0;
+		counter  <= 0; myHits <= 0; oppHits <= 0;
 		cursor_x	:= 4;
 		cursor_y := 4;
 		phase <= 0;
@@ -206,6 +207,10 @@ game: process(reset,init,data_in,ship1_or,clk,done) is
 		opp_ship1_y_vector <= "0000";
 		ship1_x_vector <= "0000";
 		ship1_y_vector <= "0000";
+		cursor_x_vector <= "0100";
+		cursor_y_vector <= "0100";
+		opp_cursor_x_vector <= "0000";
+		opp_cursor_x_vector <= "0000";
 		ship1_or <= '1';
 		done 		<= '1';
 		state 	<= PLACE_S1;
@@ -277,8 +282,6 @@ game: process(reset,init,data_in,ship1_or,clk,done) is
 					myVGA(ship1_x + 10*ship1_y) <= SHIP;
 					myVGA(ship1_x + 1 + 10*ship1_y) <= SHIP;		
 				end if;			
-										--		myVGA <= ((ship1_x + 10*ship1_y) => SHIP, others => WATER);
-										--		myVGA <= ((ship1_x + 10*(ship1_y+1)) => SHIP, others => WATER);
 
 				if (enter_press='1') then
 					--e			<= '1';
@@ -431,9 +434,7 @@ game: process(reset,init,data_in,ship1_or,clk,done) is
 				state <= SHOT_SELECT;
 				
 			WHEN SHOT_SELECT =>
-								
-				
-				
+												
 				if ((down_press='1') or (up_press='1') or (right_press='1') or (left_press='1')) then
 					--saved1 <= myVGA(cursor_x + 10*cursor_y);
 					myVGA(cursor_x + 10*cursor_y) <= saved1;
@@ -443,45 +444,176 @@ game: process(reset,init,data_in,ship1_or,clk,done) is
 					if (cursor_x>0) then
 						cursor_x := cursor_x - 1;
 						--saved2 <= myVGA(cursor_x + 1 + 10*cursor_y)
-						saved1 <= myVGA(cursor_x + 10*cursor_y);
+						saved1 <= oppVGA(cursor_x + 10*cursor_y);
 					end if;
 				end if;				
 
 				if (right_press='1') then
 					if (cursor_x<9) then
 						cursor_x := cursor_x + 1;
-						--saved2 <= myVGA(cursor_x - 1 + 10*cursor_y)
-						saved1 <= myVGA(cursor_x + 10*cursor_y);
+						--saved2 <= oppVGA(cursor_x - 1 + 10*cursor_y)
+						saved1 <= oppVGA(cursor_x + 10*cursor_y);
 					end if;
 				end if;	
 
 				if (up_press='1') then
 					if (cursor_y>0) then
 						cursor_y := cursor_y - 1;
-						--saved2 <= myVGA(cursor_x + 10*(cursor_y+1))
-						saved1 <= myVGA(cursor_x + 10*cursor_y);
+						--saved2 <= oppVGA(cursor_x + 10*(cursor_y+1))
+						saved1 <= oppVGA(cursor_x + 10*cursor_y);
 					end if;
 				end if;	
 
 				if (down_press='1') then
 					if (cursor_y<9) then	--2 length ship
 						cursor_y := cursor_y + 1;
-						--saved2 <= myVGA(cursor_x + 10*(cursor_y-1))
-						saved1 <= myVGA(cursor_x + 10*cursor_y);
+						--saved2 <= oppVGA(cursor_x + 10*(cursor_y-1))
+						saved1 <= oppVGA(cursor_x + 10*cursor_y);
 					end if;
 				end if;
 				
-				myVGA(cursor_x + 10*cursor_y) <= CURSOR;
+				oppVGA(cursor_x + 10*cursor_y) <= CURSOR;
 
 										--		myVGA <= ((ship1_x + 10*ship1_y) => SHIP, others => WATER);
 										--		myVGA <= ((ship1_x + 10*(ship1_y+1)) => SHIP, others => WATER);
 
-				if (enter_press='1') then --*do not allow enter on already clicked-on box, and perhaps show illegal color too  --transmit shot coordinates to opponent -&- test for hit/miss ---if all ships hit, go to game-over phase, otherwise wait for opponent
-					--e			<= '1';
-					state		<= XXXX;
-					test0 <= '1';
+				if (enter_press='1' and saved1=SHIP) then --*do not allow enter on already clicked-on box, and perhaps show illegal color too  --transmit shot coordinates to opponent -&- test for hit/miss ---if all ships hit, go to game-over phase, otherwise wait for opponent
+---!!!!!!!!!--e			<= '1'; --------WATER in 'correct' version---------!!!!!!!!!!!!!!!!!!!!!!!
+					if (((cursor_x + 10*cursor_y)=(opp_ship1_x + 10*opp_ship1_y)) or (opp_ship1_or='1' and (cursor_x + 10*cursor_y)=(opp_ship1_x + 10*(opp_ship1_y+1))) or (opp_ship1_or='0' and (cursor_x + 10*cursor_y)=(opp_ship1_x + 10*opp_ship1_y +1))) then
+						oppVGA(cursor_x+10*cursor_y) <= HIT;
+						myHits <= myHits + 1;
+					else
+						oppVGA(cursor_x+10*cursor_y) <= MISS;
+					end if;
+					state		<= PRE_COMM_SHOT;
+					data_out <= '0';
+					test0 <= '0';
 				end if;
 				
+			WHEN PRE_COMM_SHOT =>
+				test1 <= '0';
+				if (data_in='0') then
+					phase <= 1;
+				end if;
+				if (phase=1) then
+					counter <= counter + 1;
+				end if;
+				if (counter=(DELAY/4)) then
+					data_out <= cursor_x_vector(3);--useful info-----------------------------
+				end if;
+				if (counter=(DELAY/2)) then
+					opp_cursor_x_vector(3) <= data_in;
+				end if;
+				
+				if (counter=DELAY) then --data0
+					test2 <= '1';
+					--data_out <= ship1_x_vector(3);--useful info
+					state <= COMM_SHOT_1;
+					counter <= 0;
+					phase <= 0;
+				end if;
+				
+			WHEN COMM_SHOT_1 =>
+				test3 <= '0';
+				data_out <= cursor_x_vector(2);-------------------
+				if (counter=(DELAY/2)) then
+					opp_cursor_x_vector(2) <= data_in;
+				end if;
+				
+				if (counter=DELAY) then
+					counter <= 0;
+					state <= COMM_SHOT_2;
+				else
+					counter <= counter + 1;
+				end if;
+
+
+			WHEN COMM_SHOT_2 =>
+				data_out <= cursor_x_vector(1);---------------------
+				if (counter=(DELAY/2)) then
+					opp_cursor_x_vector(1) <= data_in;
+				end if;
+				
+				if (counter=DELAY) then
+					counter <= 0;
+					state <= COMM_SHOT_3;
+				else
+					counter <= counter + 1;
+				end if;
+				
+				
+			WHEN COMM_SHOT_3 =>
+				data_out <= cursor_x_vector(0);-----------------------
+				if (counter=(DELAY/2)) then
+					opp_cursor_x_vector(0) <= data_in;
+				end if;
+				
+				if (counter=DELAY) then
+					counter <= 0;
+					state <= COMM_SHOT_4;
+				else
+					counter <= counter + 1;
+				end if;
+
+			WHEN COMM_SHOT_4 =>
+				data_out <= cursor_y_vector(3);
+				if (counter=(DELAY/2)) then
+					opp_cursor_y_vector(3) <= data_in;
+				end if;
+				if (counter=DELAY) then
+					counter <= 0;
+					state <= COMM_SHOT_5;
+				else
+					counter <= counter + 1;
+				end if;
+					
+			WHEN COMM_SHOT_5 =>
+				data_out <= cursor_y_vector(2);
+				if (counter=(DELAY/2)) then
+					opp_cursor_y_vector(2) <= data_in;
+				end if;
+				if (counter=DELAY) then
+					counter <= 0;
+					state <= COMM_SHOT_6;
+				else
+					counter <= counter + 1;
+				end if;			
+
+			WHEN COMM_SHOT_6 =>
+				data_out <= cursor_y_vector(1);
+				if (counter=(DELAY/2)) then
+					opp_cursor_y_vector(1) <= data_in;
+				end if;
+				if (counter=DELAY) then
+					counter <= 0;
+					state <= COMM_SHOT_7;
+				else
+					counter <= counter + 1;
+				end if;		
+
+			WHEN COMM_SHOT_7 =>
+				data_out <= cursor_y_vector(0);
+				if (counter=(DELAY/2)) then
+					opp_cursor_y_vector(0) <= data_in;
+				end if;
+				if (counter=DELAY) then
+					counter <= 0;
+					state <= COMM_SHOT_8;
+				else
+					counter <= counter + 1;
+				end if;
+
+			WHEN COMM_SHOT_8 =>
+				data_out <= '1';--idle
+				if (myVGA(opp_cursor_x + 10*opp_cursor_y)=SHIP) then
+					myVGA(opp_cursor_x + 10*opp_cursor_y)<=HIT;
+					oppHits <= oppHits + 1;
+				else
+					myVGA(opp_cursor_x + 10*opp_cursor_y)<=MISS;
+				end if;
+				
+				state <= SHOT_SELECT;
+			
 			WHEN others =>
 				null;
 	   end CASE;
@@ -490,6 +622,12 @@ game: process(reset,init,data_in,ship1_or,clk,done) is
 	 ship1_y_vector <= std_logic_vector(to_unsigned(ship1_y,4));
 	 opp_ship1_x := to_integer(unsigned(opp_ship1_x_vector));
 	 opp_ship1_y := to_integer(unsigned(opp_ship1_y_vector));
+	 
+	 cursor_x_vector<= std_logic_vector(to_unsigned(cursor_x,4));
+	 cursor_y_vector<= std_logic_vector(to_unsigned(cursor_y,4));
+	 opp_cursor_x := to_integer(unsigned(opp_cursor_x_vector));
+	 opp_cursor_y := to_integer(unsigned(opp_cursor_y_vector));
+	 
 			 
   end if; -- end rising edge
 	--put variables in signals

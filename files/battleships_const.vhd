@@ -30,7 +30,17 @@ constant COMM_S1_7 : integer := 8;
 constant COMM_S1_8 : integer := 9;
 constant COMM_S1_9 : integer := 10;
 
-constant SHOT_SELECT : integer := 100;
+constant SHOT_SELECT : integer := 99;
+constant PRE_COMM_SHOT : integer := 100;
+constant COMM_SHOT_1 : integer := 101;
+constant COMM_SHOT_2 : integer := 102;
+constant COMM_SHOT_3 : integer := 103;
+constant COMM_SHOT_4 : integer := 104;
+constant COMM_SHOT_5 : integer := 105;
+constant COMM_SHOT_6 : integer := 106;
+constant COMM_SHOT_7 : integer := 107;
+constant COMM_SHOT_8 : integer := 108;
+
 constant TESTING1 : integer := 2000;
 constant XXXX : integer := 9999; --dummy
 

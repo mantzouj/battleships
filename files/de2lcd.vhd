@@ -5,7 +5,7 @@ USE  IEEE.STD_LOGIC_UNSIGNED.all;
 
 ENTITY de2lcd IS
 	PORT(tie, waiting, reset, clk_50Mhz, game_over, winner					: IN	STD_LOGIC;
-		 LCD_RS, LCD_E, LCD_ON, RESET_LED, SEC_LED,light	: OUT	STD_LOGIC;
+		 LCD_RS, LCD_E, LCD_ON, RESET_LED, SEC_LED			: OUT	STD_LOGIC;
 		 LCD_RW															: BUFFER STD_LOGIC;
 		 DATA_BUS														: INOUT	STD_LOGIC_VECTOR(7 DOWNTO 0));
 END de2lcd;
