@@ -35,7 +35,6 @@ END component;
 component VGA_top_level is
 	port(
 			CLOCK_50 													: in std_logic;
-			RESET_N									  					: in std_logic;
 			--VGA 
 			VGA_RED, VGA_GREEN, VGA_BLUE 							: out std_logic_vector(9 downto 0); 
 			HORIZ_SYNC, VERT_SYNC, VGA_BLANK, VGA_CLK			: out std_logic;
@@ -87,7 +86,7 @@ signal winner         : std_logic;
 signal game_over      : std_logic;
 signal done           : std_logic;
 signal LEDs				 : std_logic_vector (55 downto 0);
-signal reset, tie		 : std_logic;
+signal tie		 		 : std_logic;
 signal init,waiting,res_lcd : std_logic; --,a,b,c,d,e,f
 
 signal go 					: std_logic;
@@ -96,7 +95,7 @@ begin
 
 LCDscreen : de2lcd port map (tie, waiting, res_lcd, clk, game_over, winner, LCD_RS, LCD_E, LCD_ON, RESET_LED, SEC_LED,LCD_RW,DATA_BUS);
 keyboard_0 : ps2 port map (keyboard_clk, keyboard_data, clk, '1', hist1, hist0, LEDs);
-vga_0 : VGA_top_level port map (clk, reset, VGA_RED, VGA_GREEN, VGA_BLUE, HORIZ_SYNC, VERT_SYNC, VGA_BLANK, VGA_CLK, myVGA, oppVGA);
+vga_0 : VGA_top_level port map (clk, VGA_RED, VGA_GREEN, VGA_BLUE, HORIZ_SYNC, VERT_SYNC, VGA_BLANK, VGA_CLK, myVGA, oppVGA);
 conv0 : leddcd port map (ship1_y_vector,led_seq(48 downto 42));
 conv1 : leddcd port map (opp_ship1_y_vector,led_seq(34 downto 28));
 conv2 : leddcd port map (ship1_x_vector,led_seq(55 downto 49));
@@ -176,7 +175,7 @@ end if;
 end process key_press;
 
 
-game: process(reset,init,data_in,ship1_or,clk,done) is
+game: process(init,data_in,ship1_or,clk,done) is
   variable ship1_x : natural;
   variable ship1_y : natural;
   variable opp_ship1_x, opp_cursor_x : natural;
@@ -203,6 +202,8 @@ game: process(reset,init,data_in,ship1_or,clk,done) is
 		test0		<= '0'; test1		<= '0'; test2		<= '0'; test3		<= '0'; test4 <= '0';
 		ship1_x 	:= 0;
 		ship1_y 	:= 0;
+		tie <= '0';
+		game_over <= '0';
 		opp_ship1_x_vector <= "0000";
 		opp_ship1_y_vector <= "0000";
 		ship1_x_vector <= "0000";
@@ -434,7 +435,11 @@ game: process(reset,init,data_in,ship1_or,clk,done) is
 				state <= SHOT_SELECT;
 				
 			WHEN SHOT_SELECT =>
-												
+				if (myHits=2 or oppHits=2) then
+					state <= GAME_DONE;
+				end if;
+				
+				
 				if ((down_press='1') or (up_press='1') or (right_press='1') or (left_press='1')) then
 					--saved1 <= myVGA(cursor_x + 10*cursor_y);
 					myVGA(cursor_x + 10*cursor_y) <= saved1;
@@ -613,6 +618,18 @@ game: process(reset,init,data_in,ship1_or,clk,done) is
 				end if;
 				
 				state <= SHOT_SELECT;
+			
+			WHEN GAME_DONE =>
+				game_over <= '1';
+				if (myHits=2 and oppHits<2) then
+					winner <= '0';	--I win
+				end if;
+				if (myHits<2 and oppHits=2) then
+					winner <= '1';	--opponent wins
+				end if;
+				if (myHits=2 and oppHits=2) then
+					tie <= '1';
+				end if;
 			
 			WHEN others =>
 				null;

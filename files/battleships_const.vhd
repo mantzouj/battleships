@@ -41,6 +41,8 @@ constant COMM_SHOT_6 : integer := 106;
 constant COMM_SHOT_7 : integer := 107;
 constant COMM_SHOT_8 : integer := 108;
 
+constant GAME_DONE	: integer := 200;
+
 constant TESTING1 : integer := 2000;
 constant XXXX : integer := 9999; --dummy
 
