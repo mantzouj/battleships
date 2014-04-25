@@ -62,538 +62,599 @@ begin
 	begin
 	colorAddress <= color_white;
 	
-	if (pixel_row_int >= 90 and pixel_row_int <= 390) then 
-		if (pixel_column_int >= 10 and pixel_column_int <= 310) then
+	if (pixel_row_int >= 90 and pixel_row_int <= 390 and pixel_column_int >= 10 and pixel_column_int <= 310) then 
 			colorAddress <= color_black;
-		end if;
 	end if;
 --	
-	if (pixel_row_int >= 90 and pixel_row_int <= 390) then 
-		if (pixel_column_int >= 330 and pixel_column_int <= 630) then
+	if (pixel_row_int >= 90 and pixel_row_int <= 390 and pixel_column_int >= 330 and pixel_column_int <= 630) then 
 			colorAddress <= color_black;
-		end if;
 	end if;
 --	
---	for my_x_index in 0 to 9 loop
-		for my_y_index in 0 to 9 loop
-			if (pixel_row_int >= (91 + 30 * my_y_index) and pixel_row_int <= (119 + 30 * my_y_index)) then 
-				if (pixel_column_int >= (11 + 30 * 0) and pixel_column_int <= (39 + 30 * 0)) then
-					my_index := 0 + 10 * my_y_index;	
-					if (myVGA(my_index) = 0) then	
-						colorAddress <= color_blue;
-					end if;
-					if (myVGA(my_index) = 1) then
-						colorAddress <= color_black;
-					end if;
-					if (myVGA(my_index) = 2) then
-						colorAddress <= color_red;
-					end if;
-					if (myVGA(my_index) = 3) then
-						colorAddress <= color_cyan;
-					end if;
-					if (myVGA(my_index) = 4) then
-						colorAddress <= color_yellow;
-					end if;
-					if (myVGA(my_index) = 5) then
-						colorAddress <= color_magenta;
-					end if;
-				end if;
-			end if;		
-		end loop;
-		
-		for my_y_index in 0 to 9 loop
-			if (pixel_row_int >= (91 + 30 * my_y_index) and pixel_row_int <= (119 + 30 * my_y_index)) then 
-				if (pixel_column_int >= (11 + 30 * 1) and pixel_column_int <= (39 + 30 * 1)) then
-					my_index := 1 + 10 * my_y_index;	
-					if (myVGA(my_index) = 0) then	
-						colorAddress <= color_blue;
-					end if;
-					if (myVGA(my_index) = 1) then
-						colorAddress <= color_black;
-					end if;
-					if (myVGA(my_index) = 2) then
-						colorAddress <= color_red;
-					end if;
-					if (myVGA(my_index) = 3) then
-						colorAddress <= color_cyan;
-					end if;
-					if (myVGA(my_index) = 4) then
-						colorAddress <= color_yellow;
-					end if;
-					if (myVGA(my_index) = 5) then
-						colorAddress <= color_magenta;
-					end if;
-				end if;
-			end if;		
-		end loop;
-		
-		for my_y_index in 0 to 9 loop
-			if (pixel_row_int >= (91 + 30 * my_y_index) and pixel_row_int <= (119 + 30 * my_y_index)) then 
-				if (pixel_column_int >= (11 + 30 * 2) and pixel_column_int <= (39 + 30 * 2)) then
-					my_index := 2 + 10 * my_y_index;	
-					if (myVGA(my_index) = 0) then	
-						colorAddress <= color_blue;
-					end if;
-					if (myVGA(my_index) = 1) then
-						colorAddress <= color_black;
-					end if;
-					if (myVGA(my_index) = 2) then
-						colorAddress <= color_red;
-					end if;
-					if (myVGA(my_index) = 3) then
-						colorAddress <= color_cyan;
-					end if;
-					if (myVGA(my_index) = 4) then
-						colorAddress <= color_yellow;
-					end if;
-					if (myVGA(my_index) = 5) then
-						colorAddress <= color_magenta;
-					end if;
-				end if;
-			end if;		
-		end loop;
-		
-		
-		for my_y_index in 0 to 9 loop
-			if (pixel_row_int >= (91 + 30 * my_y_index) and pixel_row_int <= (119 + 30 * my_y_index)) then 
-				if (pixel_column_int >= (11 + 30 * 3) and pixel_column_int <= (39 + 30 * 3)) then
-					my_index := 3 + 10 * my_y_index;	
-					if (myVGA(my_index) = 0) then	
-						colorAddress <= color_blue;
-					end if;
-					if (myVGA(my_index) = 1) then
-						colorAddress <= color_black;
-					end if;
-					if (myVGA(my_index) = 2) then
-						colorAddress <= color_red;
-					end if;
-					if (myVGA(my_index) = 3) then
-						colorAddress <= color_cyan;
-					end if;
-					if (myVGA(my_index) = 4) then
-						colorAddress <= color_yellow;
-					end if;
-					if (myVGA(my_index) = 5) then
-						colorAddress <= color_magenta;
-					end if;
-				end if;
-			end if;		
-		end loop;
-		
-		
-		for my_y_index in 0 to 9 loop
-			if (pixel_row_int >= (91 + 30 * my_y_index) and pixel_row_int <= (119 + 30 * my_y_index)) then 
-				if (pixel_column_int >= (11 + 30 * 4) and pixel_column_int <= (39 + 30 * 4)) then
-					my_index := 4 + 10 * my_y_index;	
-					if (myVGA(my_index) = 0) then	
-						colorAddress <= color_blue;
-					end if;
-					if (myVGA(my_index) = 1) then
-						colorAddress <= color_black;
-					end if;
-					if (myVGA(my_index) = 2) then
-						colorAddress <= color_red;
-					end if;
-					if (myVGA(my_index) = 3) then
-						colorAddress <= color_cyan;
-					end if;
-					if (myVGA(my_index) = 4) then
-						colorAddress <= color_yellow;
-					end if;
-					if (myVGA(my_index) = 5) then
-						colorAddress <= color_magenta;
-					end if;
-				end if;
-			end if;		
-		end loop;
-		
-		for my_y_index in 0 to 9 loop
-			if (pixel_row_int >= (91 + 30 * my_y_index) and pixel_row_int <= (119 + 30 * my_y_index)) then 
-				if (pixel_column_int >= (11 + 30 * 5) and pixel_column_int <= (39 + 30 * 5)) then
-					my_index := 5 + 10 * my_y_index;	
-					if (myVGA(my_index) = 0) then	
-						colorAddress <= color_blue;
-					end if;
-					if (myVGA(my_index) = 1) then
-						colorAddress <= color_black;
-					end if;
-					if (myVGA(my_index) = 2) then
-						colorAddress <= color_red;
-					end if;
-					if (myVGA(my_index) = 3) then
-						colorAddress <= color_cyan;
-					end if;
-					if (myVGA(my_index) = 4) then
-						colorAddress <= color_yellow;
-					end if;
-					if (myVGA(my_index) = 5) then
-						colorAddress <= color_magenta;
-					end if;
-				end if;
-			end if;		
-		end loop;
-		
-		for my_y_index in 0 to 9 loop
-			if (pixel_row_int >= (91 + 30 * my_y_index) and pixel_row_int <= (119 + 30 * my_y_index)) then 
-				if (pixel_column_int >= (11 + 30 * 6) and pixel_column_int <= (39 + 30 * 6)) then
-					my_index := 6 + 10 * my_y_index;	
-					if (myVGA(my_index) = 0) then	
-						colorAddress <= color_blue;
-					end if;
-					if (myVGA(my_index) = 1) then
-						colorAddress <= color_black;
-					end if;
-					if (myVGA(my_index) = 2) then
-						colorAddress <= color_red;
-					end if;
-					if (myVGA(my_index) = 3) then
-						colorAddress <= color_cyan;
-					end if;
-					if (myVGA(my_index) = 4) then
-						colorAddress <= color_yellow;
-					end if;
-					if (myVGA(my_index) = 5) then
-						colorAddress <= color_magenta;
-					end if;
-				end if;
-			end if;		
-		end loop;
-		
-		for my_y_index in 0 to 9 loop
-			if (pixel_row_int >= (91 + 30 * my_y_index) and pixel_row_int <= (119 + 30 * my_y_index)) then 
-				if (pixel_column_int >= (11 + 30 * 7) and pixel_column_int <= (39 + 30 * 7)) then
-					my_index := 7 + 10 * my_y_index;	
-					if (myVGA(my_index) = 0) then	
-						colorAddress <= color_blue;
-					end if;
-					if (myVGA(my_index) = 1) then
-						colorAddress <= color_black;
-					end if;
-					if (myVGA(my_index) = 2) then
-						colorAddress <= color_red;
-					end if;
-					if (myVGA(my_index) = 3) then
-						colorAddress <= color_cyan;
-					end if;
-					if (myVGA(my_index) = 4) then
-						colorAddress <= color_yellow;
-					end if;
-					if (myVGA(my_index) = 5) then
-						colorAddress <= color_magenta;
-					end if;
-				end if;
-			end if;		
-		end loop;
-		
-		for my_y_index in 0 to 9 loop
-			if (pixel_row_int >= (91 + 30 * my_y_index) and pixel_row_int <= (119 + 30 * my_y_index)) then 
-				if (pixel_column_int >= (11 + 30 * 8) and pixel_column_int <= (39 + 30 * 8)) then
-					my_index := 8 + 10 * my_y_index;	
-					if (myVGA(my_index) = 0) then	
-						colorAddress <= color_blue;
-					end if;
-					if (myVGA(my_index) = 1) then
-						colorAddress <= color_black;
-					end if;
-					if (myVGA(my_index) = 2) then
-						colorAddress <= color_red;
-					end if;
-					if (myVGA(my_index) = 3) then
-						colorAddress <= color_cyan;
-					end if;
-					if (myVGA(my_index) = 4) then
-						colorAddress <= color_yellow;
-					end if;
-					if (myVGA(my_index) = 5) then
-						colorAddress <= color_magenta;
-					end if;
-				end if;
-			end if;		
-		end loop;
-		
-		for my_y_index in 0 to 9 loop
-			if (pixel_row_int >= (91 + 30 * my_y_index) and pixel_row_int <= (119 + 30 * my_y_index)) then 
-				if (pixel_column_int >= (11 + 30 * 9) and pixel_column_int <= (39 + 30 * 9)) then
-					my_index := 9 + 10 * my_y_index;	
-					if (myVGA(my_index) = 0) then	
-						colorAddress <= color_blue;
-					end if;
-					if (myVGA(my_index) = 1) then
-						colorAddress <= color_black;
-					end if;
-					if (myVGA(my_index) = 2) then
-						colorAddress <= color_red;
-					end if;
-					if (myVGA(my_index) = 3) then
-						colorAddress <= color_cyan;
-					end if;
-					if (myVGA(my_index) = 4) then
-						colorAddress <= color_yellow;
-					end if;
-					if (myVGA(my_index) = 5) then
-						colorAddress <= color_magenta;
-					end if;
-				end if;
-			end if;		
-		end loop;
+for my_x_index in 0 to 9 loop
+	for my_y_index in 0 to 9 loop
+		if (pixel_row_int >= (91 + 30 * my_y_index) and pixel_row_int <= (119 + 30 * my_y_index) and pixel_column_int >= (11 + 30 * my_x_index) and pixel_column_int <= (39 + 30 * my_x_index)) then 
+				my_index := my_x_index + 10 * my_y_index;	
+				CASE myVGA(my_index) IS
+					WHEN 0 => colorAddress <= color_blue;
+					WHEN 1 => colorAddress <= color_black;
+					WHEN 2 => colorAddress <= color_red;
+					WHEN 3 => colorAddress <= color_cyan;
+					WHEN 4 => colorAddress <= color_yellow;
+					WHEN 5 => colorAddress <= color_magenta;
+					WHEN others => null;
+				end CASE;
+					
+--				if (myVGA(my_index) = 0) then	
+--					colorAddress <= color_blue;
+--				end if;
+--				if (myVGA(my_index) = 1) then
+--					colorAddress <= color_black;
+--				end if;
+--				if (myVGA(my_index) = 2) then
+--					colorAddress <= color_red;
+--				end if;
+--				if (myVGA(my_index) = 3) then
+--					colorAddress <= color_cyan;
+--				end if;
+--				if (myVGA(my_index) = 4) then
+--					colorAddress <= color_yellow;
+--				end if;
+--				if (myVGA(my_index) = 5) then
+--					colorAddress <= color_magenta;
+--				end if;
+		end if;		
+	end loop;
+end loop;
 
-		
---	end loop;
---	
---	for opp_x_index in 0 to 9 loop
-		for opp_y_index in 0 to 9 loop
-			if (pixel_row_int >= (91 + 30 * opp_y_index) and pixel_row_int <= (119 + 30 * opp_y_index)) then 
-				if (pixel_column_int >= (331 + 30 * 0) and pixel_column_int <= (359 + 30 * 0)) then
-					opp_index := 0 + 10 * opp_y_index;	
-					if (oppVGA(opp_index) = 0) then	
-						colorAddress <= color_blue;
-					end if;
-					if (oppVGA(opp_index) = 1) then
-						colorAddress <= color_black;
-					end if;
-					if (oppVGA(opp_index) = 2) then
-						colorAddress <= color_red;
-					end if;
-					if (oppVGA(opp_index) = 3) then
-						colorAddress <= color_cyan;
-					end if;
-					if (oppVGA(opp_index) = 4) then
-						colorAddress <= color_yellow;
-					end if;
-					if (oppVGA(opp_index) = 5) then
-						colorAddress <= color_magenta;
-					end if;
-				end if;
-			end if;		
-		end loop;
+for opp_x_index in 0 to 9 loop
+	for opp_y_index in 0 to 9 loop
+		if (pixel_row_int >= (91 + 30 * opp_y_index) and pixel_row_int <= (119 + 30 * opp_y_index) and pixel_column_int >= (331 + 30 * opp_x_index) and pixel_column_int <= (359 + 30 * opp_x_index)) then 
+				opp_index := opp_x_index + 10 * opp_y_index;	
+				CASE oppVGA(opp_index) IS
+					WHEN 0 => colorAddress <= color_blue;
+					WHEN 1 => colorAddress <= color_black;
+					WHEN 2 => colorAddress <= color_red;
+					WHEN 3 => colorAddress <= color_cyan;
+					WHEN 4 => colorAddress <= color_yellow;
+					WHEN 5 => colorAddress <= color_magenta;
+					WHEN others => null;
+				end CASE;
+--				if (oppVGA(opp_index) = 0) then	
+--					colorAddress <= color_blue;
+--				end if;
+--				if (oppVGA(opp_index) = 1) then
+--					colorAddress <= color_black;
+--				end if;
+--				if (oppVGA(opp_index) = 2) then
+--					colorAddress <= color_red;
+--				end if;
+--				if (oppVGA(opp_index) = 3) then
+--					colorAddress <= color_cyan;
+--				end if;
+--				if (oppVGA(opp_index) = 4) then
+--					colorAddress <= color_yellow;
+--				end if;
+--				if (oppVGA(opp_index) = 5) then
+--					colorAddress <= color_magenta;
+--				end if;
+		end if;		
+	end loop;
+end loop;
+
+--		for my_y_index in 0 to 9 loop
+--			if (pixel_row_int >= (91 + 30 * my_y_index) and pixel_row_int <= (119 + 30 * my_y_index)) then 
+--				if (pixel_column_int >= (11 + 30 * 0) and pixel_column_int <= (39 + 30 * 0)) then
+--					my_index := 0 + 10 * my_y_index;	
+--					if (myVGA(my_index) = 0) then	
+--						colorAddress <= color_blue;
+--					end if;
+--					if (myVGA(my_index) = 1) then
+--						colorAddress <= color_black;
+--					end if;
+--					if (myVGA(my_index) = 2) then
+--						colorAddress <= color_red;
+--					end if;
+--					if (myVGA(my_index) = 3) then
+--						colorAddress <= color_cyan;
+--					end if;
+--					if (myVGA(my_index) = 4) then
+--						colorAddress <= color_yellow;
+--					end if;
+--					if (myVGA(my_index) = 5) then
+--						colorAddress <= color_magenta;
+--					end if;
+--				end if;
+--			end if;		
+--		end loop;
 --		
-		for opp_y_index in 0 to 9 loop
-			if (pixel_row_int >= (91 + 30 * opp_y_index) and pixel_row_int <= (119 + 30 * opp_y_index)) then 
-				if (pixel_column_int >= (331 + 30 * 1) and pixel_column_int <= (359 + 30 * 1)) then
-					opp_index := 1 + 10 * opp_y_index;	
-					if (oppVGA(opp_index) = 0) then	
-						colorAddress <= color_blue;
-					end if;
-					if (oppVGA(opp_index) = 1) then
-						colorAddress <= color_black;
-					end if;
-					if (oppVGA(opp_index) = 2) then
-						colorAddress <= color_red;
-					end if;
-					if (oppVGA(opp_index) = 3) then
-						colorAddress <= color_cyan;
-					end if;
-					if (oppVGA(opp_index) = 4) then
-						colorAddress <= color_yellow;
-					end if;
-					if (oppVGA(opp_index) = 5) then
-						colorAddress <= color_magenta;
-					end if;
-				end if;
-			end if;		
-		end loop;
+--		for my_y_index in 0 to 9 loop
+--			if (pixel_row_int >= (91 + 30 * my_y_index) and pixel_row_int <= (119 + 30 * my_y_index)) then 
+--				if (pixel_column_int >= (11 + 30 * 1) and pixel_column_int <= (39 + 30 * 1)) then
+--					my_index := 1 + 10 * my_y_index;	
+--					if (myVGA(my_index) = 0) then	
+--						colorAddress <= color_blue;
+--					end if;
+--					if (myVGA(my_index) = 1) then
+--						colorAddress <= color_black;
+--					end if;
+--					if (myVGA(my_index) = 2) then
+--						colorAddress <= color_red;
+--					end if;
+--					if (myVGA(my_index) = 3) then
+--						colorAddress <= color_cyan;
+--					end if;
+--					if (myVGA(my_index) = 4) then
+--						colorAddress <= color_yellow;
+--					end if;
+--					if (myVGA(my_index) = 5) then
+--						colorAddress <= color_magenta;
+--					end if;
+--				end if;
+--			end if;		
+--		end loop;
 --		
-		for opp_y_index in 0 to 9 loop
-			if (pixel_row_int >= (91 + 30 * opp_y_index) and pixel_row_int <= (119 + 30 * opp_y_index)) then 
-				if (pixel_column_int >= (331 + 30 * 2) and pixel_column_int <= (359 + 30 * 2)) then
-					opp_index := 2 + 10 * opp_y_index;	
-					if (oppVGA(opp_index) = 0) then	
-						colorAddress <= color_blue;
-					end if;
-					if (oppVGA(opp_index) = 1) then
-						colorAddress <= color_black;
-					end if;
-					if (oppVGA(opp_index) = 2) then
-						colorAddress <= color_red;
-					end if;
-					if (oppVGA(opp_index) = 3) then
-						colorAddress <= color_cyan;
-					end if;
-					if (oppVGA(opp_index) = 4) then
-						colorAddress <= color_yellow;
-					end if;
-					if (oppVGA(opp_index) = 5) then
-						colorAddress <= color_magenta;
-					end if;
-				end if;
-			end if;		
-		end loop;
+--		for my_y_index in 0 to 9 loop
+--			if (pixel_row_int >= (91 + 30 * my_y_index) and pixel_row_int <= (119 + 30 * my_y_index)) then 
+--				if (pixel_column_int >= (11 + 30 * 2) and pixel_column_int <= (39 + 30 * 2)) then
+--					my_index := 2 + 10 * my_y_index;	
+--					if (myVGA(my_index) = 0) then	
+--						colorAddress <= color_blue;
+--					end if;
+--					if (myVGA(my_index) = 1) then
+--						colorAddress <= color_black;
+--					end if;
+--					if (myVGA(my_index) = 2) then
+--						colorAddress <= color_red;
+--					end if;
+--					if (myVGA(my_index) = 3) then
+--						colorAddress <= color_cyan;
+--					end if;
+--					if (myVGA(my_index) = 4) then
+--						colorAddress <= color_yellow;
+--					end if;
+--					if (myVGA(my_index) = 5) then
+--						colorAddress <= color_magenta;
+--					end if;
+--				end if;
+--			end if;		
+--		end loop;
 --		
-		for opp_y_index in 0 to 9 loop
-			if (pixel_row_int >= (91 + 30 * opp_y_index) and pixel_row_int <= (119 + 30 * opp_y_index)) then 
-				if (pixel_column_int >= (331 + 30 * 3) and pixel_column_int <= (359 + 30 * 3)) then
-					opp_index := 3 + 10 * opp_y_index;	
-					if (oppVGA(opp_index) = 0) then	
-						colorAddress <= color_blue;
-					end if;
-					if (oppVGA(opp_index) = 1) then
-						colorAddress <= color_black;
-					end if;
-					if (oppVGA(opp_index) = 2) then
-						colorAddress <= color_red;
-					end if;
-					if (oppVGA(opp_index) = 3) then
-						colorAddress <= color_cyan;
-					end if;
-					if (oppVGA(opp_index) = 4) then
-						colorAddress <= color_yellow;
-					end if;
-					if (oppVGA(opp_index) = 5) then
-						colorAddress <= color_magenta;
-					end if;
-				end if;
-			end if;		
-		end loop;
 --		
-		for opp_y_index in 0 to 9 loop
-			if (pixel_row_int >= (91 + 30 * opp_y_index) and pixel_row_int <= (119 + 30 * opp_y_index)) then 
-				if (pixel_column_int >= (331 + 30 * 4) and pixel_column_int <= (359 + 30 * 4)) then
-					opp_index := 4 + 10 * opp_y_index;	
-					if (oppVGA(opp_index) = 0) then	
-						colorAddress <= color_blue;
-					end if;
-					if (oppVGA(opp_index) = 1) then
-						colorAddress <= color_black;
-					end if;
-					if (oppVGA(opp_index) = 2) then
-						colorAddress <= color_red;
-					end if;
-					if (oppVGA(opp_index) = 3) then
-						colorAddress <= color_cyan;
-					end if;
-					if (oppVGA(opp_index) = 4) then
-						colorAddress <= color_yellow;
-					end if;
-					if (oppVGA(opp_index) = 5) then
-						colorAddress <= color_magenta;
-					end if;
-				end if;
-			end if;		
-		end loop;
+--		for my_y_index in 0 to 9 loop
+--			if (pixel_row_int >= (91 + 30 * my_y_index) and pixel_row_int <= (119 + 30 * my_y_index)) then 
+--				if (pixel_column_int >= (11 + 30 * 3) and pixel_column_int <= (39 + 30 * 3)) then
+--					my_index := 3 + 10 * my_y_index;	
+--					if (myVGA(my_index) = 0) then	
+--						colorAddress <= color_blue;
+--					end if;
+--					if (myVGA(my_index) = 1) then
+--						colorAddress <= color_black;
+--					end if;
+--					if (myVGA(my_index) = 2) then
+--						colorAddress <= color_red;
+--					end if;
+--					if (myVGA(my_index) = 3) then
+--						colorAddress <= color_cyan;
+--					end if;
+--					if (myVGA(my_index) = 4) then
+--						colorAddress <= color_yellow;
+--					end if;
+--					if (myVGA(my_index) = 5) then
+--						colorAddress <= color_magenta;
+--					end if;
+--				end if;
+--			end if;		
+--		end loop;
 --		
-		for opp_y_index in 0 to 9 loop
-			if (pixel_row_int >= (91 + 30 * opp_y_index) and pixel_row_int <= (119 + 30 * opp_y_index)) then 
-				if (pixel_column_int >= (331 + 30 * 5) and pixel_column_int <= (359 + 30 * 5)) then
-					opp_index := 5 + 10 * opp_y_index;	
-					if (oppVGA(opp_index) = 0) then	
-						colorAddress <= color_blue;
-					end if;
-					if (oppVGA(opp_index) = 1) then
-						colorAddress <= color_black;
-					end if;
-					if (oppVGA(opp_index) = 2) then
-						colorAddress <= color_red;
-					end if;
-					if (oppVGA(opp_index) = 3) then
-						colorAddress <= color_cyan;
-					end if;
-					if (oppVGA(opp_index) = 4) then
-						colorAddress <= color_yellow;
-					end if;
-					if (oppVGA(opp_index) = 5) then
-						colorAddress <= color_magenta;
-					end if;
-				end if;
-			end if;		
-		end loop;
 --		
-		for opp_y_index in 0 to 9 loop
-			if (pixel_row_int >= (91 + 30 * opp_y_index) and pixel_row_int <= (119 + 30 * opp_y_index) and pixel_column_int >= (331 + 30 * 6) and pixel_column_int <= (359 + 30 * 6)) then 
-					opp_index := 6 + 10 * opp_y_index;	
-					if (oppVGA(opp_index) = 0) then	
-						colorAddress <= color_blue;
-					end if;
-					if (oppVGA(opp_index) = 1) then
-						colorAddress <= color_black;
-					end if;
-					if (oppVGA(opp_index) = 2) then
-						colorAddress <= color_red;
-					end if;
-					if (oppVGA(opp_index) = 3) then
-						colorAddress <= color_cyan;
-					end if;
-					if (oppVGA(opp_index) = 4) then
-						colorAddress <= color_yellow;
-					end if;
-					if (oppVGA(opp_index) = 5) then
-						colorAddress <= color_magenta;
-					end if;
-			end if;		
-		end loop;
-		
-		for opp_y_index in 0 to 9 loop
-			if (pixel_row_int >= (91 + 30 * opp_y_index) and pixel_row_int <= (119 + 30 * opp_y_index) and pixel_column_int >= (331 + 30 * 7) and pixel_column_int <= (359 + 30 * 7)) then 
-					opp_index := 7 + 10 * opp_y_index;	
-					if (oppVGA(opp_index) = 0) then	
-						colorAddress <= color_blue;
-					end if;
-					if (oppVGA(opp_index) = 1) then
-						colorAddress <= color_black;
-					end if;
-					if (oppVGA(opp_index) = 2) then
-						colorAddress <= color_red;
-					end if;
-					if (oppVGA(opp_index) = 3) then
-						colorAddress <= color_cyan;
-					end if;
-					if (oppVGA(opp_index) = 4) then
-						colorAddress <= color_yellow;
-					end if;
-					if (oppVGA(opp_index) = 5) then
-						colorAddress <= color_magenta;
-					end if;
-			end if;		
-		end loop;
+--		for my_y_index in 0 to 9 loop
+--			if (pixel_row_int >= (91 + 30 * my_y_index) and pixel_row_int <= (119 + 30 * my_y_index)) then 
+--				if (pixel_column_int >= (11 + 30 * 4) and pixel_column_int <= (39 + 30 * 4)) then
+--					my_index := 4 + 10 * my_y_index;	
+--					if (myVGA(my_index) = 0) then	
+--						colorAddress <= color_blue;
+--					end if;
+--					if (myVGA(my_index) = 1) then
+--						colorAddress <= color_black;
+--					end if;
+--					if (myVGA(my_index) = 2) then
+--						colorAddress <= color_red;
+--					end if;
+--					if (myVGA(my_index) = 3) then
+--						colorAddress <= color_cyan;
+--					end if;
+--					if (myVGA(my_index) = 4) then
+--						colorAddress <= color_yellow;
+--					end if;
+--					if (myVGA(my_index) = 5) then
+--						colorAddress <= color_magenta;
+--					end if;
+--				end if;
+--			end if;		
+--		end loop;
 --		
-		for opp_y_index in 0 to 9 loop
-			if (pixel_row_int >= (91 + 30 * opp_y_index) and pixel_row_int <= (119 + 30 * opp_y_index) and pixel_column_int >= (331 + 30 * 8) and pixel_column_int <= (359 + 30 * 8)) then 
-					opp_index := 8 + 10 * opp_y_index;	
-					if (oppVGA(opp_index) = 0) then	
-						colorAddress <= color_blue;
-					end if;
-					if (oppVGA(opp_index) = 1) then
-						colorAddress <= color_black;
-					end if;
-					if (oppVGA(opp_index) = 2) then
-						colorAddress <= color_red;
-					end if;
-					if (oppVGA(opp_index) = 3) then
-						colorAddress <= color_cyan;
-					end if;
-					if (oppVGA(opp_index) = 4) then
-						colorAddress <= color_yellow;
-					end if;
-					if (oppVGA(opp_index) = 5) then
-						colorAddress <= color_magenta;
-					end if;
-			end if;		
-		end loop;
+--		for my_y_index in 0 to 9 loop
+--			if (pixel_row_int >= (91 + 30 * my_y_index) and pixel_row_int <= (119 + 30 * my_y_index)) then 
+--				if (pixel_column_int >= (11 + 30 * 5) and pixel_column_int <= (39 + 30 * 5)) then
+--					my_index := 5 + 10 * my_y_index;	
+--					if (myVGA(my_index) = 0) then	
+--						colorAddress <= color_blue;
+--					end if;
+--					if (myVGA(my_index) = 1) then
+--						colorAddress <= color_black;
+--					end if;
+--					if (myVGA(my_index) = 2) then
+--						colorAddress <= color_red;
+--					end if;
+--					if (myVGA(my_index) = 3) then
+--						colorAddress <= color_cyan;
+--					end if;
+--					if (myVGA(my_index) = 4) then
+--						colorAddress <= color_yellow;
+--					end if;
+--					if (myVGA(my_index) = 5) then
+--						colorAddress <= color_magenta;
+--					end if;
+--				end if;
+--			end if;		
+--		end loop;
 --		
-		for opp_y_index in 0 to 9 loop
-			if (pixel_row_int >= (91 + 30 * opp_y_index) and pixel_row_int <= (119 + 30 * opp_y_index) and pixel_column_int >= (331 + 30 * 9) and pixel_column_int <= (359 + 30 * 9)) then 
-					opp_index := 9 + 10 * opp_y_index;	
-					if (oppVGA(opp_index) = 0) then	
-						colorAddress <= color_blue;
-					end if;
-					if (oppVGA(opp_index) = 1) then
-						colorAddress <= color_black;
-					end if;
-					if (oppVGA(opp_index) = 2) then
-						colorAddress <= color_red;
-					end if;
-					if (oppVGA(opp_index) = 3) then
-						colorAddress <= color_cyan;
-					end if;
-					if (oppVGA(opp_index) = 4) then
-						colorAddress <= color_yellow;
-					end if;
-					if (oppVGA(opp_index) = 5) then
-						colorAddress <= color_magenta;
-					end if;
-			end if;		
-		end loop;
-		
---	end loop;
+--		for my_y_index in 0 to 9 loop
+--			if (pixel_row_int >= (91 + 30 * my_y_index) and pixel_row_int <= (119 + 30 * my_y_index)) then 
+--				if (pixel_column_int >= (11 + 30 * 6) and pixel_column_int <= (39 + 30 * 6)) then
+--					my_index := 6 + 10 * my_y_index;	
+--					if (myVGA(my_index) = 0) then	
+--						colorAddress <= color_blue;
+--					end if;
+--					if (myVGA(my_index) = 1) then
+--						colorAddress <= color_black;
+--					end if;
+--					if (myVGA(my_index) = 2) then
+--						colorAddress <= color_red;
+--					end if;
+--					if (myVGA(my_index) = 3) then
+--						colorAddress <= color_cyan;
+--					end if;
+--					if (myVGA(my_index) = 4) then
+--						colorAddress <= color_yellow;
+--					end if;
+--					if (myVGA(my_index) = 5) then
+--						colorAddress <= color_magenta;
+--					end if;
+--				end if;
+--			end if;		
+--		end loop;
+--		
+--		for my_y_index in 0 to 9 loop
+--			if (pixel_row_int >= (91 + 30 * my_y_index) and pixel_row_int <= (119 + 30 * my_y_index)) then 
+--				if (pixel_column_int >= (11 + 30 * 7) and pixel_column_int <= (39 + 30 * 7)) then
+--					my_index := 7 + 10 * my_y_index;	
+--					if (myVGA(my_index) = 0) then	
+--						colorAddress <= color_blue;
+--					end if;
+--					if (myVGA(my_index) = 1) then
+--						colorAddress <= color_black;
+--					end if;
+--					if (myVGA(my_index) = 2) then
+--						colorAddress <= color_red;
+--					end if;
+--					if (myVGA(my_index) = 3) then
+--						colorAddress <= color_cyan;
+--					end if;
+--					if (myVGA(my_index) = 4) then
+--						colorAddress <= color_yellow;
+--					end if;
+--					if (myVGA(my_index) = 5) then
+--						colorAddress <= color_magenta;
+--					end if;
+--				end if;
+--			end if;		
+--		end loop;
+--		
+--		for my_y_index in 0 to 9 loop
+--			if (pixel_row_int >= (91 + 30 * my_y_index) and pixel_row_int <= (119 + 30 * my_y_index)) then 
+--				if (pixel_column_int >= (11 + 30 * 8) and pixel_column_int <= (39 + 30 * 8)) then
+--					my_index := 8 + 10 * my_y_index;	
+--					if (myVGA(my_index) = 0) then	
+--						colorAddress <= color_blue;
+--					end if;
+--					if (myVGA(my_index) = 1) then
+--						colorAddress <= color_black;
+--					end if;
+--					if (myVGA(my_index) = 2) then
+--						colorAddress <= color_red;
+--					end if;
+--					if (myVGA(my_index) = 3) then
+--						colorAddress <= color_cyan;
+--					end if;
+--					if (myVGA(my_index) = 4) then
+--						colorAddress <= color_yellow;
+--					end if;
+--					if (myVGA(my_index) = 5) then
+--						colorAddress <= color_magenta;
+--					end if;
+--				end if;
+--			end if;		
+--		end loop;
+--		
+--		for my_y_index in 0 to 9 loop
+--			if (pixel_row_int >= (91 + 30 * my_y_index) and pixel_row_int <= (119 + 30 * my_y_index)) then 
+--				if (pixel_column_int >= (11 + 30 * 9) and pixel_column_int <= (39 + 30 * 9)) then
+--					my_index := 9 + 10 * my_y_index;	
+--					if (myVGA(my_index) = 0) then	
+--						colorAddress <= color_blue;
+--					end if;
+--					if (myVGA(my_index) = 1) then
+--						colorAddress <= color_black;
+--					end if;
+--					if (myVGA(my_index) = 2) then
+--						colorAddress <= color_red;
+--					end if;
+--					if (myVGA(my_index) = 3) then
+--						colorAddress <= color_cyan;
+--					end if;
+--					if (myVGA(my_index) = 4) then
+--						colorAddress <= color_yellow;
+--					end if;
+--					if (myVGA(my_index) = 5) then
+--						colorAddress <= color_magenta;
+--					end if;
+--				end if;
+--			end if;		
+--		end loop;
+
+--
+--		for opp_y_index in 0 to 9 loop
+--			if (pixel_row_int >= (91 + 30 * opp_y_index) and pixel_row_int <= (119 + 30 * opp_y_index)) then 
+--				if (pixel_column_int >= (331 + 30 * 0) and pixel_column_int <= (359 + 30 * 0)) then
+--					opp_index := 0 + 10 * opp_y_index;	
+--					if (oppVGA(opp_index) = 0) then	
+--						colorAddress <= color_blue;
+--					end if;
+--					if (oppVGA(opp_index) = 1) then
+--						colorAddress <= color_black;
+--					end if;
+--					if (oppVGA(opp_index) = 2) then
+--						colorAddress <= color_red;
+--					end if;
+--					if (oppVGA(opp_index) = 3) then
+--						colorAddress <= color_cyan;
+--					end if;
+--					if (oppVGA(opp_index) = 4) then
+--						colorAddress <= color_yellow;
+--					end if;
+--					if (oppVGA(opp_index) = 5) then
+--						colorAddress <= color_magenta;
+--					end if;
+--				end if;
+--			end if;		
+--		end loop;
+----		
+--		for opp_y_index in 0 to 9 loop
+--			if (pixel_row_int >= (91 + 30 * opp_y_index) and pixel_row_int <= (119 + 30 * opp_y_index)) then 
+--				if (pixel_column_int >= (331 + 30 * 1) and pixel_column_int <= (359 + 30 * 1)) then
+--					opp_index := 1 + 10 * opp_y_index;	
+--					if (oppVGA(opp_index) = 0) then	
+--						colorAddress <= color_blue;
+--					end if;
+--					if (oppVGA(opp_index) = 1) then
+--						colorAddress <= color_black;
+--					end if;
+--					if (oppVGA(opp_index) = 2) then
+--						colorAddress <= color_red;
+--					end if;
+--					if (oppVGA(opp_index) = 3) then
+--						colorAddress <= color_cyan;
+--					end if;
+--					if (oppVGA(opp_index) = 4) then
+--						colorAddress <= color_yellow;
+--					end if;
+--					if (oppVGA(opp_index) = 5) then
+--						colorAddress <= color_magenta;
+--					end if;
+--				end if;
+--			end if;		
+--		end loop;
+----		
+--		for opp_y_index in 0 to 9 loop
+--			if (pixel_row_int >= (91 + 30 * opp_y_index) and pixel_row_int <= (119 + 30 * opp_y_index)) then 
+--				if (pixel_column_int >= (331 + 30 * 2) and pixel_column_int <= (359 + 30 * 2)) then
+--					opp_index := 2 + 10 * opp_y_index;	
+--					if (oppVGA(opp_index) = 0) then	
+--						colorAddress <= color_blue;
+--					end if;
+--					if (oppVGA(opp_index) = 1) then
+--						colorAddress <= color_black;
+--					end if;
+--					if (oppVGA(opp_index) = 2) then
+--						colorAddress <= color_red;
+--					end if;
+--					if (oppVGA(opp_index) = 3) then
+--						colorAddress <= color_cyan;
+--					end if;
+--					if (oppVGA(opp_index) = 4) then
+--						colorAddress <= color_yellow;
+--					end if;
+--					if (oppVGA(opp_index) = 5) then
+--						colorAddress <= color_magenta;
+--					end if;
+--				end if;
+--			end if;		
+--		end loop;
+----		
+--		for opp_y_index in 0 to 9 loop
+--			if (pixel_row_int >= (91 + 30 * opp_y_index) and pixel_row_int <= (119 + 30 * opp_y_index)) then 
+--				if (pixel_column_int >= (331 + 30 * 3) and pixel_column_int <= (359 + 30 * 3)) then
+--					opp_index := 3 + 10 * opp_y_index;	
+--					if (oppVGA(opp_index) = 0) then	
+--						colorAddress <= color_blue;
+--					end if;
+--					if (oppVGA(opp_index) = 1) then
+--						colorAddress <= color_black;
+--					end if;
+--					if (oppVGA(opp_index) = 2) then
+--						colorAddress <= color_red;
+--					end if;
+--					if (oppVGA(opp_index) = 3) then
+--						colorAddress <= color_cyan;
+--					end if;
+--					if (oppVGA(opp_index) = 4) then
+--						colorAddress <= color_yellow;
+--					end if;
+--					if (oppVGA(opp_index) = 5) then
+--						colorAddress <= color_magenta;
+--					end if;
+--				end if;
+--			end if;		
+--		end loop;
+----		
+--		for opp_y_index in 0 to 9 loop
+--			if (pixel_row_int >= (91 + 30 * opp_y_index) and pixel_row_int <= (119 + 30 * opp_y_index)) then 
+--				if (pixel_column_int >= (331 + 30 * 4) and pixel_column_int <= (359 + 30 * 4)) then
+--					opp_index := 4 + 10 * opp_y_index;	
+--					if (oppVGA(opp_index) = 0) then	
+--						colorAddress <= color_blue;
+--					end if;
+--					if (oppVGA(opp_index) = 1) then
+--						colorAddress <= color_black;
+--					end if;
+--					if (oppVGA(opp_index) = 2) then
+--						colorAddress <= color_red;
+--					end if;
+--					if (oppVGA(opp_index) = 3) then
+--						colorAddress <= color_cyan;
+--					end if;
+--					if (oppVGA(opp_index) = 4) then
+--						colorAddress <= color_yellow;
+--					end if;
+--					if (oppVGA(opp_index) = 5) then
+--						colorAddress <= color_magenta;
+--					end if;
+--				end if;
+--			end if;		
+--		end loop;
+----		
+--		for opp_y_index in 0 to 9 loop
+--			if (pixel_row_int >= (91 + 30 * opp_y_index) and pixel_row_int <= (119 + 30 * opp_y_index)) then 
+--				if (pixel_column_int >= (331 + 30 * 5) and pixel_column_int <= (359 + 30 * 5)) then
+--					opp_index := 5 + 10 * opp_y_index;	
+--					if (oppVGA(opp_index) = 0) then	
+--						colorAddress <= color_blue;
+--					end if;
+--					if (oppVGA(opp_index) = 1) then
+--						colorAddress <= color_black;
+--					end if;
+--					if (oppVGA(opp_index) = 2) then
+--						colorAddress <= color_red;
+--					end if;
+--					if (oppVGA(opp_index) = 3) then
+--						colorAddress <= color_cyan;
+--					end if;
+--					if (oppVGA(opp_index) = 4) then
+--						colorAddress <= color_yellow;
+--					end if;
+--					if (oppVGA(opp_index) = 5) then
+--						colorAddress <= color_magenta;
+--					end if;
+--				end if;
+--			end if;		
+--		end loop;
+----		
+--		for opp_y_index in 0 to 9 loop
+--			if (pixel_row_int >= (91 + 30 * opp_y_index) and pixel_row_int <= (119 + 30 * opp_y_index) and pixel_column_int >= (331 + 30 * 6) and pixel_column_int <= (359 + 30 * 6)) then 
+--					opp_index := 6 + 10 * opp_y_index;	
+--					if (oppVGA(opp_index) = 0) then	
+--						colorAddress <= color_blue;
+--					end if;
+--					if (oppVGA(opp_index) = 1) then
+--						colorAddress <= color_black;
+--					end if;
+--					if (oppVGA(opp_index) = 2) then
+--						colorAddress <= color_red;
+--					end if;
+--					if (oppVGA(opp_index) = 3) then
+--						colorAddress <= color_cyan;
+--					end if;
+--					if (oppVGA(opp_index) = 4) then
+--						colorAddress <= color_yellow;
+--					end if;
+--					if (oppVGA(opp_index) = 5) then
+--						colorAddress <= color_magenta;
+--					end if;
+--			end if;		
+--		end loop;
+--		
+--		for opp_y_index in 0 to 9 loop
+--			if (pixel_row_int >= (91 + 30 * opp_y_index) and pixel_row_int <= (119 + 30 * opp_y_index) and pixel_column_int >= (331 + 30 * 7) and pixel_column_int <= (359 + 30 * 7)) then 
+--					opp_index := 7 + 10 * opp_y_index;	
+--					if (oppVGA(opp_index) = 0) then	
+--						colorAddress <= color_blue;
+--					end if;
+--					if (oppVGA(opp_index) = 1) then
+--						colorAddress <= color_black;
+--					end if;
+--					if (oppVGA(opp_index) = 2) then
+--						colorAddress <= color_red;
+--					end if;
+--					if (oppVGA(opp_index) = 3) then
+--						colorAddress <= color_cyan;
+--					end if;
+--					if (oppVGA(opp_index) = 4) then
+--						colorAddress <= color_yellow;
+--					end if;
+--					if (oppVGA(opp_index) = 5) then
+--						colorAddress <= color_magenta;
+--					end if;
+--			end if;		
+--		end loop;
+----		
+--		for opp_y_index in 0 to 9 loop
+--			if (pixel_row_int >= (91 + 30 * opp_y_index) and pixel_row_int <= (119 + 30 * opp_y_index) and pixel_column_int >= (331 + 30 * 8) and pixel_column_int <= (359 + 30 * 8)) then 
+--					opp_index := 8 + 10 * opp_y_index;	
+--					if (oppVGA(opp_index) = 0) then	
+--						colorAddress <= color_blue;
+--					end if;
+--					if (oppVGA(opp_index) = 1) then
+--						colorAddress <= color_black;
+--					end if;
+--					if (oppVGA(opp_index) = 2) then
+--						colorAddress <= color_red;
+--					end if;
+--					if (oppVGA(opp_index) = 3) then
+--						colorAddress <= color_cyan;
+--					end if;
+--					if (oppVGA(opp_index) = 4) then
+--						colorAddress <= color_yellow;
+--					end if;
+--					if (oppVGA(opp_index) = 5) then
+--						colorAddress <= color_magenta;
+--					end if;
+--			end if;		
+--		end loop;
+----		
+--		for opp_y_index in 0 to 9 loop
+--			if (pixel_row_int >= (91 + 30 * opp_y_index) and pixel_row_int <= (119 + 30 * opp_y_index) and pixel_column_int >= (331 + 30 * 9) and pixel_column_int <= (359 + 30 * 9)) then 
+--					opp_index := 9 + 10 * opp_y_index;	
+--					if (oppVGA(opp_index) = 0) then	
+--						colorAddress <= color_blue;
+--					end if;
+--					if (oppVGA(opp_index) = 1) then
+--						colorAddress <= color_black;
+--					end if;
+--					if (oppVGA(opp_index) = 2) then
+--						colorAddress <= color_red;
+--					end if;
+--					if (oppVGA(opp_index) = 3) then
+--						colorAddress <= color_cyan;
+--					end if;
+--					if (oppVGA(opp_index) = 4) then
+--						colorAddress <= color_yellow;
+--					end if;
+--					if (oppVGA(opp_index) = 5) then
+--						colorAddress <= color_magenta;
+--					end if;
+--			end if;		
+--		end loop;
 			
 	end process pixelDraw;	
 
