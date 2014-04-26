@@ -10,7 +10,8 @@ entity pixelGenerator is
 			pixel_row, pixel_column											: in std_logic_vector(9 downto 0);
 			red_out, green_out, blue_out									: out std_logic_vector(9 downto 0);
 			myVGA																	: in VGA_vector;
-			oppVGA																: in VGA_vector
+			oppVGA																: in VGA_vector;
+			game_over, winner, tie											: in std_logic
 		);
 end entity pixelGenerator;
 
@@ -57,10 +58,22 @@ begin
 
 --------------------------------------------------------------------------------------------	
 
-	pixelDraw : process(clk, myVGA, oppVGA, pixel_row_int, pixel_column_int) is
+	pixelDraw : process(clk, myVGA, oppVGA, pixel_row_int, pixel_column_int, game_over, winner, tie) is
 	variable my_x_index, my_y_index, my_index, opp_x_index, opp_y_index, opp_index : integer;
 	begin
-	colorAddress <= color_white;
+	if (game_over='1' and winner='0') then
+		colorAddress <= color_green;
+	end if;
+	if (tie='1') then
+		colorAddress <= color_cyan;
+	end if;
+	if (game_over='1' and winner='1') then
+		colorAddress <= color_red;
+	end if;
+	if (game_over='0') then
+		colorAddress <= color_white;
+	end if;
+	
 	
 	if (pixel_row_int >= 90 and pixel_row_int <= 390 and pixel_column_int >= 10 and pixel_column_int <= 310) then 
 			colorAddress <= color_black;
@@ -656,7 +669,30 @@ end loop;
 --			end if;		
 --		end loop;
 			
-	end process pixelDraw;	
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+--if (game_over='1' and winner='0') then
+--	colorAddress <= color_green;
+--end if;
+--
+--if (game_over='1' and winner='1') then
+--	colorAddress <= color_red;
+--end if;
+--
+--if (game_over='1' and tie='1') then
+--	colorAddress <= color_magenta;
+--end if;
+		
+		end process pixelDraw;	
 
 --------------------------------------------------------------------------------------------
 	

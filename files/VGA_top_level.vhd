@@ -5,7 +5,8 @@ use WORK.battleships_const.all;
 
 entity VGA_top_level is
 	port(
-			CLOCK_50 													: in std_logic;
+			CLOCK_50, game_over, winner, tie						: in std_logic;
+			
 			--VGA 
 			VGA_RED, VGA_GREEN, VGA_BLUE 							: out std_logic_vector(9 downto 0); 
 			HORIZ_SYNC, VERT_SYNC, VGA_BLANK, VGA_CLK			: out std_logic;
@@ -22,7 +23,8 @@ component pixelGenerator is
 			pixel_row, pixel_column						    							: in std_logic_vector(9 downto 0);
 			red_out, green_out, blue_out												: out std_logic_vector(9 downto 0);
 			myVGA																				: in VGA_vector;
-			oppVGA																			: in VGA_vector
+			oppVGA																			: in VGA_vector;
+			game_over, winner, tie														: in std_logic
 		);
 end component pixelGenerator;
 
@@ -46,7 +48,7 @@ begin
 --------------------------------------------------------------------------------------------
 
 	videoGen : pixelGenerator
-		port map(CLOCK_50, VGA_clk_int, video_on_int, eof, pixel_row_int, pixel_column_int, VGA_RED, VGA_GREEN, VGA_BLUE, myVGA, oppVGA);
+		port map(CLOCK_50, VGA_clk_int, video_on_int, eof, pixel_row_int, pixel_column_int, VGA_RED, VGA_GREEN, VGA_BLUE, myVGA, oppVGA, game_over, winner, tie);
 
 --------------------------------------------------------------------------------------------
 --This section should not be modified in your design.  This section handles the VGA timing signals

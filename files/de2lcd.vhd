@@ -56,7 +56,7 @@ BEGIN
 			LCD_RW <= '0';
 
 		ELSIF CLK_400HZ'EVENT AND CLK_400HZ = '1' THEN
-		
+			init := '1';
 			CASE state IS
 -- Set Function to 8-bit transfer and 2 line display with 5x8 Font size
 -- see Hitachi HD44780 family data sheet for LCD command and timing details
@@ -270,9 +270,9 @@ BEGIN
 							DATA_BUS_VALUE <= X"20";
 						ELSIF game_over='1' THEN
 							IF winner='0' THEN
-								DATA_BUS_VALUE <= X"31";
+								DATA_BUS_VALUE <= X"30";
 							ELSE
-								DATA_BUS_VALUE <= X"32";
+								DATA_BUS_VALUE <= X"31";
 							END IF;
 						ELSE
 							DATA_BUS_VALUE <= X"20";

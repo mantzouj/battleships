@@ -17,7 +17,7 @@ entity battleships is
 			VGA_RED, VGA_GREEN, VGA_BLUE 							: out std_logic_vector(9 downto 0); 
 			HORIZ_SYNC, VERT_SYNC, VGA_BLANK, VGA_CLK			: out std_logic;
 			data_out 													: out std_logic;
-			test0, test1, test2, test3, test4 					: out std_logic; --, test5, test6, test7, test8, test9, test10, test11, test12, test13, test14 
+			test0, test1, test2, test3, test4, test11			: out std_logic; --, test5, test6, test7, test8, test9, test10, test11, test12, test13, test14 
 			led_seq														: out std_logic_vector (55 downto 0)
 			
  ); 
@@ -34,7 +34,7 @@ END component;
 
 component VGA_top_level is
 	port(
-			CLOCK_50 													: in std_logic;
+			CLOCK_50, game_over, winner, tie						: in std_logic;
 			--VGA 
 			VGA_RED, VGA_GREEN, VGA_BLUE 							: out std_logic_vector(9 downto 0); 
 			HORIZ_SYNC, VERT_SYNC, VGA_BLANK, VGA_CLK			: out std_logic;
@@ -95,7 +95,7 @@ begin
 
 LCDscreen : de2lcd port map (tie, waiting, res_lcd, clk, game_over, winner, LCD_RS, LCD_E, LCD_ON, RESET_LED, SEC_LED,LCD_RW,DATA_BUS);
 keyboard_0 : ps2 port map (keyboard_clk, keyboard_data, clk, '1', hist1, hist0, LEDs);
-vga_0 : VGA_top_level port map (clk, VGA_RED, VGA_GREEN, VGA_BLUE, HORIZ_SYNC, VERT_SYNC, VGA_BLANK, VGA_CLK, myVGA, oppVGA);
+vga_0 : VGA_top_level port map (clk, game_over, winner, tie, VGA_RED, VGA_GREEN, VGA_BLUE, HORIZ_SYNC, VERT_SYNC, VGA_BLANK, VGA_CLK, myVGA, oppVGA);
 conv0 : leddcd port map (ship1_y_vector,led_seq(48 downto 42));
 conv1 : leddcd port map (opp_ship1_y_vector,led_seq(34 downto 28));
 conv2 : leddcd port map (ship1_x_vector,led_seq(55 downto 49));
@@ -198,11 +198,13 @@ game: process(init,data_in,ship1_or,clk,done) is
 		cursor_x	:= 4;
 		cursor_y := 4;
 		phase <= 0;
+		test11 <= '0';
 		data_out <= '1';
 		test0		<= '0'; test1		<= '0'; test2		<= '0'; test3		<= '0'; test4 <= '0';
 		ship1_x 	:= 0;
 		ship1_y 	:= 0;
 		tie <= '0';
+		winner <= '0';
 		game_over <= '0';
 		opp_ship1_x_vector <= "0000";
 		opp_ship1_y_vector <= "0000";
@@ -423,15 +425,15 @@ game: process(init,data_in,ship1_or,clk,done) is
 				state <= TESTING1;				
 				
 			WHEN TESTING1 =>
-				if (opp_ship1_or='1') then
-					oppVGA <= (others => WATER);
-					oppVGA(opp_ship1_x + 10*opp_ship1_y) <= SHIP;
-					oppVGA(opp_ship1_x + 10*(opp_ship1_y+1)) <= SHIP;
-				else
-					oppVGA <= (others => WATER);
-					oppVGA(opp_ship1_x + 10*opp_ship1_y) <= SHIP;
-					oppVGA(opp_ship1_x + 1 + 10*opp_ship1_y) <= SHIP;		
-				end if;
+--				if (opp_ship1_or='1') then
+--					oppVGA <= (others => WATER);
+--					oppVGA(opp_ship1_x + 10*opp_ship1_y) <= SHIP;
+--					oppVGA(opp_ship1_x + 10*(opp_ship1_y+1)) <= SHIP;
+--				else
+--					oppVGA <= (others => WATER);
+--					oppVGA(opp_ship1_x + 10*opp_ship1_y) <= SHIP;
+--					oppVGA(opp_ship1_x + 1 + 10*opp_ship1_y) <= SHIP;		
+--				end if;
 				state <= SHOT_SELECT;
 				
 			WHEN SHOT_SELECT =>
@@ -442,7 +444,7 @@ game: process(init,data_in,ship1_or,clk,done) is
 				
 				if ((down_press='1') or (up_press='1') or (right_press='1') or (left_press='1')) then
 					--saved1 <= myVGA(cursor_x + 10*cursor_y);
-					myVGA(cursor_x + 10*cursor_y) <= saved1;
+					oppVGA(cursor_x + 10*cursor_y) <= saved1;
 				end if;
 				
 				if (left_press='1') then
@@ -477,22 +479,40 @@ game: process(init,data_in,ship1_or,clk,done) is
 					end if;
 				end if;
 				
-				oppVGA(cursor_x + 10*cursor_y) <= CURSOR;
-
+				
+				
+				if(myHits<2 and oppHits<2) then
+					
+					--CASE oppVGA(cursor_x + 10* cursor_y) IS
+					--	WHEN WATER => oppVGA(cursor_x + 10* cursor_y) <= CURSOR;
+					--	WHEN HIT => oppVGA(cursor_x + 10* cursor_y) <= OVERLAP;
+					--	WHEN MISS => oppVGA(cursor_x + 10* cursor_y) <= OVERLAP;
+					--	WHEN others => null;
+					--END CASE;
+					oppVGA(cursor_x + 10*cursor_y) <= CURSOR;
+				
+				end if;
+					
 										--		myVGA <= ((ship1_x + 10*ship1_y) => SHIP, others => WATER);
 										--		myVGA <= ((ship1_x + 10*(ship1_y+1)) => SHIP, others => WATER);
 
-				if (enter_press='1' and saved1=SHIP) then --*do not allow enter on already clicked-on box, and perhaps show illegal color too  --transmit shot coordinates to opponent -&- test for hit/miss ---if all ships hit, go to game-over phase, otherwise wait for opponent
+				if (enter_press='1' and (saved1=WATER or saved1=SHIP)) then --*not on already clicked-on box, and perhaps show illegal color too  --transmit shot coordinates to opponent -&- test for hit/miss ---if all ships hit, go to game-over phase, otherwise wait for opponent
 ---!!!!!!!!!--e			<= '1'; --------WATER in 'correct' version---------!!!!!!!!!!!!!!!!!!!!!!!
 					if (((cursor_x + 10*cursor_y)=(opp_ship1_x + 10*opp_ship1_y)) or (opp_ship1_or='1' and (cursor_x + 10*cursor_y)=(opp_ship1_x + 10*(opp_ship1_y+1))) or (opp_ship1_or='0' and (cursor_x + 10*cursor_y)=(opp_ship1_x + 10*opp_ship1_y +1))) then
-						oppVGA(cursor_x+10*cursor_y) <= HIT;
+						saved1 <= HIT;--oppVGA(cursor_x+10*cursor_y) <= HIT;
+						oppVGA(cursor_x + 10*cursor_y) <= HIT;
 						myHits <= myHits + 1;
 					else
+						saved1 <= MISS;
 						oppVGA(cursor_x+10*cursor_y) <= MISS;
 					end if;
 					state		<= PRE_COMM_SHOT;
 					data_out <= '0';
 					test0 <= '0';
+				end if;
+				
+				if(myHits<2 and oppHits<2 and saved1/=WATER) then
+						oppVGA(cursor_x + 10*cursor_y) <= OVERLAP;
 				end if;
 				
 			WHEN PRE_COMM_SHOT =>
@@ -616,11 +636,14 @@ game: process(init,data_in,ship1_or,clk,done) is
 				else
 					myVGA(opp_cursor_x + 10*opp_cursor_y)<=MISS;
 				end if;
-				
+				cursor_x := 4;
+				cursor_y := 4;
+				saved1 <= oppVGA(44);--edit saved1
 				state <= SHOT_SELECT;
 			
 			WHEN GAME_DONE =>
 				game_over <= '1';
+				test11 <= '1';
 				if (myHits=2 and oppHits<2) then
 					winner <= '0';	--I win
 				end if;
