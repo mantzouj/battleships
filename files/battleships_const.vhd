@@ -30,6 +30,18 @@ constant COMM_S1_7 : integer := 8;
 constant COMM_S1_8 : integer := 9;
 constant COMM_S1_9 : integer := 10;
 
+constant PLACE_S2 : integer := 11;
+constant PRE_COMM_S2 : integer := 12;
+constant COMM_S2_1 : integer := 13;
+constant COMM_S2_2 : integer := 14;
+constant COMM_S2_3 : integer := 15;
+constant COMM_S2_4 : integer := 16;
+constant COMM_S2_5 : integer := 17;
+constant COMM_S2_6 : integer := 18;
+constant COMM_S2_7 : integer := 19;
+constant COMM_S2_8 : integer := 20;
+constant COMM_S2_9 : integer := 21;
+
 constant SHOT_SELECT : integer := 99;
 constant PRE_COMM_SHOT : integer := 100;
 constant COMM_SHOT_1 : integer := 101;

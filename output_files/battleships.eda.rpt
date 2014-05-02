@@ -1,5 +1,5 @@
 EDA Netlist Writer report for battleships
-Thu May 01 22:51:31 2014
+Fri May 02 10:48:12 2014
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -36,7 +36,7 @@ applicable agreement for further details.
 +-------------------------------------------------------------------+
 ; EDA Netlist Writer Summary                                        ;
 +---------------------------+---------------------------------------+
-; EDA Netlist Writer Status ; Successful - Thu May 01 22:51:31 2014 ;
+; EDA Netlist Writer Status ; Successful - Fri May 02 10:48:12 2014 ;
 ; Revision Name             ; battleships                           ;
 ; Top-level Entity Name     ; battleships                           ;
 ; Family                    ; Cyclone II                            ;
@@ -84,13 +84,13 @@ applicable agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit EDA Netlist Writer
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Thu May 01 22:51:26 2014
+    Info: Processing started: Fri May 02 10:48:06 2014
 Info: Command: quartus_eda --read_settings_files=off --write_settings_files=off battleships -c battleships
 Info (204026): Generated files "battleships.vho", "battleships_fast.vho", "battleships_vhd.sdo" and "battleships_vhd_fast.sdo" in directory "C:/Users/mantzouj/Documents/Jason/Jason School/Spring 2014/EECS 392/Battleships/simulation/modelsim/" for EDA simulation tool
 Info: Quartus II 64-Bit EDA Netlist Writer was successful. 0 errors, 0 warnings
-    Info: Peak virtual memory: 454 megabytes
-    Info: Processing ended: Thu May 01 22:51:31 2014
-    Info: Elapsed time: 00:00:05
-    Info: Total CPU time (on all processors): 00:00:04
+    Info: Peak virtual memory: 476 megabytes
+    Info: Processing ended: Fri May 02 10:48:12 2014
+    Info: Elapsed time: 00:00:06
+    Info: Total CPU time (on all processors): 00:00:06
 
 

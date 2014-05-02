@@ -49,10 +49,10 @@ data_in => phase.OUTPUTSELECT
 data_in => phase.OUTPUTSELECT
 data_in => phase.OUTPUTSELECT
 data_in => phase.OUTPUTSELECT
-AUD_ADCDAT => DE2_Audio_Example:Audio.AUD_ADCDAT
+AUD_ADCDAT => DE2_Audio_Example:Sounds.AUD_ADCDAT
 keyboard_clk => ps2:keyboard_0.keyboard_clk
 keyboard_data => ps2:keyboard_0.keyboard_data
-clk => DE2_Audio_Example:Audio.CLOCK_50
+clk => DE2_Audio_Example:Sounds.CLOCK_50
 clk => opp_cursor_y_vector[0].CLK
 clk => opp_cursor_y_vector[1].CLK
 clk => opp_cursor_y_vector[2].CLK
@@ -122,6 +122,7 @@ clk => state[28].CLK
 clk => state[29].CLK
 clk => state[30].CLK
 clk => state[31].CLK
+clk => ship2_or.CLK
 clk => ship1_or.CLK
 clk => opp_cursor_x_vector[0].CLK
 clk => opp_cursor_x_vector[1].CLK
@@ -1013,6 +1014,130 @@ clk => \game:opp_ship1_x[27].CLK
 clk => \game:opp_ship1_x[28].CLK
 clk => \game:opp_ship1_x[29].CLK
 clk => \game:opp_ship1_x[30].CLK
+clk => \game:S1_index_2[0].CLK
+clk => \game:S1_index_2[1].CLK
+clk => \game:S1_index_2[2].CLK
+clk => \game:S1_index_2[3].CLK
+clk => \game:S1_index_2[4].CLK
+clk => \game:S1_index_2[5].CLK
+clk => \game:S1_index_2[6].CLK
+clk => \game:S1_index_2[7].CLK
+clk => \game:S1_index_2[8].CLK
+clk => \game:S1_index_2[9].CLK
+clk => \game:S1_index_2[10].CLK
+clk => \game:S1_index_2[11].CLK
+clk => \game:S1_index_2[12].CLK
+clk => \game:S1_index_2[13].CLK
+clk => \game:S1_index_2[14].CLK
+clk => \game:S1_index_2[15].CLK
+clk => \game:S1_index_2[16].CLK
+clk => \game:S1_index_2[17].CLK
+clk => \game:S1_index_2[18].CLK
+clk => \game:S1_index_2[19].CLK
+clk => \game:S1_index_2[20].CLK
+clk => \game:S1_index_2[21].CLK
+clk => \game:S1_index_2[22].CLK
+clk => \game:S1_index_2[23].CLK
+clk => \game:S1_index_2[24].CLK
+clk => \game:S1_index_2[25].CLK
+clk => \game:S1_index_2[26].CLK
+clk => \game:S1_index_2[27].CLK
+clk => \game:S1_index_2[28].CLK
+clk => \game:S1_index_2[29].CLK
+clk => \game:S1_index_2[30].CLK
+clk => \game:S1_index_1[0].CLK
+clk => \game:S1_index_1[1].CLK
+clk => \game:S1_index_1[2].CLK
+clk => \game:S1_index_1[3].CLK
+clk => \game:S1_index_1[4].CLK
+clk => \game:S1_index_1[5].CLK
+clk => \game:S1_index_1[6].CLK
+clk => \game:S1_index_1[7].CLK
+clk => \game:S1_index_1[8].CLK
+clk => \game:S1_index_1[9].CLK
+clk => \game:S1_index_1[10].CLK
+clk => \game:S1_index_1[11].CLK
+clk => \game:S1_index_1[12].CLK
+clk => \game:S1_index_1[13].CLK
+clk => \game:S1_index_1[14].CLK
+clk => \game:S1_index_1[15].CLK
+clk => \game:S1_index_1[16].CLK
+clk => \game:S1_index_1[17].CLK
+clk => \game:S1_index_1[18].CLK
+clk => \game:S1_index_1[19].CLK
+clk => \game:S1_index_1[20].CLK
+clk => \game:S1_index_1[21].CLK
+clk => \game:S1_index_1[22].CLK
+clk => \game:S1_index_1[23].CLK
+clk => \game:S1_index_1[24].CLK
+clk => \game:S1_index_1[25].CLK
+clk => \game:S1_index_1[26].CLK
+clk => \game:S1_index_1[27].CLK
+clk => \game:S1_index_1[28].CLK
+clk => \game:S1_index_1[29].CLK
+clk => \game:S1_index_1[30].CLK
+clk => \game:ship2_y[0].CLK
+clk => \game:ship2_y[1].CLK
+clk => \game:ship2_y[2].CLK
+clk => \game:ship2_y[3].CLK
+clk => \game:ship2_y[4].CLK
+clk => \game:ship2_y[5].CLK
+clk => \game:ship2_y[6].CLK
+clk => \game:ship2_y[7].CLK
+clk => \game:ship2_y[8].CLK
+clk => \game:ship2_y[9].CLK
+clk => \game:ship2_y[10].CLK
+clk => \game:ship2_y[11].CLK
+clk => \game:ship2_y[12].CLK
+clk => \game:ship2_y[13].CLK
+clk => \game:ship2_y[14].CLK
+clk => \game:ship2_y[15].CLK
+clk => \game:ship2_y[16].CLK
+clk => \game:ship2_y[17].CLK
+clk => \game:ship2_y[18].CLK
+clk => \game:ship2_y[19].CLK
+clk => \game:ship2_y[20].CLK
+clk => \game:ship2_y[21].CLK
+clk => \game:ship2_y[22].CLK
+clk => \game:ship2_y[23].CLK
+clk => \game:ship2_y[24].CLK
+clk => \game:ship2_y[25].CLK
+clk => \game:ship2_y[26].CLK
+clk => \game:ship2_y[27].CLK
+clk => \game:ship2_y[28].CLK
+clk => \game:ship2_y[29].CLK
+clk => \game:ship2_y[30].CLK
+clk => \game:ship2_x[0].CLK
+clk => \game:ship2_x[1].CLK
+clk => \game:ship2_x[2].CLK
+clk => \game:ship2_x[3].CLK
+clk => \game:ship2_x[4].CLK
+clk => \game:ship2_x[5].CLK
+clk => \game:ship2_x[6].CLK
+clk => \game:ship2_x[7].CLK
+clk => \game:ship2_x[8].CLK
+clk => \game:ship2_x[9].CLK
+clk => \game:ship2_x[10].CLK
+clk => \game:ship2_x[11].CLK
+clk => \game:ship2_x[12].CLK
+clk => \game:ship2_x[13].CLK
+clk => \game:ship2_x[14].CLK
+clk => \game:ship2_x[15].CLK
+clk => \game:ship2_x[16].CLK
+clk => \game:ship2_x[17].CLK
+clk => \game:ship2_x[18].CLK
+clk => \game:ship2_x[19].CLK
+clk => \game:ship2_x[20].CLK
+clk => \game:ship2_x[21].CLK
+clk => \game:ship2_x[22].CLK
+clk => \game:ship2_x[23].CLK
+clk => \game:ship2_x[24].CLK
+clk => \game:ship2_x[25].CLK
+clk => \game:ship2_x[26].CLK
+clk => \game:ship2_x[27].CLK
+clk => \game:ship2_x[28].CLK
+clk => \game:ship2_x[29].CLK
+clk => \game:ship2_x[30].CLK
 clk => \game:ship1_y[0].CLK
 clk => \game:ship1_y[1].CLK
 clk => \game:ship1_y[2].CLK
@@ -1150,18 +1275,18 @@ clk => res_lcd.CLK
 clk => de2lcd:LCDscreen.clk_50Mhz
 clk => ps2:keyboard_0.clock_50MHz
 clk => VGA_top_level:vga_0.CLOCK_50
-CLOCK_27 => DE2_Audio_Example:Audio.CLOCK_27
-AUD_BCLK <> DE2_Audio_Example:Audio.AUD_BCLK
-AUD_ADCLRCK <> DE2_Audio_Example:Audio.AUD_ADCLRCK
-AUD_DACLRCK <> DE2_Audio_Example:Audio.AUD_DACLRCK
-I2C_SDAT <> DE2_Audio_Example:Audio.I2C_SDAT
-KEY[0] => DE2_Audio_Example:Audio.KEY[0]
-KEY[1] => DE2_Audio_Example:Audio.KEY[1]
-KEY[2] => DE2_Audio_Example:Audio.KEY[2]
-KEY[3] => DE2_Audio_Example:Audio.KEY[3]
-AUD_XCK <= DE2_Audio_Example:Audio.AUD_XCK
-AUD_DACDAT <= DE2_Audio_Example:Audio.AUD_DACDAT
-I2C_SCLK <= DE2_Audio_Example:Audio.I2C_SCLK
+CLOCK_27 => DE2_Audio_Example:Sounds.CLOCK_27
+AUD_BCLK <> DE2_Audio_Example:Sounds.AUD_BCLK
+AUD_ADCLRCK <> DE2_Audio_Example:Sounds.AUD_ADCLRCK
+AUD_DACLRCK <> DE2_Audio_Example:Sounds.AUD_DACLRCK
+I2C_SDAT <> DE2_Audio_Example:Sounds.I2C_SDAT
+KEY[0] => DE2_Audio_Example:Sounds.KEY[0]
+KEY[1] => DE2_Audio_Example:Sounds.KEY[1]
+KEY[2] => DE2_Audio_Example:Sounds.KEY[2]
+KEY[3] => DE2_Audio_Example:Sounds.KEY[3]
+AUD_XCK <= DE2_Audio_Example:Sounds.AUD_XCK
+AUD_DACDAT <= DE2_Audio_Example:Sounds.AUD_DACDAT
+I2C_SCLK <= DE2_Audio_Example:Sounds.I2C_SCLK
 LCD_RS <= de2lcd:LCDscreen.LCD_RS
 LCD_E <= de2lcd:LCDscreen.LCD_E
 LCD_ON <= de2lcd:LCDscreen.LCD_ON
@@ -1275,7 +1400,7 @@ led_seq[54] <= leddcd:conv2.segments_out[5]
 led_seq[55] <= leddcd:conv2.segments_out[6]
 
 
-|battleships|DE2_Audio_Example:Audio
+|battleships|DE2_Audio_Example:Sounds
 CLOCK_50 => CLOCK_50.IN2
 CLOCK_27 => ~NO_FANOUT~
 KEY[0] => _.IN1
@@ -1326,7 +1451,7 @@ SW => start.OUTPUTSELECT
 test <= testi.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|battleships|DE2_Audio_Example:Audio|Audio_Controller:Audio_Controller
+|battleships|DE2_Audio_Example:Sounds|Audio_Controller:Audio_Controller
 CLOCK_50 => CLOCK_50.IN6
 reset => reset.IN3
 clear_audio_in_memory => comb.IN0
@@ -1476,7 +1601,7 @@ AUD_XCK <= Audio_Clock:Audio_Clock.c0
 AUD_DACDAT <= Altera_UP_Audio_Out_Serializer:Audio_Out_Serializer.serial_audio_out_data
 
 
-|battleships|DE2_Audio_Example:Audio|Audio_Controller:Audio_Controller|Altera_UP_Clock_Edge:Bit_Clock_Edges
+|battleships|DE2_Audio_Example:Sounds|Audio_Controller:Audio_Controller|Altera_UP_Clock_Edge:Bit_Clock_Edges
 clk => last_test_clk.CLK
 clk => cur_test_clk.CLK
 reset => ~NO_FANOUT~
@@ -1485,7 +1610,7 @@ rising_edge <= rising_edge.DB_MAX_OUTPUT_PORT_TYPE
 falling_edge <= falling_edge.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|battleships|DE2_Audio_Example:Audio|Audio_Controller:Audio_Controller|Altera_UP_Clock_Edge:ADC_Left_Right_Clock_Edges
+|battleships|DE2_Audio_Example:Sounds|Audio_Controller:Audio_Controller|Altera_UP_Clock_Edge:ADC_Left_Right_Clock_Edges
 clk => last_test_clk.CLK
 clk => cur_test_clk.CLK
 reset => ~NO_FANOUT~
@@ -1494,7 +1619,7 @@ rising_edge <= rising_edge.DB_MAX_OUTPUT_PORT_TYPE
 falling_edge <= falling_edge.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|battleships|DE2_Audio_Example:Audio|Audio_Controller:Audio_Controller|Altera_UP_Clock_Edge:DAC_Left_Right_Clock_Edges
+|battleships|DE2_Audio_Example:Sounds|Audio_Controller:Audio_Controller|Altera_UP_Clock_Edge:DAC_Left_Right_Clock_Edges
 clk => last_test_clk.CLK
 clk => cur_test_clk.CLK
 reset => ~NO_FANOUT~
@@ -1503,7 +1628,7 @@ rising_edge <= rising_edge.DB_MAX_OUTPUT_PORT_TYPE
 falling_edge <= falling_edge.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|battleships|DE2_Audio_Example:Audio|Audio_Controller:Audio_Controller|Altera_UP_Audio_In_Deserializer:Audio_In_Deserializer
+|battleships|DE2_Audio_Example:Sounds|Audio_Controller:Audio_Controller|Altera_UP_Audio_In_Deserializer:Audio_In_Deserializer
 clk => clk.IN3
 reset => reset.IN3
 bit_clk_rising_edge => bit_clk_rising_edge.IN1
@@ -1597,7 +1722,7 @@ right_channel_data[31] <= Altera_UP_SYNC_FIFO:Audio_In_Right_Channel_FIFO.read_d
 right_channel_data[32] <= Altera_UP_SYNC_FIFO:Audio_In_Right_Channel_FIFO.read_data
 
 
-|battleships|DE2_Audio_Example:Audio|Audio_Controller:Audio_Controller|Altera_UP_Audio_In_Deserializer:Audio_In_Deserializer|Altera_UP_Audio_Bit_Counter:Audio_Out_Bit_Counter
+|battleships|DE2_Audio_Example:Sounds|Audio_Controller:Audio_Controller|Altera_UP_Audio_In_Deserializer:Audio_In_Deserializer|Altera_UP_Audio_Bit_Counter:Audio_Out_Bit_Counter
 clk => counting~reg0.CLK
 clk => bit_counter[0].CLK
 clk => bit_counter[1].CLK
@@ -1618,7 +1743,7 @@ left_right_clk_falling_edge => reset_bit_counter.IN1
 counting <= counting~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|battleships|DE2_Audio_Example:Audio|Audio_Controller:Audio_Controller|Altera_UP_Audio_In_Deserializer:Audio_In_Deserializer|Altera_UP_SYNC_FIFO:Audio_In_Left_Channel_FIFO
+|battleships|DE2_Audio_Example:Sounds|Audio_Controller:Audio_Controller|Altera_UP_Audio_In_Deserializer:Audio_In_Deserializer|Altera_UP_SYNC_FIFO:Audio_In_Left_Channel_FIFO
 clk => clk.IN1
 reset => reset.IN1
 write_en => write_en.IN1
@@ -1698,7 +1823,7 @@ read_data[31] <= scfifo:Sync_FIFO.q
 read_data[32] <= scfifo:Sync_FIFO.q
 
 
-|battleships|DE2_Audio_Example:Audio|Audio_Controller:Audio_Controller|Altera_UP_Audio_In_Deserializer:Audio_In_Deserializer|Altera_UP_SYNC_FIFO:Audio_In_Left_Channel_FIFO|scfifo:Sync_FIFO
+|battleships|DE2_Audio_Example:Sounds|Audio_Controller:Audio_Controller|Altera_UP_Audio_In_Deserializer:Audio_In_Deserializer|Altera_UP_SYNC_FIFO:Audio_In_Left_Channel_FIFO|scfifo:Sync_FIFO
 data[0] => scfifo_5041:auto_generated.data[0]
 data[1] => scfifo_5041:auto_generated.data[1]
 data[2] => scfifo_5041:auto_generated.data[2]
@@ -1781,7 +1906,7 @@ usedw[5] <= scfifo_5041:auto_generated.usedw[5]
 usedw[6] <= scfifo_5041:auto_generated.usedw[6]
 
 
-|battleships|DE2_Audio_Example:Audio|Audio_Controller:Audio_Controller|Altera_UP_Audio_In_Deserializer:Audio_In_Deserializer|Altera_UP_SYNC_FIFO:Audio_In_Left_Channel_FIFO|scfifo:Sync_FIFO|scfifo_5041:auto_generated
+|battleships|DE2_Audio_Example:Sounds|Audio_Controller:Audio_Controller|Altera_UP_Audio_In_Deserializer:Audio_In_Deserializer|Altera_UP_SYNC_FIFO:Audio_In_Left_Channel_FIFO|scfifo:Sync_FIFO|scfifo_5041:auto_generated
 clock => a_dpfifo_on31:dpfifo.clock
 data[0] => a_dpfifo_on31:dpfifo.data[0]
 data[1] => a_dpfifo_on31:dpfifo.data[1]
@@ -1861,7 +1986,7 @@ usedw[6] <= a_dpfifo_on31:dpfifo.usedw[6]
 wrreq => a_dpfifo_on31:dpfifo.wreq
 
 
-|battleships|DE2_Audio_Example:Audio|Audio_Controller:Audio_Controller|Altera_UP_Audio_In_Deserializer:Audio_In_Deserializer|Altera_UP_SYNC_FIFO:Audio_In_Left_Channel_FIFO|scfifo:Sync_FIFO|scfifo_5041:auto_generated|a_dpfifo_on31:dpfifo
+|battleships|DE2_Audio_Example:Sounds|Audio_Controller:Audio_Controller|Altera_UP_Audio_In_Deserializer:Audio_In_Deserializer|Altera_UP_SYNC_FIFO:Audio_In_Left_Channel_FIFO|scfifo:Sync_FIFO|scfifo_5041:auto_generated|a_dpfifo_on31:dpfifo
 clock => altsyncram_rc81:FIFOram.clock0
 clock => cntr_d5b:rd_ptr_msb.clock
 clock => cntr_q57:usedw_counter.clock
@@ -2014,7 +2139,7 @@ wreq => _.IN0
 wreq => wait_state.IN1
 
 
-|battleships|DE2_Audio_Example:Audio|Audio_Controller:Audio_Controller|Altera_UP_Audio_In_Deserializer:Audio_In_Deserializer|Altera_UP_SYNC_FIFO:Audio_In_Left_Channel_FIFO|scfifo:Sync_FIFO|scfifo_5041:auto_generated|a_dpfifo_on31:dpfifo|altsyncram_rc81:FIFOram
+|battleships|DE2_Audio_Example:Sounds|Audio_Controller:Audio_Controller|Altera_UP_Audio_In_Deserializer:Audio_In_Deserializer|Altera_UP_SYNC_FIFO:Audio_In_Left_Channel_FIFO|scfifo:Sync_FIFO|scfifo_5041:auto_generated|a_dpfifo_on31:dpfifo|altsyncram_rc81:FIFOram
 address_a[0] => ram_block1a0.PORTAADDR
 address_a[0] => ram_block1a1.PORTAADDR
 address_a[0] => ram_block1a2.PORTAADDR
@@ -2593,7 +2718,7 @@ wren_a => ram_block1a30.PORTAWE
 wren_a => ram_block1a31.PORTAWE
 
 
-|battleships|DE2_Audio_Example:Audio|Audio_Controller:Audio_Controller|Altera_UP_Audio_In_Deserializer:Audio_In_Deserializer|Altera_UP_SYNC_FIFO:Audio_In_Left_Channel_FIFO|scfifo:Sync_FIFO|scfifo_5041:auto_generated|a_dpfifo_on31:dpfifo|cmpr_2o8:almost_full_comparer
+|battleships|DE2_Audio_Example:Sounds|Audio_Controller:Audio_Controller|Altera_UP_Audio_In_Deserializer:Audio_In_Deserializer|Altera_UP_SYNC_FIFO:Audio_In_Left_Channel_FIFO|scfifo:Sync_FIFO|scfifo_5041:auto_generated|a_dpfifo_on31:dpfifo|cmpr_2o8:almost_full_comparer
 aeb <= aeb_result_wire[0].DB_MAX_OUTPUT_PORT_TYPE
 dataa[0] => data_wire[0].IN0
 dataa[1] => data_wire[0].IN0
@@ -2611,7 +2736,7 @@ datab[5] => data_wire[2].IN1
 datab[6] => data_wire[3].IN1
 
 
-|battleships|DE2_Audio_Example:Audio|Audio_Controller:Audio_Controller|Altera_UP_Audio_In_Deserializer:Audio_In_Deserializer|Altera_UP_SYNC_FIFO:Audio_In_Left_Channel_FIFO|scfifo:Sync_FIFO|scfifo_5041:auto_generated|a_dpfifo_on31:dpfifo|cmpr_2o8:three_comparison
+|battleships|DE2_Audio_Example:Sounds|Audio_Controller:Audio_Controller|Altera_UP_Audio_In_Deserializer:Audio_In_Deserializer|Altera_UP_SYNC_FIFO:Audio_In_Left_Channel_FIFO|scfifo:Sync_FIFO|scfifo_5041:auto_generated|a_dpfifo_on31:dpfifo|cmpr_2o8:three_comparison
 aeb <= aeb_result_wire[0].DB_MAX_OUTPUT_PORT_TYPE
 dataa[0] => data_wire[0].IN0
 dataa[1] => data_wire[0].IN0
@@ -2629,7 +2754,7 @@ datab[5] => data_wire[2].IN1
 datab[6] => data_wire[3].IN1
 
 
-|battleships|DE2_Audio_Example:Audio|Audio_Controller:Audio_Controller|Altera_UP_Audio_In_Deserializer:Audio_In_Deserializer|Altera_UP_SYNC_FIFO:Audio_In_Left_Channel_FIFO|scfifo:Sync_FIFO|scfifo_5041:auto_generated|a_dpfifo_on31:dpfifo|cntr_d5b:rd_ptr_msb
+|battleships|DE2_Audio_Example:Sounds|Audio_Controller:Audio_Controller|Altera_UP_Audio_In_Deserializer:Audio_In_Deserializer|Altera_UP_SYNC_FIFO:Audio_In_Left_Channel_FIFO|scfifo:Sync_FIFO|scfifo_5041:auto_generated|a_dpfifo_on31:dpfifo|cntr_d5b:rd_ptr_msb
 clock => counter_reg_bit2a[5].CLK
 clock => counter_reg_bit2a[4].CLK
 clock => counter_reg_bit2a[3].CLK
@@ -2648,7 +2773,7 @@ sclr => _.IN0
 sclr => _.IN0
 
 
-|battleships|DE2_Audio_Example:Audio|Audio_Controller:Audio_Controller|Altera_UP_Audio_In_Deserializer:Audio_In_Deserializer|Altera_UP_SYNC_FIFO:Audio_In_Left_Channel_FIFO|scfifo:Sync_FIFO|scfifo_5041:auto_generated|a_dpfifo_on31:dpfifo|cntr_q57:usedw_counter
+|battleships|DE2_Audio_Example:Sounds|Audio_Controller:Audio_Controller|Altera_UP_Audio_In_Deserializer:Audio_In_Deserializer|Altera_UP_SYNC_FIFO:Audio_In_Left_Channel_FIFO|scfifo:Sync_FIFO|scfifo_5041:auto_generated|a_dpfifo_on31:dpfifo|cntr_q57:usedw_counter
 clock => counter_reg_bit3a[6].CLK
 clock => counter_reg_bit3a[5].CLK
 clock => counter_reg_bit3a[4].CLK
@@ -2676,7 +2801,7 @@ updown => counter_comb_bita5.DATAB
 updown => counter_comb_bita6.DATAB
 
 
-|battleships|DE2_Audio_Example:Audio|Audio_Controller:Audio_Controller|Altera_UP_Audio_In_Deserializer:Audio_In_Deserializer|Altera_UP_SYNC_FIFO:Audio_In_Left_Channel_FIFO|scfifo:Sync_FIFO|scfifo_5041:auto_generated|a_dpfifo_on31:dpfifo|cntr_e5b:wr_ptr
+|battleships|DE2_Audio_Example:Sounds|Audio_Controller:Audio_Controller|Altera_UP_Audio_In_Deserializer:Audio_In_Deserializer|Altera_UP_SYNC_FIFO:Audio_In_Left_Channel_FIFO|scfifo:Sync_FIFO|scfifo_5041:auto_generated|a_dpfifo_on31:dpfifo|cntr_e5b:wr_ptr
 clock => counter_reg_bit4a[6].CLK
 clock => counter_reg_bit4a[5].CLK
 clock => counter_reg_bit4a[4].CLK
@@ -2697,7 +2822,7 @@ sclr => _.IN0
 sclr => _.IN0
 
 
-|battleships|DE2_Audio_Example:Audio|Audio_Controller:Audio_Controller|Altera_UP_Audio_In_Deserializer:Audio_In_Deserializer|Altera_UP_SYNC_FIFO:Audio_In_Right_Channel_FIFO
+|battleships|DE2_Audio_Example:Sounds|Audio_Controller:Audio_Controller|Altera_UP_Audio_In_Deserializer:Audio_In_Deserializer|Altera_UP_SYNC_FIFO:Audio_In_Right_Channel_FIFO
 clk => clk.IN1
 reset => reset.IN1
 write_en => write_en.IN1
@@ -2777,7 +2902,7 @@ read_data[31] <= scfifo:Sync_FIFO.q
 read_data[32] <= scfifo:Sync_FIFO.q
 
 
-|battleships|DE2_Audio_Example:Audio|Audio_Controller:Audio_Controller|Altera_UP_Audio_In_Deserializer:Audio_In_Deserializer|Altera_UP_SYNC_FIFO:Audio_In_Right_Channel_FIFO|scfifo:Sync_FIFO
+|battleships|DE2_Audio_Example:Sounds|Audio_Controller:Audio_Controller|Altera_UP_Audio_In_Deserializer:Audio_In_Deserializer|Altera_UP_SYNC_FIFO:Audio_In_Right_Channel_FIFO|scfifo:Sync_FIFO
 data[0] => scfifo_5041:auto_generated.data[0]
 data[1] => scfifo_5041:auto_generated.data[1]
 data[2] => scfifo_5041:auto_generated.data[2]
@@ -2860,7 +2985,7 @@ usedw[5] <= scfifo_5041:auto_generated.usedw[5]
 usedw[6] <= scfifo_5041:auto_generated.usedw[6]
 
 
-|battleships|DE2_Audio_Example:Audio|Audio_Controller:Audio_Controller|Altera_UP_Audio_In_Deserializer:Audio_In_Deserializer|Altera_UP_SYNC_FIFO:Audio_In_Right_Channel_FIFO|scfifo:Sync_FIFO|scfifo_5041:auto_generated
+|battleships|DE2_Audio_Example:Sounds|Audio_Controller:Audio_Controller|Altera_UP_Audio_In_Deserializer:Audio_In_Deserializer|Altera_UP_SYNC_FIFO:Audio_In_Right_Channel_FIFO|scfifo:Sync_FIFO|scfifo_5041:auto_generated
 clock => a_dpfifo_on31:dpfifo.clock
 data[0] => a_dpfifo_on31:dpfifo.data[0]
 data[1] => a_dpfifo_on31:dpfifo.data[1]
@@ -2940,7 +3065,7 @@ usedw[6] <= a_dpfifo_on31:dpfifo.usedw[6]
 wrreq => a_dpfifo_on31:dpfifo.wreq
 
 
-|battleships|DE2_Audio_Example:Audio|Audio_Controller:Audio_Controller|Altera_UP_Audio_In_Deserializer:Audio_In_Deserializer|Altera_UP_SYNC_FIFO:Audio_In_Right_Channel_FIFO|scfifo:Sync_FIFO|scfifo_5041:auto_generated|a_dpfifo_on31:dpfifo
+|battleships|DE2_Audio_Example:Sounds|Audio_Controller:Audio_Controller|Altera_UP_Audio_In_Deserializer:Audio_In_Deserializer|Altera_UP_SYNC_FIFO:Audio_In_Right_Channel_FIFO|scfifo:Sync_FIFO|scfifo_5041:auto_generated|a_dpfifo_on31:dpfifo
 clock => altsyncram_rc81:FIFOram.clock0
 clock => cntr_d5b:rd_ptr_msb.clock
 clock => cntr_q57:usedw_counter.clock
@@ -3093,7 +3218,7 @@ wreq => _.IN0
 wreq => wait_state.IN1
 
 
-|battleships|DE2_Audio_Example:Audio|Audio_Controller:Audio_Controller|Altera_UP_Audio_In_Deserializer:Audio_In_Deserializer|Altera_UP_SYNC_FIFO:Audio_In_Right_Channel_FIFO|scfifo:Sync_FIFO|scfifo_5041:auto_generated|a_dpfifo_on31:dpfifo|altsyncram_rc81:FIFOram
+|battleships|DE2_Audio_Example:Sounds|Audio_Controller:Audio_Controller|Altera_UP_Audio_In_Deserializer:Audio_In_Deserializer|Altera_UP_SYNC_FIFO:Audio_In_Right_Channel_FIFO|scfifo:Sync_FIFO|scfifo_5041:auto_generated|a_dpfifo_on31:dpfifo|altsyncram_rc81:FIFOram
 address_a[0] => ram_block1a0.PORTAADDR
 address_a[0] => ram_block1a1.PORTAADDR
 address_a[0] => ram_block1a2.PORTAADDR
@@ -3672,7 +3797,7 @@ wren_a => ram_block1a30.PORTAWE
 wren_a => ram_block1a31.PORTAWE
 
 
-|battleships|DE2_Audio_Example:Audio|Audio_Controller:Audio_Controller|Altera_UP_Audio_In_Deserializer:Audio_In_Deserializer|Altera_UP_SYNC_FIFO:Audio_In_Right_Channel_FIFO|scfifo:Sync_FIFO|scfifo_5041:auto_generated|a_dpfifo_on31:dpfifo|cmpr_2o8:almost_full_comparer
+|battleships|DE2_Audio_Example:Sounds|Audio_Controller:Audio_Controller|Altera_UP_Audio_In_Deserializer:Audio_In_Deserializer|Altera_UP_SYNC_FIFO:Audio_In_Right_Channel_FIFO|scfifo:Sync_FIFO|scfifo_5041:auto_generated|a_dpfifo_on31:dpfifo|cmpr_2o8:almost_full_comparer
 aeb <= aeb_result_wire[0].DB_MAX_OUTPUT_PORT_TYPE
 dataa[0] => data_wire[0].IN0
 dataa[1] => data_wire[0].IN0
@@ -3690,7 +3815,7 @@ datab[5] => data_wire[2].IN1
 datab[6] => data_wire[3].IN1
 
 
-|battleships|DE2_Audio_Example:Audio|Audio_Controller:Audio_Controller|Altera_UP_Audio_In_Deserializer:Audio_In_Deserializer|Altera_UP_SYNC_FIFO:Audio_In_Right_Channel_FIFO|scfifo:Sync_FIFO|scfifo_5041:auto_generated|a_dpfifo_on31:dpfifo|cmpr_2o8:three_comparison
+|battleships|DE2_Audio_Example:Sounds|Audio_Controller:Audio_Controller|Altera_UP_Audio_In_Deserializer:Audio_In_Deserializer|Altera_UP_SYNC_FIFO:Audio_In_Right_Channel_FIFO|scfifo:Sync_FIFO|scfifo_5041:auto_generated|a_dpfifo_on31:dpfifo|cmpr_2o8:three_comparison
 aeb <= aeb_result_wire[0].DB_MAX_OUTPUT_PORT_TYPE
 dataa[0] => data_wire[0].IN0
 dataa[1] => data_wire[0].IN0
@@ -3708,7 +3833,7 @@ datab[5] => data_wire[2].IN1
 datab[6] => data_wire[3].IN1
 
 
-|battleships|DE2_Audio_Example:Audio|Audio_Controller:Audio_Controller|Altera_UP_Audio_In_Deserializer:Audio_In_Deserializer|Altera_UP_SYNC_FIFO:Audio_In_Right_Channel_FIFO|scfifo:Sync_FIFO|scfifo_5041:auto_generated|a_dpfifo_on31:dpfifo|cntr_d5b:rd_ptr_msb
+|battleships|DE2_Audio_Example:Sounds|Audio_Controller:Audio_Controller|Altera_UP_Audio_In_Deserializer:Audio_In_Deserializer|Altera_UP_SYNC_FIFO:Audio_In_Right_Channel_FIFO|scfifo:Sync_FIFO|scfifo_5041:auto_generated|a_dpfifo_on31:dpfifo|cntr_d5b:rd_ptr_msb
 clock => counter_reg_bit2a[5].CLK
 clock => counter_reg_bit2a[4].CLK
 clock => counter_reg_bit2a[3].CLK
@@ -3727,7 +3852,7 @@ sclr => _.IN0
 sclr => _.IN0
 
 
-|battleships|DE2_Audio_Example:Audio|Audio_Controller:Audio_Controller|Altera_UP_Audio_In_Deserializer:Audio_In_Deserializer|Altera_UP_SYNC_FIFO:Audio_In_Right_Channel_FIFO|scfifo:Sync_FIFO|scfifo_5041:auto_generated|a_dpfifo_on31:dpfifo|cntr_q57:usedw_counter
+|battleships|DE2_Audio_Example:Sounds|Audio_Controller:Audio_Controller|Altera_UP_Audio_In_Deserializer:Audio_In_Deserializer|Altera_UP_SYNC_FIFO:Audio_In_Right_Channel_FIFO|scfifo:Sync_FIFO|scfifo_5041:auto_generated|a_dpfifo_on31:dpfifo|cntr_q57:usedw_counter
 clock => counter_reg_bit3a[6].CLK
 clock => counter_reg_bit3a[5].CLK
 clock => counter_reg_bit3a[4].CLK
@@ -3755,7 +3880,7 @@ updown => counter_comb_bita5.DATAB
 updown => counter_comb_bita6.DATAB
 
 
-|battleships|DE2_Audio_Example:Audio|Audio_Controller:Audio_Controller|Altera_UP_Audio_In_Deserializer:Audio_In_Deserializer|Altera_UP_SYNC_FIFO:Audio_In_Right_Channel_FIFO|scfifo:Sync_FIFO|scfifo_5041:auto_generated|a_dpfifo_on31:dpfifo|cntr_e5b:wr_ptr
+|battleships|DE2_Audio_Example:Sounds|Audio_Controller:Audio_Controller|Altera_UP_Audio_In_Deserializer:Audio_In_Deserializer|Altera_UP_SYNC_FIFO:Audio_In_Right_Channel_FIFO|scfifo:Sync_FIFO|scfifo_5041:auto_generated|a_dpfifo_on31:dpfifo|cntr_e5b:wr_ptr
 clock => counter_reg_bit4a[6].CLK
 clock => counter_reg_bit4a[5].CLK
 clock => counter_reg_bit4a[4].CLK
@@ -3776,7 +3901,7 @@ sclr => _.IN0
 sclr => _.IN0
 
 
-|battleships|DE2_Audio_Example:Audio|Audio_Controller:Audio_Controller|Altera_UP_Audio_Out_Serializer:Audio_Out_Serializer
+|battleships|DE2_Audio_Example:Sounds|Audio_Controller:Audio_Controller|Altera_UP_Audio_Out_Serializer:Audio_Out_Serializer
 clk => clk.IN2
 reset => reset.IN2
 bit_clk_rising_edge => ~NO_FANOUT~
@@ -3901,7 +4026,7 @@ right_channel_fifo_write_space[7] <= right_channel_fifo_write_space[7]~reg0.DB_M
 serial_audio_out_data <= serial_audio_out_data~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|battleships|DE2_Audio_Example:Audio|Audio_Controller:Audio_Controller|Altera_UP_Audio_Out_Serializer:Audio_Out_Serializer|Altera_UP_SYNC_FIFO:Audio_Out_Left_Channel_FIFO
+|battleships|DE2_Audio_Example:Sounds|Audio_Controller:Audio_Controller|Altera_UP_Audio_Out_Serializer:Audio_Out_Serializer|Altera_UP_SYNC_FIFO:Audio_Out_Left_Channel_FIFO
 clk => clk.IN1
 reset => reset.IN1
 write_en => write_en.IN1
@@ -3981,7 +4106,7 @@ read_data[31] <= scfifo:Sync_FIFO.q
 read_data[32] <= scfifo:Sync_FIFO.q
 
 
-|battleships|DE2_Audio_Example:Audio|Audio_Controller:Audio_Controller|Altera_UP_Audio_Out_Serializer:Audio_Out_Serializer|Altera_UP_SYNC_FIFO:Audio_Out_Left_Channel_FIFO|scfifo:Sync_FIFO
+|battleships|DE2_Audio_Example:Sounds|Audio_Controller:Audio_Controller|Altera_UP_Audio_Out_Serializer:Audio_Out_Serializer|Altera_UP_SYNC_FIFO:Audio_Out_Left_Channel_FIFO|scfifo:Sync_FIFO
 data[0] => scfifo_5041:auto_generated.data[0]
 data[1] => scfifo_5041:auto_generated.data[1]
 data[2] => scfifo_5041:auto_generated.data[2]
@@ -4064,7 +4189,7 @@ usedw[5] <= scfifo_5041:auto_generated.usedw[5]
 usedw[6] <= scfifo_5041:auto_generated.usedw[6]
 
 
-|battleships|DE2_Audio_Example:Audio|Audio_Controller:Audio_Controller|Altera_UP_Audio_Out_Serializer:Audio_Out_Serializer|Altera_UP_SYNC_FIFO:Audio_Out_Left_Channel_FIFO|scfifo:Sync_FIFO|scfifo_5041:auto_generated
+|battleships|DE2_Audio_Example:Sounds|Audio_Controller:Audio_Controller|Altera_UP_Audio_Out_Serializer:Audio_Out_Serializer|Altera_UP_SYNC_FIFO:Audio_Out_Left_Channel_FIFO|scfifo:Sync_FIFO|scfifo_5041:auto_generated
 clock => a_dpfifo_on31:dpfifo.clock
 data[0] => a_dpfifo_on31:dpfifo.data[0]
 data[1] => a_dpfifo_on31:dpfifo.data[1]
@@ -4144,7 +4269,7 @@ usedw[6] <= a_dpfifo_on31:dpfifo.usedw[6]
 wrreq => a_dpfifo_on31:dpfifo.wreq
 
 
-|battleships|DE2_Audio_Example:Audio|Audio_Controller:Audio_Controller|Altera_UP_Audio_Out_Serializer:Audio_Out_Serializer|Altera_UP_SYNC_FIFO:Audio_Out_Left_Channel_FIFO|scfifo:Sync_FIFO|scfifo_5041:auto_generated|a_dpfifo_on31:dpfifo
+|battleships|DE2_Audio_Example:Sounds|Audio_Controller:Audio_Controller|Altera_UP_Audio_Out_Serializer:Audio_Out_Serializer|Altera_UP_SYNC_FIFO:Audio_Out_Left_Channel_FIFO|scfifo:Sync_FIFO|scfifo_5041:auto_generated|a_dpfifo_on31:dpfifo
 clock => altsyncram_rc81:FIFOram.clock0
 clock => cntr_d5b:rd_ptr_msb.clock
 clock => cntr_q57:usedw_counter.clock
@@ -4297,7 +4422,7 @@ wreq => _.IN0
 wreq => wait_state.IN1
 
 
-|battleships|DE2_Audio_Example:Audio|Audio_Controller:Audio_Controller|Altera_UP_Audio_Out_Serializer:Audio_Out_Serializer|Altera_UP_SYNC_FIFO:Audio_Out_Left_Channel_FIFO|scfifo:Sync_FIFO|scfifo_5041:auto_generated|a_dpfifo_on31:dpfifo|altsyncram_rc81:FIFOram
+|battleships|DE2_Audio_Example:Sounds|Audio_Controller:Audio_Controller|Altera_UP_Audio_Out_Serializer:Audio_Out_Serializer|Altera_UP_SYNC_FIFO:Audio_Out_Left_Channel_FIFO|scfifo:Sync_FIFO|scfifo_5041:auto_generated|a_dpfifo_on31:dpfifo|altsyncram_rc81:FIFOram
 address_a[0] => ram_block1a0.PORTAADDR
 address_a[0] => ram_block1a1.PORTAADDR
 address_a[0] => ram_block1a2.PORTAADDR
@@ -4876,7 +5001,7 @@ wren_a => ram_block1a30.PORTAWE
 wren_a => ram_block1a31.PORTAWE
 
 
-|battleships|DE2_Audio_Example:Audio|Audio_Controller:Audio_Controller|Altera_UP_Audio_Out_Serializer:Audio_Out_Serializer|Altera_UP_SYNC_FIFO:Audio_Out_Left_Channel_FIFO|scfifo:Sync_FIFO|scfifo_5041:auto_generated|a_dpfifo_on31:dpfifo|cmpr_2o8:almost_full_comparer
+|battleships|DE2_Audio_Example:Sounds|Audio_Controller:Audio_Controller|Altera_UP_Audio_Out_Serializer:Audio_Out_Serializer|Altera_UP_SYNC_FIFO:Audio_Out_Left_Channel_FIFO|scfifo:Sync_FIFO|scfifo_5041:auto_generated|a_dpfifo_on31:dpfifo|cmpr_2o8:almost_full_comparer
 aeb <= aeb_result_wire[0].DB_MAX_OUTPUT_PORT_TYPE
 dataa[0] => data_wire[0].IN0
 dataa[1] => data_wire[0].IN0
@@ -4894,7 +5019,7 @@ datab[5] => data_wire[2].IN1
 datab[6] => data_wire[3].IN1
 
 
-|battleships|DE2_Audio_Example:Audio|Audio_Controller:Audio_Controller|Altera_UP_Audio_Out_Serializer:Audio_Out_Serializer|Altera_UP_SYNC_FIFO:Audio_Out_Left_Channel_FIFO|scfifo:Sync_FIFO|scfifo_5041:auto_generated|a_dpfifo_on31:dpfifo|cmpr_2o8:three_comparison
+|battleships|DE2_Audio_Example:Sounds|Audio_Controller:Audio_Controller|Altera_UP_Audio_Out_Serializer:Audio_Out_Serializer|Altera_UP_SYNC_FIFO:Audio_Out_Left_Channel_FIFO|scfifo:Sync_FIFO|scfifo_5041:auto_generated|a_dpfifo_on31:dpfifo|cmpr_2o8:three_comparison
 aeb <= aeb_result_wire[0].DB_MAX_OUTPUT_PORT_TYPE
 dataa[0] => data_wire[0].IN0
 dataa[1] => data_wire[0].IN0
@@ -4912,7 +5037,7 @@ datab[5] => data_wire[2].IN1
 datab[6] => data_wire[3].IN1
 
 
-|battleships|DE2_Audio_Example:Audio|Audio_Controller:Audio_Controller|Altera_UP_Audio_Out_Serializer:Audio_Out_Serializer|Altera_UP_SYNC_FIFO:Audio_Out_Left_Channel_FIFO|scfifo:Sync_FIFO|scfifo_5041:auto_generated|a_dpfifo_on31:dpfifo|cntr_d5b:rd_ptr_msb
+|battleships|DE2_Audio_Example:Sounds|Audio_Controller:Audio_Controller|Altera_UP_Audio_Out_Serializer:Audio_Out_Serializer|Altera_UP_SYNC_FIFO:Audio_Out_Left_Channel_FIFO|scfifo:Sync_FIFO|scfifo_5041:auto_generated|a_dpfifo_on31:dpfifo|cntr_d5b:rd_ptr_msb
 clock => counter_reg_bit2a[5].CLK
 clock => counter_reg_bit2a[4].CLK
 clock => counter_reg_bit2a[3].CLK
@@ -4931,7 +5056,7 @@ sclr => _.IN0
 sclr => _.IN0
 
 
-|battleships|DE2_Audio_Example:Audio|Audio_Controller:Audio_Controller|Altera_UP_Audio_Out_Serializer:Audio_Out_Serializer|Altera_UP_SYNC_FIFO:Audio_Out_Left_Channel_FIFO|scfifo:Sync_FIFO|scfifo_5041:auto_generated|a_dpfifo_on31:dpfifo|cntr_q57:usedw_counter
+|battleships|DE2_Audio_Example:Sounds|Audio_Controller:Audio_Controller|Altera_UP_Audio_Out_Serializer:Audio_Out_Serializer|Altera_UP_SYNC_FIFO:Audio_Out_Left_Channel_FIFO|scfifo:Sync_FIFO|scfifo_5041:auto_generated|a_dpfifo_on31:dpfifo|cntr_q57:usedw_counter
 clock => counter_reg_bit3a[6].CLK
 clock => counter_reg_bit3a[5].CLK
 clock => counter_reg_bit3a[4].CLK
@@ -4959,7 +5084,7 @@ updown => counter_comb_bita5.DATAB
 updown => counter_comb_bita6.DATAB
 
 
-|battleships|DE2_Audio_Example:Audio|Audio_Controller:Audio_Controller|Altera_UP_Audio_Out_Serializer:Audio_Out_Serializer|Altera_UP_SYNC_FIFO:Audio_Out_Left_Channel_FIFO|scfifo:Sync_FIFO|scfifo_5041:auto_generated|a_dpfifo_on31:dpfifo|cntr_e5b:wr_ptr
+|battleships|DE2_Audio_Example:Sounds|Audio_Controller:Audio_Controller|Altera_UP_Audio_Out_Serializer:Audio_Out_Serializer|Altera_UP_SYNC_FIFO:Audio_Out_Left_Channel_FIFO|scfifo:Sync_FIFO|scfifo_5041:auto_generated|a_dpfifo_on31:dpfifo|cntr_e5b:wr_ptr
 clock => counter_reg_bit4a[6].CLK
 clock => counter_reg_bit4a[5].CLK
 clock => counter_reg_bit4a[4].CLK
@@ -4980,7 +5105,7 @@ sclr => _.IN0
 sclr => _.IN0
 
 
-|battleships|DE2_Audio_Example:Audio|Audio_Controller:Audio_Controller|Altera_UP_Audio_Out_Serializer:Audio_Out_Serializer|Altera_UP_SYNC_FIFO:Audio_Out_Right_Channel_FIFO
+|battleships|DE2_Audio_Example:Sounds|Audio_Controller:Audio_Controller|Altera_UP_Audio_Out_Serializer:Audio_Out_Serializer|Altera_UP_SYNC_FIFO:Audio_Out_Right_Channel_FIFO
 clk => clk.IN1
 reset => reset.IN1
 write_en => write_en.IN1
@@ -5060,7 +5185,7 @@ read_data[31] <= scfifo:Sync_FIFO.q
 read_data[32] <= scfifo:Sync_FIFO.q
 
 
-|battleships|DE2_Audio_Example:Audio|Audio_Controller:Audio_Controller|Altera_UP_Audio_Out_Serializer:Audio_Out_Serializer|Altera_UP_SYNC_FIFO:Audio_Out_Right_Channel_FIFO|scfifo:Sync_FIFO
+|battleships|DE2_Audio_Example:Sounds|Audio_Controller:Audio_Controller|Altera_UP_Audio_Out_Serializer:Audio_Out_Serializer|Altera_UP_SYNC_FIFO:Audio_Out_Right_Channel_FIFO|scfifo:Sync_FIFO
 data[0] => scfifo_5041:auto_generated.data[0]
 data[1] => scfifo_5041:auto_generated.data[1]
 data[2] => scfifo_5041:auto_generated.data[2]
@@ -5143,7 +5268,7 @@ usedw[5] <= scfifo_5041:auto_generated.usedw[5]
 usedw[6] <= scfifo_5041:auto_generated.usedw[6]
 
 
-|battleships|DE2_Audio_Example:Audio|Audio_Controller:Audio_Controller|Altera_UP_Audio_Out_Serializer:Audio_Out_Serializer|Altera_UP_SYNC_FIFO:Audio_Out_Right_Channel_FIFO|scfifo:Sync_FIFO|scfifo_5041:auto_generated
+|battleships|DE2_Audio_Example:Sounds|Audio_Controller:Audio_Controller|Altera_UP_Audio_Out_Serializer:Audio_Out_Serializer|Altera_UP_SYNC_FIFO:Audio_Out_Right_Channel_FIFO|scfifo:Sync_FIFO|scfifo_5041:auto_generated
 clock => a_dpfifo_on31:dpfifo.clock
 data[0] => a_dpfifo_on31:dpfifo.data[0]
 data[1] => a_dpfifo_on31:dpfifo.data[1]
@@ -5223,7 +5348,7 @@ usedw[6] <= a_dpfifo_on31:dpfifo.usedw[6]
 wrreq => a_dpfifo_on31:dpfifo.wreq
 
 
-|battleships|DE2_Audio_Example:Audio|Audio_Controller:Audio_Controller|Altera_UP_Audio_Out_Serializer:Audio_Out_Serializer|Altera_UP_SYNC_FIFO:Audio_Out_Right_Channel_FIFO|scfifo:Sync_FIFO|scfifo_5041:auto_generated|a_dpfifo_on31:dpfifo
+|battleships|DE2_Audio_Example:Sounds|Audio_Controller:Audio_Controller|Altera_UP_Audio_Out_Serializer:Audio_Out_Serializer|Altera_UP_SYNC_FIFO:Audio_Out_Right_Channel_FIFO|scfifo:Sync_FIFO|scfifo_5041:auto_generated|a_dpfifo_on31:dpfifo
 clock => altsyncram_rc81:FIFOram.clock0
 clock => cntr_d5b:rd_ptr_msb.clock
 clock => cntr_q57:usedw_counter.clock
@@ -5376,7 +5501,7 @@ wreq => _.IN0
 wreq => wait_state.IN1
 
 
-|battleships|DE2_Audio_Example:Audio|Audio_Controller:Audio_Controller|Altera_UP_Audio_Out_Serializer:Audio_Out_Serializer|Altera_UP_SYNC_FIFO:Audio_Out_Right_Channel_FIFO|scfifo:Sync_FIFO|scfifo_5041:auto_generated|a_dpfifo_on31:dpfifo|altsyncram_rc81:FIFOram
+|battleships|DE2_Audio_Example:Sounds|Audio_Controller:Audio_Controller|Altera_UP_Audio_Out_Serializer:Audio_Out_Serializer|Altera_UP_SYNC_FIFO:Audio_Out_Right_Channel_FIFO|scfifo:Sync_FIFO|scfifo_5041:auto_generated|a_dpfifo_on31:dpfifo|altsyncram_rc81:FIFOram
 address_a[0] => ram_block1a0.PORTAADDR
 address_a[0] => ram_block1a1.PORTAADDR
 address_a[0] => ram_block1a2.PORTAADDR
@@ -5955,7 +6080,7 @@ wren_a => ram_block1a30.PORTAWE
 wren_a => ram_block1a31.PORTAWE
 
 
-|battleships|DE2_Audio_Example:Audio|Audio_Controller:Audio_Controller|Altera_UP_Audio_Out_Serializer:Audio_Out_Serializer|Altera_UP_SYNC_FIFO:Audio_Out_Right_Channel_FIFO|scfifo:Sync_FIFO|scfifo_5041:auto_generated|a_dpfifo_on31:dpfifo|cmpr_2o8:almost_full_comparer
+|battleships|DE2_Audio_Example:Sounds|Audio_Controller:Audio_Controller|Altera_UP_Audio_Out_Serializer:Audio_Out_Serializer|Altera_UP_SYNC_FIFO:Audio_Out_Right_Channel_FIFO|scfifo:Sync_FIFO|scfifo_5041:auto_generated|a_dpfifo_on31:dpfifo|cmpr_2o8:almost_full_comparer
 aeb <= aeb_result_wire[0].DB_MAX_OUTPUT_PORT_TYPE
 dataa[0] => data_wire[0].IN0
 dataa[1] => data_wire[0].IN0
@@ -5973,7 +6098,7 @@ datab[5] => data_wire[2].IN1
 datab[6] => data_wire[3].IN1
 
 
-|battleships|DE2_Audio_Example:Audio|Audio_Controller:Audio_Controller|Altera_UP_Audio_Out_Serializer:Audio_Out_Serializer|Altera_UP_SYNC_FIFO:Audio_Out_Right_Channel_FIFO|scfifo:Sync_FIFO|scfifo_5041:auto_generated|a_dpfifo_on31:dpfifo|cmpr_2o8:three_comparison
+|battleships|DE2_Audio_Example:Sounds|Audio_Controller:Audio_Controller|Altera_UP_Audio_Out_Serializer:Audio_Out_Serializer|Altera_UP_SYNC_FIFO:Audio_Out_Right_Channel_FIFO|scfifo:Sync_FIFO|scfifo_5041:auto_generated|a_dpfifo_on31:dpfifo|cmpr_2o8:three_comparison
 aeb <= aeb_result_wire[0].DB_MAX_OUTPUT_PORT_TYPE
 dataa[0] => data_wire[0].IN0
 dataa[1] => data_wire[0].IN0
@@ -5991,7 +6116,7 @@ datab[5] => data_wire[2].IN1
 datab[6] => data_wire[3].IN1
 
 
-|battleships|DE2_Audio_Example:Audio|Audio_Controller:Audio_Controller|Altera_UP_Audio_Out_Serializer:Audio_Out_Serializer|Altera_UP_SYNC_FIFO:Audio_Out_Right_Channel_FIFO|scfifo:Sync_FIFO|scfifo_5041:auto_generated|a_dpfifo_on31:dpfifo|cntr_d5b:rd_ptr_msb
+|battleships|DE2_Audio_Example:Sounds|Audio_Controller:Audio_Controller|Altera_UP_Audio_Out_Serializer:Audio_Out_Serializer|Altera_UP_SYNC_FIFO:Audio_Out_Right_Channel_FIFO|scfifo:Sync_FIFO|scfifo_5041:auto_generated|a_dpfifo_on31:dpfifo|cntr_d5b:rd_ptr_msb
 clock => counter_reg_bit2a[5].CLK
 clock => counter_reg_bit2a[4].CLK
 clock => counter_reg_bit2a[3].CLK
@@ -6010,7 +6135,7 @@ sclr => _.IN0
 sclr => _.IN0
 
 
-|battleships|DE2_Audio_Example:Audio|Audio_Controller:Audio_Controller|Altera_UP_Audio_Out_Serializer:Audio_Out_Serializer|Altera_UP_SYNC_FIFO:Audio_Out_Right_Channel_FIFO|scfifo:Sync_FIFO|scfifo_5041:auto_generated|a_dpfifo_on31:dpfifo|cntr_q57:usedw_counter
+|battleships|DE2_Audio_Example:Sounds|Audio_Controller:Audio_Controller|Altera_UP_Audio_Out_Serializer:Audio_Out_Serializer|Altera_UP_SYNC_FIFO:Audio_Out_Right_Channel_FIFO|scfifo:Sync_FIFO|scfifo_5041:auto_generated|a_dpfifo_on31:dpfifo|cntr_q57:usedw_counter
 clock => counter_reg_bit3a[6].CLK
 clock => counter_reg_bit3a[5].CLK
 clock => counter_reg_bit3a[4].CLK
@@ -6038,7 +6163,7 @@ updown => counter_comb_bita5.DATAB
 updown => counter_comb_bita6.DATAB
 
 
-|battleships|DE2_Audio_Example:Audio|Audio_Controller:Audio_Controller|Altera_UP_Audio_Out_Serializer:Audio_Out_Serializer|Altera_UP_SYNC_FIFO:Audio_Out_Right_Channel_FIFO|scfifo:Sync_FIFO|scfifo_5041:auto_generated|a_dpfifo_on31:dpfifo|cntr_e5b:wr_ptr
+|battleships|DE2_Audio_Example:Sounds|Audio_Controller:Audio_Controller|Altera_UP_Audio_Out_Serializer:Audio_Out_Serializer|Altera_UP_SYNC_FIFO:Audio_Out_Right_Channel_FIFO|scfifo:Sync_FIFO|scfifo_5041:auto_generated|a_dpfifo_on31:dpfifo|cntr_e5b:wr_ptr
 clock => counter_reg_bit4a[6].CLK
 clock => counter_reg_bit4a[5].CLK
 clock => counter_reg_bit4a[4].CLK
@@ -6059,14 +6184,14 @@ sclr => _.IN0
 sclr => _.IN0
 
 
-|battleships|DE2_Audio_Example:Audio|Audio_Controller:Audio_Controller|Audio_Clock:Audio_Clock
+|battleships|DE2_Audio_Example:Sounds|Audio_Controller:Audio_Controller|Audio_Clock:Audio_Clock
 areset => areset.IN1
 inclk0 => sub_wire4[0].IN1
 c0 <= altpll:altpll_component.clk
 locked <= altpll:altpll_component.locked
 
 
-|battleships|DE2_Audio_Example:Audio|Audio_Controller:Audio_Controller|Audio_Clock:Audio_Clock|altpll:altpll_component
+|battleships|DE2_Audio_Example:Sounds|Audio_Controller:Audio_Controller|Audio_Clock:Audio_Clock|altpll:altpll_component
 inclk[0] => pll.CLK
 inclk[1] => ~NO_FANOUT~
 fbin => ~NO_FANOUT~
@@ -6127,7 +6252,7 @@ fref <= <GND>
 icdrclk <= <GND>
 
 
-|battleships|DE2_Audio_Example:Audio|avconf:avc
+|battleships|DE2_Audio_Example:Sounds|avconf:avc
 CLOCK_50 => mI2C_CLK_DIV[0].CLK
 CLOCK_50 => mI2C_CLK_DIV[1].CLK
 CLOCK_50 => mI2C_CLK_DIV[2].CLK
@@ -6199,7 +6324,7 @@ I2C_SCLK <= I2C_Controller:u0.I2C_SCLK
 I2C_SDAT <> I2C_Controller:u0.I2C_SDAT
 
 
-|battleships|DE2_Audio_Example:Audio|avconf:avc|I2C_Controller:u0
+|battleships|DE2_Audio_Example:Sounds|avconf:avc|I2C_Controller:u0
 CLOCK => SD[0].CLK
 CLOCK => SD[1].CLK
 CLOCK => SD[2].CLK
