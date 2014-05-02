@@ -6,9 +6,11 @@ use WORK.battleships_const.all;
 entity battleships is 
  port( 
  --Inputs 
-			data_in 									: in std_logic;
-			keyboard_clk, keyboard_data, clk : in std_logic;
-			--data0, data1, data2, data3, data4, data5 : in std_logic;
+			data_in, AUD_ADCDAT									: in std_logic;
+			keyboard_clk, keyboard_data, clk, CLOCK_27 : in std_logic;
+			AUD_BCLK, AUD_ADCLRCK, AUD_DACLRCK, I2C_SDAT : inout std_logic;
+			KEY : in std_logic_vector(3 downto 0);
+			AUD_XCK, AUD_DACDAT, I2C_SCLK : out std_logic;
  
  --Outputs 
 			LCD_RS, LCD_E, LCD_ON, RESET_LED, SEC_LED			: OUT	STD_LOGIC;
@@ -31,6 +33,18 @@ component de2lcd IS
 		 LCD_RW															: BUFFER STD_LOGIC;
 		 DATA_BUS														: INOUT	STD_LOGIC_VECTOR(7 DOWNTO 0));
 END component;
+
+component DE2_Audio_Example is
+	port (
+			CLOCK_50, CLOCK_27 : in std_logic;
+			KEY : in std_logic_vector(3 downto 0);
+			AUD_ADCDAT : in std_logic;
+			AUD_BCLK, AUD_ADCLRCK, AUD_DACLRCK, I2C_SDAT : inout std_logic;
+			AUD_XCK, AUD_DACDAT, I2C_SCLK : out std_logic;
+			SW : in std_logic;
+			test : out std_logic
+	);
+end component;
 
 component VGA_top_level is
 	port(
@@ -88,11 +102,14 @@ signal done           : std_logic;
 signal LEDs				 : std_logic_vector (55 downto 0);
 signal tie		 		 : std_logic;
 signal init,waiting,res_lcd : std_logic; --,a,b,c,d,e,f
+signal test				: std_logic;
+signal sound_explosion : std_logic;
 
 signal go 					: std_logic;
 
 begin 
 
+Audio : DE2_Audio_Example port map (clk, CLOCK_27, KEY, AUD_ADCDAT, AUD_BCLK, AUD_ADCLRCK, AUD_DACLRCK, I2C_SDAT, AUD_XCK, AUD_DACDAT, I2C_SCLK, sound_explosion, test);	--test is a light, SW[0]
 LCDscreen : de2lcd port map (tie, waiting, res_lcd, clk, game_over, winner, LCD_RS, LCD_E, LCD_ON, RESET_LED, SEC_LED,LCD_RW,DATA_BUS);
 keyboard_0 : ps2 port map (keyboard_clk, keyboard_data, clk, '1', hist1, hist0, LEDs);
 vga_0 : VGA_top_level port map (clk, game_over, winner, tie, VGA_RED, VGA_GREEN, VGA_BLUE, HORIZ_SYNC, VERT_SYNC, VGA_BLANK, VGA_CLK, myVGA, oppVGA);
@@ -195,7 +212,7 @@ game: process(init,data_in,ship1_or,clk,done) is
 		myVGA 	<= (others => WATER);
 		oppVGA 	<= (others => WATER);
 		counter  <= 0; myHits <= 0; oppHits <= 0;
-		cursor_x	:= 4;
+		cursor_x	:= 4; sound_explosion <= '0';
 		cursor_y := 4;
 		phase <= 0;
 		test11 <= '0';
@@ -502,6 +519,7 @@ game: process(init,data_in,ship1_or,clk,done) is
 						saved1 <= HIT;--oppVGA(cursor_x+10*cursor_y) <= HIT;
 						oppVGA(cursor_x + 10*cursor_y) <= HIT;
 						myHits <= myHits + 1;
+						sound_explosion <= '1';
 					else
 						saved1 <= MISS;
 						oppVGA(cursor_x+10*cursor_y) <= MISS;
@@ -516,7 +534,7 @@ game: process(init,data_in,ship1_or,clk,done) is
 				end if;
 				
 			WHEN PRE_COMM_SHOT =>
-				test1 <= '0';
+				test1 <= '0'; sound_explosion <= '0';
 				if (data_in='0') then
 					phase <= 1;
 				end if;
