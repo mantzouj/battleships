@@ -19,8 +19,7 @@ module DE2_Audio_Example (
 	AUD_DACDAT,
 
 	I2C_SCLK,
-	SW,
-	test
+	SW
 );
 
 /*****************************************************************************
@@ -48,7 +47,6 @@ inout				I2C_SDAT;
 // Outputs
 output				AUD_XCK;
 output				AUD_DACDAT;
-output				test;
 
 output				I2C_SCLK;
 
@@ -71,7 +69,7 @@ wire				write_audio_out;
 reg [16:0] delay_cnt;
 reg signed [31:0] sound1;
 reg [12:0] counter;
-reg snd, start, testi;
+reg snd, start;
 
 // State Machine Registers
 
@@ -85,11 +83,15 @@ reg snd, start, testi;
  *****************************************************************************/
 
 always @(posedge CLOCK_50) begin
-	if(SW == 0) begin
+	if(SW == 1) begin
 		counter <= 13'd0;
 		delay_cnt <= 17'd0;
-		testi <= 1'b1;
-	end else start <= 1'b1;
+		start <= 1'b1;
+	end// else start <= 1'b1;
+//	if(SW == 0) begin
+//		counter <= 13'd0;
+//		delay_cnt <= 17'd0;
+//	end else start <= 1'b1;
 	
 	if (start == 1) begin
 	
@@ -8291,7 +8293,6 @@ always @(posedge CLOCK_50) begin
 	8191: begin
 				sound1 <=  244781;
 				start <= 1'b0;
-				testi <= 1'b0;
 			end
 
 	default: sound1 <= 0;
@@ -8309,8 +8310,7 @@ end
 
 //assign delay = {SW[3:0], 15'd3000};
 
-wire [31:0] sound = (test == 0) ? 0 : 500*sound1;
-wire test = testi;
+wire [31:0] sound = 500*sound1;//(test == 0) ? 0 : 500*sound1;
 
 assign read_audio_in			= audio_in_available & audio_out_allowed;
 

@@ -61,18 +61,32 @@ begin
 	pixelDraw : process(clk, myVGA, oppVGA, pixel_row_int, pixel_column_int, game_over, winner, tie) is
 	variable my_x_index, my_y_index, my_index, opp_x_index, opp_y_index, opp_index : integer;
 	begin
-	if (game_over='1' and winner='0') then
-		colorAddress <= color_green;
-	end if;
-	if (tie='1') then
-		colorAddress <= color_cyan;
-	end if;
-	if (game_over='1' and winner='1') then
-		colorAddress <= color_red;
-	end if;
-	if (game_over='0') then
+	if (game_over='1') then
+		if (winner='0') then
+			colorAddress <= color_green;
+		else
+			colorAddress <= color_red;
+		end if;
+		if (tie='1') then
+			colorAddress <= color_cyan;
+		end if;
+	else
 		colorAddress <= color_white;
 	end if;
+
+--	if (game_over='1' and winner='0') then
+--		colorAddress <= color_green;
+--	end if;
+--	if (tie='1') then
+--		colorAddress <= color_cyan;
+--	end if;
+--	if (game_over='1' and winner='1') then
+--		colorAddress <= color_red;
+--	end if;
+--	if (game_over='0') then
+--		colorAddress <= color_white;
+--	end if;
+
 	
 	
 	if (pixel_row_int >= 90 and pixel_row_int <= 390 and pixel_column_int >= 10 and pixel_column_int <= 310) then 

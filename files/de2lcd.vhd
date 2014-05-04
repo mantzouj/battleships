@@ -130,7 +130,7 @@ BEGIN
 						ELSIF waiting ='1' THEN
 							DATA_BUS_VALUE <= X"50";
 						ELSIF game_over='1' THEN
-							DATA_BUS_VALUE <= X"57";
+							DATA_BUS_VALUE <= X"59";
 						ELSE
 							DATA_BUS_VALUE <= X"20";
 						END IF;
@@ -146,7 +146,7 @@ BEGIN
 						ELSIF waiting ='1' THEN
 							DATA_BUS_VALUE <= X"72";						
 						ELSIF game_over='1' THEN
-							DATA_BUS_VALUE <= X"69";
+							DATA_BUS_VALUE <= X"6F";
 						ELSE
 							DATA_BUS_VALUE <= X"20";
 						END IF;
@@ -162,7 +162,7 @@ BEGIN
 						ELSIF waiting ='1' THEN
 							DATA_BUS_VALUE <= X"65";						
 						ELSIF game_over='1' THEN
-							DATA_BUS_VALUE <= X"6E";
+							DATA_BUS_VALUE <= X"75";
 						ELSE
 							DATA_BUS_VALUE <= X"20";
 						END IF;
@@ -178,7 +178,7 @@ BEGIN
 						ELSIF waiting ='1' THEN
 							DATA_BUS_VALUE <= X"73";						
 						ELSIF game_over='1' THEN
-							DATA_BUS_VALUE <= X"6E";
+							DATA_BUS_VALUE <= X"20";
 						ELSE
 							DATA_BUS_VALUE <= X"20";
 						END IF;
@@ -194,7 +194,11 @@ BEGIN
 						ELSIF waiting ='1' THEN
 							DATA_BUS_VALUE <= X"73";						
 						ELSIF game_over='1' THEN
-							DATA_BUS_VALUE <= X"65";
+							IF winner='0' THEN
+								DATA_BUS_VALUE <= X"57";
+							ELSE
+								DATA_BUS_VALUE <= X"4C";
+							END IF;
 						ELSE
 							DATA_BUS_VALUE <= X"20";
 						END IF;
@@ -208,7 +212,11 @@ BEGIN
 						IF tie='1' THEN
 							DATA_BUS_VALUE <= X"61";
 						ELSIF game_over='1' THEN
-							DATA_BUS_VALUE <= X"72";
+							IF winner='0' THEN
+								DATA_BUS_VALUE <= X"49";
+							ELSE
+								DATA_BUS_VALUE <= X"4F";
+							END IF;
 						ELSE
 							DATA_BUS_VALUE <= X"20";
 						END IF;
@@ -224,7 +232,11 @@ BEGIN
 						ELSIF waiting ='1' THEN
 							DATA_BUS_VALUE <= X"61";					
 						ELSIF game_over='1' THEN
-							DATA_BUS_VALUE <= X"3A";
+							IF winner='0' THEN
+								DATA_BUS_VALUE <= X"4E";
+							ELSE
+								DATA_BUS_VALUE <= X"53";
+							END IF;
 						ELSE
 							DATA_BUS_VALUE <= X"20";
 						END IF;
@@ -239,6 +251,12 @@ BEGIN
 							DATA_BUS_VALUE <= X"74";
 						ELSIF waiting ='1' THEN
 							DATA_BUS_VALUE <= X"6E";
+						ELSIF game_over='1' THEN
+							IF winner='0' THEN
+								DATA_BUS_VALUE <= X"20";
+							ELSE
+								DATA_BUS_VALUE <= X"45";
+							END IF;
 						ELSE
 							DATA_BUS_VALUE <= X"20";
 						END IF;
@@ -252,8 +270,6 @@ BEGIN
 							DATA_BUS_VALUE <= X"69";
 						ELSIF waiting ='1' THEN
 							DATA_BUS_VALUE <= X"79";
-						ELSIF game_over='1' THEN
-							DATA_BUS_VALUE <= X"50";
 						ELSE
 							DATA_BUS_VALUE <= X"20";
 						END IF;
@@ -268,12 +284,6 @@ BEGIN
 							DATA_BUS_VALUE <= X"65";
 						ELSIF waiting ='1' THEN
 							DATA_BUS_VALUE <= X"20";
-						ELSIF game_over='1' THEN
-							IF winner='0' THEN
-								DATA_BUS_VALUE <= X"30";
-							ELSE
-								DATA_BUS_VALUE <= X"31";
-							END IF;
 						ELSE
 							DATA_BUS_VALUE <= X"20";
 						END IF;

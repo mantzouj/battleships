@@ -1,5 +1,5 @@
 Analysis & Synthesis report for battleships
-Fri May 02 10:46:15 2014
+Sat May 03 15:23:30 2014
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -58,9 +58,8 @@ Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edit
  50. Port Connectivity Checks: "DE2_Audio_Example:Sounds|Audio_Controller:Audio_Controller|Altera_UP_Audio_Out_Serializer:Audio_Out_Serializer"
  51. Port Connectivity Checks: "DE2_Audio_Example:Sounds|Audio_Controller:Audio_Controller|Altera_UP_Audio_In_Deserializer:Audio_In_Deserializer"
  52. Port Connectivity Checks: "DE2_Audio_Example:Sounds|Audio_Controller:Audio_Controller"
- 53. Port Connectivity Checks: "DE2_Audio_Example:Sounds"
- 54. Elapsed Time Per Partition
- 55. Analysis & Synthesis Messages
+ 53. Elapsed Time Per Partition
+ 54. Analysis & Synthesis Messages
 
 
 
@@ -86,16 +85,16 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Fri May 02 10:46:15 2014           ;
+; Analysis & Synthesis Status        ; Successful - Sat May 03 15:23:30 2014           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; battleships                                     ;
 ; Top-level Entity Name              ; battleships                                     ;
 ; Family                             ; Cyclone II                                      ;
-; Total logic elements               ; 8,233                                           ;
-;     Total combinational functions  ; 8,124                                           ;
-;     Dedicated logic registers      ; 1,522                                           ;
-; Total registers                    ; 1522                                            ;
-; Total pins                         ; 128                                             ;
+; Total logic elements               ; 8,206                                           ;
+;     Total combinational functions  ; 8,087                                           ;
+;     Dedicated logic registers      ; 1,575                                           ;
+; Total registers                    ; 1575                                            ;
+; Total pins                         ; 129                                             ;
 ; Total virtual pins                 ; 0                                               ;
 ; Total memory bits                  ; 278,768                                         ;
 ; Embedded Multiplier 9-bit elements ; 4                                               ;
@@ -270,32 +269,32 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +---------------------------------------------+--------+
 ; Resource                                    ; Usage  ;
 +---------------------------------------------+--------+
-; Estimated Total logic elements              ; 8,233  ;
+; Estimated Total logic elements              ; 8,206  ;
 ;                                             ;        ;
-; Total combinational functions               ; 8124   ;
+; Total combinational functions               ; 8087   ;
 ; Logic element usage by number of LUT inputs ;        ;
-;     -- 4 input functions                    ; 5440   ;
-;     -- 3 input functions                    ; 1578   ;
-;     -- <=2 input functions                  ; 1106   ;
+;     -- 4 input functions                    ; 5095   ;
+;     -- 3 input functions                    ; 1535   ;
+;     -- <=2 input functions                  ; 1457   ;
 ;                                             ;        ;
 ; Logic elements by mode                      ;        ;
-;     -- normal mode                          ; 6796   ;
-;     -- arithmetic mode                      ; 1328   ;
+;     -- normal mode                          ; 6746   ;
+;     -- arithmetic mode                      ; 1341   ;
 ;                                             ;        ;
-; Total registers                             ; 1522   ;
-;     -- Dedicated logic registers            ; 1522   ;
+; Total registers                             ; 1575   ;
+;     -- Dedicated logic registers            ; 1575   ;
 ;     -- I/O registers                        ; 0      ;
 ;                                             ;        ;
-; I/O pins                                    ; 128    ;
+; I/O pins                                    ; 129    ;
 ; Total memory bits                           ; 278768 ;
 ; Embedded Multiplier 9-bit elements          ; 4      ;
 ; Total PLLs                                  ; 1      ;
 ;     -- PLLs                                 ; 1      ;
 ;                                             ;        ;
 ; Maximum fan-out node                        ; clk    ;
-; Maximum fan-out                             ; 1513   ;
-; Total fan-out                               ; 37208  ;
-; Average fan-out                             ; 3.72   ;
+; Maximum fan-out                             ; 1566   ;
+; Total fan-out                               ; 36458  ;
+; Average fan-out                             ; 3.64   ;
 +---------------------------------------------+--------+
 
 
@@ -304,8 +303,8 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +------------------------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node                                       ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                                                                                                                                                    ; Library Name ;
 +------------------------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
-; |battleships                                                     ; 8124 (5723)       ; 1522 (1014)  ; 278768      ; 4            ; 0       ; 2         ; 128  ; 0            ; |battleships                                                                                                                                                                                                                                                           ; work         ;
-;    |DE2_Audio_Example:Sounds|                                    ; 700 (136)         ; 328 (32)     ; 278528      ; 4            ; 0       ; 2         ; 0    ; 0            ; |battleships|DE2_Audio_Example:Sounds                                                                                                                                                                                                                                  ; work         ;
+; |battleships                                                     ; 8087 (5729)       ; 1575 (1068)  ; 278768      ; 4            ; 0       ; 2         ; 129  ; 0            ; |battleships                                                                                                                                                                                                                                                           ; work         ;
+;    |DE2_Audio_Example:Sounds|                                    ; 669 (105)         ; 327 (31)     ; 278528      ; 4            ; 0       ; 2         ; 0    ; 0            ; |battleships|DE2_Audio_Example:Sounds                                                                                                                                                                                                                                  ; work         ;
 ;       |Audio_Controller:Audio_Controller|                        ; 323 (4)           ; 222 (4)      ; 16384       ; 0            ; 0       ; 0         ; 0    ; 0            ; |battleships|DE2_Audio_Example:Sounds|Audio_Controller:Audio_Controller                                                                                                                                                                                                ; work         ;
 ;          |Altera_UP_Audio_In_Deserializer:Audio_In_Deserializer| ; 155 (41)          ; 108 (36)     ; 8192        ; 0            ; 0       ; 0         ; 0    ; 0            ; |battleships|DE2_Audio_Example:Sounds|Audio_Controller:Audio_Controller|Altera_UP_Audio_In_Deserializer:Audio_In_Deserializer                                                                                                                                          ; work         ;
 ;             |Altera_UP_Audio_Bit_Counter:Audio_Out_Bit_Counter|  ; 10 (10)           ; 6 (6)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |battleships|DE2_Audio_Example:Sounds|Audio_Controller:Audio_Controller|Altera_UP_Audio_In_Deserializer:Audio_In_Deserializer|Altera_UP_Audio_Bit_Counter:Audio_Out_Bit_Counter                                                                                        ; work         ;
@@ -355,14 +354,14 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ;          |I2C_Controller:u0|                                     ; 49 (49)           ; 29 (29)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |battleships|DE2_Audio_Example:Sounds|avconf:avc|I2C_Controller:u0                                                                                                                                                                                                     ; work         ;
 ;       |lpm_mult:Mult0|                                           ; 19 (0)            ; 0 (0)        ; 0           ; 4            ; 0       ; 2         ; 0    ; 0            ; |battleships|DE2_Audio_Example:Sounds|lpm_mult:Mult0                                                                                                                                                                                                                   ; work         ;
 ;          |mult_u4t:auto_generated|                               ; 19 (19)           ; 0 (0)        ; 0           ; 4            ; 0       ; 2         ; 0    ; 0            ; |battleships|DE2_Audio_Example:Sounds|lpm_mult:Mult0|mult_u4t:auto_generated                                                                                                                                                                                           ; work         ;
-;    |VGA_top_level:vga_0|                                         ; 1484 (0)          ; 46 (0)       ; 240         ; 0            ; 0       ; 0         ; 0    ; 0            ; |battleships|VGA_top_level:vga_0                                                                                                                                                                                                                                       ; work         ;
+;    |VGA_top_level:vga_0|                                         ; 1474 (0)          ; 46 (0)       ; 240         ; 0            ; 0       ; 0         ; 0    ; 0            ; |battleships|VGA_top_level:vga_0                                                                                                                                                                                                                                       ; work         ;
 ;       |VGA_SYNC:videoSync|                                       ; 58 (58)           ; 46 (46)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |battleships|VGA_top_level:vga_0|VGA_SYNC:videoSync                                                                                                                                                                                                                    ; work         ;
-;       |pixelGenerator:videoGen|                                  ; 1426 (1426)       ; 0 (0)        ; 240         ; 0            ; 0       ; 0         ; 0    ; 0            ; |battleships|VGA_top_level:vga_0|pixelGenerator:videoGen                                                                                                                                                                                                               ; work         ;
+;       |pixelGenerator:videoGen|                                  ; 1416 (1416)       ; 0 (0)        ; 240         ; 0            ; 0       ; 0         ; 0    ; 0            ; |battleships|VGA_top_level:vga_0|pixelGenerator:videoGen                                                                                                                                                                                                               ; work         ;
 ;          |colorROM:colors|                                       ; 0 (0)             ; 0 (0)        ; 240         ; 0            ; 0       ; 0         ; 0    ; 0            ; |battleships|VGA_top_level:vga_0|pixelGenerator:videoGen|colorROM:colors                                                                                                                                                                                               ; work         ;
 ;             |altsyncram:altsyncram_component|                    ; 0 (0)             ; 0 (0)        ; 240         ; 0            ; 0       ; 0         ; 0    ; 0            ; |battleships|VGA_top_level:vga_0|pixelGenerator:videoGen|colorROM:colors|altsyncram:altsyncram_component                                                                                                                                                               ; work         ;
 ;                |altsyncram_pv71:auto_generated|                  ; 0 (0)             ; 0 (0)        ; 240         ; 0            ; 0       ; 0         ; 0    ; 0            ; |battleships|VGA_top_level:vga_0|pixelGenerator:videoGen|colorROM:colors|altsyncram:altsyncram_component|altsyncram_pv71:auto_generated                                                                                                                                ; work         ;
-;    |de2lcd:LCDscreen|                                            ; 135 (135)         ; 82 (82)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |battleships|de2lcd:LCDscreen                                                                                                                                                                                                                                          ; work         ;
-;    |leddcd:conv0|                                                ; 17 (17)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |battleships|leddcd:conv0                                                                                                                                                                                                                                              ; work         ;
+;    |de2lcd:LCDscreen|                                            ; 143 (143)         ; 82 (82)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |battleships|de2lcd:LCDscreen                                                                                                                                                                                                                                          ; work         ;
+;    |leddcd:conv0|                                                ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |battleships|leddcd:conv0                                                                                                                                                                                                                                              ; work         ;
 ;    |leddcd:conv1|                                                ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |battleships|leddcd:conv1                                                                                                                                                                                                                                              ; work         ;
 ;    |leddcd:conv2|                                                ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |battleships|leddcd:conv2                                                                                                                                                                                                                                              ; work         ;
 ;    |leddcd:conv3|                                                ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |battleships|leddcd:conv3                                                                                                                                                                                                                                              ; work         ;
@@ -536,12 +535,41 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +-----------------------------------------------------------------------+--------------------------------------------------------------------------+
 ; \game:opp_ship1_x[4..30]                                              ; Stuck at GND due to stuck port data_in                                   ;
 ; \game:opp_ship1_y[4..30]                                              ; Stuck at GND due to stuck port data_in                                   ;
+; \game:opp_ship2_x[4..30]                                              ; Stuck at GND due to stuck port data_in                                   ;
+; \game:opp_ship2_y[4..30]                                              ; Stuck at GND due to stuck port data_in                                   ;
 ; \game:opp_cursor_x[4..30]                                             ; Stuck at GND due to stuck port data_in                                   ;
 ; \game:opp_cursor_y[4..30]                                             ; Stuck at GND due to stuck port data_in                                   ;
+; test1~reg0                                                            ; Stuck at GND due to stuck port data_in                                   ;
+; test3~reg0                                                            ; Stuck at GND due to stuck port data_in                                   ;
 ; de2lcd:LCDscreen|LCD_RW                                               ; Stuck at GND due to stuck port data_in                                   ;
 ; DE2_Audio_Example:Sounds|avconf:avc|mI2C_DATA[16,17,19,23]            ; Stuck at GND due to stuck port data_in                                   ;
 ; DE2_Audio_Example:Sounds|avconf:avc|I2C_Controller:u0|SD[16,17,19,23] ; Stuck at GND due to stuck port data_in                                   ;
-; \game:ship1_y[0]                                                      ; Merged with ship1_y_vector[0]                                            ;
+; \game:opp_S1_index_1[9..30]                                           ; Stuck at GND due to stuck port data_in                                   ;
+; \game:opp_S1_index_2[10..30]                                          ; Stuck at GND due to stuck port data_in                                   ;
+; \game:opp_S2_index_1[9..30]                                           ; Stuck at GND due to stuck port data_in                                   ;
+; \game:opp_S2_index_2[10..30]                                          ; Stuck at GND due to stuck port data_in                                   ;
+; \game:opp_S2_index_3[10..30]                                          ; Stuck at GND due to stuck port data_in                                   ;
+; \game:opp_S1_index_1[8]                                               ; Stuck at GND due to stuck port data_in                                   ;
+; \game:opp_S1_index_2[8,9]                                             ; Stuck at GND due to stuck port data_in                                   ;
+; \game:opp_S2_index_1[8]                                               ; Stuck at GND due to stuck port data_in                                   ;
+; \game:opp_S2_index_2[8,9]                                             ; Stuck at GND due to stuck port data_in                                   ;
+; \game:opp_S2_index_3[8,9]                                             ; Stuck at GND due to stuck port data_in                                   ;
+; ship1_x_vector[3]                                                     ; Merged with \game:ship1_x[3]                                             ;
+; ship1_x_vector[2]                                                     ; Merged with \game:ship1_x[2]                                             ;
+; ship1_x_vector[1]                                                     ; Merged with \game:ship1_x[1]                                             ;
+; ship1_x_vector[0]                                                     ; Merged with \game:ship1_x[0]                                             ;
+; ship1_y_vector[3]                                                     ; Merged with \game:ship1_y[3]                                             ;
+; ship1_y_vector[2]                                                     ; Merged with \game:ship1_y[2]                                             ;
+; ship1_y_vector[1]                                                     ; Merged with \game:ship1_y[1]                                             ;
+; ship1_y_vector[0]                                                     ; Merged with \game:ship1_y[0]                                             ;
+; ship2_x_vector[3]                                                     ; Merged with \game:ship2_x[3]                                             ;
+; ship2_x_vector[2]                                                     ; Merged with \game:ship2_x[2]                                             ;
+; ship2_x_vector[1]                                                     ; Merged with \game:ship2_x[1]                                             ;
+; ship2_x_vector[0]                                                     ; Merged with \game:ship2_x[0]                                             ;
+; ship2_y_vector[3]                                                     ; Merged with \game:ship2_y[3]                                             ;
+; ship2_y_vector[2]                                                     ; Merged with \game:ship2_y[2]                                             ;
+; ship2_y_vector[1]                                                     ; Merged with \game:ship2_y[1]                                             ;
+; ship2_y_vector[0]                                                     ; Merged with \game:ship2_y[0]                                             ;
 ; cursor_x_vector[3]                                                    ; Merged with \game:cursor_x[3]                                            ;
 ; cursor_x_vector[2]                                                    ; Merged with \game:cursor_x[2]                                            ;
 ; cursor_x_vector[1]                                                    ; Merged with \game:cursor_x[1]                                            ;
@@ -550,13 +578,7 @@ Note: All latches listed above may not be present at the end of synthesis due to
 ; cursor_y_vector[2]                                                    ; Merged with \game:cursor_y[2]                                            ;
 ; cursor_y_vector[1]                                                    ; Merged with \game:cursor_y[1]                                            ;
 ; cursor_y_vector[0]                                                    ; Merged with \game:cursor_y[0]                                            ;
-; ship1_x_vector[3]                                                     ; Merged with \game:ship1_x[3]                                             ;
-; ship1_x_vector[2]                                                     ; Merged with \game:ship1_x[2]                                             ;
-; ship1_x_vector[1]                                                     ; Merged with \game:ship1_x[1]                                             ;
-; ship1_x_vector[0]                                                     ; Merged with \game:ship1_x[0]                                             ;
-; ship1_y_vector[3]                                                     ; Merged with \game:ship1_y[3]                                             ;
-; ship1_y_vector[2]                                                     ; Merged with \game:ship1_y[2]                                             ;
-; ship1_y_vector[1]                                                     ; Merged with \game:ship1_y[1]                                             ;
+; \game:opp_S2_index_3[0]                                               ; Merged with \game:opp_S2_index_1[0]                                      ;
 ; state[8,9]                                                            ; Merged with state[10]                                                    ;
 ; DE2_Audio_Example:Sounds|avconf:avc|mI2C_DATA[20,21]                  ; Merged with DE2_Audio_Example:Sounds|avconf:avc|mI2C_DATA[18]            ;
 ; DE2_Audio_Example:Sounds|avconf:avc|I2C_Controller:u0|SD[20,21]       ; Merged with DE2_Audio_Example:Sounds|avconf:avc|I2C_Controller:u0|SD[18] ;
@@ -576,26 +598,39 @@ Note: All latches listed above may not be present at the end of synthesis due to
 ; saved1[10]                                                            ; Stuck at GND due to stuck port data_in                                   ;
 ; de2lcd:LCDscreen|init                                                 ; Stuck at GND due to stuck port data_in                                   ;
 ; phase[31]                                                             ; Stuck at GND due to stuck port data_in                                   ;
-; Total Number of Removed Registers = 227                               ;                                                                          ;
+; Total Number of Removed Registers = 407                               ;                                                                          ;
 +-----------------------------------------------------------------------+--------------------------------------------------------------------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------+
-; Removed Registers Triggering Further Register Optimizations                                                                                  ;
-+---------------------------------------------------+---------------------------+--------------------------------------------------------------+
-; Register name                                     ; Reason for Removal        ; Registers Removed due to This Register                       ;
-+---------------------------------------------------+---------------------------+--------------------------------------------------------------+
-; state[11]                                         ; Stuck at GND              ; saved1[10], phase[31]                                        ;
-;                                                   ; due to stuck port data_in ;                                                              ;
-; DE2_Audio_Example:Sounds|avconf:avc|mI2C_DATA[23] ; Stuck at GND              ; DE2_Audio_Example:Sounds|avconf:avc|I2C_Controller:u0|SD[23] ;
-;                                                   ; due to stuck port data_in ;                                                              ;
-; DE2_Audio_Example:Sounds|avconf:avc|mI2C_DATA[19] ; Stuck at GND              ; DE2_Audio_Example:Sounds|avconf:avc|I2C_Controller:u0|SD[19] ;
-;                                                   ; due to stuck port data_in ;                                                              ;
-; DE2_Audio_Example:Sounds|avconf:avc|mI2C_DATA[17] ; Stuck at GND              ; DE2_Audio_Example:Sounds|avconf:avc|I2C_Controller:u0|SD[17] ;
-;                                                   ; due to stuck port data_in ;                                                              ;
-; DE2_Audio_Example:Sounds|avconf:avc|mI2C_DATA[16] ; Stuck at GND              ; DE2_Audio_Example:Sounds|avconf:avc|I2C_Controller:u0|SD[16] ;
-;                                                   ; due to stuck port data_in ;                                                              ;
-+---------------------------------------------------+---------------------------+--------------------------------------------------------------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                                                                                   ;
++---------------------------------------------------+---------------------------+-------------------------------------------------------------------------------+
+; Register name                                     ; Reason for Removal        ; Registers Removed due to This Register                                        ;
++---------------------------------------------------+---------------------------+-------------------------------------------------------------------------------+
+; \game:opp_ship2_x[30]                             ; Stuck at GND              ; \game:opp_S2_index_1[30], \game:opp_S2_index_1[29], \game:opp_S2_index_1[28], ;
+;                                                   ; due to stuck port data_in ; \game:opp_S2_index_1[27], \game:opp_S2_index_1[26], \game:opp_S2_index_1[25], ;
+;                                                   ;                           ; \game:opp_S2_index_1[24], \game:opp_S2_index_1[23], \game:opp_S2_index_2[30], ;
+;                                                   ;                           ; \game:opp_S2_index_2[29], \game:opp_S2_index_2[28], \game:opp_S2_index_2[27], ;
+;                                                   ;                           ; \game:opp_S2_index_2[26], \game:opp_S2_index_2[25], \game:opp_S2_index_2[24], ;
+;                                                   ;                           ; \game:opp_S2_index_3[30], \game:opp_S2_index_3[29], \game:opp_S2_index_3[28], ;
+;                                                   ;                           ; \game:opp_S2_index_3[27], \game:opp_S2_index_3[26], \game:opp_S2_index_3[25], ;
+;                                                   ;                           ; \game:opp_S2_index_3[24]                                                      ;
+; \game:opp_ship1_x[30]                             ; Stuck at GND              ; \game:opp_S1_index_1[30], \game:opp_S1_index_1[29], \game:opp_S1_index_1[28], ;
+;                                                   ; due to stuck port data_in ; \game:opp_S1_index_1[27], \game:opp_S1_index_1[26], \game:opp_S1_index_1[25], ;
+;                                                   ;                           ; \game:opp_S1_index_1[24], \game:opp_S1_index_1[23], \game:opp_S1_index_2[30], ;
+;                                                   ;                           ; \game:opp_S1_index_2[29], \game:opp_S1_index_2[28], \game:opp_S1_index_2[27], ;
+;                                                   ;                           ; \game:opp_S1_index_2[26], \game:opp_S1_index_2[25], \game:opp_S1_index_2[24]  ;
+; state[11]                                         ; Stuck at GND              ; saved1[10], phase[31]                                                         ;
+;                                                   ; due to stuck port data_in ;                                                                               ;
+; DE2_Audio_Example:Sounds|avconf:avc|mI2C_DATA[23] ; Stuck at GND              ; DE2_Audio_Example:Sounds|avconf:avc|I2C_Controller:u0|SD[23]                  ;
+;                                                   ; due to stuck port data_in ;                                                                               ;
+; DE2_Audio_Example:Sounds|avconf:avc|mI2C_DATA[19] ; Stuck at GND              ; DE2_Audio_Example:Sounds|avconf:avc|I2C_Controller:u0|SD[19]                  ;
+;                                                   ; due to stuck port data_in ;                                                                               ;
+; DE2_Audio_Example:Sounds|avconf:avc|mI2C_DATA[17] ; Stuck at GND              ; DE2_Audio_Example:Sounds|avconf:avc|I2C_Controller:u0|SD[17]                  ;
+;                                                   ; due to stuck port data_in ;                                                                               ;
+; DE2_Audio_Example:Sounds|avconf:avc|mI2C_DATA[16] ; Stuck at GND              ; DE2_Audio_Example:Sounds|avconf:avc|I2C_Controller:u0|SD[16]                  ;
+;                                                   ; due to stuck port data_in ;                                                                               ;
++---------------------------------------------------+---------------------------+-------------------------------------------------------------------------------+
 
 
 +------------------------------------------------------+
@@ -603,12 +638,12 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 1522  ;
-; Number of registers using Synchronous Clear  ; 117   ;
-; Number of registers using Synchronous Load   ; 123   ;
-; Number of registers using Asynchronous Clear ; 957   ;
+; Total registers                              ; 1575  ;
+; Number of registers using Synchronous Clear  ; 116   ;
+; Number of registers using Synchronous Load   ; 124   ;
+; Number of registers using Asynchronous Clear ; 962   ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 859   ;
+; Number of registers using Clock Enable       ; 805   ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -618,23 +653,23 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +---------------------------------------------------------------------+---------+
 ; Inverted Register                                                   ; Fan out ;
 +---------------------------------------------------------------------+---------+
+; DE2_Audio_Example:Sounds|avconf:avc|I2C_Controller:u0|SD_COUNTER[0] ; 18      ;
+; DE2_Audio_Example:Sounds|avconf:avc|I2C_Controller:u0|SD_COUNTER[2] ; 18      ;
+; DE2_Audio_Example:Sounds|avconf:avc|I2C_Controller:u0|SD_COUNTER[3] ; 24      ;
+; DE2_Audio_Example:Sounds|avconf:avc|I2C_Controller:u0|SD_COUNTER[1] ; 18      ;
+; DE2_Audio_Example:Sounds|avconf:avc|I2C_Controller:u0|SD_COUNTER[4] ; 13      ;
 ; DE2_Audio_Example:Sounds|avconf:avc|I2C_Controller:u0|SD_COUNTER[5] ; 11      ;
-; DE2_Audio_Example:Sounds|avconf:avc|I2C_Controller:u0|SD_COUNTER[3] ; 22      ;
-; DE2_Audio_Example:Sounds|avconf:avc|I2C_Controller:u0|SD_COUNTER[4] ; 12      ;
-; DE2_Audio_Example:Sounds|avconf:avc|I2C_Controller:u0|SD_COUNTER[2] ; 16      ;
-; DE2_Audio_Example:Sounds|avconf:avc|I2C_Controller:u0|SD_COUNTER[0] ; 17      ;
-; DE2_Audio_Example:Sounds|avconf:avc|I2C_Controller:u0|SD_COUNTER[1] ; 17      ;
 ; DE2_Audio_Example:Sounds|avconf:avc|I2C_Controller:u0|SCLK          ; 3       ;
 ; de2lcd:LCDscreen|LCD_E                                              ; 2       ;
-; data_out~reg0                                                       ; 2       ;
+; data_out~reg0                                                       ; 8       ;
 ; myVGA[0][0]                                                         ; 6       ;
-; ship1_or                                                            ; 57      ;
-; \game:cursor_y[2]                                                   ; 9       ;
-; \game:cursor_x[2]                                                   ; 5       ;
-; ship2_or                                                            ; 150     ;
-; saved1[31]                                                          ; 4       ;
+; \game:cursor_y[2]                                                   ; 7       ;
+; saved1[31]                                                          ; 2       ;
+; saved1[0]                                                           ; 4       ;
+; ship2_or                                                            ; 149     ;
+; \game:cursor_x[2]                                                   ; 6       ;
+; ship1_or                                                            ; 56      ;
 ; DE2_Audio_Example:Sounds|avconf:avc|I2C_Controller:u0|END           ; 5       ;
-; saved1[0]                                                           ; 105     ;
 ; DE2_Audio_Example:Sounds|avconf:avc|I2C_Controller:u0|SDO           ; 4       ;
 ; de2lcd:LCDscreen|DATA_BUS_VALUE[3]                                  ; 2       ;
 ; de2lcd:LCDscreen|DATA_BUS_VALUE[4]                                  ; 2       ;
@@ -657,133 +692,121 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                                                                                                                                     ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; 3:1                ; 10 bits   ; 20 LEs        ; 10 LEs               ; 10 LEs                 ; Yes        ; |battleships|VGA_top_level:vga_0|VGA_SYNC:videoSync|v_count[8]                                                                                                                                 ;
-; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |battleships|DE2_Audio_Example:Sounds|Audio_Controller:Audio_Controller|Altera_UP_Audio_In_Deserializer:Audio_In_Deserializer|data_in_shift_reg[25]                                            ;
-; 3:1                ; 20 bits   ; 40 LEs        ; 20 LEs               ; 20 LEs                 ; Yes        ; |battleships|de2lcd:LCDscreen|CLK_COUNT_400HZ[6]                                                                                                                                               ;
-; 4:1                ; 5 bits    ; 10 LEs        ; 10 LEs               ; 0 LEs                  ; Yes        ; |battleships|DE2_Audio_Example:Sounds|Audio_Controller:Audio_Controller|Altera_UP_Audio_In_Deserializer:Audio_In_Deserializer|Altera_UP_Audio_Bit_Counter:Audio_Out_Bit_Counter|bit_counter[0] ;
-; 4:1                ; 17 bits   ; 34 LEs        ; 17 LEs               ; 17 LEs                 ; Yes        ; |battleships|DE2_Audio_Example:Sounds|delay_cnt[14]                                                                                                                                            ;
-; 3:1                ; 13 bits   ; 26 LEs        ; 13 LEs               ; 13 LEs                 ; Yes        ; |battleships|DE2_Audio_Example:Sounds|counter[8]                                                                                                                                               ;
-; 6:1                ; 31 bits   ; 124 LEs       ; 62 LEs               ; 62 LEs                 ; Yes        ; |battleships|DE2_Audio_Example:Sounds|Audio_Controller:Audio_Controller|Altera_UP_Audio_Out_Serializer:Audio_Out_Serializer|data_out_shift_reg[20]                                             ;
+; 3:1                ; 10 bits   ; 20 LEs        ; 10 LEs               ; 10 LEs                 ; Yes        ; |battleships|VGA_top_level:vga_0|VGA_SYNC:videoSync|v_count[3]                                                                                                                                 ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |battleships|DE2_Audio_Example:Sounds|Audio_Controller:Audio_Controller|Altera_UP_Audio_In_Deserializer:Audio_In_Deserializer|data_in_shift_reg[28]                                            ;
+; 3:1                ; 20 bits   ; 40 LEs        ; 20 LEs               ; 20 LEs                 ; Yes        ; |battleships|de2lcd:LCDscreen|CLK_COUNT_400HZ[2]                                                                                                                                               ;
+; 4:1                ; 17 bits   ; 34 LEs        ; 17 LEs               ; 17 LEs                 ; Yes        ; |battleships|DE2_Audio_Example:Sounds|delay_cnt[7]                                                                                                                                             ;
+; 3:1                ; 13 bits   ; 26 LEs        ; 13 LEs               ; 13 LEs                 ; Yes        ; |battleships|DE2_Audio_Example:Sounds|counter[7]                                                                                                                                               ;
+; 4:1                ; 5 bits    ; 10 LEs        ; 10 LEs               ; 0 LEs                  ; Yes        ; |battleships|DE2_Audio_Example:Sounds|Audio_Controller:Audio_Controller|Altera_UP_Audio_In_Deserializer:Audio_In_Deserializer|Altera_UP_Audio_Bit_Counter:Audio_Out_Bit_Counter|bit_counter[4] ;
+; 6:1                ; 31 bits   ; 124 LEs       ; 62 LEs               ; 62 LEs                 ; Yes        ; |battleships|DE2_Audio_Example:Sounds|Audio_Controller:Audio_Controller|Altera_UP_Audio_Out_Serializer:Audio_Out_Serializer|data_out_shift_reg[4]                                              ;
 ; 6:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |battleships|oppVGA[99][2]                                                                                                                                                                     ;
-; 6:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |battleships|oppVGA[98][2]                                                                                                                                                                     ;
-; 6:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |battleships|oppVGA[97][2]                                                                                                                                                                     ;
+; 6:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |battleships|oppVGA[98][1]                                                                                                                                                                     ;
+; 6:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |battleships|oppVGA[97][1]                                                                                                                                                                     ;
 ; 6:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |battleships|oppVGA[96][2]                                                                                                                                                                     ;
-; 6:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |battleships|oppVGA[95][1]                                                                                                                                                                     ;
-; 6:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |battleships|oppVGA[94][2]                                                                                                                                                                     ;
-; 6:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |battleships|oppVGA[93][2]                                                                                                                                                                     ;
-; 6:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |battleships|oppVGA[92][1]                                                                                                                                                                     ;
+; 6:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |battleships|oppVGA[95][2]                                                                                                                                                                     ;
+; 6:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |battleships|oppVGA[94][1]                                                                                                                                                                     ;
+; 6:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |battleships|oppVGA[93][1]                                                                                                                                                                     ;
+; 6:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |battleships|oppVGA[92][2]                                                                                                                                                                     ;
 ; 6:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |battleships|oppVGA[91][1]                                                                                                                                                                     ;
-; 6:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |battleships|oppVGA[90][2]                                                                                                                                                                     ;
+; 6:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |battleships|oppVGA[90][1]                                                                                                                                                                     ;
 ; 6:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |battleships|oppVGA[89][1]                                                                                                                                                                     ;
-; 6:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |battleships|oppVGA[88][2]                                                                                                                                                                     ;
+; 6:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |battleships|oppVGA[88][1]                                                                                                                                                                     ;
 ; 6:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |battleships|oppVGA[87][1]                                                                                                                                                                     ;
 ; 6:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |battleships|oppVGA[86][1]                                                                                                                                                                     ;
 ; 6:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |battleships|oppVGA[85][1]                                                                                                                                                                     ;
 ; 6:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |battleships|oppVGA[84][1]                                                                                                                                                                     ;
-; 6:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |battleships|oppVGA[83][1]                                                                                                                                                                     ;
-; 6:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |battleships|oppVGA[82][1]                                                                                                                                                                     ;
+; 6:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |battleships|oppVGA[83][2]                                                                                                                                                                     ;
+; 6:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |battleships|oppVGA[82][2]                                                                                                                                                                     ;
 ; 6:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |battleships|oppVGA[81][2]                                                                                                                                                                     ;
-; 6:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |battleships|oppVGA[80][2]                                                                                                                                                                     ;
-; 6:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |battleships|oppVGA[79][2]                                                                                                                                                                     ;
-; 6:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |battleships|oppVGA[78][1]                                                                                                                                                                     ;
+; 6:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |battleships|oppVGA[80][1]                                                                                                                                                                     ;
+; 6:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |battleships|oppVGA[79][1]                                                                                                                                                                     ;
+; 6:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |battleships|oppVGA[78][2]                                                                                                                                                                     ;
 ; 6:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |battleships|oppVGA[77][2]                                                                                                                                                                     ;
-; 6:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |battleships|oppVGA[76][1]                                                                                                                                                                     ;
+; 6:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |battleships|oppVGA[76][2]                                                                                                                                                                     ;
 ; 6:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |battleships|oppVGA[75][1]                                                                                                                                                                     ;
-; 6:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |battleships|oppVGA[74][1]                                                                                                                                                                     ;
-; 6:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |battleships|oppVGA[73][2]                                                                                                                                                                     ;
-; 6:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |battleships|oppVGA[72][1]                                                                                                                                                                     ;
-; 6:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |battleships|oppVGA[71][2]                                                                                                                                                                     ;
+; 6:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |battleships|oppVGA[74][2]                                                                                                                                                                     ;
+; 6:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |battleships|oppVGA[73][1]                                                                                                                                                                     ;
+; 6:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |battleships|oppVGA[72][2]                                                                                                                                                                     ;
+; 6:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |battleships|oppVGA[71][1]                                                                                                                                                                     ;
 ; 6:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |battleships|oppVGA[70][1]                                                                                                                                                                     ;
 ; 6:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |battleships|oppVGA[69][2]                                                                                                                                                                     ;
 ; 6:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |battleships|oppVGA[68][2]                                                                                                                                                                     ;
 ; 6:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |battleships|oppVGA[67][2]                                                                                                                                                                     ;
 ; 6:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |battleships|oppVGA[66][2]                                                                                                                                                                     ;
-; 6:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |battleships|oppVGA[65][1]                                                                                                                                                                     ;
+; 6:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |battleships|oppVGA[65][2]                                                                                                                                                                     ;
 ; 6:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |battleships|oppVGA[64][1]                                                                                                                                                                     ;
 ; 6:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |battleships|oppVGA[63][2]                                                                                                                                                                     ;
-; 6:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |battleships|oppVGA[62][1]                                                                                                                                                                     ;
+; 6:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |battleships|oppVGA[62][2]                                                                                                                                                                     ;
 ; 6:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |battleships|oppVGA[61][2]                                                                                                                                                                     ;
-; 6:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |battleships|oppVGA[60][2]                                                                                                                                                                     ;
-; 6:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |battleships|oppVGA[59][1]                                                                                                                                                                     ;
+; 6:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |battleships|oppVGA[60][1]                                                                                                                                                                     ;
+; 6:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |battleships|oppVGA[59][2]                                                                                                                                                                     ;
 ; 6:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |battleships|oppVGA[58][2]                                                                                                                                                                     ;
 ; 6:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |battleships|oppVGA[57][1]                                                                                                                                                                     ;
-; 6:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |battleships|oppVGA[56][1]                                                                                                                                                                     ;
+; 6:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |battleships|oppVGA[56][2]                                                                                                                                                                     ;
 ; 6:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |battleships|oppVGA[55][2]                                                                                                                                                                     ;
 ; 6:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |battleships|oppVGA[54][1]                                                                                                                                                                     ;
-; 6:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |battleships|oppVGA[53][2]                                                                                                                                                                     ;
-; 6:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |battleships|oppVGA[52][2]                                                                                                                                                                     ;
+; 6:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |battleships|oppVGA[53][1]                                                                                                                                                                     ;
+; 6:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |battleships|oppVGA[52][1]                                                                                                                                                                     ;
 ; 6:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |battleships|oppVGA[51][2]                                                                                                                                                                     ;
 ; 6:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |battleships|oppVGA[50][1]                                                                                                                                                                     ;
 ; 6:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |battleships|oppVGA[49][1]                                                                                                                                                                     ;
 ; 6:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |battleships|oppVGA[48][1]                                                                                                                                                                     ;
-; 6:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |battleships|oppVGA[47][2]                                                                                                                                                                     ;
+; 6:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |battleships|oppVGA[47][1]                                                                                                                                                                     ;
 ; 6:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |battleships|oppVGA[46][2]                                                                                                                                                                     ;
-; 6:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |battleships|oppVGA[45][1]                                                                                                                                                                     ;
-; 6:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |battleships|oppVGA[44][2]                                                                                                                                                                     ;
+; 6:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |battleships|oppVGA[45][2]                                                                                                                                                                     ;
+; 6:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |battleships|oppVGA[44][1]                                                                                                                                                                     ;
 ; 6:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |battleships|oppVGA[43][1]                                                                                                                                                                     ;
-; 6:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |battleships|oppVGA[42][1]                                                                                                                                                                     ;
-; 6:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |battleships|oppVGA[41][1]                                                                                                                                                                     ;
+; 6:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |battleships|oppVGA[42][2]                                                                                                                                                                     ;
+; 6:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |battleships|oppVGA[41][2]                                                                                                                                                                     ;
 ; 6:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |battleships|oppVGA[40][2]                                                                                                                                                                     ;
 ; 6:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |battleships|oppVGA[39][1]                                                                                                                                                                     ;
-; 6:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |battleships|oppVGA[38][2]                                                                                                                                                                     ;
+; 6:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |battleships|oppVGA[38][1]                                                                                                                                                                     ;
 ; 6:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |battleships|oppVGA[37][2]                                                                                                                                                                     ;
-; 6:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |battleships|oppVGA[36][2]                                                                                                                                                                     ;
-; 6:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |battleships|oppVGA[35][1]                                                                                                                                                                     ;
+; 6:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |battleships|oppVGA[36][1]                                                                                                                                                                     ;
+; 6:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |battleships|oppVGA[35][2]                                                                                                                                                                     ;
 ; 6:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |battleships|oppVGA[34][2]                                                                                                                                                                     ;
-; 6:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |battleships|oppVGA[33][2]                                                                                                                                                                     ;
-; 6:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |battleships|oppVGA[32][2]                                                                                                                                                                     ;
+; 6:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |battleships|oppVGA[33][1]                                                                                                                                                                     ;
+; 6:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |battleships|oppVGA[32][1]                                                                                                                                                                     ;
 ; 6:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |battleships|oppVGA[31][1]                                                                                                                                                                     ;
 ; 6:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |battleships|oppVGA[30][2]                                                                                                                                                                     ;
-; 6:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |battleships|oppVGA[29][2]                                                                                                                                                                     ;
-; 6:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |battleships|oppVGA[28][2]                                                                                                                                                                     ;
+; 6:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |battleships|oppVGA[29][1]                                                                                                                                                                     ;
+; 6:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |battleships|oppVGA[28][1]                                                                                                                                                                     ;
 ; 6:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |battleships|oppVGA[27][2]                                                                                                                                                                     ;
 ; 6:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |battleships|oppVGA[26][2]                                                                                                                                                                     ;
-; 6:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |battleships|oppVGA[25][2]                                                                                                                                                                     ;
+; 6:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |battleships|oppVGA[25][1]                                                                                                                                                                     ;
 ; 6:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |battleships|oppVGA[24][1]                                                                                                                                                                     ;
-; 6:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |battleships|oppVGA[23][2]                                                                                                                                                                     ;
-; 6:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |battleships|oppVGA[22][2]                                                                                                                                                                     ;
-; 6:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |battleships|oppVGA[21][2]                                                                                                                                                                     ;
+; 6:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |battleships|oppVGA[23][1]                                                                                                                                                                     ;
+; 6:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |battleships|oppVGA[22][1]                                                                                                                                                                     ;
+; 6:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |battleships|oppVGA[21][1]                                                                                                                                                                     ;
 ; 6:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |battleships|oppVGA[20][1]                                                                                                                                                                     ;
-; 6:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |battleships|oppVGA[19][1]                                                                                                                                                                     ;
-; 6:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |battleships|oppVGA[18][2]                                                                                                                                                                     ;
-; 6:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |battleships|oppVGA[17][2]                                                                                                                                                                     ;
-; 6:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |battleships|oppVGA[16][2]                                                                                                                                                                     ;
+; 6:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |battleships|oppVGA[19][2]                                                                                                                                                                     ;
+; 6:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |battleships|oppVGA[18][1]                                                                                                                                                                     ;
+; 6:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |battleships|oppVGA[17][1]                                                                                                                                                                     ;
+; 6:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |battleships|oppVGA[16][1]                                                                                                                                                                     ;
 ; 6:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |battleships|oppVGA[15][2]                                                                                                                                                                     ;
 ; 6:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |battleships|oppVGA[14][1]                                                                                                                                                                     ;
-; 6:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |battleships|oppVGA[13][1]                                                                                                                                                                     ;
+; 6:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |battleships|oppVGA[13][2]                                                                                                                                                                     ;
 ; 6:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |battleships|oppVGA[12][2]                                                                                                                                                                     ;
-; 6:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |battleships|oppVGA[11][2]                                                                                                                                                                     ;
-; 6:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |battleships|oppVGA[10][2]                                                                                                                                                                     ;
+; 6:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |battleships|oppVGA[11][1]                                                                                                                                                                     ;
+; 6:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |battleships|oppVGA[10][1]                                                                                                                                                                     ;
 ; 6:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |battleships|oppVGA[9][2]                                                                                                                                                                      ;
-; 6:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |battleships|oppVGA[8][1]                                                                                                                                                                      ;
-; 6:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |battleships|oppVGA[7][2]                                                                                                                                                                      ;
+; 6:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |battleships|oppVGA[8][2]                                                                                                                                                                      ;
+; 6:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |battleships|oppVGA[7][1]                                                                                                                                                                      ;
 ; 6:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |battleships|oppVGA[6][1]                                                                                                                                                                      ;
 ; 6:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |battleships|oppVGA[5][2]                                                                                                                                                                      ;
-; 6:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |battleships|oppVGA[4][2]                                                                                                                                                                      ;
-; 6:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |battleships|oppVGA[3][1]                                                                                                                                                                      ;
-; 6:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |battleships|oppVGA[2][2]                                                                                                                                                                      ;
-; 6:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |battleships|oppVGA[1][2]                                                                                                                                                                      ;
-; 6:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |battleships|oppVGA[0][2]                                                                                                                                                                      ;
-; 6:1                ; 30 bits   ; 120 LEs       ; 30 LEs               ; 90 LEs                 ; Yes        ; |battleships|counter[1]                                                                                                                                                                        ;
-; 10:1               ; 2 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |battleships|state[7]                                                                                                                                                                          ;
+; 6:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |battleships|oppVGA[4][1]                                                                                                                                                                      ;
+; 6:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |battleships|oppVGA[3][2]                                                                                                                                                                      ;
+; 6:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |battleships|oppVGA[2][1]                                                                                                                                                                      ;
+; 6:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |battleships|oppVGA[1][1]                                                                                                                                                                      ;
+; 6:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |battleships|oppVGA[0][1]                                                                                                                                                                      ;
+; 6:1                ; 30 bits   ; 120 LEs       ; 30 LEs               ; 90 LEs                 ; Yes        ; |battleships|counter[18]                                                                                                                                                                       ;
+; 12:1               ; 2 bits    ; 16 LEs        ; 6 LEs                ; 10 LEs                 ; Yes        ; |battleships|state[7]                                                                                                                                                                          ;
 ; 406:1              ; 2 bits    ; 540 LEs       ; 266 LEs              ; 274 LEs                ; Yes        ; |battleships|saved1[2]                                                                                                                                                                         ;
-; 3:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |battleships|DE2_Audio_Example:Sounds|avconf:avc|I2C_Controller:u0|SD_COUNTER[5]                                                                                                               ;
-; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |battleships|\game:cursor_x[2]                                                                                                                                                                 ;
-; 4:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |battleships|phase[31]                                                                                                                                                                         ;
+; 3:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |battleships|DE2_Audio_Example:Sounds|avconf:avc|I2C_Controller:u0|SD_COUNTER[1]                                                                                                               ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |battleships|phase[0]                                                                                                                                                                          ;
 ; 6:1                ; 2 bits    ; 8 LEs         ; 2 LEs                ; 6 LEs                  ; Yes        ; |battleships|counter[0]                                                                                                                                                                        ;
-; 3:1                ; 31 bits   ; 62 LEs        ; 31 LEs               ; 31 LEs                 ; No         ; |battleships|ship1_y                                                                                                                                                                           ;
-; 3:1                ; 31 bits   ; 62 LEs        ; 31 LEs               ; 31 LEs                 ; No         ; |battleships|ship1_x                                                                                                                                                                           ;
-; 3:1                ; 31 bits   ; 62 LEs        ; 31 LEs               ; 31 LEs                 ; No         ; |battleships|cursor_x                                                                                                                                                                          ;
-; 3:1                ; 31 bits   ; 62 LEs        ; 31 LEs               ; 31 LEs                 ; No         ; |battleships|cursor_x                                                                                                                                                                          ;
-; 3:1                ; 31 bits   ; 62 LEs        ; 31 LEs               ; 31 LEs                 ; No         ; |battleships|cursor_y                                                                                                                                                                          ;
-; 3:1                ; 31 bits   ; 62 LEs        ; 31 LEs               ; 31 LEs                 ; No         ; |battleships|cursor_y                                                                                                                                                                          ;
-; 3:1                ; 31 bits   ; 62 LEs        ; 31 LEs               ; 31 LEs                 ; No         ; |battleships|ship2_x                                                                                                                                                                           ;
-; 3:1                ; 31 bits   ; 62 LEs        ; 31 LEs               ; 31 LEs                 ; No         ; |battleships|ship2_y                                                                                                                                                                           ;
-; 3:1                ; 31 bits   ; 62 LEs        ; 31 LEs               ; 31 LEs                 ; No         ; |battleships|ship1_y                                                                                                                                                                           ;
-; 3:1                ; 31 bits   ; 62 LEs        ; 31 LEs               ; 31 LEs                 ; No         ; |battleships|ship1_x                                                                                                                                                                           ;
-; 3:1                ; 31 bits   ; 62 LEs        ; 31 LEs               ; 31 LEs                 ; No         ; |battleships|ship2_x                                                                                                                                                                           ;
-; 3:1                ; 31 bits   ; 62 LEs        ; 31 LEs               ; 31 LEs                 ; No         ; |battleships|ship2_y                                                                                                                                                                           ;
-; 100:1              ; 3 bits    ; 198 LEs       ; 198 LEs              ; 0 LEs                  ; No         ; |battleships|Mux25                                                                                                                                                                             ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |battleships|de2lcd:LCDscreen|DATA_BUS_VALUE                                                                                                                                                   ;
+; 100:1              ; 3 bits    ; 198 LEs       ; 198 LEs              ; 0 LEs                  ; No         ; |battleships|Mux23                                                                                                                                                                             ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 
@@ -1759,21 +1782,12 @@ Note: In order to hide this table in the UI and the text report file, please set
 +------------------------+-------+----------+--------------------------------------------+
 
 
-+----------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "DE2_Audio_Example:Sounds"                                                           ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-; Port ; Type   ; Severity ; Details                                                                             ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-; test ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-
-
 +-------------------------------+
 ; Elapsed Time Per Partition    ;
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:01:08     ;
+; Top            ; 00:01:02     ;
 +----------------+--------------+
 
 
@@ -1783,7 +1797,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Fri May 02 10:45:01 2014
+    Info: Processing started: Sat May 03 15:22:21 2014
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off battleships -c battleships
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 1 design units, including 1 entities, in source file files/de2_audio_example.v
@@ -1840,20 +1854,8 @@ Info (12021): Found 2 design units, including 1 entities, in source file files/b
     Info (12022): Found design unit 1: battleships-behavioral
     Info (12023): Found entity 1: battleships
 Info (12127): Elaborating entity "battleships" for the top level hierarchy
-Warning (10036): Verilog HDL or VHDL warning at battleships.vhd(89): object "opp_ship2_or" assigned a value but never read
-Warning (10036): Verilog HDL or VHDL warning at battleships.vhd(92): object "opp_ship2_x_vector" assigned a value but never read
-Warning (10036): Verilog HDL or VHDL warning at battleships.vhd(92): object "opp_ship2_y_vector" assigned a value but never read
-Warning (10036): Verilog HDL or VHDL warning at battleships.vhd(106): object "test" assigned a value but never read
-Warning (10631): VHDL Process Statement warning at battleships.vhd(196): inferring latch(es) for signal or variable "ship2_x_vector", which holds its previous value in one or more paths through the process
-Warning (10631): VHDL Process Statement warning at battleships.vhd(196): inferring latch(es) for signal or variable "ship2_y_vector", which holds its previous value in one or more paths through the process
-Info (10041): Inferred latch for "ship2_y_vector[0]" at battleships.vhd(196)
-Info (10041): Inferred latch for "ship2_y_vector[1]" at battleships.vhd(196)
-Info (10041): Inferred latch for "ship2_y_vector[2]" at battleships.vhd(196)
-Info (10041): Inferred latch for "ship2_y_vector[3]" at battleships.vhd(196)
-Info (10041): Inferred latch for "ship2_x_vector[0]" at battleships.vhd(196)
-Info (10041): Inferred latch for "ship2_x_vector[1]" at battleships.vhd(196)
-Info (10041): Inferred latch for "ship2_x_vector[2]" at battleships.vhd(196)
-Info (10041): Inferred latch for "ship2_x_vector[3]" at battleships.vhd(196)
+Warning (10631): VHDL Process Statement warning at battleships.vhd(195): inferring latch(es) for signal or variable "test0", which holds its previous value in one or more paths through the process
+Info (10041): Inferred latch for "test0" at battleships.vhd(195)
 Info (12128): Elaborating entity "DE2_Audio_Example" for hierarchy "DE2_Audio_Example:Sounds"
 Info (12128): Elaborating entity "Audio_Controller" for hierarchy "DE2_Audio_Example:Sounds|Audio_Controller:Audio_Controller"
 Info (12128): Elaborating entity "Altera_UP_Clock_Edge" for hierarchy "DE2_Audio_Example:Sounds|Audio_Controller:Audio_Controller|Altera_UP_Clock_Edge:Bit_Clock_Edges"
@@ -1988,10 +1990,6 @@ Info (12128): Elaborating entity "keyboard" for hierarchy "ps2:keyboard_0|keyboa
 Info (12128): Elaborating entity "oneshot" for hierarchy "ps2:keyboard_0|oneshot:pulser"
 Info (12128): Elaborating entity "VGA_top_level" for hierarchy "VGA_top_level:vga_0"
 Info (12128): Elaborating entity "pixelGenerator" for hierarchy "VGA_top_level:vga_0|pixelGenerator:videoGen"
-Warning (10631): VHDL Process Statement warning at pixelGenerator.vhd(61): inferring latch(es) for signal or variable "colorAddress", which holds its previous value in one or more paths through the process
-Info (10041): Inferred latch for "colorAddress[0]" at pixelGenerator.vhd(61)
-Info (10041): Inferred latch for "colorAddress[1]" at pixelGenerator.vhd(61)
-Info (10041): Inferred latch for "colorAddress[2]" at pixelGenerator.vhd(61)
 Info (12128): Elaborating entity "colorROM" for hierarchy "VGA_top_level:vga_0|pixelGenerator:videoGen|colorROM:colors"
 Info (12128): Elaborating entity "altsyncram" for hierarchy "VGA_top_level:vga_0|pixelGenerator:videoGen|colorROM:colors|altsyncram:altsyncram_component"
 Info (12130): Elaborated megafunction instantiation "VGA_top_level:vga_0|pixelGenerator:videoGen|colorROM:colors|altsyncram:altsyncram_component"
@@ -2013,9 +2011,6 @@ Info (12021): Found 1 design units, including 1 entities, in source file db/alts
     Info (12023): Found entity 1: altsyncram_pv71
 Info (12128): Elaborating entity "altsyncram_pv71" for hierarchy "VGA_top_level:vga_0|pixelGenerator:videoGen|colorROM:colors|altsyncram:altsyncram_component|altsyncram_pv71:auto_generated"
 Info (12128): Elaborating entity "VGA_SYNC" for hierarchy "VGA_top_level:vga_0|VGA_SYNC:videoSync"
-Warning (14026): LATCH primitive "VGA_top_level:vga_0|pixelGenerator:videoGen|colorAddress[0]" is permanently enabled
-Warning (14026): LATCH primitive "VGA_top_level:vga_0|pixelGenerator:videoGen|colorAddress[1]" is permanently enabled
-Warning (14026): LATCH primitive "VGA_top_level:vga_0|pixelGenerator:videoGen|colorAddress[2]" is permanently enabled
 Info (19000): Inferred 1 megafunctions from design logic
     Info (276029): Inferred altsyncram megafunction from the following design logic: "DE2_Audio_Example:Sounds|Ram0_rtl_0" 
         Info (286033): Parameter OPERATION_MODE set to ROM
@@ -2114,41 +2109,45 @@ Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "LCD_ON" is stuck at VCC
     Warning (13410): Pin "SEC_LED" is stuck at GND
     Warning (13410): Pin "LCD_RW" is stuck at GND
+    Warning (13410): Pin "test0" is stuck at GND
+    Warning (13410): Pin "test1" is stuck at GND
+    Warning (13410): Pin "test3" is stuck at GND
 Critical Warning (18061): Ignored Power-Up Level option on the following registers
     Critical Warning (18010): Register de2lcd:LCDscreen|init will power up to High
     Critical Warning (18010): Register myVGA[0][0] will power up to High
-    Critical Warning (18010): Register state[31] will power up to Low
     Critical Warning (18010): Register state[0] will power up to Low
+    Critical Warning (18010): Register state[31] will power up to Low
     Critical Warning (18010): Register \game:cursor_y[2] will power up to High
     Critical Warning (18010): Register \game:cursor_x[2] will power up to High
     Critical Warning (18010): Register counter[31] will power up to Low
     Critical Warning (18010): Register counter[0] will power up to Low
     Critical Warning (18010): Register myHits[31] will power up to Low
+    Critical Warning (18010): Register myHits[0] will power up to Low
     Critical Warning (18010): Register oppHits[31] will power up to Low
     Critical Warning (18010): Register oppHits[0] will power up to Low
-    Critical Warning (18010): Register myHits[0] will power up to Low
     Critical Warning (18010): Register phase[31] will power up to Low
     Critical Warning (18010): Register phase[0] will power up to Low
 Info (17049): 2 registers lost all their fanouts during netlist optimizations.
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 1 node(s), including 0 DDIO, 1 PLL, 0 transceiver and 0 LCELL
-Warning (21074): Design contains 4 input pin(s) that do not drive logic
+Warning (21074): Design contains 5 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "switch"
     Warning (15610): No output dependent on input pin "CLOCK_27"
     Warning (15610): No output dependent on input pin "KEY[1]"
     Warning (15610): No output dependent on input pin "KEY[2]"
     Warning (15610): No output dependent on input pin "KEY[3]"
-Info (21057): Implemented 8748 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 10 input pins
+Info (21057): Implemented 8720 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 11 input pins
     Info (21059): Implemented 106 output pins
     Info (21060): Implemented 12 bidirectional pins
-    Info (21061): Implemented 8393 logic cells
+    Info (21061): Implemented 8364 logic cells
     Info (21064): Implemented 222 RAM segments
     Info (21065): Implemented 1 PLLs
     Info (21062): Implemented 4 DSP elements
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 89 warnings
-    Info: Peak virtual memory: 568 megabytes
-    Info: Processing ended: Fri May 02 10:46:15 2014
-    Info: Elapsed time: 00:01:14
-    Info: Total CPU time (on all processors): 00:01:14
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 84 warnings
+    Info: Peak virtual memory: 599 megabytes
+    Info: Processing ended: Sat May 03 15:23:30 2014
+    Info: Elapsed time: 00:01:09
+    Info: Total CPU time (on all processors): 00:01:09
 
 
