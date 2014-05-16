@@ -1,5 +1,5 @@
 Analysis & Synthesis report for battleships
-Fri May 16 12:56:10 2014
+Fri May 16 15:00:39 2014
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -36,7 +36,7 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Failed - Fri May 16 12:56:10 2014               ;
+; Analysis & Synthesis Status        ; Failed - Fri May 16 15:00:39 2014               ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; battleships                                     ;
 ; Top-level Entity Name              ; battleships                                     ;
@@ -155,11 +155,11 @@ Parallel compilation was disabled, but you have multiple processors available. E
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Fri May 16 12:56:08 2014
+    Info: Processing started: Fri May 16 15:00:34 2014
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off battleships -c battleships
 Warning (20028): Parallel compilation is not licensed and has been disabled
-Error (10170): Verilog HDL syntax error at DE2_Audio_Example.v(1) near text "WORK";  expecting "<" File: C:/Users/mantzouj/Documents/Jason/Jason School/Spring 2014/EECS 392/Battleships/files/DE2_Audio_Example.v Line: 1
-Info (12021): Found 0 design units, including 0 entities, in source file files/de2_audio_example.v
+Info (12021): Found 1 design units, including 1 entities, in source file files/de2_audio_example.v
+    Info (12023): Found entity 1: DE2_Audio_Example
 Info (12021): Found 1 design units, including 1 entities, in source file files/avconf/i2c_controller.v
     Info (12023): Found entity 1: I2C_Controller
 Info (12021): Found 1 design units, including 1 entities, in source file files/avconf/avconf.v
@@ -211,10 +211,11 @@ Info (12021): Found 2 design units, including 0 entities, in source file files/b
 Info (12021): Found 2 design units, including 1 entities, in source file files/battleships.vhd
     Info (12022): Found design unit 1: battleships-behavioral
     Info (12023): Found entity 1: battleships
+Error (10482): VHDL error at battleships.vhd(1221): object "S5_overlap" is used but not declared File: C:/Users/mantzouj/Documents/Jason/Jason School/Spring 2014/EECS 392/Battleships/files/battleships.vhd Line: 1221
 Error: Quartus II 64-Bit Analysis & Synthesis was unsuccessful. 1 error, 1 warning
-    Error: Peak virtual memory: 475 megabytes
-    Error: Processing ended: Fri May 16 12:56:10 2014
-    Error: Elapsed time: 00:00:02
-    Error: Total CPU time (on all processors): 00:00:01
+    Error: Peak virtual memory: 538 megabytes
+    Error: Processing ended: Fri May 16 15:00:40 2014
+    Error: Elapsed time: 00:00:06
+    Error: Total CPU time (on all processors): 00:00:05
 
 

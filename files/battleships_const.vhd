@@ -43,6 +43,42 @@ constant COMM_S2_7 : integer := 19;
 constant COMM_S2_8 : integer := 20;
 constant COMM_S2_9 : integer := 21;
 
+constant PLACE_S3 : integer := 22;
+constant PRE_COMM_S3 : integer := 23;
+constant COMM_S3_1 : integer := 24;
+constant COMM_S3_2 : integer := 25;
+constant COMM_S3_3 : integer := 26;
+constant COMM_S3_4 : integer := 27;
+constant COMM_S3_5 : integer := 28;
+constant COMM_S3_6 : integer := 29;
+constant COMM_S3_7 : integer := 30;
+constant COMM_S3_8 : integer := 31;
+constant COMM_S3_9 : integer := 32;
+
+constant PLACE_S4 : integer := 33;
+constant PRE_COMM_S4 : integer := 34;
+constant COMM_S4_1 : integer := 35;
+constant COMM_S4_2 : integer := 36;
+constant COMM_S4_3 : integer := 37;
+constant COMM_S4_4 : integer := 38;
+constant COMM_S4_5 : integer := 39;
+constant COMM_S4_6 : integer := 40;
+constant COMM_S4_7 : integer := 41;
+constant COMM_S4_8 : integer := 42;
+constant COMM_S4_9 : integer := 43;
+
+constant PLACE_S5 : integer := 44;
+constant PRE_COMM_S5 : integer := 45;
+constant COMM_S5_1 : integer := 46;
+constant COMM_S5_2 : integer := 47;
+constant COMM_S5_3 : integer := 48;
+constant COMM_S5_4 : integer := 49;
+constant COMM_S5_5 : integer := 50;
+constant COMM_S5_6 : integer := 51;
+constant COMM_S5_7 : integer := 52;
+constant COMM_S5_8 : integer := 53;
+constant COMM_S5_9 : integer := 54;
+
 constant SHOT_SELECT : integer := 99;
 constant PRE_COMM_SHOT : integer := 100;
 constant COMM_SHOT_1 : integer := 101;

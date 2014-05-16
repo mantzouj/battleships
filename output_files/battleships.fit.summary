@@ -1,16 +1,16 @@
-Fitter Status : Failed - Thu May 15 22:04:56 2014
+Fitter Status : Successful - Fri May 16 14:47:25 2014
 Quartus II 64-Bit Version : 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition
 Revision Name : battleships
 Top-level Entity Name : battleships
 Family : Cyclone II
 Device : EP2C35F672C6
 Timing Models : Final
-Total logic elements : 34,012 / 33,216 ( 102 % )
-    Total combinational functions : 33,894 / 33,216 ( 102 % )
-    Dedicated logic registers : 1,596 / 33,216 ( 5 % )
-Total registers : 1596
+Total logic elements : 28,609 / 33,216 ( 86 % )
+    Total combinational functions : 28,490 / 33,216 ( 86 % )
+    Dedicated logic registers : 1,900 / 33,216 ( 6 % )
+Total registers : 1900
 Total pins : 129 / 475 ( 27 % )
 Total virtual pins : 0
-Total memory bits : 16,624 / 483,840 ( 3 % )
-Embedded Multiplier 9-bit elements : 4 / 70 ( 6 % )
+Total memory bits : 10,992 / 483,840 ( 2 % )
+Embedded Multiplier 9-bit elements : 0 / 70 ( 0 % )
 Total PLLs : 1 / 4 ( 25 % )
