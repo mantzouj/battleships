@@ -41,7 +41,8 @@ component DE2_Audio_Example is
 			AUD_ADCDAT : in std_logic;
 			AUD_BCLK, AUD_ADCLRCK, AUD_DACLRCK, I2C_SDAT : inout std_logic;
 			AUD_XCK, AUD_DACDAT, I2C_SCLK : out std_logic;
-			SW : in std_logic
+			SW : in std_logic;
+			select_s : in std_logic
 	);
 end component;
 
@@ -100,7 +101,7 @@ signal winner         : std_logic;
 signal game_over      : std_logic;
 signal done           : std_logic;
 signal LEDs				 : std_logic_vector (55 downto 0);
-signal tie		 		 : std_logic;
+signal tie, select_s	 : std_logic;
 signal init,waiting,res_lcd : std_logic; --,a,b,c,d,e,f
 signal sound_explosion : std_logic;
 
@@ -108,7 +109,7 @@ signal go, S2_overlap	: std_logic;
 
 begin 
 
-Sounds : DE2_Audio_Example port map (CLOCK_50 => clk, CLOCK_27 => CLOCK_27, KEY => KEY, AUD_ADCDAT => AUD_ADCDAT, AUD_BCLK => AUD_BCLK, AUD_ADCLRCK => AUD_ADCLRCK, AUD_DACLRCK => AUD_DACLRCK, I2C_SDAT => I2C_SDAT, AUD_XCK => AUD_XCK, AUD_DACDAT => AUD_DACDAT, I2C_SCLK => I2C_SCLK, SW => sound_explosion);
+Sounds : DE2_Audio_Example port map (CLOCK_50 => clk, CLOCK_27 => CLOCK_27, KEY => KEY, AUD_ADCDAT => AUD_ADCDAT, AUD_BCLK => AUD_BCLK, AUD_ADCLRCK => AUD_ADCLRCK, AUD_DACLRCK => AUD_DACLRCK, I2C_SDAT => I2C_SDAT, AUD_XCK => AUD_XCK, AUD_DACDAT => AUD_DACDAT, I2C_SCLK => I2C_SCLK, SW => sound_explosion, select_s => select_s);
 LCDscreen : de2lcd port map (tie, waiting, res_lcd, clk, game_over, winner, LCD_RS, LCD_E, LCD_ON, RESET_LED, SEC_LED,LCD_RW,DATA_BUS);
 keyboard_0 : ps2 port map (keyboard_clk, keyboard_data, clk, '1', hist1, hist0, LEDs);
 vga_0 : VGA_top_level port map (clk, game_over, winner, tie, VGA_RED, VGA_GREEN, VGA_BLUE, HORIZ_SYNC, VERT_SYNC, VGA_BLANK, VGA_CLK, myVGA, oppVGA);
@@ -221,7 +222,7 @@ game: process(init,data_in,ship1_or,clk,done) is
 		myVGA 	<= (others => WATER);
 		oppVGA 	<= (others => WATER);
 		counter  <= 0; myHits <= 0; oppHits <= 0;
-		sound_explosion <= '0';
+		sound_explosion <= '0'; select_s <= '0'; --0 is hit, 1 is miss
 		phase <= 0;
 		test11 <= '0';
 		data_out <= '1';
@@ -261,17 +262,24 @@ game: process(init,data_in,ship1_or,clk,done) is
 --		d  <='0';
 --		e	<='0';
 --		f	<='0';
+
+---initialize myVGA here, and create an ack signal to never do again
 		
 		--data_out <= data1;		
 		
 		case state is
 			WHEN PLACE_S1 =>
+				sound_explosion <= '0';
 				if ((left_press='1') and (ship1_x>0)) then
 						ship1_x := ship1_x - 1;
+						select_s <= '1';
+						sound_explosion <= '1';
 				end if;				
 
 				if ((right_press='1') and ((ship1_x<8 and ship1_or='0') or (ship1_x<9 and ship1_or='1'))) then
 						ship1_x := ship1_x + 1;
+						select_s <= '0';
+						sound_explosion <= '1';
 				end if;	
 
 				if (up_press='1') and (ship1_y>0) then

@@ -17,6 +17,7 @@ constant OVERLAP	: integer := 5;
 constant SHIP		: integer := 1;
 constant DELAY		: integer := 50000;
 
+constant RES		: natural := 20; --20downto0
 
 constant PLACE_S1 : integer := 0;
 constant PRE_COMM_S1 : integer := 1;
