@@ -92,7 +92,10 @@ constant COMM_SHOT_8 : integer := 108;
 
 constant GAME_DONE	: integer := 200;
 
-constant TESTING1 : integer := 2000;
+constant TESTING1 : integer := 2001;
+constant TESTING2 : integer := 2002;
+constant TESTING3 : integer := 2003;
+constant TESTING4 : integer := 2004;
 constant XXXX : integer := 9999; --dummy
 
 type VGA_vector is array (99 downto 0) of natural range 0 to 7;
