@@ -1,10 +1,7 @@
 <?xml version="1.0" ?>
 <LOG_ROOT>
 	<PROJECT NAME="battleships">
-		<CBX_INST_ENTRY INSTANCE_NAME="|battleships|DE2_Audio_Example:Sounds|Audio_Controller:Audio_Controller|Altera_UP_Audio_In_Deserializer:Audio_In_Deserializer|Altera_UP_SYNC_FIFO:Audio_In_Right_Channel_FIFO|scfifo:Sync_FIFO" CBX_FILE_NAME="scfifo_3041.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|battleships|DE2_Audio_Example:Sounds|Audio_Controller:Audio_Controller|Altera_UP_Audio_Out_Serializer:Audio_Out_Serializer|Altera_UP_SYNC_FIFO:Audio_Out_Left_Channel_FIFO|scfifo:Sync_FIFO" CBX_FILE_NAME="scfifo_3041.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|battleships|VGA_top_level:vga_0|pixelGenerator:videoGen|colorROM:colors|altsyncram:altsyncram_component" CBX_FILE_NAME="altsyncram_pv71.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|battleships|DE2_Audio_Example:Sounds|Audio_Controller:Audio_Controller|Altera_UP_Audio_In_Deserializer:Audio_In_Deserializer|Altera_UP_SYNC_FIFO:Audio_In_Left_Channel_FIFO|scfifo:Sync_FIFO" CBX_FILE_NAME="scfifo_3041.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|battleships|DE2_Audio_Example:Sounds|Audio_Controller:Audio_Controller|Altera_UP_Audio_Out_Serializer:Audio_Out_Serializer|Altera_UP_SYNC_FIFO:Audio_Out_Right_Channel_FIFO|scfifo:Sync_FIFO" CBX_FILE_NAME="scfifo_3041.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|battleships|VGA_top_level:vga_0|pixelGenerator:videoGen|fontROM:font_unit|altsyncram:ROM_rtl_0" CBX_FILE_NAME="altsyncram_0771.tdf"/>
 	</PROJECT>
 </LOG_ROOT>

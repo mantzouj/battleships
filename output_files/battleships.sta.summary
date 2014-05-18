@@ -3,52 +3,48 @@ TimeQuest Timing Analyzer Summary
 ------------------------------------------------------------
 
 Type  : Slow Model Setup 'VGA_top_level:vga_0|VGA_SYNC:videoSync|pixel_clock_int'
-Slack : -67.957
-TNS   : -329.092
+Slack : -66.080
+TNS   : -351.601
 
 Type  : Slow Model Setup 'clk'
-Slack : -6.103
-TNS   : -1700.531
+Slack : -26.068
+TNS   : -22387.272
 
 Type  : Slow Model Setup 'de2lcd:LCDscreen|CLK_400HZ'
-Slack : -3.307
-TNS   : -72.642
+Slack : -2.964
+TNS   : -57.253
 
-Type  : Slow Model Setup 'DE2_Audio_Example:Sounds|avconf:avc|mI2C_CTRL_CLK'
-Slack : -2.928
-TNS   : -98.864
+Type  : Slow Model Setup 'VGA_top_level:vga_0|VGA_SYNC:videoSync|pixel_column[8]'
+Slack : -1.786
+TNS   : -11.251
 
 Type  : Slow Model Setup 'ps2:keyboard_0|keyboard:u1|keyboard_clk_filtered'
-Slack : -1.474
-TNS   : -26.935
-
-Type  : Slow Model Setup 'DE2_Audio_Example:Sounds|avconf:avc|LUT_INDEX[1]'
-Slack : -1.206
-TNS   : -16.512
+Slack : -1.441
+TNS   : -28.865
 
 Type  : Slow Model Setup 'init'
-Slack : -1.035
-TNS   : -2.007
+Slack : -0.982
+TNS   : -1.963
 
 Type  : Slow Model Setup 'ps2:keyboard_0|keyboard:u1|scan_ready'
-Slack : -0.136
-TNS   : -0.623
+Slack : -0.163
+TNS   : -0.317
 
-Type  : Slow Model Hold 'DE2_Audio_Example:Sounds|avconf:avc|LUT_INDEX[1]'
-Slack : -2.727
-TNS   : -37.444
+Type  : Slow Model Hold 'VGA_top_level:vga_0|VGA_SYNC:videoSync|pixel_column[8]'
+Slack : -2.710
+TNS   : -30.256
 
 Type  : Slow Model Hold 'clk'
-Slack : -2.558
-TNS   : -23.396
-
-Type  : Slow Model Hold 'DE2_Audio_Example:Sounds|avconf:avc|mI2C_CTRL_CLK'
-Slack : -2.401
-TNS   : -20.312
+Slack : -2.550
+TNS   : -11.489
 
 Type  : Slow Model Hold 'ps2:keyboard_0|keyboard:u1|keyboard_clk_filtered'
-Slack : -2.005
-TNS   : -2.005
+Slack : -1.999
+TNS   : -1.999
+
+Type  : Slow Model Hold 'ps2:keyboard_0|keyboard:u1|scan_ready'
+Slack : 0.355
+TNS   : 0.000
 
 Type  : Slow Model Hold 'VGA_top_level:vga_0|VGA_SYNC:videoSync|pixel_clock_int'
 Slack : 0.391
@@ -58,29 +54,29 @@ Type  : Slow Model Hold 'de2lcd:LCDscreen|CLK_400HZ'
 Slack : 0.391
 TNS   : 0.000
 
-Type  : Slow Model Hold 'ps2:keyboard_0|keyboard:u1|scan_ready'
-Slack : 0.678
-TNS   : 0.000
-
 Type  : Slow Model Hold 'init'
-Slack : 0.854
+Slack : 1.023
 TNS   : 0.000
 
 Type  : Slow Model Recovery 'ps2:keyboard_0|keyboard:u1|ready_set'
-Slack : -1.721
-TNS   : -1.721
+Slack : -1.415
+TNS   : -1.415
 
 Type  : Slow Model Recovery 'clk'
-Slack : 0.361
+Slack : 0.351
 TNS   : 0.000
 
 Type  : Slow Model Removal 'clk'
-Slack : -0.413
-TNS   : -429.107
+Slack : -0.427
+TNS   : -469.027
 
 Type  : Slow Model Removal 'ps2:keyboard_0|keyboard:u1|ready_set'
-Slack : 2.491
+Slack : 2.185
 TNS   : 0.000
+
+Type  : Slow Model Minimum Pulse Width 'clk'
+Slack : -1.423
+TNS   : -1867.604
 
 Type  : Slow Model Minimum Pulse Width 'VGA_top_level:vga_0|VGA_SYNC:videoSync|pixel_clock_int'
 Slack : -1.423
@@ -89,10 +85,6 @@ TNS   : -53.538
 Type  : Slow Model Minimum Pulse Width 'de2lcd:LCDscreen|CLK_400HZ'
 Slack : -0.500
 TNS   : -61.000
-
-Type  : Slow Model Minimum Pulse Width 'DE2_Audio_Example:Sounds|avconf:avc|mI2C_CTRL_CLK'
-Slack : -0.500
-TNS   : -56.000
 
 Type  : Slow Model Minimum Pulse Width 'ps2:keyboard_0|keyboard:u1|keyboard_clk_filtered'
 Slack : -0.500
@@ -106,97 +98,89 @@ Type  : Slow Model Minimum Pulse Width 'ps2:keyboard_0|keyboard:u1|ready_set'
 Slack : -0.500
 TNS   : -1.000
 
-Type  : Slow Model Minimum Pulse Width 'DE2_Audio_Example:Sounds|avconf:avc|LUT_INDEX[1]'
-Slack : 0.500
+Type  : Slow Model Minimum Pulse Width 'VGA_top_level:vga_0|VGA_SYNC:videoSync|pixel_column[8]'
+Slack : 0.153
 TNS   : 0.000
 
 Type  : Slow Model Minimum Pulse Width 'init'
 Slack : 0.500
 TNS   : 0.000
 
-Type  : Slow Model Minimum Pulse Width 'clk'
-Slack : 7.873
-TNS   : 0.000
-
 Type  : Fast Model Setup 'VGA_top_level:vga_0|VGA_SYNC:videoSync|pixel_clock_int'
-Slack : -28.554
-TNS   : -122.113
+Slack : -27.938
+TNS   : -135.795
 
 Type  : Fast Model Setup 'clk'
-Slack : -1.913
-TNS   : -315.230
+Slack : -11.124
+TNS   : -9292.592
 
 Type  : Fast Model Setup 'de2lcd:LCDscreen|CLK_400HZ'
-Slack : -1.069
-TNS   : -9.630
+Slack : -0.876
+TNS   : -6.189
 
-Type  : Fast Model Setup 'DE2_Audio_Example:Sounds|avconf:avc|mI2C_CTRL_CLK'
-Slack : -1.059
-TNS   : -20.356
+Type  : Fast Model Setup 'VGA_top_level:vga_0|VGA_SYNC:videoSync|pixel_column[8]'
+Slack : -0.578
+TNS   : -3.550
 
 Type  : Fast Model Setup 'ps2:keyboard_0|keyboard:u1|keyboard_clk_filtered'
-Slack : -0.181
-TNS   : -2.381
+Slack : -0.173
+TNS   : -2.884
 
 Type  : Fast Model Setup 'init'
-Slack : -0.096
-TNS   : -0.172
-
-Type  : Fast Model Setup 'DE2_Audio_Example:Sounds|avconf:avc|LUT_INDEX[1]'
-Slack : -0.038
-TNS   : -0.134
+Slack : -0.076
+TNS   : -0.148
 
 Type  : Fast Model Setup 'ps2:keyboard_0|keyboard:u1|scan_ready'
-Slack : 0.424
+Slack : 0.459
 TNS   : 0.000
 
 Type  : Fast Model Hold 'clk'
-Slack : -1.598
-TNS   : -17.874
+Slack : -1.592
+TNS   : -8.505
 
-Type  : Fast Model Hold 'DE2_Audio_Example:Sounds|avconf:avc|LUT_INDEX[1]'
-Slack : -1.581
-TNS   : -22.489
-
-Type  : Fast Model Hold 'DE2_Audio_Example:Sounds|avconf:avc|mI2C_CTRL_CLK'
-Slack : -1.523
-TNS   : -18.864
+Type  : Fast Model Hold 'VGA_top_level:vga_0|VGA_SYNC:videoSync|pixel_column[8]'
+Slack : -1.557
+TNS   : -14.883
 
 Type  : Fast Model Hold 'ps2:keyboard_0|keyboard:u1|keyboard_clk_filtered'
-Slack : -1.259
-TNS   : -1.259
+Slack : -1.258
+TNS   : -1.258
 
 Type  : Fast Model Hold 'VGA_top_level:vga_0|VGA_SYNC:videoSync|pixel_clock_int'
-Slack : 0.215
+Slack : -0.242
+TNS   : -0.242
+
+Type  : Fast Model Hold 'ps2:keyboard_0|keyboard:u1|scan_ready'
+Slack : 0.140
 TNS   : 0.000
 
 Type  : Fast Model Hold 'de2lcd:LCDscreen|CLK_400HZ'
 Slack : 0.215
 TNS   : 0.000
 
-Type  : Fast Model Hold 'ps2:keyboard_0|keyboard:u1|scan_ready'
-Slack : 0.335
-TNS   : 0.000
-
 Type  : Fast Model Hold 'init'
-Slack : 0.598
+Slack : 0.674
 TNS   : 0.000
 
 Type  : Fast Model Recovery 'ps2:keyboard_0|keyboard:u1|ready_set'
-Slack : -0.720
-TNS   : -0.720
+Slack : -0.563
+TNS   : -0.563
 
 Type  : Fast Model Recovery 'clk'
-Slack : 0.515
+Slack : 0.392
 TNS   : 0.000
 
 Type  : Fast Model Removal 'clk'
-Slack : -0.290
-TNS   : -298.194
+Slack : -0.296
+TNS   : -320.785
 
 Type  : Fast Model Removal 'ps2:keyboard_0|keyboard:u1|ready_set'
-Slack : 1.600
+Slack : 1.443
 TNS   : 0.000
+
+Type  : Fast Model Minimum Pulse Width 'clk'
+Slack : -1.423
+TNS   : -1867.604
 
 Type  : Fast Model Minimum Pulse Width 'VGA_top_level:vga_0|VGA_SYNC:videoSync|pixel_clock_int'
 Slack : -1.423
@@ -205,10 +189,6 @@ TNS   : -53.538
 Type  : Fast Model Minimum Pulse Width 'de2lcd:LCDscreen|CLK_400HZ'
 Slack : -0.500
 TNS   : -61.000
-
-Type  : Fast Model Minimum Pulse Width 'DE2_Audio_Example:Sounds|avconf:avc|mI2C_CTRL_CLK'
-Slack : -0.500
-TNS   : -56.000
 
 Type  : Fast Model Minimum Pulse Width 'ps2:keyboard_0|keyboard:u1|keyboard_clk_filtered'
 Slack : -0.500
@@ -222,16 +202,12 @@ Type  : Fast Model Minimum Pulse Width 'ps2:keyboard_0|keyboard:u1|ready_set'
 Slack : -0.500
 TNS   : -1.000
 
-Type  : Fast Model Minimum Pulse Width 'DE2_Audio_Example:Sounds|avconf:avc|LUT_INDEX[1]'
-Slack : 0.500
+Type  : Fast Model Minimum Pulse Width 'VGA_top_level:vga_0|VGA_SYNC:videoSync|pixel_column[8]'
+Slack : 0.362
 TNS   : 0.000
 
 Type  : Fast Model Minimum Pulse Width 'init'
 Slack : 0.500
-TNS   : 0.000
-
-Type  : Fast Model Minimum Pulse Width 'clk'
-Slack : 7.873
 TNS   : 0.000
 
 ------------------------------------------------------------
