@@ -28,7 +28,7 @@ module Altera_UP_Audio_Bit_Counter (
  *                           Parameter Declarations                          *
  *****************************************************************************/
 
-parameter BIT_COUNTER_INIT	= 5'd31;
+parameter BIT_COUNTER_INIT	= 5'd20;
 
 /*****************************************************************************
  *                             Port Declarations                             *

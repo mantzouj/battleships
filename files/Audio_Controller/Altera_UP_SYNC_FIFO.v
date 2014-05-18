@@ -30,7 +30,7 @@ module Altera_UP_SYNC_FIFO (
  *                           Parameter Declarations                          *
  *****************************************************************************/
 
-parameter	DATA_WIDTH	= 32;
+parameter	DATA_WIDTH	= 21;
 parameter	DATA_DEPTH	= 128;
 parameter	ADDR_WIDTH	= 7;
 

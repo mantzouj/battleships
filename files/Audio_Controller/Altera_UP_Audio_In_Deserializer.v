@@ -37,8 +37,8 @@ module Altera_UP_Audio_In_Deserializer (
  *                           Parameter Declarations                          *
  *****************************************************************************/
 
-parameter AUDIO_DATA_WIDTH	= 32;
-parameter BIT_COUNTER_INIT	= 5'd31;
+parameter AUDIO_DATA_WIDTH	= 21;
+parameter BIT_COUNTER_INIT	= 5'd20;
 
 /*****************************************************************************
  *                             Port Declarations                             *

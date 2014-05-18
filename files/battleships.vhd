@@ -41,7 +41,8 @@ component DE2_Audio_Example is
 			AUD_ADCDAT : in std_logic;
 			AUD_BCLK, AUD_ADCLRCK, AUD_DACLRCK, I2C_SDAT : inout std_logic;
 			AUD_XCK, AUD_DACDAT, I2C_SCLK : out std_logic;
-			SW : in std_logic
+			SW : in std_logic;
+			select_s : in std_logic
 	);
 end component;
 
@@ -83,12 +84,18 @@ signal left_press, up_press, down_press, right_press, flip, enter_press : std_lo
 signal phase, state	: integer;
 signal ship1_x_vector, cursor_x_vector: std_logic_vector(3 downto 0);
 signal ship2_x_vector, ship2_y_vector: std_logic_vector(3 downto 0);
+signal ship3_x_vector, ship3_y_vector: std_logic_vector(3 downto 0);
+signal ship4_x_vector, ship4_y_vector: std_logic_vector(3 downto 0);
+signal ship5_x_vector, ship5_y_vector: std_logic_vector(3 downto 0);
 signal ship1_y_vector, cursor_y_vector: std_logic_vector(3 downto 0);
-signal ship1_or, ship2_or		: std_logic;
-signal opp_ship1_or, opp_ship2_or	: std_logic;
+signal ship1_or, ship2_or, ship3_or, ship4_or, ship5_or		: std_logic;
+signal opp_ship1_or, opp_ship2_or, opp_ship3_or, opp_ship4_or, opp_ship5_or	: std_logic;
 signal opp_ship1_x_vector, opp_cursor_x_vector: std_logic_vector(3 downto 0);
 signal opp_ship1_y_vector, opp_cursor_y_vector: std_logic_vector(3 downto 0);
 signal opp_ship2_x_vector, opp_ship2_y_vector: std_logic_vector(3 downto 0);
+signal opp_ship3_x_vector, opp_ship3_y_vector: std_logic_vector(3 downto 0);
+signal opp_ship4_x_vector, opp_ship4_y_vector: std_logic_vector(3 downto 0);
+signal opp_ship5_x_vector, opp_ship5_y_vector: std_logic_vector(3 downto 0);
 signal saved1			: integer;
 signal myHits, oppHits : integer;
 
@@ -100,15 +107,15 @@ signal winner         : std_logic;
 signal game_over      : std_logic;
 signal done           : std_logic;
 signal LEDs				 : std_logic_vector (55 downto 0);
-signal tie		 		 : std_logic;
+signal tie, select_s	 : std_logic;
 signal init,waiting,res_lcd : std_logic; --,a,b,c,d,e,f
 signal sound_explosion : std_logic;
 
-signal go, S2_overlap	: std_logic;
+signal go, S2_overlap, S3_overlap, S4_overlap, S5_overlap	: std_logic;
 
 begin 
 
-Sounds : DE2_Audio_Example port map (CLOCK_50 => clk, CLOCK_27 => CLOCK_27, KEY => KEY, AUD_ADCDAT => AUD_ADCDAT, AUD_BCLK => AUD_BCLK, AUD_ADCLRCK => AUD_ADCLRCK, AUD_DACLRCK => AUD_DACLRCK, I2C_SDAT => I2C_SDAT, AUD_XCK => AUD_XCK, AUD_DACDAT => AUD_DACDAT, I2C_SCLK => I2C_SCLK, SW => sound_explosion);
+Sounds : DE2_Audio_Example port map (CLOCK_50 => clk, CLOCK_27 => CLOCK_27, KEY => KEY, AUD_ADCDAT => AUD_ADCDAT, AUD_BCLK => AUD_BCLK, AUD_ADCLRCK => AUD_ADCLRCK, AUD_DACLRCK => AUD_DACLRCK, I2C_SDAT => I2C_SDAT, AUD_XCK => AUD_XCK, AUD_DACDAT => AUD_DACDAT, I2C_SCLK => I2C_SCLK, SW => sound_explosion, select_s => select_s);
 LCDscreen : de2lcd port map (tie, waiting, res_lcd, clk, game_over, winner, LCD_RS, LCD_E, LCD_ON, RESET_LED, SEC_LED,LCD_RW,DATA_BUS);
 keyboard_0 : ps2 port map (keyboard_clk, keyboard_data, clk, '1', hist1, hist0, LEDs);
 vga_0 : VGA_top_level port map (clk, game_over, winner, tie, VGA_RED, VGA_GREEN, VGA_BLUE, HORIZ_SYNC, VERT_SYNC, VGA_BLANK, VGA_CLK, myVGA, oppVGA);
@@ -193,11 +200,14 @@ end process key_press;
 
 
 game: process(init,data_in,ship1_or,clk,done) is
-  variable ship1_x, ship2_x : natural;
-  variable ship1_y, ship2_y : natural;
+  variable ship1_x, ship2_x, ship3_x, ship4_x, ship5_x : natural;
+  variable ship1_y, ship2_y, ship3_y, ship4_y, ship5_y : natural;
   variable opp_ship1_x, opp_cursor_x : natural;
   variable opp_ship1_y, opp_cursor_y : natural;
   variable opp_ship2_x, opp_ship2_y : natural;
+  variable opp_ship3_x, opp_ship3_y : natural;  
+  variable opp_ship4_x, opp_ship4_y : natural;
+  variable opp_ship5_x, opp_ship5_y : natural;
   --variable S1_placed : std_logic;
   --variable S2_placed : std_logic;
   variable cursor_x, cursor_y, cursor_index : natural;
@@ -216,12 +226,18 @@ game: process(init,data_in,ship1_or,clk,done) is
 		ship1_y 	:= 0;
 		ship2_x 	:= 0;
 		ship2_y 	:= 0;
+		ship3_x 	:= 0;
+		ship3_y 	:= 0;
+		ship4_x 	:= 0;
+		ship4_y 	:= 0;
+		ship5_x 	:= 0;
+		ship5_y 	:= 0;		
 		cursor_x	:= 4;	cursor_y := 4;	
 		
-		myVGA 	<= (others => WATER);
-		oppVGA 	<= (others => WATER);
+		myVGA 	<= (others => WATER); --potentially unecessary
+		oppVGA 	<= (others => WATER); --potentially unecessary
 		counter  <= 0; myHits <= 0; oppHits <= 0;
-		sound_explosion <= '0';
+		sound_explosion <= '0'; select_s <= '0'; --0 is hit, 1 is miss
 		phase <= 0;
 		test11 <= '0';
 		data_out <= '1';
@@ -238,14 +254,26 @@ game: process(init,data_in,ship1_or,clk,done) is
 		opp_ship2_y_vector <= "0000";
 		ship2_x_vector <= "0000";
 		ship2_y_vector <= "0000";
+		opp_ship3_x_vector <= "0000";
+		opp_ship3_y_vector <= "0000";
+		ship3_x_vector <= "0000";
+		ship3_y_vector <= "0000";
+		opp_ship4_x_vector <= "0000";
+		opp_ship4_y_vector <= "0000";
+		ship4_x_vector <= "0000";
+		ship4_y_vector <= "0000";
+		opp_ship5_x_vector <= "0000";
+		opp_ship5_y_vector <= "0000";
+		ship5_x_vector <= "0000";
+		ship5_y_vector <= "0000";
 		cursor_x_vector <= "0100";
 		cursor_y_vector <= "0100";
 		opp_cursor_x_vector <= "0000";
 		opp_cursor_x_vector <= "0000";
-		ship1_or <= '1'; ship2_or <= '1';
+		ship1_or <= '1'; ship2_or <= '1'; ship3_or <= '1'; ship4_or <= '1'; ship5_or <= '1';
 		done 		<= '1';
 		state 	<= PLACE_S1;
-		if (ship1_or='1') then
+		if (ship1_or='1') then	--potentially unecessary
 			myVGA(ship1_x + 10*ship1_y) <= SHIP;
 			myVGA(ship1_x + 10*(ship1_y+1)) <= SHIP;
 		else
@@ -261,17 +289,24 @@ game: process(init,data_in,ship1_or,clk,done) is
 --		d  <='0';
 --		e	<='0';
 --		f	<='0';
+
+---initialize myVGA here, and create an ack signal to never do again
 		
 		--data_out <= data1;		
 		
 		case state is
 			WHEN PLACE_S1 =>
+				sound_explosion <= '0';
 				if ((left_press='1') and (ship1_x>0)) then
 						ship1_x := ship1_x - 1;
+						select_s <= '1';
+						sound_explosion <= '1';
 				end if;				
 
 				if ((right_press='1') and ((ship1_x<8 and ship1_or='0') or (ship1_x<9 and ship1_or='1'))) then
 						ship1_x := ship1_x + 1;
+						select_s <= '0';
+						sound_explosion <= '1';
 				end if;	
 
 				if (up_press='1') and (ship1_y>0) then
@@ -686,18 +721,777 @@ game: process(init,data_in,ship1_or,clk,done) is
 					opp_S2_index_2 := opp_ship2_x + 1 + 10*(opp_ship2_y);
 					opp_S2_index_3 := opp_ship2_x + 2 + 10*(opp_ship2_y);
 				end if;
-				state <= SHOT_SELECT;	
+				state <= PLACE_S3;	
 
+	
+			WHEN PLACE_S3 =>
+			
+				if (left_press='1') and (ship3_x>0) then
+						ship3_x := ship3_x - 1;
+						S3_overlap <= '0';
+				end if;				
+
+				if (right_press='1') and ((ship3_x<7 and ship3_or='0') or (ship3_x<9 and ship3_or='1'))then
+						ship3_x := ship3_x + 1;
+						S3_overlap <= '0';
+				end if;	
+
+				if (up_press='1') and (ship3_y>0) then
+						ship3_y := ship3_y - 1;
+						S3_overlap <= '0';
+				end if;	
+
+				if (down_press='1') and ((ship3_y<9 and ship3_or='0') or (ship3_y<7 and ship3_or='1')) then
+						ship3_y := ship3_y + 1;
+						S3_overlap <= '0';
+				end if;
+				
+				if (flip='1') and (ship3_or='1') and (ship3_x<8) then
+						ship3_or<='0';
+						S3_overlap <= '0';
+				end if;
+				
+				if (flip='1') and (ship3_or='0') and (ship3_y<8) then
+						ship3_or<='1';
+						S3_overlap <= '0';
+				end if;
+				
+				if (ship3_or='1') then
+					S3_index_1 := ship3_x + 10*ship3_y;
+					S3_index_2 := ship3_x + 10*(ship3_y+1);
+					S3_index_3 := ship3_x + 10*(ship3_y+2);
+					myVGA <= (others => WATER);
+					myVGA(S3_index_1) <= SHIP;
+					myVGA(S3_index_2) <= SHIP;
+					myVGA(S3_index_3) <= SHIP;
+					myVGA(S2_index_1) <= SHIP;
+					myVGA(S2_index_2) <= SHIP;
+					myVGA(S2_index_3) <= SHIP;
+					myVGA(S1_index_1) <= SHIP;
+					myVGA(S1_index_2) <= SHIP;
+				else
+					S3_index_1 := ship3_x + 10*ship3_y;
+					S3_index_2 := ship3_x + 1 + 10*ship3_y;
+					S3_index_3 := ship3_x + 2 + 10*ship3_y;
+					myVGA <= (others => WATER);
+					myVGA(S3_index_1) <= SHIP;
+					myVGA(S3_index_2) <= SHIP;
+					myVGA(S3_index_3) <= SHIP;
+					myVGA(S2_index_1) <= SHIP;
+					myVGA(S2_index_2) <= SHIP;
+					myVGA(S2_index_3) <= SHIP;
+					myVGA(S1_index_1) <= SHIP;
+					myVGA(S1_index_2) <= SHIP;
+				end if;
+				
+				if ((S3_index_1=S1_index_1) or (S3_index_1=S1_index_2) or (S3_index_2=S1_index_1) or (S3_index_2=S1_index_2) or (S3_index_3=S1_index_1) or (S3_index_3=S1_index_2) or (S3_index_1=S2_index_1) or (S3_index_1=S2_index_2) or (S3_index_1=S2_index_3) or (S3_index_2=S2_index_1) or (S3_index_2=S2_index_2) or (S3_index_2=S2_index_3) or (S3_index_3=S2_index_1) or (S3_index_3=S2_index_2) or (S3_index_3=S2_index_3)) then
+					S3_overlap <= '1';
+					--myVGA(S1_index_1) <= SHIP;	--point of this?
+					--myVGA(S1_index_2) <= SHIP;	--point of this?
+					myVGA(S3_index_1) <= OVERLAP;
+					myVGA(S3_index_2) <= OVERLAP;
+					myVGA(S3_index_3) <= OVERLAP;
+				end if;
+				----ELSE -> SHIP, SHIP, SHIP   //take from above and bring here (though 2 ifs?)
+				--	
+				--S2_index := ship2_x + 10*ship2_y;
+	--			
+	--			if ((ship2_or='1') and (ship1_or='1') and (((ship2_x + 10*ship2_y)=(ship1_x + 10*(ship1_y+1))) or ((ship2_x + 10*ship2_y)=(ship1_x + 10*ship1_y)) or ((ship2_x + 10*(ship2_y+1))=(ship1_x + 10*(ship1_y+1))) or ((ship2_x + 10*(ship2_y+1))=(ship1_x + 10*ship1_y)) or ((ship2_x + 10*(ship2_y+2))=(ship1_x + 10*(ship1_y+1))) or ((ship2_x + 10*(ship2_y+2))=(ship1_x + 10*ship1_y)))) then
+	--				--if (((ship2_x + 10*ship2_y)=(ship1_x + 10*(ship1_y+1))) or ((ship2_x + 10*ship2_y)=(ship1_x + 10*ship1_y)))
+	--				--myVGA <= (others => WATER);
+	--				myVGA(ship2_x + 10*ship2_y) <= OVERLAP;
+	--				myVGA(ship2_x + 10*(ship2_y+1)) <= OVERLAP;
+	--				myVGA(ship2_x + 10*(ship2_y+2)) <= OVERLAP;
+	--			end if;
+	--			
+	--			if ((ship2_or='0') and (ship1_or='0') and (((ship2_x + 10*ship2_y)=(ship1_x + 1 + 10*(ship1_y))) or ((ship2_x + 10*ship2_y)=(ship1_x + 10*ship1_y)) or ((ship2_x + 1 + 10*(ship2_y))=(ship1_x + 1 + 10*(ship1_y))) or ((ship2_x + 1 + 10*(ship2_y))=(ship1_x + 10*ship1_y)) or ((ship2_x + 2 + 10*(ship2_y))=(ship1_x + 1 + 10*(ship1_y))) or ((ship2_x + 2 + 10*(ship2_y))=(ship1_x + 10*ship1_y)))) then
+	--				--if (((ship2_x + 10*ship2_y)=(ship1_x + 10*(ship1_y+1))) or ((ship2_x + 10*ship2_y)=(ship1_x + 10*ship1_y)))
+	--				--myVGA <= (others => WATER);
+	--				myVGA(ship2_x + 10*ship2_y) <= OVERLAP;
+	--				myVGA(ship2_x + 1 + 10*(ship2_y)) <= OVERLAP;
+	--				myVGA(ship2_x + 2 + 10*(ship2_y)) <= OVERLAP;
+	---			end if;
+	--			
+	--			if ((ship2_or='1') and (((ship2_x + 10*ship2_y)=(ship1_x + 10*(ship1_y+1))) or ((ship2_x + 10*ship2_y)=(ship1_x + 10*ship1_y)))) then
+	--				myVGA(ship2_x + 10*ship2_y) <= SHIP;
+	--				myVGA(ship2_x + 10*(ship2_y+1)) <= SHIP;
+	--			else
+	--				--myVGA <= (others => WATER);
+	--				myVGA(ship2_x + 10*ship2_y) <= SHIP;
+	--				myVGA(ship2_x + 1 + 10*ship2_y) <= SHIP;		
+	--			end if;			
+
+				if (enter_press='1' and S3_overlap='0') then
+					data_out	<= '0';
+					state		<= PRE_COMM_S3;
+					saved1 <= myVGA(cursor_x + 10*cursor_y);
+				end if;
+	
+			
+			WHEN PRE_COMM_S3 =>
+				if (data_in='0') then
+					phase <= 1;
+				end if;
+				if (phase=1) then
+					counter <= counter + 1;
+				end if;
+				if (counter=(DELAY/4)) then
+					data_out <= ship3_x_vector(3);
+				end if;
+				if (counter=(DELAY/2)) then
+					opp_ship3_x_vector(3) <= data_in;
+				end if;
+				
+				if (counter=DELAY) then
+					state <= COMM_S3_1;
+					counter <= 0;
+					phase <= 0;
+				end if;
+				
+			WHEN COMM_S3_1 =>
+				data_out <= ship3_x_vector(2);
+				if (counter=(DELAY/2)) then
+					opp_ship3_x_vector(2) <= data_in;
+				end if;
+				
+				if (counter=DELAY) then
+					counter <= 0;
+					state <= COMM_S3_2;
+				else
+					counter <= counter + 1;
+				end if;
+
+
+			WHEN COMM_S3_2 =>
+				data_out <= ship3_x_vector(1);
+				if (counter=(DELAY/2)) then
+					opp_ship3_x_vector(1) <= data_in;
+				end if;
+				
+				if (counter=DELAY) then
+					counter <= 0;
+					state <= COMM_S3_3;
+				else
+					counter <= counter + 1;
+				end if;
+				
+				
+			WHEN COMM_S3_3 =>
+				data_out <= ship3_x_vector(0);
+				if (counter=(DELAY/2)) then
+					opp_ship3_x_vector(0) <= data_in;
+				end if;
+				
+				if (counter=DELAY) then
+					counter <= 0;
+					state <= COMM_S3_4;
+				else
+					counter <= counter + 1;
+				end if;
+
+			WHEN COMM_S3_4 =>
+				data_out <= ship3_y_vector(3);
+				if (counter=(DELAY/2)) then
+					opp_ship3_y_vector(3) <= data_in;
+				end if;
+				if (counter=DELAY) then
+					counter <= 0;
+					state <= COMM_S3_5;
+				else
+					counter <= counter + 1;
+				end if;
+					
+			WHEN COMM_S3_5 =>
+				data_out <= ship3_y_vector(2);
+				if (counter=(DELAY/2)) then
+					opp_ship3_y_vector(2) <= data_in;
+				end if;
+				if (counter=DELAY) then
+					counter <= 0;
+					state <= COMM_S3_6;
+				else
+					counter <= counter + 1;
+				end if;			
+
+			WHEN COMM_S3_6 =>
+				data_out <= ship3_y_vector(1);
+				if (counter=(DELAY/2)) then
+					opp_ship3_y_vector(1) <= data_in;
+				end if;
+				if (counter=DELAY) then
+					counter <= 0;
+					state <= COMM_S3_7;
+				else
+					counter <= counter + 1;
+				end if;		
+
+			WHEN COMM_S3_7 =>
+				data_out <= ship3_y_vector(0);
+				if (counter=(DELAY/2)) then
+					opp_ship3_y_vector(0) <= data_in;
+				end if;
+				if (counter=DELAY) then
+					counter <= 0;
+					state <= COMM_S3_8;
+				else
+					counter <= counter + 1;
+				end if;
+
+			WHEN COMM_S3_8 =>
+				data_out <= ship3_or;
+				if (counter=(DELAY/2)) then
+					opp_ship3_or <= data_in;
+				end if;
+				if (counter=DELAY) then
+					counter <= 0;
+					state <= COMM_S3_9; --are done at this point
+				else
+					counter <= counter + 1;
+				end if;
+
+			WHEN COMM_S3_9 =>
+				data_out <= '1';--idle
+				if (opp_ship3_or='1') then
+					opp_S3_index_1 := opp_ship3_x + 10*opp_ship3_y;
+					opp_S3_index_2 := opp_ship3_x + 10*(opp_ship3_y+1);
+					opp_S3_index_3 := opp_ship3_x + 10*(opp_ship3_y+2);
+				else
+					opp_S3_index_1 := opp_ship3_x + 10*opp_ship3_y;
+					opp_S3_index_2 := opp_ship3_x + 1 + 10*(opp_ship3_y);
+					opp_S3_index_3 := opp_ship3_x + 2 + 10*(opp_ship3_y);
+				end if;
+				state <= PLACE_S4;	
+-------------------------------------------------------S3 end
+	
+			WHEN PLACE_S4 =>
+			
+				if (left_press='1') and (ship4_x>0) then
+						ship4_x := ship4_x - 1;
+						S4_overlap <= '0';
+				end if;				
+
+				if (right_press='1') and ((ship4_x<6 and ship4_or='0') or (ship4_x<9 and ship4_or='1'))then
+						ship4_x := ship4_x + 1;
+						S4_overlap <= '0';
+				end if;	
+
+				if (up_press='1') and (ship4_y>0) then
+						ship4_y := ship4_y - 1;
+						S4_overlap <= '0';
+				end if;	
+
+				if (down_press='1') and ((ship4_y<9 and ship4_or='0') or (ship4_y<6 and ship4_or='1')) then
+						ship4_y := ship4_y + 1;
+						S4_overlap <= '0';
+				end if;
+				
+				if (flip='1') and (ship4_or='1') and (ship4_x<7) then
+						ship4_or<='0';
+						S4_overlap <= '0';
+				end if;
+				
+				if (flip='1') and (ship4_or='0') and (ship4_y<7) then
+						ship4_or<='1';
+						S4_overlap <= '0';
+				end if;
+				
+				if (ship4_or='1') then
+					S4_index_1 := ship4_x + 10*ship4_y;
+					S4_index_2 := ship4_x + 10*(ship4_y+1);
+					S4_index_3 := ship4_x + 10*(ship4_y+2);
+					S4_index_4 := ship4_x + 10*(ship4_y+3);
+					myVGA <= (others => WATER);
+					myVGA(S4_index_1) <= SHIP;
+					myVGA(S4_index_2) <= SHIP;
+					myVGA(S4_index_3) <= SHIP;
+					myVGA(S4_index_4) <= SHIP;
+					myVGA(S3_index_1) <= SHIP;
+					myVGA(S3_index_2) <= SHIP;
+					myVGA(S3_index_3) <= SHIP;
+					myVGA(S2_index_1) <= SHIP;
+					myVGA(S2_index_2) <= SHIP;
+					myVGA(S2_index_3) <= SHIP;
+					myVGA(S1_index_1) <= SHIP;
+					myVGA(S1_index_2) <= SHIP;
+				else
+					S4_index_1 := ship4_x + 10*ship4_y;
+					S4_index_2 := ship4_x + 1 + 10*ship4_y;
+					S4_index_3 := ship4_x + 2 + 10*ship4_y;
+					S4_index_4 := ship4_x + 3 + 10*ship4_y;
+					myVGA <= (others => WATER);
+					myVGA(S4_index_1) <= SHIP;
+					myVGA(S4_index_2) <= SHIP;
+					myVGA(S4_index_3) <= SHIP;
+					myVGA(S4_index_4) <= SHIP;
+					myVGA(S3_index_1) <= SHIP;
+					myVGA(S3_index_2) <= SHIP;
+					myVGA(S3_index_3) <= SHIP;
+					myVGA(S2_index_1) <= SHIP;
+					myVGA(S2_index_2) <= SHIP;
+					myVGA(S2_index_3) <= SHIP;
+					myVGA(S1_index_1) <= SHIP;
+					myVGA(S1_index_2) <= SHIP;
+				end if;
+				
+				if ((S4_index_1=S1_index_1) or (S4_index_1=S1_index_2) or (S4_index_2=S1_index_1) or (S4_index_2=S1_index_2) or (S4_index_3=S1_index_1) or (S4_index_3=S1_index_2) or (S4_index_4=S1_index_1) or (S4_index_4=S1_index_2) or (S4_index_1=S2_index_1) or (S4_index_1=S2_index_2) or (S4_index_1=S2_index_3) or (S4_index_2=S2_index_1) or (S4_index_2=S2_index_2) or (S4_index_2=S2_index_3) or (S4_index_3=S2_index_1) or (S4_index_3=S2_index_2) or (S4_index_3=S2_index_3) or (S4_index_4=S2_index_1) or (S4_index_4=S2_index_2) or (S4_index_4=S2_index_3) or (S4_index_1=S3_index_1) or (S4_index_1=S3_index_2) or (S4_index_1=S3_index_3) or (S4_index_2=S3_index_1) or (S3_index_2=S3_index_2) or (S4_index_2=S3_index_3) or (S4_index_3=S3_index_1) or (S4_index_3=S3_index_2) or (S4_index_3=S3_index_3) or (S4_index_4=S3_index_1) or (S4_index_4=S3_index_2) or (S4_index_4=S3_index_3)) then
+					S4_overlap <= '1';
+					--myVGA(S1_index_1) <= SHIP;	--point of this?
+					--myVGA(S1_index_2) <= SHIP;	--point of this?
+					myVGA(S4_index_1) <= OVERLAP;
+					myVGA(S4_index_2) <= OVERLAP;
+					myVGA(S4_index_3) <= OVERLAP;
+					myVGA(S4_index_4) <= OVERLAP;
+				end if;
+				----ELSE -> SHIP, SHIP, SHIP   //take from above and bring here (though 2 ifs?)
+				--	
+				--S2_index := ship2_x + 10*ship2_y;
+	--			
+	--			if ((ship2_or='1') and (ship1_or='1') and (((ship2_x + 10*ship2_y)=(ship1_x + 10*(ship1_y+1))) or ((ship2_x + 10*ship2_y)=(ship1_x + 10*ship1_y)) or ((ship2_x + 10*(ship2_y+1))=(ship1_x + 10*(ship1_y+1))) or ((ship2_x + 10*(ship2_y+1))=(ship1_x + 10*ship1_y)) or ((ship2_x + 10*(ship2_y+2))=(ship1_x + 10*(ship1_y+1))) or ((ship2_x + 10*(ship2_y+2))=(ship1_x + 10*ship1_y)))) then
+	--				--if (((ship2_x + 10*ship2_y)=(ship1_x + 10*(ship1_y+1))) or ((ship2_x + 10*ship2_y)=(ship1_x + 10*ship1_y)))
+	--				--myVGA <= (others => WATER);
+	--				myVGA(ship2_x + 10*ship2_y) <= OVERLAP;
+	--				myVGA(ship2_x + 10*(ship2_y+1)) <= OVERLAP;
+	--				myVGA(ship2_x + 10*(ship2_y+2)) <= OVERLAP;
+	--			end if;
+	--			
+	--			if ((ship2_or='0') and (ship1_or='0') and (((ship2_x + 10*ship2_y)=(ship1_x + 1 + 10*(ship1_y))) or ((ship2_x + 10*ship2_y)=(ship1_x + 10*ship1_y)) or ((ship2_x + 1 + 10*(ship2_y))=(ship1_x + 1 + 10*(ship1_y))) or ((ship2_x + 1 + 10*(ship2_y))=(ship1_x + 10*ship1_y)) or ((ship2_x + 2 + 10*(ship2_y))=(ship1_x + 1 + 10*(ship1_y))) or ((ship2_x + 2 + 10*(ship2_y))=(ship1_x + 10*ship1_y)))) then
+	--				--if (((ship2_x + 10*ship2_y)=(ship1_x + 10*(ship1_y+1))) or ((ship2_x + 10*ship2_y)=(ship1_x + 10*ship1_y)))
+	--				--myVGA <= (others => WATER);
+	--				myVGA(ship2_x + 10*ship2_y) <= OVERLAP;
+	--				myVGA(ship2_x + 1 + 10*(ship2_y)) <= OVERLAP;
+	--				myVGA(ship2_x + 2 + 10*(ship2_y)) <= OVERLAP;
+	---			end if;
+	--			
+	--			if ((ship2_or='1') and (((ship2_x + 10*ship2_y)=(ship1_x + 10*(ship1_y+1))) or ((ship2_x + 10*ship2_y)=(ship1_x + 10*ship1_y)))) then
+	--				myVGA(ship2_x + 10*ship2_y) <= SHIP;
+	--				myVGA(ship2_x + 10*(ship2_y+1)) <= SHIP;
+	--			else
+	--				--myVGA <= (others => WATER);
+	--				myVGA(ship2_x + 10*ship2_y) <= SHIP;
+	--				myVGA(ship2_x + 1 + 10*ship2_y) <= SHIP;		
+	--			end if;			
+
+				if (enter_press='1' and S4_overlap='0') then
+					data_out	<= '0';
+					state		<= PRE_COMM_S4;
+					saved1 <= myVGA(cursor_x + 10*cursor_y);
+				end if;
+	
+			
+			WHEN PRE_COMM_S4 =>
+				if (data_in='0') then
+					phase <= 1;
+				end if;
+				if (phase=1) then
+					counter <= counter + 1;
+				end if;
+				if (counter=(DELAY/4)) then
+					data_out <= ship4_x_vector(3);
+				end if;
+				if (counter=(DELAY/2)) then
+					opp_ship4_x_vector(3) <= data_in;
+				end if;
+				
+				if (counter=DELAY) then
+					state <= COMM_S4_1;
+					counter <= 0;
+					phase <= 0;
+				end if;
+				
+			WHEN COMM_S4_1 =>
+				data_out <= ship4_x_vector(2);
+				if (counter=(DELAY/2)) then
+					opp_ship4_x_vector(2) <= data_in;
+				end if;
+				
+				if (counter=DELAY) then
+					counter <= 0;
+					state <= COMM_S4_2;
+				else
+					counter <= counter + 1;
+				end if;
+
+
+			WHEN COMM_S4_2 =>
+				data_out <= ship4_x_vector(1);
+				if (counter=(DELAY/2)) then
+					opp_ship4_x_vector(1) <= data_in;
+				end if;
+				
+				if (counter=DELAY) then
+					counter <= 0;
+					state <= COMM_S4_3;
+				else
+					counter <= counter + 1;
+				end if;
+				
+				
+			WHEN COMM_S4_3 =>
+				data_out <= ship4_x_vector(0);
+				if (counter=(DELAY/2)) then
+					opp_ship4_x_vector(0) <= data_in;
+				end if;
+				
+				if (counter=DELAY) then
+					counter <= 0;
+					state <= COMM_S4_4;
+				else
+					counter <= counter + 1;
+				end if;
+
+			WHEN COMM_S4_4 =>
+				data_out <= ship4_y_vector(3);
+				if (counter=(DELAY/2)) then
+					opp_ship4_y_vector(3) <= data_in;
+				end if;
+				if (counter=DELAY) then
+					counter <= 0;
+					state <= COMM_S4_5;
+				else
+					counter <= counter + 1;
+				end if;
+					
+			WHEN COMM_S4_5 =>
+				data_out <= ship4_y_vector(2);
+				if (counter=(DELAY/2)) then
+					opp_ship4_y_vector(2) <= data_in;
+				end if;
+				if (counter=DELAY) then
+					counter <= 0;
+					state <= COMM_S4_6;
+				else
+					counter <= counter + 1;
+				end if;			
+
+			WHEN COMM_S4_6 =>
+				data_out <= ship4_y_vector(1);
+				if (counter=(DELAY/2)) then
+					opp_ship4_y_vector(1) <= data_in;
+				end if;
+				if (counter=DELAY) then
+					counter <= 0;
+					state <= COMM_S4_7;
+				else
+					counter <= counter + 1;
+				end if;		
+
+			WHEN COMM_S4_7 =>
+				data_out <= ship4_y_vector(0);
+				if (counter=(DELAY/2)) then
+					opp_ship4_y_vector(0) <= data_in;
+				end if;
+				if (counter=DELAY) then
+					counter <= 0;
+					state <= COMM_S4_8;
+				else
+					counter <= counter + 1;
+				end if;
+
+			WHEN COMM_S4_8 =>
+				data_out <= ship4_or;
+				if (counter=(DELAY/2)) then
+					opp_ship4_or <= data_in;
+				end if;
+				if (counter=DELAY) then
+					counter <= 0;
+					state <= COMM_S4_9; --are done at this point
+				else
+					counter <= counter + 1;
+				end if;
+
+			WHEN COMM_S4_9 =>
+				data_out <= '1';--idle
+				if (opp_ship4_or='1') then
+					opp_S4_index_1 := opp_ship4_x + 10*opp_ship4_y;
+					opp_S4_index_2 := opp_ship4_x + 10*(opp_ship4_y+1);
+					opp_S4_index_3 := opp_ship4_x + 10*(opp_ship4_y+2);
+					opp_S4_index_4 := opp_ship4_x + 10*(opp_ship4_y+3);
+				else
+					opp_S4_index_1 := opp_ship4_x + 10*opp_ship4_y;
+					opp_S4_index_2 := opp_ship4_x + 1 + 10*(opp_ship4_y);
+					opp_S4_index_3 := opp_ship4_x + 2 + 10*(opp_ship4_y);
+					opp_S4_index_4 := opp_ship4_x + 3 + 10*(opp_ship4_y);
+				end if;
+				state <= PLACE_S5;
+	------------------
+				WHEN PLACE_S5 =>
+			
+				if (left_press='1') and (ship5_x>0) then
+						ship5_x := ship5_x - 1;
+						S5_overlap <= '0';
+				end if;				
+
+				if (right_press='1') and ((ship5_x<5 and ship5_or='0') or (ship5_x<9 and ship5_or='1'))then
+						ship5_x := ship5_x + 1;
+						S5_overlap <= '0';
+				end if;	
+
+				if (up_press='1') and (ship5_y>0) then
+						ship5_y := ship5_y - 1;
+						S5_overlap <= '0';
+				end if;	
+
+				if (down_press='1') and ((ship5_y<9 and ship5_or='0') or (ship5_y<5 and ship5_or='1')) then
+						ship5_y := ship5_y + 1;
+						S5_overlap <= '0';
+				end if;
+				
+				if (flip='1') and (ship5_or='1') and (ship5_x<6) then
+						ship5_or<='0';
+						S5_overlap <= '0';
+				end if;
+				
+				if (flip='1') and (ship5_or='0') and (ship5_y<7) then
+						ship5_or<='1';
+						S5_overlap <= '0';
+				end if;
+				
+				if (ship5_or='1') then
+					S5_index_1 := ship5_x + 10*ship5_y;
+					S5_index_2 := ship5_x + 10*(ship5_y+1);
+					S5_index_3 := ship5_x + 10*(ship5_y+2);
+					S5_index_4 := ship5_x + 10*(ship5_y+3);
+					S5_index_5 := ship5_x + 10*(ship5_y+4);
+					myVGA <= (others => WATER);
+					myVGA(S5_index_1) <= SHIP;
+					myVGA(S5_index_2) <= SHIP;
+					myVGA(S5_index_3) <= SHIP;
+					myVGA(S5_index_4) <= SHIP;
+					myVGA(S5_index_5) <= SHIP;
+					myVGA(S4_index_1) <= SHIP;
+					myVGA(S4_index_2) <= SHIP;
+					myVGA(S4_index_3) <= SHIP;
+					myVGA(S4_index_4) <= SHIP;
+					myVGA(S3_index_1) <= SHIP;
+					myVGA(S3_index_2) <= SHIP;
+					myVGA(S3_index_3) <= SHIP;
+					myVGA(S2_index_1) <= SHIP;
+					myVGA(S2_index_2) <= SHIP;
+					myVGA(S2_index_3) <= SHIP;
+					myVGA(S1_index_1) <= SHIP;
+					myVGA(S1_index_2) <= SHIP;
+				else
+					S5_index_1 := ship5_x + 10*ship5_y;
+					S5_index_2 := ship5_x + 1 + 10*ship5_y;
+					S5_index_3 := ship5_x + 2 + 10*ship5_y;
+					S5_index_4 := ship5_x + 3 + 10*ship5_y;
+					S5_index_5 := ship5_x + 4 + 10*ship5_y;
+					myVGA <= (others => WATER);
+					myVGA(S5_index_1) <= SHIP;		--move outside of if (same as before)
+					myVGA(S5_index_2) <= SHIP;
+					myVGA(S5_index_3) <= SHIP;
+					myVGA(S5_index_4) <= SHIP;
+					myVGA(S5_index_5) <= SHIP;
+					myVGA(S4_index_1) <= SHIP;
+					myVGA(S4_index_2) <= SHIP;
+					myVGA(S4_index_3) <= SHIP;
+					myVGA(S4_index_4) <= SHIP;
+					myVGA(S3_index_1) <= SHIP;
+					myVGA(S3_index_2) <= SHIP;
+					myVGA(S3_index_3) <= SHIP;
+					myVGA(S2_index_1) <= SHIP;
+					myVGA(S2_index_2) <= SHIP;
+					myVGA(S2_index_3) <= SHIP;
+					myVGA(S1_index_1) <= SHIP;
+					myVGA(S1_index_2) <= SHIP;
+				end if;
+				
+				if ((S5_index_1=S1_index_1) or (S5_index_1=S1_index_2) or (S5_index_2=S1_index_1) or (S5_index_2=S1_index_2) or (S5_index_3=S1_index_1) or (S5_index_3=S1_index_2) or (S5_index_4=S1_index_1) or (S5_index_4=S1_index_2) or (S5_index_5=S1_index_1) or (S5_index_5=S1_index_2) or (S5_index_1=S2_index_1) or (S5_index_1=S2_index_2) or (S5_index_1=S2_index_3) or (S5_index_2=S2_index_1) or (S5_index_2=S2_index_2) or (S5_index_2=S2_index_3) or (S5_index_3=S2_index_1) or (S5_index_3=S2_index_2) or (S5_index_3=S2_index_3) or (S5_index_4=S2_index_1) or (S5_index_4=S2_index_2) or (S5_index_4=S2_index_3) or (S5_index_5=S2_index_1) or (S5_index_5=S2_index_2) or (S5_index_5=S2_index_3) or (S5_index_1=S3_index_1) or (S5_index_1=S3_index_2) or (S5_index_1=S3_index_3) or (S5_index_2=S3_index_1) or (S5_index_2=S3_index_2) or (S5_index_2=S3_index_3) or (S5_index_3=S3_index_1) or (S5_index_3=S3_index_2) or (S5_index_3=S3_index_3) or (S5_index_4=S3_index_1) or (S5_index_4=S3_index_2) or (S5_index_4=S3_index_3) or (S5_index_5=S3_index_1) or (S5_index_5=S3_index_2) or (S5_index_5=S3_index_3) or (S5_index_1=S4_index_1) or (S5_index_1=S4_index_2) or (S5_index_1=S4_index_3) or (S5_index_1=S4_index_4) or (S5_index_2=S4_index_1) or (S5_index_2=S4_index_2) or (S5_index_2=S4_index_3) or (S5_index_2=S4_index_4) or (S5_index_3=S4_index_1) or (S5_index_3=S4_index_2) or (S5_index_3=S4_index_3) or (S5_index_3=S4_index_4) or (S5_index_4=S4_index_1) or (S5_index_4=S4_index_2) or (S5_index_4=S4_index_3) or (S5_index_4=S4_index_4) or (S5_index_5=S4_index_1) or (S5_index_5=S4_index_2) or (S5_index_5=S4_index_3) or (S5_index_5=S4_index_4)) then
+					S5_overlap <= '1';
+					--myVGA(S1_index_1) <= SHIP;	--point of this?
+					--myVGA(S1_index_2) <= SHIP;	--point of this?
+					myVGA(S5_index_1) <= OVERLAP;
+					myVGA(S5_index_2) <= OVERLAP;
+					myVGA(S5_index_3) <= OVERLAP;
+					myVGA(S5_index_4) <= OVERLAP;
+					myVGA(S5_index_5) <= OVERLAP;
+				end if;
+				----ELSE -> SHIP, SHIP, SHIP   //take from above and bring here (though 2 ifs?)
+				--	
+				--S2_index := ship2_x + 10*ship2_y;
+	--			
+	--			if ((ship2_or='1') and (ship1_or='1') and (((ship2_x + 10*ship2_y)=(ship1_x + 10*(ship1_y+1))) or ((ship2_x + 10*ship2_y)=(ship1_x + 10*ship1_y)) or ((ship2_x + 10*(ship2_y+1))=(ship1_x + 10*(ship1_y+1))) or ((ship2_x + 10*(ship2_y+1))=(ship1_x + 10*ship1_y)) or ((ship2_x + 10*(ship2_y+2))=(ship1_x + 10*(ship1_y+1))) or ((ship2_x + 10*(ship2_y+2))=(ship1_x + 10*ship1_y)))) then
+	--				--if (((ship2_x + 10*ship2_y)=(ship1_x + 10*(ship1_y+1))) or ((ship2_x + 10*ship2_y)=(ship1_x + 10*ship1_y)))
+	--				--myVGA <= (others => WATER);
+	--				myVGA(ship2_x + 10*ship2_y) <= OVERLAP;
+	--				myVGA(ship2_x + 10*(ship2_y+1)) <= OVERLAP;
+	--				myVGA(ship2_x + 10*(ship2_y+2)) <= OVERLAP;
+	--			end if;
+	--			
+	--			if ((ship2_or='0') and (ship1_or='0') and (((ship2_x + 10*ship2_y)=(ship1_x + 1 + 10*(ship1_y))) or ((ship2_x + 10*ship2_y)=(ship1_x + 10*ship1_y)) or ((ship2_x + 1 + 10*(ship2_y))=(ship1_x + 1 + 10*(ship1_y))) or ((ship2_x + 1 + 10*(ship2_y))=(ship1_x + 10*ship1_y)) or ((ship2_x + 2 + 10*(ship2_y))=(ship1_x + 1 + 10*(ship1_y))) or ((ship2_x + 2 + 10*(ship2_y))=(ship1_x + 10*ship1_y)))) then
+	--				--if (((ship2_x + 10*ship2_y)=(ship1_x + 10*(ship1_y+1))) or ((ship2_x + 10*ship2_y)=(ship1_x + 10*ship1_y)))
+	--				--myVGA <= (others => WATER);
+	--				myVGA(ship2_x + 10*ship2_y) <= OVERLAP;
+	--				myVGA(ship2_x + 1 + 10*(ship2_y)) <= OVERLAP;
+	--				myVGA(ship2_x + 2 + 10*(ship2_y)) <= OVERLAP;
+	---			end if;
+	--			
+	--			if ((ship2_or='1') and (((ship2_x + 10*ship2_y)=(ship1_x + 10*(ship1_y+1))) or ((ship2_x + 10*ship2_y)=(ship1_x + 10*ship1_y)))) then
+	--				myVGA(ship2_x + 10*ship2_y) <= SHIP;
+	--				myVGA(ship2_x + 10*(ship2_y+1)) <= SHIP;
+	--			else
+	--				--myVGA <= (others => WATER);
+	--				myVGA(ship2_x + 10*ship2_y) <= SHIP;
+	--				myVGA(ship2_x + 1 + 10*ship2_y) <= SHIP;		
+	--			end if;			
+
+				if (enter_press='1' and S5_overlap='0') then
+					data_out	<= '0';
+					state		<= PRE_COMM_S5;
+					saved1 <= myVGA(cursor_x + 10*cursor_y);
+				end if;
+	
+			
+			WHEN PRE_COMM_S5 =>
+				if (data_in='0') then
+					phase <= 1;
+				end if;
+				if (phase=1) then
+					counter <= counter + 1;
+				end if;
+				if (counter=(DELAY/4)) then
+					data_out <= ship5_x_vector(3);
+				end if;
+				if (counter=(DELAY/2)) then
+					opp_ship5_x_vector(3) <= data_in;
+				end if;
+				
+				if (counter=DELAY) then
+					state <= COMM_S5_1;
+					counter <= 0;
+					phase <= 0;
+				end if;
+				
+			WHEN COMM_S5_1 =>
+				data_out <= ship5_x_vector(2);
+				if (counter=(DELAY/2)) then
+					opp_ship5_x_vector(2) <= data_in;
+				end if;
+				
+				if (counter=DELAY) then
+					counter <= 0;
+					state <= COMM_S5_2;
+				else
+					counter <= counter + 1;
+				end if;
+
+
+			WHEN COMM_S5_2 =>
+				data_out <= ship5_x_vector(1);
+				if (counter=(DELAY/2)) then
+					opp_ship5_x_vector(1) <= data_in;
+				end if;
+				
+				if (counter=DELAY) then
+					counter <= 0;
+					state <= COMM_S5_3;
+				else
+					counter <= counter + 1;
+				end if;
+				
+				
+			WHEN COMM_S5_3 =>
+				data_out <= ship5_x_vector(0);
+				if (counter=(DELAY/2)) then
+					opp_ship5_x_vector(0) <= data_in;
+				end if;
+				
+				if (counter=DELAY) then
+					counter <= 0;
+					state <= COMM_S5_4;
+				else
+					counter <= counter + 1;
+				end if;
+
+			WHEN COMM_S5_4 =>
+				data_out <= ship5_y_vector(3);
+				if (counter=(DELAY/2)) then
+					opp_ship5_y_vector(3) <= data_in;
+				end if;
+				if (counter=DELAY) then
+					counter <= 0;
+					state <= COMM_S5_5;
+				else
+					counter <= counter + 1;
+				end if;
+					
+			WHEN COMM_S5_5 =>
+				data_out <= ship5_y_vector(2);
+				if (counter=(DELAY/2)) then
+					opp_ship5_y_vector(2) <= data_in;
+				end if;
+				if (counter=DELAY) then
+					counter <= 0;
+					state <= COMM_S5_6;
+				else
+					counter <= counter + 1;
+				end if;			
+
+			WHEN COMM_S5_6 =>
+				data_out <= ship5_y_vector(1);
+				if (counter=(DELAY/2)) then
+					opp_ship5_y_vector(1) <= data_in;
+				end if;
+				if (counter=DELAY) then
+					counter <= 0;
+					state <= COMM_S5_7;
+				else
+					counter <= counter + 1;
+				end if;		
+
+			WHEN COMM_S5_7 =>
+				data_out <= ship5_y_vector(0);
+				if (counter=(DELAY/2)) then
+					opp_ship5_y_vector(0) <= data_in;
+				end if;
+				if (counter=DELAY) then
+					counter <= 0;
+					state <= COMM_S5_8;
+				else
+					counter <= counter + 1;
+				end if;
+
+			WHEN COMM_S5_8 =>
+				data_out <= ship5_or;
+				if (counter=(DELAY/2)) then
+					opp_ship5_or <= data_in;
+				end if;
+				if (counter=DELAY) then
+					counter <= 0;
+					state <= COMM_S5_9; --are done at this point
+				else
+					counter <= counter + 1;
+				end if;
+
+			WHEN COMM_S5_9 =>
+				data_out <= '1';--idle
+				if (opp_ship5_or='1') then
+					opp_S5_index_1 := opp_ship5_x + 10*opp_ship5_y;
+					opp_S5_index_2 := opp_ship5_x + 10*(opp_ship5_y+1);
+					opp_S5_index_3 := opp_ship5_x + 10*(opp_ship5_y+2);
+					opp_S5_index_4 := opp_ship5_x + 10*(opp_ship5_y+3);
+					opp_S5_index_5 := opp_ship5_x + 10*(opp_ship5_y+4);
+				else
+					opp_S5_index_1 := opp_ship5_x + 10*opp_ship5_y;
+					opp_S5_index_2 := opp_ship5_x + 1 + 10*(opp_ship5_y);
+					opp_S5_index_3 := opp_ship5_x + 2 + 10*(opp_ship5_y);
+					opp_S5_index_4 := opp_ship5_x + 3 + 10*(opp_ship5_y);
+					opp_S5_index_5 := opp_ship5_x + 4 + 10*(opp_ship5_y);
+				end if;
+				state <= SHOT_SELECT;
+	
+	
+	------------------
 	
 			WHEN SHOT_SELECT =>
 				cursor_index := cursor_x + 10*cursor_y;
-				if (myHits=5 or oppHits=5) then
+				if (myHits=17 or oppHits=17) then
 					state <= GAME_DONE;
 				else
 					oppVGA(cursor_index) <= CURSOR;
 				end if;
 				
-				if(myHits<5 and oppHits<5 and saved1/=WATER) then
+				if(myHits<17 and oppHits<17 and saved1/=WATER) then
 					oppVGA(cursor_index) <= OVERLAP;
 				end if;
 				
@@ -728,7 +1522,7 @@ game: process(init,data_in,ship1_or,clk,done) is
 				end if;
 					
 				if (enter_press='1' and saved1=WATER) then
-					if (cursor_index=opp_S1_index_1) or (cursor_index=opp_S1_index_2) or (cursor_index=opp_S2_index_1) or (cursor_index=opp_S2_index_2) or (cursor_index=opp_S2_index_3) then
+					if (cursor_index=opp_S1_index_1) or (cursor_index=opp_S1_index_2) or (cursor_index=opp_S2_index_1) or (cursor_index=opp_S2_index_2) or (cursor_index=opp_S2_index_3) or (cursor_index=opp_S3_index_1) or (cursor_index=opp_S3_index_2) or (cursor_index=opp_S3_index_3) or (cursor_index=opp_S4_index_1) or (cursor_index=opp_S4_index_2) or (cursor_index=opp_S4_index_3) or (cursor_index=opp_S4_index_4) or (cursor_index=opp_S5_index_1) or (cursor_index=opp_S5_index_2) or (cursor_index=opp_S5_index_3) or (cursor_index=opp_S5_index_4) or (cursor_index=opp_S5_index_5) then
 						saved1 <= HIT;
 						oppVGA(cursor_index) <= HIT;
 						myHits <= myHits + 1;
@@ -873,13 +1667,13 @@ game: process(init,data_in,ship1_or,clk,done) is
 			WHEN GAME_DONE =>
 				game_over <= '1';
 				test11 <= '1';
-				if (myHits=5 and oppHits<5) then
+				if (myHits=17 and oppHits<17) then
 					winner <= '0';	--I win
 				end if;
-				if (myHits<5 and oppHits=5) then
+				if (myHits<17 and oppHits=17) then
 					winner <= '1';	--opponent wins
 				end if;
-				if (myHits=5 and oppHits=5) then
+				if (myHits=17 and oppHits=17) then
 					tie <= '1';
 				end if;
 			
@@ -895,7 +1689,18 @@ game: process(init,data_in,ship1_or,clk,done) is
 	 ship2_y_vector <= std_logic_vector(to_unsigned(ship2_y,4));
 	 opp_ship2_x := to_integer(unsigned(opp_ship2_x_vector));
 	 opp_ship2_y := to_integer(unsigned(opp_ship2_y_vector));
-
+	 ship3_x_vector <= std_logic_vector(to_unsigned(ship3_x,4));
+	 ship3_y_vector <= std_logic_vector(to_unsigned(ship3_y,4));
+	 opp_ship3_x := to_integer(unsigned(opp_ship3_x_vector));
+	 opp_ship3_y := to_integer(unsigned(opp_ship3_y_vector));
+	 ship4_x_vector <= std_logic_vector(to_unsigned(ship4_x,4));
+	 ship4_y_vector <= std_logic_vector(to_unsigned(ship4_y,4));
+	 opp_ship4_x := to_integer(unsigned(opp_ship4_x_vector));
+	 opp_ship4_y := to_integer(unsigned(opp_ship4_y_vector));
+	 ship5_x_vector <= std_logic_vector(to_unsigned(ship5_x,4));
+	 ship5_y_vector <= std_logic_vector(to_unsigned(ship5_y,4));
+	 opp_ship5_x := to_integer(unsigned(opp_ship5_x_vector));
+	 opp_ship5_y := to_integer(unsigned(opp_ship5_y_vector));
 	 
 	 cursor_x_vector<= std_logic_vector(to_unsigned(cursor_x,4));
 	 cursor_y_vector<= std_logic_vector(to_unsigned(cursor_y,4));
@@ -913,53 +1718,3 @@ end process game;
 
 
 end architecture behavioral;
-
-
-
-
------
-
---if (rising_edge(clk)) then
---	if (press='0') then
---		counter <= 0;
---		delay_cnt <= 0;
---	end if;
---	
---	if (delay_cnt=DELAY_SND) then
---		delay_cnt <= 0;
---		counter <= counter + 1;
---		if (counter=0) then
---			snd <= VALUE0;
---		end if;
---		--...........--
---		if (counter=29999) then
---			snd <= VALUE29999;
---		end if;
---		
---	else
---		delay_cnt <= delay_cnt+1;
---	end if;
---
---end if;
---
-----in verilog:
---
---always @(posedge CLOCK_50)
---	if(press == 0) begin
---		counter <= 0;
---		delay_cnt <= 0;
---	end
---	if (delay_cnt==DELAY_SND) then
---		case counter
---			0: snd <= VALUE0;
---			1: snd <= VALUE1;
---			2: snd <= VALUE2;
---			--...
---			29999: snd <= VALUE29999;
---			default: snd <= 0;
---		endcase;
---		
---		delay_cnt <= 0;
---		counter <= counter + 1;
---		
---	end else delay_cnt <= delay_cnt + 1;
