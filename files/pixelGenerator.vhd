@@ -15,7 +15,8 @@ entity pixelGenerator is
 			placing_on															: in std_logic;
 			-- 1 for on
 			-- 0 for off
-			placeShip_num														: in std_logic_vector(2 downto 0)
+			placeShip_num														: in std_logic_vector(2 downto 0);
+			legend_on															: in std_logic
 		);
 end entity pixelGenerator;
 
@@ -84,6 +85,26 @@ signal char_addr_i : std_logic_vector(6 downto 0);
 signal row_addr_i : std_logic_vector(3 downto 0);
 signal bit_addr_i : std_logic_vector(2 downto 0);
 signal illegal_on : std_logic;
+
+-- signals for illegal legend
+signal char_addr_s : std_logic_vector(6 downto 0);
+signal row_addr_s : std_logic_vector(3 downto 0);
+signal bit_addr_s : std_logic_vector(2 downto 0);
+signal ship_on : std_logic;
+
+-- signals for illegal legend
+signal char_addr_h : std_logic_vector(6 downto 0);
+signal row_addr_h : std_logic_vector(3 downto 0);
+signal bit_addr_h : std_logic_vector(2 downto 0);
+signal hit_on : std_logic;
+
+-- signals for illegal legend
+signal char_addr_m : std_logic_vector(6 downto 0);
+signal row_addr_m : std_logic_vector(3 downto 0);
+signal bit_addr_m : std_logic_vector(2 downto 0);
+signal miss_on : std_logic;
+
+
 
 component fontROM is
 	generic(
@@ -192,7 +213,7 @@ with pixel_column(7 downto 4) select
 
 --------------------------------------------------------------------------------------------
 
-illegal_on <= '1' when unsigned(pixel_row)(9 downto 5) = 14 and 
+illegal_on <= '1' when unsigned(pixel_row)(9 downto 5) = 13 and 
 								unsigned(pixel_column)(9 downto 4) < 16 else
 					'0';
 row_addr_i <= std_logic_vector(pixel_row(4 downto 1));
@@ -208,7 +229,54 @@ with pixel_column(7 downto 4) select
 		"1101100" when "0110", -- l
 		"0000000" when others; 
 		
+--------------------------------------------------------------------------------------------
 
+
+
+ship_on <= '1' when unsigned(pixel_row)(9 downto 5) = 13 and 
+								unsigned(pixel_column)(9 downto 4) > 15 and  
+								unsigned(pixel_column)(9 downto 4) < 32 else
+					'0';
+row_addr_s <= std_logic_vector(pixel_row(4 downto 1));
+bit_addr_s <= std_logic_vector(pixel_column(3 downto 1));
+with pixel_column(7 downto 4) select
+	char_addr_s <=
+		"1010011" when "0000", -- S
+		"1101000" when "0001", -- h
+		"1101001" when "0010", -- i
+		"1110000" when "0011", -- p
+		"0000000" when others; 
+		
+--------------------------------------------------------------------------------------------
+	
+hit_on <= '1' when unsigned(pixel_row)(9 downto 5) = 14 and  
+								unsigned(pixel_column)(9 downto 4) < 16 else
+					'0';
+row_addr_h <= std_logic_vector(pixel_row(4 downto 1));
+bit_addr_h <= std_logic_vector(pixel_column(3 downto 1));
+with pixel_column(7 downto 4) select
+	char_addr_h <=
+		"1001000" when "0000", -- H
+		"1101001" when "0001", -- i
+		"1110100" when "0010", -- t
+		"0000000" when others; 
+		
+--------------------------------------------------------------------------------------------
+
+miss_on <= '1' when unsigned(pixel_row)(9 downto 5) = 14 and 
+								unsigned(pixel_column)(9 downto 4) > 15 and  
+								unsigned(pixel_column)(9 downto 4) < 32 else
+					'0';
+row_addr_m <= std_logic_vector(pixel_row(4 downto 1));
+bit_addr_m <= std_logic_vector(pixel_column(3 downto 1));
+with pixel_column(7 downto 4) select
+	char_addr_m <=
+		"1001101" when "0000", -- M
+		"1101001" when "0001", -- i
+		"1110011" when "0010", -- s
+		"1110011" when "0011", -- s
+		"0000000" when others;
+	
 --------------------------------------------------------------------------------------------
 	
 	red_out <= color(29 downto 20);
@@ -321,15 +389,45 @@ with pixel_column(7 downto 4) select
 		end if;
 	end if;
 	
-	if illegal_on = '1' then
-		char_addr <= char_addr_i;
-		row_addr <= row_addr_i;
-		bit_addr <= bit_addr_i;
-		if font_bit = '1' then
-			colorAddress <= color_magenta;
+	if legend_on = '1' then
+		if illegal_on = '1' then
+			char_addr <= char_addr_i;
+			row_addr <= row_addr_i;
+			bit_addr <= bit_addr_i;
+			if font_bit = '1' then
+				colorAddress <= color_magenta;
+			end if;
+		end if;
+
+		if ship_on = '1' then
+			char_addr <= char_addr_s;
+			row_addr <= row_addr_s;
+			bit_addr <= bit_addr_s;
+			if font_bit = '1' then
+				colorAddress <= color_black;
+			end if;
+		end if;
+		
+		if hit_on = '1' then
+			char_addr <= char_addr_h;
+			row_addr <= row_addr_h;
+			bit_addr <= bit_addr_h;
+			if font_bit = '1' then
+				colorAddress <= color_red;
+			end if;
+		end if;
+
+		if miss_on = '1' then
+			char_addr <= char_addr_m;
+			row_addr <= row_addr_m;
+			bit_addr <= bit_addr_m;
+			if font_bit = '1' then
+				colorAddress <= color_cyan;
+			end if;
 		end if;
 	end if;
-		
+
+	
 end process pixelDraw;	
 
 --------------------------------------------------------------------------------------------

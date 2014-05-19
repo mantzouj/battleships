@@ -13,7 +13,8 @@ entity VGA_top_level is
 			myVGA															: in VGA_vector;
 			oppVGA														: in VGA_vector;
 			placing_on													: in std_logic;
-			placeShip_num												: in std_logic_vector(2 downto 0)
+			placeShip_num												: in std_logic_vector(2 downto 0);
+			legend_on													: in std_logic
 		);
 end entity VGA_top_level;
 
@@ -28,7 +29,8 @@ component pixelGenerator is
 			oppVGA																			: in VGA_vector;
 			game_over, winner, tie														: in std_logic;
 			placing_on																		: in std_logic;
-			placeShip_num																	: in std_logic_vector(2 downto 0)
+			placeShip_num																	: in std_logic_vector(2 downto 0);
+			legend_on																		: in std_logic
 		);
 end component pixelGenerator;
 
@@ -52,7 +54,7 @@ begin
 --------------------------------------------------------------------------------------------
 
 	videoGen : pixelGenerator
-		port map(CLOCK_50, VGA_clk_int, video_on_int, eof, pixel_row_int, pixel_column_int, VGA_RED, VGA_GREEN, VGA_BLUE, myVGA, oppVGA, game_over, winner, tie, placing_on, placeShip_num);
+		port map(CLOCK_50, VGA_clk_int, video_on_int, eof, pixel_row_int, pixel_column_int, VGA_RED, VGA_GREEN, VGA_BLUE, myVGA, oppVGA, game_over, winner, tie, placing_on, placeShip_num, legend_on);
 
 --------------------------------------------------------------------------------------------
 --This section should not be modified in your design.  This section handles the VGA timing signals
