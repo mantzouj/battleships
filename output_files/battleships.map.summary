@@ -1,14 +1,14 @@
-Analysis & Synthesis Status : Successful - Mon May 19 19:20:24 2014
-Quartus II 32-bit Version : 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition
+Analysis & Synthesis Status : Successful - Mon May 19 19:53:26 2014
+Quartus II 64-Bit Version : 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition
 Revision Name : battleships
 Top-level Entity Name : battleships
 Family : Cyclone II
-Total logic elements : 470
-    Total combinational functions : 449
-    Dedicated logic registers : 46
-Total registers : 46
+Total logic elements : 18,380
+    Total combinational functions : 18,231
+    Dedicated logic registers : 2,193
+Total registers : 2193
 Total pins : 129
 Total virtual pins : 0
-Total memory bits : 16,624
+Total memory bits : 199,408
 Embedded Multiplier 9-bit elements : 0
-Total PLLs : 0
+Total PLLs : 1

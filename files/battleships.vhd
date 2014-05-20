@@ -242,7 +242,7 @@ game: process(init,data_in,ship1_or,clk,done) is
 		cursor_x	:= 4;	cursor_y := 4;	
 		
 		placing_on <= '1'; --place ship on
-		placeShip_num <= "001"; --place ship one 
+		
 		legend_on <= '1';-- legend on
 		
 		myVGA 	<= (others => WATER); --potentially unecessary
@@ -307,32 +307,34 @@ game: process(init,data_in,ship1_or,clk,done) is
 		
 		case state is
 			WHEN PLACE_S1 =>
-				sound_explosion <= '0';
+			placeShip_num <= "001"; --place ship one 
 				if ((left_press='1') and (ship1_x>0)) then
 						ship1_x := ship1_x - 1;
-						select_s <= '1';
-						sound_explosion <= '1';
+						--placeShip_num <= "001"; --place ship one 
 				end if;				
 
 				if ((right_press='1') and ((ship1_x<8 and ship1_or='0') or (ship1_x<9 and ship1_or='1'))) then
 						ship1_x := ship1_x + 1;
-						select_s <= '0';
-						sound_explosion <= '1';
+						--placeShip_num <= "010"; --place ship one 
 				end if;	
 
 				if (up_press='1') and (ship1_y>0) then
 						ship1_y := ship1_y - 1;
+						--placeShip_num <= "011"; --place ship one 
 				end if;	
 
 				if (down_press='1') and ((ship1_y<9 and ship1_or='0') or (ship1_y<8 and ship1_or='1')) then
 						ship1_y := ship1_y + 1;
+						--placeShip_num <= "100"; --place ship one 
 				end if;
 				
 				if (flip='1') and (ship1_or='1') and (ship1_x<9) then			--potentially make ship1_or a variable
 						ship1_or<='0';
+						--placeShip_num <= "101"; --place ship one 
 				end if;
 				if (flip='1') and (ship1_or='0') and (ship1_y<9) then
 						ship1_or<='1';
+						--placeShip_num <= "101"; --place ship one 
 				end if;
 				
 				if (ship1_or='1') then
@@ -506,7 +508,7 @@ game: process(init,data_in,ship1_or,clk,done) is
 				state <= PRE_COMM_S2;
 			
 			WHEN PLACE_S2 =>
-			
+			placeShip_num <= "010"; --place ship one 
 				if (left_press='1') and (ship2_x>0) then
 						ship2_x := ship2_x - 1;
 						S2_overlap <= '0';
@@ -723,7 +725,7 @@ game: process(init,data_in,ship1_or,clk,done) is
 
 	
 			WHEN PLACE_S3 =>
-			
+			placeShip_num <= "011"; --place ship one 
 				if (left_press='1') and (ship3_x>0) then
 						ship3_x := ship3_x - 1;
 						S3_overlap <= '0';
@@ -949,7 +951,7 @@ game: process(init,data_in,ship1_or,clk,done) is
 -------------------------------------------------------S3 end
 	
 			WHEN PLACE_S4 =>
-			
+				placeShip_num <= "100"; --place ship one 
 				if (left_press='1') and (ship4_x>0) then
 						ship4_x := ship4_x - 1;
 						S4_overlap <= '0';
@@ -1185,7 +1187,7 @@ game: process(init,data_in,ship1_or,clk,done) is
 				state <= PRE_COMM_S5;	
 	------------------
 				WHEN PLACE_S5 =>
-			
+			placeShip_num <= "101"; --place ship one 
 				if (left_press='1') and (ship5_x>0) then
 						ship5_x := ship5_x - 1;
 						S5_overlap <= '0';
@@ -1595,7 +1597,7 @@ game: process(init,data_in,ship1_or,clk,done) is
 				if (myVGA(opp_cursor_x + 10*opp_cursor_y)=SHIP) then
 					myVGA(opp_cursor_x + 10*opp_cursor_y)<=HIT;
 					oppHits <= oppHits + 1;
-					sound_explosion <= '1';
+					--sound_explosion <= '1';
 				else
 					myVGA(opp_cursor_x + 10*opp_cursor_y)<=MISS;
 				end if;
