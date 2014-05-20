@@ -127,7 +127,7 @@ writeEnableA <= '0';
 
 
 
-gameOverW_on <= '1' when unsigned(pixel_row)(9 downto 5) = 5 and
+gameOverW_on <= '1' when unsigned(pixel_row)(9 downto 5) = 1 and
 								unsigned(pixel_column)(9 downto 4) < 32 and 
 								unsigned(pixel_column)(9 downto 4) > 15 else
 					'0';
@@ -142,11 +142,11 @@ with pixel_column(7 downto 4) select
 		"1110111" when "0100", -- w
 		"1101001" when "0101", -- i
 		"1101110" when "0110", -- n
-		"0010001" when "0111", -- !
+		"0100001" when "0111", -- !
 		"0000000" when others; 
 		
 --------------------------------------------------------------------------------------------
-gameOverL_on <= '1' when unsigned(pixel_row)(9 downto 5) = 5 and
+gameOverL_on <= '1' when unsigned(pixel_row)(9 downto 5) = 1 and
 								unsigned(pixel_column)(9 downto 4) < 32 and 
 								unsigned(pixel_column)(9 downto 4) > 15 else
 					'0';
@@ -162,11 +162,11 @@ with pixel_column(7 downto 4) select
 		"1101111" when "0101", -- o
 		"1110011" when "0110", -- s
 		"1100101" when "0111", -- e
-		"0010001" when "1000", -- !
+		"0100001" when "1000", -- !
 		"0000000" when others; 
 		
 --------------------------------------------------------------------------------------------
-gameOverT_on <= '1' when unsigned(pixel_row)(9 downto 5) = 5 and
+gameOverT_on <= '1' when unsigned(pixel_row)(9 downto 5) = 1 and
 								unsigned(pixel_column)(9 downto 4) < 32 and 
 								unsigned(pixel_column)(9 downto 4) > 15 else
 					'0';
@@ -174,17 +174,17 @@ row_addr_t <= std_logic_vector(pixel_row(4 downto 1));
 bit_addr_t <= std_logic_vector(pixel_column(3 downto 1));
 with pixel_column(7 downto 4) select
 	char_addr_t <=
-		"1000111" when "0000", -- I
-		"1100001" when "0001", -- t
-		"1101101" when "0010", -- '
-		"1100101" when "0011", -- s
+		"1001001" when "0000", -- I
+		"1110100" when "0001", -- t
+		"0100111" when "0010", -- '
+		"1110011" when "0011", -- s
 		"0000000" when "0100", -- 
-		"1001111" when "0101", -- a
-		"1110110" when "0110", -- 
-		"1100101" when "0111", -- t
-		"1110010" when "1000", -- i
+		"1100001" when "0101", -- a
+		"0000000" when "0110", -- 
+		"1110100" when "0111", -- t
+		"1101001" when "1000", -- i
 		"1100101" when "1001", -- e
-		"0010001" when "1010", -- !
+		"0100001" when "1010", -- !
 		"0000000" when others; 
 		
 --------------------------------------------------------------------------------------------

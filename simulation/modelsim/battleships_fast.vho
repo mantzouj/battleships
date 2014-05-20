@@ -16,7 +16,7 @@
 -- PROGRAM "Quartus II 32-bit"
 -- VERSION "Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition"
 
--- DATE "05/19/2014 12:35:31"
+-- DATE "05/19/2014 19:20:45"
 
 -- 
 -- Device: Altera EP2C35F672C6 Package FBGA672
@@ -262,96 +262,83 @@ SIGNAL \vga_0|videoSync|pixel_clock_int~clkctrl_INCLK_bus\ : std_logic_vector(3 
 SIGNAL \clk~clkctrl_INCLK_bus\ : std_logic_vector(3 DOWNTO 0);
 SIGNAL \vga_0|videoGen|font_unit|ROM_rtl_0|auto_generated|ram_block1a0~portadataout\ : std_logic;
 SIGNAL \vga_0|videoGen|font_unit|ROM_rtl_0|auto_generated|ram_block1a4~portadataout\ : std_logic;
-SIGNAL \vga_0|videoGen|font_unit|ROM_rtl_0|auto_generated|ram_block1a7\ : std_logic;
 SIGNAL \vga_0|videoSync|Add1~10_combout\ : std_logic;
+SIGNAL \vga_0|videoSync|Add1~14_combout\ : std_logic;
 SIGNAL \vga_0|videoSync|Add1~17\ : std_logic;
 SIGNAL \vga_0|videoSync|Add1~18_combout\ : std_logic;
 SIGNAL \vga_0|videoSync|Add0~17\ : std_logic;
 SIGNAL \vga_0|videoSync|Add0~18_combout\ : std_logic;
-SIGNAL \vga_0|videoGen|pixelDraw~10_combout\ : std_logic;
+SIGNAL \vga_0|videoGen|pixelDraw~16_combout\ : std_logic;
+SIGNAL \vga_0|videoGen|pixelDraw~19_combout\ : std_logic;
+SIGNAL \vga_0|videoGen|colorAddress~46_combout\ : std_logic;
+SIGNAL \vga_0|videoGen|LessThan47~1_combout\ : std_logic;
+SIGNAL \vga_0|videoGen|colorAddress~49_combout\ : std_logic;
 SIGNAL \vga_0|videoGen|colorAddress~50_combout\ : std_logic;
-SIGNAL \vga_0|videoGen|LessThan15~1_combout\ : std_logic;
 SIGNAL \vga_0|videoGen|colorAddress~51_combout\ : std_logic;
 SIGNAL \vga_0|videoGen|colorAddress~52_combout\ : std_logic;
-SIGNAL \vga_0|videoGen|LessThan47~1_combout\ : std_logic;
 SIGNAL \vga_0|videoGen|colorAddress~53_combout\ : std_logic;
 SIGNAL \vga_0|videoGen|colorAddress~54_combout\ : std_logic;
 SIGNAL \vga_0|videoGen|colorAddress~55_combout\ : std_logic;
-SIGNAL \vga_0|videoGen|colorAddress~65_combout\ : std_logic;
-SIGNAL \vga_0|videoGen|colorAddress~66_combout\ : std_logic;
-SIGNAL \vga_0|videoGen|colorAddress~73_combout\ : std_logic;
+SIGNAL \vga_0|videoGen|colorAddress~56_combout\ : std_logic;
+SIGNAL \vga_0|videoGen|colorAddress~59_combout\ : std_logic;
+SIGNAL \vga_0|videoGen|colorAddress~60_combout\ : std_logic;
+SIGNAL \vga_0|videoGen|LessThan11~1_combout\ : std_logic;
+SIGNAL \vga_0|videoGen|colorAddress~70_combout\ : std_logic;
 SIGNAL \vga_0|videoGen|colorAddress~74_combout\ : std_logic;
+SIGNAL \vga_0|videoGen|LessThan173~0_combout\ : std_logic;
 SIGNAL \vga_0|videoGen|colorAddress~79_combout\ : std_logic;
 SIGNAL \vga_0|videoGen|colorAddress~80_combout\ : std_logic;
 SIGNAL \vga_0|videoGen|colorAddress~81_combout\ : std_logic;
 SIGNAL \vga_0|videoGen|colorAddress~82_combout\ : std_logic;
 SIGNAL \vga_0|videoGen|colorAddress~83_combout\ : std_logic;
 SIGNAL \vga_0|videoGen|colorAddress~84_combout\ : std_logic;
-SIGNAL \vga_0|videoGen|colorAddress~94_combout\ : std_logic;
-SIGNAL \vga_0|videoGen|colorAddress~95_combout\ : std_logic;
-SIGNAL \vga_0|videoGen|pixelDraw~53_combout\ : std_logic;
+SIGNAL \vga_0|videoGen|colorAddress~88_combout\ : std_logic;
+SIGNAL \vga_0|videoGen|colorAddress~89_combout\ : std_logic;
 SIGNAL \vga_0|videoGen|LessThan413~0_combout\ : std_logic;
-SIGNAL \vga_0|videoGen|colorAddress~126_combout\ : std_logic;
-SIGNAL \vga_0|videoGen|colorAddress~127_combout\ : std_logic;
-SIGNAL \vga_0|videoGen|colorAddress~131_combout\ : std_logic;
-SIGNAL \vga_0|videoGen|colorAddress~132_combout\ : std_logic;
-SIGNAL \vga_0|videoGen|colorAddress~133_combout\ : std_logic;
-SIGNAL \vga_0|videoGen|colorAddress~140_combout\ : std_logic;
-SIGNAL \vga_0|videoGen|colorAddress~141_combout\ : std_logic;
+SIGNAL \vga_0|videoGen|pixelDraw~64_combout\ : std_logic;
+SIGNAL \vga_0|videoGen|pixelDraw~65_combout\ : std_logic;
+SIGNAL \vga_0|videoGen|colorAddress~111_combout\ : std_logic;
+SIGNAL \vga_0|videoGen|colorAddress~114_combout\ : std_logic;
+SIGNAL \vga_0|videoGen|colorAddress~117_combout\ : std_logic;
+SIGNAL \vga_0|videoGen|pixelDraw~69_combout\ : std_logic;
+SIGNAL \vga_0|videoGen|pixelDraw~71_combout\ : std_logic;
+SIGNAL \vga_0|videoGen|colorAddress~134_combout\ : std_logic;
+SIGNAL \vga_0|videoGen|colorAddress~136_combout\ : std_logic;
+SIGNAL \vga_0|videoGen|colorAddress~137_combout\ : std_logic;
+SIGNAL \vga_0|videoGen|colorAddress~143_combout\ : std_logic;
+SIGNAL \vga_0|videoGen|colorAddress~144_combout\ : std_logic;
 SIGNAL \vga_0|videoGen|colorAddress~145_combout\ : std_logic;
+SIGNAL \vga_0|videoGen|colorAddress~146_combout\ : std_logic;
+SIGNAL \vga_0|videoGen|colorAddress~147_combout\ : std_logic;
+SIGNAL \vga_0|videoGen|colorAddress~148_combout\ : std_logic;
+SIGNAL \vga_0|videoGen|colorAddress~149_combout\ : std_logic;
+SIGNAL \vga_0|videoGen|colorAddress~150_combout\ : std_logic;
+SIGNAL \vga_0|videoGen|colorAddress~151_combout\ : std_logic;
+SIGNAL \vga_0|videoGen|colorAddress~152_combout\ : std_logic;
+SIGNAL \vga_0|videoGen|colorAddress~153_combout\ : std_logic;
 SIGNAL \vga_0|videoGen|colorAddress~154_combout\ : std_logic;
-SIGNAL \vga_0|videoGen|colorAddress~160_combout\ : std_logic;
-SIGNAL \vga_0|videoGen|colorAddress~161_combout\ : std_logic;
-SIGNAL \vga_0|videoGen|colorAddress~163_combout\ : std_logic;
-SIGNAL \vga_0|videoGen|colorAddress~164_combout\ : std_logic;
+SIGNAL \vga_0|videoGen|colorAddress~155_combout\ : std_logic;
+SIGNAL \vga_0|videoGen|colorAddress~156_combout\ : std_logic;
+SIGNAL \vga_0|videoGen|colorAddress~157_combout\ : std_logic;
+SIGNAL \vga_0|videoGen|colorAddress~158_combout\ : std_logic;
+SIGNAL \vga_0|videoGen|colorAddress~159_combout\ : std_logic;
 SIGNAL \vga_0|videoGen|colorAddress~165_combout\ : std_logic;
-SIGNAL \vga_0|videoGen|colorAddress~166_combout\ : std_logic;
-SIGNAL \vga_0|videoGen|colorAddress~168_combout\ : std_logic;
-SIGNAL \vga_0|videoGen|LessThan373~2_combout\ : std_logic;
-SIGNAL \vga_0|videoGen|LessThan5~0_combout\ : std_logic;
-SIGNAL \vga_0|videoGen|LessThan6~0_combout\ : std_logic;
-SIGNAL \vga_0|videoGen|pixelDraw~72_combout\ : std_logic;
-SIGNAL \vga_0|videoGen|pixelDraw~73_combout\ : std_logic;
-SIGNAL \vga_0|videoGen|pixelDraw~74_combout\ : std_logic;
-SIGNAL \vga_0|videoGen|pixelDraw~75_combout\ : std_logic;
-SIGNAL \vga_0|videoGen|LessThan3~1_combout\ : std_logic;
-SIGNAL \vga_0|videoGen|LessThan4~1_combout\ : std_logic;
-SIGNAL \vga_0|videoGen|pixelDraw~76_combout\ : std_logic;
+SIGNAL \vga_0|videoGen|colorAddress~170_combout\ : std_logic;
+SIGNAL \vga_0|videoGen|colorAddress~172_combout\ : std_logic;
 SIGNAL \vga_0|videoGen|colorAddress~176_combout\ : std_logic;
-SIGNAL \vga_0|videoGen|colorAddress~177_combout\ : std_logic;
-SIGNAL \vga_0|videoGen|colorAddress~182_combout\ : std_logic;
-SIGNAL \vga_0|videoSync|LessThan6~1_combout\ : std_logic;
+SIGNAL \vga_0|videoGen|colorAddress~180_combout\ : std_logic;
+SIGNAL \vga_0|videoGen|colorAddress~181_combout\ : std_logic;
+SIGNAL \vga_0|videoGen|colorAddress~184_combout\ : std_logic;
+SIGNAL \vga_0|videoSync|process_1~2_combout\ : std_logic;
 SIGNAL \vga_0|videoSync|process_1~4_combout\ : std_logic;
-SIGNAL \vga_0|videoSync|process_1~7_combout\ : std_logic;
-SIGNAL \vga_0|videoSync|process_1~9_combout\ : std_logic;
-SIGNAL \vga_0|videoGen|Mux33~0_combout\ : std_logic;
-SIGNAL \vga_0|videoGen|Mux26~0_combout\ : std_logic;
-SIGNAL \vga_0|videoGen|char_addr[2]~27_combout\ : std_logic;
-SIGNAL \vga_0|videoGen|char_addr[5]~45_combout\ : std_logic;
-SIGNAL \vga_0|videoGen|Mux40~0_combout\ : std_logic;
-SIGNAL \vga_0|videoGen|LessThan333~2_combout\ : std_logic;
-SIGNAL \vga_0|videoGen|colorAddress~190_combout\ : std_logic;
-SIGNAL \vga_0|videoGen|colorAddress~203_combout\ : std_logic;
+SIGNAL \vga_0|videoGen|Mux27~0_combout\ : std_logic;
+SIGNAL \vga_0|videoGen|char_addr[1]~17_combout\ : std_logic;
+SIGNAL \vga_0|videoGen|pixelDraw~80_combout\ : std_logic;
+SIGNAL \vga_0|videoGen|colorAddress~186_combout\ : std_logic;
+SIGNAL \vga_0|videoGen|colorAddress~200_combout\ : std_logic;
 SIGNAL \vga_0|videoSync|pixel_clock_int~0_combout\ : std_logic;
 SIGNAL \vga_0|videoSync|pixel_clock_int~regout\ : std_logic;
 SIGNAL \vga_0|videoSync|pixel_clock_int~clkctrl_outclk\ : std_logic;
-SIGNAL \vga_0|videoSync|Add1~1\ : std_logic;
-SIGNAL \vga_0|videoSync|Add1~2_combout\ : std_logic;
-SIGNAL \vga_0|videoSync|Add0~2_combout\ : std_logic;
-SIGNAL \vga_0|videoSync|Equal0~0_combout\ : std_logic;
-SIGNAL \vga_0|videoSync|Add0~7\ : std_logic;
-SIGNAL \vga_0|videoSync|Add0~9\ : std_logic;
-SIGNAL \vga_0|videoSync|Add0~10_combout\ : std_logic;
-SIGNAL \vga_0|videoSync|Add0~15\ : std_logic;
-SIGNAL \vga_0|videoSync|Add0~16_combout\ : std_logic;
-SIGNAL \vga_0|videoSync|h_count~0_combout\ : std_logic;
-SIGNAL \vga_0|videoSync|h_count~3_combout\ : std_logic;
-SIGNAL \vga_0|videoSync|Add0~11\ : std_logic;
-SIGNAL \vga_0|videoSync|Add0~13\ : std_logic;
-SIGNAL \vga_0|videoSync|Add0~14_combout\ : std_logic;
-SIGNAL \vga_0|videoSync|Equal0~2_combout\ : std_logic;
-SIGNAL \vga_0|videoSync|h_count~1_combout\ : std_logic;
-SIGNAL \vga_0|videoSync|Equal0~1_combout\ : std_logic;
 SIGNAL \vga_0|videoSync|Add0~0_combout\ : std_logic;
 SIGNAL \vga_0|videoSync|h_count~2_combout\ : std_logic;
 SIGNAL \vga_0|videoSync|Add0~1\ : std_logic;
@@ -359,9 +346,40 @@ SIGNAL \vga_0|videoSync|Add0~3\ : std_logic;
 SIGNAL \vga_0|videoSync|Add0~4_combout\ : std_logic;
 SIGNAL \vga_0|videoSync|Add0~5\ : std_logic;
 SIGNAL \vga_0|videoSync|Add0~6_combout\ : std_logic;
+SIGNAL \vga_0|videoSync|Equal0~2_combout\ : std_logic;
+SIGNAL \vga_0|videoSync|Add0~7\ : std_logic;
+SIGNAL \vga_0|videoSync|Add0~9\ : std_logic;
+SIGNAL \vga_0|videoSync|Add0~10_combout\ : std_logic;
+SIGNAL \vga_0|videoSync|h_count~3_combout\ : std_logic;
+SIGNAL \vga_0|videoSync|Add0~11\ : std_logic;
+SIGNAL \vga_0|videoSync|Add0~13\ : std_logic;
+SIGNAL \vga_0|videoSync|Add0~14_combout\ : std_logic;
+SIGNAL \vga_0|videoSync|Add0~15\ : std_logic;
+SIGNAL \vga_0|videoSync|Add0~16_combout\ : std_logic;
+SIGNAL \vga_0|videoSync|h_count~0_combout\ : std_logic;
 SIGNAL \vga_0|videoSync|Add0~12_combout\ : std_logic;
-SIGNAL \vga_0|videoSync|process_1~2_combout\ : std_logic;
-SIGNAL \vga_0|videoSync|process_1~10_combout\ : std_logic;
+SIGNAL \vga_0|videoSync|Equal0~0_combout\ : std_logic;
+SIGNAL \vga_0|videoSync|Equal0~1_combout\ : std_logic;
+SIGNAL \vga_0|videoSync|h_count~1_combout\ : std_logic;
+SIGNAL \vga_0|videoSync|LessThan5~0_combout\ : std_logic;
+SIGNAL \vga_0|videoSync|Add1~0_combout\ : std_logic;
+SIGNAL \vga_0|videoSync|v_count~7_combout\ : std_logic;
+SIGNAL \vga_0|videoSync|Add1~1\ : std_logic;
+SIGNAL \vga_0|videoSync|Add1~2_combout\ : std_logic;
+SIGNAL \vga_0|videoSync|Add1~7\ : std_logic;
+SIGNAL \vga_0|videoSync|Add1~8_combout\ : std_logic;
+SIGNAL \vga_0|videoSync|v_count[4]~6_combout\ : std_logic;
+SIGNAL \vga_0|videoSync|v_count[5]~2_combout\ : std_logic;
+SIGNAL \vga_0|videoSync|LessThan1~1_combout\ : std_logic;
+SIGNAL \vga_0|videoSync|Add1~9\ : std_logic;
+SIGNAL \vga_0|videoSync|Add1~11\ : std_logic;
+SIGNAL \vga_0|videoSync|Add1~12_combout\ : std_logic;
+SIGNAL \vga_0|videoSync|v_count[6]~3_combout\ : std_logic;
+SIGNAL \vga_0|videoSync|Add1~13\ : std_logic;
+SIGNAL \vga_0|videoSync|Add1~15\ : std_logic;
+SIGNAL \vga_0|videoSync|Add1~16_combout\ : std_logic;
+SIGNAL \vga_0|videoSync|v_count[8]~5_combout\ : std_logic;
+SIGNAL \vga_0|videoSync|LessThan1~2_combout\ : std_logic;
 SIGNAL \vga_0|videoSync|v_count~8_combout\ : std_logic;
 SIGNAL \vga_0|videoSync|Add1~3\ : std_logic;
 SIGNAL \vga_0|videoSync|Add1~4_combout\ : std_logic;
@@ -370,372 +388,350 @@ SIGNAL \vga_0|videoSync|Add1~5\ : std_logic;
 SIGNAL \vga_0|videoSync|Add1~6_combout\ : std_logic;
 SIGNAL \vga_0|videoSync|v_count[3]~10_combout\ : std_logic;
 SIGNAL \vga_0|videoSync|LessThan1~0_combout\ : std_logic;
-SIGNAL \vga_0|videoSync|v_count[5]~2_combout\ : std_logic;
-SIGNAL \vga_0|videoSync|Add1~7\ : std_logic;
-SIGNAL \vga_0|videoSync|Add1~8_combout\ : std_logic;
-SIGNAL \vga_0|videoSync|v_count[4]~6_combout\ : std_logic;
-SIGNAL \vga_0|videoSync|Add1~9\ : std_logic;
-SIGNAL \vga_0|videoSync|Add1~11\ : std_logic;
-SIGNAL \vga_0|videoSync|Add1~13\ : std_logic;
-SIGNAL \vga_0|videoSync|Add1~15\ : std_logic;
-SIGNAL \vga_0|videoSync|Add1~16_combout\ : std_logic;
-SIGNAL \vga_0|videoSync|v_count[8]~5_combout\ : std_logic;
-SIGNAL \vga_0|videoSync|LessThan1~2_combout\ : std_logic;
+SIGNAL \vga_0|videoSync|process_1~11_combout\ : std_logic;
+SIGNAL \vga_0|videoSync|v_count[9]~1_combout\ : std_logic;
+SIGNAL \vga_0|videoSync|process_1~9_combout\ : std_logic;
+SIGNAL \vga_0|videoSync|process_1~10_combout\ : std_logic;
 SIGNAL \vga_0|videoSync|process_1~5_combout\ : std_logic;
 SIGNAL \vga_0|videoSync|Equal1~0_combout\ : std_logic;
 SIGNAL \vga_0|videoSync|v_count[9]~0_combout\ : std_logic;
-SIGNAL \vga_0|videoSync|Add1~14_combout\ : std_logic;
 SIGNAL \vga_0|videoSync|v_count[7]~4_combout\ : std_logic;
-SIGNAL \vga_0|videoSync|LessThan1~1_combout\ : std_logic;
-SIGNAL \vga_0|videoSync|process_1~11_combout\ : std_logic;
-SIGNAL \vga_0|videoSync|Add1~12_combout\ : std_logic;
-SIGNAL \vga_0|videoSync|v_count[6]~3_combout\ : std_logic;
-SIGNAL \vga_0|videoSync|v_count[9]~1_combout\ : std_logic;
 SIGNAL \vga_0|videoSync|LessThan6~0_combout\ : std_logic;
+SIGNAL \vga_0|videoSync|LessThan6~1_combout\ : std_logic;
 SIGNAL \vga_0|videoSync|LessThan6~2_combout\ : std_logic;
-SIGNAL \vga_0|videoGen|LessThan11~2_combout\ : std_logic;
-SIGNAL \vga_0|videoGen|LessThan12~0_combout\ : std_logic;
-SIGNAL \vga_0|videoGen|LessThan11~1_combout\ : std_logic;
-SIGNAL \vga_0|videoGen|pixelDraw~42_combout\ : std_logic;
-SIGNAL \vga_0|videoSync|LessThan5~0_combout\ : std_logic;
-SIGNAL \vga_0|videoGen|LessThan13~1_combout\ : std_logic;
-SIGNAL \vga_0|videoSync|Add0~8_combout\ : std_logic;
-SIGNAL \vga_0|videoGen|LessThan53~2_combout\ : std_logic;
-SIGNAL \vga_0|videoGen|LessThan13~2_combout\ : std_logic;
-SIGNAL \vga_0|videoGen|LessThan13~3_combout\ : std_logic;
-SIGNAL \vga_0|videoGen|pixelDraw~13_combout\ : std_logic;
-SIGNAL \vga_0|videoGen|colorAddress~175_combout\ : std_logic;
-SIGNAL \vga_0|videoSync|Add1~0_combout\ : std_logic;
-SIGNAL \vga_0|videoSync|v_count~7_combout\ : std_logic;
-SIGNAL \vga_0|videoGen|pixelDraw~11_combout\ : std_logic;
-SIGNAL \vga_0|videoGen|pixelDraw~12_combout\ : std_logic;
-SIGNAL \vga_0|videoGen|pixelDraw~77_combout\ : std_logic;
-SIGNAL \vga_0|videoGen|pixelDraw~14_combout\ : std_logic;
-SIGNAL \vga_0|videoGen|LessThan23~0_combout\ : std_logic;
-SIGNAL \vga_0|videoGen|LessThan23~1_combout\ : std_logic;
-SIGNAL \vga_0|videoGen|LessThan23~2_combout\ : std_logic;
-SIGNAL \vga_0|videoGen|Equal3~0_combout\ : std_logic;
-SIGNAL \vga_0|videoGen|LessThan24~0_combout\ : std_logic;
-SIGNAL \vga_0|videoGen|pixelDraw~15_combout\ : std_logic;
-SIGNAL \vga_0|videoGen|pixelDraw~16_combout\ : std_logic;
-SIGNAL \vga_0|videoGen|LessThan48~0_combout\ : std_logic;
-SIGNAL \vga_0|videoGen|pixelDraw~25_combout\ : std_logic;
-SIGNAL \vga_0|videoGen|LessThan15~0_combout\ : std_logic;
-SIGNAL \vga_0|videoGen|pixelDraw~26_combout\ : std_logic;
-SIGNAL \vga_0|videoGen|pixelDraw~27_combout\ : std_logic;
-SIGNAL \vga_0|videoGen|colorAddress~138_combout\ : std_logic;
-SIGNAL \vga_0|videoGen|LessThan54~0_combout\ : std_logic;
-SIGNAL \vga_0|videoGen|LessThan173~0_combout\ : std_logic;
-SIGNAL \vga_0|videoGen|LessThan13~0_combout\ : std_logic;
-SIGNAL \vga_0|videoGen|pixelDraw~69_combout\ : std_logic;
-SIGNAL \vga_0|videoGen|pixelDraw~70_combout\ : std_logic;
-SIGNAL \vga_0|videoGen|LessThan43~1_combout\ : std_logic;
-SIGNAL \vga_0|videoGen|LessThan36~0_combout\ : std_logic;
-SIGNAL \vga_0|videoGen|LessThan35~0_combout\ : std_logic;
-SIGNAL \vga_0|videoGen|LessThan4~0_combout\ : std_logic;
-SIGNAL \vga_0|videoGen|LessThan35~1_combout\ : std_logic;
-SIGNAL \vga_0|videoGen|pixelDraw~30_combout\ : std_logic;
-SIGNAL \vga_0|videoGen|pixelDraw~35_combout\ : std_logic;
-SIGNAL \vga_0|videoGen|LessThan47~0_combout\ : std_logic;
-SIGNAL \vga_0|videoGen|LessThan43~0_combout\ : std_logic;
-SIGNAL \vga_0|videoGen|LessThan11~0_combout\ : std_logic;
-SIGNAL \vga_0|videoGen|pixelDraw~36_combout\ : std_logic;
-SIGNAL \vga_0|videoGen|pixelDraw~37_combout\ : std_logic;
-SIGNAL \vga_0|videoGen|LessThan35~2_combout\ : std_logic;
-SIGNAL \vga_0|videoGen|pixelDraw~31_combout\ : std_logic;
-SIGNAL \vga_0|videoGen|pixelDraw~32_combout\ : std_logic;
-SIGNAL \vga_0|videoGen|LessThan493~2_combout\ : std_logic;
-SIGNAL \vga_0|videoGen|LessThan133~2_combout\ : std_logic;
-SIGNAL \vga_0|videoGen|pixelDraw~67_combout\ : std_logic;
-SIGNAL \vga_0|videoGen|pixelDraw~71_combout\ : std_logic;
-SIGNAL \vga_0|videoGen|colorAddress~135_combout\ : std_logic;
-SIGNAL \vga_0|videoGen|colorAddress~136_combout\ : std_logic;
-SIGNAL \vga_0|videoGen|colorAddress~137_combout\ : std_logic;
-SIGNAL \vga_0|videoGen|LessThan27~0_combout\ : std_logic;
-SIGNAL \vga_0|videoGen|LessThan27~1_combout\ : std_logic;
-SIGNAL \vga_0|videoGen|LessThan28~0_combout\ : std_logic;
-SIGNAL \vga_0|videoGen|pixelDraw~17_combout\ : std_logic;
-SIGNAL \vga_0|videoGen|colorAddress~139_combout\ : std_logic;
-SIGNAL \vga_0|videoGen|LessThan173~1_combout\ : std_logic;
-SIGNAL \vga_0|videoGen|pixelDraw~56_combout\ : std_logic;
-SIGNAL \vga_0|videoGen|pixelDraw~57_combout\ : std_logic;
-SIGNAL \vga_0|videoGen|pixelDraw~66_combout\ : std_logic;
-SIGNAL \vga_0|videoGen|colorAddress~128_combout\ : std_logic;
-SIGNAL \vga_0|videoGen|LessThan133~0_combout\ : std_logic;
-SIGNAL \vga_0|videoGen|LessThan133~1_combout\ : std_logic;
-SIGNAL \vga_0|videoGen|LessThan613~0_combout\ : std_logic;
-SIGNAL \vga_0|videoGen|LessThan134~0_combout\ : std_logic;
-SIGNAL \vga_0|videoGen|pixelDraw~64_combout\ : std_logic;
-SIGNAL \vga_0|videoGen|pixelDraw~65_combout\ : std_logic;
-SIGNAL \vga_0|videoGen|colorAddress~129_combout\ : std_logic;
-SIGNAL \vga_0|videoGen|LessThan373~0_combout\ : std_logic;
-SIGNAL \vga_0|videoGen|LessThan373~1_combout\ : std_logic;
-SIGNAL \vga_0|videoGen|pixelDraw~38_combout\ : std_logic;
-SIGNAL \vga_0|videoGen|LessThan374~0_combout\ : std_logic;
-SIGNAL \vga_0|videoGen|char_addr[6]~6_combout\ : std_logic;
-SIGNAL \vga_0|videoGen|pixelDraw~39_combout\ : std_logic;
-SIGNAL \vga_0|videoGen|pixelDraw~40_combout\ : std_logic;
-SIGNAL \vga_0|videoGen|pixelDraw~63_combout\ : std_logic;
-SIGNAL \vga_0|videoGen|Equal3~1_combout\ : std_logic;
-SIGNAL \vga_0|videoGen|Equal2~0_combout\ : std_logic;
-SIGNAL \vga_0|videoGen|colorAddress~124_combout\ : std_logic;
-SIGNAL \vga_0|videoGen|illegal_on~combout\ : std_logic;
-SIGNAL \vga_0|videoGen|gameOverT_on~0_combout\ : std_logic;
+SIGNAL \vga_0|videoGen|placeShip_on~1_combout\ : std_logic;
 SIGNAL \vga_0|videoGen|gameOverT_on~combout\ : std_logic;
-SIGNAL \vga_0|videoGen|char_addr[5]~54_combout\ : std_logic;
+SIGNAL \vga_0|videoGen|Equal2~0_combout\ : std_logic;
+SIGNAL \vga_0|videoGen|Equal3~1_combout\ : std_logic;
+SIGNAL \vga_0|videoGen|char_addr[5]~50_combout\ : std_logic;
+SIGNAL \vga_0|videoGen|LessThan13~3_combout\ : std_logic;
+SIGNAL \vga_0|videoGen|char_addr[5]~6_combout\ : std_logic;
 SIGNAL \vga_0|videoGen|char_addr[5]~7_combout\ : std_logic;
 SIGNAL \vga_0|videoGen|char_addr[5]~7clkctrl_outclk\ : std_logic;
 SIGNAL \clk~combout\ : std_logic;
 SIGNAL \clk~clkctrl_outclk\ : std_logic;
-SIGNAL \vga_0|videoGen|char_addr[1]~8_combout\ : std_logic;
-SIGNAL \vga_0|videoGen|hit_on~combout\ : std_logic;
-SIGNAL \vga_0|videoGen|char_addr[0]~9_combout\ : std_logic;
-SIGNAL \vga_0|videoGen|char_addr[0]~10_combout\ : std_logic;
-SIGNAL \vga_0|videoGen|char_addr[0]~11_combout\ : std_logic;
+SIGNAL \vga_0|videoSync|Add0~8_combout\ : std_logic;
+SIGNAL \vga_0|videoGen|Mux33~0_combout\ : std_logic;
+SIGNAL \vga_0|videoGen|char_addr[0]~51_combout\ : std_logic;
 SIGNAL \vga_0|videoGen|char_addr[0]~12_combout\ : std_logic;
+SIGNAL \vga_0|videoGen|placeShip_on~0_combout\ : std_logic;
 SIGNAL \vga_0|videoGen|placeShip_on~combout\ : std_logic;
-SIGNAL \vga_0|videoGen|Mux27~0_combout\ : std_logic;
-SIGNAL \vga_0|videoGen|Mux13~0_combout\ : std_logic;
 SIGNAL \vga_0|videoGen|Mux13~1_combout\ : std_logic;
+SIGNAL \vga_0|videoGen|Mux13~0_combout\ : std_logic;
 SIGNAL \vga_0|videoGen|char_addr[0]~13_combout\ : std_logic;
 SIGNAL \vga_0|videoGen|char_addr[0]~14_combout\ : std_logic;
+SIGNAL \vga_0|videoGen|LessThan13~4_combout\ : std_logic;
+SIGNAL \vga_0|videoGen|illegal_on~combout\ : std_logic;
+SIGNAL \vga_0|videoGen|hit_on~combout\ : std_logic;
+SIGNAL \vga_0|videoGen|char_addr[0]~9_combout\ : std_logic;
+SIGNAL \vga_0|videoGen|char_addr[0]~11_combout\ : std_logic;
 SIGNAL \vga_0|videoGen|char_addr[0]~15_combout\ : std_logic;
-SIGNAL \vga_0|videoGen|char_addr[0]~16_combout\ : std_logic;
-SIGNAL \vga_0|videoGen|char_addr[1]~17_combout\ : std_logic;
+SIGNAL \vga_0|videoGen|char_addr[0]~10_combout\ : std_logic;
+SIGNAL \vga_0|videoGen|char_addr[1]~8_combout\ : std_logic;
+SIGNAL \vga_0|videoGen|char_addr[1]~16_combout\ : std_logic;
+SIGNAL \vga_0|videoGen|char_addr[1]~18_combout\ : std_logic;
+SIGNAL \vga_0|videoGen|Mux26~0_combout\ : std_logic;
+SIGNAL \vga_0|videoGen|Mux12~0_combout\ : std_logic;
 SIGNAL \vga_0|videoGen|char_addr[1]~19_combout\ : std_logic;
 SIGNAL \vga_0|videoGen|char_addr[1]~20_combout\ : std_logic;
 SIGNAL \vga_0|videoGen|char_addr[1]~21_combout\ : std_logic;
-SIGNAL \vga_0|videoGen|Mux12~0_combout\ : std_logic;
-SIGNAL \vga_0|videoGen|char_addr[1]~18_combout\ : std_logic;
-SIGNAL \vga_0|videoGen|char_addr[1]~22_combout\ : std_logic;
-SIGNAL \vga_0|videoGen|char_addr[1]~23_combout\ : std_logic;
+SIGNAL \vga_0|videoGen|char_addr[2]~24_combout\ : std_logic;
 SIGNAL \vga_0|videoGen|Mux31~0_combout\ : std_logic;
 SIGNAL \vga_0|videoGen|Mux25~0_combout\ : std_logic;
-SIGNAL \vga_0|videoGen|Mux11~0_combout\ : std_logic;
-SIGNAL \vga_0|videoGen|char_addr[2]~24_combout\ : std_logic;
+SIGNAL \vga_0|videoGen|char_addr[2]~55_combout\ : std_logic;
+SIGNAL \vga_0|videoGen|char_addr[2]~56_combout\ : std_logic;
+SIGNAL \vga_0|videoGen|char_addr[2]~22_combout\ : std_logic;
+SIGNAL \vga_0|videoGen|char_addr[2]~23_combout\ : std_logic;
 SIGNAL \vga_0|videoGen|char_addr[2]~25_combout\ : std_logic;
-SIGNAL \vga_0|videoGen|char_addr[2]~26_combout\ : std_logic;
-SIGNAL \vga_0|videoGen|char_addr[2]~28_combout\ : std_logic;
-SIGNAL \vga_0|videoGen|Mux37~0_combout\ : std_logic;
-SIGNAL \vga_0|videoGen|Mux30~0_combout\ : std_logic;
-SIGNAL \vga_0|videoGen|char_addr[3]~31_combout\ : std_logic;
+SIGNAL \vga_0|videoGen|char_addr[3]~26_combout\ : std_logic;
 SIGNAL \vga_0|videoGen|Mux24~0_combout\ : std_logic;
-SIGNAL \vga_0|videoGen|Mux17~0_combout\ : std_logic;
+SIGNAL \vga_0|videoGen|char_addr[3]~27_combout\ : std_logic;
+SIGNAL \vga_0|videoGen|Mux30~0_combout\ : std_logic;
+SIGNAL \vga_0|videoGen|Mux37~0_combout\ : std_logic;
+SIGNAL \vga_0|videoGen|char_addr[3]~28_combout\ : std_logic;
 SIGNAL \vga_0|videoGen|char_addr[3]~29_combout\ : std_logic;
 SIGNAL \vga_0|videoGen|char_addr[3]~30_combout\ : std_logic;
-SIGNAL \vga_0|videoGen|char_addr[3]~32_combout\ : std_logic;
-SIGNAL \vga_0|videoGen|char_addr[3]~33_combout\ : std_logic;
+SIGNAL \vga_0|videoGen|char_addr[4]~33_combout\ : std_logic;
 SIGNAL \vga_0|videoGen|Mux23~0_combout\ : std_logic;
 SIGNAL \vga_0|videoGen|Mux9~0_combout\ : std_logic;
-SIGNAL \vga_0|videoGen|char_addr[4]~34_combout\ : std_logic;
+SIGNAL \vga_0|videoGen|char_addr[4]~31_combout\ : std_logic;
 SIGNAL \vga_0|videoGen|Mux36~0_combout\ : std_logic;
-SIGNAL \vga_0|videoGen|char_addr[4]~55_combout\ : std_logic;
-SIGNAL \vga_0|videoGen|char_addr[4]~35_combout\ : std_logic;
-SIGNAL \vga_0|videoGen|char_addr[4]~36_combout\ : std_logic;
+SIGNAL \vga_0|videoGen|char_addr[4]~52_combout\ : std_logic;
+SIGNAL \vga_0|videoGen|char_addr[4]~32_combout\ : std_logic;
+SIGNAL \vga_0|videoGen|char_addr[4]~34_combout\ : std_logic;
+SIGNAL \vga_0|videoGen|char_addr[5]~42_combout\ : std_logic;
 SIGNAL \vga_0|videoGen|Mux35~0_combout\ : std_logic;
+SIGNAL \vga_0|videoGen|char_addr[5]~35_combout\ : std_logic;
+SIGNAL \vga_0|videoGen|char_addr[5]~36_combout\ : std_logic;
 SIGNAL \vga_0|videoGen|char_addr[5]~37_combout\ : std_logic;
 SIGNAL \vga_0|videoGen|char_addr[5]~38_combout\ : std_logic;
-SIGNAL \vga_0|videoGen|char_addr[5]~56_combout\ : std_logic;
-SIGNAL \vga_0|videoGen|char_addr[5]~43_combout\ : std_logic;
-SIGNAL \vga_0|videoGen|char_addr[5]~42_combout\ : std_logic;
-SIGNAL \vga_0|videoGen|char_addr[5]~40_combout\ : std_logic;
 SIGNAL \vga_0|videoGen|char_addr[5]~39_combout\ : std_logic;
+SIGNAL \vga_0|videoGen|char_addr[5]~40_combout\ : std_logic;
 SIGNAL \vga_0|videoGen|char_addr[5]~41_combout\ : std_logic;
-SIGNAL \vga_0|videoGen|char_addr[5]~44_combout\ : std_logic;
-SIGNAL \vga_0|videoGen|char_addr[5]~46_combout\ : std_logic;
-SIGNAL \vga_0|videoGen|char_addr[6]~49_combout\ : std_logic;
+SIGNAL \vga_0|videoGen|char_addr[5]~43_combout\ : std_logic;
+SIGNAL \vga_0|videoGen|char_addr[6]~46_combout\ : std_logic;
+SIGNAL \vga_0|videoGen|char_addr[6]~44_combout\ : std_logic;
+SIGNAL \vga_0|videoGen|char_addr[6]~45_combout\ : std_logic;
 SIGNAL \vga_0|videoGen|char_addr[6]~47_combout\ : std_logic;
 SIGNAL \vga_0|videoGen|char_addr[6]~48_combout\ : std_logic;
-SIGNAL \vga_0|videoGen|char_addr[6]~50_combout\ : std_logic;
-SIGNAL \vga_0|videoGen|char_addr[6]~51_combout\ : std_logic;
-SIGNAL \vga_0|videoGen|char_addr[6]~52_combout\ : std_logic;
 SIGNAL \vga_0|videoGen|char_addr[6]~53_combout\ : std_logic;
+SIGNAL \vga_0|videoGen|char_addr[6]~54_combout\ : std_logic;
+SIGNAL \vga_0|videoGen|char_addr[6]~49_combout\ : std_logic;
 SIGNAL \vga_0|videoGen|font_unit|ROM_rtl_0|auto_generated|ram_block1a5~portadataout\ : std_logic;
+SIGNAL \vga_0|videoGen|font_unit|ROM_rtl_0|auto_generated|ram_block1a7\ : std_logic;
 SIGNAL \vga_0|videoGen|font_unit|ROM_rtl_0|auto_generated|ram_block1a6\ : std_logic;
 SIGNAL \vga_0|videoGen|Mux653~2_combout\ : std_logic;
 SIGNAL \vga_0|videoGen|Mux653~3_combout\ : std_logic;
+SIGNAL \vga_0|videoSync|Add0~2_combout\ : std_logic;
 SIGNAL \vga_0|videoGen|font_unit|ROM_rtl_0|auto_generated|ram_block1a2\ : std_logic;
 SIGNAL \vga_0|videoGen|font_unit|ROM_rtl_0|auto_generated|ram_block1a1~portadataout\ : std_logic;
 SIGNAL \vga_0|videoGen|font_unit|ROM_rtl_0|auto_generated|ram_block1a3\ : std_logic;
 SIGNAL \vga_0|videoGen|Mux653~0_combout\ : std_logic;
 SIGNAL \vga_0|videoGen|Mux653~1_combout\ : std_logic;
 SIGNAL \vga_0|videoGen|Mux653~4_combout\ : std_logic;
-SIGNAL \vga_0|videoGen|colorAddress~125_combout\ : std_logic;
-SIGNAL \vga_0|videoGen|pixelDraw~54_combout\ : std_logic;
-SIGNAL \vga_0|videoGen|LessThan374~1_combout\ : std_logic;
-SIGNAL \vga_0|videoGen|pixelDraw~55_combout\ : std_logic;
-SIGNAL \vga_0|videoGen|LessThan53~3_combout\ : std_logic;
-SIGNAL \vga_0|videoGen|pixelDraw~48_combout\ : std_logic;
-SIGNAL \vga_0|videoGen|pixelDraw~49_combout\ : std_logic;
-SIGNAL \vga_0|videoGen|pixelDraw~50_combout\ : std_logic;
-SIGNAL \vga_0|videoGen|colorAddress~88_combout\ : std_logic;
-SIGNAL \vga_0|videoGen|colorAddress~89_combout\ : std_logic;
-SIGNAL \vga_0|videoGen|pixelDraw~46_combout\ : std_logic;
-SIGNAL \vga_0|videoGen|pixelDraw~47_combout\ : std_logic;
-SIGNAL \vga_0|videoGen|LessThan534~0_combout\ : std_logic;
-SIGNAL \vga_0|videoGen|pixelDraw~51_combout\ : std_logic;
-SIGNAL \vga_0|videoGen|pixelDraw~52_combout\ : std_logic;
-SIGNAL \vga_0|videoGen|colorAddress~85_combout\ : std_logic;
-SIGNAL \vga_0|videoGen|colorAddress~86_combout\ : std_logic;
-SIGNAL \vga_0|videoGen|colorAddress~87_combout\ : std_logic;
-SIGNAL \vga_0|videoGen|colorAddress~90_combout\ : std_logic;
-SIGNAL \vga_0|videoGen|LessThan573~0_combout\ : std_logic;
-SIGNAL \vga_0|videoGen|pixelDraw~19_combout\ : std_logic;
-SIGNAL \vga_0|videoGen|colorAddress~96_combout\ : std_logic;
-SIGNAL \vga_0|videoGen|colorAddress~97_combout\ : std_logic;
-SIGNAL \vga_0|videoGen|LessThan32~0_combout\ : std_logic;
-SIGNAL \vga_0|videoGen|LessThan31~0_combout\ : std_logic;
-SIGNAL \vga_0|videoGen|pixelDraw~29_combout\ : std_logic;
-SIGNAL \vga_0|videoGen|colorAddress~191_combout\ : std_logic;
-SIGNAL \vga_0|videoGen|colorAddress~93_combout\ : std_logic;
-SIGNAL \vga_0|videoGen|pixelDraw~43_combout\ : std_logic;
-SIGNAL \vga_0|videoGen|LessThan94~0_combout\ : std_logic;
-SIGNAL \vga_0|videoGen|pixelDraw~44_combout\ : std_logic;
-SIGNAL \vga_0|videoGen|pixelDraw~45_combout\ : std_logic;
-SIGNAL \vga_0|videoGen|colorAddress~91_combout\ : std_logic;
-SIGNAL \vga_0|videoGen|colorAddress~92_combout\ : std_logic;
-SIGNAL \vga_0|videoGen|colorAddress~98_combout\ : std_logic;
-SIGNAL \vga_0|videoGen|LessThan693~0_combout\ : std_logic;
-SIGNAL \vga_0|videoGen|LessThan773~0_combout\ : std_logic;
-SIGNAL \vga_0|videoGen|LessThan734~0_combout\ : std_logic;
-SIGNAL \vga_0|videoGen|pixelDraw~41_combout\ : std_logic;
-SIGNAL \vga_0|videoGen|colorAddress~69_combout\ : std_logic;
-SIGNAL \vga_0|videoGen|colorAddress~70_combout\ : std_logic;
-SIGNAL \vga_0|videoGen|LessThan613~1_combout\ : std_logic;
-SIGNAL \vga_0|videoGen|LessThan334~0_combout\ : std_logic;
-SIGNAL \vga_0|videoGen|LessThan293~0_combout\ : std_logic;
-SIGNAL \vga_0|videoGen|pixelDraw~28_combout\ : std_logic;
-SIGNAL \vga_0|videoGen|colorAddress~67_combout\ : std_logic;
-SIGNAL \vga_0|videoGen|colorAddress~68_combout\ : std_logic;
-SIGNAL \vga_0|videoGen|LessThan254~0_combout\ : std_logic;
-SIGNAL \vga_0|videoGen|pixelDraw~23_combout\ : std_logic;
-SIGNAL \vga_0|videoGen|pixelDraw~24_combout\ : std_logic;
-SIGNAL \vga_0|videoGen|colorAddress~63_combout\ : std_logic;
-SIGNAL \vga_0|videoGen|colorAddress~64_combout\ : std_logic;
-SIGNAL \vga_0|videoGen|colorAddress~71_combout\ : std_logic;
-SIGNAL \vga_0|videoGen|colorAddress~60_combout\ : std_logic;
-SIGNAL \vga_0|videoGen|pixelDraw~33_combout\ : std_logic;
-SIGNAL \vga_0|videoGen|pixelDraw~79_combout\ : std_logic;
+SIGNAL \vga_0|videoGen|LessThan35~2_combout\ : std_logic;
+SIGNAL \vga_0|videoGen|LessThan4~0_combout\ : std_logic;
+SIGNAL \vga_0|videoGen|LessThan4~1_combout\ : std_logic;
 SIGNAL \vga_0|videoGen|LessThan3~0_combout\ : std_logic;
-SIGNAL \vga_0|videoGen|pixelDraw~80_combout\ : std_logic;
-SIGNAL \vga_0|videoGen|pixelDraw~34_combout\ : std_logic;
-SIGNAL \vga_0|videoGen|pixelDraw~20_combout\ : std_logic;
-SIGNAL \vga_0|videoGen|pixelDraw~21_combout\ : std_logic;
-SIGNAL \vga_0|videoGen|LessThan614~0_combout\ : std_logic;
-SIGNAL \vga_0|videoGen|pixelDraw~22_combout\ : std_logic;
-SIGNAL \vga_0|videoGen|colorAddress~61_combout\ : std_logic;
-SIGNAL \vga_0|videoGen|colorAddress~56_combout\ : std_logic;
-SIGNAL \vga_0|videoGen|colorAddress~57_combout\ : std_logic;
-SIGNAL \vga_0|videoGen|colorAddress~58_combout\ : std_logic;
-SIGNAL \vga_0|videoGen|colorAddress~59_combout\ : std_logic;
-SIGNAL \vga_0|videoGen|colorAddress~62_combout\ : std_logic;
-SIGNAL \vga_0|videoGen|colorAddress~189_combout\ : std_logic;
-SIGNAL \vga_0|videoGen|colorAddress~75_combout\ : std_logic;
-SIGNAL \vga_0|videoGen|colorAddress~76_combout\ : std_logic;
-SIGNAL \vga_0|videoGen|colorAddress~72_combout\ : std_logic;
-SIGNAL \vga_0|videoGen|colorAddress~77_combout\ : std_logic;
-SIGNAL \vga_0|videoGen|colorAddress~78_combout\ : std_logic;
-SIGNAL \vga_0|videoGen|colorAddress~99_combout\ : std_logic;
-SIGNAL \vga_0|videoGen|colorAddress~100_combout\ : std_logic;
-SIGNAL \vga_0|videoGen|colorAddress~112_combout\ : std_logic;
-SIGNAL \vga_0|videoGen|colorAddress~111_combout\ : std_logic;
-SIGNAL \vga_0|videoGen|LessThan214~0_combout\ : std_logic;
-SIGNAL \vga_0|videoGen|LessThan213~0_combout\ : std_logic;
-SIGNAL \vga_0|videoGen|pixelDraw~58_combout\ : std_logic;
-SIGNAL \vga_0|videoGen|colorAddress~119_combout\ : std_logic;
-SIGNAL \vga_0|videoGen|colorAddress~198_combout\ : std_logic;
-SIGNAL \vga_0|videoGen|LessThan294~1_combout\ : std_logic;
-SIGNAL \vga_0|videoGen|LessThan653~0_combout\ : std_logic;
-SIGNAL \vga_0|videoGen|LessThan253~0_combout\ : std_logic;
-SIGNAL \vga_0|videoGen|pixelDraw~59_combout\ : std_logic;
-SIGNAL \vga_0|videoGen|colorAddress~117_combout\ : std_logic;
-SIGNAL \vga_0|videoGen|colorAddress~116_combout\ : std_logic;
-SIGNAL \vga_0|videoGen|colorAddress~196_combout\ : std_logic;
-SIGNAL \vga_0|videoGen|LessThan294~0_combout\ : std_logic;
-SIGNAL \vga_0|videoGen|pixelDraw~60_combout\ : std_logic;
-SIGNAL \vga_0|videoGen|LessThan11~3_combout\ : std_logic;
-SIGNAL \vga_0|videoGen|colorAddress~109_combout\ : std_logic;
-SIGNAL \vga_0|videoGen|colorAddress~107_combout\ : std_logic;
-SIGNAL \vga_0|videoGen|pixelDraw~61_combout\ : std_logic;
-SIGNAL \vga_0|videoGen|pixelDraw~62_combout\ : std_logic;
-SIGNAL \vga_0|videoGen|colorAddress~105_combout\ : std_logic;
-SIGNAL \vga_0|videoGen|colorAddress~193_combout\ : std_logic;
-SIGNAL \vga_0|videoGen|colorAddress~103_combout\ : std_logic;
-SIGNAL \vga_0|videoGen|colorAddress~192_combout\ : std_logic;
-SIGNAL \vga_0|videoGen|colorAddress~101_combout\ : std_logic;
-SIGNAL \vga_0|videoGen|colorAddress~102_combout\ : std_logic;
-SIGNAL \vga_0|videoGen|colorAddress~104_combout\ : std_logic;
-SIGNAL \vga_0|videoGen|colorAddress~106_combout\ : std_logic;
-SIGNAL \vga_0|videoGen|colorAddress~108_combout\ : std_logic;
-SIGNAL \vga_0|videoGen|colorAddress~110_combout\ : std_logic;
-SIGNAL \vga_0|videoGen|colorAddress~194_combout\ : std_logic;
-SIGNAL \vga_0|videoGen|colorAddress~195_combout\ : std_logic;
-SIGNAL \vga_0|videoGen|colorAddress~113_combout\ : std_logic;
-SIGNAL \vga_0|videoGen|colorAddress~114_combout\ : std_logic;
-SIGNAL \vga_0|videoGen|colorAddress~115_combout\ : std_logic;
-SIGNAL \vga_0|videoGen|colorAddress~197_combout\ : std_logic;
-SIGNAL \vga_0|videoGen|colorAddress~118_combout\ : std_logic;
-SIGNAL \vga_0|videoGen|colorAddress~199_combout\ : std_logic;
-SIGNAL \vga_0|videoGen|colorAddress~120_combout\ : std_logic;
-SIGNAL \vga_0|videoGen|colorAddress~200_combout\ : std_logic;
-SIGNAL \vga_0|videoGen|colorAddress~122_combout\ : std_logic;
-SIGNAL \vga_0|videoGen|colorAddress~123_combout\ : std_logic;
-SIGNAL \vga_0|videoGen|colorAddress~134_combout\ : std_logic;
-SIGNAL \vga_0|videoGen|colorAddress~142_combout\ : std_logic;
-SIGNAL \vga_0|videoGen|pixelDraw~18_combout\ : std_logic;
-SIGNAL \vga_0|videoGen|colorAddress~143_combout\ : std_logic;
-SIGNAL \vga_0|videoGen|colorAddress~146_combout\ : std_logic;
-SIGNAL \vga_0|videoGen|colorAddress~201_combout\ : std_logic;
-SIGNAL \vga_0|videoGen|colorAddress~144_combout\ : std_logic;
-SIGNAL \vga_0|videoGen|colorAddress~207_combout\ : std_logic;
-SIGNAL \vga_0|videoGen|colorAddress~202_combout\ : std_logic;
-SIGNAL \vga_0|videoGen|colorAddress~167_combout\ : std_logic;
-SIGNAL \vga_0|videoGen|pixelDraw~68_combout\ : std_logic;
-SIGNAL \vga_0|videoGen|colorAddress~130_combout\ : std_logic;
-SIGNAL \vga_0|videoGen|colorAddress~169_combout\ : std_logic;
-SIGNAL \vga_0|videoGen|colorAddress~170_combout\ : std_logic;
-SIGNAL \vga_0|videoGen|colorAddress~171_combout\ : std_logic;
-SIGNAL \vga_0|videoGen|colorAddress~121_combout\ : std_logic;
-SIGNAL \vga_0|videoGen|colorAddress~158_combout\ : std_logic;
-SIGNAL \vga_0|videoGen|colorAddress~205_combout\ : std_logic;
-SIGNAL \vga_0|videoGen|colorAddress~159_combout\ : std_logic;
-SIGNAL \vga_0|videoGen|colorAddress~204_combout\ : std_logic;
-SIGNAL \vga_0|videoGen|colorAddress~147_combout\ : std_logic;
-SIGNAL \vga_0|videoGen|colorAddress~148_combout\ : std_logic;
-SIGNAL \vga_0|videoGen|colorAddress~149_combout\ : std_logic;
-SIGNAL \vga_0|videoGen|colorAddress~150_combout\ : std_logic;
-SIGNAL \vga_0|videoGen|colorAddress~151_combout\ : std_logic;
-SIGNAL \vga_0|videoGen|colorAddress~152_combout\ : std_logic;
-SIGNAL \vga_0|videoGen|colorAddress~153_combout\ : std_logic;
-SIGNAL \vga_0|videoGen|colorAddress~155_combout\ : std_logic;
-SIGNAL \vga_0|videoGen|colorAddress~156_combout\ : std_logic;
-SIGNAL \vga_0|videoGen|colorAddress~157_combout\ : std_logic;
-SIGNAL \vga_0|videoGen|colorAddress~206_combout\ : std_logic;
-SIGNAL \vga_0|videoGen|colorAddress~162_combout\ : std_logic;
-SIGNAL \vga_0|videoGen|colorAddress~172_combout\ : std_logic;
+SIGNAL \vga_0|videoGen|LessThan3~1_combout\ : std_logic;
+SIGNAL \vga_0|videoGen|pixelDraw~78_combout\ : std_logic;
+SIGNAL \vga_0|videoGen|LessThan93~0_combout\ : std_logic;
+SIGNAL \vga_0|videoGen|LessThan6~0_combout\ : std_logic;
+SIGNAL \vga_0|videoGen|LessThan773~0_combout\ : std_logic;
+SIGNAL \vga_0|videoGen|pixelDraw~75_combout\ : std_logic;
+SIGNAL \vga_0|videoGen|LessThan373~2_combout\ : std_logic;
+SIGNAL \vga_0|videoGen|LessThan5~0_combout\ : std_logic;
+SIGNAL \vga_0|videoGen|pixelDraw~76_combout\ : std_logic;
+SIGNAL \vga_0|videoGen|pixelDraw~77_combout\ : std_logic;
+SIGNAL \vga_0|videoGen|pixelDraw~74_combout\ : std_logic;
 SIGNAL \vga_0|videoGen|colorAddress~173_combout\ : std_logic;
 SIGNAL \vga_0|videoGen|colorAddress~174_combout\ : std_logic;
+SIGNAL \vga_0|videoGen|LessThan48~0_combout\ : std_logic;
+SIGNAL \vga_0|videoGen|pixelDraw~29_combout\ : std_logic;
+SIGNAL \vga_0|videoGen|LessThan12~0_combout\ : std_logic;
+SIGNAL \vga_0|videoGen|LessThan15~0_combout\ : std_logic;
+SIGNAL \vga_0|videoGen|pixelDraw~30_combout\ : std_logic;
+SIGNAL \vga_0|videoGen|pixelDraw~31_combout\ : std_logic;
+SIGNAL \vga_0|videoGen|LessThan15~1_combout\ : std_logic;
+SIGNAL \vga_0|videoGen|LessThan11~2_combout\ : std_logic;
+SIGNAL \vga_0|videoGen|pixelDraw~46_combout\ : std_logic;
+SIGNAL \vga_0|videoGen|colorAddress~199_combout\ : std_logic;
+SIGNAL \vga_0|videoGen|LessThan53~0_combout\ : std_logic;
+SIGNAL \vga_0|videoGen|LessThan13~1_combout\ : std_logic;
+SIGNAL \vga_0|videoGen|LessThan13~2_combout\ : std_logic;
+SIGNAL \vga_0|videoGen|LessThan13~0_combout\ : std_logic;
+SIGNAL \vga_0|videoGen|pixelDraw~81_combout\ : std_logic;
+SIGNAL \vga_0|videoGen|pixelDraw~82_combout\ : std_logic;
+SIGNAL \vga_0|videoGen|Equal3~0_combout\ : std_logic;
+SIGNAL \vga_0|videoGen|LessThan27~0_combout\ : std_logic;
+SIGNAL \vga_0|videoGen|LessThan27~1_combout\ : std_logic;
+SIGNAL \vga_0|videoGen|pixelDraw~22_combout\ : std_logic;
+SIGNAL \vga_0|videoGen|LessThan133~2_combout\ : std_logic;
+SIGNAL \vga_0|videoGen|LessThan94~0_combout\ : std_logic;
+SIGNAL \vga_0|videoGen|LessThan493~0_combout\ : std_logic;
+SIGNAL \vga_0|videoGen|pixelDraw~70_combout\ : std_logic;
+SIGNAL \vga_0|videoGen|colorAddress~128_combout\ : std_logic;
+SIGNAL \vga_0|videoGen|LessThan47~0_combout\ : std_logic;
+SIGNAL \vga_0|videoGen|pixelDraw~35_combout\ : std_logic;
+SIGNAL \vga_0|videoGen|pixelDraw~36_combout\ : std_logic;
+SIGNAL \vga_0|videoGen|pixelDraw~39_combout\ : std_logic;
+SIGNAL \vga_0|videoGen|LessThan11~0_combout\ : std_logic;
+SIGNAL \vga_0|videoGen|LessThan43~0_combout\ : std_logic;
+SIGNAL \vga_0|videoGen|pixelDraw~40_combout\ : std_logic;
+SIGNAL \vga_0|videoGen|pixelDraw~41_combout\ : std_logic;
+SIGNAL \vga_0|videoGen|colorAddress~126_combout\ : std_logic;
+SIGNAL \vga_0|videoGen|colorAddress~127_combout\ : std_logic;
+SIGNAL \vga_0|videoGen|colorAddress~129_combout\ : std_logic;
+SIGNAL \vga_0|videoGen|colorAddress~124_combout\ : std_logic;
+SIGNAL \vga_0|videoGen|LessThan35~0_combout\ : std_logic;
+SIGNAL \vga_0|videoGen|LessThan32~0_combout\ : std_logic;
+SIGNAL \vga_0|videoGen|LessThan28~0_combout\ : std_logic;
+SIGNAL \vga_0|videoGen|LessThan31~0_combout\ : std_logic;
+SIGNAL \vga_0|videoGen|pixelDraw~33_combout\ : std_logic;
+SIGNAL \vga_0|videoGen|LessThan24~0_combout\ : std_logic;
+SIGNAL \vga_0|videoGen|pixelDraw~20_combout\ : std_logic;
+SIGNAL \vga_0|videoGen|LessThan23~0_combout\ : std_logic;
+SIGNAL \vga_0|videoGen|LessThan23~1_combout\ : std_logic;
+SIGNAL \vga_0|videoGen|LessThan23~2_combout\ : std_logic;
+SIGNAL \vga_0|videoGen|pixelDraw~21_combout\ : std_logic;
+SIGNAL \vga_0|videoGen|LessThan613~0_combout\ : std_logic;
+SIGNAL \vga_0|videoGen|LessThan134~0_combout\ : std_logic;
+SIGNAL \vga_0|videoGen|pixelDraw~67_combout\ : std_logic;
+SIGNAL \vga_0|videoGen|pixelDraw~68_combout\ : std_logic;
+SIGNAL \vga_0|videoGen|colorAddress~122_combout\ : std_logic;
+SIGNAL \vga_0|videoGen|colorAddress~123_combout\ : std_logic;
+SIGNAL \vga_0|videoGen|colorAddress~125_combout\ : std_logic;
+SIGNAL \vga_0|videoGen|pixelDraw~17_combout\ : std_logic;
+SIGNAL \vga_0|videoGen|pixelDraw~18_combout\ : std_logic;
+SIGNAL \vga_0|videoGen|pixelDraw~79_combout\ : std_logic;
+SIGNAL \vga_0|videoGen|colorAddress~75_combout\ : std_logic;
+SIGNAL \vga_0|videoGen|pixelDraw~50_combout\ : std_logic;
+SIGNAL \vga_0|videoGen|pixelDraw~51_combout\ : std_logic;
+SIGNAL \vga_0|videoGen|LessThan613~1_combout\ : std_logic;
+SIGNAL \vga_0|videoGen|LessThan53~1_combout\ : std_logic;
+SIGNAL \vga_0|videoGen|LessThan54~0_combout\ : std_logic;
+SIGNAL \vga_0|videoGen|pixelDraw~52_combout\ : std_logic;
+SIGNAL \vga_0|videoGen|pixelDraw~53_combout\ : std_logic;
+SIGNAL \vga_0|videoGen|pixelDraw~54_combout\ : std_logic;
+SIGNAL \vga_0|videoGen|colorAddress~76_combout\ : std_logic;
+SIGNAL \vga_0|videoGen|colorAddress~77_combout\ : std_logic;
+SIGNAL \vga_0|videoGen|pixelDraw~47_combout\ : std_logic;
+SIGNAL \vga_0|videoGen|LessThan534~0_combout\ : std_logic;
+SIGNAL \vga_0|videoGen|pixelDraw~48_combout\ : std_logic;
+SIGNAL \vga_0|videoGen|pixelDraw~49_combout\ : std_logic;
+SIGNAL \vga_0|videoGen|colorAddress~78_combout\ : std_logic;
+SIGNAL \vga_0|videoGen|LessThan693~0_combout\ : std_logic;
+SIGNAL \vga_0|videoGen|LessThan334~0_combout\ : std_logic;
+SIGNAL \vga_0|videoGen|LessThan293~0_combout\ : std_logic;
+SIGNAL \vga_0|videoGen|LessThan294~0_combout\ : std_logic;
+SIGNAL \vga_0|videoGen|pixelDraw~32_combout\ : std_logic;
+SIGNAL \vga_0|videoGen|colorAddress~45_combout\ : std_logic;
+SIGNAL \vga_0|videoGen|pixelDraw~37_combout\ : std_logic;
+SIGNAL \vga_0|videoGen|pixelDraw~83_combout\ : std_logic;
+SIGNAL \vga_0|videoGen|pixelDraw~84_combout\ : std_logic;
+SIGNAL \vga_0|videoGen|pixelDraw~38_combout\ : std_logic;
+SIGNAL \vga_0|videoGen|colorAddress~47_combout\ : std_logic;
+SIGNAL \vga_0|videoGen|pixelDraw~24_combout\ : std_logic;
+SIGNAL \vga_0|videoGen|pixelDraw~25_combout\ : std_logic;
+SIGNAL \vga_0|videoGen|pixelDraw~26_combout\ : std_logic;
+SIGNAL \vga_0|videoGen|LessThan573~0_combout\ : std_logic;
+SIGNAL \vga_0|videoGen|pixelDraw~23_combout\ : std_logic;
+SIGNAL \vga_0|videoGen|LessThan254~0_combout\ : std_logic;
+SIGNAL \vga_0|videoGen|pixelDraw~27_combout\ : std_logic;
+SIGNAL \vga_0|videoGen|LessThan653~2_combout\ : std_logic;
+SIGNAL \vga_0|videoGen|pixelDraw~28_combout\ : std_logic;
+SIGNAL \vga_0|videoGen|colorAddress~44_combout\ : std_logic;
+SIGNAL \vga_0|videoGen|colorAddress~48_combout\ : std_logic;
+SIGNAL \vga_0|videoGen|LessThan734~0_combout\ : std_logic;
+SIGNAL \vga_0|videoGen|LessThan333~2_combout\ : std_logic;
+SIGNAL \vga_0|videoGen|pixelDraw~45_combout\ : std_logic;
+SIGNAL \vga_0|videoGen|LessThan373~1_combout\ : std_logic;
+SIGNAL \vga_0|videoGen|pixelDraw~42_combout\ : std_logic;
+SIGNAL \vga_0|videoGen|pixelDraw~43_combout\ : std_logic;
+SIGNAL \vga_0|videoGen|pixelDraw~44_combout\ : std_logic;
+SIGNAL \vga_0|videoGen|colorAddress~71_combout\ : std_logic;
+SIGNAL \vga_0|videoGen|LessThan36~0_combout\ : std_logic;
+SIGNAL \vga_0|videoGen|LessThan35~1_combout\ : std_logic;
+SIGNAL \vga_0|videoGen|pixelDraw~34_combout\ : std_logic;
+SIGNAL \vga_0|videoGen|colorAddress~68_combout\ : std_logic;
+SIGNAL \vga_0|videoGen|colorAddress~69_combout\ : std_logic;
+SIGNAL \vga_0|videoGen|colorAddress~66_combout\ : std_logic;
+SIGNAL \vga_0|videoGen|colorAddress~67_combout\ : std_logic;
+SIGNAL \vga_0|videoGen|colorAddress~72_combout\ : std_logic;
+SIGNAL \vga_0|videoGen|colorAddress~63_combout\ : std_logic;
+SIGNAL \vga_0|videoGen|colorAddress~64_combout\ : std_logic;
+SIGNAL \vga_0|videoGen|colorAddress~57_combout\ : std_logic;
+SIGNAL \vga_0|videoGen|colorAddress~58_combout\ : std_logic;
+SIGNAL \vga_0|videoGen|colorAddress~61_combout\ : std_logic;
+SIGNAL \vga_0|videoGen|colorAddress~62_combout\ : std_logic;
+SIGNAL \vga_0|videoGen|colorAddress~65_combout\ : std_logic;
+SIGNAL \vga_0|videoGen|colorAddress~73_combout\ : std_logic;
+SIGNAL \vga_0|videoGen|LessThan133~0_combout\ : std_logic;
+SIGNAL \vga_0|videoGen|LessThan133~1_combout\ : std_logic;
+SIGNAL \vga_0|videoGen|pixelDraw~55_combout\ : std_logic;
+SIGNAL \vga_0|videoGen|pixelDraw~56_combout\ : std_logic;
+SIGNAL \vga_0|videoGen|colorAddress~85_combout\ : std_logic;
+SIGNAL \vga_0|videoGen|colorAddress~86_combout\ : std_logic;
+SIGNAL \vga_0|videoGen|colorAddress~187_combout\ : std_logic;
+SIGNAL \vga_0|videoGen|colorAddress~87_combout\ : std_logic;
+SIGNAL \vga_0|videoGen|colorAddress~90_combout\ : std_logic;
+SIGNAL \vga_0|videoGen|colorAddress~91_combout\ : std_logic;
+SIGNAL \vga_0|videoGen|colorAddress~92_combout\ : std_logic;
+SIGNAL \vga_0|videoGen|colorAddress~93_combout\ : std_logic;
+SIGNAL \vga_0|videoGen|colorAddress~94_combout\ : std_logic;
+SIGNAL \vga_0|videoGen|colorAddress~95_combout\ : std_logic;
+SIGNAL \vga_0|videoGen|colorAddress~107_combout\ : std_logic;
+SIGNAL \vga_0|videoGen|colorAddress~106_combout\ : std_logic;
+SIGNAL \vga_0|videoGen|LessThan214~0_combout\ : std_logic;
+SIGNAL \vga_0|videoGen|LessThan213~0_combout\ : std_logic;
+SIGNAL \vga_0|videoGen|pixelDraw~61_combout\ : std_logic;
+SIGNAL \vga_0|videoGen|colorAddress~115_combout\ : std_logic;
+SIGNAL \vga_0|videoGen|colorAddress~194_combout\ : std_logic;
+SIGNAL \vga_0|videoGen|LessThan294~1_combout\ : std_logic;
+SIGNAL \vga_0|videoGen|LessThan253~0_combout\ : std_logic;
+SIGNAL \vga_0|videoGen|pixelDraw~62_combout\ : std_logic;
+SIGNAL \vga_0|videoGen|colorAddress~112_combout\ : std_logic;
+SIGNAL \vga_0|videoGen|colorAddress~192_combout\ : std_logic;
+SIGNAL \vga_0|videoGen|pixelDraw~63_combout\ : std_logic;
+SIGNAL \vga_0|videoGen|colorAddress~109_combout\ : std_logic;
+SIGNAL \vga_0|videoGen|colorAddress~191_combout\ : std_logic;
+SIGNAL \vga_0|videoGen|colorAddress~104_combout\ : std_logic;
+SIGNAL \vga_0|videoGen|colorAddress~102_combout\ : std_logic;
+SIGNAL \vga_0|videoGen|colorAddress~100_combout\ : std_logic;
+SIGNAL \vga_0|videoGen|LessThan374~0_combout\ : std_logic;
+SIGNAL \vga_0|videoGen|LessThan373~0_combout\ : std_logic;
+SIGNAL \vga_0|videoGen|LessThan374~1_combout\ : std_logic;
+SIGNAL \vga_0|videoGen|pixelDraw~57_combout\ : std_logic;
+SIGNAL \vga_0|videoGen|pixelDraw~58_combout\ : std_logic;
+SIGNAL \vga_0|videoGen|colorAddress~96_combout\ : std_logic;
+SIGNAL \vga_0|videoGen|colorAddress~188_combout\ : std_logic;
+SIGNAL \vga_0|videoGen|colorAddress~97_combout\ : std_logic;
+SIGNAL \vga_0|videoGen|LessThan11~3_combout\ : std_logic;
+SIGNAL \vga_0|videoGen|colorAddress~189_combout\ : std_logic;
+SIGNAL \vga_0|videoGen|colorAddress~98_combout\ : std_logic;
+SIGNAL \vga_0|videoGen|colorAddress~99_combout\ : std_logic;
+SIGNAL \vga_0|videoGen|colorAddress~101_combout\ : std_logic;
+SIGNAL \vga_0|videoGen|colorAddress~103_combout\ : std_logic;
+SIGNAL \vga_0|videoGen|colorAddress~105_combout\ : std_logic;
+SIGNAL \vga_0|videoGen|colorAddress~190_combout\ : std_logic;
+SIGNAL \vga_0|videoGen|colorAddress~108_combout\ : std_logic;
+SIGNAL \vga_0|videoGen|colorAddress~110_combout\ : std_logic;
+SIGNAL \vga_0|videoGen|colorAddress~193_combout\ : std_logic;
+SIGNAL \vga_0|videoGen|colorAddress~113_combout\ : std_logic;
+SIGNAL \vga_0|videoGen|colorAddress~195_combout\ : std_logic;
+SIGNAL \vga_0|videoGen|colorAddress~116_combout\ : std_logic;
+SIGNAL \vga_0|videoGen|colorAddress~196_combout\ : std_logic;
+SIGNAL \vga_0|videoGen|colorAddress~118_combout\ : std_logic;
+SIGNAL \vga_0|videoGen|colorAddress~119_combout\ : std_logic;
+SIGNAL \vga_0|videoGen|colorAddress~130_combout\ : std_logic;
+SIGNAL \vga_0|videoGen|LessThan54~1_combout\ : std_logic;
+SIGNAL \vga_0|videoGen|pixelDraw~72_combout\ : std_logic;
+SIGNAL \vga_0|videoGen|pixelDraw~73_combout\ : std_logic;
+SIGNAL \vga_0|videoGen|colorAddress~131_combout\ : std_logic;
+SIGNAL \vga_0|videoGen|colorAddress~132_combout\ : std_logic;
+SIGNAL \vga_0|videoGen|colorAddress~133_combout\ : std_logic;
+SIGNAL \vga_0|videoGen|colorAddress~135_combout\ : std_logic;
+SIGNAL \vga_0|videoGen|colorAddress~138_combout\ : std_logic;
+SIGNAL \vga_0|videoGen|colorAddress~139_combout\ : std_logic;
+SIGNAL \vga_0|videoGen|pixelDraw~59_combout\ : std_logic;
+SIGNAL \vga_0|videoGen|pixelDraw~60_combout\ : std_logic;
+SIGNAL \vga_0|videoGen|colorAddress~120_combout\ : std_logic;
+SIGNAL \vga_0|videoGen|pixelDraw~66_combout\ : std_logic;
+SIGNAL \vga_0|videoGen|colorAddress~121_combout\ : std_logic;
+SIGNAL \vga_0|videoGen|colorAddress~198_combout\ : std_logic;
+SIGNAL \vga_0|videoGen|colorAddress~141_combout\ : std_logic;
+SIGNAL \vga_0|videoGen|colorAddress~142_combout\ : std_logic;
+SIGNAL \vga_0|videoGen|colorAddress~164_combout\ : std_logic;
+SIGNAL \vga_0|videoGen|colorAddress~166_combout\ : std_logic;
+SIGNAL \vga_0|videoGen|colorAddress~167_combout\ : std_logic;
+SIGNAL \vga_0|videoGen|colorAddress~168_combout\ : std_logic;
+SIGNAL \vga_0|videoGen|colorAddress~197_combout\ : std_logic;
+SIGNAL \vga_0|videoGen|colorAddress~140_combout\ : std_logic;
+SIGNAL \vga_0|videoGen|colorAddress~201_combout\ : std_logic;
+SIGNAL \vga_0|videoGen|colorAddress~160_combout\ : std_logic;
+SIGNAL \vga_0|videoGen|colorAddress~161_combout\ : std_logic;
+SIGNAL \vga_0|videoGen|colorAddress~162_combout\ : std_logic;
+SIGNAL \vga_0|videoGen|colorAddress~163_combout\ : std_logic;
+SIGNAL \vga_0|videoGen|colorAddress~169_combout\ : std_logic;
+SIGNAL \vga_0|videoGen|colorAddress~171_combout\ : std_logic;
+SIGNAL \vga_0|videoGen|colorAddress~175_combout\ : std_logic;
+SIGNAL \vga_0|videoGen|colorAddress~177_combout\ : std_logic;
 SIGNAL \vga_0|videoGen|colorAddress~178_combout\ : std_logic;
 SIGNAL \vga_0|videoGen|colorAddress~179_combout\ : std_logic;
-SIGNAL \vga_0|videoGen|colorAddress~180_combout\ : std_logic;
-SIGNAL \vga_0|videoGen|colorAddress~181_combout\ : std_logic;
-SIGNAL \vga_0|videoGen|colorAddress~187_combout\ : std_logic;
+SIGNAL \vga_0|videoGen|colorAddress~182_combout\ : std_logic;
 SIGNAL \vga_0|videoGen|colorAddress~183_combout\ : std_logic;
-SIGNAL \vga_0|videoGen|pixelDraw~78_combout\ : std_logic;
-SIGNAL \vga_0|videoGen|colorAddress~184_combout\ : std_logic;
 SIGNAL \vga_0|videoGen|colorAddress~185_combout\ : std_logic;
-SIGNAL \vga_0|videoGen|colorAddress~186_combout\ : std_logic;
-SIGNAL \vga_0|videoGen|colorAddress~188_combout\ : std_logic;
 SIGNAL \vga_0|videoSync|process_1~3_combout\ : std_logic;
 SIGNAL \vga_0|videoSync|process_1~6_combout\ : std_logic;
 SIGNAL \vga_0|videoSync|horiz_sync~regout\ : std_logic;
+SIGNAL \vga_0|videoSync|horiz_sync_out~feeder_combout\ : std_logic;
 SIGNAL \vga_0|videoSync|horiz_sync_out~regout\ : std_logic;
+SIGNAL \vga_0|videoSync|process_1~7_combout\ : std_logic;
 SIGNAL \vga_0|videoSync|process_1~8_combout\ : std_logic;
 SIGNAL \vga_0|videoSync|vert_sync~regout\ : std_logic;
 SIGNAL \vga_0|videoSync|vert_sync_out~feeder_combout\ : std_logic;
 SIGNAL \vga_0|videoSync|vert_sync_out~regout\ : std_logic;
 SIGNAL \vga_0|videoSync|video_on_h~regout\ : std_logic;
-SIGNAL \vga_0|videoSync|video_on_v~feeder_combout\ : std_logic;
 SIGNAL \vga_0|videoSync|video_on_v~regout\ : std_logic;
 SIGNAL \vga_0|videoSync|video_on~combout\ : std_logic;
 SIGNAL \data_in~combout\ : std_logic;
@@ -786,7 +782,7 @@ ww_devoe <= devoe;
 ww_devclrn <= devclrn;
 ww_devpor <= devpor;
 
-\vga_0|videoGen|colors|altsyncram_component|auto_generated|ram_block1a0_PORTAADDR_bus\ <= (\vga_0|videoGen|colorAddress~188_combout\ & \vga_0|videoGen|colorAddress~181_combout\ & \vga_0|videoGen|colorAddress~178_combout\);
+\vga_0|videoGen|colors|altsyncram_component|auto_generated|ram_block1a0_PORTAADDR_bus\ <= (\vga_0|videoGen|colorAddress~185_combout\ & \vga_0|videoGen|colorAddress~178_combout\ & \vga_0|videoGen|colorAddress~175_combout\);
 
 \vga_0|videoGen|colors|altsyncram_component|auto_generated|q_a\(0) <= \vga_0|videoGen|colors|altsyncram_component|auto_generated|ram_block1a0_PORTADATAOUT_bus\(0);
 \vga_0|videoGen|colors|altsyncram_component|auto_generated|q_a\(1) <= \vga_0|videoGen|colors|altsyncram_component|auto_generated|ram_block1a0_PORTADATAOUT_bus\(1);
@@ -849,7 +845,7 @@ ww_devpor <= devpor;
 
 \clk~clkctrl_INCLK_bus\ <= (gnd & gnd & gnd & \clk~combout\);
 
--- Location: M4K_X26_Y20
+-- Location: M4K_X26_Y24
 \vga_0|videoGen|font_unit|ROM_rtl_0|auto_generated|ram_block1a0\ : cycloneii_ram_block
 -- pragma translate_off
 GENERIC MAP (
@@ -888,7 +884,7 @@ PORT MAP (
 	devpor => ww_devpor,
 	portadataout => \vga_0|videoGen|font_unit|ROM_rtl_0|auto_generated|ram_block1a0_PORTADATAOUT_bus\);
 
--- Location: M4K_X26_Y23
+-- Location: M4K_X26_Y25
 \vga_0|videoGen|font_unit|ROM_rtl_0|auto_generated|ram_block1a4\ : cycloneii_ram_block
 -- pragma translate_off
 GENERIC MAP (
@@ -927,7 +923,7 @@ PORT MAP (
 	devpor => ww_devpor,
 	portadataout => \vga_0|videoGen|font_unit|ROM_rtl_0|auto_generated|ram_block1a4_PORTADATAOUT_bus\);
 
--- Location: LCCOMB_X22_Y21_N16
+-- Location: LCCOMB_X29_Y27_N16
 \vga_0|videoSync|Add1~10\ : cycloneii_lcell_comb
 -- Equation(s):
 -- \vga_0|videoSync|Add1~10_combout\ = (\vga_0|videoSync|v_count\(5) & (!\vga_0|videoSync|Add1~9\)) # (!\vga_0|videoSync|v_count\(5) & ((\vga_0|videoSync|Add1~9\) # (GND)))
@@ -945,1807 +941,7 @@ PORT MAP (
 	combout => \vga_0|videoSync|Add1~10_combout\,
 	cout => \vga_0|videoSync|Add1~11\);
 
--- Location: LCCOMB_X22_Y21_N22
-\vga_0|videoSync|Add1~16\ : cycloneii_lcell_comb
--- Equation(s):
--- \vga_0|videoSync|Add1~16_combout\ = (\vga_0|videoSync|v_count\(8) & (\vga_0|videoSync|Add1~15\ $ (GND))) # (!\vga_0|videoSync|v_count\(8) & (!\vga_0|videoSync|Add1~15\ & VCC))
--- \vga_0|videoSync|Add1~17\ = CARRY((\vga_0|videoSync|v_count\(8) & !\vga_0|videoSync|Add1~15\))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1100001100001100",
-	sum_lutc_input => "cin")
--- pragma translate_on
-PORT MAP (
-	datab => \vga_0|videoSync|v_count\(8),
-	datad => VCC,
-	cin => \vga_0|videoSync|Add1~15\,
-	combout => \vga_0|videoSync|Add1~16_combout\,
-	cout => \vga_0|videoSync|Add1~17\);
-
--- Location: LCCOMB_X22_Y21_N24
-\vga_0|videoSync|Add1~18\ : cycloneii_lcell_comb
--- Equation(s):
--- \vga_0|videoSync|Add1~18_combout\ = \vga_0|videoSync|Add1~17\ $ (\vga_0|videoSync|v_count\(9))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0000111111110000",
-	sum_lutc_input => "cin")
--- pragma translate_on
-PORT MAP (
-	datad => \vga_0|videoSync|v_count\(9),
-	cin => \vga_0|videoSync|Add1~17\,
-	combout => \vga_0|videoSync|Add1~18_combout\);
-
--- Location: LCCOMB_X20_Y22_N20
-\vga_0|videoSync|Add0~16\ : cycloneii_lcell_comb
--- Equation(s):
--- \vga_0|videoSync|Add0~16_combout\ = (\vga_0|videoSync|h_count\(8) & (\vga_0|videoSync|Add0~15\ $ (GND))) # (!\vga_0|videoSync|h_count\(8) & (!\vga_0|videoSync|Add0~15\ & VCC))
--- \vga_0|videoSync|Add0~17\ = CARRY((\vga_0|videoSync|h_count\(8) & !\vga_0|videoSync|Add0~15\))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1100001100001100",
-	sum_lutc_input => "cin")
--- pragma translate_on
-PORT MAP (
-	datab => \vga_0|videoSync|h_count\(8),
-	datad => VCC,
-	cin => \vga_0|videoSync|Add0~15\,
-	combout => \vga_0|videoSync|Add0~16_combout\,
-	cout => \vga_0|videoSync|Add0~17\);
-
--- Location: LCCOMB_X20_Y22_N22
-\vga_0|videoSync|Add0~18\ : cycloneii_lcell_comb
--- Equation(s):
--- \vga_0|videoSync|Add0~18_combout\ = \vga_0|videoSync|Add0~17\ $ (\vga_0|videoSync|h_count\(9))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0000111111110000",
-	sum_lutc_input => "cin")
--- pragma translate_on
-PORT MAP (
-	datad => \vga_0|videoSync|h_count\(9),
-	cin => \vga_0|videoSync|Add0~17\,
-	combout => \vga_0|videoSync|Add0~18_combout\);
-
--- Location: LCCOMB_X25_Y22_N28
-\vga_0|videoGen|pixelDraw~10\ : cycloneii_lcell_comb
--- Equation(s):
--- \vga_0|videoGen|pixelDraw~10_combout\ = (\vga_0|videoSync|pixel_row\(7) & (!\vga_0|videoSync|pixel_row\(8) & !\vga_0|videoSync|pixel_row\(6)))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0000000000001100",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	datab => \vga_0|videoSync|pixel_row\(7),
-	datac => \vga_0|videoSync|pixel_row\(8),
-	datad => \vga_0|videoSync|pixel_row\(6),
-	combout => \vga_0|videoGen|pixelDraw~10_combout\);
-
--- Location: LCCOMB_X23_Y23_N4
-\vga_0|videoGen|colorAddress~50\ : cycloneii_lcell_comb
--- Equation(s):
--- \vga_0|videoGen|colorAddress~50_combout\ = ((!\vga_0|videoGen|pixelDraw~22_combout\ & (!\vga_0|videoGen|pixelDraw~19_combout\ & !\vga_0|videoGen|pixelDraw~24_combout\))) # (!\vga_0|videoGen|pixelDraw~17_combout\)
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0011001100110111",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \vga_0|videoGen|pixelDraw~22_combout\,
-	datab => \vga_0|videoGen|pixelDraw~17_combout\,
-	datac => \vga_0|videoGen|pixelDraw~19_combout\,
-	datad => \vga_0|videoGen|pixelDraw~24_combout\,
-	combout => \vga_0|videoGen|colorAddress~50_combout\);
-
--- Location: LCCOMB_X25_Y22_N16
-\vga_0|videoGen|LessThan15~1\ : cycloneii_lcell_comb
--- Equation(s):
--- \vga_0|videoGen|LessThan15~1_combout\ = (!\vga_0|videoSync|pixel_row\(7) & !\vga_0|videoSync|pixel_row\(8))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0000000000110011",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	datab => \vga_0|videoSync|pixel_row\(7),
-	datad => \vga_0|videoSync|pixel_row\(8),
-	combout => \vga_0|videoGen|LessThan15~1_combout\);
-
--- Location: LCCOMB_X23_Y23_N28
-\vga_0|videoGen|colorAddress~51\ : cycloneii_lcell_comb
--- Equation(s):
--- \vga_0|videoGen|colorAddress~51_combout\ = ((!\vga_0|videoGen|pixelDraw~77_combout\ & (!\vga_0|videoGen|pixelDraw~16_combout\ & !\vga_0|videoGen|pixelDraw~27_combout\))) # (!\vga_0|videoGen|pixelDraw~28_combout\)
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0000000111111111",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \vga_0|videoGen|pixelDraw~77_combout\,
-	datab => \vga_0|videoGen|pixelDraw~16_combout\,
-	datac => \vga_0|videoGen|pixelDraw~27_combout\,
-	datad => \vga_0|videoGen|pixelDraw~28_combout\,
-	combout => \vga_0|videoGen|colorAddress~51_combout\);
-
--- Location: LCCOMB_X23_Y23_N6
-\vga_0|videoGen|colorAddress~52\ : cycloneii_lcell_comb
--- Equation(s):
--- \vga_0|videoGen|colorAddress~52_combout\ = ((!\vga_0|videoGen|pixelDraw~30_combout\ & (!\vga_0|videoGen|pixelDraw~17_combout\ & !\vga_0|videoGen|pixelDraw~29_combout\))) # (!\vga_0|videoGen|pixelDraw~28_combout\)
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0011001100110111",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \vga_0|videoGen|pixelDraw~30_combout\,
-	datab => \vga_0|videoGen|pixelDraw~28_combout\,
-	datac => \vga_0|videoGen|pixelDraw~17_combout\,
-	datad => \vga_0|videoGen|pixelDraw~29_combout\,
-	combout => \vga_0|videoGen|colorAddress~52_combout\);
-
--- Location: LCCOMB_X25_Y21_N14
-\vga_0|videoGen|LessThan47~1\ : cycloneii_lcell_comb
--- Equation(s):
--- \vga_0|videoGen|LessThan47~1_combout\ = (!\vga_0|videoSync|pixel_row\(0) & (!\vga_0|videoSync|pixel_row\(1) & (!\vga_0|videoSync|pixel_row\(2) & !\vga_0|videoSync|pixel_row\(4))))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0000000000000001",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \vga_0|videoSync|pixel_row\(0),
-	datab => \vga_0|videoSync|pixel_row\(1),
-	datac => \vga_0|videoSync|pixel_row\(2),
-	datad => \vga_0|videoSync|pixel_row\(4),
-	combout => \vga_0|videoGen|LessThan47~1_combout\);
-
--- Location: LCCOMB_X23_Y23_N8
-\vga_0|videoGen|colorAddress~53\ : cycloneii_lcell_comb
--- Equation(s):
--- \vga_0|videoGen|colorAddress~53_combout\ = ((!\vga_0|videoGen|pixelDraw~34_combout\ & (!\vga_0|videoGen|pixelDraw~32_combout\ & !\vga_0|videoGen|pixelDraw~37_combout\))) # (!\vga_0|videoGen|pixelDraw~28_combout\)
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0000000111111111",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \vga_0|videoGen|pixelDraw~34_combout\,
-	datab => \vga_0|videoGen|pixelDraw~32_combout\,
-	datac => \vga_0|videoGen|pixelDraw~37_combout\,
-	datad => \vga_0|videoGen|pixelDraw~28_combout\,
-	combout => \vga_0|videoGen|colorAddress~53_combout\);
-
--- Location: LCCOMB_X23_Y23_N14
-\vga_0|videoGen|colorAddress~54\ : cycloneii_lcell_comb
--- Equation(s):
--- \vga_0|videoGen|colorAddress~54_combout\ = (\vga_0|videoGen|colorAddress~52_combout\ & (\vga_0|videoGen|colorAddress~53_combout\ & (\vga_0|videoGen|colorAddress~50_combout\ & \vga_0|videoGen|colorAddress~51_combout\)))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1000000000000000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \vga_0|videoGen|colorAddress~52_combout\,
-	datab => \vga_0|videoGen|colorAddress~53_combout\,
-	datac => \vga_0|videoGen|colorAddress~50_combout\,
-	datad => \vga_0|videoGen|colorAddress~51_combout\,
-	combout => \vga_0|videoGen|colorAddress~54_combout\);
-
--- Location: LCCOMB_X23_Y20_N2
-\vga_0|videoGen|colorAddress~55\ : cycloneii_lcell_comb
--- Equation(s):
--- \vga_0|videoGen|colorAddress~55_combout\ = ((!\vga_0|videoGen|pixelDraw~27_combout\ & !\vga_0|videoGen|pixelDraw~77_combout\)) # (!\vga_0|videoGen|pixelDraw~22_combout\)
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0000111101011111",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \vga_0|videoGen|pixelDraw~27_combout\,
-	datac => \vga_0|videoGen|pixelDraw~22_combout\,
-	datad => \vga_0|videoGen|pixelDraw~77_combout\,
-	combout => \vga_0|videoGen|colorAddress~55_combout\);
-
--- Location: LCCOMB_X23_Y23_N18
-\vga_0|videoGen|colorAddress~65\ : cycloneii_lcell_comb
--- Equation(s):
--- \vga_0|videoGen|colorAddress~65_combout\ = ((!\vga_0|videoGen|pixelDraw~30_combout\ & !\vga_0|videoGen|pixelDraw~34_combout\)) # (!\vga_0|videoGen|pixelDraw~24_combout\)
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0101010101011111",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \vga_0|videoGen|pixelDraw~24_combout\,
-	datac => \vga_0|videoGen|pixelDraw~30_combout\,
-	datad => \vga_0|videoGen|pixelDraw~34_combout\,
-	combout => \vga_0|videoGen|colorAddress~65_combout\);
-
--- Location: LCCOMB_X23_Y23_N20
-\vga_0|videoGen|colorAddress~66\ : cycloneii_lcell_comb
--- Equation(s):
--- \vga_0|videoGen|colorAddress~66_combout\ = (\vga_0|videoGen|colorAddress~65_combout\ & (((!\vga_0|videoGen|pixelDraw~32_combout\ & !\vga_0|videoGen|pixelDraw~37_combout\)) # (!\vga_0|videoGen|pixelDraw~24_combout\)))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0000010011001100",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \vga_0|videoGen|pixelDraw~32_combout\,
-	datab => \vga_0|videoGen|colorAddress~65_combout\,
-	datac => \vga_0|videoGen|pixelDraw~37_combout\,
-	datad => \vga_0|videoGen|pixelDraw~24_combout\,
-	combout => \vga_0|videoGen|colorAddress~66_combout\);
-
--- Location: LCCOMB_X23_Y21_N28
-\vga_0|videoGen|colorAddress~73\ : cycloneii_lcell_comb
--- Equation(s):
--- \vga_0|videoGen|colorAddress~73_combout\ = ((!\vga_0|videoGen|pixelDraw~29_combout\ & !\vga_0|videoGen|pixelDraw~30_combout\)) # (!\vga_0|videoGen|pixelDraw~40_combout\)
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0000010111111111",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \vga_0|videoGen|pixelDraw~29_combout\,
-	datac => \vga_0|videoGen|pixelDraw~30_combout\,
-	datad => \vga_0|videoGen|pixelDraw~40_combout\,
-	combout => \vga_0|videoGen|colorAddress~73_combout\);
-
--- Location: LCCOMB_X23_Y21_N10
-\vga_0|videoGen|colorAddress~74\ : cycloneii_lcell_comb
--- Equation(s):
--- \vga_0|videoGen|colorAddress~74_combout\ = (\vga_0|videoGen|colorAddress~73_combout\ & (((!\vga_0|videoGen|pixelDraw~37_combout\ & !\vga_0|videoGen|pixelDraw~34_combout\)) # (!\vga_0|videoGen|pixelDraw~40_combout\)))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0000010011001100",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \vga_0|videoGen|pixelDraw~37_combout\,
-	datab => \vga_0|videoGen|colorAddress~73_combout\,
-	datac => \vga_0|videoGen|pixelDraw~34_combout\,
-	datad => \vga_0|videoGen|pixelDraw~40_combout\,
-	combout => \vga_0|videoGen|colorAddress~74_combout\);
-
--- Location: LCCOMB_X24_Y23_N4
-\vga_0|videoGen|colorAddress~79\ : cycloneii_lcell_comb
--- Equation(s):
--- \vga_0|videoGen|colorAddress~79_combout\ = ((!\vga_0|videoGen|pixelDraw~34_combout\ & (!\vga_0|videoGen|pixelDraw~30_combout\ & !\vga_0|videoGen|pixelDraw~29_combout\))) # (!\vga_0|videoGen|pixelDraw~45_combout\)
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0101010101010111",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \vga_0|videoGen|pixelDraw~45_combout\,
-	datab => \vga_0|videoGen|pixelDraw~34_combout\,
-	datac => \vga_0|videoGen|pixelDraw~30_combout\,
-	datad => \vga_0|videoGen|pixelDraw~29_combout\,
-	combout => \vga_0|videoGen|colorAddress~79_combout\);
-
--- Location: LCCOMB_X25_Y23_N6
-\vga_0|videoGen|colorAddress~80\ : cycloneii_lcell_comb
--- Equation(s):
--- \vga_0|videoGen|colorAddress~80_combout\ = (\vga_0|videoGen|pixelDraw~77_combout\) # ((\vga_0|videoGen|pixelDraw~32_combout\) # ((\vga_0|videoGen|pixelDraw~16_combout\) # (\vga_0|videoGen|pixelDraw~37_combout\)))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1111111111111110",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \vga_0|videoGen|pixelDraw~77_combout\,
-	datab => \vga_0|videoGen|pixelDraw~32_combout\,
-	datac => \vga_0|videoGen|pixelDraw~16_combout\,
-	datad => \vga_0|videoGen|pixelDraw~37_combout\,
-	combout => \vga_0|videoGen|colorAddress~80_combout\);
-
--- Location: LCCOMB_X21_Y23_N8
-\vga_0|videoGen|colorAddress~81\ : cycloneii_lcell_comb
--- Equation(s):
--- \vga_0|videoGen|colorAddress~81_combout\ = (\vga_0|videoGen|pixelDraw~17_combout\ & ((\vga_0|videoGen|pixelDraw~50_combout\))) # (!\vga_0|videoGen|pixelDraw~17_combout\ & (\vga_0|videoGen|pixelDraw~27_combout\))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1111101000001010",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \vga_0|videoGen|pixelDraw~27_combout\,
-	datac => \vga_0|videoGen|pixelDraw~17_combout\,
-	datad => \vga_0|videoGen|pixelDraw~50_combout\,
-	combout => \vga_0|videoGen|colorAddress~81_combout\);
-
--- Location: LCCOMB_X21_Y23_N26
-\vga_0|videoGen|colorAddress~82\ : cycloneii_lcell_comb
--- Equation(s):
--- \vga_0|videoGen|colorAddress~82_combout\ = (\vga_0|videoGen|pixelDraw~17_combout\ & ((\vga_0|videoGen|pixelDraw~45_combout\) # ((\vga_0|videoGen|colorAddress~81_combout\) # (\vga_0|videoGen|pixelDraw~47_combout\)))) # 
--- (!\vga_0|videoGen|pixelDraw~17_combout\ & (\vga_0|videoGen|colorAddress~81_combout\ & ((\vga_0|videoGen|pixelDraw~45_combout\) # (\vga_0|videoGen|pixelDraw~47_combout\))))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1111110011101000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \vga_0|videoGen|pixelDraw~45_combout\,
-	datab => \vga_0|videoGen|pixelDraw~17_combout\,
-	datac => \vga_0|videoGen|colorAddress~81_combout\,
-	datad => \vga_0|videoGen|pixelDraw~47_combout\,
-	combout => \vga_0|videoGen|colorAddress~82_combout\);
-
--- Location: LCCOMB_X24_Y23_N10
-\vga_0|videoGen|colorAddress~83\ : cycloneii_lcell_comb
--- Equation(s):
--- \vga_0|videoGen|colorAddress~83_combout\ = (!\vga_0|videoGen|colorAddress~82_combout\ & (\vga_0|videoGen|colorAddress~79_combout\ & ((!\vga_0|videoGen|colorAddress~80_combout\) # (!\vga_0|videoGen|pixelDraw~45_combout\))))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0001000001010000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \vga_0|videoGen|colorAddress~82_combout\,
-	datab => \vga_0|videoGen|pixelDraw~45_combout\,
-	datac => \vga_0|videoGen|colorAddress~79_combout\,
-	datad => \vga_0|videoGen|colorAddress~80_combout\,
-	combout => \vga_0|videoGen|colorAddress~83_combout\);
-
--- Location: LCCOMB_X23_Y25_N20
-\vga_0|videoGen|colorAddress~84\ : cycloneii_lcell_comb
--- Equation(s):
--- \vga_0|videoGen|colorAddress~84_combout\ = (\vga_0|videoGen|pixelDraw~77_combout\) # ((\vga_0|videoGen|pixelDraw~29_combout\) # ((\vga_0|videoGen|pixelDraw~30_combout\) # (\vga_0|videoGen|colorAddress~190_combout\)))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1111111111111110",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \vga_0|videoGen|pixelDraw~77_combout\,
-	datab => \vga_0|videoGen|pixelDraw~29_combout\,
-	datac => \vga_0|videoGen|pixelDraw~30_combout\,
-	datad => \vga_0|videoGen|colorAddress~190_combout\,
-	combout => \vga_0|videoGen|colorAddress~84_combout\);
-
--- Location: LCCOMB_X23_Y25_N30
-\vga_0|videoGen|colorAddress~94\ : cycloneii_lcell_comb
--- Equation(s):
--- \vga_0|videoGen|colorAddress~94_combout\ = ((!\vga_0|videoGen|pixelDraw~77_combout\ & !\vga_0|videoGen|pixelDraw~27_combout\)) # (!\vga_0|videoGen|pixelDraw~19_combout\)
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0000111101011111",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \vga_0|videoGen|pixelDraw~77_combout\,
-	datac => \vga_0|videoGen|pixelDraw~19_combout\,
-	datad => \vga_0|videoGen|pixelDraw~27_combout\,
-	combout => \vga_0|videoGen|colorAddress~94_combout\);
-
--- Location: LCCOMB_X23_Y25_N12
-\vga_0|videoGen|colorAddress~95\ : cycloneii_lcell_comb
--- Equation(s):
--- \vga_0|videoGen|colorAddress~95_combout\ = (\vga_0|videoGen|colorAddress~94_combout\ & (((!\vga_0|videoGen|pixelDraw~32_combout\ & !\vga_0|videoGen|pixelDraw~37_combout\)) # (!\vga_0|videoGen|pixelDraw~52_combout\)))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0011011100000000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \vga_0|videoGen|pixelDraw~32_combout\,
-	datab => \vga_0|videoGen|pixelDraw~52_combout\,
-	datac => \vga_0|videoGen|pixelDraw~37_combout\,
-	datad => \vga_0|videoGen|colorAddress~94_combout\,
-	combout => \vga_0|videoGen|colorAddress~95_combout\);
-
--- Location: LCCOMB_X23_Y21_N24
-\vga_0|videoGen|pixelDraw~53\ : cycloneii_lcell_comb
--- Equation(s):
--- \vga_0|videoGen|pixelDraw~53_combout\ = (\vga_0|videoGen|pixelDraw~19_combout\ & \vga_0|videoGen|pixelDraw~42_combout\)
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1111000000000000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	datac => \vga_0|videoGen|pixelDraw~19_combout\,
-	datad => \vga_0|videoGen|pixelDraw~42_combout\,
-	combout => \vga_0|videoGen|pixelDraw~53_combout\);
-
--- Location: LCCOMB_X24_Y22_N2
-\vga_0|videoGen|LessThan413~0\ : cycloneii_lcell_comb
--- Equation(s):
--- \vga_0|videoGen|LessThan413~0_combout\ = (!\vga_0|videoSync|pixel_column\(9) & (!\vga_0|videoSync|pixel_column\(6) & !\vga_0|videoSync|pixel_column\(7)))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0000000000010001",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \vga_0|videoSync|pixel_column\(9),
-	datab => \vga_0|videoSync|pixel_column\(6),
-	datad => \vga_0|videoSync|pixel_column\(7),
-	combout => \vga_0|videoGen|LessThan413~0_combout\);
-
--- Location: LCCOMB_X22_Y24_N28
-\vga_0|videoGen|colorAddress~126\ : cycloneii_lcell_comb
--- Equation(s):
--- \vga_0|videoGen|colorAddress~126_combout\ = ((!\vga_0|videoGen|pixelDraw~77_combout\ & (!\vga_0|videoGen|pixelDraw~17_combout\ & !\vga_0|videoGen|pixelDraw~16_combout\))) # (!\vga_0|videoGen|pixelDraw~65_combout\)
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0011001100110111",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \vga_0|videoGen|pixelDraw~77_combout\,
-	datab => \vga_0|videoGen|pixelDraw~65_combout\,
-	datac => \vga_0|videoGen|pixelDraw~17_combout\,
-	datad => \vga_0|videoGen|pixelDraw~16_combout\,
-	combout => \vga_0|videoGen|colorAddress~126_combout\);
-
--- Location: LCCOMB_X22_Y24_N10
-\vga_0|videoGen|colorAddress~127\ : cycloneii_lcell_comb
--- Equation(s):
--- \vga_0|videoGen|colorAddress~127_combout\ = (\vga_0|videoGen|colorAddress~126_combout\ & (((!\vga_0|videoGen|pixelDraw~30_combout\ & !\vga_0|videoGen|pixelDraw~29_combout\)) # (!\vga_0|videoGen|pixelDraw~65_combout\)))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0011011100000000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \vga_0|videoGen|pixelDraw~30_combout\,
-	datab => \vga_0|videoGen|pixelDraw~65_combout\,
-	datac => \vga_0|videoGen|pixelDraw~29_combout\,
-	datad => \vga_0|videoGen|colorAddress~126_combout\,
-	combout => \vga_0|videoGen|colorAddress~127_combout\);
-
--- Location: LCCOMB_X24_Y25_N30
-\vga_0|videoGen|colorAddress~131\ : cycloneii_lcell_comb
--- Equation(s):
--- \vga_0|videoGen|colorAddress~131_combout\ = (\vga_0|videoGen|colorAddress~130_combout\ & ((!\vga_0|videoGen|colorAddress~116_combout\) # (!\vga_0|videoGen|pixelDraw~67_combout\)))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0011111100000000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	datab => \vga_0|videoGen|pixelDraw~67_combout\,
-	datac => \vga_0|videoGen|colorAddress~116_combout\,
-	datad => \vga_0|videoGen|colorAddress~130_combout\,
-	combout => \vga_0|videoGen|colorAddress~131_combout\);
-
--- Location: LCCOMB_X24_Y25_N8
-\vga_0|videoGen|colorAddress~132\ : cycloneii_lcell_comb
--- Equation(s):
--- \vga_0|videoGen|colorAddress~132_combout\ = ((!\vga_0|videoGen|pixelDraw~77_combout\ & (!\vga_0|videoGen|pixelDraw~17_combout\ & !\vga_0|videoGen|pixelDraw~27_combout\))) # (!\vga_0|videoGen|pixelDraw~67_combout\)
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0011001100110111",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \vga_0|videoGen|pixelDraw~77_combout\,
-	datab => \vga_0|videoGen|pixelDraw~67_combout\,
-	datac => \vga_0|videoGen|pixelDraw~17_combout\,
-	datad => \vga_0|videoGen|pixelDraw~27_combout\,
-	combout => \vga_0|videoGen|colorAddress~132_combout\);
-
--- Location: LCCOMB_X24_Y25_N10
-\vga_0|videoGen|colorAddress~133\ : cycloneii_lcell_comb
--- Equation(s):
--- \vga_0|videoGen|colorAddress~133_combout\ = (\vga_0|videoGen|colorAddress~132_combout\ & (\vga_0|videoGen|colorAddress~131_combout\ & ((!\vga_0|videoGen|pixelDraw~16_combout\) # (!\vga_0|videoGen|pixelDraw~67_combout\))))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0010101000000000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \vga_0|videoGen|colorAddress~132_combout\,
-	datab => \vga_0|videoGen|pixelDraw~67_combout\,
-	datac => \vga_0|videoGen|pixelDraw~16_combout\,
-	datad => \vga_0|videoGen|colorAddress~131_combout\,
-	combout => \vga_0|videoGen|colorAddress~133_combout\);
-
--- Location: LCCOMB_X25_Y25_N24
-\vga_0|videoGen|colorAddress~140\ : cycloneii_lcell_comb
--- Equation(s):
--- \vga_0|videoGen|colorAddress~140_combout\ = (\vga_0|videoGen|pixelDraw~30_combout\) # ((\vga_0|videoGen|pixelDraw~34_combout\) # (\vga_0|videoGen|pixelDraw~37_combout\))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1111111111111100",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	datab => \vga_0|videoGen|pixelDraw~30_combout\,
-	datac => \vga_0|videoGen|pixelDraw~34_combout\,
-	datad => \vga_0|videoGen|pixelDraw~37_combout\,
-	combout => \vga_0|videoGen|colorAddress~140_combout\);
-
--- Location: LCCOMB_X25_Y25_N22
-\vga_0|videoGen|colorAddress~141\ : cycloneii_lcell_comb
--- Equation(s):
--- \vga_0|videoGen|colorAddress~141_combout\ = ((!\vga_0|videoGen|pixelDraw~32_combout\ & (!\vga_0|videoGen|pixelDraw~29_combout\ & !\vga_0|videoGen|colorAddress~140_combout\))) # (!\vga_0|videoGen|pixelDraw~13_combout\)
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0000000111111111",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \vga_0|videoGen|pixelDraw~32_combout\,
-	datab => \vga_0|videoGen|pixelDraw~29_combout\,
-	datac => \vga_0|videoGen|colorAddress~140_combout\,
-	datad => \vga_0|videoGen|pixelDraw~13_combout\,
-	combout => \vga_0|videoGen|colorAddress~141_combout\);
-
--- Location: LCCOMB_X22_Y24_N24
-\vga_0|videoGen|colorAddress~145\ : cycloneii_lcell_comb
--- Equation(s):
--- \vga_0|videoGen|colorAddress~145_combout\ = (\vga_0|videoGen|pixelDraw~65_combout\ & ((\vga_0|videoGen|pixelDraw~34_combout\) # ((\vga_0|videoGen|pixelDraw~37_combout\) # (\vga_0|videoGen|pixelDraw~32_combout\))))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1111111000000000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \vga_0|videoGen|pixelDraw~34_combout\,
-	datab => \vga_0|videoGen|pixelDraw~37_combout\,
-	datac => \vga_0|videoGen|pixelDraw~32_combout\,
-	datad => \vga_0|videoGen|pixelDraw~65_combout\,
-	combout => \vga_0|videoGen|colorAddress~145_combout\);
-
--- Location: LCCOMB_X24_Y23_N0
-\vga_0|videoGen|colorAddress~154\ : cycloneii_lcell_comb
--- Equation(s):
--- \vga_0|videoGen|colorAddress~154_combout\ = (\vga_0|videoGen|colorAddress~149_combout\ & ((\vga_0|videoGen|colorAddress~108_combout\) # (\vga_0|videoGen|colorAddress~110_combout\)))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1111110000000000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	datab => \vga_0|videoGen|colorAddress~108_combout\,
-	datac => \vga_0|videoGen|colorAddress~110_combout\,
-	datad => \vga_0|videoGen|colorAddress~149_combout\,
-	combout => \vga_0|videoGen|colorAddress~154_combout\);
-
--- Location: LCCOMB_X24_Y23_N30
-\vga_0|videoGen|colorAddress~160\ : cycloneii_lcell_comb
--- Equation(s):
--- \vga_0|videoGen|colorAddress~160_combout\ = (\vga_0|videoGen|colorAddress~125_combout\ & (\vga_0|videoGen|colorAddress~99_combout\ & ((!\vga_0|videoGen|pixelDraw~55_combout\) # (!\vga_0|videoGen|pixelDraw~32_combout\))))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0010101000000000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \vga_0|videoGen|colorAddress~125_combout\,
-	datab => \vga_0|videoGen|pixelDraw~32_combout\,
-	datac => \vga_0|videoGen|pixelDraw~55_combout\,
-	datad => \vga_0|videoGen|colorAddress~99_combout\,
-	combout => \vga_0|videoGen|colorAddress~160_combout\);
-
--- Location: LCCOMB_X24_Y24_N12
-\vga_0|videoGen|colorAddress~161\ : cycloneii_lcell_comb
--- Equation(s):
--- \vga_0|videoGen|colorAddress~161_combout\ = (\vga_0|videoGen|colorAddress~160_combout\ & (\vga_0|videoGen|colorAddress~122_combout\ & ((!\vga_0|videoGen|pixelDraw~27_combout\) # (!\vga_0|videoGen|pixelDraw~57_combout\))))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0111000000000000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \vga_0|videoGen|pixelDraw~57_combout\,
-	datab => \vga_0|videoGen|pixelDraw~27_combout\,
-	datac => \vga_0|videoGen|colorAddress~160_combout\,
-	datad => \vga_0|videoGen|colorAddress~122_combout\,
-	combout => \vga_0|videoGen|colorAddress~161_combout\);
-
--- Location: LCCOMB_X24_Y25_N16
-\vga_0|videoGen|colorAddress~163\ : cycloneii_lcell_comb
--- Equation(s):
--- \vga_0|videoGen|colorAddress~163_combout\ = (\vga_0|videoGen|colorAddress~125_combout\ & (((!\vga_0|videoGen|pixelDraw~17_combout\ & !\vga_0|videoGen|pixelDraw~16_combout\)) # (!\vga_0|videoGen|pixelDraw~67_combout\)))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0011011100000000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \vga_0|videoGen|pixelDraw~17_combout\,
-	datab => \vga_0|videoGen|pixelDraw~67_combout\,
-	datac => \vga_0|videoGen|pixelDraw~16_combout\,
-	datad => \vga_0|videoGen|colorAddress~125_combout\,
-	combout => \vga_0|videoGen|colorAddress~163_combout\);
-
--- Location: LCCOMB_X24_Y25_N2
-\vga_0|videoGen|colorAddress~164\ : cycloneii_lcell_comb
--- Equation(s):
--- \vga_0|videoGen|colorAddress~164_combout\ = (\vga_0|videoGen|colorAddress~129_combout\ & (\vga_0|videoGen|colorAddress~131_combout\ & (\vga_0|videoGen|colorAddress~163_combout\ & \vga_0|videoGen|colorAddress~123_combout\)))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1000000000000000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \vga_0|videoGen|colorAddress~129_combout\,
-	datab => \vga_0|videoGen|colorAddress~131_combout\,
-	datac => \vga_0|videoGen|colorAddress~163_combout\,
-	datad => \vga_0|videoGen|colorAddress~123_combout\,
-	combout => \vga_0|videoGen|colorAddress~164_combout\);
-
--- Location: LCCOMB_X24_Y25_N12
-\vga_0|videoGen|colorAddress~165\ : cycloneii_lcell_comb
--- Equation(s):
--- \vga_0|videoGen|colorAddress~165_combout\ = (\vga_0|videoGen|colorAddress~164_combout\ & ((!\vga_0|videoGen|pixelDraw~77_combout\) # (!\vga_0|videoGen|pixelDraw~67_combout\)))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0011111100000000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	datab => \vga_0|videoGen|pixelDraw~67_combout\,
-	datac => \vga_0|videoGen|pixelDraw~77_combout\,
-	datad => \vga_0|videoGen|colorAddress~164_combout\,
-	combout => \vga_0|videoGen|colorAddress~165_combout\);
-
--- Location: LCCOMB_X24_Y25_N14
-\vga_0|videoGen|colorAddress~166\ : cycloneii_lcell_comb
--- Equation(s):
--- \vga_0|videoGen|colorAddress~166_combout\ = (!\vga_0|videoGen|colorAddress~165_combout\ & (((!\vga_0|videoGen|pixelDraw~71_combout\ & !\vga_0|videoGen|colorAddress~139_combout\)) # (!\vga_0|videoGen|colorAddress~134_combout\)))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0000000000011111",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \vga_0|videoGen|pixelDraw~71_combout\,
-	datab => \vga_0|videoGen|colorAddress~139_combout\,
-	datac => \vga_0|videoGen|colorAddress~134_combout\,
-	datad => \vga_0|videoGen|colorAddress~165_combout\,
-	combout => \vga_0|videoGen|colorAddress~166_combout\);
-
--- Location: LCCOMB_X22_Y24_N6
-\vga_0|videoGen|colorAddress~168\ : cycloneii_lcell_comb
--- Equation(s):
--- \vga_0|videoGen|colorAddress~168_combout\ = (((!\vga_0|videoGen|colorAddress~123_combout\) # (!\vga_0|videoGen|colorAddress~125_combout\)) # (!\vga_0|videoGen|colorAddress~129_combout\)) # (!\vga_0|videoGen|colorAddress~131_combout\)
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0111111111111111",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \vga_0|videoGen|colorAddress~131_combout\,
-	datab => \vga_0|videoGen|colorAddress~129_combout\,
-	datac => \vga_0|videoGen|colorAddress~125_combout\,
-	datad => \vga_0|videoGen|colorAddress~123_combout\,
-	combout => \vga_0|videoGen|colorAddress~168_combout\);
-
--- Location: LCCOMB_X22_Y22_N12
-\vga_0|videoGen|LessThan373~2\ : cycloneii_lcell_comb
--- Equation(s):
--- \vga_0|videoGen|LessThan373~2_combout\ = (!\vga_0|videoSync|pixel_column\(5) & !\vga_0|videoSync|pixel_column\(4))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0000000000001111",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	datac => \vga_0|videoSync|pixel_column\(5),
-	datad => \vga_0|videoSync|pixel_column\(4),
-	combout => \vga_0|videoGen|LessThan373~2_combout\);
-
--- Location: LCCOMB_X22_Y22_N18
-\vga_0|videoGen|LessThan5~0\ : cycloneii_lcell_comb
--- Equation(s):
--- \vga_0|videoGen|LessThan5~0_combout\ = (\vga_0|videoGen|LessThan373~2_combout\ & (((!\vga_0|videoSync|pixel_column\(1) & !\vga_0|videoSync|pixel_column\(2))) # (!\vga_0|videoSync|pixel_column\(3))))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0001111100000000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \vga_0|videoSync|pixel_column\(1),
-	datab => \vga_0|videoSync|pixel_column\(2),
-	datac => \vga_0|videoSync|pixel_column\(3),
-	datad => \vga_0|videoGen|LessThan373~2_combout\,
-	combout => \vga_0|videoGen|LessThan5~0_combout\);
-
--- Location: LCCOMB_X23_Y20_N14
-\vga_0|videoGen|LessThan6~0\ : cycloneii_lcell_comb
--- Equation(s):
--- \vga_0|videoGen|LessThan6~0_combout\ = (\vga_0|videoGen|char_addr[6]~6_combout\ & ((\vga_0|videoSync|pixel_column\(3)) # ((\vga_0|videoSync|pixel_column\(0) & \vga_0|videoGen|LessThan54~0_combout\))))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1100100011000000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \vga_0|videoSync|pixel_column\(0),
-	datab => \vga_0|videoGen|char_addr[6]~6_combout\,
-	datac => \vga_0|videoSync|pixel_column\(3),
-	datad => \vga_0|videoGen|LessThan54~0_combout\,
-	combout => \vga_0|videoGen|LessThan6~0_combout\);
-
--- Location: LCCOMB_X23_Y20_N28
-\vga_0|videoGen|pixelDraw~72\ : cycloneii_lcell_comb
--- Equation(s):
--- \vga_0|videoGen|pixelDraw~72_combout\ = (\vga_0|videoGen|LessThan13~1_combout\ & ((\vga_0|videoSync|pixel_column\(8) & (!\vga_0|videoGen|LessThan6~0_combout\)) # (!\vga_0|videoSync|pixel_column\(8) & ((!\vga_0|videoGen|LessThan5~0_combout\))))) # 
--- (!\vga_0|videoGen|LessThan13~1_combout\ & (!\vga_0|videoSync|pixel_column\(8)))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0001100100111011",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \vga_0|videoGen|LessThan13~1_combout\,
-	datab => \vga_0|videoSync|pixel_column\(8),
-	datac => \vga_0|videoGen|LessThan6~0_combout\,
-	datad => \vga_0|videoGen|LessThan5~0_combout\,
-	combout => \vga_0|videoGen|pixelDraw~72_combout\);
-
--- Location: LCCOMB_X23_Y20_N10
-\vga_0|videoGen|pixelDraw~73\ : cycloneii_lcell_comb
--- Equation(s):
--- \vga_0|videoGen|pixelDraw~73_combout\ = (\vga_0|videoGen|LessThan773~0_combout\ & (\vga_0|videoSync|pixel_column\(9) & ((!\vga_0|videoSync|pixel_column\(6)) # (!\vga_0|videoGen|LessThan6~0_combout\))))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0010000010100000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \vga_0|videoGen|LessThan773~0_combout\,
-	datab => \vga_0|videoGen|LessThan6~0_combout\,
-	datac => \vga_0|videoSync|pixel_column\(9),
-	datad => \vga_0|videoSync|pixel_column\(6),
-	combout => \vga_0|videoGen|pixelDraw~73_combout\);
-
--- Location: LCCOMB_X23_Y20_N8
-\vga_0|videoGen|pixelDraw~74\ : cycloneii_lcell_comb
--- Equation(s):
--- \vga_0|videoGen|pixelDraw~74_combout\ = (\vga_0|videoSync|pixel_column\(7)) # ((!\vga_0|videoGen|LessThan5~0_combout\ & \vga_0|videoSync|pixel_column\(6)))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1111001111110000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	datab => \vga_0|videoGen|LessThan5~0_combout\,
-	datac => \vga_0|videoSync|pixel_column\(7),
-	datad => \vga_0|videoSync|pixel_column\(6),
-	combout => \vga_0|videoGen|pixelDraw~74_combout\);
-
--- Location: LCCOMB_X23_Y20_N22
-\vga_0|videoGen|pixelDraw~75\ : cycloneii_lcell_comb
--- Equation(s):
--- \vga_0|videoGen|pixelDraw~75_combout\ = (\vga_0|videoGen|pixelDraw~73_combout\) # ((!\vga_0|videoSync|pixel_column\(9) & (\vga_0|videoSync|pixel_column\(8) & \vga_0|videoGen|pixelDraw~74_combout\)))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1111111101000000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \vga_0|videoSync|pixel_column\(9),
-	datab => \vga_0|videoSync|pixel_column\(8),
-	datac => \vga_0|videoGen|pixelDraw~74_combout\,
-	datad => \vga_0|videoGen|pixelDraw~73_combout\,
-	combout => \vga_0|videoGen|pixelDraw~75_combout\);
-
--- Location: LCCOMB_X25_Y23_N2
-\vga_0|videoGen|LessThan3~1\ : cycloneii_lcell_comb
--- Equation(s):
--- \vga_0|videoGen|LessThan3~1_combout\ = ((!\vga_0|videoSync|pixel_row\(5) & ((!\vga_0|videoGen|LessThan3~0_combout\) # (!\vga_0|videoSync|pixel_row\(4))))) # (!\vga_0|videoSync|pixel_row\(6))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0001111101011111",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \vga_0|videoSync|pixel_row\(5),
-	datab => \vga_0|videoSync|pixel_row\(4),
-	datac => \vga_0|videoSync|pixel_row\(6),
-	datad => \vga_0|videoGen|LessThan3~0_combout\,
-	combout => \vga_0|videoGen|LessThan3~1_combout\);
-
--- Location: LCCOMB_X25_Y20_N12
-\vga_0|videoGen|LessThan4~1\ : cycloneii_lcell_comb
--- Equation(s):
--- \vga_0|videoGen|LessThan4~1_combout\ = (\vga_0|videoGen|LessThan4~0_combout\) # ((\vga_0|videoSync|pixel_row\(3)) # (!\vga_0|videoGen|LessThan35~2_combout\))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1111111111001111",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	datab => \vga_0|videoGen|LessThan4~0_combout\,
-	datac => \vga_0|videoGen|LessThan35~2_combout\,
-	datad => \vga_0|videoSync|pixel_row\(3),
-	combout => \vga_0|videoGen|LessThan4~1_combout\);
-
--- Location: LCCOMB_X24_Y20_N8
-\vga_0|videoGen|pixelDraw~76\ : cycloneii_lcell_comb
--- Equation(s):
--- \vga_0|videoGen|pixelDraw~76_combout\ = (\vga_0|videoSync|pixel_row\(7) & (((!\vga_0|videoGen|LessThan4~1_combout\)) # (!\vga_0|videoSync|pixel_row\(8)))) # (!\vga_0|videoSync|pixel_row\(7) & ((\vga_0|videoSync|pixel_row\(8)) # 
--- ((!\vga_0|videoGen|LessThan3~1_combout\))))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0110111001111111",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \vga_0|videoSync|pixel_row\(7),
-	datab => \vga_0|videoSync|pixel_row\(8),
-	datac => \vga_0|videoGen|LessThan4~1_combout\,
-	datad => \vga_0|videoGen|LessThan3~1_combout\,
-	combout => \vga_0|videoGen|pixelDraw~76_combout\);
-
--- Location: LCCOMB_X23_Y20_N16
-\vga_0|videoGen|colorAddress~176\ : cycloneii_lcell_comb
--- Equation(s):
--- \vga_0|videoGen|colorAddress~176_combout\ = ((!\vga_0|videoGen|pixelDraw~75_combout\ & ((\vga_0|videoSync|pixel_column\(9)) # (!\vga_0|videoGen|pixelDraw~72_combout\)))) # (!\vga_0|videoGen|pixelDraw~76_combout\)
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0000111110111111",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \vga_0|videoSync|pixel_column\(9),
-	datab => \vga_0|videoGen|pixelDraw~72_combout\,
-	datac => \vga_0|videoGen|pixelDraw~76_combout\,
-	datad => \vga_0|videoGen|pixelDraw~75_combout\,
-	combout => \vga_0|videoGen|colorAddress~176_combout\);
-
--- Location: LCCOMB_X25_Y25_N30
-\vga_0|videoGen|colorAddress~177\ : cycloneii_lcell_comb
--- Equation(s):
--- \vga_0|videoGen|colorAddress~177_combout\ = (\vga_0|videoGen|colorAddress~176_combout\ & ((!\vga_0|videoGen|Mux653~4_combout\) # (!\vga_0|videoGen|gameOverT_on~combout\)))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0011111100000000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	datab => \vga_0|videoGen|gameOverT_on~combout\,
-	datac => \vga_0|videoGen|Mux653~4_combout\,
-	datad => \vga_0|videoGen|colorAddress~176_combout\,
-	combout => \vga_0|videoGen|colorAddress~177_combout\);
-
--- Location: LCCOMB_X27_Y24_N4
-\vga_0|videoGen|colorAddress~182\ : cycloneii_lcell_comb
--- Equation(s):
--- \vga_0|videoGen|colorAddress~182_combout\ = (\vga_0|videoGen|Equal3~1_combout\ & ((\vga_0|videoSync|pixel_column\(8)))) # (!\vga_0|videoGen|Equal3~1_combout\ & (\vga_0|videoGen|Equal2~0_combout\))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1110111000100010",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \vga_0|videoGen|Equal2~0_combout\,
-	datab => \vga_0|videoGen|Equal3~1_combout\,
-	datad => \vga_0|videoSync|pixel_column\(8),
-	combout => \vga_0|videoGen|colorAddress~182_combout\);
-
--- Location: LCCOMB_X21_Y21_N10
-\vga_0|videoSync|LessThan6~1\ : cycloneii_lcell_comb
--- Equation(s):
--- \vga_0|videoSync|LessThan6~1_combout\ = (\vga_0|videoSync|v_count\(0)) # ((\vga_0|videoSync|v_count\(1)) # ((\vga_0|videoSync|v_count\(2)) # (\vga_0|videoSync|v_count\(3))))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1111111111111110",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \vga_0|videoSync|v_count\(0),
-	datab => \vga_0|videoSync|v_count\(1),
-	datac => \vga_0|videoSync|v_count\(2),
-	datad => \vga_0|videoSync|v_count\(3),
-	combout => \vga_0|videoSync|LessThan6~1_combout\);
-
--- Location: LCCOMB_X21_Y22_N24
-\vga_0|videoSync|process_1~4\ : cycloneii_lcell_comb
--- Equation(s):
--- \vga_0|videoSync|process_1~4_combout\ = (\vga_0|videoSync|h_count\(5) & ((\vga_0|videoSync|h_count\(2)) # ((\vga_0|videoSync|h_count\(1)) # (\vga_0|videoSync|h_count\(0)))))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1010101010101000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \vga_0|videoSync|h_count\(5),
-	datab => \vga_0|videoSync|h_count\(2),
-	datac => \vga_0|videoSync|h_count\(1),
-	datad => \vga_0|videoSync|h_count\(0),
-	combout => \vga_0|videoSync|process_1~4_combout\);
-
--- Location: LCCOMB_X21_Y21_N6
-\vga_0|videoSync|process_1~7\ : cycloneii_lcell_comb
--- Equation(s):
--- \vga_0|videoSync|process_1~7_combout\ = ((\vga_0|videoSync|v_count\(1) & ((\vga_0|videoSync|v_count\(2)) # (!\vga_0|videoSync|v_count\(0)))) # (!\vga_0|videoSync|v_count\(1) & ((!\vga_0|videoSync|v_count\(2))))) # (!\vga_0|videoSync|v_count\(3))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1100011111111111",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \vga_0|videoSync|v_count\(0),
-	datab => \vga_0|videoSync|v_count\(1),
-	datac => \vga_0|videoSync|v_count\(2),
-	datad => \vga_0|videoSync|v_count\(3),
-	combout => \vga_0|videoSync|process_1~7_combout\);
-
--- Location: LCCOMB_X21_Y22_N20
-\vga_0|videoSync|process_1~9\ : cycloneii_lcell_comb
--- Equation(s):
--- \vga_0|videoSync|process_1~9_combout\ = (!\vga_0|videoSync|h_count\(9)) # (!\vga_0|videoSync|v_count\(9))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0011111100111111",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	datab => \vga_0|videoSync|v_count\(9),
-	datac => \vga_0|videoSync|h_count\(9),
-	combout => \vga_0|videoSync|process_1~9_combout\);
-
--- Location: LCCOMB_X24_Y19_N30
-\vga_0|videoGen|Mux33~0\ : cycloneii_lcell_comb
--- Equation(s):
--- \vga_0|videoGen|Mux33~0_combout\ = (\vga_0|videoSync|pixel_column\(7)) # (\vga_0|videoSync|pixel_column\(5) $ (((\vga_0|videoSync|pixel_column\(4) & !\vga_0|videoSync|pixel_column\(6)))))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1111101011110110",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \vga_0|videoSync|pixel_column\(5),
-	datab => \vga_0|videoSync|pixel_column\(4),
-	datac => \vga_0|videoSync|pixel_column\(7),
-	datad => \vga_0|videoSync|pixel_column\(6),
-	combout => \vga_0|videoGen|Mux33~0_combout\);
-
--- Location: LCCOMB_X24_Y20_N24
-\vga_0|videoGen|Mux26~0\ : cycloneii_lcell_comb
--- Equation(s):
--- \vga_0|videoGen|Mux26~0_combout\ = (!\vga_0|videoSync|pixel_column\(7) & (\vga_0|videoSync|pixel_column\(5) & (\vga_0|videoSync|pixel_column\(6) $ (\vga_0|videoSync|pixel_column\(4)))))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0001000001000000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \vga_0|videoSync|pixel_column\(7),
-	datab => \vga_0|videoSync|pixel_column\(6),
-	datac => \vga_0|videoSync|pixel_column\(5),
-	datad => \vga_0|videoSync|pixel_column\(4),
-	combout => \vga_0|videoGen|Mux26~0_combout\);
-
--- Location: LCCOMB_X25_Y20_N20
-\vga_0|videoGen|char_addr[2]~27\ : cycloneii_lcell_comb
--- Equation(s):
--- \vga_0|videoGen|char_addr[2]~27_combout\ = (!\vga_0|videoSync|pixel_column\(4) & (\vga_0|videoSync|pixel_column\(5) $ (((!\vga_0|videoGen|LessThan13~0_combout\) # (!\vga_0|videoGen|Equal3~1_combout\)))))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0000100100000101",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \vga_0|videoSync|pixel_column\(5),
-	datab => \vga_0|videoGen|Equal3~1_combout\,
-	datac => \vga_0|videoSync|pixel_column\(4),
-	datad => \vga_0|videoGen|LessThan13~0_combout\,
-	combout => \vga_0|videoGen|char_addr[2]~27_combout\);
-
--- Location: LCCOMB_X27_Y22_N24
-\vga_0|videoGen|char_addr[5]~45\ : cycloneii_lcell_comb
--- Equation(s):
--- \vga_0|videoGen|char_addr[5]~45_combout\ = (\vga_0|videoSync|pixel_column\(8) & (!\vga_0|videoSync|pixel_column\(9) & ((\vga_0|videoGen|Equal2~0_combout\) # (\vga_0|videoGen|Equal3~1_combout\))))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0000101000001000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \vga_0|videoSync|pixel_column\(8),
-	datab => \vga_0|videoGen|Equal2~0_combout\,
-	datac => \vga_0|videoSync|pixel_column\(9),
-	datad => \vga_0|videoGen|Equal3~1_combout\,
-	combout => \vga_0|videoGen|char_addr[5]~45_combout\);
-
--- Location: LCCOMB_X28_Y22_N6
-\vga_0|videoGen|Mux40~0\ : cycloneii_lcell_comb
--- Equation(s):
--- \vga_0|videoGen|Mux40~0_combout\ = (\vga_0|videoSync|pixel_column\(7)) # ((\vga_0|videoSync|pixel_column\(6)) # ((\vga_0|videoSync|pixel_column\(4) & \vga_0|videoSync|pixel_column\(5))))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1111111011111010",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \vga_0|videoSync|pixel_column\(7),
-	datab => \vga_0|videoSync|pixel_column\(4),
-	datac => \vga_0|videoSync|pixel_column\(6),
-	datad => \vga_0|videoSync|pixel_column\(5),
-	combout => \vga_0|videoGen|Mux40~0_combout\);
-
--- Location: LCCOMB_X23_Y22_N10
-\vga_0|videoGen|LessThan333~2\ : cycloneii_lcell_comb
--- Equation(s):
--- \vga_0|videoGen|LessThan333~2_combout\ = (((\vga_0|videoGen|LessThan13~2_combout\) # (!\vga_0|videoSync|pixel_column\(3))) # (!\vga_0|videoSync|pixel_column\(4))) # (!\vga_0|videoSync|pixel_column\(5))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1111011111111111",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \vga_0|videoSync|pixel_column\(5),
-	datab => \vga_0|videoSync|pixel_column\(4),
-	datac => \vga_0|videoGen|LessThan13~2_combout\,
-	datad => \vga_0|videoSync|pixel_column\(3),
-	combout => \vga_0|videoGen|LessThan333~2_combout\);
-
--- Location: LCCOMB_X23_Y25_N22
-\vga_0|videoGen|colorAddress~190\ : cycloneii_lcell_comb
--- Equation(s):
--- \vga_0|videoGen|colorAddress~190_combout\ = (\vga_0|videoGen|pixelDraw~37_combout\) # ((\vga_0|videoGen|pixelDraw~34_combout\) # ((!\vga_0|videoGen|LessThan23~2_combout\ & \vga_0|videoGen|pixelDraw~15_combout\)))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1111111111011100",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \vga_0|videoGen|LessThan23~2_combout\,
-	datab => \vga_0|videoGen|pixelDraw~37_combout\,
-	datac => \vga_0|videoGen|pixelDraw~15_combout\,
-	datad => \vga_0|videoGen|pixelDraw~34_combout\,
-	combout => \vga_0|videoGen|colorAddress~190_combout\);
-
--- Location: LCCOMB_X25_Y25_N16
-\vga_0|videoGen|colorAddress~203\ : cycloneii_lcell_comb
--- Equation(s):
--- \vga_0|videoGen|colorAddress~203_combout\ = (\vga_0|videoGen|pixelDraw~13_combout\ & ((\vga_0|videoGen|pixelDraw~27_combout\) # ((!\vga_0|videoGen|pixelDraw~42_combout\ & \vga_0|videoGen|colorAddress~177_combout\)))) # 
--- (!\vga_0|videoGen|pixelDraw~13_combout\ & (((\vga_0|videoGen|colorAddress~177_combout\))))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1111011110100000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \vga_0|videoGen|pixelDraw~13_combout\,
-	datab => \vga_0|videoGen|pixelDraw~42_combout\,
-	datac => \vga_0|videoGen|pixelDraw~27_combout\,
-	datad => \vga_0|videoGen|colorAddress~177_combout\,
-	combout => \vga_0|videoGen|colorAddress~203_combout\);
-
--- Location: LCCOMB_X28_Y22_N16
-\vga_0|videoSync|pixel_clock_int~0\ : cycloneii_lcell_comb
--- Equation(s):
--- \vga_0|videoSync|pixel_clock_int~0_combout\ = !\vga_0|videoSync|pixel_clock_int~regout\
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0000111100001111",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	datac => \vga_0|videoSync|pixel_clock_int~regout\,
-	combout => \vga_0|videoSync|pixel_clock_int~0_combout\);
-
--- Location: LCFF_X28_Y22_N17
-\vga_0|videoSync|pixel_clock_int\ : cycloneii_lcell_ff
-PORT MAP (
-	clk => \clk~clkctrl_outclk\,
-	datain => \vga_0|videoSync|pixel_clock_int~0_combout\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	regout => \vga_0|videoSync|pixel_clock_int~regout\);
-
--- Location: CLKCTRL_G10
-\vga_0|videoSync|pixel_clock_int~clkctrl\ : cycloneii_clkctrl
--- pragma translate_off
-GENERIC MAP (
-	clock_type => "global clock",
-	ena_register_mode => "none")
--- pragma translate_on
-PORT MAP (
-	inclk => \vga_0|videoSync|pixel_clock_int~clkctrl_INCLK_bus\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	outclk => \vga_0|videoSync|pixel_clock_int~clkctrl_outclk\);
-
--- Location: LCCOMB_X22_Y21_N6
-\vga_0|videoSync|Add1~0\ : cycloneii_lcell_comb
--- Equation(s):
--- \vga_0|videoSync|Add1~0_combout\ = \vga_0|videoSync|v_count\(0) $ (VCC)
--- \vga_0|videoSync|Add1~1\ = CARRY(\vga_0|videoSync|v_count\(0))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0101010110101010",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \vga_0|videoSync|v_count\(0),
-	datad => VCC,
-	combout => \vga_0|videoSync|Add1~0_combout\,
-	cout => \vga_0|videoSync|Add1~1\);
-
--- Location: LCCOMB_X22_Y21_N8
-\vga_0|videoSync|Add1~2\ : cycloneii_lcell_comb
--- Equation(s):
--- \vga_0|videoSync|Add1~2_combout\ = (\vga_0|videoSync|v_count\(1) & (!\vga_0|videoSync|Add1~1\)) # (!\vga_0|videoSync|v_count\(1) & ((\vga_0|videoSync|Add1~1\) # (GND)))
--- \vga_0|videoSync|Add1~3\ = CARRY((!\vga_0|videoSync|Add1~1\) # (!\vga_0|videoSync|v_count\(1)))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0011110000111111",
-	sum_lutc_input => "cin")
--- pragma translate_on
-PORT MAP (
-	datab => \vga_0|videoSync|v_count\(1),
-	datad => VCC,
-	cin => \vga_0|videoSync|Add1~1\,
-	combout => \vga_0|videoSync|Add1~2_combout\,
-	cout => \vga_0|videoSync|Add1~3\);
-
--- Location: LCCOMB_X20_Y22_N6
-\vga_0|videoSync|Add0~2\ : cycloneii_lcell_comb
--- Equation(s):
--- \vga_0|videoSync|Add0~2_combout\ = (\vga_0|videoSync|h_count\(1) & (!\vga_0|videoSync|Add0~1\)) # (!\vga_0|videoSync|h_count\(1) & ((\vga_0|videoSync|Add0~1\) # (GND)))
--- \vga_0|videoSync|Add0~3\ = CARRY((!\vga_0|videoSync|Add0~1\) # (!\vga_0|videoSync|h_count\(1)))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0101101001011111",
-	sum_lutc_input => "cin")
--- pragma translate_on
-PORT MAP (
-	dataa => \vga_0|videoSync|h_count\(1),
-	datad => VCC,
-	cin => \vga_0|videoSync|Add0~1\,
-	combout => \vga_0|videoSync|Add0~2_combout\,
-	cout => \vga_0|videoSync|Add0~3\);
-
--- Location: LCFF_X20_Y22_N7
-\vga_0|videoSync|h_count[1]\ : cycloneii_lcell_ff
-PORT MAP (
-	clk => \vga_0|videoSync|pixel_clock_int~clkctrl_outclk\,
-	datain => \vga_0|videoSync|Add0~2_combout\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	regout => \vga_0|videoSync|h_count\(1));
-
--- Location: LCCOMB_X20_Y22_N24
-\vga_0|videoSync|Equal0~0\ : cycloneii_lcell_comb
--- Equation(s):
--- \vga_0|videoSync|Equal0~0_combout\ = (!\vga_0|videoSync|h_count\(6) & (!\vga_0|videoSync|h_count\(0) & (!\vga_0|videoSync|h_count\(2) & !\vga_0|videoSync|h_count\(1))))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0000000000000001",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \vga_0|videoSync|h_count\(6),
-	datab => \vga_0|videoSync|h_count\(0),
-	datac => \vga_0|videoSync|h_count\(2),
-	datad => \vga_0|videoSync|h_count\(1),
-	combout => \vga_0|videoSync|Equal0~0_combout\);
-
--- Location: LCCOMB_X20_Y22_N10
-\vga_0|videoSync|Add0~6\ : cycloneii_lcell_comb
--- Equation(s):
--- \vga_0|videoSync|Add0~6_combout\ = (\vga_0|videoSync|h_count\(3) & (!\vga_0|videoSync|Add0~5\)) # (!\vga_0|videoSync|h_count\(3) & ((\vga_0|videoSync|Add0~5\) # (GND)))
--- \vga_0|videoSync|Add0~7\ = CARRY((!\vga_0|videoSync|Add0~5\) # (!\vga_0|videoSync|h_count\(3)))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0101101001011111",
-	sum_lutc_input => "cin")
--- pragma translate_on
-PORT MAP (
-	dataa => \vga_0|videoSync|h_count\(3),
-	datad => VCC,
-	cin => \vga_0|videoSync|Add0~5\,
-	combout => \vga_0|videoSync|Add0~6_combout\,
-	cout => \vga_0|videoSync|Add0~7\);
-
--- Location: LCCOMB_X20_Y22_N12
-\vga_0|videoSync|Add0~8\ : cycloneii_lcell_comb
--- Equation(s):
--- \vga_0|videoSync|Add0~8_combout\ = (\vga_0|videoSync|h_count\(4) & (\vga_0|videoSync|Add0~7\ $ (GND))) # (!\vga_0|videoSync|h_count\(4) & (!\vga_0|videoSync|Add0~7\ & VCC))
--- \vga_0|videoSync|Add0~9\ = CARRY((\vga_0|videoSync|h_count\(4) & !\vga_0|videoSync|Add0~7\))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1010010100001010",
-	sum_lutc_input => "cin")
--- pragma translate_on
-PORT MAP (
-	dataa => \vga_0|videoSync|h_count\(4),
-	datad => VCC,
-	cin => \vga_0|videoSync|Add0~7\,
-	combout => \vga_0|videoSync|Add0~8_combout\,
-	cout => \vga_0|videoSync|Add0~9\);
-
--- Location: LCCOMB_X20_Y22_N14
-\vga_0|videoSync|Add0~10\ : cycloneii_lcell_comb
--- Equation(s):
--- \vga_0|videoSync|Add0~10_combout\ = (\vga_0|videoSync|h_count\(5) & (!\vga_0|videoSync|Add0~9\)) # (!\vga_0|videoSync|h_count\(5) & ((\vga_0|videoSync|Add0~9\) # (GND)))
--- \vga_0|videoSync|Add0~11\ = CARRY((!\vga_0|videoSync|Add0~9\) # (!\vga_0|videoSync|h_count\(5)))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0011110000111111",
-	sum_lutc_input => "cin")
--- pragma translate_on
-PORT MAP (
-	datab => \vga_0|videoSync|h_count\(5),
-	datad => VCC,
-	cin => \vga_0|videoSync|Add0~9\,
-	combout => \vga_0|videoSync|Add0~10_combout\,
-	cout => \vga_0|videoSync|Add0~11\);
-
--- Location: LCCOMB_X20_Y22_N18
-\vga_0|videoSync|Add0~14\ : cycloneii_lcell_comb
--- Equation(s):
--- \vga_0|videoSync|Add0~14_combout\ = (\vga_0|videoSync|h_count\(7) & (!\vga_0|videoSync|Add0~13\)) # (!\vga_0|videoSync|h_count\(7) & ((\vga_0|videoSync|Add0~13\) # (GND)))
--- \vga_0|videoSync|Add0~15\ = CARRY((!\vga_0|videoSync|Add0~13\) # (!\vga_0|videoSync|h_count\(7)))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0011110000111111",
-	sum_lutc_input => "cin")
--- pragma translate_on
-PORT MAP (
-	datab => \vga_0|videoSync|h_count\(7),
-	datad => VCC,
-	cin => \vga_0|videoSync|Add0~13\,
-	combout => \vga_0|videoSync|Add0~14_combout\,
-	cout => \vga_0|videoSync|Add0~15\);
-
--- Location: LCCOMB_X20_Y22_N0
-\vga_0|videoSync|h_count~0\ : cycloneii_lcell_comb
--- Equation(s):
--- \vga_0|videoSync|h_count~0_combout\ = (\vga_0|videoSync|Add0~16_combout\ & (((!\vga_0|videoSync|h_count\(8)) # (!\vga_0|videoSync|Equal0~1_combout\)) # (!\vga_0|videoSync|Equal0~2_combout\)))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0111111100000000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \vga_0|videoSync|Equal0~2_combout\,
-	datab => \vga_0|videoSync|Equal0~1_combout\,
-	datac => \vga_0|videoSync|h_count\(8),
-	datad => \vga_0|videoSync|Add0~16_combout\,
-	combout => \vga_0|videoSync|h_count~0_combout\);
-
--- Location: LCFF_X20_Y22_N1
-\vga_0|videoSync|h_count[8]\ : cycloneii_lcell_ff
-PORT MAP (
-	clk => \vga_0|videoSync|pixel_clock_int~clkctrl_outclk\,
-	datain => \vga_0|videoSync|h_count~0_combout\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	regout => \vga_0|videoSync|h_count\(8));
-
--- Location: LCCOMB_X20_Y22_N2
-\vga_0|videoSync|h_count~3\ : cycloneii_lcell_comb
--- Equation(s):
--- \vga_0|videoSync|h_count~3_combout\ = (\vga_0|videoSync|Add0~10_combout\ & (((!\vga_0|videoSync|h_count\(8)) # (!\vga_0|videoSync|Equal0~1_combout\)) # (!\vga_0|videoSync|Equal0~2_combout\)))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0111000011110000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \vga_0|videoSync|Equal0~2_combout\,
-	datab => \vga_0|videoSync|Equal0~1_combout\,
-	datac => \vga_0|videoSync|Add0~10_combout\,
-	datad => \vga_0|videoSync|h_count\(8),
-	combout => \vga_0|videoSync|h_count~3_combout\);
-
--- Location: LCFF_X20_Y22_N3
-\vga_0|videoSync|h_count[5]\ : cycloneii_lcell_ff
-PORT MAP (
-	clk => \vga_0|videoSync|pixel_clock_int~clkctrl_outclk\,
-	datain => \vga_0|videoSync|h_count~3_combout\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	regout => \vga_0|videoSync|h_count\(5));
-
--- Location: LCCOMB_X20_Y22_N16
-\vga_0|videoSync|Add0~12\ : cycloneii_lcell_comb
--- Equation(s):
--- \vga_0|videoSync|Add0~12_combout\ = (\vga_0|videoSync|h_count\(6) & (\vga_0|videoSync|Add0~11\ $ (GND))) # (!\vga_0|videoSync|h_count\(6) & (!\vga_0|videoSync|Add0~11\ & VCC))
--- \vga_0|videoSync|Add0~13\ = CARRY((\vga_0|videoSync|h_count\(6) & !\vga_0|videoSync|Add0~11\))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1010010100001010",
-	sum_lutc_input => "cin")
--- pragma translate_on
-PORT MAP (
-	dataa => \vga_0|videoSync|h_count\(6),
-	datad => VCC,
-	cin => \vga_0|videoSync|Add0~11\,
-	combout => \vga_0|videoSync|Add0~12_combout\,
-	cout => \vga_0|videoSync|Add0~13\);
-
--- Location: LCFF_X20_Y22_N19
-\vga_0|videoSync|h_count[7]\ : cycloneii_lcell_ff
-PORT MAP (
-	clk => \vga_0|videoSync|pixel_clock_int~clkctrl_outclk\,
-	datain => \vga_0|videoSync|Add0~14_combout\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	regout => \vga_0|videoSync|h_count\(7));
-
--- Location: LCCOMB_X21_Y22_N26
-\vga_0|videoSync|Equal0~2\ : cycloneii_lcell_comb
--- Equation(s):
--- \vga_0|videoSync|Equal0~2_combout\ = (!\vga_0|videoSync|h_count\(4) & (!\vga_0|videoSync|h_count\(7) & (!\vga_0|videoSync|h_count\(3) & \vga_0|videoSync|h_count\(5))))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0000000100000000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \vga_0|videoSync|h_count\(4),
-	datab => \vga_0|videoSync|h_count\(7),
-	datac => \vga_0|videoSync|h_count\(3),
-	datad => \vga_0|videoSync|h_count\(5),
-	combout => \vga_0|videoSync|Equal0~2_combout\);
-
--- Location: LCCOMB_X20_Y22_N30
-\vga_0|videoSync|h_count~1\ : cycloneii_lcell_comb
--- Equation(s):
--- \vga_0|videoSync|h_count~1_combout\ = (\vga_0|videoSync|Add0~18_combout\ & (((!\vga_0|videoSync|h_count\(8)) # (!\vga_0|videoSync|Equal0~2_combout\)) # (!\vga_0|videoSync|Equal0~1_combout\)))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0010101010101010",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \vga_0|videoSync|Add0~18_combout\,
-	datab => \vga_0|videoSync|Equal0~1_combout\,
-	datac => \vga_0|videoSync|Equal0~2_combout\,
-	datad => \vga_0|videoSync|h_count\(8),
-	combout => \vga_0|videoSync|h_count~1_combout\);
-
--- Location: LCFF_X20_Y22_N31
-\vga_0|videoSync|h_count[9]\ : cycloneii_lcell_ff
-PORT MAP (
-	clk => \vga_0|videoSync|pixel_clock_int~clkctrl_outclk\,
-	datain => \vga_0|videoSync|h_count~1_combout\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	regout => \vga_0|videoSync|h_count\(9));
-
--- Location: LCCOMB_X20_Y22_N26
-\vga_0|videoSync|Equal0~1\ : cycloneii_lcell_comb
--- Equation(s):
--- \vga_0|videoSync|Equal0~1_combout\ = (\vga_0|videoSync|Equal0~0_combout\ & \vga_0|videoSync|h_count\(9))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1111000000000000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	datac => \vga_0|videoSync|Equal0~0_combout\,
-	datad => \vga_0|videoSync|h_count\(9),
-	combout => \vga_0|videoSync|Equal0~1_combout\);
-
--- Location: LCCOMB_X20_Y22_N4
-\vga_0|videoSync|Add0~0\ : cycloneii_lcell_comb
--- Equation(s):
--- \vga_0|videoSync|Add0~0_combout\ = \vga_0|videoSync|h_count\(0) $ (VCC)
--- \vga_0|videoSync|Add0~1\ = CARRY(\vga_0|videoSync|h_count\(0))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0011001111001100",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	datab => \vga_0|videoSync|h_count\(0),
-	datad => VCC,
-	combout => \vga_0|videoSync|Add0~0_combout\,
-	cout => \vga_0|videoSync|Add0~1\);
-
--- Location: LCCOMB_X20_Y22_N28
-\vga_0|videoSync|h_count~2\ : cycloneii_lcell_comb
--- Equation(s):
--- \vga_0|videoSync|h_count~2_combout\ = (\vga_0|videoSync|Add0~0_combout\ & (((!\vga_0|videoSync|h_count\(8)) # (!\vga_0|videoSync|Equal0~1_combout\)) # (!\vga_0|videoSync|Equal0~2_combout\)))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0111000011110000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \vga_0|videoSync|Equal0~2_combout\,
-	datab => \vga_0|videoSync|Equal0~1_combout\,
-	datac => \vga_0|videoSync|Add0~0_combout\,
-	datad => \vga_0|videoSync|h_count\(8),
-	combout => \vga_0|videoSync|h_count~2_combout\);
-
--- Location: LCFF_X20_Y22_N29
-\vga_0|videoSync|h_count[0]\ : cycloneii_lcell_ff
-PORT MAP (
-	clk => \vga_0|videoSync|pixel_clock_int~clkctrl_outclk\,
-	datain => \vga_0|videoSync|h_count~2_combout\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	regout => \vga_0|videoSync|h_count\(0));
-
--- Location: LCCOMB_X20_Y22_N8
-\vga_0|videoSync|Add0~4\ : cycloneii_lcell_comb
--- Equation(s):
--- \vga_0|videoSync|Add0~4_combout\ = (\vga_0|videoSync|h_count\(2) & (\vga_0|videoSync|Add0~3\ $ (GND))) # (!\vga_0|videoSync|h_count\(2) & (!\vga_0|videoSync|Add0~3\ & VCC))
--- \vga_0|videoSync|Add0~5\ = CARRY((\vga_0|videoSync|h_count\(2) & !\vga_0|videoSync|Add0~3\))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1100001100001100",
-	sum_lutc_input => "cin")
--- pragma translate_on
-PORT MAP (
-	datab => \vga_0|videoSync|h_count\(2),
-	datad => VCC,
-	cin => \vga_0|videoSync|Add0~3\,
-	combout => \vga_0|videoSync|Add0~4_combout\,
-	cout => \vga_0|videoSync|Add0~5\);
-
--- Location: LCFF_X20_Y22_N9
-\vga_0|videoSync|h_count[2]\ : cycloneii_lcell_ff
-PORT MAP (
-	clk => \vga_0|videoSync|pixel_clock_int~clkctrl_outclk\,
-	datain => \vga_0|videoSync|Add0~4_combout\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	regout => \vga_0|videoSync|h_count\(2));
-
--- Location: LCFF_X20_Y22_N11
-\vga_0|videoSync|h_count[3]\ : cycloneii_lcell_ff
-PORT MAP (
-	clk => \vga_0|videoSync|pixel_clock_int~clkctrl_outclk\,
-	datain => \vga_0|videoSync|Add0~6_combout\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	regout => \vga_0|videoSync|h_count\(3));
-
--- Location: LCFF_X20_Y22_N17
-\vga_0|videoSync|h_count[6]\ : cycloneii_lcell_ff
-PORT MAP (
-	clk => \vga_0|videoSync|pixel_clock_int~clkctrl_outclk\,
-	datain => \vga_0|videoSync|Add0~12_combout\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	regout => \vga_0|videoSync|h_count\(6));
-
--- Location: LCCOMB_X21_Y22_N28
-\vga_0|videoSync|process_1~2\ : cycloneii_lcell_comb
--- Equation(s):
--- \vga_0|videoSync|process_1~2_combout\ = (!\vga_0|videoSync|h_count\(6) & (!\vga_0|videoSync|h_count\(5) & ((!\vga_0|videoSync|h_count\(3)) # (!\vga_0|videoSync|h_count\(4)))))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0000000000000111",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \vga_0|videoSync|h_count\(4),
-	datab => \vga_0|videoSync|h_count\(3),
-	datac => \vga_0|videoSync|h_count\(6),
-	datad => \vga_0|videoSync|h_count\(5),
-	combout => \vga_0|videoSync|process_1~2_combout\);
-
--- Location: LCCOMB_X21_Y22_N18
-\vga_0|videoSync|process_1~10\ : cycloneii_lcell_comb
--- Equation(s):
--- \vga_0|videoSync|process_1~10_combout\ = (\vga_0|videoSync|process_1~9_combout\) # ((!\vga_0|videoSync|h_count\(8) & ((\vga_0|videoSync|process_1~2_combout\) # (!\vga_0|videoSync|h_count\(7)))))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1010111010101111",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \vga_0|videoSync|process_1~9_combout\,
-	datab => \vga_0|videoSync|process_1~2_combout\,
-	datac => \vga_0|videoSync|h_count\(8),
-	datad => \vga_0|videoSync|h_count\(7),
-	combout => \vga_0|videoSync|process_1~10_combout\);
-
--- Location: LCCOMB_X21_Y21_N18
-\vga_0|videoSync|v_count~8\ : cycloneii_lcell_comb
--- Equation(s):
--- \vga_0|videoSync|v_count~8_combout\ = (\vga_0|videoSync|Add1~2_combout\ & ((\vga_0|videoSync|LessThan1~2_combout\) # (\vga_0|videoSync|process_1~10_combout\)))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1111000011000000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	datab => \vga_0|videoSync|LessThan1~2_combout\,
-	datac => \vga_0|videoSync|Add1~2_combout\,
-	datad => \vga_0|videoSync|process_1~10_combout\,
-	combout => \vga_0|videoSync|v_count~8_combout\);
-
--- Location: LCFF_X21_Y21_N19
-\vga_0|videoSync|v_count[1]\ : cycloneii_lcell_ff
-PORT MAP (
-	clk => \vga_0|videoSync|pixel_clock_int~clkctrl_outclk\,
-	datain => \vga_0|videoSync|v_count~8_combout\,
-	ena => \vga_0|videoSync|v_count[9]~0_combout\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	regout => \vga_0|videoSync|v_count\(1));
-
--- Location: LCCOMB_X22_Y21_N10
-\vga_0|videoSync|Add1~4\ : cycloneii_lcell_comb
--- Equation(s):
--- \vga_0|videoSync|Add1~4_combout\ = (\vga_0|videoSync|v_count\(2) & (\vga_0|videoSync|Add1~3\ $ (GND))) # (!\vga_0|videoSync|v_count\(2) & (!\vga_0|videoSync|Add1~3\ & VCC))
--- \vga_0|videoSync|Add1~5\ = CARRY((\vga_0|videoSync|v_count\(2) & !\vga_0|videoSync|Add1~3\))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1100001100001100",
-	sum_lutc_input => "cin")
--- pragma translate_on
-PORT MAP (
-	datab => \vga_0|videoSync|v_count\(2),
-	datad => VCC,
-	cin => \vga_0|videoSync|Add1~3\,
-	combout => \vga_0|videoSync|Add1~4_combout\,
-	cout => \vga_0|videoSync|Add1~5\);
-
--- Location: LCCOMB_X21_Y21_N28
-\vga_0|videoSync|v_count[2]~9\ : cycloneii_lcell_comb
--- Equation(s):
--- \vga_0|videoSync|v_count[2]~9_combout\ = (\vga_0|videoSync|v_count[9]~0_combout\ & (\vga_0|videoSync|process_1~11_combout\ & ((\vga_0|videoSync|Add1~4_combout\)))) # (!\vga_0|videoSync|v_count[9]~0_combout\ & (((\vga_0|videoSync|v_count\(2)))))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1011100000110000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \vga_0|videoSync|process_1~11_combout\,
-	datab => \vga_0|videoSync|v_count[9]~0_combout\,
-	datac => \vga_0|videoSync|v_count\(2),
-	datad => \vga_0|videoSync|Add1~4_combout\,
-	combout => \vga_0|videoSync|v_count[2]~9_combout\);
-
--- Location: LCFF_X21_Y21_N29
-\vga_0|videoSync|v_count[2]\ : cycloneii_lcell_ff
-PORT MAP (
-	clk => \vga_0|videoSync|pixel_clock_int~clkctrl_outclk\,
-	datain => \vga_0|videoSync|v_count[2]~9_combout\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	regout => \vga_0|videoSync|v_count\(2));
-
--- Location: LCCOMB_X22_Y21_N12
-\vga_0|videoSync|Add1~6\ : cycloneii_lcell_comb
--- Equation(s):
--- \vga_0|videoSync|Add1~6_combout\ = (\vga_0|videoSync|v_count\(3) & (!\vga_0|videoSync|Add1~5\)) # (!\vga_0|videoSync|v_count\(3) & ((\vga_0|videoSync|Add1~5\) # (GND)))
--- \vga_0|videoSync|Add1~7\ = CARRY((!\vga_0|videoSync|Add1~5\) # (!\vga_0|videoSync|v_count\(3)))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0011110000111111",
-	sum_lutc_input => "cin")
--- pragma translate_on
-PORT MAP (
-	datab => \vga_0|videoSync|v_count\(3),
-	datad => VCC,
-	cin => \vga_0|videoSync|Add1~5\,
-	combout => \vga_0|videoSync|Add1~6_combout\,
-	cout => \vga_0|videoSync|Add1~7\);
-
--- Location: LCCOMB_X22_Y21_N30
-\vga_0|videoSync|v_count[3]~10\ : cycloneii_lcell_comb
--- Equation(s):
--- \vga_0|videoSync|v_count[3]~10_combout\ = (\vga_0|videoSync|v_count[9]~0_combout\ & (\vga_0|videoSync|process_1~11_combout\ & ((\vga_0|videoSync|Add1~6_combout\)))) # (!\vga_0|videoSync|v_count[9]~0_combout\ & (((\vga_0|videoSync|v_count\(3)))))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1101100001010000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \vga_0|videoSync|v_count[9]~0_combout\,
-	datab => \vga_0|videoSync|process_1~11_combout\,
-	datac => \vga_0|videoSync|v_count\(3),
-	datad => \vga_0|videoSync|Add1~6_combout\,
-	combout => \vga_0|videoSync|v_count[3]~10_combout\);
-
--- Location: LCFF_X22_Y21_N31
-\vga_0|videoSync|v_count[3]\ : cycloneii_lcell_ff
-PORT MAP (
-	clk => \vga_0|videoSync|pixel_clock_int~clkctrl_outclk\,
-	datain => \vga_0|videoSync|v_count[3]~10_combout\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	regout => \vga_0|videoSync|v_count\(3));
-
--- Location: LCCOMB_X21_Y21_N20
-\vga_0|videoSync|LessThan1~0\ : cycloneii_lcell_comb
--- Equation(s):
--- \vga_0|videoSync|LessThan1~0_combout\ = (((!\vga_0|videoSync|v_count\(0) & !\vga_0|videoSync|v_count\(1))) # (!\vga_0|videoSync|v_count\(3))) # (!\vga_0|videoSync|v_count\(2))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0001111111111111",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \vga_0|videoSync|v_count\(0),
-	datab => \vga_0|videoSync|v_count\(1),
-	datac => \vga_0|videoSync|v_count\(2),
-	datad => \vga_0|videoSync|v_count\(3),
-	combout => \vga_0|videoSync|LessThan1~0_combout\);
-
--- Location: LCCOMB_X22_Y21_N26
-\vga_0|videoSync|v_count[5]~2\ : cycloneii_lcell_comb
--- Equation(s):
--- \vga_0|videoSync|v_count[5]~2_combout\ = (\vga_0|videoSync|v_count[9]~0_combout\ & (\vga_0|videoSync|Add1~10_combout\ & (\vga_0|videoSync|process_1~11_combout\))) # (!\vga_0|videoSync|v_count[9]~0_combout\ & (((\vga_0|videoSync|v_count\(5)))))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1000100011110000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \vga_0|videoSync|Add1~10_combout\,
-	datab => \vga_0|videoSync|process_1~11_combout\,
-	datac => \vga_0|videoSync|v_count\(5),
-	datad => \vga_0|videoSync|v_count[9]~0_combout\,
-	combout => \vga_0|videoSync|v_count[5]~2_combout\);
-
--- Location: LCFF_X22_Y21_N27
-\vga_0|videoSync|v_count[5]\ : cycloneii_lcell_ff
-PORT MAP (
-	clk => \vga_0|videoSync|pixel_clock_int~clkctrl_outclk\,
-	datain => \vga_0|videoSync|v_count[5]~2_combout\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	regout => \vga_0|videoSync|v_count\(5));
-
--- Location: LCCOMB_X22_Y21_N14
-\vga_0|videoSync|Add1~8\ : cycloneii_lcell_comb
--- Equation(s):
--- \vga_0|videoSync|Add1~8_combout\ = (\vga_0|videoSync|v_count\(4) & (\vga_0|videoSync|Add1~7\ $ (GND))) # (!\vga_0|videoSync|v_count\(4) & (!\vga_0|videoSync|Add1~7\ & VCC))
--- \vga_0|videoSync|Add1~9\ = CARRY((\vga_0|videoSync|v_count\(4) & !\vga_0|videoSync|Add1~7\))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1100001100001100",
-	sum_lutc_input => "cin")
--- pragma translate_on
-PORT MAP (
-	datab => \vga_0|videoSync|v_count\(4),
-	datad => VCC,
-	cin => \vga_0|videoSync|Add1~7\,
-	combout => \vga_0|videoSync|Add1~8_combout\,
-	cout => \vga_0|videoSync|Add1~9\);
-
--- Location: LCCOMB_X22_Y21_N4
-\vga_0|videoSync|v_count[4]~6\ : cycloneii_lcell_comb
--- Equation(s):
--- \vga_0|videoSync|v_count[4]~6_combout\ = (\vga_0|videoSync|v_count[9]~0_combout\ & (\vga_0|videoSync|Add1~8_combout\ & ((\vga_0|videoSync|process_1~11_combout\)))) # (!\vga_0|videoSync|v_count[9]~0_combout\ & (((\vga_0|videoSync|v_count\(4)))))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1101100001010000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \vga_0|videoSync|v_count[9]~0_combout\,
-	datab => \vga_0|videoSync|Add1~8_combout\,
-	datac => \vga_0|videoSync|v_count\(4),
-	datad => \vga_0|videoSync|process_1~11_combout\,
-	combout => \vga_0|videoSync|v_count[4]~6_combout\);
-
--- Location: LCFF_X22_Y21_N5
-\vga_0|videoSync|v_count[4]\ : cycloneii_lcell_ff
-PORT MAP (
-	clk => \vga_0|videoSync|pixel_clock_int~clkctrl_outclk\,
-	datain => \vga_0|videoSync|v_count[4]~6_combout\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	regout => \vga_0|videoSync|v_count\(4));
-
--- Location: LCCOMB_X22_Y21_N18
-\vga_0|videoSync|Add1~12\ : cycloneii_lcell_comb
--- Equation(s):
--- \vga_0|videoSync|Add1~12_combout\ = (\vga_0|videoSync|v_count\(6) & (\vga_0|videoSync|Add1~11\ $ (GND))) # (!\vga_0|videoSync|v_count\(6) & (!\vga_0|videoSync|Add1~11\ & VCC))
--- \vga_0|videoSync|Add1~13\ = CARRY((\vga_0|videoSync|v_count\(6) & !\vga_0|videoSync|Add1~11\))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1100001100001100",
-	sum_lutc_input => "cin")
--- pragma translate_on
-PORT MAP (
-	datab => \vga_0|videoSync|v_count\(6),
-	datad => VCC,
-	cin => \vga_0|videoSync|Add1~11\,
-	combout => \vga_0|videoSync|Add1~12_combout\,
-	cout => \vga_0|videoSync|Add1~13\);
-
--- Location: LCCOMB_X22_Y21_N20
+-- Location: LCCOMB_X29_Y27_N20
 \vga_0|videoSync|Add1~14\ : cycloneii_lcell_comb
 -- Equation(s):
 -- \vga_0|videoSync|Add1~14_combout\ = (\vga_0|videoSync|v_count\(7) & (!\vga_0|videoSync|Add1~13\)) # (!\vga_0|videoSync|v_count\(7) & ((\vga_0|videoSync|Add1~13\) # (GND)))
@@ -2763,7 +959,1812 @@ PORT MAP (
 	combout => \vga_0|videoSync|Add1~14_combout\,
 	cout => \vga_0|videoSync|Add1~15\);
 
--- Location: LCCOMB_X22_Y21_N2
+-- Location: LCCOMB_X29_Y27_N22
+\vga_0|videoSync|Add1~16\ : cycloneii_lcell_comb
+-- Equation(s):
+-- \vga_0|videoSync|Add1~16_combout\ = (\vga_0|videoSync|v_count\(8) & (\vga_0|videoSync|Add1~15\ $ (GND))) # (!\vga_0|videoSync|v_count\(8) & (!\vga_0|videoSync|Add1~15\ & VCC))
+-- \vga_0|videoSync|Add1~17\ = CARRY((\vga_0|videoSync|v_count\(8) & !\vga_0|videoSync|Add1~15\))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1010010100001010",
+	sum_lutc_input => "cin")
+-- pragma translate_on
+PORT MAP (
+	dataa => \vga_0|videoSync|v_count\(8),
+	datad => VCC,
+	cin => \vga_0|videoSync|Add1~15\,
+	combout => \vga_0|videoSync|Add1~16_combout\,
+	cout => \vga_0|videoSync|Add1~17\);
+
+-- Location: LCCOMB_X29_Y27_N24
+\vga_0|videoSync|Add1~18\ : cycloneii_lcell_comb
+-- Equation(s):
+-- \vga_0|videoSync|Add1~18_combout\ = \vga_0|videoSync|Add1~17\ $ (\vga_0|videoSync|v_count\(9))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0000111111110000",
+	sum_lutc_input => "cin")
+-- pragma translate_on
+PORT MAP (
+	datad => \vga_0|videoSync|v_count\(9),
+	cin => \vga_0|videoSync|Add1~17\,
+	combout => \vga_0|videoSync|Add1~18_combout\);
+
+-- Location: LCCOMB_X31_Y26_N20
+\vga_0|videoSync|Add0~16\ : cycloneii_lcell_comb
+-- Equation(s):
+-- \vga_0|videoSync|Add0~16_combout\ = (\vga_0|videoSync|h_count\(8) & (\vga_0|videoSync|Add0~15\ $ (GND))) # (!\vga_0|videoSync|h_count\(8) & (!\vga_0|videoSync|Add0~15\ & VCC))
+-- \vga_0|videoSync|Add0~17\ = CARRY((\vga_0|videoSync|h_count\(8) & !\vga_0|videoSync|Add0~15\))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1100001100001100",
+	sum_lutc_input => "cin")
+-- pragma translate_on
+PORT MAP (
+	datab => \vga_0|videoSync|h_count\(8),
+	datad => VCC,
+	cin => \vga_0|videoSync|Add0~15\,
+	combout => \vga_0|videoSync|Add0~16_combout\,
+	cout => \vga_0|videoSync|Add0~17\);
+
+-- Location: LCCOMB_X31_Y26_N22
+\vga_0|videoSync|Add0~18\ : cycloneii_lcell_comb
+-- Equation(s):
+-- \vga_0|videoSync|Add0~18_combout\ = \vga_0|videoSync|h_count\(9) $ (\vga_0|videoSync|Add0~17\)
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0101101001011010",
+	sum_lutc_input => "cin")
+-- pragma translate_on
+PORT MAP (
+	dataa => \vga_0|videoSync|h_count\(9),
+	cin => \vga_0|videoSync|Add0~17\,
+	combout => \vga_0|videoSync|Add0~18_combout\);
+
+-- Location: LCCOMB_X29_Y24_N24
+\vga_0|videoGen|pixelDraw~16\ : cycloneii_lcell_comb
+-- Equation(s):
+-- \vga_0|videoGen|pixelDraw~16_combout\ = (!\vga_0|videoSync|pixel_row\(8) & (!\vga_0|videoSync|pixel_row\(6) & \vga_0|videoSync|pixel_row\(7)))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0001000100000000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \vga_0|videoSync|pixel_row\(8),
+	datab => \vga_0|videoSync|pixel_row\(6),
+	datad => \vga_0|videoSync|pixel_row\(7),
+	combout => \vga_0|videoGen|pixelDraw~16_combout\);
+
+-- Location: LCCOMB_X25_Y23_N10
+\vga_0|videoGen|pixelDraw~19\ : cycloneii_lcell_comb
+-- Equation(s):
+-- \vga_0|videoGen|pixelDraw~19_combout\ = (!\vga_0|videoGen|LessThan53~0_combout\ & (!\vga_0|videoGen|LessThan13~2_combout\ & \vga_0|videoGen|LessThan13~0_combout\))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0000001100000000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	datab => \vga_0|videoGen|LessThan53~0_combout\,
+	datac => \vga_0|videoGen|LessThan13~2_combout\,
+	datad => \vga_0|videoGen|LessThan13~0_combout\,
+	combout => \vga_0|videoGen|pixelDraw~19_combout\);
+
+-- Location: LCCOMB_X30_Y26_N20
+\vga_0|videoGen|colorAddress~46\ : cycloneii_lcell_comb
+-- Equation(s):
+-- \vga_0|videoGen|colorAddress~46_combout\ = ((!\vga_0|videoGen|pixelDraw~22_combout\ & (!\vga_0|videoGen|pixelDraw~33_combout\ & !\vga_0|videoGen|pixelDraw~34_combout\))) # (!\vga_0|videoGen|pixelDraw~32_combout\)
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0000000111111111",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \vga_0|videoGen|pixelDraw~22_combout\,
+	datab => \vga_0|videoGen|pixelDraw~33_combout\,
+	datac => \vga_0|videoGen|pixelDraw~34_combout\,
+	datad => \vga_0|videoGen|pixelDraw~32_combout\,
+	combout => \vga_0|videoGen|colorAddress~46_combout\);
+
+-- Location: LCCOMB_X30_Y24_N6
+\vga_0|videoGen|LessThan47~1\ : cycloneii_lcell_comb
+-- Equation(s):
+-- \vga_0|videoGen|LessThan47~1_combout\ = (!\vga_0|videoSync|pixel_row\(0) & (!\vga_0|videoSync|pixel_row\(1) & (!\vga_0|videoSync|pixel_row\(2) & !\vga_0|videoSync|pixel_row\(4))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0000000000000001",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \vga_0|videoSync|pixel_row\(0),
+	datab => \vga_0|videoSync|pixel_row\(1),
+	datac => \vga_0|videoSync|pixel_row\(2),
+	datad => \vga_0|videoSync|pixel_row\(4),
+	combout => \vga_0|videoGen|LessThan47~1_combout\);
+
+-- Location: LCCOMB_X31_Y24_N24
+\vga_0|videoGen|colorAddress~49\ : cycloneii_lcell_comb
+-- Equation(s):
+-- \vga_0|videoGen|colorAddress~49_combout\ = ((!\vga_0|videoGen|pixelDraw~79_combout\ & !\vga_0|videoGen|pixelDraw~31_combout\)) # (!\vga_0|videoGen|pixelDraw~26_combout\)
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0000001111111111",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	datab => \vga_0|videoGen|pixelDraw~79_combout\,
+	datac => \vga_0|videoGen|pixelDraw~31_combout\,
+	datad => \vga_0|videoGen|pixelDraw~26_combout\,
+	combout => \vga_0|videoGen|colorAddress~49_combout\);
+
+-- Location: LCCOMB_X30_Y24_N8
+\vga_0|videoGen|colorAddress~50\ : cycloneii_lcell_comb
+-- Equation(s):
+-- \vga_0|videoGen|colorAddress~50_combout\ = (\vga_0|videoGen|pixelDraw~33_combout\ & (!\vga_0|videoGen|pixelDraw~23_combout\ & ((!\vga_0|videoGen|pixelDraw~44_combout\) # (!\vga_0|videoGen|pixelDraw~22_combout\)))) # (!\vga_0|videoGen|pixelDraw~33_combout\ 
+-- & (((!\vga_0|videoGen|pixelDraw~44_combout\) # (!\vga_0|videoGen|pixelDraw~22_combout\))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0000011101110111",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \vga_0|videoGen|pixelDraw~33_combout\,
+	datab => \vga_0|videoGen|pixelDraw~23_combout\,
+	datac => \vga_0|videoGen|pixelDraw~22_combout\,
+	datad => \vga_0|videoGen|pixelDraw~44_combout\,
+	combout => \vga_0|videoGen|colorAddress~50_combout\);
+
+-- Location: LCCOMB_X31_Y24_N14
+\vga_0|videoGen|colorAddress~51\ : cycloneii_lcell_comb
+-- Equation(s):
+-- \vga_0|videoGen|colorAddress~51_combout\ = (\vga_0|videoGen|colorAddress~50_combout\ & ((!\vga_0|videoGen|pixelDraw~45_combout\) # (!\vga_0|videoGen|pixelDraw~22_combout\)))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0011111100000000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	datab => \vga_0|videoGen|pixelDraw~22_combout\,
+	datac => \vga_0|videoGen|pixelDraw~45_combout\,
+	datad => \vga_0|videoGen|colorAddress~50_combout\,
+	combout => \vga_0|videoGen|colorAddress~51_combout\);
+
+-- Location: LCCOMB_X30_Y24_N30
+\vga_0|videoGen|colorAddress~52\ : cycloneii_lcell_comb
+-- Equation(s):
+-- \vga_0|videoGen|colorAddress~52_combout\ = ((!\vga_0|videoGen|pixelDraw~34_combout\ & !\vga_0|videoGen|pixelDraw~38_combout\)) # (!\vga_0|videoGen|pixelDraw~23_combout\)
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0000001111111111",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	datab => \vga_0|videoGen|pixelDraw~34_combout\,
+	datac => \vga_0|videoGen|pixelDraw~38_combout\,
+	datad => \vga_0|videoGen|pixelDraw~23_combout\,
+	combout => \vga_0|videoGen|colorAddress~52_combout\);
+
+-- Location: LCCOMB_X30_Y24_N12
+\vga_0|videoGen|colorAddress~53\ : cycloneii_lcell_comb
+-- Equation(s):
+-- \vga_0|videoGen|colorAddress~53_combout\ = (\vga_0|videoGen|colorAddress~52_combout\ & (((!\vga_0|videoGen|pixelDraw~41_combout\ & !\vga_0|videoGen|pixelDraw~36_combout\)) # (!\vga_0|videoGen|pixelDraw~23_combout\)))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0011011100000000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \vga_0|videoGen|pixelDraw~41_combout\,
+	datab => \vga_0|videoGen|pixelDraw~23_combout\,
+	datac => \vga_0|videoGen|pixelDraw~36_combout\,
+	datad => \vga_0|videoGen|colorAddress~52_combout\,
+	combout => \vga_0|videoGen|colorAddress~53_combout\);
+
+-- Location: LCCOMB_X31_Y24_N20
+\vga_0|videoGen|colorAddress~54\ : cycloneii_lcell_comb
+-- Equation(s):
+-- \vga_0|videoGen|colorAddress~54_combout\ = (\vga_0|videoGen|pixelDraw~34_combout\) # ((\vga_0|videoGen|pixelDraw~33_combout\) # ((\vga_0|videoGen|pixelDraw~36_combout\) # (\vga_0|videoGen|pixelDraw~21_combout\)))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1111111111111110",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \vga_0|videoGen|pixelDraw~34_combout\,
+	datab => \vga_0|videoGen|pixelDraw~33_combout\,
+	datac => \vga_0|videoGen|pixelDraw~36_combout\,
+	datad => \vga_0|videoGen|pixelDraw~21_combout\,
+	combout => \vga_0|videoGen|colorAddress~54_combout\);
+
+-- Location: LCCOMB_X31_Y24_N18
+\vga_0|videoGen|colorAddress~55\ : cycloneii_lcell_comb
+-- Equation(s):
+-- \vga_0|videoGen|colorAddress~55_combout\ = (\vga_0|videoGen|pixelDraw~26_combout\ & ((\vga_0|videoGen|pixelDraw~38_combout\) # ((\vga_0|videoGen|pixelDraw~41_combout\) # (\vga_0|videoGen|colorAddress~54_combout\))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1111111000000000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \vga_0|videoGen|pixelDraw~38_combout\,
+	datab => \vga_0|videoGen|pixelDraw~41_combout\,
+	datac => \vga_0|videoGen|colorAddress~54_combout\,
+	datad => \vga_0|videoGen|pixelDraw~26_combout\,
+	combout => \vga_0|videoGen|colorAddress~55_combout\);
+
+-- Location: LCCOMB_X31_Y24_N16
+\vga_0|videoGen|colorAddress~56\ : cycloneii_lcell_comb
+-- Equation(s):
+-- \vga_0|videoGen|colorAddress~56_combout\ = (\vga_0|videoGen|colorAddress~49_combout\ & (!\vga_0|videoGen|colorAddress~55_combout\ & (\vga_0|videoGen|colorAddress~51_combout\ & \vga_0|videoGen|colorAddress~53_combout\)))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0010000000000000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \vga_0|videoGen|colorAddress~49_combout\,
+	datab => \vga_0|videoGen|colorAddress~55_combout\,
+	datac => \vga_0|videoGen|colorAddress~51_combout\,
+	datad => \vga_0|videoGen|colorAddress~53_combout\,
+	combout => \vga_0|videoGen|colorAddress~56_combout\);
+
+-- Location: LCCOMB_X32_Y23_N16
+\vga_0|videoGen|colorAddress~59\ : cycloneii_lcell_comb
+-- Equation(s):
+-- \vga_0|videoGen|colorAddress~59_combout\ = ((!\vga_0|videoGen|pixelDraw~34_combout\ & !\vga_0|videoGen|pixelDraw~38_combout\)) # (!\vga_0|videoGen|pixelDraw~28_combout\)
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0000010111111111",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \vga_0|videoGen|pixelDraw~34_combout\,
+	datac => \vga_0|videoGen|pixelDraw~38_combout\,
+	datad => \vga_0|videoGen|pixelDraw~28_combout\,
+	combout => \vga_0|videoGen|colorAddress~59_combout\);
+
+-- Location: LCCOMB_X32_Y23_N6
+\vga_0|videoGen|colorAddress~60\ : cycloneii_lcell_comb
+-- Equation(s):
+-- \vga_0|videoGen|colorAddress~60_combout\ = (\vga_0|videoGen|colorAddress~59_combout\ & (((!\vga_0|videoGen|pixelDraw~36_combout\ & !\vga_0|videoGen|pixelDraw~41_combout\)) # (!\vga_0|videoGen|pixelDraw~28_combout\)))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0101000001110000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \vga_0|videoGen|pixelDraw~28_combout\,
+	datab => \vga_0|videoGen|pixelDraw~36_combout\,
+	datac => \vga_0|videoGen|colorAddress~59_combout\,
+	datad => \vga_0|videoGen|pixelDraw~41_combout\,
+	combout => \vga_0|videoGen|colorAddress~60_combout\);
+
+-- Location: LCCOMB_X29_Y26_N24
+\vga_0|videoGen|LessThan11~1\ : cycloneii_lcell_comb
+-- Equation(s):
+-- \vga_0|videoGen|LessThan11~1_combout\ = (!\vga_0|videoSync|pixel_row\(5) & (!\vga_0|videoSync|pixel_row\(2) & ((!\vga_0|videoSync|pixel_row\(0)) # (!\vga_0|videoSync|pixel_row\(1)))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0000000000010101",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \vga_0|videoSync|pixel_row\(5),
+	datab => \vga_0|videoSync|pixel_row\(1),
+	datac => \vga_0|videoSync|pixel_row\(0),
+	datad => \vga_0|videoSync|pixel_row\(2),
+	combout => \vga_0|videoGen|LessThan11~1_combout\);
+
+-- Location: LCCOMB_X31_Y25_N6
+\vga_0|videoGen|colorAddress~70\ : cycloneii_lcell_comb
+-- Equation(s):
+-- \vga_0|videoGen|colorAddress~70_combout\ = ((!\vga_0|videoGen|pixelDraw~28_combout\ & !\vga_0|videoGen|pixelDraw~26_combout\)) # (!\vga_0|videoGen|pixelDraw~46_combout\)
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0000001111111111",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	datab => \vga_0|videoGen|pixelDraw~28_combout\,
+	datac => \vga_0|videoGen|pixelDraw~26_combout\,
+	datad => \vga_0|videoGen|pixelDraw~46_combout\,
+	combout => \vga_0|videoGen|colorAddress~70_combout\);
+
+-- Location: LCCOMB_X31_Y24_N26
+\vga_0|videoGen|colorAddress~74\ : cycloneii_lcell_comb
+-- Equation(s):
+-- \vga_0|videoGen|colorAddress~74_combout\ = ((!\vga_0|videoGen|pixelDraw~38_combout\ & (!\vga_0|videoGen|pixelDraw~33_combout\ & !\vga_0|videoGen|pixelDraw~34_combout\))) # (!\vga_0|videoGen|pixelDraw~49_combout\)
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0000000111111111",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \vga_0|videoGen|pixelDraw~38_combout\,
+	datab => \vga_0|videoGen|pixelDraw~33_combout\,
+	datac => \vga_0|videoGen|pixelDraw~34_combout\,
+	datad => \vga_0|videoGen|pixelDraw~49_combout\,
+	combout => \vga_0|videoGen|colorAddress~74_combout\);
+
+-- Location: LCCOMB_X28_Y25_N4
+\vga_0|videoGen|LessThan173~0\ : cycloneii_lcell_comb
+-- Equation(s):
+-- \vga_0|videoGen|LessThan173~0_combout\ = (!\vga_0|videoSync|pixel_column\(3) & (!\vga_0|videoSync|pixel_column\(4) & (!\vga_0|videoSync|pixel_column\(6) & !\vga_0|videoSync|pixel_column\(5))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0000000000000001",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \vga_0|videoSync|pixel_column\(3),
+	datab => \vga_0|videoSync|pixel_column\(4),
+	datac => \vga_0|videoSync|pixel_column\(6),
+	datad => \vga_0|videoSync|pixel_column\(5),
+	combout => \vga_0|videoGen|LessThan173~0_combout\);
+
+-- Location: LCCOMB_X31_Y23_N12
+\vga_0|videoGen|colorAddress~79\ : cycloneii_lcell_comb
+-- Equation(s):
+-- \vga_0|videoGen|colorAddress~79_combout\ = (\vga_0|videoGen|pixelDraw~34_combout\) # ((\vga_0|videoGen|pixelDraw~79_combout\) # ((\vga_0|videoGen|pixelDraw~33_combout\) # (\vga_0|videoGen|colorAddress~186_combout\)))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1111111111111110",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \vga_0|videoGen|pixelDraw~34_combout\,
+	datab => \vga_0|videoGen|pixelDraw~79_combout\,
+	datac => \vga_0|videoGen|pixelDraw~33_combout\,
+	datad => \vga_0|videoGen|colorAddress~186_combout\,
+	combout => \vga_0|videoGen|colorAddress~79_combout\);
+
+-- Location: LCCOMB_X31_Y23_N26
+\vga_0|videoGen|colorAddress~80\ : cycloneii_lcell_comb
+-- Equation(s):
+-- \vga_0|videoGen|colorAddress~80_combout\ = (\vga_0|videoGen|pixelDraw~51_combout\ & (!\vga_0|videoGen|colorAddress~79_combout\ & ((!\vga_0|videoGen|pixelDraw~22_combout\) # (!\vga_0|videoGen|pixelDraw~56_combout\)))) # 
+-- (!\vga_0|videoGen|pixelDraw~51_combout\ & (((!\vga_0|videoGen|pixelDraw~22_combout\)) # (!\vga_0|videoGen|pixelDraw~56_combout\)))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0001010100111111",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \vga_0|videoGen|pixelDraw~51_combout\,
+	datab => \vga_0|videoGen|pixelDraw~56_combout\,
+	datac => \vga_0|videoGen|pixelDraw~22_combout\,
+	datad => \vga_0|videoGen|colorAddress~79_combout\,
+	combout => \vga_0|videoGen|colorAddress~80_combout\);
+
+-- Location: LCCOMB_X31_Y23_N0
+\vga_0|videoGen|colorAddress~81\ : cycloneii_lcell_comb
+-- Equation(s):
+-- \vga_0|videoGen|colorAddress~81_combout\ = ((!\vga_0|videoGen|pixelDraw~33_combout\ & !\vga_0|videoGen|pixelDraw~34_combout\)) # (!\vga_0|videoGen|pixelDraw~54_combout\)
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0000001111111111",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	datab => \vga_0|videoGen|pixelDraw~33_combout\,
+	datac => \vga_0|videoGen|pixelDraw~34_combout\,
+	datad => \vga_0|videoGen|pixelDraw~54_combout\,
+	combout => \vga_0|videoGen|colorAddress~81_combout\);
+
+-- Location: LCCOMB_X31_Y23_N6
+\vga_0|videoGen|colorAddress~82\ : cycloneii_lcell_comb
+-- Equation(s):
+-- \vga_0|videoGen|colorAddress~82_combout\ = (\vga_0|videoGen|pixelDraw~38_combout\) # ((\vga_0|videoGen|pixelDraw~21_combout\) # ((\vga_0|videoGen|pixelDraw~41_combout\) # (\vga_0|videoGen|pixelDraw~79_combout\)))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1111111111111110",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \vga_0|videoGen|pixelDraw~38_combout\,
+	datab => \vga_0|videoGen|pixelDraw~21_combout\,
+	datac => \vga_0|videoGen|pixelDraw~41_combout\,
+	datad => \vga_0|videoGen|pixelDraw~79_combout\,
+	combout => \vga_0|videoGen|colorAddress~82_combout\);
+
+-- Location: LCCOMB_X31_Y23_N8
+\vga_0|videoGen|colorAddress~83\ : cycloneii_lcell_comb
+-- Equation(s):
+-- \vga_0|videoGen|colorAddress~83_combout\ = (\vga_0|videoGen|colorAddress~81_combout\ & (((!\vga_0|videoGen|colorAddress~82_combout\ & !\vga_0|videoGen|pixelDraw~31_combout\)) # (!\vga_0|videoGen|pixelDraw~54_combout\)))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0011011100000000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \vga_0|videoGen|colorAddress~82_combout\,
+	datab => \vga_0|videoGen|pixelDraw~54_combout\,
+	datac => \vga_0|videoGen|pixelDraw~31_combout\,
+	datad => \vga_0|videoGen|colorAddress~81_combout\,
+	combout => \vga_0|videoGen|colorAddress~83_combout\);
+
+-- Location: LCCOMB_X31_Y23_N10
+\vga_0|videoGen|colorAddress~84\ : cycloneii_lcell_comb
+-- Equation(s):
+-- \vga_0|videoGen|colorAddress~84_combout\ = (\vga_0|videoGen|colorAddress~83_combout\ & (\vga_0|videoGen|colorAddress~80_combout\ & ((!\vga_0|videoGen|pixelDraw~36_combout\) # (!\vga_0|videoGen|pixelDraw~51_combout\))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0100110000000000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \vga_0|videoGen|pixelDraw~51_combout\,
+	datab => \vga_0|videoGen|colorAddress~83_combout\,
+	datac => \vga_0|videoGen|pixelDraw~36_combout\,
+	datad => \vga_0|videoGen|colorAddress~80_combout\,
+	combout => \vga_0|videoGen|colorAddress~84_combout\);
+
+-- Location: LCCOMB_X30_Y23_N4
+\vga_0|videoGen|colorAddress~88\ : cycloneii_lcell_comb
+-- Equation(s):
+-- \vga_0|videoGen|colorAddress~88_combout\ = ((!\vga_0|videoGen|pixelDraw~79_combout\ & !\vga_0|videoGen|pixelDraw~31_combout\)) # (!\vga_0|videoGen|pixelDraw~23_combout\)
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0000010111111111",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \vga_0|videoGen|pixelDraw~79_combout\,
+	datac => \vga_0|videoGen|pixelDraw~31_combout\,
+	datad => \vga_0|videoGen|pixelDraw~23_combout\,
+	combout => \vga_0|videoGen|colorAddress~88_combout\);
+
+-- Location: LCCOMB_X31_Y23_N24
+\vga_0|videoGen|colorAddress~89\ : cycloneii_lcell_comb
+-- Equation(s):
+-- \vga_0|videoGen|colorAddress~89_combout\ = (\vga_0|videoGen|colorAddress~88_combout\ & (((!\vga_0|videoGen|pixelDraw~36_combout\ & !\vga_0|videoGen|pixelDraw~41_combout\)) # (!\vga_0|videoGen|pixelDraw~56_combout\)))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0000010011001100",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \vga_0|videoGen|pixelDraw~36_combout\,
+	datab => \vga_0|videoGen|colorAddress~88_combout\,
+	datac => \vga_0|videoGen|pixelDraw~41_combout\,
+	datad => \vga_0|videoGen|pixelDraw~56_combout\,
+	combout => \vga_0|videoGen|colorAddress~89_combout\);
+
+-- Location: LCCOMB_X28_Y25_N26
+\vga_0|videoGen|LessThan413~0\ : cycloneii_lcell_comb
+-- Equation(s):
+-- \vga_0|videoGen|LessThan413~0_combout\ = (!\vga_0|videoSync|pixel_column\(9) & (!\vga_0|videoSync|pixel_column\(6) & !\vga_0|videoSync|pixel_column\(7)))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0000000000000101",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \vga_0|videoSync|pixel_column\(9),
+	datac => \vga_0|videoSync|pixel_column\(6),
+	datad => \vga_0|videoSync|pixel_column\(7),
+	combout => \vga_0|videoGen|LessThan413~0_combout\);
+
+-- Location: LCCOMB_X28_Y26_N0
+\vga_0|videoGen|pixelDraw~64\ : cycloneii_lcell_comb
+-- Equation(s):
+-- \vga_0|videoGen|pixelDraw~64_combout\ = (\vga_0|videoGen|LessThan374~1_combout\ & (((!\vga_0|videoSync|pixel_column\(5) & !\vga_0|videoGen|LessThan334~0_combout\)) # (!\vga_0|videoSync|pixel_column\(8))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0011011100000000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \vga_0|videoSync|pixel_column\(5),
+	datab => \vga_0|videoSync|pixel_column\(8),
+	datac => \vga_0|videoGen|LessThan334~0_combout\,
+	datad => \vga_0|videoGen|LessThan374~1_combout\,
+	combout => \vga_0|videoGen|pixelDraw~64_combout\);
+
+-- Location: LCCOMB_X28_Y26_N22
+\vga_0|videoGen|pixelDraw~65\ : cycloneii_lcell_comb
+-- Equation(s):
+-- \vga_0|videoGen|pixelDraw~65_combout\ = (\vga_0|videoGen|pixelDraw~64_combout\ & (((\vga_0|videoGen|LessThan294~1_combout\ & !\vga_0|videoGen|LessThan333~2_combout\)) # (!\vga_0|videoGen|LessThan13~3_combout\)))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0101110100000000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \vga_0|videoGen|LessThan13~3_combout\,
+	datab => \vga_0|videoGen|LessThan294~1_combout\,
+	datac => \vga_0|videoGen|LessThan333~2_combout\,
+	datad => \vga_0|videoGen|pixelDraw~64_combout\,
+	combout => \vga_0|videoGen|pixelDraw~65_combout\);
+
+-- Location: LCCOMB_X28_Y24_N20
+\vga_0|videoGen|colorAddress~111\ : cycloneii_lcell_comb
+-- Equation(s):
+-- \vga_0|videoGen|colorAddress~111_combout\ = (\vga_0|videoGen|pixelDraw~34_combout\) # ((\vga_0|videoGen|pixelDraw~33_combout\) # (\vga_0|videoGen|pixelDraw~38_combout\))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1111111111101110",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \vga_0|videoGen|pixelDraw~34_combout\,
+	datab => \vga_0|videoGen|pixelDraw~33_combout\,
+	datad => \vga_0|videoGen|pixelDraw~38_combout\,
+	combout => \vga_0|videoGen|colorAddress~111_combout\);
+
+-- Location: LCCOMB_X29_Y23_N22
+\vga_0|videoGen|colorAddress~114\ : cycloneii_lcell_comb
+-- Equation(s):
+-- \vga_0|videoGen|colorAddress~114_combout\ = (\vga_0|videoGen|colorAddress~113_combout\ & ((!\vga_0|videoGen|pixelDraw~61_combout\) # (!\vga_0|videoGen|colorAddress~100_combout\)))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0101000011110000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \vga_0|videoGen|colorAddress~100_combout\,
+	datac => \vga_0|videoGen|colorAddress~113_combout\,
+	datad => \vga_0|videoGen|pixelDraw~61_combout\,
+	combout => \vga_0|videoGen|colorAddress~114_combout\);
+
+-- Location: LCCOMB_X28_Y23_N22
+\vga_0|videoGen|colorAddress~117\ : cycloneii_lcell_comb
+-- Equation(s):
+-- \vga_0|videoGen|colorAddress~117_combout\ = (\vga_0|videoGen|colorAddress~116_combout\ & ((!\vga_0|videoGen|colorAddress~106_combout\) # (!\vga_0|videoGen|pixelDraw~60_combout\)))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0101111100000000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \vga_0|videoGen|pixelDraw~60_combout\,
+	datac => \vga_0|videoGen|colorAddress~106_combout\,
+	datad => \vga_0|videoGen|colorAddress~116_combout\,
+	combout => \vga_0|videoGen|colorAddress~117_combout\);
+
+-- Location: LCCOMB_X28_Y22_N10
+\vga_0|videoGen|pixelDraw~69\ : cycloneii_lcell_comb
+-- Equation(s):
+-- \vga_0|videoGen|pixelDraw~69_combout\ = (!\vga_0|videoGen|pixelDraw~46_combout\) # (!\vga_0|videoGen|pixelDraw~60_combout\)
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0111011101110111",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \vga_0|videoGen|pixelDraw~60_combout\,
+	datab => \vga_0|videoGen|pixelDraw~46_combout\,
+	combout => \vga_0|videoGen|pixelDraw~69_combout\);
+
+-- Location: LCCOMB_X30_Y22_N20
+\vga_0|videoGen|pixelDraw~71\ : cycloneii_lcell_comb
+-- Equation(s):
+-- \vga_0|videoGen|pixelDraw~71_combout\ = (!\vga_0|videoGen|pixelDraw~68_combout\) # (!\vga_0|videoGen|pixelDraw~46_combout\)
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0000111111111111",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	datac => \vga_0|videoGen|pixelDraw~46_combout\,
+	datad => \vga_0|videoGen|pixelDraw~68_combout\,
+	combout => \vga_0|videoGen|pixelDraw~71_combout\);
+
+-- Location: LCCOMB_X29_Y22_N24
+\vga_0|videoGen|colorAddress~134\ : cycloneii_lcell_comb
+-- Equation(s):
+-- \vga_0|videoGen|colorAddress~134_combout\ = (\vga_0|videoGen|pixelDraw~79_combout\) # ((\vga_0|videoGen|pixelDraw~22_combout\) # ((\vga_0|videoGen|pixelDraw~21_combout\) # (\vga_0|videoGen|pixelDraw~31_combout\)))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1111111111111110",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \vga_0|videoGen|pixelDraw~79_combout\,
+	datab => \vga_0|videoGen|pixelDraw~22_combout\,
+	datac => \vga_0|videoGen|pixelDraw~21_combout\,
+	datad => \vga_0|videoGen|pixelDraw~31_combout\,
+	combout => \vga_0|videoGen|colorAddress~134_combout\);
+
+-- Location: LCCOMB_X30_Y22_N10
+\vga_0|videoGen|colorAddress~136\ : cycloneii_lcell_comb
+-- Equation(s):
+-- \vga_0|videoGen|colorAddress~136_combout\ = (\vga_0|videoGen|pixelDraw~38_combout\) # ((\vga_0|videoGen|pixelDraw~34_combout\) # (\vga_0|videoGen|pixelDraw~41_combout\))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1111111111111010",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \vga_0|videoGen|pixelDraw~38_combout\,
+	datac => \vga_0|videoGen|pixelDraw~34_combout\,
+	datad => \vga_0|videoGen|pixelDraw~41_combout\,
+	combout => \vga_0|videoGen|colorAddress~136_combout\);
+
+-- Location: LCCOMB_X29_Y22_N6
+\vga_0|videoGen|colorAddress~137\ : cycloneii_lcell_comb
+-- Equation(s):
+-- \vga_0|videoGen|colorAddress~137_combout\ = ((!\vga_0|videoGen|pixelDraw~36_combout\ & (!\vga_0|videoGen|pixelDraw~33_combout\ & !\vga_0|videoGen|colorAddress~136_combout\))) # (!\vga_0|videoGen|pixelDraw~19_combout\)
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0000000111111111",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \vga_0|videoGen|pixelDraw~36_combout\,
+	datab => \vga_0|videoGen|pixelDraw~33_combout\,
+	datac => \vga_0|videoGen|colorAddress~136_combout\,
+	datad => \vga_0|videoGen|pixelDraw~19_combout\,
+	combout => \vga_0|videoGen|colorAddress~137_combout\);
+
+-- Location: LCCOMB_X28_Y26_N18
+\vga_0|videoGen|colorAddress~143\ : cycloneii_lcell_comb
+-- Equation(s):
+-- \vga_0|videoGen|colorAddress~143_combout\ = (\vga_0|videoGen|pixelDraw~58_combout\ & ((\vga_0|videoGen|pixelDraw~36_combout\) # (\vga_0|videoGen|pixelDraw~33_combout\)))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1110111000000000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \vga_0|videoGen|pixelDraw~36_combout\,
+	datab => \vga_0|videoGen|pixelDraw~33_combout\,
+	datad => \vga_0|videoGen|pixelDraw~58_combout\,
+	combout => \vga_0|videoGen|colorAddress~143_combout\);
+
+-- Location: LCCOMB_X27_Y23_N20
+\vga_0|videoGen|colorAddress~144\ : cycloneii_lcell_comb
+-- Equation(s):
+-- \vga_0|videoGen|colorAddress~144_combout\ = ((\vga_0|videoGen|colorAddress~143_combout\) # ((!\vga_0|videoGen|colorAddress~121_combout\) # (!\vga_0|videoGen|colorAddress~96_combout\))) # (!\vga_0|videoGen|colorAddress~94_combout\)
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1101111111111111",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \vga_0|videoGen|colorAddress~94_combout\,
+	datab => \vga_0|videoGen|colorAddress~143_combout\,
+	datac => \vga_0|videoGen|colorAddress~96_combout\,
+	datad => \vga_0|videoGen|colorAddress~121_combout\,
+	combout => \vga_0|videoGen|colorAddress~144_combout\);
+
+-- Location: LCCOMB_X27_Y23_N6
+\vga_0|videoGen|colorAddress~145\ : cycloneii_lcell_comb
+-- Equation(s):
+-- \vga_0|videoGen|colorAddress~145_combout\ = (\vga_0|videoGen|colorAddress~121_combout\ & ((!\vga_0|videoGen|pixelDraw~36_combout\) # (!\vga_0|videoGen|pixelDraw~58_combout\)))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0011111100000000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	datab => \vga_0|videoGen|pixelDraw~58_combout\,
+	datac => \vga_0|videoGen|pixelDraw~36_combout\,
+	datad => \vga_0|videoGen|colorAddress~121_combout\,
+	combout => \vga_0|videoGen|colorAddress~145_combout\);
+
+-- Location: LCCOMB_X27_Y23_N16
+\vga_0|videoGen|colorAddress~146\ : cycloneii_lcell_comb
+-- Equation(s):
+-- \vga_0|videoGen|colorAddress~146_combout\ = (\vga_0|videoGen|colorAddress~144_combout\ & (((!\vga_0|videoGen|colorAddress~145_combout\) # (!\vga_0|videoGen|colorAddress~97_combout\)) # (!\vga_0|videoGen|colorAddress~94_combout\)))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0111000011110000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \vga_0|videoGen|colorAddress~94_combout\,
+	datab => \vga_0|videoGen|colorAddress~97_combout\,
+	datac => \vga_0|videoGen|colorAddress~144_combout\,
+	datad => \vga_0|videoGen|colorAddress~145_combout\,
+	combout => \vga_0|videoGen|colorAddress~146_combout\);
+
+-- Location: LCCOMB_X27_Y23_N2
+\vga_0|videoGen|colorAddress~147\ : cycloneii_lcell_comb
+-- Equation(s):
+-- \vga_0|videoGen|colorAddress~147_combout\ = ((!\vga_0|videoGen|colorAddress~94_combout\ & (!\vga_0|videoGen|colorAddress~73_combout\ & !\vga_0|videoGen|colorAddress~95_combout\))) # (!\vga_0|videoGen|colorAddress~121_combout\)
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0000000111111111",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \vga_0|videoGen|colorAddress~94_combout\,
+	datab => \vga_0|videoGen|colorAddress~73_combout\,
+	datac => \vga_0|videoGen|colorAddress~95_combout\,
+	datad => \vga_0|videoGen|colorAddress~121_combout\,
+	combout => \vga_0|videoGen|colorAddress~147_combout\);
+
+-- Location: LCCOMB_X27_Y23_N24
+\vga_0|videoGen|colorAddress~148\ : cycloneii_lcell_comb
+-- Equation(s):
+-- \vga_0|videoGen|colorAddress~148_combout\ = (\vga_0|videoGen|Mux653~4_combout\ & (\vga_0|videoGen|colorAddress~147_combout\ & ((\vga_0|videoGen|colorAddress~120_combout\) # (\vga_0|videoGen|placeShip_on~combout\))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1100100000000000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \vga_0|videoGen|colorAddress~120_combout\,
+	datab => \vga_0|videoGen|Mux653~4_combout\,
+	datac => \vga_0|videoGen|placeShip_on~combout\,
+	datad => \vga_0|videoGen|colorAddress~147_combout\,
+	combout => \vga_0|videoGen|colorAddress~148_combout\);
+
+-- Location: LCCOMB_X27_Y23_N26
+\vga_0|videoGen|colorAddress~149\ : cycloneii_lcell_comb
+-- Equation(s):
+-- \vga_0|videoGen|colorAddress~149_combout\ = (\vga_0|videoGen|colorAddress~148_combout\ & ((!\vga_0|videoGen|colorAddress~121_combout\) # (!\vga_0|videoGen|colorAddress~94_combout\)))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0101000011110000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \vga_0|videoGen|colorAddress~94_combout\,
+	datac => \vga_0|videoGen|colorAddress~148_combout\,
+	datad => \vga_0|videoGen|colorAddress~121_combout\,
+	combout => \vga_0|videoGen|colorAddress~149_combout\);
+
+-- Location: LCCOMB_X27_Y23_N4
+\vga_0|videoGen|colorAddress~150\ : cycloneii_lcell_comb
+-- Equation(s):
+-- \vga_0|videoGen|colorAddress~150_combout\ = (\vga_0|videoGen|colorAddress~145_combout\ & ((\vga_0|videoGen|colorAddress~105_combout\) # (\vga_0|videoGen|colorAddress~103_combout\)))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1111110000000000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	datab => \vga_0|videoGen|colorAddress~105_combout\,
+	datac => \vga_0|videoGen|colorAddress~103_combout\,
+	datad => \vga_0|videoGen|colorAddress~145_combout\,
+	combout => \vga_0|videoGen|colorAddress~150_combout\);
+
+-- Location: LCCOMB_X27_Y23_N30
+\vga_0|videoGen|colorAddress~151\ : cycloneii_lcell_comb
+-- Equation(s):
+-- \vga_0|videoGen|colorAddress~151_combout\ = (\vga_0|videoGen|colorAddress~146_combout\ & (\vga_0|videoGen|colorAddress~149_combout\ & ((!\vga_0|videoGen|colorAddress~150_combout\) # (!\vga_0|videoGen|colorAddress~94_combout\))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0111000000000000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \vga_0|videoGen|colorAddress~94_combout\,
+	datab => \vga_0|videoGen|colorAddress~150_combout\,
+	datac => \vga_0|videoGen|colorAddress~146_combout\,
+	datad => \vga_0|videoGen|colorAddress~149_combout\,
+	combout => \vga_0|videoGen|colorAddress~151_combout\);
+
+-- Location: LCCOMB_X27_Y23_N8
+\vga_0|videoGen|colorAddress~152\ : cycloneii_lcell_comb
+-- Equation(s):
+-- \vga_0|videoGen|colorAddress~152_combout\ = (\vga_0|videoGen|colorAddress~151_combout\ & (((!\vga_0|videoGen|colorAddress~200_combout\) # (!\vga_0|videoGen|colorAddress~94_combout\)) # (!\vga_0|videoGen|colorAddress~145_combout\)))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0111111100000000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \vga_0|videoGen|colorAddress~145_combout\,
+	datab => \vga_0|videoGen|colorAddress~94_combout\,
+	datac => \vga_0|videoGen|colorAddress~200_combout\,
+	datad => \vga_0|videoGen|colorAddress~151_combout\,
+	combout => \vga_0|videoGen|colorAddress~152_combout\);
+
+-- Location: LCCOMB_X27_Y23_N18
+\vga_0|videoGen|colorAddress~153\ : cycloneii_lcell_comb
+-- Equation(s):
+-- \vga_0|videoGen|colorAddress~153_combout\ = (\vga_0|videoGen|colorAddress~152_combout\ & (((!\vga_0|videoGen|colorAddress~110_combout\) # (!\vga_0|videoGen|colorAddress~94_combout\)) # (!\vga_0|videoGen|colorAddress~145_combout\)))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0111000011110000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \vga_0|videoGen|colorAddress~145_combout\,
+	datab => \vga_0|videoGen|colorAddress~94_combout\,
+	datac => \vga_0|videoGen|colorAddress~152_combout\,
+	datad => \vga_0|videoGen|colorAddress~110_combout\,
+	combout => \vga_0|videoGen|colorAddress~153_combout\);
+
+-- Location: LCCOMB_X29_Y23_N16
+\vga_0|videoGen|colorAddress~154\ : cycloneii_lcell_comb
+-- Equation(s):
+-- \vga_0|videoGen|colorAddress~154_combout\ = (\vga_0|videoGen|colorAddress~121_combout\ & (\vga_0|videoGen|colorAddress~94_combout\ & ((!\vga_0|videoGen|pixelDraw~58_combout\) # (!\vga_0|videoGen|pixelDraw~36_combout\))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0111000000000000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \vga_0|videoGen|pixelDraw~36_combout\,
+	datab => \vga_0|videoGen|pixelDraw~58_combout\,
+	datac => \vga_0|videoGen|colorAddress~121_combout\,
+	datad => \vga_0|videoGen|colorAddress~94_combout\,
+	combout => \vga_0|videoGen|colorAddress~154_combout\);
+
+-- Location: LCCOMB_X28_Y23_N20
+\vga_0|videoGen|colorAddress~155\ : cycloneii_lcell_comb
+-- Equation(s):
+-- \vga_0|videoGen|colorAddress~155_combout\ = (\vga_0|videoGen|colorAddress~113_combout\) # ((\vga_0|videoGen|colorAddress~195_combout\) # ((\vga_0|videoGen|colorAddress~114_combout\) # (\vga_0|videoGen|colorAddress~116_combout\)))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1111111111111110",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \vga_0|videoGen|colorAddress~113_combout\,
+	datab => \vga_0|videoGen|colorAddress~195_combout\,
+	datac => \vga_0|videoGen|colorAddress~114_combout\,
+	datad => \vga_0|videoGen|colorAddress~116_combout\,
+	combout => \vga_0|videoGen|colorAddress~155_combout\);
+
+-- Location: LCCOMB_X28_Y23_N18
+\vga_0|videoGen|colorAddress~156\ : cycloneii_lcell_comb
+-- Equation(s):
+-- \vga_0|videoGen|colorAddress~156_combout\ = (\vga_0|videoGen|colorAddress~153_combout\ & (((!\vga_0|videoGen|colorAddress~117_combout\ & !\vga_0|videoGen|colorAddress~155_combout\)) # (!\vga_0|videoGen|colorAddress~154_combout\)))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0101011100000000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \vga_0|videoGen|colorAddress~154_combout\,
+	datab => \vga_0|videoGen|colorAddress~117_combout\,
+	datac => \vga_0|videoGen|colorAddress~155_combout\,
+	datad => \vga_0|videoGen|colorAddress~153_combout\,
+	combout => \vga_0|videoGen|colorAddress~156_combout\);
+
+-- Location: LCCOMB_X28_Y23_N8
+\vga_0|videoGen|colorAddress~157\ : cycloneii_lcell_comb
+-- Equation(s):
+-- \vga_0|videoGen|colorAddress~157_combout\ = (\vga_0|videoGen|colorAddress~156_combout\ & (((!\vga_0|videoGen|colorAddress~196_combout\ & !\vga_0|videoGen|colorAddress~118_combout\)) # (!\vga_0|videoGen|colorAddress~154_combout\)))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0001111100000000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \vga_0|videoGen|colorAddress~196_combout\,
+	datab => \vga_0|videoGen|colorAddress~118_combout\,
+	datac => \vga_0|videoGen|colorAddress~154_combout\,
+	datad => \vga_0|videoGen|colorAddress~156_combout\,
+	combout => \vga_0|videoGen|colorAddress~157_combout\);
+
+-- Location: LCCOMB_X28_Y23_N14
+\vga_0|videoGen|colorAddress~158\ : cycloneii_lcell_comb
+-- Equation(s):
+-- \vga_0|videoGen|colorAddress~158_combout\ = (\vga_0|videoGen|pixelDraw~71_combout\ & (\vga_0|videoGen|colorAddress~121_combout\ & (\vga_0|videoGen|colorAddress~125_combout\ & \vga_0|videoGen|colorAddress~119_combout\)))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1000000000000000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \vga_0|videoGen|pixelDraw~71_combout\,
+	datab => \vga_0|videoGen|colorAddress~121_combout\,
+	datac => \vga_0|videoGen|colorAddress~125_combout\,
+	datad => \vga_0|videoGen|colorAddress~119_combout\,
+	combout => \vga_0|videoGen|colorAddress~158_combout\);
+
+-- Location: LCCOMB_X28_Y23_N24
+\vga_0|videoGen|colorAddress~159\ : cycloneii_lcell_comb
+-- Equation(s):
+-- \vga_0|videoGen|colorAddress~159_combout\ = (!\vga_0|videoGen|colorAddress~158_combout\ & (\vga_0|videoGen|colorAddress~157_combout\ & ((!\vga_0|videoGen|colorAddress~132_combout\) # (!\vga_0|videoGen|colorAddress~130_combout\))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0001000000110000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \vga_0|videoGen|colorAddress~130_combout\,
+	datab => \vga_0|videoGen|colorAddress~158_combout\,
+	datac => \vga_0|videoGen|colorAddress~157_combout\,
+	datad => \vga_0|videoGen|colorAddress~132_combout\,
+	combout => \vga_0|videoGen|colorAddress~159_combout\);
+
+-- Location: LCCOMB_X28_Y22_N24
+\vga_0|videoGen|colorAddress~165\ : cycloneii_lcell_comb
+-- Equation(s):
+-- \vga_0|videoGen|colorAddress~165_combout\ = (((!\vga_0|videoGen|colorAddress~119_combout\) # (!\vga_0|videoGen|colorAddress~127_combout\)) # (!\vga_0|videoGen|colorAddress~125_combout\)) # (!\vga_0|videoGen|colorAddress~121_combout\)
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0111111111111111",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \vga_0|videoGen|colorAddress~121_combout\,
+	datab => \vga_0|videoGen|colorAddress~125_combout\,
+	datac => \vga_0|videoGen|colorAddress~127_combout\,
+	datad => \vga_0|videoGen|colorAddress~119_combout\,
+	combout => \vga_0|videoGen|colorAddress~165_combout\);
+
+-- Location: LCCOMB_X27_Y22_N2
+\vga_0|videoGen|colorAddress~170\ : cycloneii_lcell_comb
+-- Equation(s):
+-- \vga_0|videoGen|colorAddress~170_combout\ = (\vga_0|videoSync|pixel_column\(8) & (!\vga_0|videoSync|pixel_column\(9) & \vga_0|videoGen|Equal3~1_combout\))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0010001000000000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \vga_0|videoSync|pixel_column\(8),
+	datab => \vga_0|videoSync|pixel_column\(9),
+	datad => \vga_0|videoGen|Equal3~1_combout\,
+	combout => \vga_0|videoGen|colorAddress~170_combout\);
+
+-- Location: LCCOMB_X25_Y23_N24
+\vga_0|videoGen|colorAddress~172\ : cycloneii_lcell_comb
+-- Equation(s):
+-- \vga_0|videoGen|colorAddress~172_combout\ = ((!\vga_0|videoGen|pixelDraw~46_combout\ & !\vga_0|videoGen|pixelDraw~31_combout\)) # (!\vga_0|videoGen|pixelDraw~19_combout\)
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0000010111111111",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \vga_0|videoGen|pixelDraw~46_combout\,
+	datac => \vga_0|videoGen|pixelDraw~31_combout\,
+	datad => \vga_0|videoGen|pixelDraw~19_combout\,
+	combout => \vga_0|videoGen|colorAddress~172_combout\);
+
+-- Location: LCCOMB_X27_Y22_N26
+\vga_0|videoGen|colorAddress~176\ : cycloneii_lcell_comb
+-- Equation(s):
+-- \vga_0|videoGen|colorAddress~176_combout\ = (\vga_0|videoSync|pixel_column\(9)) # ((\vga_0|videoGen|Equal2~0_combout\ & (\vga_0|videoSync|pixel_column\(8))) # (!\vga_0|videoGen|Equal2~0_combout\ & ((!\vga_0|videoGen|Equal3~1_combout\))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1111101011110011",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \vga_0|videoSync|pixel_column\(8),
+	datab => \vga_0|videoGen|Equal3~1_combout\,
+	datac => \vga_0|videoSync|pixel_column\(9),
+	datad => \vga_0|videoGen|Equal2~0_combout\,
+	combout => \vga_0|videoGen|colorAddress~176_combout\);
+
+-- Location: LCCOMB_X25_Y23_N30
+\vga_0|videoGen|colorAddress~180\ : cycloneii_lcell_comb
+-- Equation(s):
+-- \vga_0|videoGen|colorAddress~180_combout\ = (\vga_0|videoGen|pixelDraw~82_combout\ & (!\vga_0|videoGen|pixelDraw~66_combout\ & (\vga_0|videoGen|colorAddress~172_combout\ & \vga_0|videoGen|pixelDraw~80_combout\)))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0010000000000000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \vga_0|videoGen|pixelDraw~82_combout\,
+	datab => \vga_0|videoGen|pixelDraw~66_combout\,
+	datac => \vga_0|videoGen|colorAddress~172_combout\,
+	datad => \vga_0|videoGen|pixelDraw~80_combout\,
+	combout => \vga_0|videoGen|colorAddress~180_combout\);
+
+-- Location: LCCOMB_X29_Y22_N10
+\vga_0|videoGen|colorAddress~181\ : cycloneii_lcell_comb
+-- Equation(s):
+-- \vga_0|videoGen|colorAddress~181_combout\ = (\vga_0|videoGen|colorAddress~180_combout\ & (\vga_0|videoGen|colorAddress~137_combout\ & ((!\vga_0|videoGen|pixelDraw~19_combout\) # (!\vga_0|videoGen|pixelDraw~21_combout\))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0111000000000000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \vga_0|videoGen|pixelDraw~21_combout\,
+	datab => \vga_0|videoGen|pixelDraw~19_combout\,
+	datac => \vga_0|videoGen|colorAddress~180_combout\,
+	datad => \vga_0|videoGen|colorAddress~137_combout\,
+	combout => \vga_0|videoGen|colorAddress~181_combout\);
+
+-- Location: LCCOMB_X24_Y23_N14
+\vga_0|videoGen|colorAddress~184\ : cycloneii_lcell_comb
+-- Equation(s):
+-- \vga_0|videoGen|colorAddress~184_combout\ = (!\vga_0|videoSync|pixel_column\(9) & ((\vga_0|videoGen|bit_addr\(2) & ((\vga_0|videoGen|Mux653~1_combout\))) # (!\vga_0|videoGen|bit_addr\(2) & (\vga_0|videoGen|Mux653~3_combout\))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0011001000010000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \vga_0|videoGen|bit_addr\(2),
+	datab => \vga_0|videoSync|pixel_column\(9),
+	datac => \vga_0|videoGen|Mux653~3_combout\,
+	datad => \vga_0|videoGen|Mux653~1_combout\,
+	combout => \vga_0|videoGen|colorAddress~184_combout\);
+
+-- Location: LCCOMB_X25_Y26_N6
+\vga_0|videoSync|process_1~2\ : cycloneii_lcell_comb
+-- Equation(s):
+-- \vga_0|videoSync|process_1~2_combout\ = (!\vga_0|videoSync|h_count\(6) & (!\vga_0|videoSync|h_count\(5) & ((!\vga_0|videoSync|h_count\(3)) # (!\vga_0|videoSync|h_count\(4)))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0000000000010011",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \vga_0|videoSync|h_count\(4),
+	datab => \vga_0|videoSync|h_count\(6),
+	datac => \vga_0|videoSync|h_count\(3),
+	datad => \vga_0|videoSync|h_count\(5),
+	combout => \vga_0|videoSync|process_1~2_combout\);
+
+-- Location: LCCOMB_X28_Y26_N26
+\vga_0|videoSync|process_1~4\ : cycloneii_lcell_comb
+-- Equation(s):
+-- \vga_0|videoSync|process_1~4_combout\ = (\vga_0|videoSync|h_count\(5) & ((\vga_0|videoSync|h_count\(2)) # ((\vga_0|videoSync|h_count\(0)) # (\vga_0|videoSync|h_count\(1)))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1100110011001000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \vga_0|videoSync|h_count\(2),
+	datab => \vga_0|videoSync|h_count\(5),
+	datac => \vga_0|videoSync|h_count\(0),
+	datad => \vga_0|videoSync|h_count\(1),
+	combout => \vga_0|videoSync|process_1~4_combout\);
+
+-- Location: LCCOMB_X24_Y25_N2
+\vga_0|videoGen|Mux27~0\ : cycloneii_lcell_comb
+-- Equation(s):
+-- \vga_0|videoGen|Mux27~0_combout\ = (\vga_0|videoSync|pixel_column\(6) & (((!\vga_0|videoSync|pixel_column\(7) & !\vga_0|videoSync|pixel_column\(4))))) # (!\vga_0|videoSync|pixel_column\(6) & (\vga_0|videoSync|pixel_column\(5) $ 
+-- (((\vga_0|videoSync|pixel_column\(7) & !\vga_0|videoSync|pixel_column\(4))))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0010001000011110",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \vga_0|videoSync|pixel_column\(5),
+	datab => \vga_0|videoSync|pixel_column\(6),
+	datac => \vga_0|videoSync|pixel_column\(7),
+	datad => \vga_0|videoSync|pixel_column\(4),
+	combout => \vga_0|videoGen|Mux27~0_combout\);
+
+-- Location: LCCOMB_X25_Y25_N12
+\vga_0|videoGen|char_addr[1]~17\ : cycloneii_lcell_comb
+-- Equation(s):
+-- \vga_0|videoGen|char_addr[1]~17_combout\ = (!\vga_0|videoSync|pixel_column\(5) & (\vga_0|videoSync|pixel_column\(6) $ (((!\vga_0|videoGen|LessThan13~3_combout\) # (!\vga_0|videoGen|Equal2~0_combout\)))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0010000100010001",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \vga_0|videoSync|pixel_column\(6),
+	datab => \vga_0|videoSync|pixel_column\(5),
+	datac => \vga_0|videoGen|Equal2~0_combout\,
+	datad => \vga_0|videoGen|LessThan13~3_combout\,
+	combout => \vga_0|videoGen|char_addr[1]~17_combout\);
+
+-- Location: LCCOMB_X25_Y23_N12
+\vga_0|videoGen|pixelDraw~80\ : cycloneii_lcell_comb
+-- Equation(s):
+-- \vga_0|videoGen|pixelDraw~80_combout\ = ((\vga_0|videoGen|LessThan53~0_combout\) # ((\vga_0|videoGen|LessThan13~2_combout\) # (!\vga_0|videoGen|LessThan13~0_combout\))) # (!\vga_0|videoGen|pixelDraw~79_combout\)
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1111110111111111",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \vga_0|videoGen|pixelDraw~79_combout\,
+	datab => \vga_0|videoGen|LessThan53~0_combout\,
+	datac => \vga_0|videoGen|LessThan13~2_combout\,
+	datad => \vga_0|videoGen|LessThan13~0_combout\,
+	combout => \vga_0|videoGen|pixelDraw~80_combout\);
+
+-- Location: LCCOMB_X31_Y23_N2
+\vga_0|videoGen|colorAddress~186\ : cycloneii_lcell_comb
+-- Equation(s):
+-- \vga_0|videoGen|colorAddress~186_combout\ = (\vga_0|videoGen|pixelDraw~38_combout\) # ((\vga_0|videoGen|pixelDraw~41_combout\) # ((!\vga_0|videoGen|LessThan23~2_combout\ & \vga_0|videoGen|pixelDraw~20_combout\)))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1111110111111100",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \vga_0|videoGen|LessThan23~2_combout\,
+	datab => \vga_0|videoGen|pixelDraw~38_combout\,
+	datac => \vga_0|videoGen|pixelDraw~41_combout\,
+	datad => \vga_0|videoGen|pixelDraw~20_combout\,
+	combout => \vga_0|videoGen|colorAddress~186_combout\);
+
+-- Location: LCCOMB_X28_Y26_N14
+\vga_0|videoGen|colorAddress~200\ : cycloneii_lcell_comb
+-- Equation(s):
+-- \vga_0|videoGen|colorAddress~200_combout\ = (\vga_0|videoGen|colorAddress~105_combout\ & ((!\vga_0|videoGen|colorAddress~106_combout\) # (!\vga_0|videoGen|pixelDraw~63_combout\)))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0101111100000000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \vga_0|videoGen|pixelDraw~63_combout\,
+	datac => \vga_0|videoGen|colorAddress~106_combout\,
+	datad => \vga_0|videoGen|colorAddress~105_combout\,
+	combout => \vga_0|videoGen|colorAddress~200_combout\);
+
+-- Location: LCCOMB_X29_Y22_N14
+\vga_0|videoSync|pixel_clock_int~0\ : cycloneii_lcell_comb
+-- Equation(s):
+-- \vga_0|videoSync|pixel_clock_int~0_combout\ = !\vga_0|videoSync|pixel_clock_int~regout\
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0000111100001111",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	datac => \vga_0|videoSync|pixel_clock_int~regout\,
+	combout => \vga_0|videoSync|pixel_clock_int~0_combout\);
+
+-- Location: LCFF_X29_Y22_N15
+\vga_0|videoSync|pixel_clock_int\ : cycloneii_lcell_ff
+PORT MAP (
+	clk => \clk~clkctrl_outclk\,
+	datain => \vga_0|videoSync|pixel_clock_int~0_combout\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	regout => \vga_0|videoSync|pixel_clock_int~regout\);
+
+-- Location: CLKCTRL_G11
+\vga_0|videoSync|pixel_clock_int~clkctrl\ : cycloneii_clkctrl
+-- pragma translate_off
+GENERIC MAP (
+	clock_type => "global clock",
+	ena_register_mode => "none")
+-- pragma translate_on
+PORT MAP (
+	inclk => \vga_0|videoSync|pixel_clock_int~clkctrl_INCLK_bus\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	outclk => \vga_0|videoSync|pixel_clock_int~clkctrl_outclk\);
+
+-- Location: LCCOMB_X31_Y26_N4
+\vga_0|videoSync|Add0~0\ : cycloneii_lcell_comb
+-- Equation(s):
+-- \vga_0|videoSync|Add0~0_combout\ = \vga_0|videoSync|h_count\(0) $ (VCC)
+-- \vga_0|videoSync|Add0~1\ = CARRY(\vga_0|videoSync|h_count\(0))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0011001111001100",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	datab => \vga_0|videoSync|h_count\(0),
+	datad => VCC,
+	combout => \vga_0|videoSync|Add0~0_combout\,
+	cout => \vga_0|videoSync|Add0~1\);
+
+-- Location: LCCOMB_X31_Y26_N30
+\vga_0|videoSync|h_count~2\ : cycloneii_lcell_comb
+-- Equation(s):
+-- \vga_0|videoSync|h_count~2_combout\ = (\vga_0|videoSync|Add0~0_combout\ & (((!\vga_0|videoSync|h_count\(8)) # (!\vga_0|videoSync|Equal0~2_combout\)) # (!\vga_0|videoSync|Equal0~1_combout\)))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0111000011110000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \vga_0|videoSync|Equal0~1_combout\,
+	datab => \vga_0|videoSync|Equal0~2_combout\,
+	datac => \vga_0|videoSync|Add0~0_combout\,
+	datad => \vga_0|videoSync|h_count\(8),
+	combout => \vga_0|videoSync|h_count~2_combout\);
+
+-- Location: LCFF_X31_Y26_N31
+\vga_0|videoSync|h_count[0]\ : cycloneii_lcell_ff
+PORT MAP (
+	clk => \vga_0|videoSync|pixel_clock_int~clkctrl_outclk\,
+	datain => \vga_0|videoSync|h_count~2_combout\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	regout => \vga_0|videoSync|h_count\(0));
+
+-- Location: LCCOMB_X31_Y26_N6
+\vga_0|videoSync|Add0~2\ : cycloneii_lcell_comb
+-- Equation(s):
+-- \vga_0|videoSync|Add0~2_combout\ = (\vga_0|videoSync|h_count\(1) & (!\vga_0|videoSync|Add0~1\)) # (!\vga_0|videoSync|h_count\(1) & ((\vga_0|videoSync|Add0~1\) # (GND)))
+-- \vga_0|videoSync|Add0~3\ = CARRY((!\vga_0|videoSync|Add0~1\) # (!\vga_0|videoSync|h_count\(1)))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0101101001011111",
+	sum_lutc_input => "cin")
+-- pragma translate_on
+PORT MAP (
+	dataa => \vga_0|videoSync|h_count\(1),
+	datad => VCC,
+	cin => \vga_0|videoSync|Add0~1\,
+	combout => \vga_0|videoSync|Add0~2_combout\,
+	cout => \vga_0|videoSync|Add0~3\);
+
+-- Location: LCCOMB_X31_Y26_N8
+\vga_0|videoSync|Add0~4\ : cycloneii_lcell_comb
+-- Equation(s):
+-- \vga_0|videoSync|Add0~4_combout\ = (\vga_0|videoSync|h_count\(2) & (\vga_0|videoSync|Add0~3\ $ (GND))) # (!\vga_0|videoSync|h_count\(2) & (!\vga_0|videoSync|Add0~3\ & VCC))
+-- \vga_0|videoSync|Add0~5\ = CARRY((\vga_0|videoSync|h_count\(2) & !\vga_0|videoSync|Add0~3\))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1100001100001100",
+	sum_lutc_input => "cin")
+-- pragma translate_on
+PORT MAP (
+	datab => \vga_0|videoSync|h_count\(2),
+	datad => VCC,
+	cin => \vga_0|videoSync|Add0~3\,
+	combout => \vga_0|videoSync|Add0~4_combout\,
+	cout => \vga_0|videoSync|Add0~5\);
+
+-- Location: LCFF_X31_Y26_N9
+\vga_0|videoSync|h_count[2]\ : cycloneii_lcell_ff
+PORT MAP (
+	clk => \vga_0|videoSync|pixel_clock_int~clkctrl_outclk\,
+	datain => \vga_0|videoSync|Add0~4_combout\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	regout => \vga_0|videoSync|h_count\(2));
+
+-- Location: LCCOMB_X31_Y26_N10
+\vga_0|videoSync|Add0~6\ : cycloneii_lcell_comb
+-- Equation(s):
+-- \vga_0|videoSync|Add0~6_combout\ = (\vga_0|videoSync|h_count\(3) & (!\vga_0|videoSync|Add0~5\)) # (!\vga_0|videoSync|h_count\(3) & ((\vga_0|videoSync|Add0~5\) # (GND)))
+-- \vga_0|videoSync|Add0~7\ = CARRY((!\vga_0|videoSync|Add0~5\) # (!\vga_0|videoSync|h_count\(3)))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0101101001011111",
+	sum_lutc_input => "cin")
+-- pragma translate_on
+PORT MAP (
+	dataa => \vga_0|videoSync|h_count\(3),
+	datad => VCC,
+	cin => \vga_0|videoSync|Add0~5\,
+	combout => \vga_0|videoSync|Add0~6_combout\,
+	cout => \vga_0|videoSync|Add0~7\);
+
+-- Location: LCFF_X31_Y26_N11
+\vga_0|videoSync|h_count[3]\ : cycloneii_lcell_ff
+PORT MAP (
+	clk => \vga_0|videoSync|pixel_clock_int~clkctrl_outclk\,
+	datain => \vga_0|videoSync|Add0~6_combout\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	regout => \vga_0|videoSync|h_count\(3));
+
+-- Location: LCCOMB_X31_Y26_N26
+\vga_0|videoSync|Equal0~2\ : cycloneii_lcell_comb
+-- Equation(s):
+-- \vga_0|videoSync|Equal0~2_combout\ = (!\vga_0|videoSync|h_count\(4) & (\vga_0|videoSync|h_count\(5) & (!\vga_0|videoSync|h_count\(7) & !\vga_0|videoSync|h_count\(3))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0000000000000100",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \vga_0|videoSync|h_count\(4),
+	datab => \vga_0|videoSync|h_count\(5),
+	datac => \vga_0|videoSync|h_count\(7),
+	datad => \vga_0|videoSync|h_count\(3),
+	combout => \vga_0|videoSync|Equal0~2_combout\);
+
+-- Location: LCCOMB_X31_Y26_N12
+\vga_0|videoSync|Add0~8\ : cycloneii_lcell_comb
+-- Equation(s):
+-- \vga_0|videoSync|Add0~8_combout\ = (\vga_0|videoSync|h_count\(4) & (\vga_0|videoSync|Add0~7\ $ (GND))) # (!\vga_0|videoSync|h_count\(4) & (!\vga_0|videoSync|Add0~7\ & VCC))
+-- \vga_0|videoSync|Add0~9\ = CARRY((\vga_0|videoSync|h_count\(4) & !\vga_0|videoSync|Add0~7\))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1010010100001010",
+	sum_lutc_input => "cin")
+-- pragma translate_on
+PORT MAP (
+	dataa => \vga_0|videoSync|h_count\(4),
+	datad => VCC,
+	cin => \vga_0|videoSync|Add0~7\,
+	combout => \vga_0|videoSync|Add0~8_combout\,
+	cout => \vga_0|videoSync|Add0~9\);
+
+-- Location: LCCOMB_X31_Y26_N14
+\vga_0|videoSync|Add0~10\ : cycloneii_lcell_comb
+-- Equation(s):
+-- \vga_0|videoSync|Add0~10_combout\ = (\vga_0|videoSync|h_count\(5) & (!\vga_0|videoSync|Add0~9\)) # (!\vga_0|videoSync|h_count\(5) & ((\vga_0|videoSync|Add0~9\) # (GND)))
+-- \vga_0|videoSync|Add0~11\ = CARRY((!\vga_0|videoSync|Add0~9\) # (!\vga_0|videoSync|h_count\(5)))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0011110000111111",
+	sum_lutc_input => "cin")
+-- pragma translate_on
+PORT MAP (
+	datab => \vga_0|videoSync|h_count\(5),
+	datad => VCC,
+	cin => \vga_0|videoSync|Add0~9\,
+	combout => \vga_0|videoSync|Add0~10_combout\,
+	cout => \vga_0|videoSync|Add0~11\);
+
+-- Location: LCCOMB_X31_Y26_N0
+\vga_0|videoSync|h_count~3\ : cycloneii_lcell_comb
+-- Equation(s):
+-- \vga_0|videoSync|h_count~3_combout\ = (\vga_0|videoSync|Add0~10_combout\ & (((!\vga_0|videoSync|h_count\(8)) # (!\vga_0|videoSync|Equal0~2_combout\)) # (!\vga_0|videoSync|Equal0~1_combout\)))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0111000011110000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \vga_0|videoSync|Equal0~1_combout\,
+	datab => \vga_0|videoSync|Equal0~2_combout\,
+	datac => \vga_0|videoSync|Add0~10_combout\,
+	datad => \vga_0|videoSync|h_count\(8),
+	combout => \vga_0|videoSync|h_count~3_combout\);
+
+-- Location: LCFF_X31_Y26_N1
+\vga_0|videoSync|h_count[5]\ : cycloneii_lcell_ff
+PORT MAP (
+	clk => \vga_0|videoSync|pixel_clock_int~clkctrl_outclk\,
+	datain => \vga_0|videoSync|h_count~3_combout\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	regout => \vga_0|videoSync|h_count\(5));
+
+-- Location: LCCOMB_X31_Y26_N16
+\vga_0|videoSync|Add0~12\ : cycloneii_lcell_comb
+-- Equation(s):
+-- \vga_0|videoSync|Add0~12_combout\ = (\vga_0|videoSync|h_count\(6) & (\vga_0|videoSync|Add0~11\ $ (GND))) # (!\vga_0|videoSync|h_count\(6) & (!\vga_0|videoSync|Add0~11\ & VCC))
+-- \vga_0|videoSync|Add0~13\ = CARRY((\vga_0|videoSync|h_count\(6) & !\vga_0|videoSync|Add0~11\))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1010010100001010",
+	sum_lutc_input => "cin")
+-- pragma translate_on
+PORT MAP (
+	dataa => \vga_0|videoSync|h_count\(6),
+	datad => VCC,
+	cin => \vga_0|videoSync|Add0~11\,
+	combout => \vga_0|videoSync|Add0~12_combout\,
+	cout => \vga_0|videoSync|Add0~13\);
+
+-- Location: LCCOMB_X31_Y26_N18
+\vga_0|videoSync|Add0~14\ : cycloneii_lcell_comb
+-- Equation(s):
+-- \vga_0|videoSync|Add0~14_combout\ = (\vga_0|videoSync|h_count\(7) & (!\vga_0|videoSync|Add0~13\)) # (!\vga_0|videoSync|h_count\(7) & ((\vga_0|videoSync|Add0~13\) # (GND)))
+-- \vga_0|videoSync|Add0~15\ = CARRY((!\vga_0|videoSync|Add0~13\) # (!\vga_0|videoSync|h_count\(7)))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0011110000111111",
+	sum_lutc_input => "cin")
+-- pragma translate_on
+PORT MAP (
+	datab => \vga_0|videoSync|h_count\(7),
+	datad => VCC,
+	cin => \vga_0|videoSync|Add0~13\,
+	combout => \vga_0|videoSync|Add0~14_combout\,
+	cout => \vga_0|videoSync|Add0~15\);
+
+-- Location: LCFF_X31_Y26_N19
+\vga_0|videoSync|h_count[7]\ : cycloneii_lcell_ff
+PORT MAP (
+	clk => \vga_0|videoSync|pixel_clock_int~clkctrl_outclk\,
+	datain => \vga_0|videoSync|Add0~14_combout\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	regout => \vga_0|videoSync|h_count\(7));
+
+-- Location: LCCOMB_X31_Y26_N2
+\vga_0|videoSync|h_count~0\ : cycloneii_lcell_comb
+-- Equation(s):
+-- \vga_0|videoSync|h_count~0_combout\ = (\vga_0|videoSync|Add0~16_combout\ & (((!\vga_0|videoSync|Equal0~2_combout\) # (!\vga_0|videoSync|h_count\(8))) # (!\vga_0|videoSync|Equal0~1_combout\)))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0100110011001100",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \vga_0|videoSync|Equal0~1_combout\,
+	datab => \vga_0|videoSync|Add0~16_combout\,
+	datac => \vga_0|videoSync|h_count\(8),
+	datad => \vga_0|videoSync|Equal0~2_combout\,
+	combout => \vga_0|videoSync|h_count~0_combout\);
+
+-- Location: LCFF_X31_Y26_N3
+\vga_0|videoSync|h_count[8]\ : cycloneii_lcell_ff
+PORT MAP (
+	clk => \vga_0|videoSync|pixel_clock_int~clkctrl_outclk\,
+	datain => \vga_0|videoSync|h_count~0_combout\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	regout => \vga_0|videoSync|h_count\(8));
+
+-- Location: LCFF_X31_Y26_N17
+\vga_0|videoSync|h_count[6]\ : cycloneii_lcell_ff
+PORT MAP (
+	clk => \vga_0|videoSync|pixel_clock_int~clkctrl_outclk\,
+	datain => \vga_0|videoSync|Add0~12_combout\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	regout => \vga_0|videoSync|h_count\(6));
+
+-- Location: LCCOMB_X30_Y26_N18
+\vga_0|videoSync|Equal0~0\ : cycloneii_lcell_comb
+-- Equation(s):
+-- \vga_0|videoSync|Equal0~0_combout\ = (!\vga_0|videoSync|h_count\(1) & (!\vga_0|videoSync|h_count\(6) & (!\vga_0|videoSync|h_count\(2) & !\vga_0|videoSync|h_count\(0))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0000000000000001",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \vga_0|videoSync|h_count\(1),
+	datab => \vga_0|videoSync|h_count\(6),
+	datac => \vga_0|videoSync|h_count\(2),
+	datad => \vga_0|videoSync|h_count\(0),
+	combout => \vga_0|videoSync|Equal0~0_combout\);
+
+-- Location: LCCOMB_X30_Y26_N0
+\vga_0|videoSync|Equal0~1\ : cycloneii_lcell_comb
+-- Equation(s):
+-- \vga_0|videoSync|Equal0~1_combout\ = (\vga_0|videoSync|Equal0~0_combout\ & \vga_0|videoSync|h_count\(9))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1100110000000000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	datab => \vga_0|videoSync|Equal0~0_combout\,
+	datad => \vga_0|videoSync|h_count\(9),
+	combout => \vga_0|videoSync|Equal0~1_combout\);
+
+-- Location: LCCOMB_X31_Y26_N24
+\vga_0|videoSync|h_count~1\ : cycloneii_lcell_comb
+-- Equation(s):
+-- \vga_0|videoSync|h_count~1_combout\ = (\vga_0|videoSync|Add0~18_combout\ & (((!\vga_0|videoSync|h_count\(8)) # (!\vga_0|videoSync|Equal0~1_combout\)) # (!\vga_0|videoSync|Equal0~2_combout\)))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0010101010101010",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \vga_0|videoSync|Add0~18_combout\,
+	datab => \vga_0|videoSync|Equal0~2_combout\,
+	datac => \vga_0|videoSync|Equal0~1_combout\,
+	datad => \vga_0|videoSync|h_count\(8),
+	combout => \vga_0|videoSync|h_count~1_combout\);
+
+-- Location: LCFF_X31_Y26_N25
+\vga_0|videoSync|h_count[9]\ : cycloneii_lcell_ff
+PORT MAP (
+	clk => \vga_0|videoSync|pixel_clock_int~clkctrl_outclk\,
+	datain => \vga_0|videoSync|h_count~1_combout\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	regout => \vga_0|videoSync|h_count\(9));
+
+-- Location: LCCOMB_X25_Y26_N8
+\vga_0|videoSync|LessThan5~0\ : cycloneii_lcell_comb
+-- Equation(s):
+-- \vga_0|videoSync|LessThan5~0_combout\ = ((!\vga_0|videoSync|h_count\(8) & !\vga_0|videoSync|h_count\(7))) # (!\vga_0|videoSync|h_count\(9))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0011001100111111",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	datab => \vga_0|videoSync|h_count\(9),
+	datac => \vga_0|videoSync|h_count\(8),
+	datad => \vga_0|videoSync|h_count\(7),
+	combout => \vga_0|videoSync|LessThan5~0_combout\);
+
+-- Location: LCFF_X28_Y24_N1
+\vga_0|videoSync|pixel_column[8]\ : cycloneii_lcell_ff
+PORT MAP (
+	clk => \vga_0|videoSync|pixel_clock_int~clkctrl_outclk\,
+	sdata => \vga_0|videoSync|h_count\(8),
+	sload => VCC,
+	ena => \vga_0|videoSync|LessThan5~0_combout\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	regout => \vga_0|videoSync|pixel_column\(8));
+
+-- Location: LCCOMB_X29_Y27_N6
+\vga_0|videoSync|Add1~0\ : cycloneii_lcell_comb
+-- Equation(s):
+-- \vga_0|videoSync|Add1~0_combout\ = \vga_0|videoSync|v_count\(0) $ (VCC)
+-- \vga_0|videoSync|Add1~1\ = CARRY(\vga_0|videoSync|v_count\(0))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0011001111001100",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	datab => \vga_0|videoSync|v_count\(0),
+	datad => VCC,
+	combout => \vga_0|videoSync|Add1~0_combout\,
+	cout => \vga_0|videoSync|Add1~1\);
+
+-- Location: LCCOMB_X28_Y27_N16
+\vga_0|videoSync|v_count~7\ : cycloneii_lcell_comb
+-- Equation(s):
+-- \vga_0|videoSync|v_count~7_combout\ = (\vga_0|videoSync|Add1~0_combout\ & ((\vga_0|videoSync|LessThan1~2_combout\) # (\vga_0|videoSync|process_1~10_combout\)))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1111101000000000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \vga_0|videoSync|LessThan1~2_combout\,
+	datac => \vga_0|videoSync|process_1~10_combout\,
+	datad => \vga_0|videoSync|Add1~0_combout\,
+	combout => \vga_0|videoSync|v_count~7_combout\);
+
+-- Location: LCFF_X28_Y27_N17
+\vga_0|videoSync|v_count[0]\ : cycloneii_lcell_ff
+PORT MAP (
+	clk => \vga_0|videoSync|pixel_clock_int~clkctrl_outclk\,
+	datain => \vga_0|videoSync|v_count~7_combout\,
+	ena => \vga_0|videoSync|v_count[9]~0_combout\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	regout => \vga_0|videoSync|v_count\(0));
+
+-- Location: LCCOMB_X29_Y27_N8
+\vga_0|videoSync|Add1~2\ : cycloneii_lcell_comb
+-- Equation(s):
+-- \vga_0|videoSync|Add1~2_combout\ = (\vga_0|videoSync|v_count\(1) & (!\vga_0|videoSync|Add1~1\)) # (!\vga_0|videoSync|v_count\(1) & ((\vga_0|videoSync|Add1~1\) # (GND)))
+-- \vga_0|videoSync|Add1~3\ = CARRY((!\vga_0|videoSync|Add1~1\) # (!\vga_0|videoSync|v_count\(1)))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0011110000111111",
+	sum_lutc_input => "cin")
+-- pragma translate_on
+PORT MAP (
+	datab => \vga_0|videoSync|v_count\(1),
+	datad => VCC,
+	cin => \vga_0|videoSync|Add1~1\,
+	combout => \vga_0|videoSync|Add1~2_combout\,
+	cout => \vga_0|videoSync|Add1~3\);
+
+-- Location: LCCOMB_X29_Y27_N12
+\vga_0|videoSync|Add1~6\ : cycloneii_lcell_comb
+-- Equation(s):
+-- \vga_0|videoSync|Add1~6_combout\ = (\vga_0|videoSync|v_count\(3) & (!\vga_0|videoSync|Add1~5\)) # (!\vga_0|videoSync|v_count\(3) & ((\vga_0|videoSync|Add1~5\) # (GND)))
+-- \vga_0|videoSync|Add1~7\ = CARRY((!\vga_0|videoSync|Add1~5\) # (!\vga_0|videoSync|v_count\(3)))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0011110000111111",
+	sum_lutc_input => "cin")
+-- pragma translate_on
+PORT MAP (
+	datab => \vga_0|videoSync|v_count\(3),
+	datad => VCC,
+	cin => \vga_0|videoSync|Add1~5\,
+	combout => \vga_0|videoSync|Add1~6_combout\,
+	cout => \vga_0|videoSync|Add1~7\);
+
+-- Location: LCCOMB_X29_Y27_N14
+\vga_0|videoSync|Add1~8\ : cycloneii_lcell_comb
+-- Equation(s):
+-- \vga_0|videoSync|Add1~8_combout\ = (\vga_0|videoSync|v_count\(4) & (\vga_0|videoSync|Add1~7\ $ (GND))) # (!\vga_0|videoSync|v_count\(4) & (!\vga_0|videoSync|Add1~7\ & VCC))
+-- \vga_0|videoSync|Add1~9\ = CARRY((\vga_0|videoSync|v_count\(4) & !\vga_0|videoSync|Add1~7\))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1100001100001100",
+	sum_lutc_input => "cin")
+-- pragma translate_on
+PORT MAP (
+	datab => \vga_0|videoSync|v_count\(4),
+	datad => VCC,
+	cin => \vga_0|videoSync|Add1~7\,
+	combout => \vga_0|videoSync|Add1~8_combout\,
+	cout => \vga_0|videoSync|Add1~9\);
+
+-- Location: LCCOMB_X29_Y27_N26
+\vga_0|videoSync|v_count[4]~6\ : cycloneii_lcell_comb
+-- Equation(s):
+-- \vga_0|videoSync|v_count[4]~6_combout\ = (\vga_0|videoSync|v_count[9]~0_combout\ & (\vga_0|videoSync|process_1~11_combout\ & (\vga_0|videoSync|Add1~8_combout\))) # (!\vga_0|videoSync|v_count[9]~0_combout\ & (((\vga_0|videoSync|v_count\(4)))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1000100011110000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \vga_0|videoSync|process_1~11_combout\,
+	datab => \vga_0|videoSync|Add1~8_combout\,
+	datac => \vga_0|videoSync|v_count\(4),
+	datad => \vga_0|videoSync|v_count[9]~0_combout\,
+	combout => \vga_0|videoSync|v_count[4]~6_combout\);
+
+-- Location: LCFF_X29_Y27_N27
+\vga_0|videoSync|v_count[4]\ : cycloneii_lcell_ff
+PORT MAP (
+	clk => \vga_0|videoSync|pixel_clock_int~clkctrl_outclk\,
+	datain => \vga_0|videoSync|v_count[4]~6_combout\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	regout => \vga_0|videoSync|v_count\(4));
+
+-- Location: LCCOMB_X28_Y27_N22
+\vga_0|videoSync|v_count[5]~2\ : cycloneii_lcell_comb
+-- Equation(s):
+-- \vga_0|videoSync|v_count[5]~2_combout\ = (\vga_0|videoSync|v_count[9]~0_combout\ & (\vga_0|videoSync|Add1~10_combout\ & (\vga_0|videoSync|process_1~11_combout\))) # (!\vga_0|videoSync|v_count[9]~0_combout\ & (((\vga_0|videoSync|v_count\(5)))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1000100011110000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \vga_0|videoSync|Add1~10_combout\,
+	datab => \vga_0|videoSync|process_1~11_combout\,
+	datac => \vga_0|videoSync|v_count\(5),
+	datad => \vga_0|videoSync|v_count[9]~0_combout\,
+	combout => \vga_0|videoSync|v_count[5]~2_combout\);
+
+-- Location: LCFF_X28_Y27_N23
+\vga_0|videoSync|v_count[5]\ : cycloneii_lcell_ff
+PORT MAP (
+	clk => \vga_0|videoSync|pixel_clock_int~clkctrl_outclk\,
+	datain => \vga_0|videoSync|v_count[5]~2_combout\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	regout => \vga_0|videoSync|v_count\(5));
+
+-- Location: LCCOMB_X28_Y27_N8
+\vga_0|videoSync|LessThan1~1\ : cycloneii_lcell_comb
+-- Equation(s):
+-- \vga_0|videoSync|LessThan1~1_combout\ = (!\vga_0|videoSync|v_count\(6) & (!\vga_0|videoSync|v_count\(7) & (!\vga_0|videoSync|v_count\(4) & !\vga_0|videoSync|v_count\(5))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0000000000000001",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \vga_0|videoSync|v_count\(6),
+	datab => \vga_0|videoSync|v_count\(7),
+	datac => \vga_0|videoSync|v_count\(4),
+	datad => \vga_0|videoSync|v_count\(5),
+	combout => \vga_0|videoSync|LessThan1~1_combout\);
+
+-- Location: LCCOMB_X29_Y27_N18
+\vga_0|videoSync|Add1~12\ : cycloneii_lcell_comb
+-- Equation(s):
+-- \vga_0|videoSync|Add1~12_combout\ = (\vga_0|videoSync|v_count\(6) & (\vga_0|videoSync|Add1~11\ $ (GND))) # (!\vga_0|videoSync|v_count\(6) & (!\vga_0|videoSync|Add1~11\ & VCC))
+-- \vga_0|videoSync|Add1~13\ = CARRY((\vga_0|videoSync|v_count\(6) & !\vga_0|videoSync|Add1~11\))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1100001100001100",
+	sum_lutc_input => "cin")
+-- pragma translate_on
+PORT MAP (
+	datab => \vga_0|videoSync|v_count\(6),
+	datad => VCC,
+	cin => \vga_0|videoSync|Add1~11\,
+	combout => \vga_0|videoSync|Add1~12_combout\,
+	cout => \vga_0|videoSync|Add1~13\);
+
+-- Location: LCCOMB_X29_Y27_N2
+\vga_0|videoSync|v_count[6]~3\ : cycloneii_lcell_comb
+-- Equation(s):
+-- \vga_0|videoSync|v_count[6]~3_combout\ = (\vga_0|videoSync|v_count[9]~0_combout\ & (\vga_0|videoSync|process_1~11_combout\ & ((\vga_0|videoSync|Add1~12_combout\)))) # (!\vga_0|videoSync|v_count[9]~0_combout\ & (((\vga_0|videoSync|v_count\(6)))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1011100000110000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \vga_0|videoSync|process_1~11_combout\,
+	datab => \vga_0|videoSync|v_count[9]~0_combout\,
+	datac => \vga_0|videoSync|v_count\(6),
+	datad => \vga_0|videoSync|Add1~12_combout\,
+	combout => \vga_0|videoSync|v_count[6]~3_combout\);
+
+-- Location: LCFF_X29_Y27_N3
+\vga_0|videoSync|v_count[6]\ : cycloneii_lcell_ff
+PORT MAP (
+	clk => \vga_0|videoSync|pixel_clock_int~clkctrl_outclk\,
+	datain => \vga_0|videoSync|v_count[6]~3_combout\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	regout => \vga_0|videoSync|v_count\(6));
+
+-- Location: LCCOMB_X28_Y27_N0
 \vga_0|videoSync|v_count[8]~5\ : cycloneii_lcell_comb
 -- Equation(s):
 -- \vga_0|videoSync|v_count[8]~5_combout\ = (\vga_0|videoSync|v_count[9]~0_combout\ & (\vga_0|videoSync|process_1~11_combout\ & ((\vga_0|videoSync|Add1~16_combout\)))) # (!\vga_0|videoSync|v_count[9]~0_combout\ & (((\vga_0|videoSync|v_count\(8)))))
@@ -2780,7 +2781,7 @@ PORT MAP (
 	datad => \vga_0|videoSync|Add1~16_combout\,
 	combout => \vga_0|videoSync|v_count[8]~5_combout\);
 
--- Location: LCFF_X22_Y21_N3
+-- Location: LCFF_X28_Y27_N1
 \vga_0|videoSync|v_count[8]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \vga_0|videoSync|pixel_clock_int~clkctrl_outclk\,
@@ -2789,10 +2790,10 @@ PORT MAP (
 	devpor => ww_devpor,
 	regout => \vga_0|videoSync|v_count\(8));
 
--- Location: LCCOMB_X21_Y21_N8
+-- Location: LCCOMB_X28_Y27_N10
 \vga_0|videoSync|LessThan1~2\ : cycloneii_lcell_comb
 -- Equation(s):
--- \vga_0|videoSync|LessThan1~2_combout\ = (\vga_0|videoSync|LessThan1~1_combout\ & (\vga_0|videoSync|LessThan1~0_combout\ & !\vga_0|videoSync|v_count\(8)))
+-- \vga_0|videoSync|LessThan1~2_combout\ = (\vga_0|videoSync|LessThan1~0_combout\ & (\vga_0|videoSync|LessThan1~1_combout\ & !\vga_0|videoSync|v_count\(8)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -2800,27 +2801,215 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	datab => \vga_0|videoSync|LessThan1~1_combout\,
-	datac => \vga_0|videoSync|LessThan1~0_combout\,
+	datab => \vga_0|videoSync|LessThan1~0_combout\,
+	datac => \vga_0|videoSync|LessThan1~1_combout\,
 	datad => \vga_0|videoSync|v_count\(8),
 	combout => \vga_0|videoSync|LessThan1~2_combout\);
 
--- Location: LCCOMB_X21_Y22_N22
+-- Location: LCCOMB_X28_Y27_N6
+\vga_0|videoSync|v_count~8\ : cycloneii_lcell_comb
+-- Equation(s):
+-- \vga_0|videoSync|v_count~8_combout\ = (\vga_0|videoSync|Add1~2_combout\ & ((\vga_0|videoSync|process_1~10_combout\) # (\vga_0|videoSync|LessThan1~2_combout\)))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1111000011000000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	datab => \vga_0|videoSync|process_1~10_combout\,
+	datac => \vga_0|videoSync|Add1~2_combout\,
+	datad => \vga_0|videoSync|LessThan1~2_combout\,
+	combout => \vga_0|videoSync|v_count~8_combout\);
+
+-- Location: LCFF_X28_Y27_N7
+\vga_0|videoSync|v_count[1]\ : cycloneii_lcell_ff
+PORT MAP (
+	clk => \vga_0|videoSync|pixel_clock_int~clkctrl_outclk\,
+	datain => \vga_0|videoSync|v_count~8_combout\,
+	ena => \vga_0|videoSync|v_count[9]~0_combout\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	regout => \vga_0|videoSync|v_count\(1));
+
+-- Location: LCCOMB_X29_Y27_N10
+\vga_0|videoSync|Add1~4\ : cycloneii_lcell_comb
+-- Equation(s):
+-- \vga_0|videoSync|Add1~4_combout\ = (\vga_0|videoSync|v_count\(2) & (\vga_0|videoSync|Add1~3\ $ (GND))) # (!\vga_0|videoSync|v_count\(2) & (!\vga_0|videoSync|Add1~3\ & VCC))
+-- \vga_0|videoSync|Add1~5\ = CARRY((\vga_0|videoSync|v_count\(2) & !\vga_0|videoSync|Add1~3\))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1100001100001100",
+	sum_lutc_input => "cin")
+-- pragma translate_on
+PORT MAP (
+	datab => \vga_0|videoSync|v_count\(2),
+	datad => VCC,
+	cin => \vga_0|videoSync|Add1~3\,
+	combout => \vga_0|videoSync|Add1~4_combout\,
+	cout => \vga_0|videoSync|Add1~5\);
+
+-- Location: LCCOMB_X29_Y27_N4
+\vga_0|videoSync|v_count[2]~9\ : cycloneii_lcell_comb
+-- Equation(s):
+-- \vga_0|videoSync|v_count[2]~9_combout\ = (\vga_0|videoSync|v_count[9]~0_combout\ & (\vga_0|videoSync|process_1~11_combout\ & ((\vga_0|videoSync|Add1~4_combout\)))) # (!\vga_0|videoSync|v_count[9]~0_combout\ & (((\vga_0|videoSync|v_count\(2)))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1011100000110000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \vga_0|videoSync|process_1~11_combout\,
+	datab => \vga_0|videoSync|v_count[9]~0_combout\,
+	datac => \vga_0|videoSync|v_count\(2),
+	datad => \vga_0|videoSync|Add1~4_combout\,
+	combout => \vga_0|videoSync|v_count[2]~9_combout\);
+
+-- Location: LCFF_X29_Y27_N5
+\vga_0|videoSync|v_count[2]\ : cycloneii_lcell_ff
+PORT MAP (
+	clk => \vga_0|videoSync|pixel_clock_int~clkctrl_outclk\,
+	datain => \vga_0|videoSync|v_count[2]~9_combout\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	regout => \vga_0|videoSync|v_count\(2));
+
+-- Location: LCCOMB_X29_Y27_N30
+\vga_0|videoSync|v_count[3]~10\ : cycloneii_lcell_comb
+-- Equation(s):
+-- \vga_0|videoSync|v_count[3]~10_combout\ = (\vga_0|videoSync|v_count[9]~0_combout\ & (\vga_0|videoSync|process_1~11_combout\ & ((\vga_0|videoSync|Add1~6_combout\)))) # (!\vga_0|videoSync|v_count[9]~0_combout\ & (((\vga_0|videoSync|v_count\(3)))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1011100000110000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \vga_0|videoSync|process_1~11_combout\,
+	datab => \vga_0|videoSync|v_count[9]~0_combout\,
+	datac => \vga_0|videoSync|v_count\(3),
+	datad => \vga_0|videoSync|Add1~6_combout\,
+	combout => \vga_0|videoSync|v_count[3]~10_combout\);
+
+-- Location: LCFF_X29_Y27_N31
+\vga_0|videoSync|v_count[3]\ : cycloneii_lcell_ff
+PORT MAP (
+	clk => \vga_0|videoSync|pixel_clock_int~clkctrl_outclk\,
+	datain => \vga_0|videoSync|v_count[3]~10_combout\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	regout => \vga_0|videoSync|v_count\(3));
+
+-- Location: LCCOMB_X28_Y27_N2
+\vga_0|videoSync|LessThan1~0\ : cycloneii_lcell_comb
+-- Equation(s):
+-- \vga_0|videoSync|LessThan1~0_combout\ = (((!\vga_0|videoSync|v_count\(1) & !\vga_0|videoSync|v_count\(0))) # (!\vga_0|videoSync|v_count\(2))) # (!\vga_0|videoSync|v_count\(3))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0011011111111111",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \vga_0|videoSync|v_count\(1),
+	datab => \vga_0|videoSync|v_count\(3),
+	datac => \vga_0|videoSync|v_count\(0),
+	datad => \vga_0|videoSync|v_count\(2),
+	combout => \vga_0|videoSync|LessThan1~0_combout\);
+
+-- Location: LCCOMB_X28_Y27_N14
+\vga_0|videoSync|process_1~11\ : cycloneii_lcell_comb
+-- Equation(s):
+-- \vga_0|videoSync|process_1~11_combout\ = (\vga_0|videoSync|process_1~10_combout\) # ((\vga_0|videoSync|LessThan1~1_combout\ & (\vga_0|videoSync|LessThan1~0_combout\ & !\vga_0|videoSync|v_count\(8))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1111000011111000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \vga_0|videoSync|LessThan1~1_combout\,
+	datab => \vga_0|videoSync|LessThan1~0_combout\,
+	datac => \vga_0|videoSync|process_1~10_combout\,
+	datad => \vga_0|videoSync|v_count\(8),
+	combout => \vga_0|videoSync|process_1~11_combout\);
+
+-- Location: LCCOMB_X29_Y27_N28
+\vga_0|videoSync|v_count[9]~1\ : cycloneii_lcell_comb
+-- Equation(s):
+-- \vga_0|videoSync|v_count[9]~1_combout\ = (\vga_0|videoSync|v_count[9]~0_combout\ & (\vga_0|videoSync|Add1~18_combout\ & ((\vga_0|videoSync|process_1~11_combout\)))) # (!\vga_0|videoSync|v_count[9]~0_combout\ & (((\vga_0|videoSync|v_count\(9)))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1011100000110000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \vga_0|videoSync|Add1~18_combout\,
+	datab => \vga_0|videoSync|v_count[9]~0_combout\,
+	datac => \vga_0|videoSync|v_count\(9),
+	datad => \vga_0|videoSync|process_1~11_combout\,
+	combout => \vga_0|videoSync|v_count[9]~1_combout\);
+
+-- Location: LCFF_X29_Y27_N29
+\vga_0|videoSync|v_count[9]\ : cycloneii_lcell_ff
+PORT MAP (
+	clk => \vga_0|videoSync|pixel_clock_int~clkctrl_outclk\,
+	datain => \vga_0|videoSync|v_count[9]~1_combout\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	regout => \vga_0|videoSync|v_count\(9));
+
+-- Location: LCCOMB_X25_Y26_N20
+\vga_0|videoSync|process_1~9\ : cycloneii_lcell_comb
+-- Equation(s):
+-- \vga_0|videoSync|process_1~9_combout\ = (!\vga_0|videoSync|h_count\(9)) # (!\vga_0|videoSync|v_count\(9))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0000111111111111",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	datac => \vga_0|videoSync|v_count\(9),
+	datad => \vga_0|videoSync|h_count\(9),
+	combout => \vga_0|videoSync|process_1~9_combout\);
+
+-- Location: LCCOMB_X25_Y26_N10
+\vga_0|videoSync|process_1~10\ : cycloneii_lcell_comb
+-- Equation(s):
+-- \vga_0|videoSync|process_1~10_combout\ = (\vga_0|videoSync|process_1~9_combout\) # ((!\vga_0|videoSync|h_count\(8) & ((\vga_0|videoSync|process_1~2_combout\) # (!\vga_0|videoSync|h_count\(7)))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1111001011110011",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \vga_0|videoSync|process_1~2_combout\,
+	datab => \vga_0|videoSync|h_count\(8),
+	datac => \vga_0|videoSync|process_1~9_combout\,
+	datad => \vga_0|videoSync|h_count\(7),
+	combout => \vga_0|videoSync|process_1~10_combout\);
+
+-- Location: LCCOMB_X25_Y26_N18
 \vga_0|videoSync|process_1~5\ : cycloneii_lcell_comb
 -- Equation(s):
 -- \vga_0|videoSync|process_1~5_combout\ = (\vga_0|videoSync|h_count\(4) & \vga_0|videoSync|h_count\(3))
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "1010101000000000",
+	lut_mask => "1010000010100000",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
 	dataa => \vga_0|videoSync|h_count\(4),
-	datad => \vga_0|videoSync|h_count\(3),
+	datac => \vga_0|videoSync|h_count\(3),
 	combout => \vga_0|videoSync|process_1~5_combout\);
 
--- Location: LCCOMB_X21_Y22_N16
+-- Location: LCCOMB_X25_Y26_N0
 \vga_0|videoSync|Equal1~0\ : cycloneii_lcell_comb
 -- Equation(s):
 -- \vga_0|videoSync|Equal1~0_combout\ = (\vga_0|videoSync|h_count\(5)) # (((\vga_0|videoSync|h_count\(8)) # (!\vga_0|videoSync|process_1~5_combout\)) # (!\vga_0|videoSync|h_count\(7)))
@@ -2837,28 +3026,28 @@ PORT MAP (
 	datad => \vga_0|videoSync|process_1~5_combout\,
 	combout => \vga_0|videoSync|Equal1~0_combout\);
 
--- Location: LCCOMB_X21_Y21_N14
+-- Location: LCCOMB_X28_Y27_N28
 \vga_0|videoSync|v_count[9]~0\ : cycloneii_lcell_comb
 -- Equation(s):
--- \vga_0|videoSync|v_count[9]~0_combout\ = (\vga_0|videoSync|Equal0~1_combout\ & (((!\vga_0|videoSync|LessThan1~2_combout\ & !\vga_0|videoSync|process_1~10_combout\)) # (!\vga_0|videoSync|Equal1~0_combout\))) # (!\vga_0|videoSync|Equal0~1_combout\ & 
--- (!\vga_0|videoSync|LessThan1~2_combout\ & ((!\vga_0|videoSync|process_1~10_combout\))))
+-- \vga_0|videoSync|v_count[9]~0_combout\ = (\vga_0|videoSync|LessThan1~2_combout\ & (((!\vga_0|videoSync|Equal1~0_combout\ & \vga_0|videoSync|Equal0~1_combout\)))) # (!\vga_0|videoSync|LessThan1~2_combout\ & (((!\vga_0|videoSync|Equal1~0_combout\ & 
+-- \vga_0|videoSync|Equal0~1_combout\)) # (!\vga_0|videoSync|process_1~10_combout\)))
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "0000101000111011",
+	lut_mask => "0001111100010001",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \vga_0|videoSync|Equal0~1_combout\,
-	datab => \vga_0|videoSync|LessThan1~2_combout\,
+	dataa => \vga_0|videoSync|LessThan1~2_combout\,
+	datab => \vga_0|videoSync|process_1~10_combout\,
 	datac => \vga_0|videoSync|Equal1~0_combout\,
-	datad => \vga_0|videoSync|process_1~10_combout\,
+	datad => \vga_0|videoSync|Equal0~1_combout\,
 	combout => \vga_0|videoSync|v_count[9]~0_combout\);
 
--- Location: LCCOMB_X21_Y21_N4
+-- Location: LCCOMB_X29_Y27_N0
 \vga_0|videoSync|v_count[7]~4\ : cycloneii_lcell_comb
 -- Equation(s):
--- \vga_0|videoSync|v_count[7]~4_combout\ = (\vga_0|videoSync|v_count[9]~0_combout\ & (\vga_0|videoSync|process_1~11_combout\ & ((\vga_0|videoSync|Add1~14_combout\)))) # (!\vga_0|videoSync|v_count[9]~0_combout\ & (((\vga_0|videoSync|v_count\(7)))))
+-- \vga_0|videoSync|v_count[7]~4_combout\ = (\vga_0|videoSync|v_count[9]~0_combout\ & (\vga_0|videoSync|Add1~14_combout\ & ((\vga_0|videoSync|process_1~11_combout\)))) # (!\vga_0|videoSync|v_count[9]~0_combout\ & (((\vga_0|videoSync|v_count\(7)))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -2866,13 +3055,13 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \vga_0|videoSync|process_1~11_combout\,
+	dataa => \vga_0|videoSync|Add1~14_combout\,
 	datab => \vga_0|videoSync|v_count[9]~0_combout\,
 	datac => \vga_0|videoSync|v_count\(7),
-	datad => \vga_0|videoSync|Add1~14_combout\,
+	datad => \vga_0|videoSync|process_1~11_combout\,
 	combout => \vga_0|videoSync|v_count[7]~4_combout\);
 
--- Location: LCFF_X21_Y21_N5
+-- Location: LCFF_X29_Y27_N1
 \vga_0|videoSync|v_count[7]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \vga_0|videoSync|pixel_clock_int~clkctrl_outclk\,
@@ -2881,593 +3070,58 @@ PORT MAP (
 	devpor => ww_devpor,
 	regout => \vga_0|videoSync|v_count\(7));
 
--- Location: LCCOMB_X21_Y21_N26
-\vga_0|videoSync|LessThan1~1\ : cycloneii_lcell_comb
+-- Location: LCCOMB_X28_Y27_N18
+\vga_0|videoSync|LessThan6~0\ : cycloneii_lcell_comb
 -- Equation(s):
--- \vga_0|videoSync|LessThan1~1_combout\ = (!\vga_0|videoSync|v_count\(4) & (!\vga_0|videoSync|v_count\(6) & (!\vga_0|videoSync|v_count\(7) & !\vga_0|videoSync|v_count\(5))))
+-- \vga_0|videoSync|LessThan6~0_combout\ = (\vga_0|videoSync|v_count\(6) & (\vga_0|videoSync|v_count\(5) & (\vga_0|videoSync|v_count\(7) & \vga_0|videoSync|v_count\(8))))
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "0000000000000001",
+	lut_mask => "1000000000000000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \vga_0|videoSync|v_count\(6),
+	datab => \vga_0|videoSync|v_count\(5),
+	datac => \vga_0|videoSync|v_count\(7),
+	datad => \vga_0|videoSync|v_count\(8),
+	combout => \vga_0|videoSync|LessThan6~0_combout\);
+
+-- Location: LCCOMB_X28_Y27_N24
+\vga_0|videoSync|LessThan6~1\ : cycloneii_lcell_comb
+-- Equation(s):
+-- \vga_0|videoSync|LessThan6~1_combout\ = (\vga_0|videoSync|v_count\(1)) # ((\vga_0|videoSync|v_count\(3)) # ((\vga_0|videoSync|v_count\(0)) # (\vga_0|videoSync|v_count\(2))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1111111111111110",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \vga_0|videoSync|v_count\(1),
+	datab => \vga_0|videoSync|v_count\(3),
+	datac => \vga_0|videoSync|v_count\(0),
+	datad => \vga_0|videoSync|v_count\(2),
+	combout => \vga_0|videoSync|LessThan6~1_combout\);
+
+-- Location: LCCOMB_X28_Y27_N26
+\vga_0|videoSync|LessThan6~2\ : cycloneii_lcell_comb
+-- Equation(s):
+-- \vga_0|videoSync|LessThan6~2_combout\ = (!\vga_0|videoSync|v_count\(9) & (((!\vga_0|videoSync|v_count\(4) & !\vga_0|videoSync|LessThan6~1_combout\)) # (!\vga_0|videoSync|LessThan6~0_combout\)))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0000000000110111",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
 	dataa => \vga_0|videoSync|v_count\(4),
-	datab => \vga_0|videoSync|v_count\(6),
-	datac => \vga_0|videoSync|v_count\(7),
-	datad => \vga_0|videoSync|v_count\(5),
-	combout => \vga_0|videoSync|LessThan1~1_combout\);
-
--- Location: LCCOMB_X21_Y21_N24
-\vga_0|videoSync|process_1~11\ : cycloneii_lcell_comb
--- Equation(s):
--- \vga_0|videoSync|process_1~11_combout\ = (\vga_0|videoSync|process_1~10_combout\) # ((!\vga_0|videoSync|v_count\(8) & (\vga_0|videoSync|LessThan1~1_combout\ & \vga_0|videoSync|LessThan1~0_combout\)))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1111111101000000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \vga_0|videoSync|v_count\(8),
-	datab => \vga_0|videoSync|LessThan1~1_combout\,
-	datac => \vga_0|videoSync|LessThan1~0_combout\,
-	datad => \vga_0|videoSync|process_1~10_combout\,
-	combout => \vga_0|videoSync|process_1~11_combout\);
-
--- Location: LCCOMB_X22_Y21_N0
-\vga_0|videoSync|v_count[6]~3\ : cycloneii_lcell_comb
--- Equation(s):
--- \vga_0|videoSync|v_count[6]~3_combout\ = (\vga_0|videoSync|v_count[9]~0_combout\ & (\vga_0|videoSync|process_1~11_combout\ & ((\vga_0|videoSync|Add1~12_combout\)))) # (!\vga_0|videoSync|v_count[9]~0_combout\ & (((\vga_0|videoSync|v_count\(6)))))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1101100001010000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \vga_0|videoSync|v_count[9]~0_combout\,
-	datab => \vga_0|videoSync|process_1~11_combout\,
-	datac => \vga_0|videoSync|v_count\(6),
-	datad => \vga_0|videoSync|Add1~12_combout\,
-	combout => \vga_0|videoSync|v_count[6]~3_combout\);
-
--- Location: LCFF_X22_Y21_N1
-\vga_0|videoSync|v_count[6]\ : cycloneii_lcell_ff
-PORT MAP (
-	clk => \vga_0|videoSync|pixel_clock_int~clkctrl_outclk\,
-	datain => \vga_0|videoSync|v_count[6]~3_combout\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	regout => \vga_0|videoSync|v_count\(6));
-
--- Location: LCCOMB_X22_Y21_N28
-\vga_0|videoSync|v_count[9]~1\ : cycloneii_lcell_comb
--- Equation(s):
--- \vga_0|videoSync|v_count[9]~1_combout\ = (\vga_0|videoSync|v_count[9]~0_combout\ & (\vga_0|videoSync|Add1~18_combout\ & (\vga_0|videoSync|process_1~11_combout\))) # (!\vga_0|videoSync|v_count[9]~0_combout\ & (((\vga_0|videoSync|v_count\(9)))))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1000100011110000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \vga_0|videoSync|Add1~18_combout\,
-	datab => \vga_0|videoSync|process_1~11_combout\,
-	datac => \vga_0|videoSync|v_count\(9),
-	datad => \vga_0|videoSync|v_count[9]~0_combout\,
-	combout => \vga_0|videoSync|v_count[9]~1_combout\);
-
--- Location: LCFF_X22_Y21_N29
-\vga_0|videoSync|v_count[9]\ : cycloneii_lcell_ff
-PORT MAP (
-	clk => \vga_0|videoSync|pixel_clock_int~clkctrl_outclk\,
-	datain => \vga_0|videoSync|v_count[9]~1_combout\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	regout => \vga_0|videoSync|v_count\(9));
-
--- Location: LCCOMB_X21_Y21_N2
-\vga_0|videoSync|LessThan6~0\ : cycloneii_lcell_comb
--- Equation(s):
--- \vga_0|videoSync|LessThan6~0_combout\ = (\vga_0|videoSync|v_count\(8) & (\vga_0|videoSync|v_count\(6) & (\vga_0|videoSync|v_count\(7) & \vga_0|videoSync|v_count\(5))))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1000000000000000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \vga_0|videoSync|v_count\(8),
-	datab => \vga_0|videoSync|v_count\(6),
-	datac => \vga_0|videoSync|v_count\(7),
-	datad => \vga_0|videoSync|v_count\(5),
-	combout => \vga_0|videoSync|LessThan6~0_combout\);
-
--- Location: LCCOMB_X21_Y21_N0
-\vga_0|videoSync|LessThan6~2\ : cycloneii_lcell_comb
--- Equation(s):
--- \vga_0|videoSync|LessThan6~2_combout\ = (!\vga_0|videoSync|v_count\(9) & (((!\vga_0|videoSync|LessThan6~1_combout\ & !\vga_0|videoSync|v_count\(4))) # (!\vga_0|videoSync|LessThan6~0_combout\)))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0000000100110011",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \vga_0|videoSync|LessThan6~1_combout\,
-	datab => \vga_0|videoSync|v_count\(9),
-	datac => \vga_0|videoSync|v_count\(4),
-	datad => \vga_0|videoSync|LessThan6~0_combout\,
+	datab => \vga_0|videoSync|LessThan6~0_combout\,
+	datac => \vga_0|videoSync|LessThan6~1_combout\,
+	datad => \vga_0|videoSync|v_count\(9),
 	combout => \vga_0|videoSync|LessThan6~2_combout\);
 
--- Location: LCFF_X25_Y22_N19
-\vga_0|videoSync|pixel_row[6]\ : cycloneii_lcell_ff
-PORT MAP (
-	clk => \vga_0|videoSync|pixel_clock_int~regout\,
-	sdata => \vga_0|videoSync|v_count\(6),
-	sload => VCC,
-	ena => \vga_0|videoSync|LessThan6~2_combout\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	regout => \vga_0|videoSync|pixel_row\(6));
-
--- Location: LCFF_X25_Y21_N1
-\vga_0|videoSync|pixel_row[5]\ : cycloneii_lcell_ff
-PORT MAP (
-	clk => \vga_0|videoSync|pixel_clock_int~regout\,
-	sdata => \vga_0|videoSync|v_count\(5),
-	sload => VCC,
-	ena => \vga_0|videoSync|LessThan6~2_combout\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	regout => \vga_0|videoSync|pixel_row\(5));
-
--- Location: LCFF_X25_Y21_N29
-\vga_0|videoSync|pixel_row[4]\ : cycloneii_lcell_ff
-PORT MAP (
-	clk => \vga_0|videoSync|pixel_clock_int~clkctrl_outclk\,
-	sdata => \vga_0|videoSync|v_count\(4),
-	sload => VCC,
-	ena => \vga_0|videoSync|LessThan6~2_combout\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	regout => \vga_0|videoSync|pixel_row\(4));
-
--- Location: LCCOMB_X24_Y21_N6
-\vga_0|videoGen|LessThan11~2\ : cycloneii_lcell_comb
--- Equation(s):
--- \vga_0|videoGen|LessThan11~2_combout\ = ((!\vga_0|videoSync|pixel_row\(5) & ((!\vga_0|videoSync|pixel_row\(4)) # (!\vga_0|videoSync|pixel_row\(3))))) # (!\vga_0|videoSync|pixel_row\(6))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0011011100111111",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \vga_0|videoSync|pixel_row\(3),
-	datab => \vga_0|videoSync|pixel_row\(6),
-	datac => \vga_0|videoSync|pixel_row\(5),
-	datad => \vga_0|videoSync|pixel_row\(4),
-	combout => \vga_0|videoGen|LessThan11~2_combout\);
-
--- Location: LCCOMB_X24_Y21_N16
-\vga_0|videoGen|LessThan12~0\ : cycloneii_lcell_comb
--- Equation(s):
--- \vga_0|videoGen|LessThan12~0_combout\ = (\vga_0|videoSync|pixel_row\(3) & (\vga_0|videoSync|pixel_row\(6) & (\vga_0|videoSync|pixel_row\(5) & \vga_0|videoSync|pixel_row\(4))))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1000000000000000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \vga_0|videoSync|pixel_row\(3),
-	datab => \vga_0|videoSync|pixel_row\(6),
-	datac => \vga_0|videoSync|pixel_row\(5),
-	datad => \vga_0|videoSync|pixel_row\(4),
-	combout => \vga_0|videoGen|LessThan12~0_combout\);
-
--- Location: LCFF_X25_Y21_N17
-\vga_0|videoSync|pixel_row[2]\ : cycloneii_lcell_ff
-PORT MAP (
-	clk => \vga_0|videoSync|pixel_clock_int~clkctrl_outclk\,
-	sdata => \vga_0|videoSync|v_count\(2),
-	sload => VCC,
-	ena => \vga_0|videoSync|LessThan6~2_combout\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	regout => \vga_0|videoSync|pixel_row\(2));
-
--- Location: LCFF_X25_Y21_N7
-\vga_0|videoSync|pixel_row[1]\ : cycloneii_lcell_ff
-PORT MAP (
-	clk => \vga_0|videoSync|pixel_clock_int~clkctrl_outclk\,
-	sdata => \vga_0|videoSync|v_count\(1),
-	sload => VCC,
-	ena => \vga_0|videoSync|LessThan6~2_combout\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	regout => \vga_0|videoSync|pixel_row\(1));
-
--- Location: LCCOMB_X24_Y20_N12
-\vga_0|videoGen|LessThan11~1\ : cycloneii_lcell_comb
--- Equation(s):
--- \vga_0|videoGen|LessThan11~1_combout\ = (!\vga_0|videoSync|pixel_row\(2) & (!\vga_0|videoSync|pixel_row\(5) & ((!\vga_0|videoSync|pixel_row\(1)) # (!\vga_0|videoSync|pixel_row\(0)))))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0000000000010011",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \vga_0|videoSync|pixel_row\(0),
-	datab => \vga_0|videoSync|pixel_row\(2),
-	datac => \vga_0|videoSync|pixel_row\(1),
-	datad => \vga_0|videoSync|pixel_row\(5),
-	combout => \vga_0|videoGen|LessThan11~1_combout\);
-
--- Location: LCCOMB_X24_Y20_N22
-\vga_0|videoGen|pixelDraw~42\ : cycloneii_lcell_comb
--- Equation(s):
--- \vga_0|videoGen|pixelDraw~42_combout\ = (\vga_0|videoGen|LessThan15~1_combout\ & (!\vga_0|videoGen|LessThan11~2_combout\ & (!\vga_0|videoGen|LessThan12~0_combout\ & !\vga_0|videoGen|LessThan11~1_combout\)))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0000000000000010",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \vga_0|videoGen|LessThan15~1_combout\,
-	datab => \vga_0|videoGen|LessThan11~2_combout\,
-	datac => \vga_0|videoGen|LessThan12~0_combout\,
-	datad => \vga_0|videoGen|LessThan11~1_combout\,
-	combout => \vga_0|videoGen|pixelDraw~42_combout\);
-
--- Location: LCCOMB_X21_Y22_N14
-\vga_0|videoSync|LessThan5~0\ : cycloneii_lcell_comb
--- Equation(s):
--- \vga_0|videoSync|LessThan5~0_combout\ = ((!\vga_0|videoSync|h_count\(8) & !\vga_0|videoSync|h_count\(7))) # (!\vga_0|videoSync|h_count\(9))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0000111101011111",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \vga_0|videoSync|h_count\(8),
-	datac => \vga_0|videoSync|h_count\(9),
-	datad => \vga_0|videoSync|h_count\(7),
-	combout => \vga_0|videoSync|LessThan5~0_combout\);
-
--- Location: LCFF_X24_Y22_N13
-\vga_0|videoSync|pixel_column[7]\ : cycloneii_lcell_ff
-PORT MAP (
-	clk => \vga_0|videoSync|pixel_clock_int~clkctrl_outclk\,
-	sdata => \vga_0|videoSync|h_count\(7),
-	sload => VCC,
-	ena => \vga_0|videoSync|LessThan5~0_combout\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	regout => \vga_0|videoSync|pixel_column\(7));
-
--- Location: LCCOMB_X27_Y20_N28
-\vga_0|videoGen|LessThan13~1\ : cycloneii_lcell_comb
--- Equation(s):
--- \vga_0|videoGen|LessThan13~1_combout\ = (!\vga_0|videoSync|pixel_column\(6) & !\vga_0|videoSync|pixel_column\(7))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0000000001010101",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \vga_0|videoSync|pixel_column\(6),
-	datad => \vga_0|videoSync|pixel_column\(7),
-	combout => \vga_0|videoGen|LessThan13~1_combout\);
-
--- Location: LCFF_X23_Y22_N15
-\vga_0|videoSync|pixel_column[3]\ : cycloneii_lcell_ff
-PORT MAP (
-	clk => \vga_0|videoSync|pixel_clock_int~clkctrl_outclk\,
-	sdata => \vga_0|videoSync|h_count\(3),
-	sload => VCC,
-	ena => \vga_0|videoSync|LessThan5~0_combout\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	regout => \vga_0|videoSync|pixel_column\(3));
-
--- Location: LCFF_X20_Y22_N13
-\vga_0|videoSync|h_count[4]\ : cycloneii_lcell_ff
-PORT MAP (
-	clk => \vga_0|videoSync|pixel_clock_int~clkctrl_outclk\,
-	datain => \vga_0|videoSync|Add0~8_combout\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	regout => \vga_0|videoSync|h_count\(4));
-
--- Location: LCFF_X23_Y22_N29
-\vga_0|videoSync|pixel_column[4]\ : cycloneii_lcell_ff
-PORT MAP (
-	clk => \vga_0|videoSync|pixel_clock_int~clkctrl_outclk\,
-	sdata => \vga_0|videoSync|h_count\(4),
-	sload => VCC,
-	ena => \vga_0|videoSync|LessThan5~0_combout\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	regout => \vga_0|videoSync|pixel_column\(4));
-
--- Location: LCCOMB_X22_Y25_N14
-\vga_0|videoGen|LessThan53~2\ : cycloneii_lcell_comb
--- Equation(s):
--- \vga_0|videoGen|LessThan53~2_combout\ = (\vga_0|videoSync|pixel_column\(5) & ((\vga_0|videoSync|pixel_column\(3)) # (\vga_0|videoSync|pixel_column\(4))))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1010101010100000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \vga_0|videoSync|pixel_column\(5),
-	datac => \vga_0|videoSync|pixel_column\(3),
-	datad => \vga_0|videoSync|pixel_column\(4),
-	combout => \vga_0|videoGen|LessThan53~2_combout\);
-
--- Location: LCFF_X23_Y22_N1
-\vga_0|videoSync|pixel_column[2]\ : cycloneii_lcell_ff
-PORT MAP (
-	clk => \vga_0|videoSync|pixel_clock_int~clkctrl_outclk\,
-	sdata => \vga_0|videoSync|h_count\(2),
-	sload => VCC,
-	ena => \vga_0|videoSync|LessThan5~0_combout\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	regout => \vga_0|videoSync|pixel_column\(2));
-
--- Location: LCFF_X23_Y22_N3
-\vga_0|videoSync|pixel_column[1]\ : cycloneii_lcell_ff
-PORT MAP (
-	clk => \vga_0|videoSync|pixel_clock_int~clkctrl_outclk\,
-	sdata => \vga_0|videoSync|h_count\(1),
-	sload => VCC,
-	ena => \vga_0|videoSync|LessThan5~0_combout\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	regout => \vga_0|videoSync|pixel_column\(1));
-
--- Location: LCFF_X23_Y22_N13
-\vga_0|videoSync|pixel_column[0]\ : cycloneii_lcell_ff
-PORT MAP (
-	clk => \vga_0|videoSync|pixel_clock_int~clkctrl_outclk\,
-	sdata => \vga_0|videoSync|h_count\(0),
-	sload => VCC,
-	ena => \vga_0|videoSync|LessThan5~0_combout\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	regout => \vga_0|videoSync|pixel_column\(0));
-
--- Location: LCCOMB_X23_Y22_N2
-\vga_0|videoGen|LessThan13~2\ : cycloneii_lcell_comb
--- Equation(s):
--- \vga_0|videoGen|LessThan13~2_combout\ = (!\vga_0|videoSync|pixel_column\(2) & ((!\vga_0|videoSync|pixel_column\(0)) # (!\vga_0|videoSync|pixel_column\(1))))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0000001100110011",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	datab => \vga_0|videoSync|pixel_column\(2),
-	datac => \vga_0|videoSync|pixel_column\(1),
-	datad => \vga_0|videoSync|pixel_column\(0),
-	combout => \vga_0|videoGen|LessThan13~2_combout\);
-
--- Location: LCCOMB_X22_Y25_N28
-\vga_0|videoGen|LessThan13~3\ : cycloneii_lcell_comb
--- Equation(s):
--- \vga_0|videoGen|LessThan13~3_combout\ = (!\vga_0|videoSync|pixel_column\(5) & (!\vga_0|videoSync|pixel_column\(4) & ((\vga_0|videoGen|LessThan13~2_combout\) # (!\vga_0|videoSync|pixel_column\(3)))))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0000000001010001",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \vga_0|videoSync|pixel_column\(5),
-	datab => \vga_0|videoSync|pixel_column\(3),
-	datac => \vga_0|videoGen|LessThan13~2_combout\,
-	datad => \vga_0|videoSync|pixel_column\(4),
-	combout => \vga_0|videoGen|LessThan13~3_combout\);
-
--- Location: LCCOMB_X22_Y25_N12
-\vga_0|videoGen|pixelDraw~13\ : cycloneii_lcell_comb
--- Equation(s):
--- \vga_0|videoGen|pixelDraw~13_combout\ = (\vga_0|videoGen|LessThan13~0_combout\ & (\vga_0|videoGen|LessThan13~1_combout\ & (!\vga_0|videoGen|LessThan53~2_combout\ & !\vga_0|videoGen|LessThan13~3_combout\)))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0000000000001000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \vga_0|videoGen|LessThan13~0_combout\,
-	datab => \vga_0|videoGen|LessThan13~1_combout\,
-	datac => \vga_0|videoGen|LessThan53~2_combout\,
-	datad => \vga_0|videoGen|LessThan13~3_combout\,
-	combout => \vga_0|videoGen|pixelDraw~13_combout\);
-
--- Location: LCCOMB_X25_Y25_N4
-\vga_0|videoGen|colorAddress~175\ : cycloneii_lcell_comb
--- Equation(s):
--- \vga_0|videoGen|colorAddress~175_combout\ = ((!\vga_0|videoGen|pixelDraw~27_combout\ & !\vga_0|videoGen|pixelDraw~42_combout\)) # (!\vga_0|videoGen|pixelDraw~13_combout\)
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0000010111111111",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \vga_0|videoGen|pixelDraw~27_combout\,
-	datac => \vga_0|videoGen|pixelDraw~42_combout\,
-	datad => \vga_0|videoGen|pixelDraw~13_combout\,
-	combout => \vga_0|videoGen|colorAddress~175_combout\);
-
--- Location: LCCOMB_X21_Y21_N12
-\vga_0|videoSync|v_count~7\ : cycloneii_lcell_comb
--- Equation(s):
--- \vga_0|videoSync|v_count~7_combout\ = (\vga_0|videoSync|Add1~0_combout\ & ((\vga_0|videoSync|process_1~10_combout\) # (\vga_0|videoSync|LessThan1~2_combout\)))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1111110000000000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	datab => \vga_0|videoSync|process_1~10_combout\,
-	datac => \vga_0|videoSync|LessThan1~2_combout\,
-	datad => \vga_0|videoSync|Add1~0_combout\,
-	combout => \vga_0|videoSync|v_count~7_combout\);
-
--- Location: LCFF_X21_Y21_N13
-\vga_0|videoSync|v_count[0]\ : cycloneii_lcell_ff
-PORT MAP (
-	clk => \vga_0|videoSync|pixel_clock_int~clkctrl_outclk\,
-	datain => \vga_0|videoSync|v_count~7_combout\,
-	ena => \vga_0|videoSync|v_count[9]~0_combout\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	regout => \vga_0|videoSync|v_count\(0));
-
--- Location: LCFF_X25_Y21_N13
-\vga_0|videoSync|pixel_row[0]\ : cycloneii_lcell_ff
-PORT MAP (
-	clk => \vga_0|videoSync|pixel_clock_int~clkctrl_outclk\,
-	sdata => \vga_0|videoSync|v_count\(0),
-	sload => VCC,
-	ena => \vga_0|videoSync|LessThan6~2_combout\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	regout => \vga_0|videoSync|pixel_row\(0));
-
--- Location: LCCOMB_X24_Y21_N12
-\vga_0|videoGen|pixelDraw~11\ : cycloneii_lcell_comb
--- Equation(s):
--- \vga_0|videoGen|pixelDraw~11_combout\ = (\vga_0|videoSync|pixel_row\(2) & ((\vga_0|videoSync|pixel_row\(5)) # ((\vga_0|videoSync|pixel_row\(0) & \vga_0|videoSync|pixel_row\(1)))))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1010100010001000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \vga_0|videoSync|pixel_row\(2),
-	datab => \vga_0|videoSync|pixel_row\(5),
-	datac => \vga_0|videoSync|pixel_row\(0),
-	datad => \vga_0|videoSync|pixel_row\(1),
-	combout => \vga_0|videoGen|pixelDraw~11_combout\);
-
--- Location: LCCOMB_X24_Y21_N22
-\vga_0|videoGen|pixelDraw~12\ : cycloneii_lcell_comb
--- Equation(s):
--- \vga_0|videoGen|pixelDraw~12_combout\ = (\vga_0|videoSync|pixel_row\(5) & (((!\vga_0|videoSync|pixel_row\(3) & !\vga_0|videoGen|pixelDraw~11_combout\)) # (!\vga_0|videoSync|pixel_row\(4)))) # (!\vga_0|videoSync|pixel_row\(5) & 
--- ((\vga_0|videoSync|pixel_row\(3)) # ((\vga_0|videoGen|pixelDraw~11_combout\))))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0011011011111110",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \vga_0|videoSync|pixel_row\(3),
-	datab => \vga_0|videoSync|pixel_row\(5),
-	datac => \vga_0|videoGen|pixelDraw~11_combout\,
-	datad => \vga_0|videoSync|pixel_row\(4),
-	combout => \vga_0|videoGen|pixelDraw~12_combout\);
-
--- Location: LCCOMB_X24_Y21_N0
-\vga_0|videoGen|pixelDraw~77\ : cycloneii_lcell_comb
--- Equation(s):
--- \vga_0|videoGen|pixelDraw~77_combout\ = (\vga_0|videoGen|pixelDraw~10_combout\ & (\vga_0|videoGen|pixelDraw~12_combout\ & ((\vga_0|videoSync|pixel_row\(4)) # (\vga_0|videoSync|pixel_row\(5)))))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1010100000000000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \vga_0|videoGen|pixelDraw~10_combout\,
-	datab => \vga_0|videoSync|pixel_row\(4),
-	datac => \vga_0|videoSync|pixel_row\(5),
-	datad => \vga_0|videoGen|pixelDraw~12_combout\,
-	combout => \vga_0|videoGen|pixelDraw~77_combout\);
-
--- Location: LCCOMB_X25_Y25_N0
-\vga_0|videoGen|pixelDraw~14\ : cycloneii_lcell_comb
--- Equation(s):
--- \vga_0|videoGen|pixelDraw~14_combout\ = (!\vga_0|videoGen|pixelDraw~13_combout\) # (!\vga_0|videoGen|pixelDraw~77_combout\)
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0000111111111111",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	datac => \vga_0|videoGen|pixelDraw~77_combout\,
-	datad => \vga_0|videoGen|pixelDraw~13_combout\,
-	combout => \vga_0|videoGen|pixelDraw~14_combout\);
-
--- Location: LCCOMB_X24_Y21_N20
-\vga_0|videoGen|LessThan23~0\ : cycloneii_lcell_comb
--- Equation(s):
--- \vga_0|videoGen|LessThan23~0_combout\ = ((!\vga_0|videoSync|pixel_row\(6) & ((!\vga_0|videoSync|pixel_row\(4)) # (!\vga_0|videoSync|pixel_row\(5))))) # (!\vga_0|videoSync|pixel_row\(7))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0101011101110111",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \vga_0|videoSync|pixel_row\(7),
-	datab => \vga_0|videoSync|pixel_row\(6),
-	datac => \vga_0|videoSync|pixel_row\(5),
-	datad => \vga_0|videoSync|pixel_row\(4),
-	combout => \vga_0|videoGen|LessThan23~0_combout\);
-
--- Location: LCCOMB_X24_Y21_N18
-\vga_0|videoGen|LessThan23~1\ : cycloneii_lcell_comb
--- Equation(s):
--- \vga_0|videoGen|LessThan23~1_combout\ = (!\vga_0|videoSync|pixel_row\(3) & (((!\vga_0|videoSync|pixel_row\(0) & !\vga_0|videoSync|pixel_row\(1))) # (!\vga_0|videoSync|pixel_row\(2))))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0000010100010101",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \vga_0|videoSync|pixel_row\(3),
-	datab => \vga_0|videoSync|pixel_row\(0),
-	datac => \vga_0|videoSync|pixel_row\(2),
-	datad => \vga_0|videoSync|pixel_row\(1),
-	combout => \vga_0|videoGen|LessThan23~1_combout\);
-
--- Location: LCCOMB_X24_Y21_N4
-\vga_0|videoGen|LessThan23~2\ : cycloneii_lcell_comb
--- Equation(s):
--- \vga_0|videoGen|LessThan23~2_combout\ = (!\vga_0|videoSync|pixel_row\(8) & ((\vga_0|videoGen|LessThan23~0_combout\) # ((!\vga_0|videoSync|pixel_row\(6) & \vga_0|videoGen|LessThan23~1_combout\))))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0101000101010000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \vga_0|videoSync|pixel_row\(8),
-	datab => \vga_0|videoSync|pixel_row\(6),
-	datac => \vga_0|videoGen|LessThan23~0_combout\,
-	datad => \vga_0|videoGen|LessThan23~1_combout\,
-	combout => \vga_0|videoGen|LessThan23~2_combout\);
-
--- Location: LCFF_X25_Y22_N5
+-- Location: LCFF_X28_Y24_N27
 \vga_0|videoSync|pixel_row[7]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \vga_0|videoSync|pixel_clock_int~regout\,
@@ -3478,50 +3132,7 @@ PORT MAP (
 	devpor => ww_devpor,
 	regout => \vga_0|videoSync|pixel_row\(7));
 
--- Location: LCCOMB_X25_Y22_N4
-\vga_0|videoGen|Equal3~0\ : cycloneii_lcell_comb
--- Equation(s):
--- \vga_0|videoGen|Equal3~0_combout\ = (\vga_0|videoSync|pixel_row\(7) & \vga_0|videoSync|pixel_row\(6))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1111000000000000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	datac => \vga_0|videoSync|pixel_row\(7),
-	datad => \vga_0|videoSync|pixel_row\(6),
-	combout => \vga_0|videoGen|Equal3~0_combout\);
-
--- Location: LCFF_X25_Y21_N3
-\vga_0|videoSync|pixel_row[3]\ : cycloneii_lcell_ff
-PORT MAP (
-	clk => \vga_0|videoSync|pixel_clock_int~clkctrl_outclk\,
-	sdata => \vga_0|videoSync|v_count\(3),
-	sload => VCC,
-	ena => \vga_0|videoSync|LessThan6~2_combout\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	regout => \vga_0|videoSync|pixel_row\(3));
-
--- Location: LCCOMB_X25_Y23_N20
-\vga_0|videoGen|LessThan24~0\ : cycloneii_lcell_comb
--- Equation(s):
--- \vga_0|videoGen|LessThan24~0_combout\ = (\vga_0|videoSync|pixel_row\(4) & ((\vga_0|videoSync|pixel_row\(1)) # ((\vga_0|videoSync|pixel_row\(3)) # (\vga_0|videoSync|pixel_row\(2)))))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1111111000000000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \vga_0|videoSync|pixel_row\(1),
-	datab => \vga_0|videoSync|pixel_row\(3),
-	datac => \vga_0|videoSync|pixel_row\(2),
-	datad => \vga_0|videoSync|pixel_row\(4),
-	combout => \vga_0|videoGen|LessThan24~0_combout\);
-
--- Location: LCFF_X25_Y22_N29
+-- Location: LCFF_X28_Y24_N5
 \vga_0|videoSync|pixel_row[8]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \vga_0|videoSync|pixel_clock_int~regout\,
@@ -3532,168 +3143,21 @@ PORT MAP (
 	devpor => ww_devpor,
 	regout => \vga_0|videoSync|pixel_row\(8));
 
--- Location: LCCOMB_X25_Y23_N10
-\vga_0|videoGen|pixelDraw~15\ : cycloneii_lcell_comb
--- Equation(s):
--- \vga_0|videoGen|pixelDraw~15_combout\ = (!\vga_0|videoSync|pixel_row\(8) & (((!\vga_0|videoSync|pixel_row\(5) & !\vga_0|videoGen|LessThan24~0_combout\)) # (!\vga_0|videoGen|Equal3~0_combout\)))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0000000000110111",
-	sum_lutc_input => "datac")
--- pragma translate_on
+-- Location: LCFF_X28_Y24_N29
+\vga_0|videoSync|pixel_row[6]\ : cycloneii_lcell_ff
 PORT MAP (
-	dataa => \vga_0|videoSync|pixel_row\(5),
-	datab => \vga_0|videoGen|Equal3~0_combout\,
-	datac => \vga_0|videoGen|LessThan24~0_combout\,
-	datad => \vga_0|videoSync|pixel_row\(8),
-	combout => \vga_0|videoGen|pixelDraw~15_combout\);
-
--- Location: LCCOMB_X25_Y23_N8
-\vga_0|videoGen|pixelDraw~16\ : cycloneii_lcell_comb
--- Equation(s):
--- \vga_0|videoGen|pixelDraw~16_combout\ = (!\vga_0|videoGen|LessThan23~2_combout\ & \vga_0|videoGen|pixelDraw~15_combout\)
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0000111100000000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	datac => \vga_0|videoGen|LessThan23~2_combout\,
-	datad => \vga_0|videoGen|pixelDraw~15_combout\,
-	combout => \vga_0|videoGen|pixelDraw~16_combout\);
-
--- Location: LCCOMB_X25_Y21_N0
-\vga_0|videoGen|LessThan48~0\ : cycloneii_lcell_comb
--- Equation(s):
--- \vga_0|videoGen|LessThan48~0_combout\ = (!\vga_0|videoSync|pixel_row\(3) & ((!\vga_0|videoSync|pixel_row\(1)) # (!\vga_0|videoSync|pixel_row\(2))))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0001000100110011",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \vga_0|videoSync|pixel_row\(2),
-	datab => \vga_0|videoSync|pixel_row\(3),
-	datad => \vga_0|videoSync|pixel_row\(1),
-	combout => \vga_0|videoGen|LessThan48~0_combout\);
-
--- Location: LCCOMB_X25_Y23_N22
-\vga_0|videoGen|pixelDraw~25\ : cycloneii_lcell_comb
--- Equation(s):
--- \vga_0|videoGen|pixelDraw~25_combout\ = (!\vga_0|videoSync|pixel_row\(8) & (((!\vga_0|videoSync|pixel_row\(5) & !\vga_0|videoSync|pixel_row\(6))) # (!\vga_0|videoSync|pixel_row\(7))))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0000000100110011",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \vga_0|videoSync|pixel_row\(5),
-	datab => \vga_0|videoSync|pixel_row\(8),
-	datac => \vga_0|videoSync|pixel_row\(6),
-	datad => \vga_0|videoSync|pixel_row\(7),
-	combout => \vga_0|videoGen|pixelDraw~25_combout\);
-
--- Location: LCCOMB_X25_Y21_N4
-\vga_0|videoGen|LessThan15~0\ : cycloneii_lcell_comb
--- Equation(s):
--- \vga_0|videoGen|LessThan15~0_combout\ = (!\vga_0|videoSync|pixel_row\(1) & (!\vga_0|videoSync|pixel_row\(2) & !\vga_0|videoSync|pixel_row\(0)))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0000000000000101",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \vga_0|videoSync|pixel_row\(1),
-	datac => \vga_0|videoSync|pixel_row\(2),
-	datad => \vga_0|videoSync|pixel_row\(0),
-	combout => \vga_0|videoGen|LessThan15~0_combout\);
-
--- Location: LCCOMB_X24_Y21_N2
-\vga_0|videoGen|pixelDraw~26\ : cycloneii_lcell_comb
--- Equation(s):
--- \vga_0|videoGen|pixelDraw~26_combout\ = (\vga_0|videoGen|pixelDraw~25_combout\ & (((\vga_0|videoGen|LessThan12~0_combout\ & !\vga_0|videoGen|LessThan15~0_combout\)) # (!\vga_0|videoGen|LessThan15~1_combout\)))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0100010011000100",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \vga_0|videoGen|LessThan15~1_combout\,
-	datab => \vga_0|videoGen|pixelDraw~25_combout\,
-	datac => \vga_0|videoGen|LessThan12~0_combout\,
-	datad => \vga_0|videoGen|LessThan15~0_combout\,
-	combout => \vga_0|videoGen|pixelDraw~26_combout\);
-
--- Location: LCCOMB_X24_Y21_N24
-\vga_0|videoGen|pixelDraw~27\ : cycloneii_lcell_comb
--- Equation(s):
--- \vga_0|videoGen|pixelDraw~27_combout\ = (\vga_0|videoGen|pixelDraw~26_combout\ & (((\vga_0|videoGen|LessThan48~0_combout\) # (!\vga_0|videoSync|pixel_row\(4))) # (!\vga_0|videoSync|pixel_row\(7))))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1111011100000000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \vga_0|videoSync|pixel_row\(7),
-	datab => \vga_0|videoSync|pixel_row\(4),
-	datac => \vga_0|videoGen|LessThan48~0_combout\,
-	datad => \vga_0|videoGen|pixelDraw~26_combout\,
-	combout => \vga_0|videoGen|pixelDraw~27_combout\);
-
--- Location: LCCOMB_X24_Y25_N26
-\vga_0|videoGen|colorAddress~138\ : cycloneii_lcell_comb
--- Equation(s):
--- \vga_0|videoGen|colorAddress~138_combout\ = (\vga_0|videoGen|pixelDraw~77_combout\) # ((\vga_0|videoGen|pixelDraw~42_combout\) # ((\vga_0|videoGen|pixelDraw~16_combout\) # (\vga_0|videoGen|pixelDraw~27_combout\)))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1111111111111110",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \vga_0|videoGen|pixelDraw~77_combout\,
-	datab => \vga_0|videoGen|pixelDraw~42_combout\,
-	datac => \vga_0|videoGen|pixelDraw~16_combout\,
-	datad => \vga_0|videoGen|pixelDraw~27_combout\,
-	combout => \vga_0|videoGen|colorAddress~138_combout\);
-
--- Location: LCCOMB_X22_Y22_N10
-\vga_0|videoGen|LessThan54~0\ : cycloneii_lcell_comb
--- Equation(s):
--- \vga_0|videoGen|LessThan54~0_combout\ = (\vga_0|videoSync|pixel_column\(2) & \vga_0|videoSync|pixel_column\(1))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1100000011000000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	datab => \vga_0|videoSync|pixel_column\(2),
-	datac => \vga_0|videoSync|pixel_column\(1),
-	combout => \vga_0|videoGen|LessThan54~0_combout\);
-
--- Location: LCFF_X23_Y22_N7
-\vga_0|videoSync|pixel_column[5]\ : cycloneii_lcell_ff
-PORT MAP (
-	clk => \vga_0|videoSync|pixel_clock_int~clkctrl_outclk\,
-	sdata => \vga_0|videoSync|h_count\(5),
+	clk => \vga_0|videoSync|pixel_clock_int~regout\,
+	sdata => \vga_0|videoSync|v_count\(6),
 	sload => VCC,
-	ena => \vga_0|videoSync|LessThan5~0_combout\,
+	ena => \vga_0|videoSync|LessThan6~2_combout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \vga_0|videoSync|pixel_column\(5));
+	regout => \vga_0|videoSync|pixel_row\(6));
 
--- Location: LCCOMB_X22_Y23_N24
-\vga_0|videoGen|LessThan173~0\ : cycloneii_lcell_comb
+-- Location: LCCOMB_X28_Y24_N4
+\vga_0|videoGen|placeShip_on~1\ : cycloneii_lcell_comb
 -- Equation(s):
--- \vga_0|videoGen|LessThan173~0_combout\ = (!\vga_0|videoSync|pixel_column\(3) & (!\vga_0|videoSync|pixel_column\(4) & !\vga_0|videoSync|pixel_column\(5)))
+-- \vga_0|videoGen|placeShip_on~1_combout\ = (!\vga_0|videoSync|pixel_row\(7) & (!\vga_0|videoSync|pixel_row\(8) & !\vga_0|videoSync|pixel_row\(6)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -3701,23 +3165,12 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	datab => \vga_0|videoSync|pixel_column\(3),
-	datac => \vga_0|videoSync|pixel_column\(4),
-	datad => \vga_0|videoSync|pixel_column\(5),
-	combout => \vga_0|videoGen|LessThan173~0_combout\);
+	datab => \vga_0|videoSync|pixel_row\(7),
+	datac => \vga_0|videoSync|pixel_row\(8),
+	datad => \vga_0|videoSync|pixel_row\(6),
+	combout => \vga_0|videoGen|placeShip_on~1_combout\);
 
--- Location: LCFF_X24_Y22_N3
-\vga_0|videoSync|pixel_column[8]\ : cycloneii_lcell_ff
-PORT MAP (
-	clk => \vga_0|videoSync|pixel_clock_int~clkctrl_outclk\,
-	sdata => \vga_0|videoSync|h_count\(8),
-	sload => VCC,
-	ena => \vga_0|videoSync|LessThan5~0_combout\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	regout => \vga_0|videoSync|pixel_column\(8));
-
--- Location: LCFF_X25_Y22_N17
+-- Location: LCFF_X28_Y22_N11
 \vga_0|videoSync|pixel_column[9]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \vga_0|videoSync|pixel_clock_int~regout\,
@@ -3728,10 +3181,100 @@ PORT MAP (
 	devpor => ww_devpor,
 	regout => \vga_0|videoSync|pixel_column\(9));
 
--- Location: LCCOMB_X24_Y22_N12
-\vga_0|videoGen|LessThan13~0\ : cycloneii_lcell_comb
+-- Location: LCCOMB_X28_Y24_N12
+\vga_0|videoGen|gameOverT_on\ : cycloneii_lcell_comb
 -- Equation(s):
--- \vga_0|videoGen|LessThan13~0_combout\ = (!\vga_0|videoSync|pixel_column\(8) & !\vga_0|videoSync|pixel_column\(9))
+-- \vga_0|videoGen|gameOverT_on~combout\ = (\vga_0|videoSync|pixel_row\(5) & (\vga_0|videoSync|pixel_column\(8) & (\vga_0|videoGen|placeShip_on~1_combout\ & !\vga_0|videoSync|pixel_column\(9))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0000000010000000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \vga_0|videoSync|pixel_row\(5),
+	datab => \vga_0|videoSync|pixel_column\(8),
+	datac => \vga_0|videoGen|placeShip_on~1_combout\,
+	datad => \vga_0|videoSync|pixel_column\(9),
+	combout => \vga_0|videoGen|gameOverT_on~combout\);
+
+-- Location: LCFF_X28_Y25_N21
+\vga_0|videoSync|pixel_column[3]\ : cycloneii_lcell_ff
+PORT MAP (
+	clk => \vga_0|videoSync|pixel_clock_int~clkctrl_outclk\,
+	sdata => \vga_0|videoSync|h_count\(3),
+	sload => VCC,
+	ena => \vga_0|videoSync|LessThan5~0_combout\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	regout => \vga_0|videoSync|pixel_column\(3));
+
+-- Location: LCFF_X29_Y26_N29
+\vga_0|videoSync|pixel_row[5]\ : cycloneii_lcell_ff
+PORT MAP (
+	clk => \vga_0|videoSync|pixel_clock_int~regout\,
+	sdata => \vga_0|videoSync|v_count\(5),
+	sload => VCC,
+	ena => \vga_0|videoSync|LessThan6~2_combout\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	regout => \vga_0|videoSync|pixel_row\(5));
+
+-- Location: LCCOMB_X28_Y24_N28
+\vga_0|videoGen|Equal2~0\ : cycloneii_lcell_comb
+-- Equation(s):
+-- \vga_0|videoGen|Equal2~0_combout\ = (\vga_0|videoSync|pixel_row\(8) & (\vga_0|videoSync|pixel_row\(7) & (!\vga_0|videoSync|pixel_row\(6) & \vga_0|videoSync|pixel_row\(5))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0000100000000000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \vga_0|videoSync|pixel_row\(8),
+	datab => \vga_0|videoSync|pixel_row\(7),
+	datac => \vga_0|videoSync|pixel_row\(6),
+	datad => \vga_0|videoSync|pixel_row\(5),
+	combout => \vga_0|videoGen|Equal2~0_combout\);
+
+-- Location: LCCOMB_X28_Y22_N2
+\vga_0|videoGen|Equal3~1\ : cycloneii_lcell_comb
+-- Equation(s):
+-- \vga_0|videoGen|Equal3~1_combout\ = (!\vga_0|videoSync|pixel_row\(5) & (\vga_0|videoSync|pixel_row\(7) & (\vga_0|videoSync|pixel_row\(8) & \vga_0|videoSync|pixel_row\(6))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0100000000000000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \vga_0|videoSync|pixel_row\(5),
+	datab => \vga_0|videoSync|pixel_row\(7),
+	datac => \vga_0|videoSync|pixel_row\(8),
+	datad => \vga_0|videoSync|pixel_row\(6),
+	combout => \vga_0|videoGen|Equal3~1_combout\);
+
+-- Location: LCCOMB_X27_Y22_N8
+\vga_0|videoGen|char_addr[5]~50\ : cycloneii_lcell_comb
+-- Equation(s):
+-- \vga_0|videoGen|char_addr[5]~50_combout\ = (!\vga_0|videoSync|pixel_column\(9) & ((\vga_0|videoGen|Equal3~1_combout\) # ((\vga_0|videoSync|pixel_column\(8) & \vga_0|videoGen|Equal2~0_combout\))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0000111100001000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \vga_0|videoSync|pixel_column\(8),
+	datab => \vga_0|videoGen|Equal2~0_combout\,
+	datac => \vga_0|videoSync|pixel_column\(9),
+	datad => \vga_0|videoGen|Equal3~1_combout\,
+	combout => \vga_0|videoGen|char_addr[5]~50_combout\);
+
+-- Location: LCCOMB_X28_Y24_N22
+\vga_0|videoGen|LessThan13~3\ : cycloneii_lcell_comb
+-- Equation(s):
+-- \vga_0|videoGen|LessThan13~3_combout\ = (!\vga_0|videoSync|pixel_column\(8) & !\vga_0|videoSync|pixel_column\(9))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -3741,961 +3284,42 @@ GENERIC MAP (
 PORT MAP (
 	datab => \vga_0|videoSync|pixel_column\(8),
 	datad => \vga_0|videoSync|pixel_column\(9),
-	combout => \vga_0|videoGen|LessThan13~0_combout\);
+	combout => \vga_0|videoGen|LessThan13~3_combout\);
 
--- Location: LCFF_X24_Y22_N9
-\vga_0|videoSync|pixel_column[6]\ : cycloneii_lcell_ff
-PORT MAP (
-	clk => \vga_0|videoSync|pixel_clock_int~clkctrl_outclk\,
-	sdata => \vga_0|videoSync|h_count\(6),
-	sload => VCC,
-	ena => \vga_0|videoSync|LessThan5~0_combout\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	regout => \vga_0|videoSync|pixel_column\(6));
-
--- Location: LCCOMB_X22_Y23_N12
-\vga_0|videoGen|pixelDraw~69\ : cycloneii_lcell_comb
+-- Location: LCCOMB_X28_Y24_N14
+\vga_0|videoGen|char_addr[5]~6\ : cycloneii_lcell_comb
 -- Equation(s):
--- \vga_0|videoGen|pixelDraw~69_combout\ = (\vga_0|videoGen|LessThan13~0_combout\ & (!\vga_0|videoSync|pixel_column\(7) & ((\vga_0|videoSync|pixel_column\(6)) # (!\vga_0|videoGen|LessThan53~3_combout\))))
+-- \vga_0|videoGen|char_addr[5]~6_combout\ = ((!\vga_0|videoGen|Equal2~0_combout\ & ((\vga_0|videoSync|pixel_row\(5)) # (!\vga_0|videoGen|placeShip_on~1_combout\)))) # (!\vga_0|videoGen|LessThan13~3_combout\)
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "0000110000000100",
+	lut_mask => "0100010111111111",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \vga_0|videoGen|LessThan53~3_combout\,
-	datab => \vga_0|videoGen|LessThan13~0_combout\,
-	datac => \vga_0|videoSync|pixel_column\(7),
-	datad => \vga_0|videoSync|pixel_column\(6),
-	combout => \vga_0|videoGen|pixelDraw~69_combout\);
-
--- Location: LCCOMB_X22_Y23_N6
-\vga_0|videoGen|pixelDraw~70\ : cycloneii_lcell_comb
--- Equation(s):
--- \vga_0|videoGen|pixelDraw~70_combout\ = (\vga_0|videoGen|pixelDraw~69_combout\ & (((!\vga_0|videoGen|LessThan54~0_combout\ & \vga_0|videoGen|LessThan173~0_combout\)) # (!\vga_0|videoSync|pixel_column\(6))))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0111010100000000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \vga_0|videoSync|pixel_column\(6),
-	datab => \vga_0|videoGen|LessThan54~0_combout\,
-	datac => \vga_0|videoGen|LessThan173~0_combout\,
-	datad => \vga_0|videoGen|pixelDraw~69_combout\,
-	combout => \vga_0|videoGen|pixelDraw~70_combout\);
-
--- Location: LCCOMB_X25_Y22_N2
-\vga_0|videoGen|LessThan43~1\ : cycloneii_lcell_comb
--- Equation(s):
--- \vga_0|videoGen|LessThan43~1_combout\ = (!\vga_0|videoSync|pixel_row\(7) & !\vga_0|videoSync|pixel_row\(6))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0000000000001111",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	datac => \vga_0|videoSync|pixel_row\(7),
-	datad => \vga_0|videoSync|pixel_row\(6),
-	combout => \vga_0|videoGen|LessThan43~1_combout\);
-
--- Location: LCCOMB_X24_Y22_N22
-\vga_0|videoGen|LessThan36~0\ : cycloneii_lcell_comb
--- Equation(s):
--- \vga_0|videoGen|LessThan36~0_combout\ = (\vga_0|videoSync|pixel_row\(5) & ((\vga_0|videoSync|pixel_row\(4)) # ((\vga_0|videoSync|pixel_row\(2) & \vga_0|videoSync|pixel_row\(3)))))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1010100010001000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \vga_0|videoSync|pixel_row\(5),
-	datab => \vga_0|videoSync|pixel_row\(4),
-	datac => \vga_0|videoSync|pixel_row\(2),
-	datad => \vga_0|videoSync|pixel_row\(3),
-	combout => \vga_0|videoGen|LessThan36~0_combout\);
-
--- Location: LCCOMB_X25_Y21_N28
-\vga_0|videoGen|LessThan35~0\ : cycloneii_lcell_comb
--- Equation(s):
--- \vga_0|videoGen|LessThan35~0_combout\ = (!\vga_0|videoSync|pixel_row\(6) & (!\vga_0|videoSync|pixel_row\(5) & (!\vga_0|videoSync|pixel_row\(4) & !\vga_0|videoSync|pixel_row\(7))))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0000000000000001",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \vga_0|videoSync|pixel_row\(6),
+	dataa => \vga_0|videoGen|Equal2~0_combout\,
 	datab => \vga_0|videoSync|pixel_row\(5),
-	datac => \vga_0|videoSync|pixel_row\(4),
-	datad => \vga_0|videoSync|pixel_row\(7),
-	combout => \vga_0|videoGen|LessThan35~0_combout\);
-
--- Location: LCCOMB_X25_Y21_N18
-\vga_0|videoGen|LessThan4~0\ : cycloneii_lcell_comb
--- Equation(s):
--- \vga_0|videoGen|LessThan4~0_combout\ = (\vga_0|videoSync|pixel_row\(0) & (\vga_0|videoSync|pixel_row\(2) & \vga_0|videoSync|pixel_row\(1)))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1010000000000000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \vga_0|videoSync|pixel_row\(0),
-	datac => \vga_0|videoSync|pixel_row\(2),
-	datad => \vga_0|videoSync|pixel_row\(1),
-	combout => \vga_0|videoGen|LessThan4~0_combout\);
-
--- Location: LCCOMB_X24_Y22_N26
-\vga_0|videoGen|LessThan35~1\ : cycloneii_lcell_comb
--- Equation(s):
--- \vga_0|videoGen|LessThan35~1_combout\ = (\vga_0|videoGen|LessThan35~0_combout\ & ((!\vga_0|videoSync|pixel_row\(3)) # (!\vga_0|videoGen|LessThan4~0_combout\)))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0000110011001100",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	datab => \vga_0|videoGen|LessThan35~0_combout\,
-	datac => \vga_0|videoGen|LessThan4~0_combout\,
-	datad => \vga_0|videoSync|pixel_row\(3),
-	combout => \vga_0|videoGen|LessThan35~1_combout\);
-
--- Location: LCCOMB_X24_Y22_N10
-\vga_0|videoGen|pixelDraw~30\ : cycloneii_lcell_comb
--- Equation(s):
--- \vga_0|videoGen|pixelDraw~30_combout\ = (\vga_0|videoSync|pixel_row\(8) & (\vga_0|videoGen|LessThan43~1_combout\ & (!\vga_0|videoGen|LessThan36~0_combout\ & !\vga_0|videoGen|LessThan35~1_combout\)))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0000000000001000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \vga_0|videoSync|pixel_row\(8),
-	datab => \vga_0|videoGen|LessThan43~1_combout\,
-	datac => \vga_0|videoGen|LessThan36~0_combout\,
-	datad => \vga_0|videoGen|LessThan35~1_combout\,
-	combout => \vga_0|videoGen|pixelDraw~30_combout\);
-
--- Location: LCCOMB_X25_Y21_N24
-\vga_0|videoGen|pixelDraw~35\ : cycloneii_lcell_comb
--- Equation(s):
--- \vga_0|videoGen|pixelDraw~35_combout\ = (!\vga_0|videoSync|pixel_row\(7) & ((\vga_0|videoSync|pixel_row\(5)) # ((\vga_0|videoSync|pixel_row\(4)) # (\vga_0|videoSync|pixel_row\(3)))))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0000000011111110",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \vga_0|videoSync|pixel_row\(5),
-	datab => \vga_0|videoSync|pixel_row\(4),
-	datac => \vga_0|videoSync|pixel_row\(3),
-	datad => \vga_0|videoSync|pixel_row\(7),
-	combout => \vga_0|videoGen|pixelDraw~35_combout\);
-
--- Location: LCCOMB_X25_Y21_N30
-\vga_0|videoGen|LessThan47~0\ : cycloneii_lcell_comb
--- Equation(s):
--- \vga_0|videoGen|LessThan47~0_combout\ = (\vga_0|videoSync|pixel_row\(6) & (\vga_0|videoSync|pixel_row\(5) & ((\vga_0|videoSync|pixel_row\(4)) # (\vga_0|videoSync|pixel_row\(3)))))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1010100000000000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \vga_0|videoSync|pixel_row\(6),
-	datab => \vga_0|videoSync|pixel_row\(4),
-	datac => \vga_0|videoSync|pixel_row\(3),
-	datad => \vga_0|videoSync|pixel_row\(5),
-	combout => \vga_0|videoGen|LessThan47~0_combout\);
-
--- Location: LCCOMB_X24_Y20_N20
-\vga_0|videoGen|LessThan43~0\ : cycloneii_lcell_comb
--- Equation(s):
--- \vga_0|videoGen|LessThan43~0_combout\ = (!\vga_0|videoSync|pixel_row\(5) & !\vga_0|videoSync|pixel_row\(4))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0000000000110011",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	datab => \vga_0|videoSync|pixel_row\(5),
-	datad => \vga_0|videoSync|pixel_row\(4),
-	combout => \vga_0|videoGen|LessThan43~0_combout\);
-
--- Location: LCCOMB_X25_Y21_N12
-\vga_0|videoGen|LessThan11~0\ : cycloneii_lcell_comb
--- Equation(s):
--- \vga_0|videoGen|LessThan11~0_combout\ = (!\vga_0|videoSync|pixel_row\(1)) # (!\vga_0|videoSync|pixel_row\(0))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0000111111111111",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	datac => \vga_0|videoSync|pixel_row\(0),
-	datad => \vga_0|videoSync|pixel_row\(1),
-	combout => \vga_0|videoGen|LessThan11~0_combout\);
-
--- Location: LCCOMB_X24_Y20_N2
-\vga_0|videoGen|pixelDraw~36\ : cycloneii_lcell_comb
--- Equation(s):
--- \vga_0|videoGen|pixelDraw~36_combout\ = (\vga_0|videoSync|pixel_row\(8) & ((\vga_0|videoSync|pixel_row\(2)) # ((!\vga_0|videoGen|LessThan11~0_combout\) # (!\vga_0|videoGen|LessThan43~0_combout\))))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1000101010101010",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \vga_0|videoSync|pixel_row\(8),
-	datab => \vga_0|videoSync|pixel_row\(2),
-	datac => \vga_0|videoGen|LessThan43~0_combout\,
-	datad => \vga_0|videoGen|LessThan11~0_combout\,
-	combout => \vga_0|videoGen|pixelDraw~36_combout\);
-
--- Location: LCCOMB_X24_Y22_N18
-\vga_0|videoGen|pixelDraw~37\ : cycloneii_lcell_comb
--- Equation(s):
--- \vga_0|videoGen|pixelDraw~37_combout\ = (!\vga_0|videoGen|LessThan43~1_combout\ & (\vga_0|videoGen|pixelDraw~35_combout\ & (!\vga_0|videoGen|LessThan47~0_combout\ & \vga_0|videoGen|pixelDraw~36_combout\)))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0000010000000000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \vga_0|videoGen|LessThan43~1_combout\,
-	datab => \vga_0|videoGen|pixelDraw~35_combout\,
-	datac => \vga_0|videoGen|LessThan47~0_combout\,
-	datad => \vga_0|videoGen|pixelDraw~36_combout\,
-	combout => \vga_0|videoGen|pixelDraw~37_combout\);
-
--- Location: LCCOMB_X25_Y23_N16
-\vga_0|videoGen|LessThan35~2\ : cycloneii_lcell_comb
--- Equation(s):
--- \vga_0|videoGen|LessThan35~2_combout\ = (!\vga_0|videoSync|pixel_row\(5) & (!\vga_0|videoSync|pixel_row\(6) & !\vga_0|videoSync|pixel_row\(4)))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0000000000000101",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \vga_0|videoSync|pixel_row\(5),
-	datac => \vga_0|videoSync|pixel_row\(6),
-	datad => \vga_0|videoSync|pixel_row\(4),
-	combout => \vga_0|videoGen|LessThan35~2_combout\);
-
--- Location: LCCOMB_X25_Y23_N30
-\vga_0|videoGen|pixelDraw~31\ : cycloneii_lcell_comb
--- Equation(s):
--- \vga_0|videoGen|pixelDraw~31_combout\ = (\vga_0|videoSync|pixel_row\(8) & (((\vga_0|videoGen|LessThan35~2_combout\ & \vga_0|videoGen|LessThan48~0_combout\)) # (!\vga_0|videoSync|pixel_row\(7))))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1100010001000100",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \vga_0|videoSync|pixel_row\(7),
-	datab => \vga_0|videoSync|pixel_row\(8),
-	datac => \vga_0|videoGen|LessThan35~2_combout\,
-	datad => \vga_0|videoGen|LessThan48~0_combout\,
-	combout => \vga_0|videoGen|pixelDraw~31_combout\);
-
--- Location: LCCOMB_X25_Y23_N0
-\vga_0|videoGen|pixelDraw~32\ : cycloneii_lcell_comb
--- Equation(s):
--- \vga_0|videoGen|pixelDraw~32_combout\ = (\vga_0|videoGen|pixelDraw~31_combout\ & ((\vga_0|videoSync|pixel_row\(7)) # ((!\vga_0|videoGen|LessThan47~1_combout\ & \vga_0|videoGen|LessThan47~0_combout\))))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1101110000000000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \vga_0|videoGen|LessThan47~1_combout\,
-	datab => \vga_0|videoSync|pixel_row\(7),
-	datac => \vga_0|videoGen|LessThan47~0_combout\,
-	datad => \vga_0|videoGen|pixelDraw~31_combout\,
-	combout => \vga_0|videoGen|pixelDraw~32_combout\);
-
--- Location: LCCOMB_X22_Y23_N2
-\vga_0|videoGen|LessThan493~2\ : cycloneii_lcell_comb
--- Equation(s):
--- \vga_0|videoGen|LessThan493~2_combout\ = (\vga_0|videoGen|LessThan173~0_combout\ & (((!\vga_0|videoSync|pixel_column\(2)) # (!\vga_0|videoSync|pixel_column\(1))) # (!\vga_0|videoSync|pixel_column\(0))))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0010101010101010",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \vga_0|videoGen|LessThan173~0_combout\,
-	datab => \vga_0|videoSync|pixel_column\(0),
-	datac => \vga_0|videoSync|pixel_column\(1),
-	datad => \vga_0|videoSync|pixel_column\(2),
-	combout => \vga_0|videoGen|LessThan493~2_combout\);
-
--- Location: LCCOMB_X21_Y23_N30
-\vga_0|videoGen|LessThan133~2\ : cycloneii_lcell_comb
--- Equation(s):
--- \vga_0|videoGen|LessThan133~2_combout\ = (!\vga_0|videoSync|pixel_column\(7) & (!\vga_0|videoSync|pixel_column\(8) & !\vga_0|videoSync|pixel_column\(9)))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0000000000000011",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	datab => \vga_0|videoSync|pixel_column\(7),
-	datac => \vga_0|videoSync|pixel_column\(8),
-	datad => \vga_0|videoSync|pixel_column\(9),
-	combout => \vga_0|videoGen|LessThan133~2_combout\);
-
--- Location: LCCOMB_X22_Y23_N26
-\vga_0|videoGen|pixelDraw~67\ : cycloneii_lcell_comb
--- Equation(s):
--- \vga_0|videoGen|pixelDraw~67_combout\ = (!\vga_0|videoGen|LessThan94~0_combout\ & (!\vga_0|videoGen|LessThan493~2_combout\ & (\vga_0|videoGen|LessThan133~2_combout\ & \vga_0|videoSync|pixel_column\(6))))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0001000000000000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \vga_0|videoGen|LessThan94~0_combout\,
-	datab => \vga_0|videoGen|LessThan493~2_combout\,
-	datac => \vga_0|videoGen|LessThan133~2_combout\,
-	datad => \vga_0|videoSync|pixel_column\(6),
-	combout => \vga_0|videoGen|pixelDraw~67_combout\);
-
--- Location: LCCOMB_X24_Y25_N24
-\vga_0|videoGen|pixelDraw~71\ : cycloneii_lcell_comb
--- Equation(s):
--- \vga_0|videoGen|pixelDraw~71_combout\ = (!\vga_0|videoGen|pixelDraw~42_combout\) # (!\vga_0|videoGen|pixelDraw~67_combout\)
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0011111100111111",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	datab => \vga_0|videoGen|pixelDraw~67_combout\,
-	datac => \vga_0|videoGen|pixelDraw~42_combout\,
-	combout => \vga_0|videoGen|pixelDraw~71_combout\);
-
--- Location: LCCOMB_X25_Y25_N12
-\vga_0|videoGen|colorAddress~135\ : cycloneii_lcell_comb
--- Equation(s):
--- \vga_0|videoGen|colorAddress~135_combout\ = (\vga_0|videoGen|pixelDraw~71_combout\ & (((!\vga_0|videoGen|pixelDraw~37_combout\ & !\vga_0|videoGen|pixelDraw~32_combout\)) # (!\vga_0|videoGen|pixelDraw~70_combout\)))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0101011100000000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \vga_0|videoGen|pixelDraw~70_combout\,
-	datab => \vga_0|videoGen|pixelDraw~37_combout\,
-	datac => \vga_0|videoGen|pixelDraw~32_combout\,
-	datad => \vga_0|videoGen|pixelDraw~71_combout\,
-	combout => \vga_0|videoGen|colorAddress~135_combout\);
-
--- Location: LCCOMB_X25_Y25_N6
-\vga_0|videoGen|colorAddress~136\ : cycloneii_lcell_comb
--- Equation(s):
--- \vga_0|videoGen|colorAddress~136_combout\ = (\vga_0|videoGen|colorAddress~135_combout\ & (((!\vga_0|videoGen|pixelDraw~34_combout\ & !\vga_0|videoGen|pixelDraw~30_combout\)) # (!\vga_0|videoGen|pixelDraw~70_combout\)))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0001111100000000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \vga_0|videoGen|pixelDraw~34_combout\,
-	datab => \vga_0|videoGen|pixelDraw~30_combout\,
-	datac => \vga_0|videoGen|pixelDraw~70_combout\,
-	datad => \vga_0|videoGen|colorAddress~135_combout\,
-	combout => \vga_0|videoGen|colorAddress~136_combout\);
-
--- Location: LCCOMB_X25_Y25_N20
-\vga_0|videoGen|colorAddress~137\ : cycloneii_lcell_comb
--- Equation(s):
--- \vga_0|videoGen|colorAddress~137_combout\ = (\vga_0|videoGen|colorAddress~136_combout\ & ((!\vga_0|videoGen|pixelDraw~70_combout\) # (!\vga_0|videoGen|pixelDraw~29_combout\)))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0101111100000000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \vga_0|videoGen|pixelDraw~29_combout\,
-	datac => \vga_0|videoGen|pixelDraw~70_combout\,
-	datad => \vga_0|videoGen|colorAddress~136_combout\,
-	combout => \vga_0|videoGen|colorAddress~137_combout\);
-
--- Location: LCCOMB_X24_Y21_N14
-\vga_0|videoGen|LessThan27~0\ : cycloneii_lcell_comb
--- Equation(s):
--- \vga_0|videoGen|LessThan27~0_combout\ = (!\vga_0|videoSync|pixel_row\(3) & (!\vga_0|videoSync|pixel_row\(2) & ((!\vga_0|videoSync|pixel_row\(1)) # (!\vga_0|videoSync|pixel_row\(0)))))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0000000100000101",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \vga_0|videoSync|pixel_row\(3),
-	datab => \vga_0|videoSync|pixel_row\(0),
-	datac => \vga_0|videoSync|pixel_row\(2),
-	datad => \vga_0|videoSync|pixel_row\(1),
-	combout => \vga_0|videoGen|LessThan27~0_combout\);
-
--- Location: LCCOMB_X24_Y21_N8
-\vga_0|videoGen|LessThan27~1\ : cycloneii_lcell_comb
--- Equation(s):
--- \vga_0|videoGen|LessThan27~1_combout\ = ((!\vga_0|videoSync|pixel_row\(5) & ((\vga_0|videoGen|LessThan27~0_combout\) # (!\vga_0|videoSync|pixel_row\(4))))) # (!\vga_0|videoGen|Equal3~0_combout\)
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0111010101110111",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \vga_0|videoGen|Equal3~0_combout\,
-	datab => \vga_0|videoSync|pixel_row\(5),
-	datac => \vga_0|videoGen|LessThan27~0_combout\,
-	datad => \vga_0|videoSync|pixel_row\(4),
-	combout => \vga_0|videoGen|LessThan27~1_combout\);
-
--- Location: LCCOMB_X25_Y21_N20
-\vga_0|videoGen|LessThan28~0\ : cycloneii_lcell_comb
--- Equation(s):
--- \vga_0|videoGen|LessThan28~0_combout\ = (\vga_0|videoSync|pixel_row\(5) & \vga_0|videoSync|pixel_row\(4))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1111000000000000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	datac => \vga_0|videoSync|pixel_row\(5),
-	datad => \vga_0|videoSync|pixel_row\(4),
-	combout => \vga_0|videoGen|LessThan28~0_combout\);
-
--- Location: LCCOMB_X24_Y21_N30
-\vga_0|videoGen|pixelDraw~17\ : cycloneii_lcell_comb
--- Equation(s):
--- \vga_0|videoGen|pixelDraw~17_combout\ = (!\vga_0|videoSync|pixel_row\(8) & (!\vga_0|videoGen|LessThan27~1_combout\ & ((!\vga_0|videoGen|LessThan28~0_combout\) # (!\vga_0|videoGen|Equal3~0_combout\))))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0000000100000011",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \vga_0|videoGen|Equal3~0_combout\,
-	datab => \vga_0|videoSync|pixel_row\(8),
-	datac => \vga_0|videoGen|LessThan27~1_combout\,
-	datad => \vga_0|videoGen|LessThan28~0_combout\,
-	combout => \vga_0|videoGen|pixelDraw~17_combout\);
-
--- Location: LCCOMB_X25_Y25_N18
-\vga_0|videoGen|colorAddress~139\ : cycloneii_lcell_comb
--- Equation(s):
--- \vga_0|videoGen|colorAddress~139_combout\ = (\vga_0|videoGen|colorAddress~137_combout\ & (((!\vga_0|videoGen|colorAddress~138_combout\ & !\vga_0|videoGen|pixelDraw~17_combout\)) # (!\vga_0|videoGen|pixelDraw~70_combout\)))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0101000001110000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \vga_0|videoGen|pixelDraw~70_combout\,
-	datab => \vga_0|videoGen|colorAddress~138_combout\,
-	datac => \vga_0|videoGen|colorAddress~137_combout\,
-	datad => \vga_0|videoGen|pixelDraw~17_combout\,
-	combout => \vga_0|videoGen|colorAddress~139_combout\);
-
--- Location: LCCOMB_X22_Y23_N30
-\vga_0|videoGen|LessThan173~1\ : cycloneii_lcell_comb
--- Equation(s):
--- \vga_0|videoGen|LessThan173~1_combout\ = (!\vga_0|videoSync|pixel_column\(5) & (!\vga_0|videoSync|pixel_column\(3) & (!\vga_0|videoSync|pixel_column\(4) & !\vga_0|videoSync|pixel_column\(6))))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0000000000000001",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \vga_0|videoSync|pixel_column\(5),
-	datab => \vga_0|videoSync|pixel_column\(3),
-	datac => \vga_0|videoSync|pixel_column\(4),
-	datad => \vga_0|videoSync|pixel_column\(6),
-	combout => \vga_0|videoGen|LessThan173~1_combout\);
-
--- Location: LCCOMB_X22_Y23_N10
-\vga_0|videoGen|pixelDraw~56\ : cycloneii_lcell_comb
--- Equation(s):
--- \vga_0|videoGen|pixelDraw~56_combout\ = (\vga_0|videoSync|pixel_column\(7) & (\vga_0|videoGen|LessThan13~0_combout\ & ((!\vga_0|videoGen|LessThan173~1_combout\) # (!\vga_0|videoGen|LessThan13~2_combout\))))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0100000011000000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \vga_0|videoGen|LessThan13~2_combout\,
-	datab => \vga_0|videoSync|pixel_column\(7),
-	datac => \vga_0|videoGen|LessThan13~0_combout\,
-	datad => \vga_0|videoGen|LessThan173~1_combout\,
-	combout => \vga_0|videoGen|pixelDraw~56_combout\);
-
--- Location: LCCOMB_X22_Y23_N0
-\vga_0|videoGen|pixelDraw~57\ : cycloneii_lcell_comb
--- Equation(s):
--- \vga_0|videoGen|pixelDraw~57_combout\ = (\vga_0|videoGen|pixelDraw~56_combout\ & (((!\vga_0|videoSync|pixel_column\(6) & !\vga_0|videoSync|pixel_column\(5))) # (!\vga_0|videoSync|pixel_column\(7))))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0101011100000000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \vga_0|videoSync|pixel_column\(7),
-	datab => \vga_0|videoSync|pixel_column\(6),
-	datac => \vga_0|videoSync|pixel_column\(5),
-	datad => \vga_0|videoGen|pixelDraw~56_combout\,
-	combout => \vga_0|videoGen|pixelDraw~57_combout\);
-
--- Location: LCCOMB_X22_Y24_N26
-\vga_0|videoGen|pixelDraw~66\ : cycloneii_lcell_comb
--- Equation(s):
--- \vga_0|videoGen|pixelDraw~66_combout\ = (!\vga_0|videoGen|pixelDraw~57_combout\) # (!\vga_0|videoGen|pixelDraw~42_combout\)
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0011001111111111",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	datab => \vga_0|videoGen|pixelDraw~42_combout\,
-	datad => \vga_0|videoGen|pixelDraw~57_combout\,
-	combout => \vga_0|videoGen|pixelDraw~66_combout\);
-
--- Location: LCCOMB_X22_Y24_N4
-\vga_0|videoGen|colorAddress~128\ : cycloneii_lcell_comb
--- Equation(s):
--- \vga_0|videoGen|colorAddress~128_combout\ = (\vga_0|videoGen|pixelDraw~34_combout\) # ((\vga_0|videoGen|pixelDraw~37_combout\) # ((\vga_0|videoGen|pixelDraw~32_combout\) # (\vga_0|videoGen|pixelDraw~27_combout\)))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1111111111111110",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \vga_0|videoGen|pixelDraw~34_combout\,
-	datab => \vga_0|videoGen|pixelDraw~37_combout\,
-	datac => \vga_0|videoGen|pixelDraw~32_combout\,
-	datad => \vga_0|videoGen|pixelDraw~27_combout\,
-	combout => \vga_0|videoGen|colorAddress~128_combout\);
-
--- Location: LCCOMB_X23_Y25_N10
-\vga_0|videoGen|LessThan133~0\ : cycloneii_lcell_comb
--- Equation(s):
--- \vga_0|videoGen|LessThan133~0_combout\ = ((!\vga_0|videoSync|pixel_column\(0) & !\vga_0|videoSync|pixel_column\(1))) # (!\vga_0|videoSync|pixel_column\(2))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0000010111111111",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \vga_0|videoSync|pixel_column\(0),
-	datac => \vga_0|videoSync|pixel_column\(1),
-	datad => \vga_0|videoSync|pixel_column\(2),
-	combout => \vga_0|videoGen|LessThan133~0_combout\);
-
--- Location: LCCOMB_X23_Y25_N8
-\vga_0|videoGen|LessThan133~1\ : cycloneii_lcell_comb
--- Equation(s):
--- \vga_0|videoGen|LessThan133~1_combout\ = ((!\vga_0|videoSync|pixel_column\(3) & (!\vga_0|videoSync|pixel_column\(4) & \vga_0|videoGen|LessThan133~0_combout\))) # (!\vga_0|videoSync|pixel_column\(5))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0001111100001111",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \vga_0|videoSync|pixel_column\(3),
-	datab => \vga_0|videoSync|pixel_column\(4),
-	datac => \vga_0|videoSync|pixel_column\(5),
-	datad => \vga_0|videoGen|LessThan133~0_combout\,
-	combout => \vga_0|videoGen|LessThan133~1_combout\);
-
--- Location: LCCOMB_X22_Y22_N8
-\vga_0|videoGen|LessThan613~0\ : cycloneii_lcell_comb
--- Equation(s):
--- \vga_0|videoGen|LessThan613~0_combout\ = (!\vga_0|videoSync|pixel_column\(3) & (!\vga_0|videoSync|pixel_column\(2) & !\vga_0|videoSync|pixel_column\(4)))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0000000000000011",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	datab => \vga_0|videoSync|pixel_column\(3),
-	datac => \vga_0|videoSync|pixel_column\(2),
-	datad => \vga_0|videoSync|pixel_column\(4),
-	combout => \vga_0|videoGen|LessThan613~0_combout\);
-
--- Location: LCCOMB_X22_Y22_N16
-\vga_0|videoGen|LessThan134~0\ : cycloneii_lcell_comb
--- Equation(s):
--- \vga_0|videoGen|LessThan134~0_combout\ = (\vga_0|videoSync|pixel_column\(1)) # ((\vga_0|videoSync|pixel_column\(5)) # (!\vga_0|videoGen|LessThan613~0_combout\))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1111111111001111",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	datab => \vga_0|videoSync|pixel_column\(1),
-	datac => \vga_0|videoGen|LessThan613~0_combout\,
-	datad => \vga_0|videoSync|pixel_column\(5),
-	combout => \vga_0|videoGen|LessThan134~0_combout\);
-
--- Location: LCCOMB_X22_Y23_N18
-\vga_0|videoGen|pixelDraw~64\ : cycloneii_lcell_comb
--- Equation(s):
--- \vga_0|videoGen|pixelDraw~64_combout\ = (\vga_0|videoGen|LessThan13~0_combout\ & (((!\vga_0|videoSync|pixel_column\(6) & !\vga_0|videoGen|LessThan134~0_combout\)) # (!\vga_0|videoSync|pixel_column\(7))))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0011000001110000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \vga_0|videoSync|pixel_column\(6),
-	datab => \vga_0|videoSync|pixel_column\(7),
-	datac => \vga_0|videoGen|LessThan13~0_combout\,
-	datad => \vga_0|videoGen|LessThan134~0_combout\,
-	combout => \vga_0|videoGen|pixelDraw~64_combout\);
-
--- Location: LCCOMB_X22_Y23_N16
-\vga_0|videoGen|pixelDraw~65\ : cycloneii_lcell_comb
--- Equation(s):
--- \vga_0|videoGen|pixelDraw~65_combout\ = (\vga_0|videoGen|pixelDraw~64_combout\ & (((\vga_0|videoSync|pixel_column\(6) & !\vga_0|videoGen|LessThan133~1_combout\)) # (!\vga_0|videoGen|LessThan133~2_combout\)))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0010111100000000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \vga_0|videoSync|pixel_column\(6),
-	datab => \vga_0|videoGen|LessThan133~1_combout\,
-	datac => \vga_0|videoGen|LessThan133~2_combout\,
-	datad => \vga_0|videoGen|pixelDraw~64_combout\,
-	combout => \vga_0|videoGen|pixelDraw~65_combout\);
-
--- Location: LCCOMB_X22_Y24_N22
-\vga_0|videoGen|colorAddress~129\ : cycloneii_lcell_comb
--- Equation(s):
--- \vga_0|videoGen|colorAddress~129_combout\ = (\vga_0|videoGen|colorAddress~127_combout\ & (\vga_0|videoGen|pixelDraw~66_combout\ & ((!\vga_0|videoGen|pixelDraw~65_combout\) # (!\vga_0|videoGen|colorAddress~128_combout\))))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0000100010001000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \vga_0|videoGen|colorAddress~127_combout\,
-	datab => \vga_0|videoGen|pixelDraw~66_combout\,
-	datac => \vga_0|videoGen|colorAddress~128_combout\,
-	datad => \vga_0|videoGen|pixelDraw~65_combout\,
-	combout => \vga_0|videoGen|colorAddress~129_combout\);
-
--- Location: LCCOMB_X23_Y22_N20
-\vga_0|videoGen|LessThan373~0\ : cycloneii_lcell_comb
--- Equation(s):
--- \vga_0|videoGen|LessThan373~0_combout\ = (!\vga_0|videoSync|pixel_column\(1) & (!\vga_0|videoSync|pixel_column\(2) & !\vga_0|videoSync|pixel_column\(0)))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0000000000000011",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	datab => \vga_0|videoSync|pixel_column\(1),
-	datac => \vga_0|videoSync|pixel_column\(2),
-	datad => \vga_0|videoSync|pixel_column\(0),
-	combout => \vga_0|videoGen|LessThan373~0_combout\);
-
--- Location: LCCOMB_X23_Y22_N26
-\vga_0|videoGen|LessThan373~1\ : cycloneii_lcell_comb
--- Equation(s):
--- \vga_0|videoGen|LessThan373~1_combout\ = (!\vga_0|videoSync|pixel_column\(5) & (((\vga_0|videoGen|LessThan373~0_combout\) # (!\vga_0|videoSync|pixel_column\(4))) # (!\vga_0|videoSync|pixel_column\(3))))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0101000101010101",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \vga_0|videoSync|pixel_column\(5),
-	datab => \vga_0|videoSync|pixel_column\(3),
-	datac => \vga_0|videoGen|LessThan373~0_combout\,
-	datad => \vga_0|videoSync|pixel_column\(4),
-	combout => \vga_0|videoGen|LessThan373~1_combout\);
-
--- Location: LCCOMB_X23_Y21_N4
-\vga_0|videoGen|pixelDraw~38\ : cycloneii_lcell_comb
--- Equation(s):
--- \vga_0|videoGen|pixelDraw~38_combout\ = (\vga_0|videoSync|pixel_column\(7) & (!\vga_0|videoSync|pixel_column\(9))) # (!\vga_0|videoSync|pixel_column\(7) & ((\vga_0|videoSync|pixel_column\(8) & (!\vga_0|videoSync|pixel_column\(9))) # 
--- (!\vga_0|videoSync|pixel_column\(8) & ((\vga_0|videoSync|pixel_column\(6))))))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0011011100110010",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \vga_0|videoSync|pixel_column\(7),
-	datab => \vga_0|videoSync|pixel_column\(9),
-	datac => \vga_0|videoSync|pixel_column\(8),
-	datad => \vga_0|videoSync|pixel_column\(6),
-	combout => \vga_0|videoGen|pixelDraw~38_combout\);
-
--- Location: LCCOMB_X23_Y22_N22
-\vga_0|videoGen|LessThan374~0\ : cycloneii_lcell_comb
--- Equation(s):
--- \vga_0|videoGen|LessThan374~0_combout\ = (\vga_0|videoSync|pixel_column\(3)) # ((\vga_0|videoSync|pixel_column\(1) & \vga_0|videoSync|pixel_column\(2)))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1111111111000000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	datab => \vga_0|videoSync|pixel_column\(1),
-	datac => \vga_0|videoSync|pixel_column\(2),
-	datad => \vga_0|videoSync|pixel_column\(3),
-	combout => \vga_0|videoGen|LessThan374~0_combout\);
-
--- Location: LCCOMB_X23_Y22_N6
-\vga_0|videoGen|char_addr[6]~6\ : cycloneii_lcell_comb
--- Equation(s):
--- \vga_0|videoGen|char_addr[6]~6_combout\ = (\vga_0|videoSync|pixel_column\(5) & \vga_0|videoSync|pixel_column\(4))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1111000000000000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	datac => \vga_0|videoSync|pixel_column\(5),
-	datad => \vga_0|videoSync|pixel_column\(4),
-	combout => \vga_0|videoGen|char_addr[6]~6_combout\);
-
--- Location: LCCOMB_X23_Y21_N18
-\vga_0|videoGen|pixelDraw~39\ : cycloneii_lcell_comb
--- Equation(s):
--- \vga_0|videoGen|pixelDraw~39_combout\ = (\vga_0|videoSync|pixel_column\(9) & (((!\vga_0|videoSync|pixel_column\(6)) # (!\vga_0|videoGen|char_addr[6]~6_combout\)) # (!\vga_0|videoGen|LessThan374~0_combout\)))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0010101010101010",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \vga_0|videoSync|pixel_column\(9),
-	datab => \vga_0|videoGen|LessThan374~0_combout\,
-	datac => \vga_0|videoGen|char_addr[6]~6_combout\,
-	datad => \vga_0|videoSync|pixel_column\(6),
-	combout => \vga_0|videoGen|pixelDraw~39_combout\);
-
--- Location: LCCOMB_X23_Y21_N12
-\vga_0|videoGen|pixelDraw~40\ : cycloneii_lcell_comb
--- Equation(s):
--- \vga_0|videoGen|pixelDraw~40_combout\ = (\vga_0|videoGen|pixelDraw~38_combout\ & (\vga_0|videoGen|pixelDraw~39_combout\ & ((!\vga_0|videoGen|LessThan373~1_combout\) # (!\vga_0|videoGen|LessThan773~0_combout\))))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0111000000000000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \vga_0|videoGen|LessThan773~0_combout\,
-	datab => \vga_0|videoGen|LessThan373~1_combout\,
-	datac => \vga_0|videoGen|pixelDraw~38_combout\,
-	datad => \vga_0|videoGen|pixelDraw~39_combout\,
-	combout => \vga_0|videoGen|pixelDraw~40_combout\);
-
--- Location: LCCOMB_X24_Y23_N18
-\vga_0|videoGen|pixelDraw~63\ : cycloneii_lcell_comb
--- Equation(s):
--- \vga_0|videoGen|pixelDraw~63_combout\ = (\vga_0|videoGen|pixelDraw~32_combout\ & \vga_0|videoGen|pixelDraw~40_combout\)
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1111000000000000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	datac => \vga_0|videoGen|pixelDraw~32_combout\,
-	datad => \vga_0|videoGen|pixelDraw~40_combout\,
-	combout => \vga_0|videoGen|pixelDraw~63_combout\);
-
--- Location: LCCOMB_X25_Y22_N22
-\vga_0|videoGen|Equal3~1\ : cycloneii_lcell_comb
--- Equation(s):
--- \vga_0|videoGen|Equal3~1_combout\ = (\vga_0|videoSync|pixel_row\(6) & (\vga_0|videoSync|pixel_row\(8) & (\vga_0|videoSync|pixel_row\(7) & !\vga_0|videoSync|pixel_row\(5))))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0000000010000000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \vga_0|videoSync|pixel_row\(6),
-	datab => \vga_0|videoSync|pixel_row\(8),
-	datac => \vga_0|videoSync|pixel_row\(7),
-	datad => \vga_0|videoSync|pixel_row\(5),
-	combout => \vga_0|videoGen|Equal3~1_combout\);
-
--- Location: LCCOMB_X25_Y22_N8
-\vga_0|videoGen|Equal2~0\ : cycloneii_lcell_comb
--- Equation(s):
--- \vga_0|videoGen|Equal2~0_combout\ = (\vga_0|videoSync|pixel_row\(8) & (!\vga_0|videoSync|pixel_row\(6) & (\vga_0|videoSync|pixel_row\(7) & \vga_0|videoSync|pixel_row\(5))))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0010000000000000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \vga_0|videoSync|pixel_row\(8),
-	datab => \vga_0|videoSync|pixel_row\(6),
-	datac => \vga_0|videoSync|pixel_row\(7),
-	datad => \vga_0|videoSync|pixel_row\(5),
-	combout => \vga_0|videoGen|Equal2~0_combout\);
-
--- Location: LCCOMB_X27_Y24_N16
-\vga_0|videoGen|colorAddress~124\ : cycloneii_lcell_comb
--- Equation(s):
--- \vga_0|videoGen|colorAddress~124_combout\ = (!\vga_0|videoSync|pixel_column\(9) & ((\vga_0|videoGen|Equal3~1_combout\) # (\vga_0|videoGen|Equal2~0_combout\)))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0101010101010000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \vga_0|videoSync|pixel_column\(9),
-	datac => \vga_0|videoGen|Equal3~1_combout\,
-	datad => \vga_0|videoGen|Equal2~0_combout\,
-	combout => \vga_0|videoGen|colorAddress~124_combout\);
-
--- Location: LCCOMB_X25_Y22_N26
-\vga_0|videoGen|illegal_on\ : cycloneii_lcell_comb
--- Equation(s):
--- \vga_0|videoGen|illegal_on~combout\ = (!\vga_0|videoSync|pixel_column\(9) & (\vga_0|videoGen|Equal2~0_combout\ & !\vga_0|videoSync|pixel_column\(8)))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0000000001010000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \vga_0|videoSync|pixel_column\(9),
-	datac => \vga_0|videoGen|Equal2~0_combout\,
-	datad => \vga_0|videoSync|pixel_column\(8),
-	combout => \vga_0|videoGen|illegal_on~combout\);
-
--- Location: LCCOMB_X25_Y22_N24
-\vga_0|videoGen|gameOverT_on~0\ : cycloneii_lcell_comb
--- Equation(s):
--- \vga_0|videoGen|gameOverT_on~0_combout\ = (\vga_0|videoSync|pixel_row\(5) & (!\vga_0|videoSync|pixel_row\(6) & (!\vga_0|videoSync|pixel_column\(9) & \vga_0|videoSync|pixel_column\(8))))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0000001000000000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \vga_0|videoSync|pixel_row\(5),
-	datab => \vga_0|videoSync|pixel_row\(6),
-	datac => \vga_0|videoSync|pixel_column\(9),
-	datad => \vga_0|videoSync|pixel_column\(8),
-	combout => \vga_0|videoGen|gameOverT_on~0_combout\);
-
--- Location: LCCOMB_X25_Y22_N14
-\vga_0|videoGen|gameOverT_on\ : cycloneii_lcell_comb
--- Equation(s):
--- \vga_0|videoGen|gameOverT_on~combout\ = (\vga_0|videoSync|pixel_row\(7) & (\vga_0|videoGen|gameOverT_on~0_combout\ & !\vga_0|videoSync|pixel_row\(8)))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0000000011000000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	datab => \vga_0|videoSync|pixel_row\(7),
-	datac => \vga_0|videoGen|gameOverT_on~0_combout\,
-	datad => \vga_0|videoSync|pixel_row\(8),
-	combout => \vga_0|videoGen|gameOverT_on~combout\);
-
--- Location: LCCOMB_X25_Y22_N12
-\vga_0|videoGen|char_addr[5]~54\ : cycloneii_lcell_comb
--- Equation(s):
--- \vga_0|videoGen|char_addr[5]~54_combout\ = (!\vga_0|videoSync|pixel_column\(9) & ((\vga_0|videoGen|Equal3~1_combout\) # ((\vga_0|videoSync|pixel_column\(8) & \vga_0|videoGen|Equal2~0_combout\))))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0000111000001100",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \vga_0|videoSync|pixel_column\(8),
-	datab => \vga_0|videoGen|Equal3~1_combout\,
-	datac => \vga_0|videoSync|pixel_column\(9),
-	datad => \vga_0|videoGen|Equal2~0_combout\,
-	combout => \vga_0|videoGen|char_addr[5]~54_combout\);
-
--- Location: LCCOMB_X25_Y22_N20
+	datac => \vga_0|videoGen|placeShip_on~1_combout\,
+	datad => \vga_0|videoGen|LessThan13~3_combout\,
+	combout => \vga_0|videoGen|char_addr[5]~6_combout\);
+
+-- Location: LCCOMB_X27_Y22_N24
 \vga_0|videoGen|char_addr[5]~7\ : cycloneii_lcell_comb
 -- Equation(s):
--- \vga_0|videoGen|char_addr[5]~7_combout\ = (\vga_0|videoGen|placeShip_on~combout\) # ((\vga_0|videoGen|illegal_on~combout\) # ((\vga_0|videoGen|gameOverT_on~combout\) # (\vga_0|videoGen|char_addr[5]~54_combout\)))
+-- \vga_0|videoGen|char_addr[5]~7_combout\ = (\vga_0|videoGen|char_addr[5]~50_combout\) # ((\vga_0|videoGen|gameOverT_on~combout\) # (!\vga_0|videoGen|char_addr[5]~6_combout\))
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "1111111111111110",
+	lut_mask => "1111110011111111",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \vga_0|videoGen|placeShip_on~combout\,
-	datab => \vga_0|videoGen|illegal_on~combout\,
+	datab => \vga_0|videoGen|char_addr[5]~50_combout\,
 	datac => \vga_0|videoGen|gameOverT_on~combout\,
-	datad => \vga_0|videoGen|char_addr[5]~54_combout\,
+	datad => \vga_0|videoGen|char_addr[5]~6_combout\,
 	combout => \vga_0|videoGen|char_addr[5]~7_combout\);
 
--- Location: CLKCTRL_G11
+-- Location: CLKCTRL_G10
 \vga_0|videoGen|char_addr[5]~7clkctrl\ : cycloneii_clkctrl
 -- pragma translate_off
 GENERIC MAP (
@@ -4708,36 +3332,47 @@ PORT MAP (
 	devpor => ww_devpor,
 	outclk => \vga_0|videoGen|char_addr[5]~7clkctrl_outclk\);
 
--- Location: LCCOMB_X23_Y22_N14
+-- Location: LCCOMB_X28_Y25_N20
 \vga_0|videoGen|bit_addr[2]\ : cycloneii_lcell_comb
 -- Equation(s):
 -- \vga_0|videoGen|bit_addr\(2) = (GLOBAL(\vga_0|videoGen|char_addr[5]~7clkctrl_outclk\) & ((\vga_0|videoSync|pixel_column\(3)))) # (!GLOBAL(\vga_0|videoGen|char_addr[5]~7clkctrl_outclk\) & (\vga_0|videoGen|bit_addr\(2)))
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "1111000010101010",
+	lut_mask => "1111000011001100",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \vga_0|videoGen|bit_addr\(2),
+	datab => \vga_0|videoGen|bit_addr\(2),
 	datac => \vga_0|videoSync|pixel_column\(3),
 	datad => \vga_0|videoGen|char_addr[5]~7clkctrl_outclk\,
 	combout => \vga_0|videoGen|bit_addr\(2));
 
--- Location: LCCOMB_X23_Y22_N0
+-- Location: LCFF_X28_Y26_N19
+\vga_0|videoSync|pixel_column[2]\ : cycloneii_lcell_ff
+PORT MAP (
+	clk => \vga_0|videoSync|pixel_clock_int~clkctrl_outclk\,
+	sdata => \vga_0|videoSync|h_count\(2),
+	sload => VCC,
+	ena => \vga_0|videoSync|LessThan5~0_combout\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	regout => \vga_0|videoSync|pixel_column\(2));
+
+-- Location: LCCOMB_X28_Y26_N10
 \vga_0|videoGen|bit_addr[1]\ : cycloneii_lcell_comb
 -- Equation(s):
 -- \vga_0|videoGen|bit_addr\(1) = (GLOBAL(\vga_0|videoGen|char_addr[5]~7clkctrl_outclk\) & ((\vga_0|videoSync|pixel_column\(2)))) # (!GLOBAL(\vga_0|videoGen|char_addr[5]~7clkctrl_outclk\) & (\vga_0|videoGen|bit_addr\(1)))
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "1111000010101010",
+	lut_mask => "1111101000001010",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
 	dataa => \vga_0|videoGen|bit_addr\(1),
-	datac => \vga_0|videoSync|pixel_column\(2),
-	datad => \vga_0|videoGen|char_addr[5]~7clkctrl_outclk\,
+	datac => \vga_0|videoGen|char_addr[5]~7clkctrl_outclk\,
+	datad => \vga_0|videoSync|pixel_column\(2),
 	combout => \vga_0|videoGen|bit_addr\(1));
 
 -- Location: PIN_N2,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
@@ -4779,7 +3414,18 @@ PORT MAP (
 	devpor => ww_devpor,
 	outclk => \clk~clkctrl_outclk\);
 
--- Location: LCCOMB_X25_Y21_N6
+-- Location: LCFF_X29_Y24_N7
+\vga_0|videoSync|pixel_row[1]\ : cycloneii_lcell_ff
+PORT MAP (
+	clk => \vga_0|videoSync|pixel_clock_int~clkctrl_outclk\,
+	sdata => \vga_0|videoSync|v_count\(1),
+	sload => VCC,
+	ena => \vga_0|videoSync|LessThan6~2_combout\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	regout => \vga_0|videoSync|pixel_row\(1));
+
+-- Location: LCCOMB_X29_Y24_N6
 \vga_0|videoGen|row_addr[0]\ : cycloneii_lcell_comb
 -- Equation(s):
 -- \vga_0|videoGen|row_addr\(0) = (GLOBAL(\vga_0|videoGen|char_addr[5]~7clkctrl_outclk\) & ((\vga_0|videoSync|pixel_row\(1)))) # (!GLOBAL(\vga_0|videoGen|char_addr[5]~7clkctrl_outclk\) & (\vga_0|videoGen|row_addr\(0)))
@@ -4795,293 +3441,21 @@ PORT MAP (
 	datad => \vga_0|videoGen|char_addr[5]~7clkctrl_outclk\,
 	combout => \vga_0|videoGen|row_addr\(0));
 
--- Location: LCCOMB_X25_Y21_N16
+-- Location: LCFF_X29_Y24_N25
+\vga_0|videoSync|pixel_row[2]\ : cycloneii_lcell_ff
+PORT MAP (
+	clk => \vga_0|videoSync|pixel_clock_int~clkctrl_outclk\,
+	sdata => \vga_0|videoSync|v_count\(2),
+	sload => VCC,
+	ena => \vga_0|videoSync|LessThan6~2_combout\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	regout => \vga_0|videoSync|pixel_row\(2));
+
+-- Location: LCCOMB_X25_Y24_N8
 \vga_0|videoGen|row_addr[1]\ : cycloneii_lcell_comb
 -- Equation(s):
 -- \vga_0|videoGen|row_addr\(1) = (GLOBAL(\vga_0|videoGen|char_addr[5]~7clkctrl_outclk\) & ((\vga_0|videoSync|pixel_row\(2)))) # (!GLOBAL(\vga_0|videoGen|char_addr[5]~7clkctrl_outclk\) & (\vga_0|videoGen|row_addr\(1)))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1111000011001100",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	datab => \vga_0|videoGen|row_addr\(1),
-	datac => \vga_0|videoSync|pixel_row\(2),
-	datad => \vga_0|videoGen|char_addr[5]~7clkctrl_outclk\,
-	combout => \vga_0|videoGen|row_addr\(1));
-
--- Location: LCCOMB_X25_Y21_N22
-\vga_0|videoGen|row_addr[2]\ : cycloneii_lcell_comb
--- Equation(s):
--- \vga_0|videoGen|row_addr\(2) = (GLOBAL(\vga_0|videoGen|char_addr[5]~7clkctrl_outclk\) & ((\vga_0|videoSync|pixel_row\(3)))) # (!GLOBAL(\vga_0|videoGen|char_addr[5]~7clkctrl_outclk\) & (\vga_0|videoGen|row_addr\(2)))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1111000011001100",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	datab => \vga_0|videoGen|row_addr\(2),
-	datac => \vga_0|videoSync|pixel_row\(3),
-	datad => \vga_0|videoGen|char_addr[5]~7clkctrl_outclk\,
-	combout => \vga_0|videoGen|row_addr\(2));
-
--- Location: LCCOMB_X25_Y21_N10
-\vga_0|videoGen|row_addr[3]\ : cycloneii_lcell_comb
--- Equation(s):
--- \vga_0|videoGen|row_addr\(3) = (GLOBAL(\vga_0|videoGen|char_addr[5]~7clkctrl_outclk\) & ((\vga_0|videoSync|pixel_row\(4)))) # (!GLOBAL(\vga_0|videoGen|char_addr[5]~7clkctrl_outclk\) & (\vga_0|videoGen|row_addr\(3)))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1110111000100010",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \vga_0|videoGen|row_addr\(3),
-	datab => \vga_0|videoGen|char_addr[5]~7clkctrl_outclk\,
-	datad => \vga_0|videoSync|pixel_row\(4),
-	combout => \vga_0|videoGen|row_addr\(3));
-
--- Location: LCCOMB_X25_Y20_N18
-\vga_0|videoGen|char_addr[1]~8\ : cycloneii_lcell_comb
--- Equation(s):
--- \vga_0|videoGen|char_addr[1]~8_combout\ = (!\vga_0|videoSync|pixel_column\(9) & \vga_0|videoGen|Equal3~1_combout\)
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0011001100000000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	datab => \vga_0|videoSync|pixel_column\(9),
-	datad => \vga_0|videoGen|Equal3~1_combout\,
-	combout => \vga_0|videoGen|char_addr[1]~8_combout\);
-
--- Location: LCCOMB_X27_Y22_N6
-\vga_0|videoGen|hit_on\ : cycloneii_lcell_comb
--- Equation(s):
--- \vga_0|videoGen|hit_on~combout\ = (!\vga_0|videoSync|pixel_column\(8) & (!\vga_0|videoSync|pixel_column\(9) & \vga_0|videoGen|Equal3~1_combout\))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0000010100000000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \vga_0|videoSync|pixel_column\(8),
-	datac => \vga_0|videoSync|pixel_column\(9),
-	datad => \vga_0|videoGen|Equal3~1_combout\,
-	combout => \vga_0|videoGen|hit_on~combout\);
-
--- Location: LCCOMB_X25_Y22_N18
-\vga_0|videoGen|char_addr[0]~9\ : cycloneii_lcell_comb
--- Equation(s):
--- \vga_0|videoGen|char_addr[0]~9_combout\ = (\vga_0|videoSync|pixel_column\(9)) # (!\vga_0|videoGen|Equal2~0_combout\)
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1011101110111011",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \vga_0|videoSync|pixel_column\(9),
-	datab => \vga_0|videoGen|Equal2~0_combout\,
-	combout => \vga_0|videoGen|char_addr[0]~9_combout\);
-
--- Location: LCCOMB_X25_Y19_N20
-\vga_0|videoGen|char_addr[0]~10\ : cycloneii_lcell_comb
--- Equation(s):
--- \vga_0|videoGen|char_addr[0]~10_combout\ = (!\vga_0|videoSync|pixel_column\(4) & (!\vga_0|videoGen|char_addr[0]~9_combout\ & (!\vga_0|videoGen|illegal_on~combout\ & !\vga_0|videoGen|char_addr[1]~8_combout\)))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0000000000000001",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \vga_0|videoSync|pixel_column\(4),
-	datab => \vga_0|videoGen|char_addr[0]~9_combout\,
-	datac => \vga_0|videoGen|illegal_on~combout\,
-	datad => \vga_0|videoGen|char_addr[1]~8_combout\,
-	combout => \vga_0|videoGen|char_addr[0]~10_combout\);
-
--- Location: LCCOMB_X24_Y20_N14
-\vga_0|videoGen|char_addr[0]~11\ : cycloneii_lcell_comb
--- Equation(s):
--- \vga_0|videoGen|char_addr[0]~11_combout\ = (!\vga_0|videoSync|pixel_column\(5) & \vga_0|videoSync|pixel_column\(4))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0000111100000000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	datac => \vga_0|videoSync|pixel_column\(5),
-	datad => \vga_0|videoSync|pixel_column\(4),
-	combout => \vga_0|videoGen|char_addr[0]~11_combout\);
-
--- Location: LCCOMB_X25_Y19_N14
-\vga_0|videoGen|char_addr[0]~12\ : cycloneii_lcell_comb
--- Equation(s):
--- \vga_0|videoGen|char_addr[0]~12_combout\ = (\vga_0|videoGen|char_addr[0]~10_combout\) # ((\vga_0|videoGen|char_addr[1]~8_combout\ & ((\vga_0|videoGen|char_addr[0]~11_combout\) # (!\vga_0|videoGen|hit_on~combout\))))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1111101011110010",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \vga_0|videoGen|char_addr[1]~8_combout\,
-	datab => \vga_0|videoGen|hit_on~combout\,
-	datac => \vga_0|videoGen|char_addr[0]~10_combout\,
-	datad => \vga_0|videoGen|char_addr[0]~11_combout\,
-	combout => \vga_0|videoGen|char_addr[0]~12_combout\);
-
--- Location: LCCOMB_X25_Y22_N10
-\vga_0|videoGen|placeShip_on\ : cycloneii_lcell_comb
--- Equation(s):
--- \vga_0|videoGen|placeShip_on~combout\ = (\vga_0|videoGen|LessThan13~0_combout\ & (!\vga_0|videoSync|pixel_row\(8) & (\vga_0|videoGen|LessThan43~1_combout\ & !\vga_0|videoSync|pixel_row\(5))))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0000000000100000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \vga_0|videoGen|LessThan13~0_combout\,
-	datab => \vga_0|videoSync|pixel_row\(8),
-	datac => \vga_0|videoGen|LessThan43~1_combout\,
-	datad => \vga_0|videoSync|pixel_row\(5),
-	combout => \vga_0|videoGen|placeShip_on~combout\);
-
--- Location: LCCOMB_X24_Y19_N0
-\vga_0|videoGen|Mux27~0\ : cycloneii_lcell_comb
--- Equation(s):
--- \vga_0|videoGen|Mux27~0_combout\ = (\vga_0|videoSync|pixel_column\(4) & (\vga_0|videoSync|pixel_column\(5) & ((!\vga_0|videoSync|pixel_column\(6))))) # (!\vga_0|videoSync|pixel_column\(4) & (\vga_0|videoSync|pixel_column\(7) $ 
--- (((\vga_0|videoSync|pixel_column\(5)) # (\vga_0|videoSync|pixel_column\(6))))))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0000001110011010",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \vga_0|videoSync|pixel_column\(5),
-	datab => \vga_0|videoSync|pixel_column\(4),
-	datac => \vga_0|videoSync|pixel_column\(7),
-	datad => \vga_0|videoSync|pixel_column\(6),
-	combout => \vga_0|videoGen|Mux27~0_combout\);
-
--- Location: LCCOMB_X25_Y19_N8
-\vga_0|videoGen|Mux13~0\ : cycloneii_lcell_comb
--- Equation(s):
--- \vga_0|videoGen|Mux13~0_combout\ = (\vga_0|videoSync|pixel_column\(6) & (!\vga_0|videoSync|pixel_column\(4) & ((\vga_0|videoGen|gameOverT_on~combout\) # (!\vga_0|videoSync|pixel_column\(5))))) # (!\vga_0|videoSync|pixel_column\(6) & 
--- (!\vga_0|videoGen|gameOverT_on~combout\ & (\vga_0|videoSync|pixel_column\(4) & \vga_0|videoSync|pixel_column\(5))))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0001100000001100",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \vga_0|videoGen|gameOverT_on~combout\,
-	datab => \vga_0|videoSync|pixel_column\(6),
-	datac => \vga_0|videoSync|pixel_column\(4),
-	datad => \vga_0|videoSync|pixel_column\(5),
-	combout => \vga_0|videoGen|Mux13~0_combout\);
-
--- Location: LCCOMB_X25_Y19_N30
-\vga_0|videoGen|Mux13~1\ : cycloneii_lcell_comb
--- Equation(s):
--- \vga_0|videoGen|Mux13~1_combout\ = (\vga_0|videoSync|pixel_column\(6)) # ((\vga_0|videoGen|gameOverT_on~combout\ & (\vga_0|videoSync|pixel_column\(4) $ (!\vga_0|videoSync|pixel_column\(5)))) # (!\vga_0|videoGen|gameOverT_on~combout\ & 
--- ((\vga_0|videoSync|pixel_column\(4)) # (\vga_0|videoSync|pixel_column\(5)))))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1111110111011110",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \vga_0|videoGen|gameOverT_on~combout\,
-	datab => \vga_0|videoSync|pixel_column\(6),
-	datac => \vga_0|videoSync|pixel_column\(4),
-	datad => \vga_0|videoSync|pixel_column\(5),
-	combout => \vga_0|videoGen|Mux13~1_combout\);
-
--- Location: LCCOMB_X25_Y19_N28
-\vga_0|videoGen|char_addr[0]~13\ : cycloneii_lcell_comb
--- Equation(s):
--- \vga_0|videoGen|char_addr[0]~13_combout\ = (!\vga_0|videoGen|placeShip_on~combout\ & ((\vga_0|videoSync|pixel_column\(7) & ((!\vga_0|videoGen|Mux13~1_combout\))) # (!\vga_0|videoSync|pixel_column\(7) & (!\vga_0|videoGen|Mux13~0_combout\))))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0000000101000101",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \vga_0|videoGen|placeShip_on~combout\,
-	datab => \vga_0|videoSync|pixel_column\(7),
-	datac => \vga_0|videoGen|Mux13~0_combout\,
-	datad => \vga_0|videoGen|Mux13~1_combout\,
-	combout => \vga_0|videoGen|char_addr[0]~13_combout\);
-
--- Location: LCCOMB_X25_Y19_N26
-\vga_0|videoGen|char_addr[0]~14\ : cycloneii_lcell_comb
--- Equation(s):
--- \vga_0|videoGen|char_addr[0]~14_combout\ = (\vga_0|videoGen|char_addr[0]~9_combout\ & ((\vga_0|videoGen|char_addr[0]~13_combout\) # ((\vga_0|videoGen|placeShip_on~combout\ & \vga_0|videoGen|Mux27~0_combout\))))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1010101010000000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \vga_0|videoGen|char_addr[0]~9_combout\,
-	datab => \vga_0|videoGen|placeShip_on~combout\,
-	datac => \vga_0|videoGen|Mux27~0_combout\,
-	datad => \vga_0|videoGen|char_addr[0]~13_combout\,
-	combout => \vga_0|videoGen|char_addr[0]~14_combout\);
-
--- Location: LCCOMB_X25_Y19_N12
-\vga_0|videoGen|char_addr[0]~15\ : cycloneii_lcell_comb
--- Equation(s):
--- \vga_0|videoGen|char_addr[0]~15_combout\ = (\vga_0|videoGen|char_addr[0]~14_combout\) # ((!\vga_0|videoGen|Mux33~0_combout\ & (!\vga_0|videoGen|char_addr[0]~9_combout\ & \vga_0|videoGen|illegal_on~combout\)))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1111111100010000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \vga_0|videoGen|Mux33~0_combout\,
-	datab => \vga_0|videoGen|char_addr[0]~9_combout\,
-	datac => \vga_0|videoGen|illegal_on~combout\,
-	datad => \vga_0|videoGen|char_addr[0]~14_combout\,
-	combout => \vga_0|videoGen|char_addr[0]~15_combout\);
-
--- Location: LCCOMB_X25_Y19_N2
-\vga_0|videoGen|char_addr[0]~16\ : cycloneii_lcell_comb
--- Equation(s):
--- \vga_0|videoGen|char_addr[0]~16_combout\ = (\vga_0|videoGen|LessThan13~1_combout\ & ((\vga_0|videoGen|char_addr[0]~12_combout\) # ((!\vga_0|videoGen|char_addr[1]~8_combout\ & \vga_0|videoGen|char_addr[0]~15_combout\)))) # 
--- (!\vga_0|videoGen|LessThan13~1_combout\ & (!\vga_0|videoGen|char_addr[1]~8_combout\ & ((\vga_0|videoGen|char_addr[0]~15_combout\))))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1011001110100000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \vga_0|videoGen|LessThan13~1_combout\,
-	datab => \vga_0|videoGen|char_addr[1]~8_combout\,
-	datac => \vga_0|videoGen|char_addr[0]~12_combout\,
-	datad => \vga_0|videoGen|char_addr[0]~15_combout\,
-	combout => \vga_0|videoGen|char_addr[0]~16_combout\);
-
--- Location: LCCOMB_X25_Y19_N22
-\vga_0|videoGen|char_addr[0]\ : cycloneii_lcell_comb
--- Equation(s):
--- \vga_0|videoGen|char_addr\(0) = (GLOBAL(\vga_0|videoGen|char_addr[5]~7clkctrl_outclk\) & ((\vga_0|videoGen|char_addr[0]~16_combout\))) # (!GLOBAL(\vga_0|videoGen|char_addr[5]~7clkctrl_outclk\) & (\vga_0|videoGen|char_addr\(0)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -5089,153 +3463,538 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	datab => \vga_0|videoGen|char_addr\(0),
+	datab => \vga_0|videoGen|row_addr\(1),
 	datac => \vga_0|videoGen|char_addr[5]~7clkctrl_outclk\,
-	datad => \vga_0|videoGen|char_addr[0]~16_combout\,
-	combout => \vga_0|videoGen|char_addr\(0));
+	datad => \vga_0|videoSync|pixel_row\(2),
+	combout => \vga_0|videoGen|row_addr\(1));
 
--- Location: LCCOMB_X27_Y20_N16
-\vga_0|videoGen|char_addr[1]~17\ : cycloneii_lcell_comb
+-- Location: LCFF_X29_Y24_N31
+\vga_0|videoSync|pixel_row[3]\ : cycloneii_lcell_ff
+PORT MAP (
+	clk => \vga_0|videoSync|pixel_clock_int~clkctrl_outclk\,
+	sdata => \vga_0|videoSync|v_count\(3),
+	sload => VCC,
+	ena => \vga_0|videoSync|LessThan6~2_combout\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	regout => \vga_0|videoSync|pixel_row\(3));
+
+-- Location: LCCOMB_X25_Y24_N30
+\vga_0|videoGen|row_addr[2]\ : cycloneii_lcell_comb
 -- Equation(s):
--- \vga_0|videoGen|char_addr[1]~17_combout\ = (!\vga_0|videoSync|pixel_column\(9) & (\vga_0|videoGen|Equal3~1_combout\ & (\vga_0|videoSync|pixel_column\(5) & \vga_0|videoGen|LessThan13~1_combout\)))
+-- \vga_0|videoGen|row_addr\(2) = (GLOBAL(\vga_0|videoGen|char_addr[5]~7clkctrl_outclk\) & ((\vga_0|videoSync|pixel_row\(3)))) # (!GLOBAL(\vga_0|videoGen|char_addr[5]~7clkctrl_outclk\) & (\vga_0|videoGen|row_addr\(2)))
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "0100000000000000",
+	lut_mask => "1111110000001100",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	datab => \vga_0|videoGen|row_addr\(2),
+	datac => \vga_0|videoGen|char_addr[5]~7clkctrl_outclk\,
+	datad => \vga_0|videoSync|pixel_row\(3),
+	combout => \vga_0|videoGen|row_addr\(2));
+
+-- Location: LCFF_X29_Y26_N23
+\vga_0|videoSync|pixel_row[4]\ : cycloneii_lcell_ff
+PORT MAP (
+	clk => \vga_0|videoSync|pixel_clock_int~clkctrl_outclk\,
+	sdata => \vga_0|videoSync|v_count\(4),
+	sload => VCC,
+	ena => \vga_0|videoSync|LessThan6~2_combout\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	regout => \vga_0|videoSync|pixel_row\(4));
+
+-- Location: LCCOMB_X27_Y26_N28
+\vga_0|videoGen|row_addr[3]\ : cycloneii_lcell_comb
+-- Equation(s):
+-- \vga_0|videoGen|row_addr\(3) = (GLOBAL(\vga_0|videoGen|char_addr[5]~7clkctrl_outclk\) & ((\vga_0|videoSync|pixel_row\(4)))) # (!GLOBAL(\vga_0|videoGen|char_addr[5]~7clkctrl_outclk\) & (\vga_0|videoGen|row_addr\(3)))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1111110000001100",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	datab => \vga_0|videoGen|row_addr\(3),
+	datac => \vga_0|videoGen|char_addr[5]~7clkctrl_outclk\,
+	datad => \vga_0|videoSync|pixel_row\(4),
+	combout => \vga_0|videoGen|row_addr\(3));
+
+-- Location: LCFF_X28_Y25_N29
+\vga_0|videoSync|pixel_column[5]\ : cycloneii_lcell_ff
+PORT MAP (
+	clk => \vga_0|videoSync|pixel_clock_int~clkctrl_outclk\,
+	sdata => \vga_0|videoSync|h_count\(5),
+	sload => VCC,
+	ena => \vga_0|videoSync|LessThan5~0_combout\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	regout => \vga_0|videoSync|pixel_column\(5));
+
+-- Location: LCFF_X31_Y26_N13
+\vga_0|videoSync|h_count[4]\ : cycloneii_lcell_ff
+PORT MAP (
+	clk => \vga_0|videoSync|pixel_clock_int~clkctrl_outclk\,
+	datain => \vga_0|videoSync|Add0~8_combout\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	regout => \vga_0|videoSync|h_count\(4));
+
+-- Location: LCFF_X28_Y25_N19
+\vga_0|videoSync|pixel_column[4]\ : cycloneii_lcell_ff
+PORT MAP (
+	clk => \vga_0|videoSync|pixel_clock_int~clkctrl_outclk\,
+	sdata => \vga_0|videoSync|h_count\(4),
+	sload => VCC,
+	ena => \vga_0|videoSync|LessThan5~0_combout\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	regout => \vga_0|videoSync|pixel_column\(4));
+
+-- Location: LCFF_X28_Y25_N5
+\vga_0|videoSync|pixel_column[6]\ : cycloneii_lcell_ff
+PORT MAP (
+	clk => \vga_0|videoSync|pixel_clock_int~clkctrl_outclk\,
+	sdata => \vga_0|videoSync|h_count\(6),
+	sload => VCC,
+	ena => \vga_0|videoSync|LessThan5~0_combout\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	regout => \vga_0|videoSync|pixel_column\(6));
+
+-- Location: LCCOMB_X25_Y25_N18
+\vga_0|videoGen|Mux33~0\ : cycloneii_lcell_comb
+-- Equation(s):
+-- \vga_0|videoGen|Mux33~0_combout\ = (\vga_0|videoSync|pixel_column\(7)) # (\vga_0|videoSync|pixel_column\(5) $ (((\vga_0|videoSync|pixel_column\(4) & !\vga_0|videoSync|pixel_column\(6)))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1110111010111110",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \vga_0|videoSync|pixel_column\(7),
+	datab => \vga_0|videoSync|pixel_column\(5),
+	datac => \vga_0|videoSync|pixel_column\(4),
+	datad => \vga_0|videoSync|pixel_column\(6),
+	combout => \vga_0|videoGen|Mux33~0_combout\);
+
+-- Location: LCCOMB_X25_Y25_N4
+\vga_0|videoGen|char_addr[0]~51\ : cycloneii_lcell_comb
+-- Equation(s):
+-- \vga_0|videoGen|char_addr[0]~51_combout\ = (!\vga_0|videoSync|pixel_column\(9) & (\vga_0|videoGen|Equal2~0_combout\ & (!\vga_0|videoSync|pixel_column\(8) & !\vga_0|videoGen|Mux33~0_combout\)))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0000000000000100",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
 	dataa => \vga_0|videoSync|pixel_column\(9),
-	datab => \vga_0|videoGen|Equal3~1_combout\,
-	datac => \vga_0|videoSync|pixel_column\(5),
-	datad => \vga_0|videoGen|LessThan13~1_combout\,
-	combout => \vga_0|videoGen|char_addr[1]~17_combout\);
+	datab => \vga_0|videoGen|Equal2~0_combout\,
+	datac => \vga_0|videoSync|pixel_column\(8),
+	datad => \vga_0|videoGen|Mux33~0_combout\,
+	combout => \vga_0|videoGen|char_addr[0]~51_combout\);
 
--- Location: LCCOMB_X25_Y19_N4
-\vga_0|videoGen|char_addr[1]~19\ : cycloneii_lcell_comb
+-- Location: LCCOMB_X27_Y25_N16
+\vga_0|videoGen|char_addr[0]~12\ : cycloneii_lcell_comb
 -- Equation(s):
--- \vga_0|videoGen|char_addr[1]~19_combout\ = (!\vga_0|videoGen|char_addr[0]~9_combout\ & (!\vga_0|videoSync|pixel_column\(7) & (\vga_0|videoSync|pixel_column\(6) $ (!\vga_0|videoGen|illegal_on~combout\))))
+-- \vga_0|videoGen|char_addr[0]~12_combout\ = (\vga_0|videoSync|pixel_column\(9)) # (!\vga_0|videoGen|Equal2~0_combout\)
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "0000000001000001",
+	lut_mask => "1111111100001111",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \vga_0|videoGen|char_addr[0]~9_combout\,
-	datab => \vga_0|videoSync|pixel_column\(6),
-	datac => \vga_0|videoGen|illegal_on~combout\,
-	datad => \vga_0|videoSync|pixel_column\(7),
-	combout => \vga_0|videoGen|char_addr[1]~19_combout\);
+	datac => \vga_0|videoGen|Equal2~0_combout\,
+	datad => \vga_0|videoSync|pixel_column\(9),
+	combout => \vga_0|videoGen|char_addr[0]~12_combout\);
 
--- Location: LCCOMB_X25_Y19_N10
-\vga_0|videoGen|char_addr[1]~20\ : cycloneii_lcell_comb
+-- Location: LCCOMB_X28_Y24_N0
+\vga_0|videoGen|placeShip_on~0\ : cycloneii_lcell_comb
 -- Equation(s):
--- \vga_0|videoGen|char_addr[1]~20_combout\ = (!\vga_0|videoSync|pixel_column\(6) & (\vga_0|videoGen|gameOverT_on~combout\ & \vga_0|videoSync|pixel_column\(7)))
+-- \vga_0|videoGen|placeShip_on~0_combout\ = (!\vga_0|videoSync|pixel_row\(6) & !\vga_0|videoSync|pixel_row\(7))
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "0101000000000000",
+	lut_mask => "0000000000110011",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	datab => \vga_0|videoSync|pixel_row\(6),
+	datad => \vga_0|videoSync|pixel_row\(7),
+	combout => \vga_0|videoGen|placeShip_on~0_combout\);
+
+-- Location: LCCOMB_X28_Y24_N2
+\vga_0|videoGen|placeShip_on\ : cycloneii_lcell_comb
+-- Equation(s):
+-- \vga_0|videoGen|placeShip_on~combout\ = (!\vga_0|videoSync|pixel_row\(5) & (\vga_0|videoGen|placeShip_on~0_combout\ & (!\vga_0|videoSync|pixel_row\(8) & \vga_0|videoGen|LessThan13~3_combout\)))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0000010000000000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \vga_0|videoSync|pixel_row\(5),
+	datab => \vga_0|videoGen|placeShip_on~0_combout\,
+	datac => \vga_0|videoSync|pixel_row\(8),
+	datad => \vga_0|videoGen|LessThan13~3_combout\,
+	combout => \vga_0|videoGen|placeShip_on~combout\);
+
+-- Location: LCCOMB_X24_Y25_N30
+\vga_0|videoGen|Mux13~1\ : cycloneii_lcell_comb
+-- Equation(s):
+-- \vga_0|videoGen|Mux13~1_combout\ = (\vga_0|videoSync|pixel_column\(6)) # ((\vga_0|videoSync|pixel_column\(5) & ((\vga_0|videoSync|pixel_column\(4)) # (!\vga_0|videoGen|gameOverT_on~combout\))) # (!\vga_0|videoSync|pixel_column\(5) & 
+-- (\vga_0|videoSync|pixel_column\(4) & !\vga_0|videoGen|gameOverT_on~combout\)))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1110101011111110",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
 	dataa => \vga_0|videoSync|pixel_column\(6),
-	datac => \vga_0|videoGen|gameOverT_on~combout\,
-	datad => \vga_0|videoSync|pixel_column\(7),
-	combout => \vga_0|videoGen|char_addr[1]~20_combout\);
+	datab => \vga_0|videoSync|pixel_column\(5),
+	datac => \vga_0|videoSync|pixel_column\(4),
+	datad => \vga_0|videoGen|gameOverT_on~combout\,
+	combout => \vga_0|videoGen|Mux13~1_combout\);
 
--- Location: LCCOMB_X25_Y19_N24
-\vga_0|videoGen|char_addr[1]~21\ : cycloneii_lcell_comb
+-- Location: LCCOMB_X24_Y25_N16
+\vga_0|videoGen|Mux13~0\ : cycloneii_lcell_comb
 -- Equation(s):
--- \vga_0|videoGen|char_addr[1]~21_combout\ = (\vga_0|videoGen|char_addr[1]~19_combout\) # ((\vga_0|videoGen|char_addr[0]~9_combout\ & (!\vga_0|videoGen|placeShip_on~combout\ & \vga_0|videoGen|char_addr[1]~20_combout\)))
+-- \vga_0|videoGen|Mux13~0_combout\ = (\vga_0|videoSync|pixel_column\(6) & ((\vga_0|videoSync|pixel_column\(5) & ((\vga_0|videoGen|gameOverT_on~combout\))) # (!\vga_0|videoSync|pixel_column\(5) & (!\vga_0|videoSync|pixel_column\(4))))) # 
+-- (!\vga_0|videoSync|pixel_column\(6) & (\vga_0|videoSync|pixel_column\(4) & (\vga_0|videoSync|pixel_column\(5) $ (\vga_0|videoGen|gameOverT_on~combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "1111001011110000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \vga_0|videoGen|char_addr[0]~9_combout\,
-	datab => \vga_0|videoGen|placeShip_on~combout\,
-	datac => \vga_0|videoGen|char_addr[1]~19_combout\,
-	datad => \vga_0|videoGen|char_addr[1]~20_combout\,
-	combout => \vga_0|videoGen|char_addr[1]~21_combout\);
-
--- Location: LCCOMB_X24_Y20_N26
-\vga_0|videoGen|Mux12~0\ : cycloneii_lcell_comb
--- Equation(s):
--- \vga_0|videoGen|Mux12~0_combout\ = (\vga_0|videoSync|pixel_column\(5) & (!\vga_0|videoSync|pixel_column\(4) & ((\vga_0|videoSync|pixel_column\(6))))) # (!\vga_0|videoSync|pixel_column\(5) & (\vga_0|videoSync|pixel_column\(4) $ 
--- (((\vga_0|videoGen|gameOverT_on~combout\ & !\vga_0|videoSync|pixel_column\(6))))))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0101101000000110",
+	lut_mask => "1101001000011000",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
 	dataa => \vga_0|videoSync|pixel_column\(4),
-	datab => \vga_0|videoGen|gameOverT_on~combout\,
-	datac => \vga_0|videoSync|pixel_column\(5),
+	datab => \vga_0|videoSync|pixel_column\(5),
+	datac => \vga_0|videoSync|pixel_column\(6),
+	datad => \vga_0|videoGen|gameOverT_on~combout\,
+	combout => \vga_0|videoGen|Mux13~0_combout\);
+
+-- Location: LCCOMB_X24_Y25_N24
+\vga_0|videoGen|char_addr[0]~13\ : cycloneii_lcell_comb
+-- Equation(s):
+-- \vga_0|videoGen|char_addr[0]~13_combout\ = (!\vga_0|videoGen|placeShip_on~combout\ & ((\vga_0|videoSync|pixel_column\(7) & (!\vga_0|videoGen|Mux13~1_combout\)) # (!\vga_0|videoSync|pixel_column\(7) & ((!\vga_0|videoGen|Mux13~0_combout\)))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0000000000100111",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \vga_0|videoSync|pixel_column\(7),
+	datab => \vga_0|videoGen|Mux13~1_combout\,
+	datac => \vga_0|videoGen|Mux13~0_combout\,
+	datad => \vga_0|videoGen|placeShip_on~combout\,
+	combout => \vga_0|videoGen|char_addr[0]~13_combout\);
+
+-- Location: LCCOMB_X25_Y25_N20
+\vga_0|videoGen|char_addr[0]~14\ : cycloneii_lcell_comb
+-- Equation(s):
+-- \vga_0|videoGen|char_addr[0]~14_combout\ = (\vga_0|videoGen|char_addr[0]~12_combout\ & ((\vga_0|videoGen|char_addr[0]~13_combout\) # ((\vga_0|videoGen|Mux27~0_combout\ & \vga_0|videoGen|placeShip_on~combout\))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1100110010000000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \vga_0|videoGen|Mux27~0_combout\,
+	datab => \vga_0|videoGen|char_addr[0]~12_combout\,
+	datac => \vga_0|videoGen|placeShip_on~combout\,
+	datad => \vga_0|videoGen|char_addr[0]~13_combout\,
+	combout => \vga_0|videoGen|char_addr[0]~14_combout\);
+
+-- Location: LCFF_X28_Y25_N31
+\vga_0|videoSync|pixel_column[7]\ : cycloneii_lcell_ff
+PORT MAP (
+	clk => \vga_0|videoSync|pixel_clock_int~clkctrl_outclk\,
+	sdata => \vga_0|videoSync|h_count\(7),
+	sload => VCC,
+	ena => \vga_0|videoSync|LessThan5~0_combout\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	regout => \vga_0|videoSync|pixel_column\(7));
+
+-- Location: LCCOMB_X28_Y25_N8
+\vga_0|videoGen|LessThan13~4\ : cycloneii_lcell_comb
+-- Equation(s):
+-- \vga_0|videoGen|LessThan13~4_combout\ = (!\vga_0|videoSync|pixel_column\(6) & !\vga_0|videoSync|pixel_column\(7))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0000000000001111",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	datac => \vga_0|videoSync|pixel_column\(6),
+	datad => \vga_0|videoSync|pixel_column\(7),
+	combout => \vga_0|videoGen|LessThan13~4_combout\);
+
+-- Location: LCCOMB_X27_Y22_N28
+\vga_0|videoGen|illegal_on\ : cycloneii_lcell_comb
+-- Equation(s):
+-- \vga_0|videoGen|illegal_on~combout\ = (!\vga_0|videoSync|pixel_column\(9) & (!\vga_0|videoSync|pixel_column\(8) & \vga_0|videoGen|Equal2~0_combout\))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0000001100000000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	datab => \vga_0|videoSync|pixel_column\(9),
+	datac => \vga_0|videoSync|pixel_column\(8),
+	datad => \vga_0|videoGen|Equal2~0_combout\,
+	combout => \vga_0|videoGen|illegal_on~combout\);
+
+-- Location: LCCOMB_X28_Y25_N30
+\vga_0|videoGen|hit_on\ : cycloneii_lcell_comb
+-- Equation(s):
+-- \vga_0|videoGen|hit_on~combout\ = (!\vga_0|videoSync|pixel_column\(9) & (!\vga_0|videoSync|pixel_column\(8) & \vga_0|videoGen|Equal3~1_combout\))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0001000100000000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \vga_0|videoSync|pixel_column\(9),
+	datab => \vga_0|videoSync|pixel_column\(8),
+	datad => \vga_0|videoGen|Equal3~1_combout\,
+	combout => \vga_0|videoGen|hit_on~combout\);
+
+-- Location: LCCOMB_X25_Y25_N26
+\vga_0|videoGen|char_addr[0]~9\ : cycloneii_lcell_comb
+-- Equation(s):
+-- \vga_0|videoGen|char_addr[0]~9_combout\ = (\vga_0|videoGen|char_addr[1]~8_combout\ & (((!\vga_0|videoSync|pixel_column\(5) & \vga_0|videoSync|pixel_column\(4))) # (!\vga_0|videoGen|hit_on~combout\)))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0010000010101010",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \vga_0|videoGen|char_addr[1]~8_combout\,
+	datab => \vga_0|videoSync|pixel_column\(5),
+	datac => \vga_0|videoSync|pixel_column\(4),
+	datad => \vga_0|videoGen|hit_on~combout\,
+	combout => \vga_0|videoGen|char_addr[0]~9_combout\);
+
+-- Location: LCCOMB_X25_Y25_N30
+\vga_0|videoGen|char_addr[0]~11\ : cycloneii_lcell_comb
+-- Equation(s):
+-- \vga_0|videoGen|char_addr[0]~11_combout\ = (\vga_0|videoGen|LessThan13~4_combout\ & ((\vga_0|videoGen|char_addr[0]~9_combout\) # ((\vga_0|videoGen|char_addr[0]~10_combout\ & !\vga_0|videoGen|illegal_on~combout\))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1100110000001000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \vga_0|videoGen|char_addr[0]~10_combout\,
+	datab => \vga_0|videoGen|LessThan13~4_combout\,
+	datac => \vga_0|videoGen|illegal_on~combout\,
+	datad => \vga_0|videoGen|char_addr[0]~9_combout\,
+	combout => \vga_0|videoGen|char_addr[0]~11_combout\);
+
+-- Location: LCCOMB_X25_Y25_N28
+\vga_0|videoGen|char_addr[0]~15\ : cycloneii_lcell_comb
+-- Equation(s):
+-- \vga_0|videoGen|char_addr[0]~15_combout\ = (\vga_0|videoGen|char_addr[0]~11_combout\) # ((!\vga_0|videoGen|char_addr[1]~8_combout\ & ((\vga_0|videoGen|char_addr[0]~51_combout\) # (\vga_0|videoGen|char_addr[0]~14_combout\))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1111111101010100",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \vga_0|videoGen|char_addr[1]~8_combout\,
+	datab => \vga_0|videoGen|char_addr[0]~51_combout\,
+	datac => \vga_0|videoGen|char_addr[0]~14_combout\,
+	datad => \vga_0|videoGen|char_addr[0]~11_combout\,
+	combout => \vga_0|videoGen|char_addr[0]~15_combout\);
+
+-- Location: LCCOMB_X25_Y25_N16
+\vga_0|videoGen|char_addr[0]\ : cycloneii_lcell_comb
+-- Equation(s):
+-- \vga_0|videoGen|char_addr\(0) = (GLOBAL(\vga_0|videoGen|char_addr[5]~7clkctrl_outclk\) & ((\vga_0|videoGen|char_addr[0]~15_combout\))) # (!GLOBAL(\vga_0|videoGen|char_addr[5]~7clkctrl_outclk\) & (\vga_0|videoGen|char_addr\(0)))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1111101000001010",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \vga_0|videoGen|char_addr\(0),
+	datac => \vga_0|videoGen|char_addr[5]~7clkctrl_outclk\,
+	datad => \vga_0|videoGen|char_addr[0]~15_combout\,
+	combout => \vga_0|videoGen|char_addr\(0));
+
+-- Location: LCCOMB_X25_Y25_N24
+\vga_0|videoGen|char_addr[0]~10\ : cycloneii_lcell_comb
+-- Equation(s):
+-- \vga_0|videoGen|char_addr[0]~10_combout\ = (!\vga_0|videoSync|pixel_column\(4) & (\vga_0|videoGen|Equal2~0_combout\ & (!\vga_0|videoGen|Equal3~1_combout\ & !\vga_0|videoSync|pixel_column\(9))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0000000000000100",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \vga_0|videoSync|pixel_column\(4),
+	datab => \vga_0|videoGen|Equal2~0_combout\,
+	datac => \vga_0|videoGen|Equal3~1_combout\,
+	datad => \vga_0|videoSync|pixel_column\(9),
+	combout => \vga_0|videoGen|char_addr[0]~10_combout\);
+
+-- Location: LCCOMB_X27_Y22_N22
+\vga_0|videoGen|char_addr[1]~8\ : cycloneii_lcell_comb
+-- Equation(s):
+-- \vga_0|videoGen|char_addr[1]~8_combout\ = (!\vga_0|videoSync|pixel_column\(9) & \vga_0|videoGen|Equal3~1_combout\)
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0000111100000000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	datac => \vga_0|videoSync|pixel_column\(9),
+	datad => \vga_0|videoGen|Equal3~1_combout\,
+	combout => \vga_0|videoGen|char_addr[1]~8_combout\);
+
+-- Location: LCCOMB_X25_Y25_N6
+\vga_0|videoGen|char_addr[1]~16\ : cycloneii_lcell_comb
+-- Equation(s):
+-- \vga_0|videoGen|char_addr[1]~16_combout\ = (!\vga_0|videoSync|pixel_column\(6) & (\vga_0|videoSync|pixel_column\(5) & (!\vga_0|videoGen|LessThan13~3_combout\ & \vga_0|videoGen|char_addr[1]~8_combout\)))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0000010000000000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \vga_0|videoSync|pixel_column\(6),
+	datab => \vga_0|videoSync|pixel_column\(5),
+	datac => \vga_0|videoGen|LessThan13~3_combout\,
+	datad => \vga_0|videoGen|char_addr[1]~8_combout\,
+	combout => \vga_0|videoGen|char_addr[1]~16_combout\);
+
+-- Location: LCCOMB_X25_Y25_N14
+\vga_0|videoGen|char_addr[1]~18\ : cycloneii_lcell_comb
+-- Equation(s):
+-- \vga_0|videoGen|char_addr[1]~18_combout\ = (!\vga_0|videoSync|pixel_column\(7) & ((\vga_0|videoGen|char_addr[1]~16_combout\) # ((\vga_0|videoGen|char_addr[1]~17_combout\ & \vga_0|videoGen|char_addr[0]~10_combout\))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0011001100100000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \vga_0|videoGen|char_addr[1]~17_combout\,
+	datab => \vga_0|videoSync|pixel_column\(7),
+	datac => \vga_0|videoGen|char_addr[0]~10_combout\,
+	datad => \vga_0|videoGen|char_addr[1]~16_combout\,
+	combout => \vga_0|videoGen|char_addr[1]~18_combout\);
+
+-- Location: LCCOMB_X24_Y25_N20
+\vga_0|videoGen|Mux26~0\ : cycloneii_lcell_comb
+-- Equation(s):
+-- \vga_0|videoGen|Mux26~0_combout\ = (!\vga_0|videoSync|pixel_column\(7) & (\vga_0|videoSync|pixel_column\(5) & (\vga_0|videoSync|pixel_column\(4) $ (\vga_0|videoSync|pixel_column\(6)))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0000011000000000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \vga_0|videoSync|pixel_column\(4),
+	datab => \vga_0|videoSync|pixel_column\(6),
+	datac => \vga_0|videoSync|pixel_column\(7),
+	datad => \vga_0|videoSync|pixel_column\(5),
+	combout => \vga_0|videoGen|Mux26~0_combout\);
+
+-- Location: LCCOMB_X24_Y25_N18
+\vga_0|videoGen|Mux12~0\ : cycloneii_lcell_comb
+-- Equation(s):
+-- \vga_0|videoGen|Mux12~0_combout\ = (!\vga_0|videoSync|pixel_column\(7) & ((\vga_0|videoSync|pixel_column\(5) & (!\vga_0|videoSync|pixel_column\(4) & \vga_0|videoSync|pixel_column\(6))) # (!\vga_0|videoSync|pixel_column\(5) & 
+-- (\vga_0|videoSync|pixel_column\(4)))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0000011000000100",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \vga_0|videoSync|pixel_column\(5),
+	datab => \vga_0|videoSync|pixel_column\(4),
+	datac => \vga_0|videoSync|pixel_column\(7),
 	datad => \vga_0|videoSync|pixel_column\(6),
 	combout => \vga_0|videoGen|Mux12~0_combout\);
 
--- Location: LCCOMB_X24_Y20_N16
-\vga_0|videoGen|char_addr[1]~18\ : cycloneii_lcell_comb
+-- Location: LCCOMB_X24_Y25_N12
+\vga_0|videoGen|char_addr[1]~19\ : cycloneii_lcell_comb
 -- Equation(s):
--- \vga_0|videoGen|char_addr[1]~18_combout\ = (\vga_0|videoGen|placeShip_on~combout\ & (\vga_0|videoGen|Mux26~0_combout\)) # (!\vga_0|videoGen|placeShip_on~combout\ & (((!\vga_0|videoSync|pixel_column\(7) & \vga_0|videoGen|Mux12~0_combout\))))
+-- \vga_0|videoGen|char_addr[1]~19_combout\ = (\vga_0|videoGen|gameOverT_on~combout\ & (\vga_0|videoSync|pixel_column\(5) & (\vga_0|videoGen|LessThan13~4_combout\))) # (!\vga_0|videoGen|gameOverT_on~combout\ & (((\vga_0|videoGen|Mux12~0_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "1010001110100000",
+	lut_mask => "1011001110000000",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \vga_0|videoGen|Mux26~0_combout\,
-	datab => \vga_0|videoSync|pixel_column\(7),
-	datac => \vga_0|videoGen|placeShip_on~combout\,
+	dataa => \vga_0|videoSync|pixel_column\(5),
+	datab => \vga_0|videoGen|gameOverT_on~combout\,
+	datac => \vga_0|videoGen|LessThan13~4_combout\,
 	datad => \vga_0|videoGen|Mux12~0_combout\,
-	combout => \vga_0|videoGen|char_addr[1]~18_combout\);
+	combout => \vga_0|videoGen|char_addr[1]~19_combout\);
 
--- Location: LCCOMB_X25_Y19_N18
-\vga_0|videoGen|char_addr[1]~22\ : cycloneii_lcell_comb
+-- Location: LCCOMB_X24_Y25_N26
+\vga_0|videoGen|char_addr[1]~20\ : cycloneii_lcell_comb
 -- Equation(s):
--- \vga_0|videoGen|char_addr[1]~22_combout\ = (\vga_0|videoGen|LessThan373~2_combout\ & ((\vga_0|videoGen|char_addr[1]~21_combout\) # ((\vga_0|videoGen|char_addr[0]~9_combout\ & \vga_0|videoGen|char_addr[1]~18_combout\)))) # 
--- (!\vga_0|videoGen|LessThan373~2_combout\ & (\vga_0|videoGen|char_addr[0]~9_combout\ & ((\vga_0|videoGen|char_addr[1]~18_combout\))))
+-- \vga_0|videoGen|char_addr[1]~20_combout\ = (\vga_0|videoGen|placeShip_on~combout\ & (\vga_0|videoGen|Mux26~0_combout\)) # (!\vga_0|videoGen|placeShip_on~combout\ & ((\vga_0|videoGen|char_addr[1]~19_combout\)))
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "1110110010100000",
+	lut_mask => "1111001111000000",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \vga_0|videoGen|LessThan373~2_combout\,
-	datab => \vga_0|videoGen|char_addr[0]~9_combout\,
-	datac => \vga_0|videoGen|char_addr[1]~21_combout\,
-	datad => \vga_0|videoGen|char_addr[1]~18_combout\,
-	combout => \vga_0|videoGen|char_addr[1]~22_combout\);
+	datab => \vga_0|videoGen|placeShip_on~combout\,
+	datac => \vga_0|videoGen|Mux26~0_combout\,
+	datad => \vga_0|videoGen|char_addr[1]~19_combout\,
+	combout => \vga_0|videoGen|char_addr[1]~20_combout\);
 
--- Location: LCCOMB_X25_Y19_N16
-\vga_0|videoGen|char_addr[1]~23\ : cycloneii_lcell_comb
+-- Location: LCCOMB_X25_Y25_N8
+\vga_0|videoGen|char_addr[1]~21\ : cycloneii_lcell_comb
 -- Equation(s):
--- \vga_0|videoGen|char_addr[1]~23_combout\ = (\vga_0|videoGen|LessThan13~0_combout\ & (!\vga_0|videoGen|char_addr[1]~8_combout\ & ((\vga_0|videoGen|char_addr[1]~22_combout\)))) # (!\vga_0|videoGen|LessThan13~0_combout\ & 
--- ((\vga_0|videoGen|char_addr[1]~17_combout\) # ((!\vga_0|videoGen|char_addr[1]~8_combout\ & \vga_0|videoGen|char_addr[1]~22_combout\))))
+-- \vga_0|videoGen|char_addr[1]~21_combout\ = (\vga_0|videoGen|char_addr[1]~18_combout\) # ((!\vga_0|videoGen|char_addr[1]~8_combout\ & (\vga_0|videoGen|char_addr[0]~12_combout\ & \vga_0|videoGen|char_addr[1]~20_combout\)))
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "0111001101010000",
+	lut_mask => "1111010011110000",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \vga_0|videoGen|LessThan13~0_combout\,
-	datab => \vga_0|videoGen|char_addr[1]~8_combout\,
-	datac => \vga_0|videoGen|char_addr[1]~17_combout\,
-	datad => \vga_0|videoGen|char_addr[1]~22_combout\,
-	combout => \vga_0|videoGen|char_addr[1]~23_combout\);
+	dataa => \vga_0|videoGen|char_addr[1]~8_combout\,
+	datab => \vga_0|videoGen|char_addr[0]~12_combout\,
+	datac => \vga_0|videoGen|char_addr[1]~18_combout\,
+	datad => \vga_0|videoGen|char_addr[1]~20_combout\,
+	combout => \vga_0|videoGen|char_addr[1]~21_combout\);
 
--- Location: LCCOMB_X25_Y19_N0
+-- Location: LCCOMB_X25_Y25_N22
 \vga_0|videoGen|char_addr[1]\ : cycloneii_lcell_comb
 -- Equation(s):
--- \vga_0|videoGen|char_addr\(1) = (GLOBAL(\vga_0|videoGen|char_addr[5]~7clkctrl_outclk\) & ((\vga_0|videoGen|char_addr[1]~23_combout\))) # (!GLOBAL(\vga_0|videoGen|char_addr[5]~7clkctrl_outclk\) & (\vga_0|videoGen|char_addr\(1)))
+-- \vga_0|videoGen|char_addr\(1) = (GLOBAL(\vga_0|videoGen|char_addr[5]~7clkctrl_outclk\) & ((\vga_0|videoGen|char_addr[1]~21_combout\))) # (!GLOBAL(\vga_0|videoGen|char_addr[5]~7clkctrl_outclk\) & (\vga_0|videoGen|char_addr\(1)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -5244,11 +4003,28 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	datab => \vga_0|videoGen|char_addr\(1),
-	datac => \vga_0|videoGen|char_addr[1]~23_combout\,
+	datac => \vga_0|videoGen|char_addr[1]~21_combout\,
 	datad => \vga_0|videoGen|char_addr[5]~7clkctrl_outclk\,
 	combout => \vga_0|videoGen|char_addr\(1));
 
--- Location: LCCOMB_X25_Y20_N8
+-- Location: LCCOMB_X28_Y25_N28
+\vga_0|videoGen|char_addr[2]~24\ : cycloneii_lcell_comb
+-- Equation(s):
+-- \vga_0|videoGen|char_addr[2]~24_combout\ = (!\vga_0|videoSync|pixel_column\(4) & (\vga_0|videoSync|pixel_column\(5) $ (((!\vga_0|videoGen|Equal3~1_combout\) # (!\vga_0|videoGen|LessThan13~3_combout\)))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0000000010000111",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \vga_0|videoGen|LessThan13~3_combout\,
+	datab => \vga_0|videoGen|Equal3~1_combout\,
+	datac => \vga_0|videoSync|pixel_column\(5),
+	datad => \vga_0|videoSync|pixel_column\(4),
+	combout => \vga_0|videoGen|char_addr[2]~24_combout\);
+
+-- Location: LCCOMB_X28_Y25_N18
 \vga_0|videoGen|Mux31~0\ : cycloneii_lcell_comb
 -- Equation(s):
 -- \vga_0|videoGen|Mux31~0_combout\ = (!\vga_0|videoSync|pixel_column\(7) & ((\vga_0|videoSync|pixel_column\(6) & (!\vga_0|videoSync|pixel_column\(4))) # (!\vga_0|videoSync|pixel_column\(6) & ((\vga_0|videoSync|pixel_column\(4)) # 
@@ -5256,108 +4032,108 @@ PORT MAP (
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "0001001100010010",
+	lut_mask => "0001010100010100",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \vga_0|videoSync|pixel_column\(6),
-	datab => \vga_0|videoSync|pixel_column\(7),
+	dataa => \vga_0|videoSync|pixel_column\(7),
+	datab => \vga_0|videoSync|pixel_column\(6),
 	datac => \vga_0|videoSync|pixel_column\(4),
 	datad => \vga_0|videoSync|pixel_column\(5),
 	combout => \vga_0|videoGen|Mux31~0_combout\);
 
--- Location: LCCOMB_X25_Y20_N16
+-- Location: LCCOMB_X27_Y25_N22
 \vga_0|videoGen|Mux25~0\ : cycloneii_lcell_comb
 -- Equation(s):
--- \vga_0|videoGen|Mux25~0_combout\ = (\vga_0|videoSync|pixel_column\(6) & (!\vga_0|videoSync|pixel_column\(7) & (!\vga_0|videoSync|pixel_column\(4) & !\vga_0|videoSync|pixel_column\(5)))) # (!\vga_0|videoSync|pixel_column\(6) & 
--- (\vga_0|videoSync|pixel_column\(4) & (\vga_0|videoSync|pixel_column\(7) $ (!\vga_0|videoSync|pixel_column\(5)))))
+-- \vga_0|videoGen|Mux25~0_combout\ = (!\vga_0|videoSync|pixel_column\(5) & (!\vga_0|videoSync|pixel_column\(7) & (\vga_0|videoSync|pixel_column\(6) $ (\vga_0|videoSync|pixel_column\(4)))))
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "0100000000010010",
+	lut_mask => "0000000000010010",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
 	dataa => \vga_0|videoSync|pixel_column\(6),
-	datab => \vga_0|videoSync|pixel_column\(7),
+	datab => \vga_0|videoSync|pixel_column\(5),
 	datac => \vga_0|videoSync|pixel_column\(4),
-	datad => \vga_0|videoSync|pixel_column\(5),
+	datad => \vga_0|videoSync|pixel_column\(7),
 	combout => \vga_0|videoGen|Mux25~0_combout\);
 
--- Location: LCCOMB_X25_Y20_N14
-\vga_0|videoGen|Mux11~0\ : cycloneii_lcell_comb
+-- Location: LCCOMB_X27_Y25_N12
+\vga_0|videoGen|char_addr[2]~55\ : cycloneii_lcell_comb
 -- Equation(s):
--- \vga_0|videoGen|Mux11~0_combout\ = (\vga_0|videoSync|pixel_column\(6) & ((\vga_0|videoSync|pixel_column\(4)) # (\vga_0|videoGen|gameOverT_on~combout\ $ (!\vga_0|videoSync|pixel_column\(5))))) # (!\vga_0|videoSync|pixel_column\(6) & 
--- ((\vga_0|videoGen|gameOverT_on~combout\ & ((\vga_0|videoSync|pixel_column\(5)) # (!\vga_0|videoSync|pixel_column\(4)))) # (!\vga_0|videoGen|gameOverT_on~combout\ & (\vga_0|videoSync|pixel_column\(5) $ (\vga_0|videoSync|pixel_column\(4))))))
+-- \vga_0|videoGen|char_addr[2]~55_combout\ = (\vga_0|videoSync|pixel_column\(5) & (((!\vga_0|videoSync|pixel_column\(7))))) # (!\vga_0|videoSync|pixel_column\(5) & ((\vga_0|videoGen|gameOverT_on~combout\ & (!\vga_0|videoSync|pixel_column\(6))) # 
+-- (!\vga_0|videoGen|gameOverT_on~combout\ & ((!\vga_0|videoSync|pixel_column\(7))))))
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "1110101111010110",
+	lut_mask => "0001110100001111",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
 	dataa => \vga_0|videoSync|pixel_column\(6),
-	datab => \vga_0|videoGen|gameOverT_on~combout\,
-	datac => \vga_0|videoSync|pixel_column\(5),
-	datad => \vga_0|videoSync|pixel_column\(4),
-	combout => \vga_0|videoGen|Mux11~0_combout\);
+	datab => \vga_0|videoSync|pixel_column\(5),
+	datac => \vga_0|videoSync|pixel_column\(7),
+	datad => \vga_0|videoGen|gameOverT_on~combout\,
+	combout => \vga_0|videoGen|char_addr[2]~55_combout\);
 
--- Location: LCCOMB_X25_Y20_N0
-\vga_0|videoGen|char_addr[2]~24\ : cycloneii_lcell_comb
+-- Location: LCCOMB_X27_Y25_N18
+\vga_0|videoGen|char_addr[2]~56\ : cycloneii_lcell_comb
 -- Equation(s):
--- \vga_0|videoGen|char_addr[2]~24_combout\ = (\vga_0|videoGen|char_addr[0]~11_combout\ & ((\vga_0|videoGen|char_addr[1]~20_combout\) # ((!\vga_0|videoSync|pixel_column\(7) & \vga_0|videoGen|Mux11~0_combout\)))) # (!\vga_0|videoGen|char_addr[0]~11_combout\ & 
--- (!\vga_0|videoSync|pixel_column\(7) & (\vga_0|videoGen|Mux11~0_combout\)))
+-- \vga_0|videoGen|char_addr[2]~56_combout\ = (\vga_0|videoGen|char_addr[2]~55_combout\ & ((\vga_0|videoSync|pixel_column\(6) & ((\vga_0|videoSync|pixel_column\(4)) # (!\vga_0|videoSync|pixel_column\(5)))) # (!\vga_0|videoSync|pixel_column\(6) & 
+-- (\vga_0|videoSync|pixel_column\(5) $ (\vga_0|videoSync|pixel_column\(4))))))
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "1011101000110000",
+	lut_mask => "1011011000000000",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \vga_0|videoGen|char_addr[0]~11_combout\,
-	datab => \vga_0|videoSync|pixel_column\(7),
-	datac => \vga_0|videoGen|Mux11~0_combout\,
-	datad => \vga_0|videoGen|char_addr[1]~20_combout\,
-	combout => \vga_0|videoGen|char_addr[2]~24_combout\);
+	dataa => \vga_0|videoSync|pixel_column\(6),
+	datab => \vga_0|videoSync|pixel_column\(5),
+	datac => \vga_0|videoSync|pixel_column\(4),
+	datad => \vga_0|videoGen|char_addr[2]~55_combout\,
+	combout => \vga_0|videoGen|char_addr[2]~56_combout\);
 
--- Location: LCCOMB_X25_Y20_N30
-\vga_0|videoGen|char_addr[2]~25\ : cycloneii_lcell_comb
+-- Location: LCCOMB_X27_Y25_N28
+\vga_0|videoGen|char_addr[2]~22\ : cycloneii_lcell_comb
 -- Equation(s):
--- \vga_0|videoGen|char_addr[2]~25_combout\ = (\vga_0|videoGen|char_addr[0]~9_combout\ & ((\vga_0|videoGen|placeShip_on~combout\ & (\vga_0|videoGen|Mux25~0_combout\)) # (!\vga_0|videoGen|placeShip_on~combout\ & ((\vga_0|videoGen|char_addr[2]~24_combout\)))))
+-- \vga_0|videoGen|char_addr[2]~22_combout\ = (\vga_0|videoGen|char_addr[0]~12_combout\ & ((\vga_0|videoGen|placeShip_on~combout\ & (\vga_0|videoGen|Mux25~0_combout\)) # (!\vga_0|videoGen|placeShip_on~combout\ & 
+-- ((\vga_0|videoGen|char_addr[2]~56_combout\)))))
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "1100010010000000",
+	lut_mask => "1000101010000000",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \vga_0|videoGen|placeShip_on~combout\,
-	datab => \vga_0|videoGen|char_addr[0]~9_combout\,
-	datac => \vga_0|videoGen|Mux25~0_combout\,
-	datad => \vga_0|videoGen|char_addr[2]~24_combout\,
-	combout => \vga_0|videoGen|char_addr[2]~25_combout\);
+	dataa => \vga_0|videoGen|char_addr[0]~12_combout\,
+	datab => \vga_0|videoGen|Mux25~0_combout\,
+	datac => \vga_0|videoGen|placeShip_on~combout\,
+	datad => \vga_0|videoGen|char_addr[2]~56_combout\,
+	combout => \vga_0|videoGen|char_addr[2]~22_combout\);
 
--- Location: LCCOMB_X25_Y20_N10
-\vga_0|videoGen|char_addr[2]~26\ : cycloneii_lcell_comb
+-- Location: LCCOMB_X27_Y25_N26
+\vga_0|videoGen|char_addr[2]~23\ : cycloneii_lcell_comb
 -- Equation(s):
--- \vga_0|videoGen|char_addr[2]~26_combout\ = (!\vga_0|videoGen|char_addr[1]~8_combout\ & ((\vga_0|videoGen|char_addr[2]~25_combout\) # ((\vga_0|videoGen|illegal_on~combout\ & \vga_0|videoGen|Mux31~0_combout\))))
+-- \vga_0|videoGen|char_addr[2]~23_combout\ = (!\vga_0|videoGen|char_addr[1]~8_combout\ & ((\vga_0|videoGen|char_addr[2]~22_combout\) # ((\vga_0|videoGen|illegal_on~combout\ & \vga_0|videoGen|Mux31~0_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "0011001100100000",
+	lut_mask => "0000111100001000",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
 	dataa => \vga_0|videoGen|illegal_on~combout\,
-	datab => \vga_0|videoGen|char_addr[1]~8_combout\,
-	datac => \vga_0|videoGen|Mux31~0_combout\,
-	datad => \vga_0|videoGen|char_addr[2]~25_combout\,
-	combout => \vga_0|videoGen|char_addr[2]~26_combout\);
+	datab => \vga_0|videoGen|Mux31~0_combout\,
+	datac => \vga_0|videoGen|char_addr[1]~8_combout\,
+	datad => \vga_0|videoGen|char_addr[2]~22_combout\,
+	combout => \vga_0|videoGen|char_addr[2]~23_combout\);
 
--- Location: LCCOMB_X25_Y20_N26
-\vga_0|videoGen|char_addr[2]~28\ : cycloneii_lcell_comb
+-- Location: LCCOMB_X27_Y25_N0
+\vga_0|videoGen|char_addr[2]~25\ : cycloneii_lcell_comb
 -- Equation(s):
--- \vga_0|videoGen|char_addr[2]~28_combout\ = (\vga_0|videoGen|char_addr[2]~26_combout\) # ((\vga_0|videoGen|char_addr[2]~27_combout\ & (\vga_0|videoGen|char_addr[1]~8_combout\ & \vga_0|videoGen|LessThan13~1_combout\)))
+-- \vga_0|videoGen|char_addr[2]~25_combout\ = (\vga_0|videoGen|char_addr[2]~23_combout\) # ((\vga_0|videoGen|LessThan13~4_combout\ & (\vga_0|videoGen|char_addr[1]~8_combout\ & \vga_0|videoGen|char_addr[2]~24_combout\)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -5365,16 +4141,16 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \vga_0|videoGen|char_addr[2]~27_combout\,
+	dataa => \vga_0|videoGen|LessThan13~4_combout\,
 	datab => \vga_0|videoGen|char_addr[1]~8_combout\,
-	datac => \vga_0|videoGen|LessThan13~1_combout\,
-	datad => \vga_0|videoGen|char_addr[2]~26_combout\,
-	combout => \vga_0|videoGen|char_addr[2]~28_combout\);
+	datac => \vga_0|videoGen|char_addr[2]~24_combout\,
+	datad => \vga_0|videoGen|char_addr[2]~23_combout\,
+	combout => \vga_0|videoGen|char_addr[2]~25_combout\);
 
--- Location: LCCOMB_X25_Y20_N4
+-- Location: LCCOMB_X27_Y25_N8
 \vga_0|videoGen|char_addr[2]\ : cycloneii_lcell_comb
 -- Equation(s):
--- \vga_0|videoGen|char_addr\(2) = (GLOBAL(\vga_0|videoGen|char_addr[5]~7clkctrl_outclk\) & ((\vga_0|videoGen|char_addr[2]~28_combout\))) # (!GLOBAL(\vga_0|videoGen|char_addr[5]~7clkctrl_outclk\) & (\vga_0|videoGen|char_addr\(2)))
+-- \vga_0|videoGen|char_addr\(2) = (GLOBAL(\vga_0|videoGen|char_addr[5]~7clkctrl_outclk\) & ((\vga_0|videoGen|char_addr[2]~25_combout\))) # (!GLOBAL(\vga_0|videoGen|char_addr[5]~7clkctrl_outclk\) & (\vga_0|videoGen|char_addr\(2)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -5384,169 +4160,152 @@ GENERIC MAP (
 PORT MAP (
 	datab => \vga_0|videoGen|char_addr\(2),
 	datac => \vga_0|videoGen|char_addr[5]~7clkctrl_outclk\,
-	datad => \vga_0|videoGen|char_addr[2]~28_combout\,
+	datad => \vga_0|videoGen|char_addr[2]~25_combout\,
 	combout => \vga_0|videoGen|char_addr\(2));
 
--- Location: LCCOMB_X24_Y20_N10
-\vga_0|videoGen|Mux37~0\ : cycloneii_lcell_comb
+-- Location: LCCOMB_X27_Y25_N14
+\vga_0|videoGen|char_addr[3]~26\ : cycloneii_lcell_comb
 -- Equation(s):
--- \vga_0|videoGen|Mux37~0_combout\ = (!\vga_0|videoSync|pixel_column\(6) & (!\vga_0|videoSync|pixel_column\(7) & (\vga_0|videoSync|pixel_column\(4) $ (\vga_0|videoSync|pixel_column\(5)))))
+-- \vga_0|videoGen|char_addr[3]~26_combout\ = (\vga_0|videoGen|gameOverT_on~combout\ & (!\vga_0|videoSync|pixel_column\(6) & ((!\vga_0|videoSync|pixel_column\(4))))) # (!\vga_0|videoGen|gameOverT_on~combout\ & (((!\vga_0|videoSync|pixel_column\(7)))))
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "0000000000010010",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \vga_0|videoSync|pixel_column\(4),
-	datab => \vga_0|videoSync|pixel_column\(6),
-	datac => \vga_0|videoSync|pixel_column\(5),
-	datad => \vga_0|videoSync|pixel_column\(7),
-	combout => \vga_0|videoGen|Mux37~0_combout\);
-
--- Location: LCCOMB_X24_Y20_N0
-\vga_0|videoGen|Mux30~0\ : cycloneii_lcell_comb
--- Equation(s):
--- \vga_0|videoGen|Mux30~0_combout\ = (\vga_0|videoSync|pixel_column\(7)) # ((\vga_0|videoSync|pixel_column\(5) & ((\vga_0|videoSync|pixel_column\(4)))) # (!\vga_0|videoSync|pixel_column\(5) & (\vga_0|videoSync|pixel_column\(6))))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1111111011110100",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \vga_0|videoSync|pixel_column\(5),
-	datab => \vga_0|videoSync|pixel_column\(6),
-	datac => \vga_0|videoSync|pixel_column\(7),
-	datad => \vga_0|videoSync|pixel_column\(4),
-	combout => \vga_0|videoGen|Mux30~0_combout\);
-
--- Location: LCCOMB_X24_Y20_N30
-\vga_0|videoGen|char_addr[3]~31\ : cycloneii_lcell_comb
--- Equation(s):
--- \vga_0|videoGen|char_addr[3]~31_combout\ = (\vga_0|videoGen|LessThan13~0_combout\ & ((\vga_0|videoGen|Equal2~0_combout\ & ((!\vga_0|videoGen|Mux30~0_combout\))) # (!\vga_0|videoGen|Equal2~0_combout\ & (\vga_0|videoGen|Mux37~0_combout\)))) # 
--- (!\vga_0|videoGen|LessThan13~0_combout\ & (((\vga_0|videoGen|Mux37~0_combout\))))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0111000011111000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \vga_0|videoGen|LessThan13~0_combout\,
-	datab => \vga_0|videoGen|Equal2~0_combout\,
-	datac => \vga_0|videoGen|Mux37~0_combout\,
-	datad => \vga_0|videoGen|Mux30~0_combout\,
-	combout => \vga_0|videoGen|char_addr[3]~31_combout\);
-
--- Location: LCCOMB_X25_Y20_N24
-\vga_0|videoGen|Mux24~0\ : cycloneii_lcell_comb
--- Equation(s):
--- \vga_0|videoGen|Mux24~0_combout\ = (\vga_0|videoSync|pixel_column\(6) & (!\vga_0|videoSync|pixel_column\(7) & (\vga_0|videoSync|pixel_column\(4) & \vga_0|videoSync|pixel_column\(5)))) # (!\vga_0|videoSync|pixel_column\(6) & 
--- (!\vga_0|videoSync|pixel_column\(5) & (\vga_0|videoSync|pixel_column\(7) $ (\vga_0|videoSync|pixel_column\(4)))))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0010000000010100",
+	lut_mask => "0000010100110011",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
 	dataa => \vga_0|videoSync|pixel_column\(6),
 	datab => \vga_0|videoSync|pixel_column\(7),
 	datac => \vga_0|videoSync|pixel_column\(4),
-	datad => \vga_0|videoSync|pixel_column\(5),
-	combout => \vga_0|videoGen|Mux24~0_combout\);
+	datad => \vga_0|videoGen|gameOverT_on~combout\,
+	combout => \vga_0|videoGen|char_addr[3]~26_combout\);
 
--- Location: LCCOMB_X24_Y20_N18
-\vga_0|videoGen|Mux17~0\ : cycloneii_lcell_comb
+-- Location: LCCOMB_X28_Y25_N6
+\vga_0|videoGen|Mux24~0\ : cycloneii_lcell_comb
 -- Equation(s):
--- \vga_0|videoGen|Mux17~0_combout\ = (!\vga_0|videoSync|pixel_column\(7) & ((\vga_0|videoSync|pixel_column\(5) & (!\vga_0|videoSync|pixel_column\(6) & !\vga_0|videoSync|pixel_column\(4))) # (!\vga_0|videoSync|pixel_column\(5) & 
--- (\vga_0|videoSync|pixel_column\(6) & \vga_0|videoSync|pixel_column\(4)))))
+-- \vga_0|videoGen|Mux24~0_combout\ = (\vga_0|videoSync|pixel_column\(4) & (!\vga_0|videoSync|pixel_column\(7) & (\vga_0|videoSync|pixel_column\(5) $ (!\vga_0|videoSync|pixel_column\(6))))) # (!\vga_0|videoSync|pixel_column\(4) & 
+-- (!\vga_0|videoSync|pixel_column\(5) & (!\vga_0|videoSync|pixel_column\(6) & \vga_0|videoSync|pixel_column\(7))))
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "0000010000000010",
+	lut_mask => "0000000110000010",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \vga_0|videoSync|pixel_column\(4),
+	datab => \vga_0|videoSync|pixel_column\(5),
+	datac => \vga_0|videoSync|pixel_column\(6),
+	datad => \vga_0|videoSync|pixel_column\(7),
+	combout => \vga_0|videoGen|Mux24~0_combout\);
+
+-- Location: LCCOMB_X27_Y25_N20
+\vga_0|videoGen|char_addr[3]~27\ : cycloneii_lcell_comb
+-- Equation(s):
+-- \vga_0|videoGen|char_addr[3]~27_combout\ = (\vga_0|videoGen|placeShip_on~combout\ & (((\vga_0|videoGen|Mux24~0_combout\)))) # (!\vga_0|videoGen|placeShip_on~combout\ & (!\vga_0|videoSync|pixel_column\(5) & (\vga_0|videoGen|char_addr[3]~26_combout\)))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1101110000010000",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
 	dataa => \vga_0|videoSync|pixel_column\(5),
-	datab => \vga_0|videoSync|pixel_column\(6),
-	datac => \vga_0|videoSync|pixel_column\(7),
-	datad => \vga_0|videoSync|pixel_column\(4),
-	combout => \vga_0|videoGen|Mux17~0_combout\);
+	datab => \vga_0|videoGen|placeShip_on~combout\,
+	datac => \vga_0|videoGen|char_addr[3]~26_combout\,
+	datad => \vga_0|videoGen|Mux24~0_combout\,
+	combout => \vga_0|videoGen|char_addr[3]~27_combout\);
 
--- Location: LCCOMB_X24_Y20_N28
+-- Location: LCCOMB_X27_Y25_N4
+\vga_0|videoGen|Mux30~0\ : cycloneii_lcell_comb
+-- Equation(s):
+-- \vga_0|videoGen|Mux30~0_combout\ = (\vga_0|videoSync|pixel_column\(7)) # ((\vga_0|videoSync|pixel_column\(5) & (\vga_0|videoSync|pixel_column\(4))) # (!\vga_0|videoSync|pixel_column\(5) & ((\vga_0|videoSync|pixel_column\(6)))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1111101111111000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \vga_0|videoSync|pixel_column\(4),
+	datab => \vga_0|videoSync|pixel_column\(5),
+	datac => \vga_0|videoSync|pixel_column\(7),
+	datad => \vga_0|videoSync|pixel_column\(6),
+	combout => \vga_0|videoGen|Mux30~0_combout\);
+
+-- Location: LCCOMB_X27_Y25_N10
+\vga_0|videoGen|Mux37~0\ : cycloneii_lcell_comb
+-- Equation(s):
+-- \vga_0|videoGen|Mux37~0_combout\ = (!\vga_0|videoSync|pixel_column\(6) & (!\vga_0|videoSync|pixel_column\(7) & (\vga_0|videoSync|pixel_column\(5) $ (\vga_0|videoSync|pixel_column\(4)))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0000000000010100",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \vga_0|videoSync|pixel_column\(6),
+	datab => \vga_0|videoSync|pixel_column\(5),
+	datac => \vga_0|videoSync|pixel_column\(4),
+	datad => \vga_0|videoSync|pixel_column\(7),
+	combout => \vga_0|videoGen|Mux37~0_combout\);
+
+-- Location: LCCOMB_X27_Y25_N30
+\vga_0|videoGen|char_addr[3]~28\ : cycloneii_lcell_comb
+-- Equation(s):
+-- \vga_0|videoGen|char_addr[3]~28_combout\ = (\vga_0|videoGen|LessThan13~3_combout\ & ((\vga_0|videoGen|Equal2~0_combout\ & (!\vga_0|videoGen|Mux30~0_combout\)) # (!\vga_0|videoGen|Equal2~0_combout\ & ((\vga_0|videoGen|Mux37~0_combout\))))) # 
+-- (!\vga_0|videoGen|LessThan13~3_combout\ & (((\vga_0|videoGen|Mux37~0_combout\))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0111111100001000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \vga_0|videoGen|LessThan13~3_combout\,
+	datab => \vga_0|videoGen|Equal2~0_combout\,
+	datac => \vga_0|videoGen|Mux30~0_combout\,
+	datad => \vga_0|videoGen|Mux37~0_combout\,
+	combout => \vga_0|videoGen|char_addr[3]~28_combout\);
+
+-- Location: LCCOMB_X27_Y25_N24
 \vga_0|videoGen|char_addr[3]~29\ : cycloneii_lcell_comb
 -- Equation(s):
--- \vga_0|videoGen|char_addr[3]~29_combout\ = (\vga_0|videoGen|gameOverT_on~combout\ & (((\vga_0|videoGen|Mux17~0_combout\)))) # (!\vga_0|videoGen|gameOverT_on~combout\ & (!\vga_0|videoSync|pixel_column\(7) & (!\vga_0|videoSync|pixel_column\(5))))
+-- \vga_0|videoGen|char_addr[3]~29_combout\ = (!\vga_0|videoGen|char_addr[1]~8_combout\ & ((\vga_0|videoGen|char_addr[0]~12_combout\ & (\vga_0|videoGen|char_addr[3]~27_combout\)) # (!\vga_0|videoGen|char_addr[0]~12_combout\ & 
+-- ((\vga_0|videoGen|char_addr[3]~28_combout\)))))
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "1100110100000001",
+	lut_mask => "0011000100100000",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \vga_0|videoSync|pixel_column\(7),
-	datab => \vga_0|videoGen|gameOverT_on~combout\,
-	datac => \vga_0|videoSync|pixel_column\(5),
-	datad => \vga_0|videoGen|Mux17~0_combout\,
+	dataa => \vga_0|videoGen|char_addr[0]~12_combout\,
+	datab => \vga_0|videoGen|char_addr[1]~8_combout\,
+	datac => \vga_0|videoGen|char_addr[3]~27_combout\,
+	datad => \vga_0|videoGen|char_addr[3]~28_combout\,
 	combout => \vga_0|videoGen|char_addr[3]~29_combout\);
 
--- Location: LCCOMB_X25_Y20_N22
+-- Location: LCCOMB_X27_Y25_N6
 \vga_0|videoGen|char_addr[3]~30\ : cycloneii_lcell_comb
 -- Equation(s):
--- \vga_0|videoGen|char_addr[3]~30_combout\ = (\vga_0|videoGen|char_addr[0]~9_combout\ & ((\vga_0|videoGen|placeShip_on~combout\ & (\vga_0|videoGen|Mux24~0_combout\)) # (!\vga_0|videoGen|placeShip_on~combout\ & ((\vga_0|videoGen|char_addr[3]~29_combout\)))))
+-- \vga_0|videoGen|char_addr[3]~30_combout\ = (\vga_0|videoGen|char_addr[3]~29_combout\) # ((\vga_0|videoGen|LessThan13~4_combout\ & (!\vga_0|videoSync|pixel_column\(5) & \vga_0|videoGen|char_addr[1]~8_combout\)))
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "1100010010000000",
+	lut_mask => "1111001011110000",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \vga_0|videoGen|placeShip_on~combout\,
-	datab => \vga_0|videoGen|char_addr[0]~9_combout\,
-	datac => \vga_0|videoGen|Mux24~0_combout\,
-	datad => \vga_0|videoGen|char_addr[3]~29_combout\,
+	dataa => \vga_0|videoGen|LessThan13~4_combout\,
+	datab => \vga_0|videoSync|pixel_column\(5),
+	datac => \vga_0|videoGen|char_addr[3]~29_combout\,
+	datad => \vga_0|videoGen|char_addr[1]~8_combout\,
 	combout => \vga_0|videoGen|char_addr[3]~30_combout\);
 
--- Location: LCCOMB_X25_Y20_N28
-\vga_0|videoGen|char_addr[3]~32\ : cycloneii_lcell_comb
--- Equation(s):
--- \vga_0|videoGen|char_addr[3]~32_combout\ = (!\vga_0|videoGen|char_addr[1]~8_combout\ & ((\vga_0|videoGen|char_addr[3]~30_combout\) # ((!\vga_0|videoGen|char_addr[0]~9_combout\ & \vga_0|videoGen|char_addr[3]~31_combout\))))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0101010100010000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \vga_0|videoGen|char_addr[1]~8_combout\,
-	datab => \vga_0|videoGen|char_addr[0]~9_combout\,
-	datac => \vga_0|videoGen|char_addr[3]~31_combout\,
-	datad => \vga_0|videoGen|char_addr[3]~30_combout\,
-	combout => \vga_0|videoGen|char_addr[3]~32_combout\);
-
--- Location: LCCOMB_X25_Y20_N6
-\vga_0|videoGen|char_addr[3]~33\ : cycloneii_lcell_comb
--- Equation(s):
--- \vga_0|videoGen|char_addr[3]~33_combout\ = (\vga_0|videoGen|char_addr[3]~32_combout\) # ((\vga_0|videoGen|char_addr[1]~8_combout\ & (!\vga_0|videoSync|pixel_column\(5) & \vga_0|videoGen|LessThan13~1_combout\)))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1111111100100000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \vga_0|videoGen|char_addr[1]~8_combout\,
-	datab => \vga_0|videoSync|pixel_column\(5),
-	datac => \vga_0|videoGen|LessThan13~1_combout\,
-	datad => \vga_0|videoGen|char_addr[3]~32_combout\,
-	combout => \vga_0|videoGen|char_addr[3]~33_combout\);
-
--- Location: LCCOMB_X25_Y20_N2
+-- Location: LCCOMB_X27_Y25_N2
 \vga_0|videoGen|char_addr[3]\ : cycloneii_lcell_comb
 -- Equation(s):
--- \vga_0|videoGen|char_addr\(3) = (GLOBAL(\vga_0|videoGen|char_addr[5]~7clkctrl_outclk\) & ((\vga_0|videoGen|char_addr[3]~33_combout\))) # (!GLOBAL(\vga_0|videoGen|char_addr[5]~7clkctrl_outclk\) & (\vga_0|videoGen|char_addr\(3)))
+-- \vga_0|videoGen|char_addr\(3) = (GLOBAL(\vga_0|videoGen|char_addr[5]~7clkctrl_outclk\) & ((\vga_0|videoGen|char_addr[3]~30_combout\))) # (!GLOBAL(\vga_0|videoGen|char_addr[5]~7clkctrl_outclk\) & (\vga_0|videoGen|char_addr\(3)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -5556,83 +4315,100 @@ GENERIC MAP (
 PORT MAP (
 	datab => \vga_0|videoGen|char_addr\(3),
 	datac => \vga_0|videoGen|char_addr[5]~7clkctrl_outclk\,
-	datad => \vga_0|videoGen|char_addr[3]~33_combout\,
+	datad => \vga_0|videoGen|char_addr[3]~30_combout\,
 	combout => \vga_0|videoGen|char_addr\(3));
 
--- Location: LCCOMB_X24_Y20_N6
+-- Location: LCCOMB_X25_Y26_N26
+\vga_0|videoGen|char_addr[4]~33\ : cycloneii_lcell_comb
+-- Equation(s):
+-- \vga_0|videoGen|char_addr[4]~33_combout\ = (\vga_0|videoSync|pixel_column\(5) & (((!\vga_0|videoSync|pixel_column\(4)) # (!\vga_0|videoGen|LessThan13~3_combout\)) # (!\vga_0|videoGen|Equal3~1_combout\)))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0100110011001100",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \vga_0|videoGen|Equal3~1_combout\,
+	datab => \vga_0|videoSync|pixel_column\(5),
+	datac => \vga_0|videoGen|LessThan13~3_combout\,
+	datad => \vga_0|videoSync|pixel_column\(4),
+	combout => \vga_0|videoGen|char_addr[4]~33_combout\);
+
+-- Location: LCCOMB_X25_Y26_N24
 \vga_0|videoGen|Mux23~0\ : cycloneii_lcell_comb
 -- Equation(s):
--- \vga_0|videoGen|Mux23~0_combout\ = (\vga_0|videoSync|pixel_column\(7) & ((\vga_0|videoSync|pixel_column\(6)) # ((!\vga_0|videoSync|pixel_column\(4))))) # (!\vga_0|videoSync|pixel_column\(7) & ((\vga_0|videoSync|pixel_column\(4)) # 
+-- \vga_0|videoGen|Mux23~0_combout\ = (\vga_0|videoSync|pixel_column\(4) & ((\vga_0|videoSync|pixel_column\(6)) # ((!\vga_0|videoSync|pixel_column\(7))))) # (!\vga_0|videoSync|pixel_column\(4) & ((\vga_0|videoSync|pixel_column\(7)) # 
 -- (\vga_0|videoSync|pixel_column\(6) $ (\vga_0|videoSync|pixel_column\(5)))))
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "1101110110111110",
+	lut_mask => "1101101111011110",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \vga_0|videoSync|pixel_column\(4),
+	datab => \vga_0|videoSync|pixel_column\(6),
+	datac => \vga_0|videoSync|pixel_column\(7),
+	datad => \vga_0|videoSync|pixel_column\(5),
+	combout => \vga_0|videoGen|Mux23~0_combout\);
+
+-- Location: LCCOMB_X25_Y26_N2
+\vga_0|videoGen|Mux9~0\ : cycloneii_lcell_comb
+-- Equation(s):
+-- \vga_0|videoGen|Mux9~0_combout\ = (\vga_0|videoSync|pixel_column\(5) & ((\vga_0|videoGen|gameOverT_on~combout\ $ (\vga_0|videoSync|pixel_column\(4))))) # (!\vga_0|videoSync|pixel_column\(5) & ((\vga_0|videoSync|pixel_column\(6)) # 
+-- (\vga_0|videoGen|gameOverT_on~combout\ $ (\vga_0|videoSync|pixel_column\(4)))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0100111111110100",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \vga_0|videoSync|pixel_column\(5),
+	datab => \vga_0|videoSync|pixel_column\(6),
+	datac => \vga_0|videoGen|gameOverT_on~combout\,
+	datad => \vga_0|videoSync|pixel_column\(4),
+	combout => \vga_0|videoGen|Mux9~0_combout\);
+
+-- Location: LCCOMB_X25_Y26_N14
+\vga_0|videoGen|char_addr[4]~31\ : cycloneii_lcell_comb
+-- Equation(s):
+-- \vga_0|videoGen|char_addr[4]~31_combout\ = (\vga_0|videoGen|placeShip_on~combout\ & (((!\vga_0|videoGen|Mux23~0_combout\)))) # (!\vga_0|videoGen|placeShip_on~combout\ & (!\vga_0|videoSync|pixel_column\(7) & ((!\vga_0|videoGen|Mux9~0_combout\))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0000110000011101",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
 	dataa => \vga_0|videoSync|pixel_column\(7),
-	datab => \vga_0|videoSync|pixel_column\(6),
-	datac => \vga_0|videoSync|pixel_column\(5),
-	datad => \vga_0|videoSync|pixel_column\(4),
-	combout => \vga_0|videoGen|Mux23~0_combout\);
+	datab => \vga_0|videoGen|placeShip_on~combout\,
+	datac => \vga_0|videoGen|Mux23~0_combout\,
+	datad => \vga_0|videoGen|Mux9~0_combout\,
+	combout => \vga_0|videoGen|char_addr[4]~31_combout\);
 
--- Location: LCCOMB_X27_Y20_N26
-\vga_0|videoGen|Mux9~0\ : cycloneii_lcell_comb
+-- Location: LCCOMB_X25_Y25_N10
+\vga_0|videoGen|Mux36~0\ : cycloneii_lcell_comb
 -- Equation(s):
--- \vga_0|videoGen|Mux9~0_combout\ = (\vga_0|videoSync|pixel_column\(6) & (((\vga_0|videoSync|pixel_column\(7)) # (!\vga_0|videoSync|pixel_column\(5))))) # (!\vga_0|videoSync|pixel_column\(6) & ((\vga_0|videoGen|gameOverT_on~combout\ & 
--- ((!\vga_0|videoSync|pixel_column\(7)))) # (!\vga_0|videoGen|gameOverT_on~combout\ & (\vga_0|videoSync|pixel_column\(5) & \vga_0|videoSync|pixel_column\(7)))))
+-- \vga_0|videoGen|Mux36~0_combout\ = (\vga_0|videoSync|pixel_column\(6)) # ((\vga_0|videoSync|pixel_column\(7)) # (\vga_0|videoSync|pixel_column\(5) $ (\vga_0|videoSync|pixel_column\(4))))
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "1011101001001110",
+	lut_mask => "1111111110111110",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
 	dataa => \vga_0|videoSync|pixel_column\(6),
-	datab => \vga_0|videoGen|gameOverT_on~combout\,
-	datac => \vga_0|videoSync|pixel_column\(5),
+	datab => \vga_0|videoSync|pixel_column\(5),
+	datac => \vga_0|videoSync|pixel_column\(4),
 	datad => \vga_0|videoSync|pixel_column\(7),
-	combout => \vga_0|videoGen|Mux9~0_combout\);
-
--- Location: LCCOMB_X27_Y20_N24
-\vga_0|videoGen|char_addr[4]~34\ : cycloneii_lcell_comb
--- Equation(s):
--- \vga_0|videoGen|char_addr[4]~34_combout\ = (\vga_0|videoGen|placeShip_on~combout\ & (((!\vga_0|videoGen|Mux23~0_combout\)))) # (!\vga_0|videoGen|placeShip_on~combout\ & (!\vga_0|videoSync|pixel_column\(4) & ((!\vga_0|videoGen|Mux9~0_combout\))))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0000101000011011",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \vga_0|videoGen|placeShip_on~combout\,
-	datab => \vga_0|videoSync|pixel_column\(4),
-	datac => \vga_0|videoGen|Mux23~0_combout\,
-	datad => \vga_0|videoGen|Mux9~0_combout\,
-	combout => \vga_0|videoGen|char_addr[4]~34_combout\);
-
--- Location: LCCOMB_X24_Y20_N4
-\vga_0|videoGen|Mux36~0\ : cycloneii_lcell_comb
--- Equation(s):
--- \vga_0|videoGen|Mux36~0_combout\ = (\vga_0|videoSync|pixel_column\(7)) # ((\vga_0|videoSync|pixel_column\(6)) # (\vga_0|videoSync|pixel_column\(5) $ (\vga_0|videoSync|pixel_column\(4))))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1110111111111110",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \vga_0|videoSync|pixel_column\(7),
-	datab => \vga_0|videoSync|pixel_column\(6),
-	datac => \vga_0|videoSync|pixel_column\(5),
-	datad => \vga_0|videoSync|pixel_column\(4),
 	combout => \vga_0|videoGen|Mux36~0_combout\);
 
--- Location: LCCOMB_X27_Y20_N22
-\vga_0|videoGen|char_addr[4]~55\ : cycloneii_lcell_comb
+-- Location: LCCOMB_X25_Y25_N2
+\vga_0|videoGen|char_addr[4]~52\ : cycloneii_lcell_comb
 -- Equation(s):
--- \vga_0|videoGen|char_addr[4]~55_combout\ = (!\vga_0|videoSync|pixel_column\(9) & (\vga_0|videoGen|Equal2~0_combout\ & (\vga_0|videoSync|pixel_column\(8) & !\vga_0|videoGen|Mux36~0_combout\)))
+-- \vga_0|videoGen|char_addr[4]~52_combout\ = (!\vga_0|videoSync|pixel_column\(9) & (\vga_0|videoGen|Equal2~0_combout\ & (\vga_0|videoSync|pixel_column\(8) & !\vga_0|videoGen|Mux36~0_combout\)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -5644,12 +4420,12 @@ PORT MAP (
 	datab => \vga_0|videoGen|Equal2~0_combout\,
 	datac => \vga_0|videoSync|pixel_column\(8),
 	datad => \vga_0|videoGen|Mux36~0_combout\,
-	combout => \vga_0|videoGen|char_addr[4]~55_combout\);
+	combout => \vga_0|videoGen|char_addr[4]~52_combout\);
 
--- Location: LCCOMB_X27_Y20_N10
-\vga_0|videoGen|char_addr[4]~35\ : cycloneii_lcell_comb
+-- Location: LCCOMB_X25_Y26_N12
+\vga_0|videoGen|char_addr[4]~32\ : cycloneii_lcell_comb
 -- Equation(s):
--- \vga_0|videoGen|char_addr[4]~35_combout\ = (!\vga_0|videoGen|char_addr[1]~8_combout\ & ((\vga_0|videoGen|char_addr[4]~55_combout\) # ((\vga_0|videoGen|char_addr[0]~9_combout\ & \vga_0|videoGen|char_addr[4]~34_combout\))))
+-- \vga_0|videoGen|char_addr[4]~32_combout\ = (!\vga_0|videoGen|char_addr[1]~8_combout\ & ((\vga_0|videoGen|char_addr[4]~52_combout\) # ((\vga_0|videoGen|char_addr[0]~12_combout\ & \vga_0|videoGen|char_addr[4]~31_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -5657,220 +4433,188 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \vga_0|videoGen|char_addr[0]~9_combout\,
+	dataa => \vga_0|videoGen|char_addr[0]~12_combout\,
 	datab => \vga_0|videoGen|char_addr[1]~8_combout\,
-	datac => \vga_0|videoGen|char_addr[4]~34_combout\,
-	datad => \vga_0|videoGen|char_addr[4]~55_combout\,
-	combout => \vga_0|videoGen|char_addr[4]~35_combout\);
+	datac => \vga_0|videoGen|char_addr[4]~31_combout\,
+	datad => \vga_0|videoGen|char_addr[4]~52_combout\,
+	combout => \vga_0|videoGen|char_addr[4]~32_combout\);
 
--- Location: LCCOMB_X27_Y20_N20
-\vga_0|videoGen|char_addr[4]~36\ : cycloneii_lcell_comb
+-- Location: LCCOMB_X25_Y26_N28
+\vga_0|videoGen|char_addr[4]~34\ : cycloneii_lcell_comb
 -- Equation(s):
--- \vga_0|videoGen|char_addr[4]~36_combout\ = (\vga_0|videoGen|char_addr[4]~35_combout\) # ((\vga_0|videoGen|char_addr[1]~17_combout\ & ((!\vga_0|videoSync|pixel_column\(4)) # (!\vga_0|videoGen|hit_on~combout\))))
+-- \vga_0|videoGen|char_addr[4]~34_combout\ = (\vga_0|videoGen|char_addr[4]~32_combout\) # ((\vga_0|videoGen|char_addr[1]~8_combout\ & (\vga_0|videoGen|char_addr[4]~33_combout\ & \vga_0|videoGen|LessThan13~4_combout\)))
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "1111111101110000",
+	lut_mask => "1111111110000000",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \vga_0|videoGen|hit_on~combout\,
-	datab => \vga_0|videoSync|pixel_column\(4),
-	datac => \vga_0|videoGen|char_addr[1]~17_combout\,
-	datad => \vga_0|videoGen|char_addr[4]~35_combout\,
-	combout => \vga_0|videoGen|char_addr[4]~36_combout\);
+	dataa => \vga_0|videoGen|char_addr[1]~8_combout\,
+	datab => \vga_0|videoGen|char_addr[4]~33_combout\,
+	datac => \vga_0|videoGen|LessThan13~4_combout\,
+	datad => \vga_0|videoGen|char_addr[4]~32_combout\,
+	combout => \vga_0|videoGen|char_addr[4]~34_combout\);
 
--- Location: LCCOMB_X27_Y20_N0
+-- Location: LCCOMB_X25_Y26_N22
 \vga_0|videoGen|char_addr[4]\ : cycloneii_lcell_comb
 -- Equation(s):
--- \vga_0|videoGen|char_addr\(4) = (GLOBAL(\vga_0|videoGen|char_addr[5]~7clkctrl_outclk\) & ((\vga_0|videoGen|char_addr[4]~36_combout\))) # (!GLOBAL(\vga_0|videoGen|char_addr[5]~7clkctrl_outclk\) & (\vga_0|videoGen|char_addr\(4)))
+-- \vga_0|videoGen|char_addr\(4) = (GLOBAL(\vga_0|videoGen|char_addr[5]~7clkctrl_outclk\) & ((\vga_0|videoGen|char_addr[4]~34_combout\))) # (!GLOBAL(\vga_0|videoGen|char_addr[5]~7clkctrl_outclk\) & (\vga_0|videoGen|char_addr\(4)))
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "1111000011001100",
+	lut_mask => "1111110000001100",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
 	datab => \vga_0|videoGen|char_addr\(4),
-	datac => \vga_0|videoGen|char_addr[4]~36_combout\,
-	datad => \vga_0|videoGen|char_addr[5]~7clkctrl_outclk\,
+	datac => \vga_0|videoGen|char_addr[5]~7clkctrl_outclk\,
+	datad => \vga_0|videoGen|char_addr[4]~34_combout\,
 	combout => \vga_0|videoGen|char_addr\(4));
 
--- Location: LCCOMB_X28_Y22_N14
-\vga_0|videoGen|Mux35~0\ : cycloneii_lcell_comb
+-- Location: LCCOMB_X27_Y24_N4
+\vga_0|videoGen|char_addr[5]~42\ : cycloneii_lcell_comb
 -- Equation(s):
--- \vga_0|videoGen|Mux35~0_combout\ = (!\vga_0|videoSync|pixel_column\(6) & (!\vga_0|videoSync|pixel_column\(7) & ((\vga_0|videoSync|pixel_column\(5)) # (\vga_0|videoSync|pixel_column\(4)))))
+-- \vga_0|videoGen|char_addr[5]~42_combout\ = (!\vga_0|videoSync|pixel_column\(9) & (\vga_0|videoSync|pixel_column\(8) & ((\vga_0|videoGen|Equal2~0_combout\) # (\vga_0|videoGen|Equal3~1_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "0000000001010100",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \vga_0|videoSync|pixel_column\(6),
-	datab => \vga_0|videoSync|pixel_column\(5),
-	datac => \vga_0|videoSync|pixel_column\(4),
-	datad => \vga_0|videoSync|pixel_column\(7),
-	combout => \vga_0|videoGen|Mux35~0_combout\);
-
--- Location: LCCOMB_X27_Y22_N20
-\vga_0|videoGen|char_addr[5]~37\ : cycloneii_lcell_comb
--- Equation(s):
--- \vga_0|videoGen|char_addr[5]~37_combout\ = (!\vga_0|videoSync|pixel_column\(8) & (!\vga_0|videoSync|pixel_column\(9) & (\vga_0|videoGen|Equal3~1_combout\ & \vga_0|videoGen|Mux37~0_combout\)))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0001000000000000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \vga_0|videoSync|pixel_column\(8),
-	datab => \vga_0|videoSync|pixel_column\(9),
-	datac => \vga_0|videoGen|Equal3~1_combout\,
-	datad => \vga_0|videoGen|Mux37~0_combout\,
-	combout => \vga_0|videoGen|char_addr[5]~37_combout\);
-
--- Location: LCCOMB_X25_Y22_N6
-\vga_0|videoGen|char_addr[5]~38\ : cycloneii_lcell_comb
--- Equation(s):
--- \vga_0|videoGen|char_addr[5]~38_combout\ = (\vga_0|videoGen|illegal_on~combout\) # ((\vga_0|videoGen|gameOverT_on~combout\ & !\vga_0|videoGen|placeShip_on~combout\))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1100110011111100",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	datab => \vga_0|videoGen|illegal_on~combout\,
-	datac => \vga_0|videoGen|gameOverT_on~combout\,
-	datad => \vga_0|videoGen|placeShip_on~combout\,
-	combout => \vga_0|videoGen|char_addr[5]~38_combout\);
-
--- Location: LCCOMB_X25_Y22_N0
-\vga_0|videoGen|char_addr[5]~56\ : cycloneii_lcell_comb
--- Equation(s):
--- \vga_0|videoGen|char_addr[5]~56_combout\ = (!\vga_0|videoGen|placeShip_on~combout\ & ((\vga_0|videoSync|pixel_column\(9)) # ((\vga_0|videoSync|pixel_column\(8)) # (!\vga_0|videoGen|Equal2~0_combout\))))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0000000011101111",
+	lut_mask => "0101010000000000",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
 	dataa => \vga_0|videoSync|pixel_column\(9),
-	datab => \vga_0|videoSync|pixel_column\(8),
-	datac => \vga_0|videoGen|Equal2~0_combout\,
-	datad => \vga_0|videoGen|placeShip_on~combout\,
-	combout => \vga_0|videoGen|char_addr[5]~56_combout\);
-
--- Location: LCCOMB_X27_Y22_N28
-\vga_0|videoGen|char_addr[5]~43\ : cycloneii_lcell_comb
--- Equation(s):
--- \vga_0|videoGen|char_addr[5]~43_combout\ = (\vga_0|videoSync|pixel_column\(5) & (!\vga_0|videoGen|char_addr[5]~56_combout\ & (\vga_0|videoSync|pixel_column\(4) $ (!\vga_0|videoGen|char_addr[5]~38_combout\)))) # (!\vga_0|videoSync|pixel_column\(5) & 
--- ((\vga_0|videoGen|char_addr[5]~38_combout\ & ((\vga_0|videoGen|char_addr[5]~56_combout\))) # (!\vga_0|videoGen|char_addr[5]~38_combout\ & (\vga_0|videoSync|pixel_column\(4) & !\vga_0|videoGen|char_addr[5]~56_combout\))))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0101000010000110",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \vga_0|videoSync|pixel_column\(5),
-	datab => \vga_0|videoSync|pixel_column\(4),
-	datac => \vga_0|videoGen|char_addr[5]~38_combout\,
-	datad => \vga_0|videoGen|char_addr[5]~56_combout\,
-	combout => \vga_0|videoGen|char_addr[5]~43_combout\);
-
--- Location: LCCOMB_X28_Y22_N0
-\vga_0|videoGen|char_addr[5]~42\ : cycloneii_lcell_comb
--- Equation(s):
--- \vga_0|videoGen|char_addr[5]~42_combout\ = (\vga_0|videoSync|pixel_column\(6) & !\vga_0|videoSync|pixel_column\(7))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0000000011110000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	datac => \vga_0|videoSync|pixel_column\(6),
-	datad => \vga_0|videoSync|pixel_column\(7),
+	datab => \vga_0|videoGen|Equal2~0_combout\,
+	datac => \vga_0|videoGen|Equal3~1_combout\,
+	datad => \vga_0|videoSync|pixel_column\(8),
 	combout => \vga_0|videoGen|char_addr[5]~42_combout\);
 
--- Location: LCCOMB_X27_Y22_N8
-\vga_0|videoGen|char_addr[5]~40\ : cycloneii_lcell_comb
+-- Location: LCCOMB_X27_Y24_N20
+\vga_0|videoGen|Mux35~0\ : cycloneii_lcell_comb
 -- Equation(s):
--- \vga_0|videoGen|char_addr[5]~40_combout\ = (\vga_0|videoSync|pixel_column\(5) & (((\vga_0|videoGen|char_addr[5]~38_combout\) # (!\vga_0|videoGen|char_addr[5]~56_combout\)) # (!\vga_0|videoSync|pixel_column\(4)))) # (!\vga_0|videoSync|pixel_column\(5) & 
--- (\vga_0|videoSync|pixel_column\(4)))
+-- \vga_0|videoGen|Mux35~0_combout\ = (!\vga_0|videoSync|pixel_column\(6) & (!\vga_0|videoSync|pixel_column\(7) & ((\vga_0|videoSync|pixel_column\(4)) # (\vga_0|videoSync|pixel_column\(5)))))
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "1110011011101110",
+	lut_mask => "0000000000001110",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \vga_0|videoSync|pixel_column\(4),
+	datab => \vga_0|videoSync|pixel_column\(5),
+	datac => \vga_0|videoSync|pixel_column\(6),
+	datad => \vga_0|videoSync|pixel_column\(7),
+	combout => \vga_0|videoGen|Mux35~0_combout\);
+
+-- Location: LCCOMB_X28_Y24_N18
+\vga_0|videoGen|char_addr[5]~35\ : cycloneii_lcell_comb
+-- Equation(s):
+-- \vga_0|videoGen|char_addr[5]~35_combout\ = (\vga_0|videoGen|Equal2~0_combout\ & ((\vga_0|videoGen|LessThan13~3_combout\) # ((!\vga_0|videoGen|placeShip_on~combout\ & \vga_0|videoGen|gameOverT_on~combout\)))) # (!\vga_0|videoGen|Equal2~0_combout\ & 
+-- (((!\vga_0|videoGen|placeShip_on~combout\ & \vga_0|videoGen|gameOverT_on~combout\))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1000111110001000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \vga_0|videoGen|Equal2~0_combout\,
+	datab => \vga_0|videoGen|LessThan13~3_combout\,
+	datac => \vga_0|videoGen|placeShip_on~combout\,
+	datad => \vga_0|videoGen|gameOverT_on~combout\,
+	combout => \vga_0|videoGen|char_addr[5]~35_combout\);
+
+-- Location: LCCOMB_X27_Y24_N6
+\vga_0|videoGen|char_addr[5]~36\ : cycloneii_lcell_comb
+-- Equation(s):
+-- \vga_0|videoGen|char_addr[5]~36_combout\ = (\vga_0|videoSync|pixel_column\(4) & (!\vga_0|videoGen|char_addr[5]~6_combout\ & (\vga_0|videoSync|pixel_column\(5) $ (!\vga_0|videoGen|char_addr[5]~35_combout\)))) # (!\vga_0|videoSync|pixel_column\(4) & 
+-- ((\vga_0|videoGen|char_addr[5]~6_combout\ & ((\vga_0|videoGen|char_addr[5]~35_combout\))) # (!\vga_0|videoGen|char_addr[5]~6_combout\ & (\vga_0|videoSync|pixel_column\(5) & !\vga_0|videoGen|char_addr[5]~35_combout\))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0011100000000110",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
 	dataa => \vga_0|videoSync|pixel_column\(5),
 	datab => \vga_0|videoSync|pixel_column\(4),
-	datac => \vga_0|videoGen|char_addr[5]~38_combout\,
-	datad => \vga_0|videoGen|char_addr[5]~56_combout\,
-	combout => \vga_0|videoGen|char_addr[5]~40_combout\);
+	datac => \vga_0|videoGen|char_addr[5]~6_combout\,
+	datad => \vga_0|videoGen|char_addr[5]~35_combout\,
+	combout => \vga_0|videoGen|char_addr[5]~36_combout\);
 
--- Location: LCCOMB_X27_Y22_N10
+-- Location: LCCOMB_X27_Y24_N16
+\vga_0|videoGen|char_addr[5]~37\ : cycloneii_lcell_comb
+-- Equation(s):
+-- \vga_0|videoGen|char_addr[5]~37_combout\ = (\vga_0|videoSync|pixel_column\(6) & (!\vga_0|videoSync|pixel_column\(7) & !\vga_0|videoGen|char_addr[5]~36_combout\))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0000000000001010",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \vga_0|videoSync|pixel_column\(6),
+	datac => \vga_0|videoSync|pixel_column\(7),
+	datad => \vga_0|videoGen|char_addr[5]~36_combout\,
+	combout => \vga_0|videoGen|char_addr[5]~37_combout\);
+
+-- Location: LCCOMB_X28_Y24_N24
+\vga_0|videoGen|char_addr[5]~38\ : cycloneii_lcell_comb
+-- Equation(s):
+-- \vga_0|videoGen|char_addr[5]~38_combout\ = (\vga_0|videoSync|pixel_column\(4) & (((\vga_0|videoGen|char_addr[5]~35_combout\) # (!\vga_0|videoGen|char_addr[5]~6_combout\)) # (!\vga_0|videoSync|pixel_column\(5)))) # (!\vga_0|videoSync|pixel_column\(4) & 
+-- (\vga_0|videoSync|pixel_column\(5)))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1110111001101110",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \vga_0|videoSync|pixel_column\(4),
+	datab => \vga_0|videoSync|pixel_column\(5),
+	datac => \vga_0|videoGen|char_addr[5]~6_combout\,
+	datad => \vga_0|videoGen|char_addr[5]~35_combout\,
+	combout => \vga_0|videoGen|char_addr[5]~38_combout\);
+
+-- Location: LCCOMB_X28_Y24_N10
 \vga_0|videoGen|char_addr[5]~39\ : cycloneii_lcell_comb
 -- Equation(s):
--- \vga_0|videoGen|char_addr[5]~39_combout\ = (\vga_0|videoSync|pixel_column\(5) & (\vga_0|videoSync|pixel_column\(4) & (!\vga_0|videoGen|char_addr[5]~38_combout\ & !\vga_0|videoGen|char_addr[5]~56_combout\))) # (!\vga_0|videoSync|pixel_column\(5) & 
--- ((\vga_0|videoGen|char_addr[5]~38_combout\ $ (!\vga_0|videoGen|char_addr[5]~56_combout\))))
+-- \vga_0|videoGen|char_addr[5]~39_combout\ = (\vga_0|videoGen|char_addr[5]~35_combout\ & (((\vga_0|videoSync|pixel_column\(4) & \vga_0|videoSync|pixel_column\(5))) # (!\vga_0|videoGen|char_addr[5]~6_combout\))) # (!\vga_0|videoGen|char_addr[5]~35_combout\ & 
+-- ((\vga_0|videoSync|pixel_column\(4) & ((\vga_0|videoGen|char_addr[5]~6_combout\))) # (!\vga_0|videoSync|pixel_column\(4) & (\vga_0|videoSync|pixel_column\(5)))))
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "0101000000001101",
+	lut_mask => "1000111111100100",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \vga_0|videoSync|pixel_column\(5),
-	datab => \vga_0|videoSync|pixel_column\(4),
-	datac => \vga_0|videoGen|char_addr[5]~38_combout\,
-	datad => \vga_0|videoGen|char_addr[5]~56_combout\,
+	dataa => \vga_0|videoSync|pixel_column\(4),
+	datab => \vga_0|videoSync|pixel_column\(5),
+	datac => \vga_0|videoGen|char_addr[5]~6_combout\,
+	datad => \vga_0|videoGen|char_addr[5]~35_combout\,
 	combout => \vga_0|videoGen|char_addr[5]~39_combout\);
 
--- Location: LCCOMB_X27_Y22_N26
-\vga_0|videoGen|char_addr[5]~41\ : cycloneii_lcell_comb
+-- Location: LCCOMB_X28_Y24_N30
+\vga_0|videoGen|char_addr[5]~40\ : cycloneii_lcell_comb
 -- Equation(s):
--- \vga_0|videoGen|char_addr[5]~41_combout\ = (!\vga_0|videoSync|pixel_column\(6) & ((\vga_0|videoSync|pixel_column\(7) & ((\vga_0|videoGen|char_addr[5]~39_combout\))) # (!\vga_0|videoSync|pixel_column\(7) & (\vga_0|videoGen|char_addr[5]~40_combout\))))
+-- \vga_0|videoGen|char_addr[5]~40_combout\ = (!\vga_0|videoSync|pixel_column\(6) & ((\vga_0|videoSync|pixel_column\(7) & ((!\vga_0|videoGen|char_addr[5]~39_combout\))) # (!\vga_0|videoSync|pixel_column\(7) & (\vga_0|videoGen|char_addr[5]~38_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "0011001000010000",
+	lut_mask => "0001000000110010",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
 	dataa => \vga_0|videoSync|pixel_column\(7),
 	datab => \vga_0|videoSync|pixel_column\(6),
-	datac => \vga_0|videoGen|char_addr[5]~40_combout\,
+	datac => \vga_0|videoGen|char_addr[5]~38_combout\,
 	datad => \vga_0|videoGen|char_addr[5]~39_combout\,
-	combout => \vga_0|videoGen|char_addr[5]~41_combout\);
+	combout => \vga_0|videoGen|char_addr[5]~40_combout\);
 
--- Location: LCCOMB_X27_Y22_N30
-\vga_0|videoGen|char_addr[5]~44\ : cycloneii_lcell_comb
+-- Location: LCCOMB_X27_Y24_N30
+\vga_0|videoGen|char_addr[5]~41\ : cycloneii_lcell_comb
 -- Equation(s):
--- \vga_0|videoGen|char_addr[5]~44_combout\ = (!\vga_0|videoGen|hit_on~combout\ & ((\vga_0|videoGen|char_addr[5]~41_combout\) # ((!\vga_0|videoGen|char_addr[5]~43_combout\ & \vga_0|videoGen|char_addr[5]~42_combout\))))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0101010100010000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \vga_0|videoGen|hit_on~combout\,
-	datab => \vga_0|videoGen|char_addr[5]~43_combout\,
-	datac => \vga_0|videoGen|char_addr[5]~42_combout\,
-	datad => \vga_0|videoGen|char_addr[5]~41_combout\,
-	combout => \vga_0|videoGen|char_addr[5]~44_combout\);
-
--- Location: LCCOMB_X27_Y22_N22
-\vga_0|videoGen|char_addr[5]~46\ : cycloneii_lcell_comb
--- Equation(s):
--- \vga_0|videoGen|char_addr[5]~46_combout\ = (\vga_0|videoGen|char_addr[5]~45_combout\ & (\vga_0|videoGen|Mux35~0_combout\)) # (!\vga_0|videoGen|char_addr[5]~45_combout\ & (((\vga_0|videoGen|char_addr[5]~37_combout\) # 
--- (\vga_0|videoGen|char_addr[5]~44_combout\))))
+-- \vga_0|videoGen|char_addr[5]~41_combout\ = (\vga_0|videoGen|hit_on~combout\ & (\vga_0|videoGen|Mux37~0_combout\)) # (!\vga_0|videoGen|hit_on~combout\ & (((\vga_0|videoGen|char_addr[5]~37_combout\) # (\vga_0|videoGen|char_addr[5]~40_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -5878,163 +4622,197 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \vga_0|videoGen|char_addr[5]~45_combout\,
-	datab => \vga_0|videoGen|Mux35~0_combout\,
+	dataa => \vga_0|videoGen|hit_on~combout\,
+	datab => \vga_0|videoGen|Mux37~0_combout\,
 	datac => \vga_0|videoGen|char_addr[5]~37_combout\,
-	datad => \vga_0|videoGen|char_addr[5]~44_combout\,
-	combout => \vga_0|videoGen|char_addr[5]~46_combout\);
+	datad => \vga_0|videoGen|char_addr[5]~40_combout\,
+	combout => \vga_0|videoGen|char_addr[5]~41_combout\);
 
--- Location: LCCOMB_X27_Y22_N12
-\vga_0|videoGen|char_addr[5]\ : cycloneii_lcell_comb
+-- Location: LCCOMB_X27_Y24_N2
+\vga_0|videoGen|char_addr[5]~43\ : cycloneii_lcell_comb
 -- Equation(s):
--- \vga_0|videoGen|char_addr\(5) = (GLOBAL(\vga_0|videoGen|char_addr[5]~7clkctrl_outclk\) & ((\vga_0|videoGen|char_addr[5]~46_combout\))) # (!GLOBAL(\vga_0|videoGen|char_addr[5]~7clkctrl_outclk\) & (\vga_0|videoGen|char_addr\(5)))
+-- \vga_0|videoGen|char_addr[5]~43_combout\ = (\vga_0|videoGen|char_addr[5]~42_combout\ & (\vga_0|videoGen|Mux35~0_combout\)) # (!\vga_0|videoGen|char_addr[5]~42_combout\ & ((\vga_0|videoGen|char_addr[5]~41_combout\)))
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "1111101000001010",
+	lut_mask => "1111001111000000",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \vga_0|videoGen|char_addr\(5),
-	datac => \vga_0|videoGen|char_addr[5]~7clkctrl_outclk\,
-	datad => \vga_0|videoGen|char_addr[5]~46_combout\,
-	combout => \vga_0|videoGen|char_addr\(5));
+	datab => \vga_0|videoGen|char_addr[5]~42_combout\,
+	datac => \vga_0|videoGen|Mux35~0_combout\,
+	datad => \vga_0|videoGen|char_addr[5]~41_combout\,
+	combout => \vga_0|videoGen|char_addr[5]~43_combout\);
 
--- Location: LCCOMB_X27_Y22_N4
-\vga_0|videoGen|char_addr[6]~49\ : cycloneii_lcell_comb
+-- Location: LCCOMB_X27_Y24_N8
+\vga_0|videoGen|char_addr[5]\ : cycloneii_lcell_comb
 -- Equation(s):
--- \vga_0|videoGen|char_addr[6]~49_combout\ = (!\vga_0|videoGen|hit_on~combout\ & (((\vga_0|videoGen|char_addr[5]~38_combout\) # (!\vga_0|videoGen|char_addr[5]~56_combout\)) # (!\vga_0|videoGen|char_addr[6]~6_combout\)))
+-- \vga_0|videoGen|char_addr\(5) = (GLOBAL(\vga_0|videoGen|char_addr[5]~7clkctrl_outclk\) & ((\vga_0|videoGen|char_addr[5]~43_combout\))) # (!GLOBAL(\vga_0|videoGen|char_addr[5]~7clkctrl_outclk\) & (\vga_0|videoGen|char_addr\(5)))
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "0101000101010101",
+	lut_mask => "1111110000001100",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	datab => \vga_0|videoGen|char_addr\(5),
+	datac => \vga_0|videoGen|char_addr[5]~7clkctrl_outclk\,
+	datad => \vga_0|videoGen|char_addr[5]~43_combout\,
+	combout => \vga_0|videoGen|char_addr\(5));
+
+-- Location: LCCOMB_X27_Y24_N24
+\vga_0|videoGen|char_addr[6]~46\ : cycloneii_lcell_comb
+-- Equation(s):
+-- \vga_0|videoGen|char_addr[6]~46_combout\ = (!\vga_0|videoGen|hit_on~combout\ & (!\vga_0|videoGen|char_addr[5]~42_combout\ & (\vga_0|videoGen|char_addr[5]~6_combout\ $ (!\vga_0|videoGen|char_addr[5]~35_combout\))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0001000000000001",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
 	dataa => \vga_0|videoGen|hit_on~combout\,
-	datab => \vga_0|videoGen|char_addr[6]~6_combout\,
-	datac => \vga_0|videoGen|char_addr[5]~38_combout\,
-	datad => \vga_0|videoGen|char_addr[5]~56_combout\,
-	combout => \vga_0|videoGen|char_addr[6]~49_combout\);
+	datab => \vga_0|videoGen|char_addr[5]~42_combout\,
+	datac => \vga_0|videoGen|char_addr[5]~6_combout\,
+	datad => \vga_0|videoGen|char_addr[5]~35_combout\,
+	combout => \vga_0|videoGen|char_addr[6]~46_combout\);
 
--- Location: LCCOMB_X27_Y22_N0
+-- Location: LCCOMB_X27_Y24_N28
+\vga_0|videoGen|char_addr[6]~44\ : cycloneii_lcell_comb
+-- Equation(s):
+-- \vga_0|videoGen|char_addr[6]~44_combout\ = (\vga_0|videoSync|pixel_column\(5) & (\vga_0|videoGen|char_addr[5]~6_combout\ & (\vga_0|videoSync|pixel_column\(4) $ (\vga_0|videoGen|char_addr[5]~35_combout\))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0010000010000000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \vga_0|videoSync|pixel_column\(5),
+	datab => \vga_0|videoSync|pixel_column\(4),
+	datac => \vga_0|videoGen|char_addr[5]~6_combout\,
+	datad => \vga_0|videoGen|char_addr[5]~35_combout\,
+	combout => \vga_0|videoGen|char_addr[6]~44_combout\);
+
+-- Location: LCCOMB_X27_Y24_N26
+\vga_0|videoGen|char_addr[6]~45\ : cycloneii_lcell_comb
+-- Equation(s):
+-- \vga_0|videoGen|char_addr[6]~45_combout\ = (!\vga_0|videoSync|pixel_column\(7) & ((\vga_0|videoGen|char_addr[5]~42_combout\) # ((!\vga_0|videoGen|hit_on~combout\ & !\vga_0|videoGen|char_addr[6]~44_combout\))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0000110000001101",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \vga_0|videoGen|hit_on~combout\,
+	datab => \vga_0|videoGen|char_addr[5]~42_combout\,
+	datac => \vga_0|videoSync|pixel_column\(7),
+	datad => \vga_0|videoGen|char_addr[6]~44_combout\,
+	combout => \vga_0|videoGen|char_addr[6]~45_combout\);
+
+-- Location: LCCOMB_X27_Y24_N14
 \vga_0|videoGen|char_addr[6]~47\ : cycloneii_lcell_comb
 -- Equation(s):
--- \vga_0|videoGen|char_addr[6]~47_combout\ = (!\vga_0|videoSync|pixel_column\(5) & (\vga_0|videoSync|pixel_column\(7) & ((!\vga_0|videoGen|Equal3~1_combout\) # (!\vga_0|videoGen|LessThan13~0_combout\))))
+-- \vga_0|videoGen|char_addr[6]~47_combout\ = (\vga_0|videoGen|char_addr[6]~45_combout\) # ((\vga_0|videoSync|pixel_column\(7) & (!\vga_0|videoSync|pixel_column\(5) & \vga_0|videoGen|char_addr[6]~46_combout\)))
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "0000011100000000",
+	lut_mask => "1111111100100000",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \vga_0|videoGen|LessThan13~0_combout\,
-	datab => \vga_0|videoGen|Equal3~1_combout\,
-	datac => \vga_0|videoSync|pixel_column\(5),
-	datad => \vga_0|videoSync|pixel_column\(7),
+	dataa => \vga_0|videoSync|pixel_column\(7),
+	datab => \vga_0|videoSync|pixel_column\(5),
+	datac => \vga_0|videoGen|char_addr[6]~46_combout\,
+	datad => \vga_0|videoGen|char_addr[6]~45_combout\,
 	combout => \vga_0|videoGen|char_addr[6]~47_combout\);
 
--- Location: LCCOMB_X27_Y22_N18
+-- Location: LCCOMB_X27_Y24_N12
 \vga_0|videoGen|char_addr[6]~48\ : cycloneii_lcell_comb
 -- Equation(s):
--- \vga_0|videoGen|char_addr[6]~48_combout\ = (!\vga_0|videoGen|char_addr[5]~45_combout\ & (\vga_0|videoGen|char_addr[6]~47_combout\ & (\vga_0|videoGen|char_addr[5]~56_combout\ $ (!\vga_0|videoGen|char_addr[5]~38_combout\))))
+-- \vga_0|videoGen|char_addr[6]~48_combout\ = (\vga_0|videoSync|pixel_column\(4) & (!\vga_0|videoGen|char_addr[5]~6_combout\ & (\vga_0|videoSync|pixel_column\(5) $ (!\vga_0|videoGen|char_addr[5]~35_combout\)))) # (!\vga_0|videoSync|pixel_column\(4) & 
+-- (((\vga_0|videoGen|char_addr[5]~6_combout\ & \vga_0|videoGen|char_addr[5]~35_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "0100000100000000",
+	lut_mask => "0011100000000100",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \vga_0|videoGen|char_addr[5]~45_combout\,
-	datab => \vga_0|videoGen|char_addr[5]~56_combout\,
-	datac => \vga_0|videoGen|char_addr[5]~38_combout\,
-	datad => \vga_0|videoGen|char_addr[6]~47_combout\,
+	dataa => \vga_0|videoSync|pixel_column\(5),
+	datab => \vga_0|videoSync|pixel_column\(4),
+	datac => \vga_0|videoGen|char_addr[5]~6_combout\,
+	datad => \vga_0|videoGen|char_addr[5]~35_combout\,
 	combout => \vga_0|videoGen|char_addr[6]~48_combout\);
 
--- Location: LCCOMB_X27_Y22_N14
-\vga_0|videoGen|char_addr[6]~50\ : cycloneii_lcell_comb
--- Equation(s):
--- \vga_0|videoGen|char_addr[6]~50_combout\ = (\vga_0|videoGen|char_addr[6]~48_combout\) # ((!\vga_0|videoSync|pixel_column\(7) & ((\vga_0|videoGen|char_addr[5]~45_combout\) # (\vga_0|videoGen|char_addr[6]~49_combout\))))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1111111100110010",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \vga_0|videoGen|char_addr[5]~45_combout\,
-	datab => \vga_0|videoSync|pixel_column\(7),
-	datac => \vga_0|videoGen|char_addr[6]~49_combout\,
-	datad => \vga_0|videoGen|char_addr[6]~48_combout\,
-	combout => \vga_0|videoGen|char_addr[6]~50_combout\);
-
--- Location: LCCOMB_X25_Y22_N30
-\vga_0|videoGen|char_addr[6]~51\ : cycloneii_lcell_comb
--- Equation(s):
--- \vga_0|videoGen|char_addr[6]~51_combout\ = (\vga_0|videoSync|pixel_column\(4) & (!\vga_0|videoGen|char_addr[5]~56_combout\ & (\vga_0|videoGen|char_addr[5]~38_combout\ $ (!\vga_0|videoSync|pixel_column\(5))))) # (!\vga_0|videoSync|pixel_column\(4) & 
--- (\vga_0|videoGen|char_addr[5]~38_combout\ & (!\vga_0|videoSync|pixel_column\(5) & \vga_0|videoGen|char_addr[5]~56_combout\)))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0000001010010000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \vga_0|videoGen|char_addr[5]~38_combout\,
-	datab => \vga_0|videoSync|pixel_column\(5),
-	datac => \vga_0|videoSync|pixel_column\(4),
-	datad => \vga_0|videoGen|char_addr[5]~56_combout\,
-	combout => \vga_0|videoGen|char_addr[6]~51_combout\);
-
--- Location: LCCOMB_X28_Y22_N30
-\vga_0|videoGen|char_addr[6]~52\ : cycloneii_lcell_comb
--- Equation(s):
--- \vga_0|videoGen|char_addr[6]~52_combout\ = (\vga_0|videoGen|hit_on~combout\ & (!\vga_0|videoGen|Mux40~0_combout\)) # (!\vga_0|videoGen|hit_on~combout\ & (((\vga_0|videoGen|char_addr[5]~42_combout\ & !\vga_0|videoGen|char_addr[6]~51_combout\))))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0101000001011100",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \vga_0|videoGen|Mux40~0_combout\,
-	datab => \vga_0|videoGen|char_addr[5]~42_combout\,
-	datac => \vga_0|videoGen|hit_on~combout\,
-	datad => \vga_0|videoGen|char_addr[6]~51_combout\,
-	combout => \vga_0|videoGen|char_addr[6]~52_combout\);
-
--- Location: LCCOMB_X27_Y22_N16
+-- Location: LCCOMB_X27_Y24_N0
 \vga_0|videoGen|char_addr[6]~53\ : cycloneii_lcell_comb
 -- Equation(s):
--- \vga_0|videoGen|char_addr[6]~53_combout\ = (\vga_0|videoGen|char_addr[5]~45_combout\ & (!\vga_0|videoSync|pixel_column\(6) & (\vga_0|videoGen|char_addr[6]~50_combout\))) # (!\vga_0|videoGen|char_addr[5]~45_combout\ & 
--- ((\vga_0|videoGen|char_addr[6]~52_combout\) # ((!\vga_0|videoSync|pixel_column\(6) & \vga_0|videoGen|char_addr[6]~50_combout\))))
+-- \vga_0|videoGen|char_addr[6]~53_combout\ = (!\vga_0|videoSync|pixel_column\(7) & ((\vga_0|videoGen|hit_on~combout\ & (!\vga_0|videoSync|pixel_column\(6))) # (!\vga_0|videoGen|hit_on~combout\ & (\vga_0|videoSync|pixel_column\(6) & 
+-- !\vga_0|videoGen|char_addr[6]~48_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "0111010100110000",
+	lut_mask => "0000001000010010",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \vga_0|videoGen|char_addr[5]~45_combout\,
-	datab => \vga_0|videoSync|pixel_column\(6),
-	datac => \vga_0|videoGen|char_addr[6]~50_combout\,
-	datad => \vga_0|videoGen|char_addr[6]~52_combout\,
+	dataa => \vga_0|videoGen|hit_on~combout\,
+	datab => \vga_0|videoSync|pixel_column\(7),
+	datac => \vga_0|videoSync|pixel_column\(6),
+	datad => \vga_0|videoGen|char_addr[6]~48_combout\,
 	combout => \vga_0|videoGen|char_addr[6]~53_combout\);
 
--- Location: LCCOMB_X27_Y22_N2
-\vga_0|videoGen|char_addr[6]\ : cycloneii_lcell_comb
+-- Location: LCCOMB_X27_Y24_N10
+\vga_0|videoGen|char_addr[6]~54\ : cycloneii_lcell_comb
 -- Equation(s):
--- \vga_0|videoGen|char_addr\(6) = (GLOBAL(\vga_0|videoGen|char_addr[5]~7clkctrl_outclk\) & ((\vga_0|videoGen|char_addr[6]~53_combout\))) # (!GLOBAL(\vga_0|videoGen|char_addr[5]~7clkctrl_outclk\) & (\vga_0|videoGen|char_addr\(6)))
+-- \vga_0|videoGen|char_addr[6]~54_combout\ = (\vga_0|videoGen|char_addr[6]~53_combout\ & (((\vga_0|videoSync|pixel_column\(6)) # (!\vga_0|videoSync|pixel_column\(5))) # (!\vga_0|videoSync|pixel_column\(4))))
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "1111000011001100",
+	lut_mask => "1111011100000000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \vga_0|videoSync|pixel_column\(4),
+	datab => \vga_0|videoSync|pixel_column\(5),
+	datac => \vga_0|videoSync|pixel_column\(6),
+	datad => \vga_0|videoGen|char_addr[6]~53_combout\,
+	combout => \vga_0|videoGen|char_addr[6]~54_combout\);
+
+-- Location: LCCOMB_X27_Y24_N22
+\vga_0|videoGen|char_addr[6]~49\ : cycloneii_lcell_comb
+-- Equation(s):
+-- \vga_0|videoGen|char_addr[6]~49_combout\ = (\vga_0|videoSync|pixel_column\(6) & (!\vga_0|videoGen|char_addr[5]~42_combout\ & ((\vga_0|videoGen|char_addr[6]~54_combout\)))) # (!\vga_0|videoSync|pixel_column\(6) & ((\vga_0|videoGen|char_addr[6]~47_combout\) 
+-- # ((!\vga_0|videoGen|char_addr[5]~42_combout\ & \vga_0|videoGen|char_addr[6]~54_combout\))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0111001101010000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \vga_0|videoSync|pixel_column\(6),
+	datab => \vga_0|videoGen|char_addr[5]~42_combout\,
+	datac => \vga_0|videoGen|char_addr[6]~47_combout\,
+	datad => \vga_0|videoGen|char_addr[6]~54_combout\,
+	combout => \vga_0|videoGen|char_addr[6]~49_combout\);
+
+-- Location: LCCOMB_X27_Y24_N18
+\vga_0|videoGen|char_addr[6]\ : cycloneii_lcell_comb
+-- Equation(s):
+-- \vga_0|videoGen|char_addr\(6) = (GLOBAL(\vga_0|videoGen|char_addr[5]~7clkctrl_outclk\) & ((\vga_0|videoGen|char_addr[6]~49_combout\))) # (!GLOBAL(\vga_0|videoGen|char_addr[5]~7clkctrl_outclk\) & (\vga_0|videoGen|char_addr\(6)))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1111110000001100",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
 	datab => \vga_0|videoGen|char_addr\(6),
-	datac => \vga_0|videoGen|char_addr[6]~53_combout\,
-	datad => \vga_0|videoGen|char_addr[5]~7clkctrl_outclk\,
+	datac => \vga_0|videoGen|char_addr[5]~7clkctrl_outclk\,
+	datad => \vga_0|videoGen|char_addr[6]~49_combout\,
 	combout => \vga_0|videoGen|char_addr\(6));
 
 -- Location: M4K_X26_Y22
@@ -6076,41 +4854,25 @@ PORT MAP (
 	devpor => ww_devpor,
 	portadataout => \vga_0|videoGen|font_unit|ROM_rtl_0|auto_generated|ram_block1a5_PORTADATAOUT_bus\);
 
--- Location: LCCOMB_X25_Y23_N18
-\vga_0|videoGen|bit_addr[0]\ : cycloneii_lcell_comb
--- Equation(s):
--- \vga_0|videoGen|bit_addr\(0) = (GLOBAL(\vga_0|videoGen|char_addr[5]~7clkctrl_outclk\) & ((\vga_0|videoSync|pixel_column\(1)))) # (!GLOBAL(\vga_0|videoGen|char_addr[5]~7clkctrl_outclk\) & (\vga_0|videoGen|bit_addr\(0)))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1111110000001100",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	datab => \vga_0|videoGen|bit_addr\(0),
-	datac => \vga_0|videoGen|char_addr[5]~7clkctrl_outclk\,
-	datad => \vga_0|videoSync|pixel_column\(1),
-	combout => \vga_0|videoGen|bit_addr\(0));
-
--- Location: LCCOMB_X25_Y23_N12
+-- Location: LCCOMB_X27_Y23_N0
 \vga_0|videoGen|Mux653~2\ : cycloneii_lcell_comb
 -- Equation(s):
--- \vga_0|videoGen|Mux653~2_combout\ = (\vga_0|videoGen|bit_addr\(0) & (((\vga_0|videoGen|font_unit|ROM_rtl_0|auto_generated|ram_block1a6\) # (\vga_0|videoGen|bit_addr\(1))))) # (!\vga_0|videoGen|bit_addr\(0) & 
--- (\vga_0|videoGen|font_unit|ROM_rtl_0|auto_generated|ram_block1a7\ & ((!\vga_0|videoGen|bit_addr\(1)))))
+-- \vga_0|videoGen|Mux653~2_combout\ = (\vga_0|videoGen|bit_addr\(0) & ((\vga_0|videoGen|bit_addr\(1)) # ((\vga_0|videoGen|font_unit|ROM_rtl_0|auto_generated|ram_block1a6\)))) # (!\vga_0|videoGen|bit_addr\(0) & (!\vga_0|videoGen|bit_addr\(1) & 
+-- (\vga_0|videoGen|font_unit|ROM_rtl_0|auto_generated|ram_block1a7\)))
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "1100110011100010",
+	lut_mask => "1011101010011000",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \vga_0|videoGen|font_unit|ROM_rtl_0|auto_generated|ram_block1a7\,
-	datab => \vga_0|videoGen|bit_addr\(0),
-	datac => \vga_0|videoGen|font_unit|ROM_rtl_0|auto_generated|ram_block1a6\,
-	datad => \vga_0|videoGen|bit_addr\(1),
+	dataa => \vga_0|videoGen|bit_addr\(0),
+	datab => \vga_0|videoGen|bit_addr\(1),
+	datac => \vga_0|videoGen|font_unit|ROM_rtl_0|auto_generated|ram_block1a7\,
+	datad => \vga_0|videoGen|font_unit|ROM_rtl_0|auto_generated|ram_block1a6\,
 	combout => \vga_0|videoGen|Mux653~2_combout\);
 
--- Location: LCCOMB_X25_Y23_N14
+-- Location: LCCOMB_X27_Y23_N14
 \vga_0|videoGen|Mux653~3\ : cycloneii_lcell_comb
 -- Equation(s):
 -- \vga_0|videoGen|Mux653~3_combout\ = (\vga_0|videoGen|bit_addr\(1) & ((\vga_0|videoGen|Mux653~2_combout\ & (\vga_0|videoGen|font_unit|ROM_rtl_0|auto_generated|ram_block1a4~portadataout\)) # (!\vga_0|videoGen|Mux653~2_combout\ & 
@@ -6128,7 +4890,43 @@ PORT MAP (
 	datad => \vga_0|videoGen|Mux653~2_combout\,
 	combout => \vga_0|videoGen|Mux653~3_combout\);
 
--- Location: M4K_X26_Y21
+-- Location: LCFF_X31_Y26_N7
+\vga_0|videoSync|h_count[1]\ : cycloneii_lcell_ff
+PORT MAP (
+	clk => \vga_0|videoSync|pixel_clock_int~clkctrl_outclk\,
+	datain => \vga_0|videoSync|Add0~2_combout\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	regout => \vga_0|videoSync|h_count\(1));
+
+-- Location: LCFF_X28_Y26_N17
+\vga_0|videoSync|pixel_column[1]\ : cycloneii_lcell_ff
+PORT MAP (
+	clk => \vga_0|videoSync|pixel_clock_int~clkctrl_outclk\,
+	sdata => \vga_0|videoSync|h_count\(1),
+	sload => VCC,
+	ena => \vga_0|videoSync|LessThan5~0_combout\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	regout => \vga_0|videoSync|pixel_column\(1));
+
+-- Location: LCCOMB_X28_Y26_N24
+\vga_0|videoGen|bit_addr[0]\ : cycloneii_lcell_comb
+-- Equation(s):
+-- \vga_0|videoGen|bit_addr\(0) = (GLOBAL(\vga_0|videoGen|char_addr[5]~7clkctrl_outclk\) & ((\vga_0|videoSync|pixel_column\(1)))) # (!GLOBAL(\vga_0|videoGen|char_addr[5]~7clkctrl_outclk\) & (\vga_0|videoGen|bit_addr\(0)))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1111000011001100",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	datab => \vga_0|videoGen|bit_addr\(0),
+	datac => \vga_0|videoSync|pixel_column\(1),
+	datad => \vga_0|videoGen|char_addr[5]~7clkctrl_outclk\,
+	combout => \vga_0|videoGen|bit_addr\(0));
+
+-- Location: M4K_X26_Y26
 \vga_0|videoGen|font_unit|ROM_rtl_0|auto_generated|ram_block1a1\ : cycloneii_ram_block
 -- pragma translate_off
 GENERIC MAP (
@@ -6167,25 +4965,25 @@ PORT MAP (
 	devpor => ww_devpor,
 	portadataout => \vga_0|videoGen|font_unit|ROM_rtl_0|auto_generated|ram_block1a1_PORTADATAOUT_bus\);
 
--- Location: LCCOMB_X25_Y23_N28
+-- Location: LCCOMB_X27_Y23_N12
 \vga_0|videoGen|Mux653~0\ : cycloneii_lcell_comb
 -- Equation(s):
--- \vga_0|videoGen|Mux653~0_combout\ = (\vga_0|videoGen|bit_addr\(0) & (((\vga_0|videoGen|bit_addr\(1))))) # (!\vga_0|videoGen|bit_addr\(0) & ((\vga_0|videoGen|bit_addr\(1) & (\vga_0|videoGen|font_unit|ROM_rtl_0|auto_generated|ram_block1a1~portadataout\)) # 
+-- \vga_0|videoGen|Mux653~0_combout\ = (\vga_0|videoGen|bit_addr\(0) & (\vga_0|videoGen|bit_addr\(1))) # (!\vga_0|videoGen|bit_addr\(0) & ((\vga_0|videoGen|bit_addr\(1) & (\vga_0|videoGen|font_unit|ROM_rtl_0|auto_generated|ram_block1a1~portadataout\)) # 
 -- (!\vga_0|videoGen|bit_addr\(1) & ((\vga_0|videoGen|font_unit|ROM_rtl_0|auto_generated|ram_block1a3\)))))
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "1110111001010000",
+	lut_mask => "1101100111001000",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
 	dataa => \vga_0|videoGen|bit_addr\(0),
-	datab => \vga_0|videoGen|font_unit|ROM_rtl_0|auto_generated|ram_block1a1~portadataout\,
-	datac => \vga_0|videoGen|font_unit|ROM_rtl_0|auto_generated|ram_block1a3\,
-	datad => \vga_0|videoGen|bit_addr\(1),
+	datab => \vga_0|videoGen|bit_addr\(1),
+	datac => \vga_0|videoGen|font_unit|ROM_rtl_0|auto_generated|ram_block1a1~portadataout\,
+	datad => \vga_0|videoGen|font_unit|ROM_rtl_0|auto_generated|ram_block1a3\,
 	combout => \vga_0|videoGen|Mux653~0_combout\);
 
--- Location: LCCOMB_X25_Y23_N26
+-- Location: LCCOMB_X27_Y23_N22
 \vga_0|videoGen|Mux653~1\ : cycloneii_lcell_comb
 -- Equation(s):
 -- \vga_0|videoGen|Mux653~1_combout\ = (\vga_0|videoGen|bit_addr\(0) & ((\vga_0|videoGen|Mux653~0_combout\ & (\vga_0|videoGen|font_unit|ROM_rtl_0|auto_generated|ram_block1a0~portadataout\)) # (!\vga_0|videoGen|Mux653~0_combout\ & 
@@ -6203,7 +5001,7 @@ PORT MAP (
 	datad => \vga_0|videoGen|Mux653~0_combout\,
 	combout => \vga_0|videoGen|Mux653~1_combout\);
 
--- Location: LCCOMB_X25_Y23_N24
+-- Location: LCCOMB_X27_Y23_N28
 \vga_0|videoGen|Mux653~4\ : cycloneii_lcell_comb
 -- Equation(s):
 -- \vga_0|videoGen|Mux653~4_combout\ = (\vga_0|videoGen|bit_addr\(2) & ((\vga_0|videoGen|Mux653~1_combout\))) # (!\vga_0|videoGen|bit_addr\(2) & (\vga_0|videoGen|Mux653~3_combout\))
@@ -6219,400 +5017,37 @@ PORT MAP (
 	datad => \vga_0|videoGen|Mux653~1_combout\,
 	combout => \vga_0|videoGen|Mux653~4_combout\);
 
--- Location: LCCOMB_X24_Y23_N12
-\vga_0|videoGen|colorAddress~125\ : cycloneii_lcell_comb
+-- Location: LCCOMB_X30_Y24_N0
+\vga_0|videoGen|LessThan35~2\ : cycloneii_lcell_comb
 -- Equation(s):
--- \vga_0|videoGen|colorAddress~125_combout\ = (!\vga_0|videoGen|pixelDraw~63_combout\ & (((!\vga_0|videoGen|placeShip_on~combout\ & !\vga_0|videoGen|colorAddress~124_combout\)) # (!\vga_0|videoGen|Mux653~4_combout\)))
+-- \vga_0|videoGen|LessThan35~2_combout\ = (!\vga_0|videoSync|pixel_row\(5) & (!\vga_0|videoSync|pixel_row\(6) & !\vga_0|videoSync|pixel_row\(4)))
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "0000000100110011",
+	lut_mask => "0000000000000101",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \vga_0|videoGen|placeShip_on~combout\,
-	datab => \vga_0|videoGen|pixelDraw~63_combout\,
-	datac => \vga_0|videoGen|colorAddress~124_combout\,
-	datad => \vga_0|videoGen|Mux653~4_combout\,
-	combout => \vga_0|videoGen|colorAddress~125_combout\);
+	dataa => \vga_0|videoSync|pixel_row\(5),
+	datac => \vga_0|videoSync|pixel_row\(6),
+	datad => \vga_0|videoSync|pixel_row\(4),
+	combout => \vga_0|videoGen|LessThan35~2_combout\);
 
--- Location: LCCOMB_X24_Y22_N16
-\vga_0|videoGen|pixelDraw~54\ : cycloneii_lcell_comb
--- Equation(s):
--- \vga_0|videoGen|pixelDraw~54_combout\ = (\vga_0|videoSync|pixel_column\(8) & (((!\vga_0|videoGen|char_addr[6]~6_combout\) # (!\vga_0|videoGen|LessThan374~0_combout\)))) # (!\vga_0|videoSync|pixel_column\(8) & (\vga_0|videoSync|pixel_column\(9)))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0011111110101010",
-	sum_lutc_input => "datac")
--- pragma translate_on
+-- Location: LCFF_X29_Y24_N21
+\vga_0|videoSync|pixel_row[0]\ : cycloneii_lcell_ff
 PORT MAP (
-	dataa => \vga_0|videoSync|pixel_column\(9),
-	datab => \vga_0|videoGen|LessThan374~0_combout\,
-	datac => \vga_0|videoGen|char_addr[6]~6_combout\,
-	datad => \vga_0|videoSync|pixel_column\(8),
-	combout => \vga_0|videoGen|pixelDraw~54_combout\);
+	clk => \vga_0|videoSync|pixel_clock_int~clkctrl_outclk\,
+	sdata => \vga_0|videoSync|v_count\(0),
+	sload => VCC,
+	ena => \vga_0|videoSync|LessThan6~2_combout\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	regout => \vga_0|videoSync|pixel_row\(0));
 
--- Location: LCCOMB_X24_Y22_N8
-\vga_0|videoGen|LessThan374~1\ : cycloneii_lcell_comb
+-- Location: LCCOMB_X29_Y24_N14
+\vga_0|videoGen|LessThan4~0\ : cycloneii_lcell_comb
 -- Equation(s):
--- \vga_0|videoGen|LessThan374~1_combout\ = (!\vga_0|videoSync|pixel_column\(9) & (((!\vga_0|videoSync|pixel_column\(7) & !\vga_0|videoSync|pixel_column\(6))) # (!\vga_0|videoSync|pixel_column\(8))))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0000000100110011",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \vga_0|videoSync|pixel_column\(7),
-	datab => \vga_0|videoSync|pixel_column\(9),
-	datac => \vga_0|videoSync|pixel_column\(6),
-	datad => \vga_0|videoSync|pixel_column\(8),
-	combout => \vga_0|videoGen|LessThan374~1_combout\);
-
--- Location: LCCOMB_X24_Y22_N24
-\vga_0|videoGen|pixelDraw~55\ : cycloneii_lcell_comb
--- Equation(s):
--- \vga_0|videoGen|pixelDraw~55_combout\ = (\vga_0|videoGen|pixelDraw~54_combout\ & (\vga_0|videoGen|LessThan374~1_combout\ & ((!\vga_0|videoGen|LessThan373~1_combout\) # (!\vga_0|videoGen|LessThan413~0_combout\))))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0111000000000000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \vga_0|videoGen|LessThan413~0_combout\,
-	datab => \vga_0|videoGen|LessThan373~1_combout\,
-	datac => \vga_0|videoGen|pixelDraw~54_combout\,
-	datad => \vga_0|videoGen|LessThan374~1_combout\,
-	combout => \vga_0|videoGen|pixelDraw~55_combout\);
-
--- Location: LCCOMB_X22_Y23_N8
-\vga_0|videoGen|LessThan53~3\ : cycloneii_lcell_comb
--- Equation(s):
--- \vga_0|videoGen|LessThan53~3_combout\ = ((!\vga_0|videoSync|pixel_column\(4) & ((\vga_0|videoGen|LessThan373~0_combout\) # (!\vga_0|videoSync|pixel_column\(3))))) # (!\vga_0|videoSync|pixel_column\(5))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0010001111111111",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \vga_0|videoGen|LessThan373~0_combout\,
-	datab => \vga_0|videoSync|pixel_column\(4),
-	datac => \vga_0|videoSync|pixel_column\(3),
-	datad => \vga_0|videoSync|pixel_column\(5),
-	combout => \vga_0|videoGen|LessThan53~3_combout\);
-
--- Location: LCCOMB_X22_Y23_N28
-\vga_0|videoGen|pixelDraw~48\ : cycloneii_lcell_comb
--- Equation(s):
--- \vga_0|videoGen|pixelDraw~48_combout\ = (\vga_0|videoSync|pixel_column\(7) & (\vga_0|videoGen|LessThan173~1_combout\ & (!\vga_0|videoGen|LessThan54~0_combout\))) # (!\vga_0|videoSync|pixel_column\(7) & (((\vga_0|videoSync|pixel_column\(6)))))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0101110100001000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \vga_0|videoSync|pixel_column\(7),
-	datab => \vga_0|videoGen|LessThan173~1_combout\,
-	datac => \vga_0|videoGen|LessThan54~0_combout\,
-	datad => \vga_0|videoSync|pixel_column\(6),
-	combout => \vga_0|videoGen|pixelDraw~48_combout\);
-
--- Location: LCCOMB_X21_Y23_N12
-\vga_0|videoGen|pixelDraw~49\ : cycloneii_lcell_comb
--- Equation(s):
--- \vga_0|videoGen|pixelDraw~49_combout\ = (!\vga_0|videoSync|pixel_column\(9) & (\vga_0|videoSync|pixel_column\(8) & \vga_0|videoGen|pixelDraw~48_combout\))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0011000000000000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	datab => \vga_0|videoSync|pixel_column\(9),
-	datac => \vga_0|videoSync|pixel_column\(8),
-	datad => \vga_0|videoGen|pixelDraw~48_combout\,
-	combout => \vga_0|videoGen|pixelDraw~49_combout\);
-
--- Location: LCCOMB_X21_Y23_N22
-\vga_0|videoGen|pixelDraw~50\ : cycloneii_lcell_comb
--- Equation(s):
--- \vga_0|videoGen|pixelDraw~50_combout\ = (\vga_0|videoGen|pixelDraw~49_combout\ & ((\vga_0|videoSync|pixel_column\(9)) # ((\vga_0|videoSync|pixel_column\(7)) # (!\vga_0|videoGen|LessThan53~3_combout\))))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1110111100000000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \vga_0|videoSync|pixel_column\(9),
-	datab => \vga_0|videoSync|pixel_column\(7),
-	datac => \vga_0|videoGen|LessThan53~3_combout\,
-	datad => \vga_0|videoGen|pixelDraw~49_combout\,
-	combout => \vga_0|videoGen|pixelDraw~50_combout\);
-
--- Location: LCCOMB_X21_Y23_N28
-\vga_0|videoGen|colorAddress~88\ : cycloneii_lcell_comb
--- Equation(s):
--- \vga_0|videoGen|colorAddress~88_combout\ = ((!\vga_0|videoGen|pixelDraw~29_combout\ & !\vga_0|videoGen|pixelDraw~30_combout\)) # (!\vga_0|videoGen|pixelDraw~50_combout\)
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0000010111111111",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \vga_0|videoGen|pixelDraw~29_combout\,
-	datac => \vga_0|videoGen|pixelDraw~30_combout\,
-	datad => \vga_0|videoGen|pixelDraw~50_combout\,
-	combout => \vga_0|videoGen|colorAddress~88_combout\);
-
--- Location: LCCOMB_X21_Y23_N14
-\vga_0|videoGen|colorAddress~89\ : cycloneii_lcell_comb
--- Equation(s):
--- \vga_0|videoGen|colorAddress~89_combout\ = (\vga_0|videoGen|colorAddress~88_combout\ & (((!\vga_0|videoGen|pixelDraw~34_combout\ & !\vga_0|videoGen|pixelDraw~37_combout\)) # (!\vga_0|videoGen|pixelDraw~50_combout\)))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0011011100000000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \vga_0|videoGen|pixelDraw~34_combout\,
-	datab => \vga_0|videoGen|pixelDraw~50_combout\,
-	datac => \vga_0|videoGen|pixelDraw~37_combout\,
-	datad => \vga_0|videoGen|colorAddress~88_combout\,
-	combout => \vga_0|videoGen|colorAddress~89_combout\);
-
--- Location: LCCOMB_X23_Y25_N28
-\vga_0|videoGen|pixelDraw~46\ : cycloneii_lcell_comb
--- Equation(s):
--- \vga_0|videoGen|pixelDraw~46_combout\ = (!\vga_0|videoSync|pixel_column\(9) & (\vga_0|videoSync|pixel_column\(6) & !\vga_0|videoSync|pixel_column\(7)))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0000000000110000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	datab => \vga_0|videoSync|pixel_column\(9),
-	datac => \vga_0|videoSync|pixel_column\(6),
-	datad => \vga_0|videoSync|pixel_column\(7),
-	combout => \vga_0|videoGen|pixelDraw~46_combout\);
-
--- Location: LCCOMB_X22_Y25_N30
-\vga_0|videoGen|pixelDraw~47\ : cycloneii_lcell_comb
--- Equation(s):
--- \vga_0|videoGen|pixelDraw~47_combout\ = (\vga_0|videoSync|pixel_column\(8) & (!\vga_0|videoGen|LessThan13~3_combout\ & (!\vga_0|videoGen|LessThan53~2_combout\ & \vga_0|videoGen|pixelDraw~46_combout\)))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0000001000000000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \vga_0|videoSync|pixel_column\(8),
-	datab => \vga_0|videoGen|LessThan13~3_combout\,
-	datac => \vga_0|videoGen|LessThan53~2_combout\,
-	datad => \vga_0|videoGen|pixelDraw~46_combout\,
-	combout => \vga_0|videoGen|pixelDraw~47_combout\);
-
--- Location: LCCOMB_X23_Y20_N4
-\vga_0|videoGen|LessThan534~0\ : cycloneii_lcell_comb
--- Equation(s):
--- \vga_0|videoGen|LessThan534~0_combout\ = (\vga_0|videoSync|pixel_column\(6) & (\vga_0|videoSync|pixel_column\(7) & \vga_0|videoSync|pixel_column\(8)))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1100000000000000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	datab => \vga_0|videoSync|pixel_column\(6),
-	datac => \vga_0|videoSync|pixel_column\(7),
-	datad => \vga_0|videoSync|pixel_column\(8),
-	combout => \vga_0|videoGen|LessThan534~0_combout\);
-
--- Location: LCCOMB_X22_Y22_N6
-\vga_0|videoGen|pixelDraw~51\ : cycloneii_lcell_comb
--- Equation(s):
--- \vga_0|videoGen|pixelDraw~51_combout\ = (\vga_0|videoSync|pixel_column\(7) & (!\vga_0|videoSync|pixel_column\(9) & ((!\vga_0|videoGen|LessThan534~0_combout\) # (!\vga_0|videoGen|LessThan134~0_combout\))))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0000001000100010",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \vga_0|videoSync|pixel_column\(7),
-	datab => \vga_0|videoSync|pixel_column\(9),
-	datac => \vga_0|videoGen|LessThan134~0_combout\,
-	datad => \vga_0|videoGen|LessThan534~0_combout\,
-	combout => \vga_0|videoGen|pixelDraw~51_combout\);
-
--- Location: LCCOMB_X23_Y25_N2
-\vga_0|videoGen|pixelDraw~52\ : cycloneii_lcell_comb
--- Equation(s):
--- \vga_0|videoGen|pixelDraw~52_combout\ = (\vga_0|videoSync|pixel_column\(8) & (\vga_0|videoGen|pixelDraw~51_combout\ & ((\vga_0|videoSync|pixel_column\(6)) # (!\vga_0|videoGen|LessThan133~1_combout\))))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1000000011000000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \vga_0|videoSync|pixel_column\(6),
-	datab => \vga_0|videoSync|pixel_column\(8),
-	datac => \vga_0|videoGen|pixelDraw~51_combout\,
-	datad => \vga_0|videoGen|LessThan133~1_combout\,
-	combout => \vga_0|videoGen|pixelDraw~52_combout\);
-
--- Location: LCCOMB_X23_Y25_N6
-\vga_0|videoGen|colorAddress~85\ : cycloneii_lcell_comb
--- Equation(s):
--- \vga_0|videoGen|colorAddress~85_combout\ = (\vga_0|videoGen|colorAddress~84_combout\ & (!\vga_0|videoGen|pixelDraw~47_combout\ & ((!\vga_0|videoGen|pixelDraw~52_combout\) # (!\vga_0|videoGen|pixelDraw~17_combout\)))) # 
--- (!\vga_0|videoGen|colorAddress~84_combout\ & (((!\vga_0|videoGen|pixelDraw~52_combout\)) # (!\vga_0|videoGen|pixelDraw~17_combout\)))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0001001101011111",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \vga_0|videoGen|colorAddress~84_combout\,
-	datab => \vga_0|videoGen|pixelDraw~17_combout\,
-	datac => \vga_0|videoGen|pixelDraw~47_combout\,
-	datad => \vga_0|videoGen|pixelDraw~52_combout\,
-	combout => \vga_0|videoGen|colorAddress~85_combout\);
-
--- Location: LCCOMB_X21_Y23_N0
-\vga_0|videoGen|colorAddress~86\ : cycloneii_lcell_comb
--- Equation(s):
--- \vga_0|videoGen|colorAddress~86_combout\ = (\vga_0|videoGen|pixelDraw~27_combout\ & (!\vga_0|videoGen|pixelDraw~50_combout\ & ((!\vga_0|videoGen|pixelDraw~47_combout\) # (!\vga_0|videoGen|pixelDraw~32_combout\)))) # (!\vga_0|videoGen|pixelDraw~27_combout\ 
--- & (((!\vga_0|videoGen|pixelDraw~47_combout\) # (!\vga_0|videoGen|pixelDraw~32_combout\))))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0000011101110111",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \vga_0|videoGen|pixelDraw~27_combout\,
-	datab => \vga_0|videoGen|pixelDraw~50_combout\,
-	datac => \vga_0|videoGen|pixelDraw~32_combout\,
-	datad => \vga_0|videoGen|pixelDraw~47_combout\,
-	combout => \vga_0|videoGen|colorAddress~86_combout\);
-
--- Location: LCCOMB_X21_Y23_N18
-\vga_0|videoGen|colorAddress~87\ : cycloneii_lcell_comb
--- Equation(s):
--- \vga_0|videoGen|colorAddress~87_combout\ = (\vga_0|videoGen|colorAddress~86_combout\ & (((!\vga_0|videoGen|pixelDraw~77_combout\ & !\vga_0|videoGen|pixelDraw~16_combout\)) # (!\vga_0|videoGen|pixelDraw~50_combout\)))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0011011100000000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \vga_0|videoGen|pixelDraw~77_combout\,
-	datab => \vga_0|videoGen|pixelDraw~50_combout\,
-	datac => \vga_0|videoGen|pixelDraw~16_combout\,
-	datad => \vga_0|videoGen|colorAddress~86_combout\,
-	combout => \vga_0|videoGen|colorAddress~87_combout\);
-
--- Location: LCCOMB_X24_Y23_N8
-\vga_0|videoGen|colorAddress~90\ : cycloneii_lcell_comb
--- Equation(s):
--- \vga_0|videoGen|colorAddress~90_combout\ = (\vga_0|videoGen|colorAddress~83_combout\ & (\vga_0|videoGen|colorAddress~89_combout\ & (\vga_0|videoGen|colorAddress~85_combout\ & \vga_0|videoGen|colorAddress~87_combout\)))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1000000000000000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \vga_0|videoGen|colorAddress~83_combout\,
-	datab => \vga_0|videoGen|colorAddress~89_combout\,
-	datac => \vga_0|videoGen|colorAddress~85_combout\,
-	datad => \vga_0|videoGen|colorAddress~87_combout\,
-	combout => \vga_0|videoGen|colorAddress~90_combout\);
-
--- Location: LCCOMB_X22_Y22_N14
-\vga_0|videoGen|LessThan573~0\ : cycloneii_lcell_comb
--- Equation(s):
--- \vga_0|videoGen|LessThan573~0_combout\ = (!\vga_0|videoSync|pixel_column\(5) & (\vga_0|videoGen|LessThan613~0_combout\ & ((!\vga_0|videoSync|pixel_column\(1)) # (!\vga_0|videoSync|pixel_column\(0)))))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0001000001010000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \vga_0|videoSync|pixel_column\(5),
-	datab => \vga_0|videoSync|pixel_column\(0),
-	datac => \vga_0|videoGen|LessThan613~0_combout\,
-	datad => \vga_0|videoSync|pixel_column\(1),
-	combout => \vga_0|videoGen|LessThan573~0_combout\);
-
--- Location: LCCOMB_X23_Y21_N20
-\vga_0|videoGen|pixelDraw~19\ : cycloneii_lcell_comb
--- Equation(s):
--- \vga_0|videoGen|pixelDraw~19_combout\ = (!\vga_0|videoSync|pixel_column\(9) & (!\vga_0|videoGen|LessThan573~0_combout\ & (!\vga_0|videoSync|pixel_column\(5) & \vga_0|videoGen|LessThan534~0_combout\)))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0000000100000000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \vga_0|videoSync|pixel_column\(9),
-	datab => \vga_0|videoGen|LessThan573~0_combout\,
-	datac => \vga_0|videoSync|pixel_column\(5),
-	datad => \vga_0|videoGen|LessThan534~0_combout\,
-	combout => \vga_0|videoGen|pixelDraw~19_combout\);
-
--- Location: LCCOMB_X23_Y25_N14
-\vga_0|videoGen|colorAddress~96\ : cycloneii_lcell_comb
--- Equation(s):
--- \vga_0|videoGen|colorAddress~96_combout\ = (\vga_0|videoGen|pixelDraw~47_combout\ & (!\vga_0|videoGen|pixelDraw~42_combout\ & ((!\vga_0|videoGen|pixelDraw~19_combout\) # (!\vga_0|videoGen|pixelDraw~16_combout\)))) # (!\vga_0|videoGen|pixelDraw~47_combout\ 
--- & (((!\vga_0|videoGen|pixelDraw~19_combout\)) # (!\vga_0|videoGen|pixelDraw~16_combout\)))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0001010100111111",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \vga_0|videoGen|pixelDraw~47_combout\,
-	datab => \vga_0|videoGen|pixelDraw~16_combout\,
-	datac => \vga_0|videoGen|pixelDraw~19_combout\,
-	datad => \vga_0|videoGen|pixelDraw~42_combout\,
-	combout => \vga_0|videoGen|colorAddress~96_combout\);
-
--- Location: LCCOMB_X23_Y25_N4
-\vga_0|videoGen|colorAddress~97\ : cycloneii_lcell_comb
--- Equation(s):
--- \vga_0|videoGen|colorAddress~97_combout\ = (\vga_0|videoGen|colorAddress~96_combout\ & (((!\vga_0|videoGen|pixelDraw~50_combout\ & !\vga_0|videoGen|pixelDraw~52_combout\)) # (!\vga_0|videoGen|pixelDraw~42_combout\)))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0100010001001100",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \vga_0|videoGen|pixelDraw~42_combout\,
-	datab => \vga_0|videoGen|colorAddress~96_combout\,
-	datac => \vga_0|videoGen|pixelDraw~50_combout\,
-	datad => \vga_0|videoGen|pixelDraw~52_combout\,
-	combout => \vga_0|videoGen|colorAddress~97_combout\);
-
--- Location: LCCOMB_X25_Y21_N2
-\vga_0|videoGen|LessThan32~0\ : cycloneii_lcell_comb
--- Equation(s):
--- \vga_0|videoGen|LessThan32~0_combout\ = (\vga_0|videoSync|pixel_row\(2) & (\vga_0|videoSync|pixel_row\(3) & \vga_0|videoSync|pixel_row\(1)))
+-- \vga_0|videoGen|LessThan4~0_combout\ = (\vga_0|videoSync|pixel_row\(2) & (\vga_0|videoSync|pixel_row\(0) & \vga_0|videoSync|pixel_row\(1)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -6621,95 +5056,619 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	dataa => \vga_0|videoSync|pixel_row\(2),
-	datac => \vga_0|videoSync|pixel_row\(3),
+	datac => \vga_0|videoSync|pixel_row\(0),
 	datad => \vga_0|videoSync|pixel_row\(1),
-	combout => \vga_0|videoGen|LessThan32~0_combout\);
+	combout => \vga_0|videoGen|LessThan4~0_combout\);
 
--- Location: LCCOMB_X25_Y21_N26
-\vga_0|videoGen|LessThan31~0\ : cycloneii_lcell_comb
+-- Location: LCCOMB_X31_Y24_N0
+\vga_0|videoGen|LessThan4~1\ : cycloneii_lcell_comb
 -- Equation(s):
--- \vga_0|videoGen|LessThan31~0_combout\ = (((!\vga_0|videoSync|pixel_row\(3) & \vga_0|videoGen|LessThan15~0_combout\)) # (!\vga_0|videoGen|LessThan28~0_combout\)) # (!\vga_0|videoGen|Equal3~0_combout\)
+-- \vga_0|videoGen|LessThan4~1_combout\ = (\vga_0|videoSync|pixel_row\(3)) # ((\vga_0|videoGen|LessThan4~0_combout\) # (!\vga_0|videoGen|LessThan35~2_combout\))
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "0111111101011111",
+	lut_mask => "1111111111001111",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \vga_0|videoGen|Equal3~0_combout\,
 	datab => \vga_0|videoSync|pixel_row\(3),
-	datac => \vga_0|videoGen|LessThan28~0_combout\,
-	datad => \vga_0|videoGen|LessThan15~0_combout\,
-	combout => \vga_0|videoGen|LessThan31~0_combout\);
+	datac => \vga_0|videoGen|LessThan35~2_combout\,
+	datad => \vga_0|videoGen|LessThan4~0_combout\,
+	combout => \vga_0|videoGen|LessThan4~1_combout\);
 
--- Location: LCCOMB_X25_Y21_N8
-\vga_0|videoGen|pixelDraw~29\ : cycloneii_lcell_comb
+-- Location: LCCOMB_X29_Y24_N28
+\vga_0|videoGen|LessThan3~0\ : cycloneii_lcell_comb
 -- Equation(s):
--- \vga_0|videoGen|pixelDraw~29_combout\ = (\vga_0|videoSync|pixel_row\(8) & (!\vga_0|videoGen|LessThan32~0_combout\ & (\vga_0|videoGen|LessThan35~0_combout\))) # (!\vga_0|videoSync|pixel_row\(8) & (((!\vga_0|videoGen|LessThan31~0_combout\))))
+-- \vga_0|videoGen|LessThan3~0_combout\ = (\vga_0|videoSync|pixel_row\(3) & ((\vga_0|videoSync|pixel_row\(2)) # (\vga_0|videoSync|pixel_row\(1))))
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "0010000001110101",
+	lut_mask => "1100110011000000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	datab => \vga_0|videoSync|pixel_row\(3),
+	datac => \vga_0|videoSync|pixel_row\(2),
+	datad => \vga_0|videoSync|pixel_row\(1),
+	combout => \vga_0|videoGen|LessThan3~0_combout\);
+
+-- Location: LCCOMB_X31_Y24_N6
+\vga_0|videoGen|LessThan3~1\ : cycloneii_lcell_comb
+-- Equation(s):
+-- \vga_0|videoGen|LessThan3~1_combout\ = ((!\vga_0|videoSync|pixel_row\(5) & ((!\vga_0|videoGen|LessThan3~0_combout\) # (!\vga_0|videoSync|pixel_row\(4))))) # (!\vga_0|videoSync|pixel_row\(6))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0001111101011111",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \vga_0|videoSync|pixel_row\(5),
+	datab => \vga_0|videoSync|pixel_row\(4),
+	datac => \vga_0|videoSync|pixel_row\(6),
+	datad => \vga_0|videoGen|LessThan3~0_combout\,
+	combout => \vga_0|videoGen|LessThan3~1_combout\);
+
+-- Location: LCCOMB_X31_Y24_N10
+\vga_0|videoGen|pixelDraw~78\ : cycloneii_lcell_comb
+-- Equation(s):
+-- \vga_0|videoGen|pixelDraw~78_combout\ = (\vga_0|videoSync|pixel_row\(8) & (((!\vga_0|videoSync|pixel_row\(7))) # (!\vga_0|videoGen|LessThan4~1_combout\))) # (!\vga_0|videoSync|pixel_row\(8) & (((\vga_0|videoSync|pixel_row\(7)) # 
+-- (!\vga_0|videoGen|LessThan3~1_combout\))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0111101001111111",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
 	dataa => \vga_0|videoSync|pixel_row\(8),
-	datab => \vga_0|videoGen|LessThan32~0_combout\,
-	datac => \vga_0|videoGen|LessThan35~0_combout\,
-	datad => \vga_0|videoGen|LessThan31~0_combout\,
-	combout => \vga_0|videoGen|pixelDraw~29_combout\);
+	datab => \vga_0|videoGen|LessThan4~1_combout\,
+	datac => \vga_0|videoSync|pixel_row\(7),
+	datad => \vga_0|videoGen|LessThan3~1_combout\,
+	combout => \vga_0|videoGen|pixelDraw~78_combout\);
 
--- Location: LCCOMB_X23_Y25_N0
-\vga_0|videoGen|colorAddress~191\ : cycloneii_lcell_comb
+-- Location: LCFF_X28_Y26_N27
+\vga_0|videoSync|pixel_column[0]\ : cycloneii_lcell_ff
+PORT MAP (
+	clk => \vga_0|videoSync|pixel_clock_int~clkctrl_outclk\,
+	sdata => \vga_0|videoSync|h_count\(0),
+	sload => VCC,
+	ena => \vga_0|videoSync|LessThan5~0_combout\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	regout => \vga_0|videoSync|pixel_column\(0));
+
+-- Location: LCCOMB_X29_Y25_N14
+\vga_0|videoGen|LessThan93~0\ : cycloneii_lcell_comb
 -- Equation(s):
--- \vga_0|videoGen|colorAddress~191_combout\ = ((!\vga_0|videoGen|pixelDraw~29_combout\ & ((\vga_0|videoGen|LessThan23~2_combout\) # (!\vga_0|videoGen|pixelDraw~15_combout\)))) # (!\vga_0|videoGen|pixelDraw~52_combout\)
+-- \vga_0|videoGen|LessThan93~0_combout\ = ((!\vga_0|videoSync|pixel_column\(2)) # (!\vga_0|videoSync|pixel_column\(0))) # (!\vga_0|videoSync|pixel_column\(1))
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "0010001111111111",
+	lut_mask => "0111111101111111",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \vga_0|videoGen|LessThan23~2_combout\,
-	datab => \vga_0|videoGen|pixelDraw~29_combout\,
-	datac => \vga_0|videoGen|pixelDraw~15_combout\,
-	datad => \vga_0|videoGen|pixelDraw~52_combout\,
-	combout => \vga_0|videoGen|colorAddress~191_combout\);
+	dataa => \vga_0|videoSync|pixel_column\(1),
+	datab => \vga_0|videoSync|pixel_column\(0),
+	datac => \vga_0|videoSync|pixel_column\(2),
+	combout => \vga_0|videoGen|LessThan93~0_combout\);
 
--- Location: LCCOMB_X23_Y25_N16
-\vga_0|videoGen|colorAddress~93\ : cycloneii_lcell_comb
+-- Location: LCCOMB_X31_Y25_N28
+\vga_0|videoGen|LessThan6~0\ : cycloneii_lcell_comb
 -- Equation(s):
--- \vga_0|videoGen|colorAddress~93_combout\ = (\vga_0|videoGen|colorAddress~191_combout\ & (((!\vga_0|videoGen|pixelDraw~34_combout\ & !\vga_0|videoGen|pixelDraw~30_combout\)) # (!\vga_0|videoGen|pixelDraw~52_combout\)))
+-- \vga_0|videoGen|LessThan6~0_combout\ = (\vga_0|videoSync|pixel_column\(4) & (\vga_0|videoSync|pixel_column\(5) & ((\vga_0|videoSync|pixel_column\(3)) # (!\vga_0|videoGen|LessThan93~0_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "0011011100000000",
+	lut_mask => "1000110000000000",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \vga_0|videoGen|pixelDraw~34_combout\,
-	datab => \vga_0|videoGen|pixelDraw~52_combout\,
-	datac => \vga_0|videoGen|pixelDraw~30_combout\,
-	datad => \vga_0|videoGen|colorAddress~191_combout\,
-	combout => \vga_0|videoGen|colorAddress~93_combout\);
+	dataa => \vga_0|videoSync|pixel_column\(3),
+	datab => \vga_0|videoSync|pixel_column\(4),
+	datac => \vga_0|videoGen|LessThan93~0_combout\,
+	datad => \vga_0|videoSync|pixel_column\(5),
+	combout => \vga_0|videoGen|LessThan6~0_combout\);
 
--- Location: LCCOMB_X22_Y23_N14
-\vga_0|videoGen|pixelDraw~43\ : cycloneii_lcell_comb
+-- Location: LCCOMB_X29_Y25_N10
+\vga_0|videoGen|LessThan773~0\ : cycloneii_lcell_comb
 -- Equation(s):
--- \vga_0|videoGen|pixelDraw~43_combout\ = (!\vga_0|videoSync|pixel_column\(9) & (\vga_0|videoSync|pixel_column\(7) & \vga_0|videoSync|pixel_column\(8)))
+-- \vga_0|videoGen|LessThan773~0_combout\ = (!\vga_0|videoSync|pixel_column\(7) & !\vga_0|videoSync|pixel_column\(8))
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "0011000000000000",
+	lut_mask => "0000000000001111",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	datab => \vga_0|videoSync|pixel_column\(9),
 	datac => \vga_0|videoSync|pixel_column\(7),
 	datad => \vga_0|videoSync|pixel_column\(8),
-	combout => \vga_0|videoGen|pixelDraw~43_combout\);
+	combout => \vga_0|videoGen|LessThan773~0_combout\);
 
--- Location: LCCOMB_X22_Y23_N20
+-- Location: LCCOMB_X31_Y25_N24
+\vga_0|videoGen|pixelDraw~75\ : cycloneii_lcell_comb
+-- Equation(s):
+-- \vga_0|videoGen|pixelDraw~75_combout\ = (\vga_0|videoSync|pixel_column\(9) & (\vga_0|videoGen|LessThan773~0_combout\ & ((!\vga_0|videoGen|LessThan6~0_combout\) # (!\vga_0|videoSync|pixel_column\(6)))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0111000000000000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \vga_0|videoSync|pixel_column\(6),
+	datab => \vga_0|videoGen|LessThan6~0_combout\,
+	datac => \vga_0|videoSync|pixel_column\(9),
+	datad => \vga_0|videoGen|LessThan773~0_combout\,
+	combout => \vga_0|videoGen|pixelDraw~75_combout\);
+
+-- Location: LCCOMB_X30_Y25_N24
+\vga_0|videoGen|LessThan373~2\ : cycloneii_lcell_comb
+-- Equation(s):
+-- \vga_0|videoGen|LessThan373~2_combout\ = (!\vga_0|videoSync|pixel_column\(4) & !\vga_0|videoSync|pixel_column\(5))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0000010100000101",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \vga_0|videoSync|pixel_column\(4),
+	datac => \vga_0|videoSync|pixel_column\(5),
+	combout => \vga_0|videoGen|LessThan373~2_combout\);
+
+-- Location: LCCOMB_X31_Y25_N10
+\vga_0|videoGen|LessThan5~0\ : cycloneii_lcell_comb
+-- Equation(s):
+-- \vga_0|videoGen|LessThan5~0_combout\ = (\vga_0|videoGen|LessThan373~2_combout\ & (((!\vga_0|videoSync|pixel_column\(2) & !\vga_0|videoSync|pixel_column\(1))) # (!\vga_0|videoSync|pixel_column\(3))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0101011100000000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \vga_0|videoSync|pixel_column\(3),
+	datab => \vga_0|videoSync|pixel_column\(2),
+	datac => \vga_0|videoSync|pixel_column\(1),
+	datad => \vga_0|videoGen|LessThan373~2_combout\,
+	combout => \vga_0|videoGen|LessThan5~0_combout\);
+
+-- Location: LCCOMB_X31_Y25_N2
+\vga_0|videoGen|pixelDraw~76\ : cycloneii_lcell_comb
+-- Equation(s):
+-- \vga_0|videoGen|pixelDraw~76_combout\ = (\vga_0|videoSync|pixel_column\(7)) # ((\vga_0|videoSync|pixel_column\(6) & !\vga_0|videoGen|LessThan5~0_combout\))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1111000011111010",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \vga_0|videoSync|pixel_column\(6),
+	datac => \vga_0|videoSync|pixel_column\(7),
+	datad => \vga_0|videoGen|LessThan5~0_combout\,
+	combout => \vga_0|videoGen|pixelDraw~76_combout\);
+
+-- Location: LCCOMB_X31_Y25_N8
+\vga_0|videoGen|pixelDraw~77\ : cycloneii_lcell_comb
+-- Equation(s):
+-- \vga_0|videoGen|pixelDraw~77_combout\ = (\vga_0|videoGen|pixelDraw~75_combout\) # ((!\vga_0|videoSync|pixel_column\(9) & (\vga_0|videoSync|pixel_column\(8) & \vga_0|videoGen|pixelDraw~76_combout\)))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1111010011110000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \vga_0|videoSync|pixel_column\(9),
+	datab => \vga_0|videoSync|pixel_column\(8),
+	datac => \vga_0|videoGen|pixelDraw~75_combout\,
+	datad => \vga_0|videoGen|pixelDraw~76_combout\,
+	combout => \vga_0|videoGen|pixelDraw~77_combout\);
+
+-- Location: LCCOMB_X31_Y25_N18
+\vga_0|videoGen|pixelDraw~74\ : cycloneii_lcell_comb
+-- Equation(s):
+-- \vga_0|videoGen|pixelDraw~74_combout\ = (\vga_0|videoGen|LessThan13~4_combout\ & ((\vga_0|videoSync|pixel_column\(8) & ((!\vga_0|videoGen|LessThan6~0_combout\))) # (!\vga_0|videoSync|pixel_column\(8) & (!\vga_0|videoGen|LessThan5~0_combout\)))) # 
+-- (!\vga_0|videoGen|LessThan13~4_combout\ & (((!\vga_0|videoSync|pixel_column\(8)))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0000011111000111",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \vga_0|videoGen|LessThan5~0_combout\,
+	datab => \vga_0|videoGen|LessThan13~4_combout\,
+	datac => \vga_0|videoSync|pixel_column\(8),
+	datad => \vga_0|videoGen|LessThan6~0_combout\,
+	combout => \vga_0|videoGen|pixelDraw~74_combout\);
+
+-- Location: LCCOMB_X31_Y25_N30
+\vga_0|videoGen|colorAddress~173\ : cycloneii_lcell_comb
+-- Equation(s):
+-- \vga_0|videoGen|colorAddress~173_combout\ = ((!\vga_0|videoGen|pixelDraw~77_combout\ & ((\vga_0|videoSync|pixel_column\(9)) # (!\vga_0|videoGen|pixelDraw~74_combout\)))) # (!\vga_0|videoGen|pixelDraw~78_combout\)
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0011101100111111",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \vga_0|videoSync|pixel_column\(9),
+	datab => \vga_0|videoGen|pixelDraw~78_combout\,
+	datac => \vga_0|videoGen|pixelDraw~77_combout\,
+	datad => \vga_0|videoGen|pixelDraw~74_combout\,
+	combout => \vga_0|videoGen|colorAddress~173_combout\);
+
+-- Location: LCCOMB_X24_Y23_N16
+\vga_0|videoGen|colorAddress~174\ : cycloneii_lcell_comb
+-- Equation(s):
+-- \vga_0|videoGen|colorAddress~174_combout\ = (\vga_0|videoGen|colorAddress~173_combout\ & ((!\vga_0|videoGen|Mux653~4_combout\) # (!\vga_0|videoGen|gameOverT_on~combout\)))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0011111100000000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	datab => \vga_0|videoGen|gameOverT_on~combout\,
+	datac => \vga_0|videoGen|Mux653~4_combout\,
+	datad => \vga_0|videoGen|colorAddress~173_combout\,
+	combout => \vga_0|videoGen|colorAddress~174_combout\);
+
+-- Location: LCCOMB_X30_Y24_N2
+\vga_0|videoGen|LessThan48~0\ : cycloneii_lcell_comb
+-- Equation(s):
+-- \vga_0|videoGen|LessThan48~0_combout\ = (!\vga_0|videoSync|pixel_row\(3) & ((!\vga_0|videoSync|pixel_row\(2)) # (!\vga_0|videoSync|pixel_row\(1))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0001010100010101",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \vga_0|videoSync|pixel_row\(3),
+	datab => \vga_0|videoSync|pixel_row\(1),
+	datac => \vga_0|videoSync|pixel_row\(2),
+	combout => \vga_0|videoGen|LessThan48~0_combout\);
+
+-- Location: LCCOMB_X29_Y26_N16
+\vga_0|videoGen|pixelDraw~29\ : cycloneii_lcell_comb
+-- Equation(s):
+-- \vga_0|videoGen|pixelDraw~29_combout\ = (!\vga_0|videoSync|pixel_row\(8) & (((!\vga_0|videoSync|pixel_row\(5) & !\vga_0|videoSync|pixel_row\(6))) # (!\vga_0|videoSync|pixel_row\(7))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0000000101010101",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \vga_0|videoSync|pixel_row\(8),
+	datab => \vga_0|videoSync|pixel_row\(5),
+	datac => \vga_0|videoSync|pixel_row\(6),
+	datad => \vga_0|videoSync|pixel_row\(7),
+	combout => \vga_0|videoGen|pixelDraw~29_combout\);
+
+-- Location: LCCOMB_X29_Y26_N4
+\vga_0|videoGen|LessThan12~0\ : cycloneii_lcell_comb
+-- Equation(s):
+-- \vga_0|videoGen|LessThan12~0_combout\ = (\vga_0|videoSync|pixel_row\(5) & (\vga_0|videoSync|pixel_row\(4) & (\vga_0|videoSync|pixel_row\(6) & \vga_0|videoSync|pixel_row\(3))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1000000000000000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \vga_0|videoSync|pixel_row\(5),
+	datab => \vga_0|videoSync|pixel_row\(4),
+	datac => \vga_0|videoSync|pixel_row\(6),
+	datad => \vga_0|videoSync|pixel_row\(3),
+	combout => \vga_0|videoGen|LessThan12~0_combout\);
+
+-- Location: LCCOMB_X29_Y24_N20
+\vga_0|videoGen|LessThan15~0\ : cycloneii_lcell_comb
+-- Equation(s):
+-- \vga_0|videoGen|LessThan15~0_combout\ = (!\vga_0|videoSync|pixel_row\(2) & (!\vga_0|videoSync|pixel_row\(0) & !\vga_0|videoSync|pixel_row\(1)))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0000000000000101",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \vga_0|videoSync|pixel_row\(2),
+	datac => \vga_0|videoSync|pixel_row\(0),
+	datad => \vga_0|videoSync|pixel_row\(1),
+	combout => \vga_0|videoGen|LessThan15~0_combout\);
+
+-- Location: LCCOMB_X29_Y26_N12
+\vga_0|videoGen|pixelDraw~30\ : cycloneii_lcell_comb
+-- Equation(s):
+-- \vga_0|videoGen|pixelDraw~30_combout\ = (\vga_0|videoGen|pixelDraw~29_combout\ & (((\vga_0|videoGen|LessThan12~0_combout\ & !\vga_0|videoGen|LessThan15~0_combout\)) # (!\vga_0|videoGen|LessThan15~1_combout\)))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0100010011000100",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \vga_0|videoGen|LessThan15~1_combout\,
+	datab => \vga_0|videoGen|pixelDraw~29_combout\,
+	datac => \vga_0|videoGen|LessThan12~0_combout\,
+	datad => \vga_0|videoGen|LessThan15~0_combout\,
+	combout => \vga_0|videoGen|pixelDraw~30_combout\);
+
+-- Location: LCCOMB_X29_Y26_N2
+\vga_0|videoGen|pixelDraw~31\ : cycloneii_lcell_comb
+-- Equation(s):
+-- \vga_0|videoGen|pixelDraw~31_combout\ = (\vga_0|videoGen|pixelDraw~30_combout\ & (((\vga_0|videoGen|LessThan48~0_combout\) # (!\vga_0|videoSync|pixel_row\(4))) # (!\vga_0|videoSync|pixel_row\(7))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1111011100000000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \vga_0|videoSync|pixel_row\(7),
+	datab => \vga_0|videoSync|pixel_row\(4),
+	datac => \vga_0|videoGen|LessThan48~0_combout\,
+	datad => \vga_0|videoGen|pixelDraw~30_combout\,
+	combout => \vga_0|videoGen|pixelDraw~31_combout\);
+
+-- Location: LCCOMB_X29_Y26_N22
+\vga_0|videoGen|LessThan15~1\ : cycloneii_lcell_comb
+-- Equation(s):
+-- \vga_0|videoGen|LessThan15~1_combout\ = (!\vga_0|videoSync|pixel_row\(8) & !\vga_0|videoSync|pixel_row\(7))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0000000000110011",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	datab => \vga_0|videoSync|pixel_row\(8),
+	datad => \vga_0|videoSync|pixel_row\(7),
+	combout => \vga_0|videoGen|LessThan15~1_combout\);
+
+-- Location: LCCOMB_X29_Y26_N26
+\vga_0|videoGen|LessThan11~2\ : cycloneii_lcell_comb
+-- Equation(s):
+-- \vga_0|videoGen|LessThan11~2_combout\ = ((!\vga_0|videoSync|pixel_row\(5) & ((!\vga_0|videoSync|pixel_row\(3)) # (!\vga_0|videoSync|pixel_row\(4))))) # (!\vga_0|videoSync|pixel_row\(6))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0001111101011111",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \vga_0|videoSync|pixel_row\(5),
+	datab => \vga_0|videoSync|pixel_row\(4),
+	datac => \vga_0|videoSync|pixel_row\(6),
+	datad => \vga_0|videoSync|pixel_row\(3),
+	combout => \vga_0|videoGen|LessThan11~2_combout\);
+
+-- Location: LCCOMB_X29_Y26_N0
+\vga_0|videoGen|pixelDraw~46\ : cycloneii_lcell_comb
+-- Equation(s):
+-- \vga_0|videoGen|pixelDraw~46_combout\ = (!\vga_0|videoGen|LessThan11~1_combout\ & (\vga_0|videoGen|LessThan15~1_combout\ & (!\vga_0|videoGen|LessThan12~0_combout\ & !\vga_0|videoGen|LessThan11~2_combout\)))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0000000000000100",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \vga_0|videoGen|LessThan11~1_combout\,
+	datab => \vga_0|videoGen|LessThan15~1_combout\,
+	datac => \vga_0|videoGen|LessThan12~0_combout\,
+	datad => \vga_0|videoGen|LessThan11~2_combout\,
+	combout => \vga_0|videoGen|pixelDraw~46_combout\);
+
+-- Location: LCCOMB_X25_Y23_N22
+\vga_0|videoGen|colorAddress~199\ : cycloneii_lcell_comb
+-- Equation(s):
+-- \vga_0|videoGen|colorAddress~199_combout\ = (\vga_0|videoGen|pixelDraw~19_combout\ & ((\vga_0|videoGen|pixelDraw~31_combout\) # ((\vga_0|videoGen|colorAddress~174_combout\ & !\vga_0|videoGen|pixelDraw~46_combout\)))) # 
+-- (!\vga_0|videoGen|pixelDraw~19_combout\ & (\vga_0|videoGen|colorAddress~174_combout\))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1110010011101100",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \vga_0|videoGen|pixelDraw~19_combout\,
+	datab => \vga_0|videoGen|colorAddress~174_combout\,
+	datac => \vga_0|videoGen|pixelDraw~31_combout\,
+	datad => \vga_0|videoGen|pixelDraw~46_combout\,
+	combout => \vga_0|videoGen|colorAddress~199_combout\);
+
+-- Location: LCCOMB_X28_Y26_N16
+\vga_0|videoGen|LessThan53~0\ : cycloneii_lcell_comb
+-- Equation(s):
+-- \vga_0|videoGen|LessThan53~0_combout\ = (\vga_0|videoSync|pixel_column\(5) & ((\vga_0|videoSync|pixel_column\(4)) # (\vga_0|videoSync|pixel_column\(3))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1110111000000000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \vga_0|videoSync|pixel_column\(4),
+	datab => \vga_0|videoSync|pixel_column\(3),
+	datad => \vga_0|videoSync|pixel_column\(5),
+	combout => \vga_0|videoGen|LessThan53~0_combout\);
+
+-- Location: LCCOMB_X28_Y26_N20
+\vga_0|videoGen|LessThan13~1\ : cycloneii_lcell_comb
+-- Equation(s):
+-- \vga_0|videoGen|LessThan13~1_combout\ = (!\vga_0|videoSync|pixel_column\(2) & ((!\vga_0|videoSync|pixel_column\(0)) # (!\vga_0|videoSync|pixel_column\(1))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0000001100110011",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	datab => \vga_0|videoSync|pixel_column\(2),
+	datac => \vga_0|videoSync|pixel_column\(1),
+	datad => \vga_0|videoSync|pixel_column\(0),
+	combout => \vga_0|videoGen|LessThan13~1_combout\);
+
+-- Location: LCCOMB_X25_Y23_N8
+\vga_0|videoGen|LessThan13~2\ : cycloneii_lcell_comb
+-- Equation(s):
+-- \vga_0|videoGen|LessThan13~2_combout\ = (!\vga_0|videoSync|pixel_column\(4) & (!\vga_0|videoSync|pixel_column\(5) & ((\vga_0|videoGen|LessThan13~1_combout\) # (!\vga_0|videoSync|pixel_column\(3)))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0000010100000001",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \vga_0|videoSync|pixel_column\(4),
+	datab => \vga_0|videoSync|pixel_column\(3),
+	datac => \vga_0|videoSync|pixel_column\(5),
+	datad => \vga_0|videoGen|LessThan13~1_combout\,
+	combout => \vga_0|videoGen|LessThan13~2_combout\);
+
+-- Location: LCCOMB_X30_Y22_N16
+\vga_0|videoGen|LessThan13~0\ : cycloneii_lcell_comb
+-- Equation(s):
+-- \vga_0|videoGen|LessThan13~0_combout\ = (!\vga_0|videoSync|pixel_column\(9) & (!\vga_0|videoSync|pixel_column\(8) & (!\vga_0|videoSync|pixel_column\(7) & !\vga_0|videoSync|pixel_column\(6))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0000000000000001",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \vga_0|videoSync|pixel_column\(9),
+	datab => \vga_0|videoSync|pixel_column\(8),
+	datac => \vga_0|videoSync|pixel_column\(7),
+	datad => \vga_0|videoSync|pixel_column\(6),
+	combout => \vga_0|videoGen|LessThan13~0_combout\);
+
+-- Location: LCCOMB_X25_Y23_N2
+\vga_0|videoGen|pixelDraw~81\ : cycloneii_lcell_comb
+-- Equation(s):
+-- \vga_0|videoGen|pixelDraw~81_combout\ = ((\vga_0|videoGen|LessThan53~0_combout\) # ((\vga_0|videoGen|LessThan13~2_combout\) # (!\vga_0|videoGen|LessThan13~0_combout\))) # (!\vga_0|videoGen|pixelDraw~21_combout\)
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1111110111111111",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \vga_0|videoGen|pixelDraw~21_combout\,
+	datab => \vga_0|videoGen|LessThan53~0_combout\,
+	datac => \vga_0|videoGen|LessThan13~2_combout\,
+	datad => \vga_0|videoGen|LessThan13~0_combout\,
+	combout => \vga_0|videoGen|pixelDraw~81_combout\);
+
+-- Location: LCCOMB_X25_Y23_N16
+\vga_0|videoGen|pixelDraw~82\ : cycloneii_lcell_comb
+-- Equation(s):
+-- \vga_0|videoGen|pixelDraw~82_combout\ = ((\vga_0|videoGen|LessThan53~0_combout\) # ((\vga_0|videoGen|LessThan13~2_combout\) # (!\vga_0|videoGen|LessThan13~0_combout\))) # (!\vga_0|videoGen|pixelDraw~22_combout\)
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1111110111111111",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \vga_0|videoGen|pixelDraw~22_combout\,
+	datab => \vga_0|videoGen|LessThan53~0_combout\,
+	datac => \vga_0|videoGen|LessThan13~2_combout\,
+	datad => \vga_0|videoGen|LessThan13~0_combout\,
+	combout => \vga_0|videoGen|pixelDraw~82_combout\);
+
+-- Location: LCCOMB_X28_Y24_N26
+\vga_0|videoGen|Equal3~0\ : cycloneii_lcell_comb
+-- Equation(s):
+-- \vga_0|videoGen|Equal3~0_combout\ = (\vga_0|videoSync|pixel_row\(7) & \vga_0|videoSync|pixel_row\(6))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1111000000000000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	datac => \vga_0|videoSync|pixel_row\(7),
+	datad => \vga_0|videoSync|pixel_row\(6),
+	combout => \vga_0|videoGen|Equal3~0_combout\);
+
+-- Location: LCCOMB_X29_Y24_N4
+\vga_0|videoGen|LessThan27~0\ : cycloneii_lcell_comb
+-- Equation(s):
+-- \vga_0|videoGen|LessThan27~0_combout\ = (!\vga_0|videoSync|pixel_row\(2) & (!\vga_0|videoSync|pixel_row\(3) & ((!\vga_0|videoSync|pixel_row\(1)) # (!\vga_0|videoSync|pixel_row\(0)))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0000000100010001",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \vga_0|videoSync|pixel_row\(2),
+	datab => \vga_0|videoSync|pixel_row\(3),
+	datac => \vga_0|videoSync|pixel_row\(0),
+	datad => \vga_0|videoSync|pixel_row\(1),
+	combout => \vga_0|videoGen|LessThan27~0_combout\);
+
+-- Location: LCCOMB_X29_Y26_N18
+\vga_0|videoGen|LessThan27~1\ : cycloneii_lcell_comb
+-- Equation(s):
+-- \vga_0|videoGen|LessThan27~1_combout\ = ((!\vga_0|videoSync|pixel_row\(5) & ((\vga_0|videoGen|LessThan27~0_combout\) # (!\vga_0|videoSync|pixel_row\(4))))) # (!\vga_0|videoGen|Equal3~0_combout\)
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0011111100011111",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \vga_0|videoSync|pixel_row\(4),
+	datab => \vga_0|videoSync|pixel_row\(5),
+	datac => \vga_0|videoGen|Equal3~0_combout\,
+	datad => \vga_0|videoGen|LessThan27~0_combout\,
+	combout => \vga_0|videoGen|LessThan27~1_combout\);
+
+-- Location: LCCOMB_X29_Y26_N10
+\vga_0|videoGen|pixelDraw~22\ : cycloneii_lcell_comb
+-- Equation(s):
+-- \vga_0|videoGen|pixelDraw~22_combout\ = (!\vga_0|videoSync|pixel_row\(8) & (!\vga_0|videoGen|LessThan27~1_combout\ & ((!\vga_0|videoGen|Equal3~0_combout\) # (!\vga_0|videoGen|LessThan28~0_combout\))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0000000000000111",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \vga_0|videoGen|LessThan28~0_combout\,
+	datab => \vga_0|videoGen|Equal3~0_combout\,
+	datac => \vga_0|videoSync|pixel_row\(8),
+	datad => \vga_0|videoGen|LessThan27~1_combout\,
+	combout => \vga_0|videoGen|pixelDraw~22_combout\);
+
+-- Location: LCCOMB_X30_Y22_N8
+\vga_0|videoGen|LessThan133~2\ : cycloneii_lcell_comb
+-- Equation(s):
+-- \vga_0|videoGen|LessThan133~2_combout\ = (!\vga_0|videoSync|pixel_column\(7) & (!\vga_0|videoSync|pixel_column\(8) & !\vga_0|videoSync|pixel_column\(9)))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0000000100000001",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \vga_0|videoSync|pixel_column\(7),
+	datab => \vga_0|videoSync|pixel_column\(8),
+	datac => \vga_0|videoSync|pixel_column\(9),
+	combout => \vga_0|videoGen|LessThan133~2_combout\);
+
+-- Location: LCCOMB_X30_Y25_N20
 \vga_0|videoGen|LessThan94~0\ : cycloneii_lcell_comb
 -- Equation(s):
 -- \vga_0|videoGen|LessThan94~0_combout\ = (\vga_0|videoSync|pixel_column\(5) & ((\vga_0|videoSync|pixel_column\(3)) # ((\vga_0|videoSync|pixel_column\(4)) # (\vga_0|videoSync|pixel_column\(2)))))
@@ -6726,27 +5685,10 @@ PORT MAP (
 	datad => \vga_0|videoSync|pixel_column\(2),
 	combout => \vga_0|videoGen|LessThan94~0_combout\);
 
--- Location: LCCOMB_X22_Y23_N22
-\vga_0|videoGen|pixelDraw~44\ : cycloneii_lcell_comb
+-- Location: LCCOMB_X31_Y25_N26
+\vga_0|videoGen|LessThan493~0\ : cycloneii_lcell_comb
 -- Equation(s):
--- \vga_0|videoGen|pixelDraw~44_combout\ = (\vga_0|videoGen|LessThan173~0_combout\ & (!\vga_0|videoSync|pixel_column\(6) & ((!\vga_0|videoGen|LessThan54~0_combout\) # (!\vga_0|videoSync|pixel_column\(0)))))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0000000000101010",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \vga_0|videoGen|LessThan173~0_combout\,
-	datab => \vga_0|videoSync|pixel_column\(0),
-	datac => \vga_0|videoGen|LessThan54~0_combout\,
-	datad => \vga_0|videoSync|pixel_column\(6),
-	combout => \vga_0|videoGen|pixelDraw~44_combout\);
-
--- Location: LCCOMB_X22_Y23_N4
-\vga_0|videoGen|pixelDraw~45\ : cycloneii_lcell_comb
--- Equation(s):
--- \vga_0|videoGen|pixelDraw~45_combout\ = (!\vga_0|videoGen|LessThan534~0_combout\ & (\vga_0|videoGen|pixelDraw~43_combout\ & (!\vga_0|videoGen|LessThan94~0_combout\ & !\vga_0|videoGen|pixelDraw~44_combout\)))
+-- \vga_0|videoGen|LessThan493~0_combout\ = (!\vga_0|videoSync|pixel_column\(3) & (\vga_0|videoGen|LessThan93~0_combout\ & (!\vga_0|videoSync|pixel_column\(4) & !\vga_0|videoSync|pixel_column\(5))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -6754,68 +5696,431 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \vga_0|videoGen|LessThan534~0_combout\,
-	datab => \vga_0|videoGen|pixelDraw~43_combout\,
+	dataa => \vga_0|videoSync|pixel_column\(3),
+	datab => \vga_0|videoGen|LessThan93~0_combout\,
+	datac => \vga_0|videoSync|pixel_column\(4),
+	datad => \vga_0|videoSync|pixel_column\(5),
+	combout => \vga_0|videoGen|LessThan493~0_combout\);
+
+-- Location: LCCOMB_X30_Y22_N26
+\vga_0|videoGen|pixelDraw~70\ : cycloneii_lcell_comb
+-- Equation(s):
+-- \vga_0|videoGen|pixelDraw~70_combout\ = (\vga_0|videoSync|pixel_column\(6) & (\vga_0|videoGen|LessThan133~2_combout\ & (!\vga_0|videoGen|LessThan94~0_combout\ & !\vga_0|videoGen|LessThan493~0_combout\)))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0000000000001000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \vga_0|videoSync|pixel_column\(6),
+	datab => \vga_0|videoGen|LessThan133~2_combout\,
 	datac => \vga_0|videoGen|LessThan94~0_combout\,
-	datad => \vga_0|videoGen|pixelDraw~44_combout\,
-	combout => \vga_0|videoGen|pixelDraw~45_combout\);
+	datad => \vga_0|videoGen|LessThan493~0_combout\,
+	combout => \vga_0|videoGen|pixelDraw~70_combout\);
 
--- Location: LCCOMB_X21_Y23_N20
-\vga_0|videoGen|colorAddress~91\ : cycloneii_lcell_comb
+-- Location: LCCOMB_X29_Y22_N18
+\vga_0|videoGen|colorAddress~128\ : cycloneii_lcell_comb
 -- Equation(s):
--- \vga_0|videoGen|colorAddress~91_combout\ = (\vga_0|videoGen|pixelDraw~42_combout\ & (!\vga_0|videoGen|pixelDraw~45_combout\ & ((!\vga_0|videoGen|pixelDraw~32_combout\) # (!\vga_0|videoGen|pixelDraw~50_combout\)))) # (!\vga_0|videoGen|pixelDraw~42_combout\ 
--- & (((!\vga_0|videoGen|pixelDraw~32_combout\)) # (!\vga_0|videoGen|pixelDraw~50_combout\)))
+-- \vga_0|videoGen|colorAddress~128_combout\ = ((!\vga_0|videoGen|pixelDraw~79_combout\ & (!\vga_0|videoGen|pixelDraw~22_combout\ & !\vga_0|videoGen|pixelDraw~31_combout\))) # (!\vga_0|videoGen|pixelDraw~70_combout\)
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "0001010100111111",
+	lut_mask => "0000111100011111",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \vga_0|videoGen|pixelDraw~42_combout\,
-	datab => \vga_0|videoGen|pixelDraw~50_combout\,
-	datac => \vga_0|videoGen|pixelDraw~32_combout\,
-	datad => \vga_0|videoGen|pixelDraw~45_combout\,
-	combout => \vga_0|videoGen|colorAddress~91_combout\);
+	dataa => \vga_0|videoGen|pixelDraw~79_combout\,
+	datab => \vga_0|videoGen|pixelDraw~22_combout\,
+	datac => \vga_0|videoGen|pixelDraw~70_combout\,
+	datad => \vga_0|videoGen|pixelDraw~31_combout\,
+	combout => \vga_0|videoGen|colorAddress~128_combout\);
 
--- Location: LCCOMB_X22_Y25_N16
-\vga_0|videoGen|colorAddress~92\ : cycloneii_lcell_comb
+-- Location: LCCOMB_X30_Y24_N4
+\vga_0|videoGen|LessThan47~0\ : cycloneii_lcell_comb
 -- Equation(s):
--- \vga_0|videoGen|colorAddress~92_combout\ = (\vga_0|videoGen|colorAddress~91_combout\ & (((!\vga_0|videoGen|pixelDraw~27_combout\ & !\vga_0|videoGen|pixelDraw~77_combout\)) # (!\vga_0|videoGen|pixelDraw~52_combout\)))
+-- \vga_0|videoGen|LessThan47~0_combout\ = (\vga_0|videoSync|pixel_row\(5) & (\vga_0|videoSync|pixel_row\(6) & ((\vga_0|videoSync|pixel_row\(3)) # (\vga_0|videoSync|pixel_row\(4)))))
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "0001000011110000",
+	lut_mask => "1100000010000000",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \vga_0|videoGen|pixelDraw~27_combout\,
-	datab => \vga_0|videoGen|pixelDraw~77_combout\,
-	datac => \vga_0|videoGen|colorAddress~91_combout\,
-	datad => \vga_0|videoGen|pixelDraw~52_combout\,
-	combout => \vga_0|videoGen|colorAddress~92_combout\);
+	dataa => \vga_0|videoSync|pixel_row\(3),
+	datab => \vga_0|videoSync|pixel_row\(5),
+	datac => \vga_0|videoSync|pixel_row\(6),
+	datad => \vga_0|videoSync|pixel_row\(4),
+	combout => \vga_0|videoGen|LessThan47~0_combout\);
 
--- Location: LCCOMB_X23_Y25_N26
-\vga_0|videoGen|colorAddress~98\ : cycloneii_lcell_comb
+-- Location: LCCOMB_X30_Y24_N22
+\vga_0|videoGen|pixelDraw~35\ : cycloneii_lcell_comb
 -- Equation(s):
--- \vga_0|videoGen|colorAddress~98_combout\ = (\vga_0|videoGen|colorAddress~95_combout\ & (\vga_0|videoGen|colorAddress~97_combout\ & (\vga_0|videoGen|colorAddress~93_combout\ & \vga_0|videoGen|colorAddress~92_combout\)))
+-- \vga_0|videoGen|pixelDraw~35_combout\ = (\vga_0|videoSync|pixel_row\(8) & (((\vga_0|videoGen|LessThan48~0_combout\ & \vga_0|videoGen|LessThan35~2_combout\)) # (!\vga_0|videoSync|pixel_row\(7))))
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "1000000000000000",
+	lut_mask => "1101000001010000",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \vga_0|videoGen|colorAddress~95_combout\,
-	datab => \vga_0|videoGen|colorAddress~97_combout\,
-	datac => \vga_0|videoGen|colorAddress~93_combout\,
-	datad => \vga_0|videoGen|colorAddress~92_combout\,
-	combout => \vga_0|videoGen|colorAddress~98_combout\);
+	dataa => \vga_0|videoSync|pixel_row\(7),
+	datab => \vga_0|videoGen|LessThan48~0_combout\,
+	datac => \vga_0|videoSync|pixel_row\(8),
+	datad => \vga_0|videoGen|LessThan35~2_combout\,
+	combout => \vga_0|videoGen|pixelDraw~35_combout\);
 
--- Location: LCCOMB_X23_Y21_N2
-\vga_0|videoGen|LessThan693~0\ : cycloneii_lcell_comb
+-- Location: LCCOMB_X30_Y24_N20
+\vga_0|videoGen|pixelDraw~36\ : cycloneii_lcell_comb
 -- Equation(s):
--- \vga_0|videoGen|LessThan693~0_combout\ = (!\vga_0|videoSync|pixel_column\(6) & (!\vga_0|videoSync|pixel_column\(8) & !\vga_0|videoSync|pixel_column\(7)))
+-- \vga_0|videoGen|pixelDraw~36_combout\ = (\vga_0|videoGen|pixelDraw~35_combout\ & ((\vga_0|videoSync|pixel_row\(7)) # ((!\vga_0|videoGen|LessThan47~1_combout\ & \vga_0|videoGen|LessThan47~0_combout\))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1101110000000000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \vga_0|videoGen|LessThan47~1_combout\,
+	datab => \vga_0|videoSync|pixel_row\(7),
+	datac => \vga_0|videoGen|LessThan47~0_combout\,
+	datad => \vga_0|videoGen|pixelDraw~35_combout\,
+	combout => \vga_0|videoGen|pixelDraw~36_combout\);
+
+-- Location: LCCOMB_X30_Y24_N14
+\vga_0|videoGen|pixelDraw~39\ : cycloneii_lcell_comb
+-- Equation(s):
+-- \vga_0|videoGen|pixelDraw~39_combout\ = (!\vga_0|videoSync|pixel_row\(7) & ((\vga_0|videoSync|pixel_row\(5)) # ((\vga_0|videoSync|pixel_row\(3)) # (\vga_0|videoSync|pixel_row\(4)))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0011001100110010",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \vga_0|videoSync|pixel_row\(5),
+	datab => \vga_0|videoSync|pixel_row\(7),
+	datac => \vga_0|videoSync|pixel_row\(3),
+	datad => \vga_0|videoSync|pixel_row\(4),
+	combout => \vga_0|videoGen|pixelDraw~39_combout\);
+
+-- Location: LCCOMB_X29_Y24_N30
+\vga_0|videoGen|LessThan11~0\ : cycloneii_lcell_comb
+-- Equation(s):
+-- \vga_0|videoGen|LessThan11~0_combout\ = (!\vga_0|videoSync|pixel_row\(1)) # (!\vga_0|videoSync|pixel_row\(0))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0101010111111111",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \vga_0|videoSync|pixel_row\(0),
+	datad => \vga_0|videoSync|pixel_row\(1),
+	combout => \vga_0|videoGen|LessThan11~0_combout\);
+
+-- Location: LCCOMB_X29_Y26_N6
+\vga_0|videoGen|LessThan43~0\ : cycloneii_lcell_comb
+-- Equation(s):
+-- \vga_0|videoGen|LessThan43~0_combout\ = (!\vga_0|videoSync|pixel_row\(5) & !\vga_0|videoSync|pixel_row\(4))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0000000000110011",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	datab => \vga_0|videoSync|pixel_row\(5),
+	datad => \vga_0|videoSync|pixel_row\(4),
+	combout => \vga_0|videoGen|LessThan43~0_combout\);
+
+-- Location: LCCOMB_X30_Y24_N28
+\vga_0|videoGen|pixelDraw~40\ : cycloneii_lcell_comb
+-- Equation(s):
+-- \vga_0|videoGen|pixelDraw~40_combout\ = (\vga_0|videoSync|pixel_row\(8) & ((\vga_0|videoSync|pixel_row\(2)) # ((!\vga_0|videoGen|LessThan43~0_combout\) # (!\vga_0|videoGen|LessThan11~0_combout\))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1000110011001100",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \vga_0|videoSync|pixel_row\(2),
+	datab => \vga_0|videoSync|pixel_row\(8),
+	datac => \vga_0|videoGen|LessThan11~0_combout\,
+	datad => \vga_0|videoGen|LessThan43~0_combout\,
+	combout => \vga_0|videoGen|pixelDraw~40_combout\);
+
+-- Location: LCCOMB_X30_Y24_N10
+\vga_0|videoGen|pixelDraw~41\ : cycloneii_lcell_comb
+-- Equation(s):
+-- \vga_0|videoGen|pixelDraw~41_combout\ = (!\vga_0|videoGen|placeShip_on~0_combout\ & (!\vga_0|videoGen|LessThan47~0_combout\ & (\vga_0|videoGen|pixelDraw~39_combout\ & \vga_0|videoGen|pixelDraw~40_combout\)))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0001000000000000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \vga_0|videoGen|placeShip_on~0_combout\,
+	datab => \vga_0|videoGen|LessThan47~0_combout\,
+	datac => \vga_0|videoGen|pixelDraw~39_combout\,
+	datad => \vga_0|videoGen|pixelDraw~40_combout\,
+	combout => \vga_0|videoGen|pixelDraw~41_combout\);
+
+-- Location: LCCOMB_X30_Y22_N2
+\vga_0|videoGen|colorAddress~126\ : cycloneii_lcell_comb
+-- Equation(s):
+-- \vga_0|videoGen|colorAddress~126_combout\ = (\vga_0|videoGen|pixelDraw~71_combout\ & (((!\vga_0|videoGen|pixelDraw~36_combout\ & !\vga_0|videoGen|pixelDraw~41_combout\)) # (!\vga_0|videoGen|pixelDraw~70_combout\)))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0010001000101010",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \vga_0|videoGen|pixelDraw~71_combout\,
+	datab => \vga_0|videoGen|pixelDraw~70_combout\,
+	datac => \vga_0|videoGen|pixelDraw~36_combout\,
+	datad => \vga_0|videoGen|pixelDraw~41_combout\,
+	combout => \vga_0|videoGen|colorAddress~126_combout\);
+
+-- Location: LCCOMB_X29_Y22_N28
+\vga_0|videoGen|colorAddress~127\ : cycloneii_lcell_comb
+-- Equation(s):
+-- \vga_0|videoGen|colorAddress~127_combout\ = (\vga_0|videoGen|colorAddress~126_combout\ & ((!\vga_0|videoGen|pixelDraw~70_combout\) # (!\vga_0|videoGen|colorAddress~111_combout\)))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0101111100000000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \vga_0|videoGen|colorAddress~111_combout\,
+	datac => \vga_0|videoGen|pixelDraw~70_combout\,
+	datad => \vga_0|videoGen|colorAddress~126_combout\,
+	combout => \vga_0|videoGen|colorAddress~127_combout\);
+
+-- Location: LCCOMB_X29_Y22_N12
+\vga_0|videoGen|colorAddress~129\ : cycloneii_lcell_comb
+-- Equation(s):
+-- \vga_0|videoGen|colorAddress~129_combout\ = (\vga_0|videoGen|colorAddress~128_combout\ & (\vga_0|videoGen|colorAddress~127_combout\ & ((!\vga_0|videoGen|pixelDraw~70_combout\) # (!\vga_0|videoGen|pixelDraw~21_combout\))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0100110000000000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \vga_0|videoGen|pixelDraw~21_combout\,
+	datab => \vga_0|videoGen|colorAddress~128_combout\,
+	datac => \vga_0|videoGen|pixelDraw~70_combout\,
+	datad => \vga_0|videoGen|colorAddress~127_combout\,
+	combout => \vga_0|videoGen|colorAddress~129_combout\);
+
+-- Location: LCCOMB_X30_Y22_N28
+\vga_0|videoGen|colorAddress~124\ : cycloneii_lcell_comb
+-- Equation(s):
+-- \vga_0|videoGen|colorAddress~124_combout\ = (\vga_0|videoGen|pixelDraw~38_combout\) # ((\vga_0|videoGen|pixelDraw~31_combout\) # ((\vga_0|videoGen|pixelDraw~36_combout\) # (\vga_0|videoGen|pixelDraw~41_combout\)))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1111111111111110",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \vga_0|videoGen|pixelDraw~38_combout\,
+	datab => \vga_0|videoGen|pixelDraw~31_combout\,
+	datac => \vga_0|videoGen|pixelDraw~36_combout\,
+	datad => \vga_0|videoGen|pixelDraw~41_combout\,
+	combout => \vga_0|videoGen|colorAddress~124_combout\);
+
+-- Location: LCCOMB_X29_Y24_N2
+\vga_0|videoGen|LessThan35~0\ : cycloneii_lcell_comb
+-- Equation(s):
+-- \vga_0|videoGen|LessThan35~0_combout\ = (!\vga_0|videoSync|pixel_row\(6) & (!\vga_0|videoSync|pixel_row\(7) & (!\vga_0|videoSync|pixel_row\(5) & !\vga_0|videoSync|pixel_row\(4))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0000000000000001",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \vga_0|videoSync|pixel_row\(6),
+	datab => \vga_0|videoSync|pixel_row\(7),
+	datac => \vga_0|videoSync|pixel_row\(5),
+	datad => \vga_0|videoSync|pixel_row\(4),
+	combout => \vga_0|videoGen|LessThan35~0_combout\);
+
+-- Location: LCCOMB_X29_Y24_N18
+\vga_0|videoGen|LessThan32~0\ : cycloneii_lcell_comb
+-- Equation(s):
+-- \vga_0|videoGen|LessThan32~0_combout\ = (\vga_0|videoSync|pixel_row\(3) & (\vga_0|videoSync|pixel_row\(2) & \vga_0|videoSync|pixel_row\(1)))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1100000000000000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	datab => \vga_0|videoSync|pixel_row\(3),
+	datac => \vga_0|videoSync|pixel_row\(2),
+	datad => \vga_0|videoSync|pixel_row\(1),
+	combout => \vga_0|videoGen|LessThan32~0_combout\);
+
+-- Location: LCCOMB_X29_Y26_N28
+\vga_0|videoGen|LessThan28~0\ : cycloneii_lcell_comb
+-- Equation(s):
+-- \vga_0|videoGen|LessThan28~0_combout\ = (\vga_0|videoSync|pixel_row\(5) & \vga_0|videoSync|pixel_row\(4))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1111000000000000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	datac => \vga_0|videoSync|pixel_row\(5),
+	datad => \vga_0|videoSync|pixel_row\(4),
+	combout => \vga_0|videoGen|LessThan28~0_combout\);
+
+-- Location: LCCOMB_X29_Y24_N12
+\vga_0|videoGen|LessThan31~0\ : cycloneii_lcell_comb
+-- Equation(s):
+-- \vga_0|videoGen|LessThan31~0_combout\ = (((!\vga_0|videoSync|pixel_row\(3) & \vga_0|videoGen|LessThan15~0_combout\)) # (!\vga_0|videoGen|LessThan28~0_combout\)) # (!\vga_0|videoGen|Equal3~0_combout\)
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0111010111111111",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \vga_0|videoGen|Equal3~0_combout\,
+	datab => \vga_0|videoSync|pixel_row\(3),
+	datac => \vga_0|videoGen|LessThan15~0_combout\,
+	datad => \vga_0|videoGen|LessThan28~0_combout\,
+	combout => \vga_0|videoGen|LessThan31~0_combout\);
+
+-- Location: LCCOMB_X29_Y24_N8
+\vga_0|videoGen|pixelDraw~33\ : cycloneii_lcell_comb
+-- Equation(s):
+-- \vga_0|videoGen|pixelDraw~33_combout\ = (\vga_0|videoSync|pixel_row\(8) & (\vga_0|videoGen|LessThan35~0_combout\ & (!\vga_0|videoGen|LessThan32~0_combout\))) # (!\vga_0|videoSync|pixel_row\(8) & (((!\vga_0|videoGen|LessThan31~0_combout\))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0000100001011101",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \vga_0|videoSync|pixel_row\(8),
+	datab => \vga_0|videoGen|LessThan35~0_combout\,
+	datac => \vga_0|videoGen|LessThan32~0_combout\,
+	datad => \vga_0|videoGen|LessThan31~0_combout\,
+	combout => \vga_0|videoGen|pixelDraw~33_combout\);
+
+-- Location: LCCOMB_X30_Y23_N12
+\vga_0|videoGen|LessThan24~0\ : cycloneii_lcell_comb
+-- Equation(s):
+-- \vga_0|videoGen|LessThan24~0_combout\ = (\vga_0|videoSync|pixel_row\(4) & ((\vga_0|videoSync|pixel_row\(2)) # ((\vga_0|videoSync|pixel_row\(1)) # (\vga_0|videoSync|pixel_row\(3)))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1100110011001000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \vga_0|videoSync|pixel_row\(2),
+	datab => \vga_0|videoSync|pixel_row\(4),
+	datac => \vga_0|videoSync|pixel_row\(1),
+	datad => \vga_0|videoSync|pixel_row\(3),
+	combout => \vga_0|videoGen|LessThan24~0_combout\);
+
+-- Location: LCCOMB_X30_Y23_N14
+\vga_0|videoGen|pixelDraw~20\ : cycloneii_lcell_comb
+-- Equation(s):
+-- \vga_0|videoGen|pixelDraw~20_combout\ = (!\vga_0|videoSync|pixel_row\(8) & (((!\vga_0|videoSync|pixel_row\(5) & !\vga_0|videoGen|LessThan24~0_combout\)) # (!\vga_0|videoGen|Equal3~0_combout\)))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0001000100010011",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \vga_0|videoGen|Equal3~0_combout\,
+	datab => \vga_0|videoSync|pixel_row\(8),
+	datac => \vga_0|videoSync|pixel_row\(5),
+	datad => \vga_0|videoGen|LessThan24~0_combout\,
+	combout => \vga_0|videoGen|pixelDraw~20_combout\);
+
+-- Location: LCCOMB_X30_Y23_N20
+\vga_0|videoGen|LessThan23~0\ : cycloneii_lcell_comb
+-- Equation(s):
+-- \vga_0|videoGen|LessThan23~0_combout\ = ((!\vga_0|videoSync|pixel_row\(6) & ((!\vga_0|videoSync|pixel_row\(4)) # (!\vga_0|videoSync|pixel_row\(5))))) # (!\vga_0|videoSync|pixel_row\(7))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0011011100111111",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \vga_0|videoSync|pixel_row\(5),
+	datab => \vga_0|videoSync|pixel_row\(7),
+	datac => \vga_0|videoSync|pixel_row\(6),
+	datad => \vga_0|videoSync|pixel_row\(4),
+	combout => \vga_0|videoGen|LessThan23~0_combout\);
+
+-- Location: LCCOMB_X30_Y24_N16
+\vga_0|videoGen|LessThan23~1\ : cycloneii_lcell_comb
+-- Equation(s):
+-- \vga_0|videoGen|LessThan23~1_combout\ = (!\vga_0|videoSync|pixel_row\(3) & (((!\vga_0|videoSync|pixel_row\(0) & !\vga_0|videoSync|pixel_row\(1))) # (!\vga_0|videoSync|pixel_row\(2))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0001000100010011",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \vga_0|videoSync|pixel_row\(2),
+	datab => \vga_0|videoSync|pixel_row\(3),
+	datac => \vga_0|videoSync|pixel_row\(0),
+	datad => \vga_0|videoSync|pixel_row\(1),
+	combout => \vga_0|videoGen|LessThan23~1_combout\);
+
+-- Location: LCCOMB_X30_Y23_N10
+\vga_0|videoGen|LessThan23~2\ : cycloneii_lcell_comb
+-- Equation(s):
+-- \vga_0|videoGen|LessThan23~2_combout\ = (!\vga_0|videoSync|pixel_row\(8) & ((\vga_0|videoGen|LessThan23~0_combout\) # ((!\vga_0|videoSync|pixel_row\(6) & \vga_0|videoGen|LessThan23~1_combout\))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0011000100110000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \vga_0|videoSync|pixel_row\(6),
+	datab => \vga_0|videoSync|pixel_row\(8),
+	datac => \vga_0|videoGen|LessThan23~0_combout\,
+	datad => \vga_0|videoGen|LessThan23~1_combout\,
+	combout => \vga_0|videoGen|LessThan23~2_combout\);
+
+-- Location: LCCOMB_X30_Y23_N28
+\vga_0|videoGen|pixelDraw~21\ : cycloneii_lcell_comb
+-- Equation(s):
+-- \vga_0|videoGen|pixelDraw~21_combout\ = (\vga_0|videoGen|pixelDraw~20_combout\ & !\vga_0|videoGen|LessThan23~2_combout\)
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0000000011110000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	datac => \vga_0|videoGen|pixelDraw~20_combout\,
+	datad => \vga_0|videoGen|LessThan23~2_combout\,
+	combout => \vga_0|videoGen|pixelDraw~21_combout\);
+
+-- Location: LCCOMB_X29_Y25_N22
+\vga_0|videoGen|LessThan613~0\ : cycloneii_lcell_comb
+-- Equation(s):
+-- \vga_0|videoGen|LessThan613~0_combout\ = (!\vga_0|videoSync|pixel_column\(3) & (!\vga_0|videoSync|pixel_column\(2) & !\vga_0|videoSync|pixel_column\(4)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -6823,15 +6128,218 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \vga_0|videoSync|pixel_column\(6),
-	datac => \vga_0|videoSync|pixel_column\(8),
-	datad => \vga_0|videoSync|pixel_column\(7),
-	combout => \vga_0|videoGen|LessThan693~0_combout\);
+	dataa => \vga_0|videoSync|pixel_column\(3),
+	datac => \vga_0|videoSync|pixel_column\(2),
+	datad => \vga_0|videoSync|pixel_column\(4),
+	combout => \vga_0|videoGen|LessThan613~0_combout\);
 
--- Location: LCCOMB_X22_Y22_N20
-\vga_0|videoGen|LessThan773~0\ : cycloneii_lcell_comb
+-- Location: LCCOMB_X30_Y25_N26
+\vga_0|videoGen|LessThan134~0\ : cycloneii_lcell_comb
 -- Equation(s):
--- \vga_0|videoGen|LessThan773~0_combout\ = (!\vga_0|videoSync|pixel_column\(8) & !\vga_0|videoSync|pixel_column\(7))
+-- \vga_0|videoGen|LessThan134~0_combout\ = (\vga_0|videoSync|pixel_column\(1)) # ((\vga_0|videoSync|pixel_column\(5)) # (!\vga_0|videoGen|LessThan613~0_combout\))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1111110011111111",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	datab => \vga_0|videoSync|pixel_column\(1),
+	datac => \vga_0|videoSync|pixel_column\(5),
+	datad => \vga_0|videoGen|LessThan613~0_combout\,
+	combout => \vga_0|videoGen|LessThan134~0_combout\);
+
+-- Location: LCCOMB_X30_Y22_N22
+\vga_0|videoGen|pixelDraw~67\ : cycloneii_lcell_comb
+-- Equation(s):
+-- \vga_0|videoGen|pixelDraw~67_combout\ = (\vga_0|videoGen|LessThan13~3_combout\ & (((!\vga_0|videoGen|LessThan134~0_combout\ & !\vga_0|videoSync|pixel_column\(6))) # (!\vga_0|videoSync|pixel_column\(7))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0100010001001100",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \vga_0|videoSync|pixel_column\(7),
+	datab => \vga_0|videoGen|LessThan13~3_combout\,
+	datac => \vga_0|videoGen|LessThan134~0_combout\,
+	datad => \vga_0|videoSync|pixel_column\(6),
+	combout => \vga_0|videoGen|pixelDraw~67_combout\);
+
+-- Location: LCCOMB_X30_Y22_N30
+\vga_0|videoGen|pixelDraw~68\ : cycloneii_lcell_comb
+-- Equation(s):
+-- \vga_0|videoGen|pixelDraw~68_combout\ = (\vga_0|videoGen|pixelDraw~67_combout\ & (((!\vga_0|videoGen|LessThan133~1_combout\ & \vga_0|videoSync|pixel_column\(6))) # (!\vga_0|videoGen|LessThan133~2_combout\)))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0100111100000000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \vga_0|videoGen|LessThan133~1_combout\,
+	datab => \vga_0|videoSync|pixel_column\(6),
+	datac => \vga_0|videoGen|LessThan133~2_combout\,
+	datad => \vga_0|videoGen|pixelDraw~67_combout\,
+	combout => \vga_0|videoGen|pixelDraw~68_combout\);
+
+-- Location: LCCOMB_X29_Y22_N8
+\vga_0|videoGen|colorAddress~122\ : cycloneii_lcell_comb
+-- Equation(s):
+-- \vga_0|videoGen|colorAddress~122_combout\ = ((!\vga_0|videoGen|pixelDraw~79_combout\ & (!\vga_0|videoGen|pixelDraw~22_combout\ & !\vga_0|videoGen|pixelDraw~21_combout\))) # (!\vga_0|videoGen|pixelDraw~68_combout\)
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0000000111111111",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \vga_0|videoGen|pixelDraw~79_combout\,
+	datab => \vga_0|videoGen|pixelDraw~22_combout\,
+	datac => \vga_0|videoGen|pixelDraw~21_combout\,
+	datad => \vga_0|videoGen|pixelDraw~68_combout\,
+	combout => \vga_0|videoGen|colorAddress~122_combout\);
+
+-- Location: LCCOMB_X29_Y22_N4
+\vga_0|videoGen|colorAddress~123\ : cycloneii_lcell_comb
+-- Equation(s):
+-- \vga_0|videoGen|colorAddress~123_combout\ = (\vga_0|videoGen|colorAddress~122_combout\ & (((!\vga_0|videoGen|pixelDraw~34_combout\ & !\vga_0|videoGen|pixelDraw~33_combout\)) # (!\vga_0|videoGen|pixelDraw~68_combout\)))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0001000011110000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \vga_0|videoGen|pixelDraw~34_combout\,
+	datab => \vga_0|videoGen|pixelDraw~33_combout\,
+	datac => \vga_0|videoGen|colorAddress~122_combout\,
+	datad => \vga_0|videoGen|pixelDraw~68_combout\,
+	combout => \vga_0|videoGen|colorAddress~123_combout\);
+
+-- Location: LCCOMB_X29_Y22_N20
+\vga_0|videoGen|colorAddress~125\ : cycloneii_lcell_comb
+-- Equation(s):
+-- \vga_0|videoGen|colorAddress~125_combout\ = (\vga_0|videoGen|pixelDraw~69_combout\ & (\vga_0|videoGen|colorAddress~123_combout\ & ((!\vga_0|videoGen|pixelDraw~68_combout\) # (!\vga_0|videoGen|colorAddress~124_combout\))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0010000010100000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \vga_0|videoGen|pixelDraw~69_combout\,
+	datab => \vga_0|videoGen|colorAddress~124_combout\,
+	datac => \vga_0|videoGen|colorAddress~123_combout\,
+	datad => \vga_0|videoGen|pixelDraw~68_combout\,
+	combout => \vga_0|videoGen|colorAddress~125_combout\);
+
+-- Location: LCCOMB_X30_Y24_N24
+\vga_0|videoGen|pixelDraw~17\ : cycloneii_lcell_comb
+-- Equation(s):
+-- \vga_0|videoGen|pixelDraw~17_combout\ = (\vga_0|videoSync|pixel_row\(2) & ((\vga_0|videoSync|pixel_row\(5)) # ((\vga_0|videoSync|pixel_row\(1) & \vga_0|videoSync|pixel_row\(0)))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1010101010000000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \vga_0|videoSync|pixel_row\(2),
+	datab => \vga_0|videoSync|pixel_row\(1),
+	datac => \vga_0|videoSync|pixel_row\(0),
+	datad => \vga_0|videoSync|pixel_row\(5),
+	combout => \vga_0|videoGen|pixelDraw~17_combout\);
+
+-- Location: LCCOMB_X30_Y24_N18
+\vga_0|videoGen|pixelDraw~18\ : cycloneii_lcell_comb
+-- Equation(s):
+-- \vga_0|videoGen|pixelDraw~18_combout\ = (\vga_0|videoSync|pixel_row\(5) & (((!\vga_0|videoSync|pixel_row\(3) & !\vga_0|videoGen|pixelDraw~17_combout\)) # (!\vga_0|videoSync|pixel_row\(4)))) # (!\vga_0|videoSync|pixel_row\(5) & 
+-- ((\vga_0|videoSync|pixel_row\(3)) # ((\vga_0|videoGen|pixelDraw~17_combout\))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0011011011111110",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \vga_0|videoSync|pixel_row\(3),
+	datab => \vga_0|videoSync|pixel_row\(5),
+	datac => \vga_0|videoGen|pixelDraw~17_combout\,
+	datad => \vga_0|videoSync|pixel_row\(4),
+	combout => \vga_0|videoGen|pixelDraw~18_combout\);
+
+-- Location: LCCOMB_X30_Y24_N26
+\vga_0|videoGen|pixelDraw~79\ : cycloneii_lcell_comb
+-- Equation(s):
+-- \vga_0|videoGen|pixelDraw~79_combout\ = (\vga_0|videoGen|pixelDraw~16_combout\ & (\vga_0|videoGen|pixelDraw~18_combout\ & ((\vga_0|videoSync|pixel_row\(4)) # (\vga_0|videoSync|pixel_row\(5)))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1010100000000000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \vga_0|videoGen|pixelDraw~16_combout\,
+	datab => \vga_0|videoSync|pixel_row\(4),
+	datac => \vga_0|videoSync|pixel_row\(5),
+	datad => \vga_0|videoGen|pixelDraw~18_combout\,
+	combout => \vga_0|videoGen|pixelDraw~79_combout\);
+
+-- Location: LCCOMB_X31_Y23_N18
+\vga_0|videoGen|colorAddress~75\ : cycloneii_lcell_comb
+-- Equation(s):
+-- \vga_0|videoGen|colorAddress~75_combout\ = (\vga_0|videoGen|pixelDraw~41_combout\) # ((\vga_0|videoGen|pixelDraw~21_combout\) # ((\vga_0|videoGen|pixelDraw~79_combout\) # (\vga_0|videoGen|pixelDraw~36_combout\)))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1111111111111110",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \vga_0|videoGen|pixelDraw~41_combout\,
+	datab => \vga_0|videoGen|pixelDraw~21_combout\,
+	datac => \vga_0|videoGen|pixelDraw~79_combout\,
+	datad => \vga_0|videoGen|pixelDraw~36_combout\,
+	combout => \vga_0|videoGen|colorAddress~75_combout\);
+
+-- Location: LCCOMB_X25_Y23_N0
+\vga_0|videoGen|pixelDraw~50\ : cycloneii_lcell_comb
+-- Equation(s):
+-- \vga_0|videoGen|pixelDraw~50_combout\ = (!\vga_0|videoSync|pixel_column\(9) & (\vga_0|videoSync|pixel_column\(6) & !\vga_0|videoSync|pixel_column\(7)))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0000000000110000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	datab => \vga_0|videoSync|pixel_column\(9),
+	datac => \vga_0|videoSync|pixel_column\(6),
+	datad => \vga_0|videoSync|pixel_column\(7),
+	combout => \vga_0|videoGen|pixelDraw~50_combout\);
+
+-- Location: LCCOMB_X25_Y23_N26
+\vga_0|videoGen|pixelDraw~51\ : cycloneii_lcell_comb
+-- Equation(s):
+-- \vga_0|videoGen|pixelDraw~51_combout\ = (\vga_0|videoSync|pixel_column\(8) & (\vga_0|videoGen|pixelDraw~50_combout\ & (!\vga_0|videoGen|LessThan13~2_combout\ & !\vga_0|videoGen|LessThan53~0_combout\)))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0000000000001000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \vga_0|videoSync|pixel_column\(8),
+	datab => \vga_0|videoGen|pixelDraw~50_combout\,
+	datac => \vga_0|videoGen|LessThan13~2_combout\,
+	datad => \vga_0|videoGen|LessThan53~0_combout\,
+	combout => \vga_0|videoGen|pixelDraw~51_combout\);
+
+-- Location: LCCOMB_X28_Y26_N2
+\vga_0|videoGen|LessThan613~1\ : cycloneii_lcell_comb
+-- Equation(s):
+-- \vga_0|videoGen|LessThan613~1_combout\ = (!\vga_0|videoSync|pixel_column\(1) & !\vga_0|videoSync|pixel_column\(0))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -6839,93 +6347,226 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	datac => \vga_0|videoSync|pixel_column\(8),
-	datad => \vga_0|videoSync|pixel_column\(7),
-	combout => \vga_0|videoGen|LessThan773~0_combout\);
-
--- Location: LCCOMB_X22_Y22_N2
-\vga_0|videoGen|LessThan734~0\ : cycloneii_lcell_comb
--- Equation(s):
--- \vga_0|videoGen|LessThan734~0_combout\ = ((\vga_0|videoSync|pixel_column\(6) & ((\vga_0|videoGen|LessThan334~0_combout\) # (\vga_0|videoSync|pixel_column\(5))))) # (!\vga_0|videoGen|LessThan773~0_combout\)
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1100111110001111",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \vga_0|videoGen|LessThan334~0_combout\,
-	datab => \vga_0|videoSync|pixel_column\(6),
-	datac => \vga_0|videoGen|LessThan773~0_combout\,
-	datad => \vga_0|videoSync|pixel_column\(5),
-	combout => \vga_0|videoGen|LessThan734~0_combout\);
-
--- Location: LCCOMB_X23_Y23_N16
-\vga_0|videoGen|pixelDraw~41\ : cycloneii_lcell_comb
--- Equation(s):
--- \vga_0|videoGen|pixelDraw~41_combout\ = (\vga_0|videoSync|pixel_column\(9) & (!\vga_0|videoGen|LessThan734~0_combout\ & ((!\vga_0|videoGen|LessThan693~0_combout\) # (!\vga_0|videoGen|LessThan333~2_combout\))))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0000000001001100",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \vga_0|videoGen|LessThan333~2_combout\,
-	datab => \vga_0|videoSync|pixel_column\(9),
-	datac => \vga_0|videoGen|LessThan693~0_combout\,
-	datad => \vga_0|videoGen|LessThan734~0_combout\,
-	combout => \vga_0|videoGen|pixelDraw~41_combout\);
-
--- Location: LCCOMB_X23_Y23_N2
-\vga_0|videoGen|colorAddress~69\ : cycloneii_lcell_comb
--- Equation(s):
--- \vga_0|videoGen|colorAddress~69_combout\ = ((!\vga_0|videoGen|pixelDraw~30_combout\ & !\vga_0|videoGen|pixelDraw~29_combout\)) # (!\vga_0|videoGen|pixelDraw~41_combout\)
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0000111100111111",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	datab => \vga_0|videoGen|pixelDraw~30_combout\,
-	datac => \vga_0|videoGen|pixelDraw~41_combout\,
-	datad => \vga_0|videoGen|pixelDraw~29_combout\,
-	combout => \vga_0|videoGen|colorAddress~69_combout\);
-
--- Location: LCCOMB_X23_Y23_N0
-\vga_0|videoGen|colorAddress~70\ : cycloneii_lcell_comb
--- Equation(s):
--- \vga_0|videoGen|colorAddress~70_combout\ = (\vga_0|videoGen|colorAddress~69_combout\ & (((!\vga_0|videoGen|pixelDraw~34_combout\ & !\vga_0|videoGen|pixelDraw~37_combout\)) # (!\vga_0|videoGen|pixelDraw~41_combout\)))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0001111100000000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \vga_0|videoGen|pixelDraw~34_combout\,
-	datab => \vga_0|videoGen|pixelDraw~37_combout\,
-	datac => \vga_0|videoGen|pixelDraw~41_combout\,
-	datad => \vga_0|videoGen|colorAddress~69_combout\,
-	combout => \vga_0|videoGen|colorAddress~70_combout\);
-
--- Location: LCCOMB_X22_Y22_N4
-\vga_0|videoGen|LessThan613~1\ : cycloneii_lcell_comb
--- Equation(s):
--- \vga_0|videoGen|LessThan613~1_combout\ = (!\vga_0|videoSync|pixel_column\(1) & !\vga_0|videoSync|pixel_column\(0))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0000001100000011",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	datab => \vga_0|videoSync|pixel_column\(1),
-	datac => \vga_0|videoSync|pixel_column\(0),
+	datac => \vga_0|videoSync|pixel_column\(1),
+	datad => \vga_0|videoSync|pixel_column\(0),
 	combout => \vga_0|videoGen|LessThan613~1_combout\);
 
--- Location: LCCOMB_X23_Y22_N4
+-- Location: LCCOMB_X28_Y26_N8
+\vga_0|videoGen|LessThan53~1\ : cycloneii_lcell_comb
+-- Equation(s):
+-- \vga_0|videoGen|LessThan53~1_combout\ = ((!\vga_0|videoSync|pixel_column\(4) & (!\vga_0|videoSync|pixel_column\(2) & \vga_0|videoGen|LessThan613~1_combout\))) # (!\vga_0|videoGen|LessThan53~0_combout\)
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0001000011111111",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \vga_0|videoSync|pixel_column\(4),
+	datab => \vga_0|videoSync|pixel_column\(2),
+	datac => \vga_0|videoGen|LessThan613~1_combout\,
+	datad => \vga_0|videoGen|LessThan53~0_combout\,
+	combout => \vga_0|videoGen|LessThan53~1_combout\);
+
+-- Location: LCCOMB_X28_Y26_N4
+\vga_0|videoGen|LessThan54~0\ : cycloneii_lcell_comb
+-- Equation(s):
+-- \vga_0|videoGen|LessThan54~0_combout\ = (\vga_0|videoSync|pixel_column\(1) & \vga_0|videoSync|pixel_column\(2))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1010101000000000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \vga_0|videoSync|pixel_column\(1),
+	datad => \vga_0|videoSync|pixel_column\(2),
+	combout => \vga_0|videoGen|LessThan54~0_combout\);
+
+-- Location: LCCOMB_X28_Y25_N16
+\vga_0|videoGen|pixelDraw~52\ : cycloneii_lcell_comb
+-- Equation(s):
+-- \vga_0|videoGen|pixelDraw~52_combout\ = (\vga_0|videoSync|pixel_column\(7) & (\vga_0|videoGen|LessThan173~0_combout\ & ((!\vga_0|videoGen|LessThan54~0_combout\)))) # (!\vga_0|videoSync|pixel_column\(7) & (((\vga_0|videoSync|pixel_column\(6)))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0011000010111000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \vga_0|videoGen|LessThan173~0_combout\,
+	datab => \vga_0|videoSync|pixel_column\(7),
+	datac => \vga_0|videoSync|pixel_column\(6),
+	datad => \vga_0|videoGen|LessThan54~0_combout\,
+	combout => \vga_0|videoGen|pixelDraw~52_combout\);
+
+-- Location: LCCOMB_X28_Y25_N22
+\vga_0|videoGen|pixelDraw~53\ : cycloneii_lcell_comb
+-- Equation(s):
+-- \vga_0|videoGen|pixelDraw~53_combout\ = (!\vga_0|videoSync|pixel_column\(9) & (\vga_0|videoGen|pixelDraw~52_combout\ & \vga_0|videoSync|pixel_column\(8)))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0101000000000000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \vga_0|videoSync|pixel_column\(9),
+	datac => \vga_0|videoGen|pixelDraw~52_combout\,
+	datad => \vga_0|videoSync|pixel_column\(8),
+	combout => \vga_0|videoGen|pixelDraw~53_combout\);
+
+-- Location: LCCOMB_X29_Y25_N24
+\vga_0|videoGen|pixelDraw~54\ : cycloneii_lcell_comb
+-- Equation(s):
+-- \vga_0|videoGen|pixelDraw~54_combout\ = (\vga_0|videoGen|pixelDraw~53_combout\ & ((\vga_0|videoSync|pixel_column\(7)) # ((\vga_0|videoSync|pixel_column\(9)) # (!\vga_0|videoGen|LessThan53~1_combout\))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1110111100000000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \vga_0|videoSync|pixel_column\(7),
+	datab => \vga_0|videoSync|pixel_column\(9),
+	datac => \vga_0|videoGen|LessThan53~1_combout\,
+	datad => \vga_0|videoGen|pixelDraw~53_combout\,
+	combout => \vga_0|videoGen|pixelDraw~54_combout\);
+
+-- Location: LCCOMB_X30_Y25_N18
+\vga_0|videoGen|colorAddress~76\ : cycloneii_lcell_comb
+-- Equation(s):
+-- \vga_0|videoGen|colorAddress~76_combout\ = (\vga_0|videoGen|pixelDraw~22_combout\ & ((\vga_0|videoGen|pixelDraw~54_combout\))) # (!\vga_0|videoGen|pixelDraw~22_combout\ & (\vga_0|videoGen|pixelDraw~31_combout\))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1111110000110000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	datab => \vga_0|videoGen|pixelDraw~22_combout\,
+	datac => \vga_0|videoGen|pixelDraw~31_combout\,
+	datad => \vga_0|videoGen|pixelDraw~54_combout\,
+	combout => \vga_0|videoGen|colorAddress~76_combout\);
+
+-- Location: LCCOMB_X31_Y23_N16
+\vga_0|videoGen|colorAddress~77\ : cycloneii_lcell_comb
+-- Equation(s):
+-- \vga_0|videoGen|colorAddress~77_combout\ = (\vga_0|videoGen|pixelDraw~22_combout\ & ((\vga_0|videoGen|pixelDraw~49_combout\) # ((\vga_0|videoGen|pixelDraw~51_combout\) # (\vga_0|videoGen|colorAddress~76_combout\)))) # 
+-- (!\vga_0|videoGen|pixelDraw~22_combout\ & (\vga_0|videoGen|colorAddress~76_combout\ & ((\vga_0|videoGen|pixelDraw~49_combout\) # (\vga_0|videoGen|pixelDraw~51_combout\))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1111111011100000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \vga_0|videoGen|pixelDraw~49_combout\,
+	datab => \vga_0|videoGen|pixelDraw~51_combout\,
+	datac => \vga_0|videoGen|pixelDraw~22_combout\,
+	datad => \vga_0|videoGen|colorAddress~76_combout\,
+	combout => \vga_0|videoGen|colorAddress~77_combout\);
+
+-- Location: LCCOMB_X30_Y25_N14
+\vga_0|videoGen|pixelDraw~47\ : cycloneii_lcell_comb
+-- Equation(s):
+-- \vga_0|videoGen|pixelDraw~47_combout\ = (!\vga_0|videoSync|pixel_column\(9) & (\vga_0|videoSync|pixel_column\(7) & \vga_0|videoSync|pixel_column\(8)))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0011000000000000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	datab => \vga_0|videoSync|pixel_column\(9),
+	datac => \vga_0|videoSync|pixel_column\(7),
+	datad => \vga_0|videoSync|pixel_column\(8),
+	combout => \vga_0|videoGen|pixelDraw~47_combout\);
+
+-- Location: LCCOMB_X29_Y25_N8
+\vga_0|videoGen|LessThan534~0\ : cycloneii_lcell_comb
+-- Equation(s):
+-- \vga_0|videoGen|LessThan534~0_combout\ = (\vga_0|videoSync|pixel_column\(7) & (\vga_0|videoSync|pixel_column\(6) & \vga_0|videoSync|pixel_column\(8)))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1010000000000000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \vga_0|videoSync|pixel_column\(7),
+	datac => \vga_0|videoSync|pixel_column\(6),
+	datad => \vga_0|videoSync|pixel_column\(8),
+	combout => \vga_0|videoGen|LessThan534~0_combout\);
+
+-- Location: LCCOMB_X30_Y25_N22
+\vga_0|videoGen|pixelDraw~48\ : cycloneii_lcell_comb
+-- Equation(s):
+-- \vga_0|videoGen|pixelDraw~48_combout\ = (!\vga_0|videoSync|pixel_column\(6) & (!\vga_0|videoSync|pixel_column\(3) & (\vga_0|videoGen|LessThan373~2_combout\ & \vga_0|videoGen|LessThan93~0_combout\)))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0001000000000000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \vga_0|videoSync|pixel_column\(6),
+	datab => \vga_0|videoSync|pixel_column\(3),
+	datac => \vga_0|videoGen|LessThan373~2_combout\,
+	datad => \vga_0|videoGen|LessThan93~0_combout\,
+	combout => \vga_0|videoGen|pixelDraw~48_combout\);
+
+-- Location: LCCOMB_X30_Y25_N8
+\vga_0|videoGen|pixelDraw~49\ : cycloneii_lcell_comb
+-- Equation(s):
+-- \vga_0|videoGen|pixelDraw~49_combout\ = (!\vga_0|videoGen|LessThan94~0_combout\ & (\vga_0|videoGen|pixelDraw~47_combout\ & (!\vga_0|videoGen|LessThan534~0_combout\ & !\vga_0|videoGen|pixelDraw~48_combout\)))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0000000000000100",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \vga_0|videoGen|LessThan94~0_combout\,
+	datab => \vga_0|videoGen|pixelDraw~47_combout\,
+	datac => \vga_0|videoGen|LessThan534~0_combout\,
+	datad => \vga_0|videoGen|pixelDraw~48_combout\,
+	combout => \vga_0|videoGen|pixelDraw~49_combout\);
+
+-- Location: LCCOMB_X31_Y23_N14
+\vga_0|videoGen|colorAddress~78\ : cycloneii_lcell_comb
+-- Equation(s):
+-- \vga_0|videoGen|colorAddress~78_combout\ = (\vga_0|videoGen|colorAddress~74_combout\ & (!\vga_0|videoGen|colorAddress~77_combout\ & ((!\vga_0|videoGen|pixelDraw~49_combout\) # (!\vga_0|videoGen|colorAddress~75_combout\))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0000001000001010",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \vga_0|videoGen|colorAddress~74_combout\,
+	datab => \vga_0|videoGen|colorAddress~75_combout\,
+	datac => \vga_0|videoGen|colorAddress~77_combout\,
+	datad => \vga_0|videoGen|pixelDraw~49_combout\,
+	combout => \vga_0|videoGen|colorAddress~78_combout\);
+
+-- Location: LCCOMB_X31_Y25_N22
+\vga_0|videoGen|LessThan693~0\ : cycloneii_lcell_comb
+-- Equation(s):
+-- \vga_0|videoGen|LessThan693~0_combout\ = (!\vga_0|videoSync|pixel_column\(8) & (!\vga_0|videoSync|pixel_column\(7) & !\vga_0|videoSync|pixel_column\(6)))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0000000000000011",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	datab => \vga_0|videoSync|pixel_column\(8),
+	datac => \vga_0|videoSync|pixel_column\(7),
+	datad => \vga_0|videoSync|pixel_column\(6),
+	combout => \vga_0|videoGen|LessThan693~0_combout\);
+
+-- Location: LCCOMB_X29_Y25_N16
 \vga_0|videoGen|LessThan334~0\ : cycloneii_lcell_comb
 -- Equation(s):
 -- \vga_0|videoGen|LessThan334~0_combout\ = (\vga_0|videoSync|pixel_column\(3) & \vga_0|videoSync|pixel_column\(4))
@@ -6940,76 +6581,244 @@ PORT MAP (
 	datad => \vga_0|videoSync|pixel_column\(4),
 	combout => \vga_0|videoGen|LessThan334~0_combout\);
 
--- Location: LCCOMB_X22_Y22_N0
+-- Location: LCCOMB_X28_Y26_N12
 \vga_0|videoGen|LessThan293~0\ : cycloneii_lcell_comb
 -- Equation(s):
--- \vga_0|videoGen|LessThan293~0_combout\ = (!\vga_0|videoSync|pixel_column\(5) & ((\vga_0|videoGen|LessThan613~1_combout\) # ((!\vga_0|videoGen|LessThan334~0_combout\) # (!\vga_0|videoSync|pixel_column\(2)))))
+-- \vga_0|videoGen|LessThan293~0_combout\ = (!\vga_0|videoSync|pixel_column\(5) & (((\vga_0|videoGen|LessThan613~1_combout\) # (!\vga_0|videoGen|LessThan334~0_combout\)) # (!\vga_0|videoSync|pixel_column\(2))))
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "0100010101010101",
+	lut_mask => "0101010100010101",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
 	dataa => \vga_0|videoSync|pixel_column\(5),
-	datab => \vga_0|videoGen|LessThan613~1_combout\,
-	datac => \vga_0|videoSync|pixel_column\(2),
-	datad => \vga_0|videoGen|LessThan334~0_combout\,
+	datab => \vga_0|videoSync|pixel_column\(2),
+	datac => \vga_0|videoGen|LessThan334~0_combout\,
+	datad => \vga_0|videoGen|LessThan613~1_combout\,
 	combout => \vga_0|videoGen|LessThan293~0_combout\);
 
--- Location: LCCOMB_X23_Y23_N30
-\vga_0|videoGen|pixelDraw~28\ : cycloneii_lcell_comb
+-- Location: LCCOMB_X28_Y26_N30
+\vga_0|videoGen|LessThan294~0\ : cycloneii_lcell_comb
 -- Equation(s):
--- \vga_0|videoGen|pixelDraw~28_combout\ = (!\vga_0|videoGen|LessThan294~0_combout\ & (\vga_0|videoSync|pixel_column\(9) & (\vga_0|videoGen|LessThan693~0_combout\ & !\vga_0|videoGen|LessThan293~0_combout\)))
+-- \vga_0|videoGen|LessThan294~0_combout\ = (\vga_0|videoGen|LessThan334~0_combout\ & (\vga_0|videoSync|pixel_column\(5) & ((\vga_0|videoSync|pixel_column\(1)) # (\vga_0|videoSync|pixel_column\(2)))))
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "0000000001000000",
+	lut_mask => "1110000000000000",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \vga_0|videoGen|LessThan294~0_combout\,
-	datab => \vga_0|videoSync|pixel_column\(9),
-	datac => \vga_0|videoGen|LessThan693~0_combout\,
-	datad => \vga_0|videoGen|LessThan293~0_combout\,
-	combout => \vga_0|videoGen|pixelDraw~28_combout\);
+	dataa => \vga_0|videoSync|pixel_column\(1),
+	datab => \vga_0|videoSync|pixel_column\(2),
+	datac => \vga_0|videoGen|LessThan334~0_combout\,
+	datad => \vga_0|videoSync|pixel_column\(5),
+	combout => \vga_0|videoGen|LessThan294~0_combout\);
 
--- Location: LCCOMB_X23_Y23_N10
-\vga_0|videoGen|colorAddress~67\ : cycloneii_lcell_comb
+-- Location: LCCOMB_X31_Y26_N28
+\vga_0|videoGen|pixelDraw~32\ : cycloneii_lcell_comb
 -- Equation(s):
--- \vga_0|videoGen|colorAddress~67_combout\ = (\vga_0|videoGen|pixelDraw~41_combout\ & (!\vga_0|videoGen|pixelDraw~27_combout\ & ((!\vga_0|videoGen|pixelDraw~28_combout\) # (!\vga_0|videoGen|pixelDraw~42_combout\)))) # (!\vga_0|videoGen|pixelDraw~41_combout\ 
--- & (((!\vga_0|videoGen|pixelDraw~28_combout\)) # (!\vga_0|videoGen|pixelDraw~42_combout\)))
+-- \vga_0|videoGen|pixelDraw~32_combout\ = (\vga_0|videoSync|pixel_column\(9) & (\vga_0|videoGen|LessThan693~0_combout\ & (!\vga_0|videoGen|LessThan293~0_combout\ & !\vga_0|videoGen|LessThan294~0_combout\)))
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "0001001101011111",
+	lut_mask => "0000000000001000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \vga_0|videoSync|pixel_column\(9),
+	datab => \vga_0|videoGen|LessThan693~0_combout\,
+	datac => \vga_0|videoGen|LessThan293~0_combout\,
+	datad => \vga_0|videoGen|LessThan294~0_combout\,
+	combout => \vga_0|videoGen|pixelDraw~32_combout\);
+
+-- Location: LCCOMB_X30_Y26_N26
+\vga_0|videoGen|colorAddress~45\ : cycloneii_lcell_comb
+-- Equation(s):
+-- \vga_0|videoGen|colorAddress~45_combout\ = ((!\vga_0|videoGen|pixelDraw~21_combout\ & (!\vga_0|videoGen|pixelDraw~31_combout\ & !\vga_0|videoGen|pixelDraw~79_combout\))) # (!\vga_0|videoGen|pixelDraw~32_combout\)
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0000000111111111",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \vga_0|videoGen|pixelDraw~21_combout\,
+	datab => \vga_0|videoGen|pixelDraw~31_combout\,
+	datac => \vga_0|videoGen|pixelDraw~79_combout\,
+	datad => \vga_0|videoGen|pixelDraw~32_combout\,
+	combout => \vga_0|videoGen|colorAddress~45_combout\);
+
+-- Location: LCCOMB_X29_Y24_N22
+\vga_0|videoGen|pixelDraw~37\ : cycloneii_lcell_comb
+-- Equation(s):
+-- \vga_0|videoGen|pixelDraw~37_combout\ = (\vga_0|videoSync|pixel_row\(3) & (\vga_0|videoSync|pixel_row\(2) & ((\vga_0|videoSync|pixel_row\(0)) # (\vga_0|videoSync|pixel_row\(1)))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1100000010000000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \vga_0|videoSync|pixel_row\(0),
+	datab => \vga_0|videoSync|pixel_row\(3),
+	datac => \vga_0|videoSync|pixel_row\(2),
+	datad => \vga_0|videoSync|pixel_row\(1),
+	combout => \vga_0|videoGen|pixelDraw~37_combout\);
+
+-- Location: LCCOMB_X28_Y24_N16
+\vga_0|videoGen|pixelDraw~83\ : cycloneii_lcell_comb
+-- Equation(s):
+-- \vga_0|videoGen|pixelDraw~83_combout\ = (!\vga_0|videoSync|pixel_row\(7) & ((\vga_0|videoSync|pixel_row\(6)) # ((\vga_0|videoSync|pixel_row\(4)) # (\vga_0|videoGen|pixelDraw~37_combout\))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0011001100110010",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \vga_0|videoSync|pixel_row\(6),
+	datab => \vga_0|videoSync|pixel_row\(7),
+	datac => \vga_0|videoSync|pixel_row\(4),
+	datad => \vga_0|videoGen|pixelDraw~37_combout\,
+	combout => \vga_0|videoGen|pixelDraw~83_combout\);
+
+-- Location: LCCOMB_X28_Y24_N6
+\vga_0|videoGen|pixelDraw~84\ : cycloneii_lcell_comb
+-- Equation(s):
+-- \vga_0|videoGen|pixelDraw~84_combout\ = (\vga_0|videoSync|pixel_row\(6) & (!\vga_0|videoSync|pixel_row\(5) & (!\vga_0|videoSync|pixel_row\(4) & !\vga_0|videoGen|LessThan3~0_combout\))) # (!\vga_0|videoSync|pixel_row\(6) & (\vga_0|videoSync|pixel_row\(5)))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0100010001000110",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \vga_0|videoSync|pixel_row\(6),
+	datab => \vga_0|videoSync|pixel_row\(5),
+	datac => \vga_0|videoSync|pixel_row\(4),
+	datad => \vga_0|videoGen|LessThan3~0_combout\,
+	combout => \vga_0|videoGen|pixelDraw~84_combout\);
+
+-- Location: LCCOMB_X28_Y24_N8
+\vga_0|videoGen|pixelDraw~38\ : cycloneii_lcell_comb
+-- Equation(s):
+-- \vga_0|videoGen|pixelDraw~38_combout\ = (\vga_0|videoSync|pixel_row\(8) & (\vga_0|videoGen|pixelDraw~83_combout\ & \vga_0|videoGen|pixelDraw~84_combout\))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1100000000000000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	datab => \vga_0|videoSync|pixel_row\(8),
+	datac => \vga_0|videoGen|pixelDraw~83_combout\,
+	datad => \vga_0|videoGen|pixelDraw~84_combout\,
+	combout => \vga_0|videoGen|pixelDraw~38_combout\);
+
+-- Location: LCCOMB_X30_Y26_N14
+\vga_0|videoGen|colorAddress~47\ : cycloneii_lcell_comb
+-- Equation(s):
+-- \vga_0|videoGen|colorAddress~47_combout\ = ((!\vga_0|videoGen|pixelDraw~41_combout\ & (!\vga_0|videoGen|pixelDraw~38_combout\ & !\vga_0|videoGen|pixelDraw~36_combout\))) # (!\vga_0|videoGen|pixelDraw~32_combout\)
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0000000111111111",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
 	dataa => \vga_0|videoGen|pixelDraw~41_combout\,
-	datab => \vga_0|videoGen|pixelDraw~42_combout\,
-	datac => \vga_0|videoGen|pixelDraw~27_combout\,
-	datad => \vga_0|videoGen|pixelDraw~28_combout\,
-	combout => \vga_0|videoGen|colorAddress~67_combout\);
+	datab => \vga_0|videoGen|pixelDraw~38_combout\,
+	datac => \vga_0|videoGen|pixelDraw~36_combout\,
+	datad => \vga_0|videoGen|pixelDraw~32_combout\,
+	combout => \vga_0|videoGen|colorAddress~47_combout\);
 
--- Location: LCCOMB_X23_Y23_N24
-\vga_0|videoGen|colorAddress~68\ : cycloneii_lcell_comb
+-- Location: LCCOMB_X29_Y25_N26
+\vga_0|videoGen|pixelDraw~24\ : cycloneii_lcell_comb
 -- Equation(s):
--- \vga_0|videoGen|colorAddress~68_combout\ = (\vga_0|videoGen|colorAddress~67_combout\ & (((!\vga_0|videoGen|pixelDraw~77_combout\ & !\vga_0|videoGen|pixelDraw~16_combout\)) # (!\vga_0|videoGen|pixelDraw~41_combout\)))
+-- \vga_0|videoGen|pixelDraw~24_combout\ = (\vga_0|videoSync|pixel_column\(7) & (\vga_0|videoSync|pixel_column\(6) & (\vga_0|videoSync|pixel_column\(5) & \vga_0|videoSync|pixel_column\(8))))
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "0001111100000000",
+	lut_mask => "1000000000000000",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \vga_0|videoGen|pixelDraw~77_combout\,
-	datab => \vga_0|videoGen|pixelDraw~16_combout\,
-	datac => \vga_0|videoGen|pixelDraw~41_combout\,
-	datad => \vga_0|videoGen|colorAddress~67_combout\,
-	combout => \vga_0|videoGen|colorAddress~68_combout\);
+	dataa => \vga_0|videoSync|pixel_column\(7),
+	datab => \vga_0|videoSync|pixel_column\(6),
+	datac => \vga_0|videoSync|pixel_column\(5),
+	datad => \vga_0|videoSync|pixel_column\(8),
+	combout => \vga_0|videoGen|pixelDraw~24_combout\);
 
--- Location: LCCOMB_X23_Y22_N28
+-- Location: LCCOMB_X29_Y25_N12
+\vga_0|videoGen|pixelDraw~25\ : cycloneii_lcell_comb
+-- Equation(s):
+-- \vga_0|videoGen|pixelDraw~25_combout\ = (!\vga_0|videoSync|pixel_column\(9) & (\vga_0|videoGen|pixelDraw~24_combout\ & ((!\vga_0|videoGen|LessThan613~1_combout\) # (!\vga_0|videoGen|LessThan613~0_combout\))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0001010100000000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \vga_0|videoSync|pixel_column\(9),
+	datab => \vga_0|videoGen|LessThan613~0_combout\,
+	datac => \vga_0|videoGen|LessThan613~1_combout\,
+	datad => \vga_0|videoGen|pixelDraw~24_combout\,
+	combout => \vga_0|videoGen|pixelDraw~25_combout\);
+
+-- Location: LCCOMB_X30_Y25_N0
+\vga_0|videoGen|pixelDraw~26\ : cycloneii_lcell_comb
+-- Equation(s):
+-- \vga_0|videoGen|pixelDraw~26_combout\ = (\vga_0|videoGen|pixelDraw~25_combout\ & (((!\vga_0|videoGen|LessThan534~0_combout\) # (!\vga_0|videoGen|LessThan334~0_combout\)) # (!\vga_0|videoGen|LessThan54~0_combout\)))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0111111100000000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \vga_0|videoGen|LessThan54~0_combout\,
+	datab => \vga_0|videoGen|LessThan334~0_combout\,
+	datac => \vga_0|videoGen|LessThan534~0_combout\,
+	datad => \vga_0|videoGen|pixelDraw~25_combout\,
+	combout => \vga_0|videoGen|pixelDraw~26_combout\);
+
+-- Location: LCCOMB_X29_Y25_N0
+\vga_0|videoGen|LessThan573~0\ : cycloneii_lcell_comb
+-- Equation(s):
+-- \vga_0|videoGen|LessThan573~0_combout\ = (!\vga_0|videoSync|pixel_column\(5) & (\vga_0|videoGen|LessThan613~0_combout\ & ((!\vga_0|videoSync|pixel_column\(0)) # (!\vga_0|videoSync|pixel_column\(1)))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0001001100000000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \vga_0|videoSync|pixel_column\(1),
+	datab => \vga_0|videoSync|pixel_column\(5),
+	datac => \vga_0|videoSync|pixel_column\(0),
+	datad => \vga_0|videoGen|LessThan613~0_combout\,
+	combout => \vga_0|videoGen|LessThan573~0_combout\);
+
+-- Location: LCCOMB_X29_Y25_N2
+\vga_0|videoGen|pixelDraw~23\ : cycloneii_lcell_comb
+-- Equation(s):
+-- \vga_0|videoGen|pixelDraw~23_combout\ = (!\vga_0|videoSync|pixel_column\(5) & (!\vga_0|videoSync|pixel_column\(9) & (\vga_0|videoGen|LessThan534~0_combout\ & !\vga_0|videoGen|LessThan573~0_combout\)))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0000000000010000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \vga_0|videoSync|pixel_column\(5),
+	datab => \vga_0|videoSync|pixel_column\(9),
+	datac => \vga_0|videoGen|LessThan534~0_combout\,
+	datad => \vga_0|videoGen|LessThan573~0_combout\,
+	combout => \vga_0|videoGen|pixelDraw~23_combout\);
+
+-- Location: LCCOMB_X31_Y25_N0
 \vga_0|videoGen|LessThan254~0\ : cycloneii_lcell_comb
 -- Equation(s):
 -- \vga_0|videoGen|LessThan254~0_combout\ = (!\vga_0|videoSync|pixel_column\(5) & (((!\vga_0|videoSync|pixel_column\(4)) # (!\vga_0|videoSync|pixel_column\(3))) # (!\vga_0|videoSync|pixel_column\(2))))
@@ -7026,313 +6835,214 @@ PORT MAP (
 	datad => \vga_0|videoSync|pixel_column\(5),
 	combout => \vga_0|videoGen|LessThan254~0_combout\);
 
--- Location: LCCOMB_X23_Y20_N6
-\vga_0|videoGen|pixelDraw~23\ : cycloneii_lcell_comb
+-- Location: LCCOMB_X31_Y25_N14
+\vga_0|videoGen|pixelDraw~27\ : cycloneii_lcell_comb
 -- Equation(s):
--- \vga_0|videoGen|pixelDraw~23_combout\ = (!\vga_0|videoSync|pixel_column\(6) & (\vga_0|videoGen|LessThan254~0_combout\ & (!\vga_0|videoSync|pixel_column\(7) & !\vga_0|videoSync|pixel_column\(8))))
+-- \vga_0|videoGen|pixelDraw~27_combout\ = (!\vga_0|videoSync|pixel_column\(6) & (!\vga_0|videoSync|pixel_column\(8) & (!\vga_0|videoSync|pixel_column\(7) & \vga_0|videoGen|LessThan254~0_combout\)))
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "0000000000000100",
+	lut_mask => "0000000100000000",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
 	dataa => \vga_0|videoSync|pixel_column\(6),
-	datab => \vga_0|videoGen|LessThan254~0_combout\,
+	datab => \vga_0|videoSync|pixel_column\(8),
 	datac => \vga_0|videoSync|pixel_column\(7),
-	datad => \vga_0|videoSync|pixel_column\(8),
-	combout => \vga_0|videoGen|pixelDraw~23_combout\);
+	datad => \vga_0|videoGen|LessThan254~0_combout\,
+	combout => \vga_0|videoGen|pixelDraw~27_combout\);
 
--- Location: LCCOMB_X23_Y20_N12
-\vga_0|videoGen|pixelDraw~24\ : cycloneii_lcell_comb
+-- Location: LCCOMB_X30_Y25_N10
+\vga_0|videoGen|LessThan653~2\ : cycloneii_lcell_comb
 -- Equation(s):
--- \vga_0|videoGen|pixelDraw~24_combout\ = (\vga_0|videoSync|pixel_column\(9) & (((\vga_0|videoGen|pixelDraw~23_combout\)))) # (!\vga_0|videoSync|pixel_column\(9) & (\vga_0|videoGen|LessThan653~0_combout\ & (\vga_0|videoGen|LessThan534~0_combout\)))
+-- \vga_0|videoGen|LessThan653~2_combout\ = (\vga_0|videoSync|pixel_column\(5) & (\vga_0|videoSync|pixel_column\(3) & (\vga_0|videoSync|pixel_column\(4) & !\vga_0|videoGen|LessThan93~0_combout\)))
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "1110110000100000",
+	lut_mask => "0000000010000000",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \vga_0|videoGen|LessThan653~0_combout\,
+	dataa => \vga_0|videoSync|pixel_column\(5),
+	datab => \vga_0|videoSync|pixel_column\(3),
+	datac => \vga_0|videoSync|pixel_column\(4),
+	datad => \vga_0|videoGen|LessThan93~0_combout\,
+	combout => \vga_0|videoGen|LessThan653~2_combout\);
+
+-- Location: LCCOMB_X31_Y25_N4
+\vga_0|videoGen|pixelDraw~28\ : cycloneii_lcell_comb
+-- Equation(s):
+-- \vga_0|videoGen|pixelDraw~28_combout\ = (\vga_0|videoSync|pixel_column\(9) & (((\vga_0|videoGen|pixelDraw~27_combout\)))) # (!\vga_0|videoSync|pixel_column\(9) & (\vga_0|videoGen|LessThan534~0_combout\ & ((\vga_0|videoGen|LessThan653~2_combout\))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1110001011000000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \vga_0|videoGen|LessThan534~0_combout\,
 	datab => \vga_0|videoSync|pixel_column\(9),
-	datac => \vga_0|videoGen|LessThan534~0_combout\,
-	datad => \vga_0|videoGen|pixelDraw~23_combout\,
-	combout => \vga_0|videoGen|pixelDraw~24_combout\);
-
--- Location: LCCOMB_X23_Y23_N22
-\vga_0|videoGen|colorAddress~63\ : cycloneii_lcell_comb
--- Equation(s):
--- \vga_0|videoGen|colorAddress~63_combout\ = ((!\vga_0|videoGen|pixelDraw~77_combout\ & !\vga_0|videoGen|pixelDraw~27_combout\)) # (!\vga_0|videoGen|pixelDraw~24_combout\)
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0000010111111111",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \vga_0|videoGen|pixelDraw~77_combout\,
 	datac => \vga_0|videoGen|pixelDraw~27_combout\,
-	datad => \vga_0|videoGen|pixelDraw~24_combout\,
-	combout => \vga_0|videoGen|colorAddress~63_combout\);
+	datad => \vga_0|videoGen|LessThan653~2_combout\,
+	combout => \vga_0|videoGen|pixelDraw~28_combout\);
 
--- Location: LCCOMB_X23_Y23_N12
-\vga_0|videoGen|colorAddress~64\ : cycloneii_lcell_comb
+-- Location: LCCOMB_X30_Y26_N12
+\vga_0|videoGen|colorAddress~44\ : cycloneii_lcell_comb
 -- Equation(s):
--- \vga_0|videoGen|colorAddress~64_combout\ = (\vga_0|videoGen|colorAddress~63_combout\ & (((!\vga_0|videoGen|pixelDraw~16_combout\ & !\vga_0|videoGen|pixelDraw~29_combout\)) # (!\vga_0|videoGen|pixelDraw~24_combout\)))
+-- \vga_0|videoGen|colorAddress~44_combout\ = ((!\vga_0|videoGen|pixelDraw~26_combout\ & (!\vga_0|videoGen|pixelDraw~23_combout\ & !\vga_0|videoGen|pixelDraw~28_combout\))) # (!\vga_0|videoGen|pixelDraw~22_combout\)
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "0101011100000000",
+	lut_mask => "0101010101010111",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \vga_0|videoGen|pixelDraw~24_combout\,
-	datab => \vga_0|videoGen|pixelDraw~16_combout\,
-	datac => \vga_0|videoGen|pixelDraw~29_combout\,
-	datad => \vga_0|videoGen|colorAddress~63_combout\,
-	combout => \vga_0|videoGen|colorAddress~64_combout\);
+	dataa => \vga_0|videoGen|pixelDraw~22_combout\,
+	datab => \vga_0|videoGen|pixelDraw~26_combout\,
+	datac => \vga_0|videoGen|pixelDraw~23_combout\,
+	datad => \vga_0|videoGen|pixelDraw~28_combout\,
+	combout => \vga_0|videoGen|colorAddress~44_combout\);
 
--- Location: LCCOMB_X23_Y23_N26
+-- Location: LCCOMB_X30_Y26_N16
+\vga_0|videoGen|colorAddress~48\ : cycloneii_lcell_comb
+-- Equation(s):
+-- \vga_0|videoGen|colorAddress~48_combout\ = (\vga_0|videoGen|colorAddress~46_combout\ & (\vga_0|videoGen|colorAddress~45_combout\ & (\vga_0|videoGen|colorAddress~47_combout\ & \vga_0|videoGen|colorAddress~44_combout\)))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1000000000000000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \vga_0|videoGen|colorAddress~46_combout\,
+	datab => \vga_0|videoGen|colorAddress~45_combout\,
+	datac => \vga_0|videoGen|colorAddress~47_combout\,
+	datad => \vga_0|videoGen|colorAddress~44_combout\,
+	combout => \vga_0|videoGen|colorAddress~48_combout\);
+
+-- Location: LCCOMB_X30_Y25_N30
+\vga_0|videoGen|LessThan734~0\ : cycloneii_lcell_comb
+-- Equation(s):
+-- \vga_0|videoGen|LessThan734~0_combout\ = ((\vga_0|videoSync|pixel_column\(6) & ((\vga_0|videoSync|pixel_column\(5)) # (\vga_0|videoGen|LessThan334~0_combout\)))) # (!\vga_0|videoGen|LessThan773~0_combout\)
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1110000011111111",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \vga_0|videoSync|pixel_column\(5),
+	datab => \vga_0|videoGen|LessThan334~0_combout\,
+	datac => \vga_0|videoSync|pixel_column\(6),
+	datad => \vga_0|videoGen|LessThan773~0_combout\,
+	combout => \vga_0|videoGen|LessThan734~0_combout\);
+
+-- Location: LCCOMB_X28_Y26_N28
+\vga_0|videoGen|LessThan333~2\ : cycloneii_lcell_comb
+-- Equation(s):
+-- \vga_0|videoGen|LessThan333~2_combout\ = (\vga_0|videoGen|LessThan13~1_combout\) # (((!\vga_0|videoSync|pixel_column\(4)) # (!\vga_0|videoSync|pixel_column\(3))) # (!\vga_0|videoSync|pixel_column\(5)))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1011111111111111",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \vga_0|videoGen|LessThan13~1_combout\,
+	datab => \vga_0|videoSync|pixel_column\(5),
+	datac => \vga_0|videoSync|pixel_column\(3),
+	datad => \vga_0|videoSync|pixel_column\(4),
+	combout => \vga_0|videoGen|LessThan333~2_combout\);
+
+-- Location: LCCOMB_X31_Y25_N16
+\vga_0|videoGen|pixelDraw~45\ : cycloneii_lcell_comb
+-- Equation(s):
+-- \vga_0|videoGen|pixelDraw~45_combout\ = (\vga_0|videoSync|pixel_column\(9) & (!\vga_0|videoGen|LessThan734~0_combout\ & ((!\vga_0|videoGen|LessThan333~2_combout\) # (!\vga_0|videoGen|LessThan693~0_combout\))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0000001000001010",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \vga_0|videoSync|pixel_column\(9),
+	datab => \vga_0|videoGen|LessThan693~0_combout\,
+	datac => \vga_0|videoGen|LessThan734~0_combout\,
+	datad => \vga_0|videoGen|LessThan333~2_combout\,
+	combout => \vga_0|videoGen|pixelDraw~45_combout\);
+
+-- Location: LCCOMB_X28_Y25_N24
+\vga_0|videoGen|LessThan373~1\ : cycloneii_lcell_comb
+-- Equation(s):
+-- \vga_0|videoGen|LessThan373~1_combout\ = (!\vga_0|videoSync|pixel_column\(5) & ((!\vga_0|videoSync|pixel_column\(3)) # (!\vga_0|videoSync|pixel_column\(4))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0000000000111111",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	datab => \vga_0|videoSync|pixel_column\(4),
+	datac => \vga_0|videoSync|pixel_column\(3),
+	datad => \vga_0|videoSync|pixel_column\(5),
+	combout => \vga_0|videoGen|LessThan373~1_combout\);
+
+-- Location: LCCOMB_X29_Y25_N20
+\vga_0|videoGen|pixelDraw~42\ : cycloneii_lcell_comb
+-- Equation(s):
+-- \vga_0|videoGen|pixelDraw~42_combout\ = (\vga_0|videoSync|pixel_column\(7) & (!\vga_0|videoSync|pixel_column\(9))) # (!\vga_0|videoSync|pixel_column\(7) & ((\vga_0|videoSync|pixel_column\(8) & (!\vga_0|videoSync|pixel_column\(9))) # 
+-- (!\vga_0|videoSync|pixel_column\(8) & ((\vga_0|videoSync|pixel_column\(6))))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0011001101110010",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \vga_0|videoSync|pixel_column\(7),
+	datab => \vga_0|videoSync|pixel_column\(9),
+	datac => \vga_0|videoSync|pixel_column\(6),
+	datad => \vga_0|videoSync|pixel_column\(8),
+	combout => \vga_0|videoGen|pixelDraw~42_combout\);
+
+-- Location: LCCOMB_X29_Y25_N28
+\vga_0|videoGen|pixelDraw~43\ : cycloneii_lcell_comb
+-- Equation(s):
+-- \vga_0|videoGen|pixelDraw~43_combout\ = (\vga_0|videoGen|pixelDraw~42_combout\ & (((!\vga_0|videoGen|LessThan373~0_combout\ & !\vga_0|videoGen|LessThan373~1_combout\)) # (!\vga_0|videoGen|LessThan773~0_combout\)))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0001000011110000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \vga_0|videoGen|LessThan373~0_combout\,
+	datab => \vga_0|videoGen|LessThan373~1_combout\,
+	datac => \vga_0|videoGen|pixelDraw~42_combout\,
+	datad => \vga_0|videoGen|LessThan773~0_combout\,
+	combout => \vga_0|videoGen|pixelDraw~43_combout\);
+
+-- Location: LCCOMB_X29_Y25_N18
+\vga_0|videoGen|pixelDraw~44\ : cycloneii_lcell_comb
+-- Equation(s):
+-- \vga_0|videoGen|pixelDraw~44_combout\ = (\vga_0|videoSync|pixel_column\(9) & (\vga_0|videoGen|pixelDraw~43_combout\ & ((!\vga_0|videoSync|pixel_column\(6)) # (!\vga_0|videoGen|LessThan374~0_combout\))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0100110000000000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \vga_0|videoGen|LessThan374~0_combout\,
+	datab => \vga_0|videoSync|pixel_column\(9),
+	datac => \vga_0|videoSync|pixel_column\(6),
+	datad => \vga_0|videoGen|pixelDraw~43_combout\,
+	combout => \vga_0|videoGen|pixelDraw~44_combout\);
+
+-- Location: LCCOMB_X31_Y25_N12
 \vga_0|videoGen|colorAddress~71\ : cycloneii_lcell_comb
 -- Equation(s):
--- \vga_0|videoGen|colorAddress~71_combout\ = (\vga_0|videoGen|colorAddress~66_combout\ & (\vga_0|videoGen|colorAddress~70_combout\ & (\vga_0|videoGen|colorAddress~68_combout\ & \vga_0|videoGen|colorAddress~64_combout\)))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1000000000000000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \vga_0|videoGen|colorAddress~66_combout\,
-	datab => \vga_0|videoGen|colorAddress~70_combout\,
-	datac => \vga_0|videoGen|colorAddress~68_combout\,
-	datad => \vga_0|videoGen|colorAddress~64_combout\,
-	combout => \vga_0|videoGen|colorAddress~71_combout\);
-
--- Location: LCCOMB_X24_Y25_N4
-\vga_0|videoGen|colorAddress~60\ : cycloneii_lcell_comb
--- Equation(s):
--- \vga_0|videoGen|colorAddress~60_combout\ = (\vga_0|videoGen|pixelDraw~30_combout\) # ((\vga_0|videoGen|pixelDraw~29_combout\) # ((\vga_0|videoGen|pixelDraw~16_combout\) # (\vga_0|videoGen|pixelDraw~32_combout\)))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1111111111111110",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \vga_0|videoGen|pixelDraw~30_combout\,
-	datab => \vga_0|videoGen|pixelDraw~29_combout\,
-	datac => \vga_0|videoGen|pixelDraw~16_combout\,
-	datad => \vga_0|videoGen|pixelDraw~32_combout\,
-	combout => \vga_0|videoGen|colorAddress~60_combout\);
-
--- Location: LCCOMB_X24_Y22_N4
-\vga_0|videoGen|pixelDraw~33\ : cycloneii_lcell_comb
--- Equation(s):
--- \vga_0|videoGen|pixelDraw~33_combout\ = (\vga_0|videoSync|pixel_row\(2) & (\vga_0|videoSync|pixel_row\(3) & ((\vga_0|videoSync|pixel_row\(0)) # (\vga_0|videoSync|pixel_row\(1)))))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1000100010000000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \vga_0|videoSync|pixel_row\(2),
-	datab => \vga_0|videoSync|pixel_row\(3),
-	datac => \vga_0|videoSync|pixel_row\(0),
-	datad => \vga_0|videoSync|pixel_row\(1),
-	combout => \vga_0|videoGen|pixelDraw~33_combout\);
-
--- Location: LCCOMB_X24_Y22_N20
-\vga_0|videoGen|pixelDraw~79\ : cycloneii_lcell_comb
--- Equation(s):
--- \vga_0|videoGen|pixelDraw~79_combout\ = (!\vga_0|videoSync|pixel_row\(7) & ((\vga_0|videoSync|pixel_row\(4)) # ((\vga_0|videoGen|pixelDraw~33_combout\) # (\vga_0|videoSync|pixel_row\(6)))))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0101010101010100",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \vga_0|videoSync|pixel_row\(7),
-	datab => \vga_0|videoSync|pixel_row\(4),
-	datac => \vga_0|videoGen|pixelDraw~33_combout\,
-	datad => \vga_0|videoSync|pixel_row\(6),
-	combout => \vga_0|videoGen|pixelDraw~79_combout\);
-
--- Location: LCCOMB_X24_Y22_N14
-\vga_0|videoGen|LessThan3~0\ : cycloneii_lcell_comb
--- Equation(s):
--- \vga_0|videoGen|LessThan3~0_combout\ = (\vga_0|videoSync|pixel_row\(3) & ((\vga_0|videoSync|pixel_row\(2)) # (\vga_0|videoSync|pixel_row\(1))))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1100110011000000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	datab => \vga_0|videoSync|pixel_row\(3),
-	datac => \vga_0|videoSync|pixel_row\(2),
-	datad => \vga_0|videoSync|pixel_row\(1),
-	combout => \vga_0|videoGen|LessThan3~0_combout\);
-
--- Location: LCCOMB_X24_Y22_N30
-\vga_0|videoGen|pixelDraw~80\ : cycloneii_lcell_comb
--- Equation(s):
--- \vga_0|videoGen|pixelDraw~80_combout\ = (\vga_0|videoSync|pixel_row\(5) & (!\vga_0|videoSync|pixel_row\(6))) # (!\vga_0|videoSync|pixel_row\(5) & (\vga_0|videoSync|pixel_row\(6) & (!\vga_0|videoSync|pixel_row\(4) & !\vga_0|videoGen|LessThan3~0_combout\)))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0010001000100110",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \vga_0|videoSync|pixel_row\(5),
-	datab => \vga_0|videoSync|pixel_row\(6),
-	datac => \vga_0|videoSync|pixel_row\(4),
-	datad => \vga_0|videoGen|LessThan3~0_combout\,
-	combout => \vga_0|videoGen|pixelDraw~80_combout\);
-
--- Location: LCCOMB_X24_Y22_N0
-\vga_0|videoGen|pixelDraw~34\ : cycloneii_lcell_comb
--- Equation(s):
--- \vga_0|videoGen|pixelDraw~34_combout\ = (\vga_0|videoSync|pixel_row\(8) & (\vga_0|videoGen|pixelDraw~79_combout\ & \vga_0|videoGen|pixelDraw~80_combout\))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1010000000000000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \vga_0|videoSync|pixel_row\(8),
-	datac => \vga_0|videoGen|pixelDraw~79_combout\,
-	datad => \vga_0|videoGen|pixelDraw~80_combout\,
-	combout => \vga_0|videoGen|pixelDraw~34_combout\);
-
--- Location: LCCOMB_X23_Y20_N30
-\vga_0|videoGen|pixelDraw~20\ : cycloneii_lcell_comb
--- Equation(s):
--- \vga_0|videoGen|pixelDraw~20_combout\ = (!\vga_0|videoSync|pixel_column\(9) & (\vga_0|videoSync|pixel_column\(5) & (\vga_0|videoSync|pixel_column\(7) & \vga_0|videoSync|pixel_column\(8))))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0100000000000000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \vga_0|videoSync|pixel_column\(9),
-	datab => \vga_0|videoSync|pixel_column\(5),
-	datac => \vga_0|videoSync|pixel_column\(7),
-	datad => \vga_0|videoSync|pixel_column\(8),
-	combout => \vga_0|videoGen|pixelDraw~20_combout\);
-
--- Location: LCCOMB_X23_Y20_N24
-\vga_0|videoGen|pixelDraw~21\ : cycloneii_lcell_comb
--- Equation(s):
--- \vga_0|videoGen|pixelDraw~21_combout\ = (\vga_0|videoGen|pixelDraw~20_combout\ & ((\vga_0|videoSync|pixel_column\(9)) # ((!\vga_0|videoGen|LessThan613~0_combout\) # (!\vga_0|videoGen|LessThan613~1_combout\))))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1011111100000000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \vga_0|videoSync|pixel_column\(9),
-	datab => \vga_0|videoGen|LessThan613~1_combout\,
-	datac => \vga_0|videoGen|LessThan613~0_combout\,
-	datad => \vga_0|videoGen|pixelDraw~20_combout\,
-	combout => \vga_0|videoGen|pixelDraw~21_combout\);
-
--- Location: LCCOMB_X23_Y20_N18
-\vga_0|videoGen|LessThan614~0\ : cycloneii_lcell_comb
--- Equation(s):
--- \vga_0|videoGen|LessThan614~0_combout\ = (\vga_0|videoSync|pixel_column\(3) & (\vga_0|videoGen|char_addr[6]~6_combout\ & (\vga_0|videoGen|LessThan534~0_combout\ & \vga_0|videoGen|LessThan54~0_combout\)))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1000000000000000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \vga_0|videoSync|pixel_column\(3),
-	datab => \vga_0|videoGen|char_addr[6]~6_combout\,
-	datac => \vga_0|videoGen|LessThan534~0_combout\,
-	datad => \vga_0|videoGen|LessThan54~0_combout\,
-	combout => \vga_0|videoGen|LessThan614~0_combout\);
-
--- Location: LCCOMB_X23_Y20_N20
-\vga_0|videoGen|pixelDraw~22\ : cycloneii_lcell_comb
--- Equation(s):
--- \vga_0|videoGen|pixelDraw~22_combout\ = (\vga_0|videoGen|pixelDraw~21_combout\ & (!\vga_0|videoGen|LessThan614~0_combout\ & ((\vga_0|videoSync|pixel_column\(6)) # (\vga_0|videoSync|pixel_column\(9)))))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0000000011100000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \vga_0|videoSync|pixel_column\(6),
-	datab => \vga_0|videoSync|pixel_column\(9),
-	datac => \vga_0|videoGen|pixelDraw~21_combout\,
-	datad => \vga_0|videoGen|LessThan614~0_combout\,
-	combout => \vga_0|videoGen|pixelDraw~22_combout\);
-
--- Location: LCCOMB_X24_Y25_N6
-\vga_0|videoGen|colorAddress~61\ : cycloneii_lcell_comb
--- Equation(s):
--- \vga_0|videoGen|colorAddress~61_combout\ = (\vga_0|videoGen|pixelDraw~22_combout\ & ((\vga_0|videoGen|pixelDraw~37_combout\) # ((\vga_0|videoGen|colorAddress~60_combout\) # (\vga_0|videoGen|pixelDraw~34_combout\))))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1111111000000000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \vga_0|videoGen|pixelDraw~37_combout\,
-	datab => \vga_0|videoGen|colorAddress~60_combout\,
-	datac => \vga_0|videoGen|pixelDraw~34_combout\,
-	datad => \vga_0|videoGen|pixelDraw~22_combout\,
-	combout => \vga_0|videoGen|colorAddress~61_combout\);
-
--- Location: LCCOMB_X23_Y21_N30
-\vga_0|videoGen|colorAddress~56\ : cycloneii_lcell_comb
--- Equation(s):
--- \vga_0|videoGen|colorAddress~56_combout\ = (\vga_0|videoGen|pixelDraw~19_combout\ & (!\vga_0|videoGen|pixelDraw~29_combout\ & ((!\vga_0|videoGen|pixelDraw~40_combout\) # (!\vga_0|videoGen|pixelDraw~17_combout\)))) # (!\vga_0|videoGen|pixelDraw~19_combout\ 
--- & (((!\vga_0|videoGen|pixelDraw~40_combout\)) # (!\vga_0|videoGen|pixelDraw~17_combout\)))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0001010100111111",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \vga_0|videoGen|pixelDraw~19_combout\,
-	datab => \vga_0|videoGen|pixelDraw~17_combout\,
-	datac => \vga_0|videoGen|pixelDraw~40_combout\,
-	datad => \vga_0|videoGen|pixelDraw~29_combout\,
-	combout => \vga_0|videoGen|colorAddress~56_combout\);
-
--- Location: LCCOMB_X23_Y21_N0
-\vga_0|videoGen|colorAddress~57\ : cycloneii_lcell_comb
--- Equation(s):
--- \vga_0|videoGen|colorAddress~57_combout\ = (\vga_0|videoGen|colorAddress~56_combout\ & ((!\vga_0|videoGen|pixelDraw~41_combout\) # (!\vga_0|videoGen|pixelDraw~17_combout\)))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0011111100000000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	datab => \vga_0|videoGen|pixelDraw~17_combout\,
-	datac => \vga_0|videoGen|pixelDraw~41_combout\,
-	datad => \vga_0|videoGen|colorAddress~56_combout\,
-	combout => \vga_0|videoGen|colorAddress~57_combout\);
-
--- Location: LCCOMB_X23_Y21_N14
-\vga_0|videoGen|colorAddress~58\ : cycloneii_lcell_comb
--- Equation(s):
--- \vga_0|videoGen|colorAddress~58_combout\ = ((!\vga_0|videoGen|pixelDraw~30_combout\ & !\vga_0|videoGen|pixelDraw~34_combout\)) # (!\vga_0|videoGen|pixelDraw~19_combout\)
+-- \vga_0|videoGen|colorAddress~71_combout\ = ((!\vga_0|videoGen|pixelDraw~45_combout\ & !\vga_0|videoGen|pixelDraw~44_combout\)) # (!\vga_0|videoGen|pixelDraw~46_combout\)
 
 -- pragma translate_off
 GENERIC MAP (
@@ -7340,168 +7050,32 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \vga_0|videoGen|pixelDraw~19_combout\,
-	datac => \vga_0|videoGen|pixelDraw~30_combout\,
-	datad => \vga_0|videoGen|pixelDraw~34_combout\,
-	combout => \vga_0|videoGen|colorAddress~58_combout\);
+	dataa => \vga_0|videoGen|pixelDraw~46_combout\,
+	datac => \vga_0|videoGen|pixelDraw~45_combout\,
+	datad => \vga_0|videoGen|pixelDraw~44_combout\,
+	combout => \vga_0|videoGen|colorAddress~71_combout\);
 
--- Location: LCCOMB_X23_Y21_N8
-\vga_0|videoGen|colorAddress~59\ : cycloneii_lcell_comb
+-- Location: LCCOMB_X29_Y24_N26
+\vga_0|videoGen|LessThan36~0\ : cycloneii_lcell_comb
 -- Equation(s):
--- \vga_0|videoGen|colorAddress~59_combout\ = (\vga_0|videoGen|colorAddress~58_combout\ & (((!\vga_0|videoGen|pixelDraw~37_combout\ & !\vga_0|videoGen|pixelDraw~32_combout\)) # (!\vga_0|videoGen|pixelDraw~19_combout\)))
+-- \vga_0|videoGen|LessThan36~0_combout\ = (\vga_0|videoSync|pixel_row\(5) & ((\vga_0|videoSync|pixel_row\(4)) # ((\vga_0|videoSync|pixel_row\(3) & \vga_0|videoSync|pixel_row\(2)))))
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "0100010001001100",
+	lut_mask => "1010101010000000",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \vga_0|videoGen|pixelDraw~19_combout\,
-	datab => \vga_0|videoGen|colorAddress~58_combout\,
-	datac => \vga_0|videoGen|pixelDraw~37_combout\,
-	datad => \vga_0|videoGen|pixelDraw~32_combout\,
-	combout => \vga_0|videoGen|colorAddress~59_combout\);
+	dataa => \vga_0|videoSync|pixel_row\(5),
+	datab => \vga_0|videoSync|pixel_row\(3),
+	datac => \vga_0|videoSync|pixel_row\(2),
+	datad => \vga_0|videoSync|pixel_row\(4),
+	combout => \vga_0|videoGen|LessThan36~0_combout\);
 
--- Location: LCCOMB_X24_Y23_N16
-\vga_0|videoGen|colorAddress~62\ : cycloneii_lcell_comb
+-- Location: LCCOMB_X29_Y24_N0
+\vga_0|videoGen|LessThan35~1\ : cycloneii_lcell_comb
 -- Equation(s):
--- \vga_0|videoGen|colorAddress~62_combout\ = (\vga_0|videoGen|colorAddress~55_combout\ & (!\vga_0|videoGen|colorAddress~61_combout\ & (\vga_0|videoGen|colorAddress~57_combout\ & \vga_0|videoGen|colorAddress~59_combout\)))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0010000000000000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \vga_0|videoGen|colorAddress~55_combout\,
-	datab => \vga_0|videoGen|colorAddress~61_combout\,
-	datac => \vga_0|videoGen|colorAddress~57_combout\,
-	datad => \vga_0|videoGen|colorAddress~59_combout\,
-	combout => \vga_0|videoGen|colorAddress~62_combout\);
-
--- Location: LCCOMB_X23_Y21_N26
-\vga_0|videoGen|colorAddress~189\ : cycloneii_lcell_comb
--- Equation(s):
--- \vga_0|videoGen|colorAddress~189_combout\ = ((!\vga_0|videoGen|pixelDraw~77_combout\ & ((\vga_0|videoGen|LessThan23~2_combout\) # (!\vga_0|videoGen|pixelDraw~15_combout\)))) # (!\vga_0|videoGen|pixelDraw~40_combout\)
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0000101111111111",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \vga_0|videoGen|LessThan23~2_combout\,
-	datab => \vga_0|videoGen|pixelDraw~15_combout\,
-	datac => \vga_0|videoGen|pixelDraw~77_combout\,
-	datad => \vga_0|videoGen|pixelDraw~40_combout\,
-	combout => \vga_0|videoGen|colorAddress~189_combout\);
-
--- Location: LCCOMB_X23_Y20_N0
-\vga_0|videoGen|colorAddress~75\ : cycloneii_lcell_comb
--- Equation(s):
--- \vga_0|videoGen|colorAddress~75_combout\ = ((!\vga_0|videoGen|pixelDraw~22_combout\ & !\vga_0|videoGen|pixelDraw~24_combout\)) # (!\vga_0|videoGen|pixelDraw~42_combout\)
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0011001100111111",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	datab => \vga_0|videoGen|pixelDraw~42_combout\,
-	datac => \vga_0|videoGen|pixelDraw~22_combout\,
-	datad => \vga_0|videoGen|pixelDraw~24_combout\,
-	combout => \vga_0|videoGen|colorAddress~75_combout\);
-
--- Location: LCCOMB_X23_Y21_N16
-\vga_0|videoGen|colorAddress~76\ : cycloneii_lcell_comb
--- Equation(s):
--- \vga_0|videoGen|colorAddress~76_combout\ = (\vga_0|videoGen|colorAddress~75_combout\ & (((!\vga_0|videoGen|pixelDraw~40_combout\ & !\vga_0|videoGen|pixelDraw~41_combout\)) # (!\vga_0|videoGen|pixelDraw~42_combout\)))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0000010011001100",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \vga_0|videoGen|pixelDraw~40_combout\,
-	datab => \vga_0|videoGen|colorAddress~75_combout\,
-	datac => \vga_0|videoGen|pixelDraw~41_combout\,
-	datad => \vga_0|videoGen|pixelDraw~42_combout\,
-	combout => \vga_0|videoGen|colorAddress~76_combout\);
-
--- Location: LCCOMB_X23_Y21_N22
-\vga_0|videoGen|colorAddress~72\ : cycloneii_lcell_comb
--- Equation(s):
--- \vga_0|videoGen|colorAddress~72_combout\ = (\vga_0|videoGen|pixelDraw~40_combout\ & (!\vga_0|videoGen|pixelDraw~27_combout\ & ((!\vga_0|videoGen|pixelDraw~32_combout\) # (!\vga_0|videoGen|pixelDraw~41_combout\)))) # (!\vga_0|videoGen|pixelDraw~40_combout\ 
--- & (((!\vga_0|videoGen|pixelDraw~32_combout\) # (!\vga_0|videoGen|pixelDraw~41_combout\))))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0000011101110111",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \vga_0|videoGen|pixelDraw~40_combout\,
-	datab => \vga_0|videoGen|pixelDraw~27_combout\,
-	datac => \vga_0|videoGen|pixelDraw~41_combout\,
-	datad => \vga_0|videoGen|pixelDraw~32_combout\,
-	combout => \vga_0|videoGen|colorAddress~72_combout\);
-
--- Location: LCCOMB_X23_Y21_N6
-\vga_0|videoGen|colorAddress~77\ : cycloneii_lcell_comb
--- Equation(s):
--- \vga_0|videoGen|colorAddress~77_combout\ = (\vga_0|videoGen|colorAddress~74_combout\ & (\vga_0|videoGen|colorAddress~189_combout\ & (\vga_0|videoGen|colorAddress~76_combout\ & \vga_0|videoGen|colorAddress~72_combout\)))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1000000000000000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \vga_0|videoGen|colorAddress~74_combout\,
-	datab => \vga_0|videoGen|colorAddress~189_combout\,
-	datac => \vga_0|videoGen|colorAddress~76_combout\,
-	datad => \vga_0|videoGen|colorAddress~72_combout\,
-	combout => \vga_0|videoGen|colorAddress~77_combout\);
-
--- Location: LCCOMB_X24_Y23_N26
-\vga_0|videoGen|colorAddress~78\ : cycloneii_lcell_comb
--- Equation(s):
--- \vga_0|videoGen|colorAddress~78_combout\ = (\vga_0|videoGen|colorAddress~54_combout\ & (\vga_0|videoGen|colorAddress~71_combout\ & (\vga_0|videoGen|colorAddress~62_combout\ & \vga_0|videoGen|colorAddress~77_combout\)))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1000000000000000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \vga_0|videoGen|colorAddress~54_combout\,
-	datab => \vga_0|videoGen|colorAddress~71_combout\,
-	datac => \vga_0|videoGen|colorAddress~62_combout\,
-	datad => \vga_0|videoGen|colorAddress~77_combout\,
-	combout => \vga_0|videoGen|colorAddress~78_combout\);
-
--- Location: LCCOMB_X24_Y23_N6
-\vga_0|videoGen|colorAddress~99\ : cycloneii_lcell_comb
--- Equation(s):
--- \vga_0|videoGen|colorAddress~99_combout\ = (!\vga_0|videoGen|pixelDraw~53_combout\ & (\vga_0|videoGen|colorAddress~90_combout\ & (\vga_0|videoGen|colorAddress~98_combout\ & \vga_0|videoGen|colorAddress~78_combout\)))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0100000000000000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \vga_0|videoGen|pixelDraw~53_combout\,
-	datab => \vga_0|videoGen|colorAddress~90_combout\,
-	datac => \vga_0|videoGen|colorAddress~98_combout\,
-	datad => \vga_0|videoGen|colorAddress~78_combout\,
-	combout => \vga_0|videoGen|colorAddress~99_combout\);
-
--- Location: LCCOMB_X24_Y23_N24
-\vga_0|videoGen|colorAddress~100\ : cycloneii_lcell_comb
--- Equation(s):
--- \vga_0|videoGen|colorAddress~100_combout\ = (\vga_0|videoGen|colorAddress~99_combout\ & ((!\vga_0|videoGen|pixelDraw~32_combout\) # (!\vga_0|videoGen|pixelDraw~55_combout\)))
+-- \vga_0|videoGen|LessThan35~1_combout\ = (\vga_0|videoGen|LessThan35~0_combout\ & ((!\vga_0|videoGen|LessThan4~0_combout\) # (!\vga_0|videoSync|pixel_row\(3))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -7509,263 +7083,15 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	datab => \vga_0|videoGen|pixelDraw~55_combout\,
-	datac => \vga_0|videoGen|pixelDraw~32_combout\,
-	datad => \vga_0|videoGen|colorAddress~99_combout\,
-	combout => \vga_0|videoGen|colorAddress~100_combout\);
+	datab => \vga_0|videoSync|pixel_row\(3),
+	datac => \vga_0|videoGen|LessThan4~0_combout\,
+	datad => \vga_0|videoGen|LessThan35~0_combout\,
+	combout => \vga_0|videoGen|LessThan35~1_combout\);
 
--- Location: LCCOMB_X24_Y24_N4
-\vga_0|videoGen|colorAddress~112\ : cycloneii_lcell_comb
+-- Location: LCCOMB_X29_Y24_N16
+\vga_0|videoGen|pixelDraw~34\ : cycloneii_lcell_comb
 -- Equation(s):
--- \vga_0|videoGen|colorAddress~112_combout\ = (\vga_0|videoGen|pixelDraw~29_combout\) # ((\vga_0|videoGen|pixelDraw~17_combout\) # (\vga_0|videoGen|pixelDraw~30_combout\))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1111111111111100",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	datab => \vga_0|videoGen|pixelDraw~29_combout\,
-	datac => \vga_0|videoGen|pixelDraw~17_combout\,
-	datad => \vga_0|videoGen|pixelDraw~30_combout\,
-	combout => \vga_0|videoGen|colorAddress~112_combout\);
-
--- Location: LCCOMB_X24_Y24_N14
-\vga_0|videoGen|colorAddress~111\ : cycloneii_lcell_comb
--- Equation(s):
--- \vga_0|videoGen|colorAddress~111_combout\ = (\vga_0|videoGen|pixelDraw~32_combout\) # ((\vga_0|videoGen|pixelDraw~34_combout\) # (\vga_0|videoGen|pixelDraw~37_combout\))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1111111111111100",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	datab => \vga_0|videoGen|pixelDraw~32_combout\,
-	datac => \vga_0|videoGen|pixelDraw~34_combout\,
-	datad => \vga_0|videoGen|pixelDraw~37_combout\,
-	combout => \vga_0|videoGen|colorAddress~111_combout\);
-
--- Location: LCCOMB_X22_Y22_N26
-\vga_0|videoGen|LessThan214~0\ : cycloneii_lcell_comb
--- Equation(s):
--- \vga_0|videoGen|LessThan214~0_combout\ = (\vga_0|videoSync|pixel_column\(6)) # ((\vga_0|videoGen|LessThan54~0_combout\ & (\vga_0|videoSync|pixel_column\(3) & \vga_0|videoGen|char_addr[6]~6_combout\)))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1111111110000000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \vga_0|videoGen|LessThan54~0_combout\,
-	datab => \vga_0|videoSync|pixel_column\(3),
-	datac => \vga_0|videoGen|char_addr[6]~6_combout\,
-	datad => \vga_0|videoSync|pixel_column\(6),
-	combout => \vga_0|videoGen|LessThan214~0_combout\);
-
--- Location: LCCOMB_X22_Y22_N24
-\vga_0|videoGen|LessThan213~0\ : cycloneii_lcell_comb
--- Equation(s):
--- \vga_0|videoGen|LessThan213~0_combout\ = (!\vga_0|videoSync|pixel_column\(6) & (((\vga_0|videoGen|LessThan613~1_combout\ & \vga_0|videoGen|LessThan613~0_combout\)) # (!\vga_0|videoSync|pixel_column\(5))))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0011000100010001",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \vga_0|videoSync|pixel_column\(5),
-	datab => \vga_0|videoSync|pixel_column\(6),
-	datac => \vga_0|videoGen|LessThan613~1_combout\,
-	datad => \vga_0|videoGen|LessThan613~0_combout\,
-	combout => \vga_0|videoGen|LessThan213~0_combout\);
-
--- Location: LCCOMB_X22_Y22_N28
-\vga_0|videoGen|pixelDraw~58\ : cycloneii_lcell_comb
--- Equation(s):
--- \vga_0|videoGen|pixelDraw~58_combout\ = (\vga_0|videoSync|pixel_column\(7) & (!\vga_0|videoGen|LessThan214~0_combout\ & (!\vga_0|videoGen|LessThan213~0_combout\ & \vga_0|videoGen|LessThan13~0_combout\)))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0000001000000000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \vga_0|videoSync|pixel_column\(7),
-	datab => \vga_0|videoGen|LessThan214~0_combout\,
-	datac => \vga_0|videoGen|LessThan213~0_combout\,
-	datad => \vga_0|videoGen|LessThan13~0_combout\,
-	combout => \vga_0|videoGen|pixelDraw~58_combout\);
-
--- Location: LCCOMB_X24_Y25_N18
-\vga_0|videoGen|colorAddress~119\ : cycloneii_lcell_comb
--- Equation(s):
--- \vga_0|videoGen|colorAddress~119_combout\ = (\vga_0|videoGen|pixelDraw~77_combout\) # ((\vga_0|videoGen|pixelDraw~27_combout\) # (\vga_0|videoGen|pixelDraw~42_combout\))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1111111011111110",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \vga_0|videoGen|pixelDraw~77_combout\,
-	datab => \vga_0|videoGen|pixelDraw~27_combout\,
-	datac => \vga_0|videoGen|pixelDraw~42_combout\,
-	combout => \vga_0|videoGen|colorAddress~119_combout\);
-
--- Location: LCCOMB_X25_Y25_N14
-\vga_0|videoGen|colorAddress~198\ : cycloneii_lcell_comb
--- Equation(s):
--- \vga_0|videoGen|colorAddress~198_combout\ = (\vga_0|videoGen|pixelDraw~17_combout\) # ((\vga_0|videoGen|pixelDraw~29_combout\) # ((!\vga_0|videoGen|LessThan23~2_combout\ & \vga_0|videoGen|pixelDraw~15_combout\)))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1111111111011100",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \vga_0|videoGen|LessThan23~2_combout\,
-	datab => \vga_0|videoGen|pixelDraw~17_combout\,
-	datac => \vga_0|videoGen|pixelDraw~15_combout\,
-	datad => \vga_0|videoGen|pixelDraw~29_combout\,
-	combout => \vga_0|videoGen|colorAddress~198_combout\);
-
--- Location: LCCOMB_X23_Y22_N24
-\vga_0|videoGen|LessThan294~1\ : cycloneii_lcell_comb
--- Equation(s):
--- \vga_0|videoGen|LessThan294~1_combout\ = (\vga_0|videoSync|pixel_column\(7) & \vga_0|videoSync|pixel_column\(6))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1111000000000000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	datac => \vga_0|videoSync|pixel_column\(7),
-	datad => \vga_0|videoSync|pixel_column\(6),
-	combout => \vga_0|videoGen|LessThan294~1_combout\);
-
--- Location: LCCOMB_X23_Y22_N12
-\vga_0|videoGen|LessThan653~0\ : cycloneii_lcell_comb
--- Equation(s):
--- \vga_0|videoGen|LessThan653~0_combout\ = (\vga_0|videoSync|pixel_column\(3) & (\vga_0|videoGen|char_addr[6]~6_combout\ & (\vga_0|videoSync|pixel_column\(0) & \vga_0|videoGen|LessThan54~0_combout\)))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1000000000000000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \vga_0|videoSync|pixel_column\(3),
-	datab => \vga_0|videoGen|char_addr[6]~6_combout\,
-	datac => \vga_0|videoSync|pixel_column\(0),
-	datad => \vga_0|videoGen|LessThan54~0_combout\,
-	combout => \vga_0|videoGen|LessThan653~0_combout\);
-
--- Location: LCCOMB_X23_Y22_N30
-\vga_0|videoGen|LessThan253~0\ : cycloneii_lcell_comb
--- Equation(s):
--- \vga_0|videoGen|LessThan253~0_combout\ = (\vga_0|videoGen|LessThan13~0_combout\ & (((!\vga_0|videoSync|pixel_column\(6) & !\vga_0|videoGen|LessThan653~0_combout\)) # (!\vga_0|videoSync|pixel_column\(7))))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0011011100000000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \vga_0|videoSync|pixel_column\(6),
-	datab => \vga_0|videoSync|pixel_column\(7),
-	datac => \vga_0|videoGen|LessThan653~0_combout\,
-	datad => \vga_0|videoGen|LessThan13~0_combout\,
-	combout => \vga_0|videoGen|LessThan253~0_combout\);
-
--- Location: LCCOMB_X23_Y22_N16
-\vga_0|videoGen|pixelDraw~59\ : cycloneii_lcell_comb
--- Equation(s):
--- \vga_0|videoGen|pixelDraw~59_combout\ = (\vga_0|videoGen|LessThan13~0_combout\ & (!\vga_0|videoGen|LessThan253~0_combout\ & ((\vga_0|videoGen|LessThan254~0_combout\) # (!\vga_0|videoGen|LessThan294~1_combout\))))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0000000010001010",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \vga_0|videoGen|LessThan13~0_combout\,
-	datab => \vga_0|videoGen|LessThan254~0_combout\,
-	datac => \vga_0|videoGen|LessThan294~1_combout\,
-	datad => \vga_0|videoGen|LessThan253~0_combout\,
-	combout => \vga_0|videoGen|pixelDraw~59_combout\);
-
--- Location: LCCOMB_X22_Y24_N16
-\vga_0|videoGen|colorAddress~117\ : cycloneii_lcell_comb
--- Equation(s):
--- \vga_0|videoGen|colorAddress~117_combout\ = (\vga_0|videoGen|pixelDraw~59_combout\ & ((\vga_0|videoGen|pixelDraw~27_combout\) # (\vga_0|videoGen|pixelDraw~42_combout\)))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1111110000000000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	datab => \vga_0|videoGen|pixelDraw~27_combout\,
-	datac => \vga_0|videoGen|pixelDraw~42_combout\,
-	datad => \vga_0|videoGen|pixelDraw~59_combout\,
-	combout => \vga_0|videoGen|colorAddress~117_combout\);
-
--- Location: LCCOMB_X24_Y25_N20
-\vga_0|videoGen|colorAddress~116\ : cycloneii_lcell_comb
--- Equation(s):
--- \vga_0|videoGen|colorAddress~116_combout\ = (\vga_0|videoGen|pixelDraw~29_combout\) # ((\vga_0|videoGen|pixelDraw~34_combout\) # (\vga_0|videoGen|pixelDraw~30_combout\))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1111111111111100",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	datab => \vga_0|videoGen|pixelDraw~29_combout\,
-	datac => \vga_0|videoGen|pixelDraw~34_combout\,
-	datad => \vga_0|videoGen|pixelDraw~30_combout\,
-	combout => \vga_0|videoGen|colorAddress~116_combout\);
-
--- Location: LCCOMB_X22_Y24_N14
-\vga_0|videoGen|colorAddress~196\ : cycloneii_lcell_comb
--- Equation(s):
--- \vga_0|videoGen|colorAddress~196_combout\ = (\vga_0|videoGen|pixelDraw~17_combout\) # ((\vga_0|videoGen|pixelDraw~77_combout\) # ((!\vga_0|videoGen|LessThan23~2_combout\ & \vga_0|videoGen|pixelDraw~15_combout\)))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1111111110111010",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \vga_0|videoGen|pixelDraw~17_combout\,
-	datab => \vga_0|videoGen|LessThan23~2_combout\,
-	datac => \vga_0|videoGen|pixelDraw~15_combout\,
-	datad => \vga_0|videoGen|pixelDraw~77_combout\,
-	combout => \vga_0|videoGen|colorAddress~196_combout\);
-
--- Location: LCCOMB_X22_Y22_N30
-\vga_0|videoGen|LessThan294~0\ : cycloneii_lcell_comb
--- Equation(s):
--- \vga_0|videoGen|LessThan294~0_combout\ = (\vga_0|videoSync|pixel_column\(3) & (\vga_0|videoGen|char_addr[6]~6_combout\ & ((\vga_0|videoSync|pixel_column\(2)) # (\vga_0|videoSync|pixel_column\(1)))))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1000100010000000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \vga_0|videoSync|pixel_column\(3),
-	datab => \vga_0|videoGen|char_addr[6]~6_combout\,
-	datac => \vga_0|videoSync|pixel_column\(2),
-	datad => \vga_0|videoSync|pixel_column\(1),
-	combout => \vga_0|videoGen|LessThan294~0_combout\);
-
--- Location: LCCOMB_X22_Y22_N22
-\vga_0|videoGen|pixelDraw~60\ : cycloneii_lcell_comb
--- Equation(s):
--- \vga_0|videoGen|pixelDraw~60_combout\ = (\vga_0|videoGen|LessThan13~0_combout\ & (!\vga_0|videoGen|LessThan294~0_combout\ & (\vga_0|videoGen|LessThan294~1_combout\ & !\vga_0|videoGen|LessThan293~0_combout\)))
+-- \vga_0|videoGen|pixelDraw~34_combout\ = (\vga_0|videoGen|placeShip_on~0_combout\ & (!\vga_0|videoGen|LessThan36~0_combout\ & (\vga_0|videoSync|pixel_row\(8) & !\vga_0|videoGen|LessThan35~1_combout\)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -7773,267 +7099,321 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \vga_0|videoGen|LessThan13~0_combout\,
-	datab => \vga_0|videoGen|LessThan294~0_combout\,
-	datac => \vga_0|videoGen|LessThan294~1_combout\,
-	datad => \vga_0|videoGen|LessThan293~0_combout\,
-	combout => \vga_0|videoGen|pixelDraw~60_combout\);
-
--- Location: LCCOMB_X24_Y21_N28
-\vga_0|videoGen|LessThan11~3\ : cycloneii_lcell_comb
--- Equation(s):
--- \vga_0|videoGen|LessThan11~3_combout\ = (\vga_0|videoGen|LessThan11~2_combout\) # ((!\vga_0|videoSync|pixel_row\(2) & (!\vga_0|videoSync|pixel_row\(5) & \vga_0|videoGen|LessThan11~0_combout\)))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1111111100010000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \vga_0|videoSync|pixel_row\(2),
-	datab => \vga_0|videoSync|pixel_row\(5),
-	datac => \vga_0|videoGen|LessThan11~0_combout\,
-	datad => \vga_0|videoGen|LessThan11~2_combout\,
-	combout => \vga_0|videoGen|LessThan11~3_combout\);
-
--- Location: LCCOMB_X24_Y21_N10
-\vga_0|videoGen|colorAddress~109\ : cycloneii_lcell_comb
--- Equation(s):
--- \vga_0|videoGen|colorAddress~109_combout\ = (\vga_0|videoGen|pixelDraw~27_combout\) # ((\vga_0|videoGen|LessThan15~1_combout\ & (!\vga_0|videoGen|LessThan12~0_combout\ & !\vga_0|videoGen|LessThan11~3_combout\)))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1111000011110010",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \vga_0|videoGen|LessThan15~1_combout\,
-	datab => \vga_0|videoGen|LessThan12~0_combout\,
-	datac => \vga_0|videoGen|pixelDraw~27_combout\,
-	datad => \vga_0|videoGen|LessThan11~3_combout\,
-	combout => \vga_0|videoGen|colorAddress~109_combout\);
-
--- Location: LCCOMB_X24_Y24_N16
-\vga_0|videoGen|colorAddress~107\ : cycloneii_lcell_comb
--- Equation(s):
--- \vga_0|videoGen|colorAddress~107_combout\ = (\vga_0|videoGen|pixelDraw~29_combout\) # ((\vga_0|videoGen|pixelDraw~15_combout\ & !\vga_0|videoGen|LessThan23~2_combout\))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1111000011111100",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	datab => \vga_0|videoGen|pixelDraw~15_combout\,
-	datac => \vga_0|videoGen|pixelDraw~29_combout\,
-	datad => \vga_0|videoGen|LessThan23~2_combout\,
-	combout => \vga_0|videoGen|colorAddress~107_combout\);
-
--- Location: LCCOMB_X23_Y22_N18
-\vga_0|videoGen|pixelDraw~61\ : cycloneii_lcell_comb
--- Equation(s):
--- \vga_0|videoGen|pixelDraw~61_combout\ = (\vga_0|videoGen|LessThan374~1_combout\ & (((!\vga_0|videoGen|LessThan334~0_combout\ & !\vga_0|videoSync|pixel_column\(5))) # (!\vga_0|videoSync|pixel_column\(8))))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0100010001001100",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \vga_0|videoSync|pixel_column\(8),
-	datab => \vga_0|videoGen|LessThan374~1_combout\,
-	datac => \vga_0|videoGen|LessThan334~0_combout\,
-	datad => \vga_0|videoSync|pixel_column\(5),
-	combout => \vga_0|videoGen|pixelDraw~61_combout\);
-
--- Location: LCCOMB_X23_Y22_N8
-\vga_0|videoGen|pixelDraw~62\ : cycloneii_lcell_comb
--- Equation(s):
--- \vga_0|videoGen|pixelDraw~62_combout\ = (\vga_0|videoGen|pixelDraw~61_combout\ & (((!\vga_0|videoGen|LessThan333~2_combout\ & \vga_0|videoGen|LessThan294~1_combout\)) # (!\vga_0|videoGen|LessThan13~0_combout\)))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0111001100000000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \vga_0|videoGen|LessThan333~2_combout\,
-	datab => \vga_0|videoGen|LessThan13~0_combout\,
-	datac => \vga_0|videoGen|LessThan294~1_combout\,
-	datad => \vga_0|videoGen|pixelDraw~61_combout\,
-	combout => \vga_0|videoGen|pixelDraw~62_combout\);
-
--- Location: LCCOMB_X24_Y22_N28
-\vga_0|videoGen|colorAddress~105\ : cycloneii_lcell_comb
--- Equation(s):
--- \vga_0|videoGen|colorAddress~105_combout\ = (\vga_0|videoGen|pixelDraw~30_combout\) # ((\vga_0|videoGen|pixelDraw~34_combout\) # (\vga_0|videoGen|pixelDraw~37_combout\))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1111111111101110",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \vga_0|videoGen|pixelDraw~30_combout\,
-	datab => \vga_0|videoGen|pixelDraw~34_combout\,
-	datad => \vga_0|videoGen|pixelDraw~37_combout\,
-	combout => \vga_0|videoGen|colorAddress~105_combout\);
-
--- Location: LCCOMB_X24_Y21_N26
-\vga_0|videoGen|colorAddress~193\ : cycloneii_lcell_comb
--- Equation(s):
--- \vga_0|videoGen|colorAddress~193_combout\ = (!\vga_0|videoSync|pixel_row\(7) & (!\vga_0|videoGen|LessThan12~0_combout\ & (!\vga_0|videoSync|pixel_row\(8) & !\vga_0|videoGen|LessThan11~3_combout\)))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0000000000000001",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \vga_0|videoSync|pixel_row\(7),
-	datab => \vga_0|videoGen|LessThan12~0_combout\,
+	dataa => \vga_0|videoGen|placeShip_on~0_combout\,
+	datab => \vga_0|videoGen|LessThan36~0_combout\,
 	datac => \vga_0|videoSync|pixel_row\(8),
-	datad => \vga_0|videoGen|LessThan11~3_combout\,
-	combout => \vga_0|videoGen|colorAddress~193_combout\);
+	datad => \vga_0|videoGen|LessThan35~1_combout\,
+	combout => \vga_0|videoGen|pixelDraw~34_combout\);
 
--- Location: LCCOMB_X23_Y24_N18
-\vga_0|videoGen|colorAddress~103\ : cycloneii_lcell_comb
+-- Location: LCCOMB_X32_Y23_N18
+\vga_0|videoGen|colorAddress~68\ : cycloneii_lcell_comb
 -- Equation(s):
--- \vga_0|videoGen|colorAddress~103_combout\ = (\vga_0|videoGen|pixelDraw~55_combout\ & ((\vga_0|videoGen|colorAddress~193_combout\) # (\vga_0|videoGen|pixelDraw~27_combout\)))
+-- \vga_0|videoGen|colorAddress~68_combout\ = ((!\vga_0|videoGen|pixelDraw~33_combout\ & !\vga_0|videoGen|pixelDraw~34_combout\)) # (!\vga_0|videoGen|pixelDraw~44_combout\)
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "1100110011000000",
+	lut_mask => "0000001111111111",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	datab => \vga_0|videoGen|pixelDraw~55_combout\,
-	datac => \vga_0|videoGen|colorAddress~193_combout\,
-	datad => \vga_0|videoGen|pixelDraw~27_combout\,
-	combout => \vga_0|videoGen|colorAddress~103_combout\);
+	datab => \vga_0|videoGen|pixelDraw~33_combout\,
+	datac => \vga_0|videoGen|pixelDraw~34_combout\,
+	datad => \vga_0|videoGen|pixelDraw~44_combout\,
+	combout => \vga_0|videoGen|colorAddress~68_combout\);
 
--- Location: LCCOMB_X23_Y24_N30
-\vga_0|videoGen|colorAddress~192\ : cycloneii_lcell_comb
+-- Location: LCCOMB_X32_Y23_N8
+\vga_0|videoGen|colorAddress~69\ : cycloneii_lcell_comb
 -- Equation(s):
--- \vga_0|videoGen|colorAddress~192_combout\ = (!\vga_0|videoGen|pixelDraw~29_combout\ & (!\vga_0|videoGen|pixelDraw~17_combout\ & ((\vga_0|videoGen|LessThan23~2_combout\) # (!\vga_0|videoGen|pixelDraw~15_combout\))))
+-- \vga_0|videoGen|colorAddress~69_combout\ = (\vga_0|videoGen|colorAddress~68_combout\ & (((!\vga_0|videoGen|pixelDraw~38_combout\ & !\vga_0|videoGen|pixelDraw~41_combout\)) # (!\vga_0|videoGen|pixelDraw~44_combout\)))
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "0000000000001011",
+	lut_mask => "0001111100000000",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \vga_0|videoGen|LessThan23~2_combout\,
-	datab => \vga_0|videoGen|pixelDraw~15_combout\,
-	datac => \vga_0|videoGen|pixelDraw~29_combout\,
-	datad => \vga_0|videoGen|pixelDraw~17_combout\,
-	combout => \vga_0|videoGen|colorAddress~192_combout\);
+	dataa => \vga_0|videoGen|pixelDraw~38_combout\,
+	datab => \vga_0|videoGen|pixelDraw~41_combout\,
+	datac => \vga_0|videoGen|pixelDraw~44_combout\,
+	datad => \vga_0|videoGen|colorAddress~68_combout\,
+	combout => \vga_0|videoGen|colorAddress~69_combout\);
 
--- Location: LCCOMB_X24_Y22_N6
-\vga_0|videoGen|colorAddress~101\ : cycloneii_lcell_comb
+-- Location: LCCOMB_X32_Y23_N2
+\vga_0|videoGen|colorAddress~66\ : cycloneii_lcell_comb
 -- Equation(s):
--- \vga_0|videoGen|colorAddress~101_combout\ = ((!\vga_0|videoGen|pixelDraw~30_combout\ & (!\vga_0|videoGen|pixelDraw~34_combout\ & !\vga_0|videoGen|pixelDraw~37_combout\))) # (!\vga_0|videoGen|pixelDraw~55_combout\)
+-- \vga_0|videoGen|colorAddress~66_combout\ = (\vga_0|videoGen|pixelDraw~31_combout\ & (!\vga_0|videoGen|pixelDraw~44_combout\ & ((!\vga_0|videoGen|pixelDraw~45_combout\) # (!\vga_0|videoGen|pixelDraw~36_combout\)))) # (!\vga_0|videoGen|pixelDraw~31_combout\ 
+-- & (((!\vga_0|videoGen|pixelDraw~45_combout\) # (!\vga_0|videoGen|pixelDraw~36_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "0000111100011111",
+	lut_mask => "0000011101110111",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \vga_0|videoGen|pixelDraw~30_combout\,
-	datab => \vga_0|videoGen|pixelDraw~34_combout\,
-	datac => \vga_0|videoGen|pixelDraw~55_combout\,
-	datad => \vga_0|videoGen|pixelDraw~37_combout\,
-	combout => \vga_0|videoGen|colorAddress~101_combout\);
+	dataa => \vga_0|videoGen|pixelDraw~31_combout\,
+	datab => \vga_0|videoGen|pixelDraw~44_combout\,
+	datac => \vga_0|videoGen|pixelDraw~36_combout\,
+	datad => \vga_0|videoGen|pixelDraw~45_combout\,
+	combout => \vga_0|videoGen|colorAddress~66_combout\);
 
--- Location: LCCOMB_X23_Y24_N8
-\vga_0|videoGen|colorAddress~102\ : cycloneii_lcell_comb
+-- Location: LCCOMB_X32_Y23_N0
+\vga_0|videoGen|colorAddress~67\ : cycloneii_lcell_comb
 -- Equation(s):
--- \vga_0|videoGen|colorAddress~102_combout\ = (\vga_0|videoGen|colorAddress~101_combout\ & (((!\vga_0|videoGen|pixelDraw~77_combout\ & \vga_0|videoGen|colorAddress~192_combout\)) # (!\vga_0|videoGen|pixelDraw~55_combout\)))
+-- \vga_0|videoGen|colorAddress~67_combout\ = (\vga_0|videoGen|colorAddress~66_combout\ & (((!\vga_0|videoGen|pixelDraw~21_combout\ & !\vga_0|videoGen|pixelDraw~79_combout\)) # (!\vga_0|videoGen|pixelDraw~44_combout\)))
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "0100111100000000",
+	lut_mask => "0001111100000000",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \vga_0|videoGen|pixelDraw~77_combout\,
-	datab => \vga_0|videoGen|colorAddress~192_combout\,
-	datac => \vga_0|videoGen|pixelDraw~55_combout\,
-	datad => \vga_0|videoGen|colorAddress~101_combout\,
-	combout => \vga_0|videoGen|colorAddress~102_combout\);
+	dataa => \vga_0|videoGen|pixelDraw~21_combout\,
+	datab => \vga_0|videoGen|pixelDraw~79_combout\,
+	datac => \vga_0|videoGen|pixelDraw~44_combout\,
+	datad => \vga_0|videoGen|colorAddress~66_combout\,
+	combout => \vga_0|videoGen|colorAddress~67_combout\);
 
--- Location: LCCOMB_X23_Y24_N0
-\vga_0|videoGen|colorAddress~104\ : cycloneii_lcell_comb
+-- Location: LCCOMB_X32_Y23_N26
+\vga_0|videoGen|colorAddress~72\ : cycloneii_lcell_comb
 -- Equation(s):
--- \vga_0|videoGen|colorAddress~104_combout\ = (!\vga_0|videoGen|colorAddress~103_combout\ & (\vga_0|videoGen|colorAddress~102_combout\ & ((!\vga_0|videoGen|pixelDraw~62_combout\) # (!\vga_0|videoGen|pixelDraw~32_combout\))))
+-- \vga_0|videoGen|colorAddress~72_combout\ = (\vga_0|videoGen|colorAddress~70_combout\ & (\vga_0|videoGen|colorAddress~71_combout\ & (\vga_0|videoGen|colorAddress~69_combout\ & \vga_0|videoGen|colorAddress~67_combout\)))
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "0001000000110000",
+	lut_mask => "1000000000000000",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \vga_0|videoGen|pixelDraw~32_combout\,
-	datab => \vga_0|videoGen|colorAddress~103_combout\,
-	datac => \vga_0|videoGen|colorAddress~102_combout\,
-	datad => \vga_0|videoGen|pixelDraw~62_combout\,
-	combout => \vga_0|videoGen|colorAddress~104_combout\);
+	dataa => \vga_0|videoGen|colorAddress~70_combout\,
+	datab => \vga_0|videoGen|colorAddress~71_combout\,
+	datac => \vga_0|videoGen|colorAddress~69_combout\,
+	datad => \vga_0|videoGen|colorAddress~67_combout\,
+	combout => \vga_0|videoGen|colorAddress~72_combout\);
 
--- Location: LCCOMB_X23_Y24_N2
-\vga_0|videoGen|colorAddress~106\ : cycloneii_lcell_comb
+-- Location: LCCOMB_X32_Y23_N4
+\vga_0|videoGen|colorAddress~63\ : cycloneii_lcell_comb
 -- Equation(s):
--- \vga_0|videoGen|colorAddress~106_combout\ = (\vga_0|videoGen|colorAddress~104_combout\ & ((!\vga_0|videoGen|colorAddress~105_combout\) # (!\vga_0|videoGen|pixelDraw~62_combout\)))
+-- \vga_0|videoGen|colorAddress~63_combout\ = ((!\vga_0|videoGen|pixelDraw~33_combout\ & !\vga_0|videoGen|pixelDraw~34_combout\)) # (!\vga_0|videoGen|pixelDraw~45_combout\)
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "0011111100000000",
+	lut_mask => "0000001111111111",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	datab => \vga_0|videoGen|pixelDraw~62_combout\,
-	datac => \vga_0|videoGen|colorAddress~105_combout\,
-	datad => \vga_0|videoGen|colorAddress~104_combout\,
-	combout => \vga_0|videoGen|colorAddress~106_combout\);
+	datab => \vga_0|videoGen|pixelDraw~33_combout\,
+	datac => \vga_0|videoGen|pixelDraw~34_combout\,
+	datad => \vga_0|videoGen|pixelDraw~45_combout\,
+	combout => \vga_0|videoGen|colorAddress~63_combout\);
 
--- Location: LCCOMB_X23_Y24_N24
-\vga_0|videoGen|colorAddress~108\ : cycloneii_lcell_comb
+-- Location: LCCOMB_X32_Y23_N30
+\vga_0|videoGen|colorAddress~64\ : cycloneii_lcell_comb
 -- Equation(s):
--- \vga_0|videoGen|colorAddress~108_combout\ = (\vga_0|videoGen|colorAddress~106_combout\ & (((!\vga_0|videoGen|pixelDraw~17_combout\ & !\vga_0|videoGen|colorAddress~107_combout\)) # (!\vga_0|videoGen|pixelDraw~62_combout\)))
+-- \vga_0|videoGen|colorAddress~64_combout\ = (\vga_0|videoGen|colorAddress~63_combout\ & (((!\vga_0|videoGen|pixelDraw~38_combout\ & !\vga_0|videoGen|pixelDraw~41_combout\)) # (!\vga_0|videoGen|pixelDraw~45_combout\)))
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "0101011100000000",
+	lut_mask => "0011000001110000",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \vga_0|videoGen|pixelDraw~62_combout\,
-	datab => \vga_0|videoGen|pixelDraw~17_combout\,
-	datac => \vga_0|videoGen|colorAddress~107_combout\,
-	datad => \vga_0|videoGen|colorAddress~106_combout\,
-	combout => \vga_0|videoGen|colorAddress~108_combout\);
+	dataa => \vga_0|videoGen|pixelDraw~38_combout\,
+	datab => \vga_0|videoGen|pixelDraw~45_combout\,
+	datac => \vga_0|videoGen|colorAddress~63_combout\,
+	datad => \vga_0|videoGen|pixelDraw~41_combout\,
+	combout => \vga_0|videoGen|colorAddress~64_combout\);
 
--- Location: LCCOMB_X23_Y24_N26
-\vga_0|videoGen|colorAddress~110\ : cycloneii_lcell_comb
+-- Location: LCCOMB_X32_Y23_N28
+\vga_0|videoGen|colorAddress~57\ : cycloneii_lcell_comb
 -- Equation(s):
--- \vga_0|videoGen|colorAddress~110_combout\ = (\vga_0|videoGen|colorAddress~108_combout\ & (((!\vga_0|videoGen|colorAddress~109_combout\ & !\vga_0|videoGen|pixelDraw~77_combout\)) # (!\vga_0|videoGen|pixelDraw~62_combout\)))
+-- \vga_0|videoGen|colorAddress~57_combout\ = ((!\vga_0|videoGen|pixelDraw~79_combout\ & !\vga_0|videoGen|pixelDraw~31_combout\)) # (!\vga_0|videoGen|pixelDraw~28_combout\)
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "0101000001110000",
+	lut_mask => "0000111101011111",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \vga_0|videoGen|pixelDraw~62_combout\,
-	datab => \vga_0|videoGen|colorAddress~109_combout\,
-	datac => \vga_0|videoGen|colorAddress~108_combout\,
-	datad => \vga_0|videoGen|pixelDraw~77_combout\,
-	combout => \vga_0|videoGen|colorAddress~110_combout\);
+	dataa => \vga_0|videoGen|pixelDraw~79_combout\,
+	datac => \vga_0|videoGen|pixelDraw~28_combout\,
+	datad => \vga_0|videoGen|pixelDraw~31_combout\,
+	combout => \vga_0|videoGen|colorAddress~57_combout\);
 
--- Location: LCCOMB_X23_Y24_N20
-\vga_0|videoGen|colorAddress~194\ : cycloneii_lcell_comb
+-- Location: LCCOMB_X32_Y23_N14
+\vga_0|videoGen|colorAddress~58\ : cycloneii_lcell_comb
 -- Equation(s):
--- \vga_0|videoGen|colorAddress~194_combout\ = (\vga_0|videoGen|colorAddress~110_combout\ & (((!\vga_0|videoGen|colorAddress~112_combout\ & !\vga_0|videoGen|colorAddress~111_combout\)) # (!\vga_0|videoGen|pixelDraw~60_combout\)))
+-- \vga_0|videoGen|colorAddress~58_combout\ = (\vga_0|videoGen|colorAddress~57_combout\ & (((!\vga_0|videoGen|pixelDraw~21_combout\ & !\vga_0|videoGen|pixelDraw~33_combout\)) # (!\vga_0|videoGen|pixelDraw~28_combout\)))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0001111100000000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \vga_0|videoGen|pixelDraw~21_combout\,
+	datab => \vga_0|videoGen|pixelDraw~33_combout\,
+	datac => \vga_0|videoGen|pixelDraw~28_combout\,
+	datad => \vga_0|videoGen|colorAddress~57_combout\,
+	combout => \vga_0|videoGen|colorAddress~58_combout\);
+
+-- Location: LCCOMB_X32_Y23_N20
+\vga_0|videoGen|colorAddress~61\ : cycloneii_lcell_comb
+-- Equation(s):
+-- \vga_0|videoGen|colorAddress~61_combout\ = (\vga_0|videoGen|pixelDraw~31_combout\ & (!\vga_0|videoGen|pixelDraw~45_combout\ & ((!\vga_0|videoGen|pixelDraw~46_combout\) # (!\vga_0|videoGen|pixelDraw~32_combout\)))) # (!\vga_0|videoGen|pixelDraw~31_combout\ 
+-- & (((!\vga_0|videoGen|pixelDraw~46_combout\)) # (!\vga_0|videoGen|pixelDraw~32_combout\)))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0001010100111111",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \vga_0|videoGen|pixelDraw~31_combout\,
+	datab => \vga_0|videoGen|pixelDraw~32_combout\,
+	datac => \vga_0|videoGen|pixelDraw~46_combout\,
+	datad => \vga_0|videoGen|pixelDraw~45_combout\,
+	combout => \vga_0|videoGen|colorAddress~61_combout\);
+
+-- Location: LCCOMB_X32_Y23_N10
+\vga_0|videoGen|colorAddress~62\ : cycloneii_lcell_comb
+-- Equation(s):
+-- \vga_0|videoGen|colorAddress~62_combout\ = (\vga_0|videoGen|colorAddress~61_combout\ & (((!\vga_0|videoGen|pixelDraw~21_combout\ & !\vga_0|videoGen|pixelDraw~79_combout\)) # (!\vga_0|videoGen|pixelDraw~45_combout\)))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0001000011110000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \vga_0|videoGen|pixelDraw~21_combout\,
+	datab => \vga_0|videoGen|pixelDraw~79_combout\,
+	datac => \vga_0|videoGen|colorAddress~61_combout\,
+	datad => \vga_0|videoGen|pixelDraw~45_combout\,
+	combout => \vga_0|videoGen|colorAddress~62_combout\);
+
+-- Location: LCCOMB_X32_Y23_N24
+\vga_0|videoGen|colorAddress~65\ : cycloneii_lcell_comb
+-- Equation(s):
+-- \vga_0|videoGen|colorAddress~65_combout\ = (\vga_0|videoGen|colorAddress~60_combout\ & (\vga_0|videoGen|colorAddress~64_combout\ & (\vga_0|videoGen|colorAddress~58_combout\ & \vga_0|videoGen|colorAddress~62_combout\)))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1000000000000000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \vga_0|videoGen|colorAddress~60_combout\,
+	datab => \vga_0|videoGen|colorAddress~64_combout\,
+	datac => \vga_0|videoGen|colorAddress~58_combout\,
+	datad => \vga_0|videoGen|colorAddress~62_combout\,
+	combout => \vga_0|videoGen|colorAddress~65_combout\);
+
+-- Location: LCCOMB_X31_Y23_N4
+\vga_0|videoGen|colorAddress~73\ : cycloneii_lcell_comb
+-- Equation(s):
+-- \vga_0|videoGen|colorAddress~73_combout\ = (\vga_0|videoGen|colorAddress~56_combout\ & (\vga_0|videoGen|colorAddress~48_combout\ & (\vga_0|videoGen|colorAddress~72_combout\ & \vga_0|videoGen|colorAddress~65_combout\)))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1000000000000000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \vga_0|videoGen|colorAddress~56_combout\,
+	datab => \vga_0|videoGen|colorAddress~48_combout\,
+	datac => \vga_0|videoGen|colorAddress~72_combout\,
+	datad => \vga_0|videoGen|colorAddress~65_combout\,
+	combout => \vga_0|videoGen|colorAddress~73_combout\);
+
+-- Location: LCCOMB_X29_Y25_N30
+\vga_0|videoGen|LessThan133~0\ : cycloneii_lcell_comb
+-- Equation(s):
+-- \vga_0|videoGen|LessThan133~0_combout\ = ((!\vga_0|videoSync|pixel_column\(1) & !\vga_0|videoSync|pixel_column\(0))) # (!\vga_0|videoSync|pixel_column\(2))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0001111100011111",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \vga_0|videoSync|pixel_column\(1),
+	datab => \vga_0|videoSync|pixel_column\(0),
+	datac => \vga_0|videoSync|pixel_column\(2),
+	combout => \vga_0|videoGen|LessThan133~0_combout\);
+
+-- Location: LCCOMB_X30_Y25_N4
+\vga_0|videoGen|LessThan133~1\ : cycloneii_lcell_comb
+-- Equation(s):
+-- \vga_0|videoGen|LessThan133~1_combout\ = ((!\vga_0|videoSync|pixel_column\(3) & (!\vga_0|videoSync|pixel_column\(4) & \vga_0|videoGen|LessThan133~0_combout\))) # (!\vga_0|videoSync|pixel_column\(5))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0101011101010101",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \vga_0|videoSync|pixel_column\(5),
+	datab => \vga_0|videoSync|pixel_column\(3),
+	datac => \vga_0|videoSync|pixel_column\(4),
+	datad => \vga_0|videoGen|LessThan133~0_combout\,
+	combout => \vga_0|videoGen|LessThan133~1_combout\);
+
+-- Location: LCCOMB_X30_Y25_N12
+\vga_0|videoGen|pixelDraw~55\ : cycloneii_lcell_comb
+-- Equation(s):
+-- \vga_0|videoGen|pixelDraw~55_combout\ = (\vga_0|videoSync|pixel_column\(7) & (!\vga_0|videoSync|pixel_column\(9) & ((!\vga_0|videoGen|LessThan134~0_combout\) # (!\vga_0|videoGen|LessThan534~0_combout\))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0000001000100010",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \vga_0|videoSync|pixel_column\(7),
+	datab => \vga_0|videoSync|pixel_column\(9),
+	datac => \vga_0|videoGen|LessThan534~0_combout\,
+	datad => \vga_0|videoGen|LessThan134~0_combout\,
+	combout => \vga_0|videoGen|pixelDraw~55_combout\);
+
+-- Location: LCCOMB_X30_Y25_N2
+\vga_0|videoGen|pixelDraw~56\ : cycloneii_lcell_comb
+-- Equation(s):
+-- \vga_0|videoGen|pixelDraw~56_combout\ = (\vga_0|videoSync|pixel_column\(8) & (\vga_0|videoGen|pixelDraw~55_combout\ & ((\vga_0|videoSync|pixel_column\(6)) # (!\vga_0|videoGen|LessThan133~1_combout\))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1000110000000000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \vga_0|videoSync|pixel_column\(6),
+	datab => \vga_0|videoSync|pixel_column\(8),
+	datac => \vga_0|videoGen|LessThan133~1_combout\,
+	datad => \vga_0|videoGen|pixelDraw~55_combout\,
+	combout => \vga_0|videoGen|pixelDraw~56_combout\);
+
+-- Location: LCCOMB_X30_Y23_N18
+\vga_0|videoGen|colorAddress~85\ : cycloneii_lcell_comb
+-- Equation(s):
+-- \vga_0|videoGen|colorAddress~85_combout\ = (\vga_0|videoGen|pixelDraw~46_combout\ & (!\vga_0|videoGen|pixelDraw~49_combout\ & ((!\vga_0|videoGen|pixelDraw~54_combout\) # (!\vga_0|videoGen|pixelDraw~36_combout\)))) # (!\vga_0|videoGen|pixelDraw~46_combout\ 
+-- & (((!\vga_0|videoGen|pixelDraw~54_combout\)) # (!\vga_0|videoGen|pixelDraw~36_combout\)))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0001010100111111",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \vga_0|videoGen|pixelDraw~46_combout\,
+	datab => \vga_0|videoGen|pixelDraw~36_combout\,
+	datac => \vga_0|videoGen|pixelDraw~54_combout\,
+	datad => \vga_0|videoGen|pixelDraw~49_combout\,
+	combout => \vga_0|videoGen|colorAddress~85_combout\);
+
+-- Location: LCCOMB_X30_Y23_N24
+\vga_0|videoGen|colorAddress~86\ : cycloneii_lcell_comb
+-- Equation(s):
+-- \vga_0|videoGen|colorAddress~86_combout\ = (\vga_0|videoGen|colorAddress~85_combout\ & (((!\vga_0|videoGen|pixelDraw~79_combout\ & !\vga_0|videoGen|pixelDraw~31_combout\)) # (!\vga_0|videoGen|pixelDraw~56_combout\)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -8041,16 +7421,250 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \vga_0|videoGen|colorAddress~112_combout\,
-	datab => \vga_0|videoGen|pixelDraw~60_combout\,
-	datac => \vga_0|videoGen|colorAddress~111_combout\,
-	datad => \vga_0|videoGen|colorAddress~110_combout\,
-	combout => \vga_0|videoGen|colorAddress~194_combout\);
+	dataa => \vga_0|videoGen|pixelDraw~79_combout\,
+	datab => \vga_0|videoGen|pixelDraw~56_combout\,
+	datac => \vga_0|videoGen|pixelDraw~31_combout\,
+	datad => \vga_0|videoGen|colorAddress~85_combout\,
+	combout => \vga_0|videoGen|colorAddress~86_combout\);
 
--- Location: LCCOMB_X23_Y24_N22
-\vga_0|videoGen|colorAddress~195\ : cycloneii_lcell_comb
+-- Location: LCCOMB_X30_Y23_N8
+\vga_0|videoGen|colorAddress~187\ : cycloneii_lcell_comb
 -- Equation(s):
--- \vga_0|videoGen|colorAddress~195_combout\ = (\vga_0|videoGen|pixelDraw~77_combout\) # ((\vga_0|videoGen|pixelDraw~27_combout\) # ((!\vga_0|videoGen|LessThan23~2_combout\ & \vga_0|videoGen|pixelDraw~15_combout\)))
+-- \vga_0|videoGen|colorAddress~187_combout\ = ((!\vga_0|videoGen|pixelDraw~33_combout\ & ((\vga_0|videoGen|LessThan23~2_combout\) # (!\vga_0|videoGen|pixelDraw~20_combout\)))) # (!\vga_0|videoGen|pixelDraw~56_combout\)
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0010001111111111",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \vga_0|videoGen|LessThan23~2_combout\,
+	datab => \vga_0|videoGen|pixelDraw~33_combout\,
+	datac => \vga_0|videoGen|pixelDraw~20_combout\,
+	datad => \vga_0|videoGen|pixelDraw~56_combout\,
+	combout => \vga_0|videoGen|colorAddress~187_combout\);
+
+-- Location: LCCOMB_X30_Y23_N30
+\vga_0|videoGen|colorAddress~87\ : cycloneii_lcell_comb
+-- Equation(s):
+-- \vga_0|videoGen|colorAddress~87_combout\ = (\vga_0|videoGen|colorAddress~187_combout\ & (((!\vga_0|videoGen|pixelDraw~38_combout\ & !\vga_0|videoGen|pixelDraw~34_combout\)) # (!\vga_0|videoGen|pixelDraw~56_combout\)))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0001000011110000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \vga_0|videoGen|pixelDraw~38_combout\,
+	datab => \vga_0|videoGen|pixelDraw~34_combout\,
+	datac => \vga_0|videoGen|colorAddress~187_combout\,
+	datad => \vga_0|videoGen|pixelDraw~56_combout\,
+	combout => \vga_0|videoGen|colorAddress~87_combout\);
+
+-- Location: LCCOMB_X25_Y23_N4
+\vga_0|videoGen|colorAddress~90\ : cycloneii_lcell_comb
+-- Equation(s):
+-- \vga_0|videoGen|colorAddress~90_combout\ = (\vga_0|videoGen|pixelDraw~46_combout\ & (!\vga_0|videoGen|pixelDraw~51_combout\ & ((!\vga_0|videoGen|pixelDraw~21_combout\) # (!\vga_0|videoGen|pixelDraw~23_combout\)))) # (!\vga_0|videoGen|pixelDraw~46_combout\ 
+-- & (((!\vga_0|videoGen|pixelDraw~21_combout\) # (!\vga_0|videoGen|pixelDraw~23_combout\))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0000011101110111",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \vga_0|videoGen|pixelDraw~46_combout\,
+	datab => \vga_0|videoGen|pixelDraw~51_combout\,
+	datac => \vga_0|videoGen|pixelDraw~23_combout\,
+	datad => \vga_0|videoGen|pixelDraw~21_combout\,
+	combout => \vga_0|videoGen|colorAddress~90_combout\);
+
+-- Location: LCCOMB_X30_Y23_N2
+\vga_0|videoGen|colorAddress~91\ : cycloneii_lcell_comb
+-- Equation(s):
+-- \vga_0|videoGen|colorAddress~91_combout\ = (\vga_0|videoGen|colorAddress~90_combout\ & (((!\vga_0|videoGen|pixelDraw~56_combout\ & !\vga_0|videoGen|pixelDraw~54_combout\)) # (!\vga_0|videoGen|pixelDraw~46_combout\)))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0101011100000000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \vga_0|videoGen|pixelDraw~46_combout\,
+	datab => \vga_0|videoGen|pixelDraw~56_combout\,
+	datac => \vga_0|videoGen|pixelDraw~54_combout\,
+	datad => \vga_0|videoGen|colorAddress~90_combout\,
+	combout => \vga_0|videoGen|colorAddress~91_combout\);
+
+-- Location: LCCOMB_X31_Y23_N22
+\vga_0|videoGen|colorAddress~92\ : cycloneii_lcell_comb
+-- Equation(s):
+-- \vga_0|videoGen|colorAddress~92_combout\ = (\vga_0|videoGen|colorAddress~89_combout\ & (\vga_0|videoGen|colorAddress~86_combout\ & (\vga_0|videoGen|colorAddress~87_combout\ & \vga_0|videoGen|colorAddress~91_combout\)))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1000000000000000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \vga_0|videoGen|colorAddress~89_combout\,
+	datab => \vga_0|videoGen|colorAddress~86_combout\,
+	datac => \vga_0|videoGen|colorAddress~87_combout\,
+	datad => \vga_0|videoGen|colorAddress~91_combout\,
+	combout => \vga_0|videoGen|colorAddress~92_combout\);
+
+-- Location: LCCOMB_X31_Y23_N28
+\vga_0|videoGen|colorAddress~93\ : cycloneii_lcell_comb
+-- Equation(s):
+-- \vga_0|videoGen|colorAddress~93_combout\ = (\vga_0|videoGen|colorAddress~92_combout\ & ((!\vga_0|videoGen|pixelDraw~46_combout\) # (!\vga_0|videoGen|pixelDraw~23_combout\)))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0011111100000000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	datab => \vga_0|videoGen|pixelDraw~23_combout\,
+	datac => \vga_0|videoGen|pixelDraw~46_combout\,
+	datad => \vga_0|videoGen|colorAddress~92_combout\,
+	combout => \vga_0|videoGen|colorAddress~93_combout\);
+
+-- Location: LCCOMB_X31_Y23_N30
+\vga_0|videoGen|colorAddress~94\ : cycloneii_lcell_comb
+-- Equation(s):
+-- \vga_0|videoGen|colorAddress~94_combout\ = (\vga_0|videoGen|colorAddress~84_combout\ & (\vga_0|videoGen|colorAddress~78_combout\ & (\vga_0|videoGen|colorAddress~73_combout\ & \vga_0|videoGen|colorAddress~93_combout\)))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1000000000000000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \vga_0|videoGen|colorAddress~84_combout\,
+	datab => \vga_0|videoGen|colorAddress~78_combout\,
+	datac => \vga_0|videoGen|colorAddress~73_combout\,
+	datad => \vga_0|videoGen|colorAddress~93_combout\,
+	combout => \vga_0|videoGen|colorAddress~94_combout\);
+
+-- Location: LCCOMB_X31_Y23_N20
+\vga_0|videoGen|colorAddress~95\ : cycloneii_lcell_comb
+-- Equation(s):
+-- \vga_0|videoGen|colorAddress~95_combout\ = (\vga_0|videoGen|colorAddress~94_combout\ & ((!\vga_0|videoGen|pixelDraw~36_combout\) # (!\vga_0|videoGen|pixelDraw~58_combout\)))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0101111100000000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \vga_0|videoGen|pixelDraw~58_combout\,
+	datac => \vga_0|videoGen|pixelDraw~36_combout\,
+	datad => \vga_0|videoGen|colorAddress~94_combout\,
+	combout => \vga_0|videoGen|colorAddress~95_combout\);
+
+-- Location: LCCOMB_X29_Y23_N30
+\vga_0|videoGen|colorAddress~107\ : cycloneii_lcell_comb
+-- Equation(s):
+-- \vga_0|videoGen|colorAddress~107_combout\ = (\vga_0|videoGen|pixelDraw~33_combout\) # ((\vga_0|videoGen|pixelDraw~22_combout\) # (\vga_0|videoGen|pixelDraw~34_combout\))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1111111011111110",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \vga_0|videoGen|pixelDraw~33_combout\,
+	datab => \vga_0|videoGen|pixelDraw~22_combout\,
+	datac => \vga_0|videoGen|pixelDraw~34_combout\,
+	combout => \vga_0|videoGen|colorAddress~107_combout\);
+
+-- Location: LCCOMB_X29_Y23_N8
+\vga_0|videoGen|colorAddress~106\ : cycloneii_lcell_comb
+-- Equation(s):
+-- \vga_0|videoGen|colorAddress~106_combout\ = (\vga_0|videoGen|pixelDraw~41_combout\) # ((\vga_0|videoGen|pixelDraw~38_combout\) # (\vga_0|videoGen|pixelDraw~36_combout\))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1111111111111010",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \vga_0|videoGen|pixelDraw~41_combout\,
+	datac => \vga_0|videoGen|pixelDraw~38_combout\,
+	datad => \vga_0|videoGen|pixelDraw~36_combout\,
+	combout => \vga_0|videoGen|colorAddress~106_combout\);
+
+-- Location: LCCOMB_X29_Y22_N30
+\vga_0|videoGen|LessThan214~0\ : cycloneii_lcell_comb
+-- Equation(s):
+-- \vga_0|videoGen|LessThan214~0_combout\ = (\vga_0|videoSync|pixel_column\(6)) # ((\vga_0|videoGen|LessThan334~0_combout\ & (\vga_0|videoSync|pixel_column\(5) & \vga_0|videoGen|LessThan54~0_combout\)))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1110101010101010",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \vga_0|videoSync|pixel_column\(6),
+	datab => \vga_0|videoGen|LessThan334~0_combout\,
+	datac => \vga_0|videoSync|pixel_column\(5),
+	datad => \vga_0|videoGen|LessThan54~0_combout\,
+	combout => \vga_0|videoGen|LessThan214~0_combout\);
+
+-- Location: LCCOMB_X29_Y25_N4
+\vga_0|videoGen|LessThan213~0\ : cycloneii_lcell_comb
+-- Equation(s):
+-- \vga_0|videoGen|LessThan213~0_combout\ = (!\vga_0|videoSync|pixel_column\(6) & (((\vga_0|videoGen|LessThan613~1_combout\ & \vga_0|videoGen|LessThan613~0_combout\)) # (!\vga_0|videoSync|pixel_column\(5))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0101000100010001",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \vga_0|videoSync|pixel_column\(6),
+	datab => \vga_0|videoSync|pixel_column\(5),
+	datac => \vga_0|videoGen|LessThan613~1_combout\,
+	datad => \vga_0|videoGen|LessThan613~0_combout\,
+	combout => \vga_0|videoGen|LessThan213~0_combout\);
+
+-- Location: LCCOMB_X29_Y22_N0
+\vga_0|videoGen|pixelDraw~61\ : cycloneii_lcell_comb
+-- Equation(s):
+-- \vga_0|videoGen|pixelDraw~61_combout\ = (\vga_0|videoGen|LessThan13~3_combout\ & (!\vga_0|videoGen|LessThan214~0_combout\ & (\vga_0|videoSync|pixel_column\(7) & !\vga_0|videoGen|LessThan213~0_combout\)))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0000000000100000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \vga_0|videoGen|LessThan13~3_combout\,
+	datab => \vga_0|videoGen|LessThan214~0_combout\,
+	datac => \vga_0|videoSync|pixel_column\(7),
+	datad => \vga_0|videoGen|LessThan213~0_combout\,
+	combout => \vga_0|videoGen|pixelDraw~61_combout\);
+
+-- Location: LCCOMB_X29_Y22_N16
+\vga_0|videoGen|colorAddress~115\ : cycloneii_lcell_comb
+-- Equation(s):
+-- \vga_0|videoGen|colorAddress~115_combout\ = (\vga_0|videoGen|pixelDraw~46_combout\) # ((\vga_0|videoGen|pixelDraw~79_combout\) # (\vga_0|videoGen|pixelDraw~31_combout\))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1111111111111100",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	datab => \vga_0|videoGen|pixelDraw~46_combout\,
+	datac => \vga_0|videoGen|pixelDraw~79_combout\,
+	datad => \vga_0|videoGen|pixelDraw~31_combout\,
+	combout => \vga_0|videoGen|colorAddress~115_combout\);
+
+-- Location: LCCOMB_X30_Y23_N22
+\vga_0|videoGen|colorAddress~194\ : cycloneii_lcell_comb
+-- Equation(s):
+-- \vga_0|videoGen|colorAddress~194_combout\ = (\vga_0|videoGen|pixelDraw~22_combout\) # ((\vga_0|videoGen|pixelDraw~33_combout\) # ((!\vga_0|videoGen|LessThan23~2_combout\ & \vga_0|videoGen|pixelDraw~20_combout\)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -8059,31 +7673,64 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	dataa => \vga_0|videoGen|LessThan23~2_combout\,
-	datab => \vga_0|videoGen|pixelDraw~15_combout\,
-	datac => \vga_0|videoGen|pixelDraw~77_combout\,
-	datad => \vga_0|videoGen|pixelDraw~27_combout\,
-	combout => \vga_0|videoGen|colorAddress~195_combout\);
+	datab => \vga_0|videoGen|pixelDraw~20_combout\,
+	datac => \vga_0|videoGen|pixelDraw~22_combout\,
+	datad => \vga_0|videoGen|pixelDraw~33_combout\,
+	combout => \vga_0|videoGen|colorAddress~194_combout\);
 
--- Location: LCCOMB_X23_Y24_N16
-\vga_0|videoGen|colorAddress~113\ : cycloneii_lcell_comb
+-- Location: LCCOMB_X29_Y25_N6
+\vga_0|videoGen|LessThan294~1\ : cycloneii_lcell_comb
 -- Equation(s):
--- \vga_0|videoGen|colorAddress~113_combout\ = (\vga_0|videoGen|colorAddress~194_combout\ & ((!\vga_0|videoGen|colorAddress~195_combout\) # (!\vga_0|videoGen|pixelDraw~60_combout\)))
+-- \vga_0|videoGen|LessThan294~1_combout\ = (\vga_0|videoSync|pixel_column\(6) & \vga_0|videoSync|pixel_column\(7))
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "0011000011110000",
+	lut_mask => "1111000000000000",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	datab => \vga_0|videoGen|pixelDraw~60_combout\,
-	datac => \vga_0|videoGen|colorAddress~194_combout\,
-	datad => \vga_0|videoGen|colorAddress~195_combout\,
-	combout => \vga_0|videoGen|colorAddress~113_combout\);
+	datac => \vga_0|videoSync|pixel_column\(6),
+	datad => \vga_0|videoSync|pixel_column\(7),
+	combout => \vga_0|videoGen|LessThan294~1_combout\);
 
--- Location: LCCOMB_X23_Y24_N6
-\vga_0|videoGen|colorAddress~114\ : cycloneii_lcell_comb
+-- Location: LCCOMB_X30_Y25_N28
+\vga_0|videoGen|LessThan253~0\ : cycloneii_lcell_comb
 -- Equation(s):
--- \vga_0|videoGen|colorAddress~114_combout\ = (\vga_0|videoGen|pixelDraw~59_combout\ & ((\vga_0|videoGen|pixelDraw~37_combout\) # (\vga_0|videoGen|pixelDraw~32_combout\)))
+-- \vga_0|videoGen|LessThan253~0_combout\ = (\vga_0|videoGen|LessThan13~3_combout\ & (((!\vga_0|videoSync|pixel_column\(6) & !\vga_0|videoGen|LessThan653~2_combout\)) # (!\vga_0|videoSync|pixel_column\(7))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0000101000101010",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \vga_0|videoGen|LessThan13~3_combout\,
+	datab => \vga_0|videoSync|pixel_column\(6),
+	datac => \vga_0|videoSync|pixel_column\(7),
+	datad => \vga_0|videoGen|LessThan653~2_combout\,
+	combout => \vga_0|videoGen|LessThan253~0_combout\);
+
+-- Location: LCCOMB_X30_Y25_N6
+\vga_0|videoGen|pixelDraw~62\ : cycloneii_lcell_comb
+-- Equation(s):
+-- \vga_0|videoGen|pixelDraw~62_combout\ = (\vga_0|videoGen|LessThan13~3_combout\ & (!\vga_0|videoGen|LessThan253~0_combout\ & ((\vga_0|videoGen|LessThan254~0_combout\) # (!\vga_0|videoGen|LessThan294~1_combout\))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0000000010100010",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \vga_0|videoGen|LessThan13~3_combout\,
+	datab => \vga_0|videoGen|LessThan294~1_combout\,
+	datac => \vga_0|videoGen|LessThan254~0_combout\,
+	datad => \vga_0|videoGen|LessThan253~0_combout\,
+	combout => \vga_0|videoGen|pixelDraw~62_combout\);
+
+-- Location: LCCOMB_X30_Y25_N16
+\vga_0|videoGen|colorAddress~112\ : cycloneii_lcell_comb
+-- Equation(s):
+-- \vga_0|videoGen|colorAddress~112_combout\ = (\vga_0|videoGen|pixelDraw~62_combout\ & ((\vga_0|videoGen|pixelDraw~46_combout\) # (\vga_0|videoGen|pixelDraw~31_combout\)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -8091,15 +7738,317 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	datab => \vga_0|videoGen|pixelDraw~37_combout\,
-	datac => \vga_0|videoGen|pixelDraw~32_combout\,
-	datad => \vga_0|videoGen|pixelDraw~59_combout\,
-	combout => \vga_0|videoGen|colorAddress~114_combout\);
+	datab => \vga_0|videoGen|pixelDraw~46_combout\,
+	datac => \vga_0|videoGen|pixelDraw~31_combout\,
+	datad => \vga_0|videoGen|pixelDraw~62_combout\,
+	combout => \vga_0|videoGen|colorAddress~112_combout\);
 
--- Location: LCCOMB_X23_Y24_N28
-\vga_0|videoGen|colorAddress~115\ : cycloneii_lcell_comb
+-- Location: LCCOMB_X30_Y23_N16
+\vga_0|videoGen|colorAddress~192\ : cycloneii_lcell_comb
 -- Equation(s):
--- \vga_0|videoGen|colorAddress~115_combout\ = (\vga_0|videoGen|colorAddress~113_combout\ & (!\vga_0|videoGen|colorAddress~114_combout\ & ((!\vga_0|videoGen|pixelDraw~60_combout\) # (!\vga_0|videoGen|pixelDraw~42_combout\))))
+-- \vga_0|videoGen|colorAddress~192_combout\ = (\vga_0|videoGen|pixelDraw~79_combout\) # ((\vga_0|videoGen|pixelDraw~22_combout\) # ((\vga_0|videoGen|pixelDraw~20_combout\ & !\vga_0|videoGen|LessThan23~2_combout\)))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1111101011111110",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \vga_0|videoGen|pixelDraw~79_combout\,
+	datab => \vga_0|videoGen|pixelDraw~20_combout\,
+	datac => \vga_0|videoGen|pixelDraw~22_combout\,
+	datad => \vga_0|videoGen|LessThan23~2_combout\,
+	combout => \vga_0|videoGen|colorAddress~192_combout\);
+
+-- Location: LCCOMB_X28_Y26_N6
+\vga_0|videoGen|pixelDraw~63\ : cycloneii_lcell_comb
+-- Equation(s):
+-- \vga_0|videoGen|pixelDraw~63_combout\ = (\vga_0|videoGen|LessThan13~3_combout\ & (\vga_0|videoGen|LessThan294~1_combout\ & (!\vga_0|videoGen|LessThan293~0_combout\ & !\vga_0|videoGen|LessThan294~0_combout\)))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0000000000001000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \vga_0|videoGen|LessThan13~3_combout\,
+	datab => \vga_0|videoGen|LessThan294~1_combout\,
+	datac => \vga_0|videoGen|LessThan293~0_combout\,
+	datad => \vga_0|videoGen|LessThan294~0_combout\,
+	combout => \vga_0|videoGen|pixelDraw~63_combout\);
+
+-- Location: LCCOMB_X30_Y23_N6
+\vga_0|videoGen|colorAddress~109\ : cycloneii_lcell_comb
+-- Equation(s):
+-- \vga_0|videoGen|colorAddress~109_combout\ = (\vga_0|videoGen|pixelDraw~62_combout\ & ((\vga_0|videoGen|pixelDraw~36_combout\) # (\vga_0|videoGen|pixelDraw~41_combout\)))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1111110000000000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	datab => \vga_0|videoGen|pixelDraw~36_combout\,
+	datac => \vga_0|videoGen|pixelDraw~41_combout\,
+	datad => \vga_0|videoGen|pixelDraw~62_combout\,
+	combout => \vga_0|videoGen|colorAddress~109_combout\);
+
+-- Location: LCCOMB_X30_Y23_N26
+\vga_0|videoGen|colorAddress~191\ : cycloneii_lcell_comb
+-- Equation(s):
+-- \vga_0|videoGen|colorAddress~191_combout\ = (\vga_0|videoGen|pixelDraw~31_combout\) # ((\vga_0|videoGen|pixelDraw~79_combout\) # ((!\vga_0|videoGen|LessThan23~2_combout\ & \vga_0|videoGen|pixelDraw~20_combout\)))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1111111111110100",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \vga_0|videoGen|LessThan23~2_combout\,
+	datab => \vga_0|videoGen|pixelDraw~20_combout\,
+	datac => \vga_0|videoGen|pixelDraw~31_combout\,
+	datad => \vga_0|videoGen|pixelDraw~79_combout\,
+	combout => \vga_0|videoGen|colorAddress~191_combout\);
+
+-- Location: LCCOMB_X29_Y26_N30
+\vga_0|videoGen|colorAddress~104\ : cycloneii_lcell_comb
+-- Equation(s):
+-- \vga_0|videoGen|colorAddress~104_combout\ = (\vga_0|videoGen|pixelDraw~31_combout\) # ((!\vga_0|videoGen|LessThan11~3_combout\ & (\vga_0|videoGen|LessThan15~1_combout\ & !\vga_0|videoGen|LessThan12~0_combout\)))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1111111100000100",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \vga_0|videoGen|LessThan11~3_combout\,
+	datab => \vga_0|videoGen|LessThan15~1_combout\,
+	datac => \vga_0|videoGen|LessThan12~0_combout\,
+	datad => \vga_0|videoGen|pixelDraw~31_combout\,
+	combout => \vga_0|videoGen|colorAddress~104_combout\);
+
+-- Location: LCCOMB_X30_Y23_N0
+\vga_0|videoGen|colorAddress~102\ : cycloneii_lcell_comb
+-- Equation(s):
+-- \vga_0|videoGen|colorAddress~102_combout\ = (\vga_0|videoGen|pixelDraw~33_combout\) # ((!\vga_0|videoGen|LessThan23~2_combout\ & \vga_0|videoGen|pixelDraw~20_combout\))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1111111101010000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \vga_0|videoGen|LessThan23~2_combout\,
+	datac => \vga_0|videoGen|pixelDraw~20_combout\,
+	datad => \vga_0|videoGen|pixelDraw~33_combout\,
+	combout => \vga_0|videoGen|colorAddress~102_combout\);
+
+-- Location: LCCOMB_X29_Y24_N10
+\vga_0|videoGen|colorAddress~100\ : cycloneii_lcell_comb
+-- Equation(s):
+-- \vga_0|videoGen|colorAddress~100_combout\ = (\vga_0|videoGen|pixelDraw~41_combout\) # ((\vga_0|videoGen|pixelDraw~34_combout\) # (\vga_0|videoGen|pixelDraw~38_combout\))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1111111111111100",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	datab => \vga_0|videoGen|pixelDraw~41_combout\,
+	datac => \vga_0|videoGen|pixelDraw~34_combout\,
+	datad => \vga_0|videoGen|pixelDraw~38_combout\,
+	combout => \vga_0|videoGen|colorAddress~100_combout\);
+
+-- Location: LCCOMB_X28_Y25_N14
+\vga_0|videoGen|LessThan374~0\ : cycloneii_lcell_comb
+-- Equation(s):
+-- \vga_0|videoGen|LessThan374~0_combout\ = (\vga_0|videoSync|pixel_column\(4) & (\vga_0|videoSync|pixel_column\(5) & ((\vga_0|videoSync|pixel_column\(3)) # (\vga_0|videoGen|LessThan54~0_combout\))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1000100010000000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \vga_0|videoSync|pixel_column\(4),
+	datab => \vga_0|videoSync|pixel_column\(5),
+	datac => \vga_0|videoSync|pixel_column\(3),
+	datad => \vga_0|videoGen|LessThan54~0_combout\,
+	combout => \vga_0|videoGen|LessThan374~0_combout\);
+
+-- Location: LCCOMB_X28_Y25_N2
+\vga_0|videoGen|LessThan373~0\ : cycloneii_lcell_comb
+-- Equation(s):
+-- \vga_0|videoGen|LessThan373~0_combout\ = (!\vga_0|videoSync|pixel_column\(1) & (!\vga_0|videoSync|pixel_column\(5) & (!\vga_0|videoSync|pixel_column\(2) & !\vga_0|videoSync|pixel_column\(0))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0000000000000001",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \vga_0|videoSync|pixel_column\(1),
+	datab => \vga_0|videoSync|pixel_column\(5),
+	datac => \vga_0|videoSync|pixel_column\(2),
+	datad => \vga_0|videoSync|pixel_column\(0),
+	combout => \vga_0|videoGen|LessThan373~0_combout\);
+
+-- Location: LCCOMB_X28_Y25_N0
+\vga_0|videoGen|LessThan374~1\ : cycloneii_lcell_comb
+-- Equation(s):
+-- \vga_0|videoGen|LessThan374~1_combout\ = (!\vga_0|videoSync|pixel_column\(9) & (((!\vga_0|videoSync|pixel_column\(7) & !\vga_0|videoSync|pixel_column\(6))) # (!\vga_0|videoSync|pixel_column\(8))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0000000101010101",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \vga_0|videoSync|pixel_column\(9),
+	datab => \vga_0|videoSync|pixel_column\(7),
+	datac => \vga_0|videoSync|pixel_column\(6),
+	datad => \vga_0|videoSync|pixel_column\(8),
+	combout => \vga_0|videoGen|LessThan374~1_combout\);
+
+-- Location: LCCOMB_X28_Y25_N12
+\vga_0|videoGen|pixelDraw~57\ : cycloneii_lcell_comb
+-- Equation(s):
+-- \vga_0|videoGen|pixelDraw~57_combout\ = (\vga_0|videoGen|LessThan374~1_combout\ & (((!\vga_0|videoGen|LessThan373~0_combout\ & !\vga_0|videoGen|LessThan373~1_combout\)) # (!\vga_0|videoGen|LessThan413~0_combout\)))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0101011100000000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \vga_0|videoGen|LessThan413~0_combout\,
+	datab => \vga_0|videoGen|LessThan373~0_combout\,
+	datac => \vga_0|videoGen|LessThan373~1_combout\,
+	datad => \vga_0|videoGen|LessThan374~1_combout\,
+	combout => \vga_0|videoGen|pixelDraw~57_combout\);
+
+-- Location: LCCOMB_X28_Y25_N10
+\vga_0|videoGen|pixelDraw~58\ : cycloneii_lcell_comb
+-- Equation(s):
+-- \vga_0|videoGen|pixelDraw~58_combout\ = (\vga_0|videoGen|pixelDraw~57_combout\ & ((\vga_0|videoSync|pixel_column\(8) & ((!\vga_0|videoGen|LessThan374~0_combout\))) # (!\vga_0|videoSync|pixel_column\(8) & (\vga_0|videoSync|pixel_column\(9)))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0010111000000000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \vga_0|videoSync|pixel_column\(9),
+	datab => \vga_0|videoSync|pixel_column\(8),
+	datac => \vga_0|videoGen|LessThan374~0_combout\,
+	datad => \vga_0|videoGen|pixelDraw~57_combout\,
+	combout => \vga_0|videoGen|pixelDraw~58_combout\);
+
+-- Location: LCCOMB_X29_Y23_N24
+\vga_0|videoGen|colorAddress~96\ : cycloneii_lcell_comb
+-- Equation(s):
+-- \vga_0|videoGen|colorAddress~96_combout\ = ((!\vga_0|videoGen|pixelDraw~34_combout\ & (!\vga_0|videoGen|pixelDraw~38_combout\ & !\vga_0|videoGen|pixelDraw~41_combout\))) # (!\vga_0|videoGen|pixelDraw~58_combout\)
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0011001100110111",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \vga_0|videoGen|pixelDraw~34_combout\,
+	datab => \vga_0|videoGen|pixelDraw~58_combout\,
+	datac => \vga_0|videoGen|pixelDraw~38_combout\,
+	datad => \vga_0|videoGen|pixelDraw~41_combout\,
+	combout => \vga_0|videoGen|colorAddress~96_combout\);
+
+-- Location: LCCOMB_X29_Y23_N10
+\vga_0|videoGen|colorAddress~188\ : cycloneii_lcell_comb
+-- Equation(s):
+-- \vga_0|videoGen|colorAddress~188_combout\ = (!\vga_0|videoGen|pixelDraw~33_combout\ & (!\vga_0|videoGen|pixelDraw~22_combout\ & ((\vga_0|videoGen|LessThan23~2_combout\) # (!\vga_0|videoGen|pixelDraw~20_combout\))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0000000000001101",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \vga_0|videoGen|pixelDraw~20_combout\,
+	datab => \vga_0|videoGen|LessThan23~2_combout\,
+	datac => \vga_0|videoGen|pixelDraw~33_combout\,
+	datad => \vga_0|videoGen|pixelDraw~22_combout\,
+	combout => \vga_0|videoGen|colorAddress~188_combout\);
+
+-- Location: LCCOMB_X29_Y23_N14
+\vga_0|videoGen|colorAddress~97\ : cycloneii_lcell_comb
+-- Equation(s):
+-- \vga_0|videoGen|colorAddress~97_combout\ = (\vga_0|videoGen|colorAddress~96_combout\ & (((!\vga_0|videoGen|pixelDraw~79_combout\ & \vga_0|videoGen|colorAddress~188_combout\)) # (!\vga_0|videoGen|pixelDraw~58_combout\)))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0111000001010000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \vga_0|videoGen|pixelDraw~58_combout\,
+	datab => \vga_0|videoGen|pixelDraw~79_combout\,
+	datac => \vga_0|videoGen|colorAddress~96_combout\,
+	datad => \vga_0|videoGen|colorAddress~188_combout\,
+	combout => \vga_0|videoGen|colorAddress~97_combout\);
+
+-- Location: LCCOMB_X29_Y26_N20
+\vga_0|videoGen|LessThan11~3\ : cycloneii_lcell_comb
+-- Equation(s):
+-- \vga_0|videoGen|LessThan11~3_combout\ = (\vga_0|videoGen|LessThan11~2_combout\) # ((!\vga_0|videoSync|pixel_row\(5) & (!\vga_0|videoSync|pixel_row\(2) & \vga_0|videoGen|LessThan11~0_combout\)))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1111111100010000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \vga_0|videoSync|pixel_row\(5),
+	datab => \vga_0|videoSync|pixel_row\(2),
+	datac => \vga_0|videoGen|LessThan11~0_combout\,
+	datad => \vga_0|videoGen|LessThan11~2_combout\,
+	combout => \vga_0|videoGen|LessThan11~3_combout\);
+
+-- Location: LCCOMB_X29_Y26_N14
+\vga_0|videoGen|colorAddress~189\ : cycloneii_lcell_comb
+-- Equation(s):
+-- \vga_0|videoGen|colorAddress~189_combout\ = (!\vga_0|videoSync|pixel_row\(8) & (!\vga_0|videoGen|LessThan12~0_combout\ & (!\vga_0|videoGen|LessThan11~3_combout\ & !\vga_0|videoSync|pixel_row\(7))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0000000000000001",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \vga_0|videoSync|pixel_row\(8),
+	datab => \vga_0|videoGen|LessThan12~0_combout\,
+	datac => \vga_0|videoGen|LessThan11~3_combout\,
+	datad => \vga_0|videoSync|pixel_row\(7),
+	combout => \vga_0|videoGen|colorAddress~189_combout\);
+
+-- Location: LCCOMB_X29_Y26_N8
+\vga_0|videoGen|colorAddress~98\ : cycloneii_lcell_comb
+-- Equation(s):
+-- \vga_0|videoGen|colorAddress~98_combout\ = (\vga_0|videoGen|pixelDraw~58_combout\ & ((\vga_0|videoGen|pixelDraw~31_combout\) # (\vga_0|videoGen|colorAddress~189_combout\)))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1111110000000000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	datab => \vga_0|videoGen|pixelDraw~31_combout\,
+	datac => \vga_0|videoGen|colorAddress~189_combout\,
+	datad => \vga_0|videoGen|pixelDraw~58_combout\,
+	combout => \vga_0|videoGen|colorAddress~98_combout\);
+
+-- Location: LCCOMB_X29_Y23_N0
+\vga_0|videoGen|colorAddress~99\ : cycloneii_lcell_comb
+-- Equation(s):
+-- \vga_0|videoGen|colorAddress~99_combout\ = (\vga_0|videoGen|colorAddress~97_combout\ & (!\vga_0|videoGen|colorAddress~98_combout\ & ((!\vga_0|videoGen|pixelDraw~36_combout\) # (!\vga_0|videoGen|pixelDraw~65_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -8107,16 +8056,32 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \vga_0|videoGen|pixelDraw~42_combout\,
-	datab => \vga_0|videoGen|pixelDraw~60_combout\,
-	datac => \vga_0|videoGen|colorAddress~113_combout\,
-	datad => \vga_0|videoGen|colorAddress~114_combout\,
-	combout => \vga_0|videoGen|colorAddress~115_combout\);
+	dataa => \vga_0|videoGen|pixelDraw~65_combout\,
+	datab => \vga_0|videoGen|pixelDraw~36_combout\,
+	datac => \vga_0|videoGen|colorAddress~97_combout\,
+	datad => \vga_0|videoGen|colorAddress~98_combout\,
+	combout => \vga_0|videoGen|colorAddress~99_combout\);
 
--- Location: LCCOMB_X23_Y24_N12
-\vga_0|videoGen|colorAddress~197\ : cycloneii_lcell_comb
+-- Location: LCCOMB_X29_Y23_N6
+\vga_0|videoGen|colorAddress~101\ : cycloneii_lcell_comb
 -- Equation(s):
--- \vga_0|videoGen|colorAddress~197_combout\ = (\vga_0|videoGen|colorAddress~115_combout\ & (((!\vga_0|videoGen|colorAddress~116_combout\ & !\vga_0|videoGen|colorAddress~196_combout\)) # (!\vga_0|videoGen|pixelDraw~59_combout\)))
+-- \vga_0|videoGen|colorAddress~101_combout\ = (\vga_0|videoGen|colorAddress~99_combout\ & ((!\vga_0|videoGen|colorAddress~100_combout\) # (!\vga_0|videoGen|pixelDraw~65_combout\)))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0101111100000000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \vga_0|videoGen|pixelDraw~65_combout\,
+	datac => \vga_0|videoGen|colorAddress~100_combout\,
+	datad => \vga_0|videoGen|colorAddress~99_combout\,
+	combout => \vga_0|videoGen|colorAddress~101_combout\);
+
+-- Location: LCCOMB_X29_Y23_N20
+\vga_0|videoGen|colorAddress~103\ : cycloneii_lcell_comb
+-- Equation(s):
+-- \vga_0|videoGen|colorAddress~103_combout\ = (\vga_0|videoGen|colorAddress~101_combout\ & (((!\vga_0|videoGen|pixelDraw~22_combout\ & !\vga_0|videoGen|colorAddress~102_combout\)) # (!\vga_0|videoGen|pixelDraw~65_combout\)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -8124,83 +8089,33 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \vga_0|videoGen|pixelDraw~59_combout\,
-	datab => \vga_0|videoGen|colorAddress~116_combout\,
-	datac => \vga_0|videoGen|colorAddress~196_combout\,
-	datad => \vga_0|videoGen|colorAddress~115_combout\,
-	combout => \vga_0|videoGen|colorAddress~197_combout\);
+	dataa => \vga_0|videoGen|pixelDraw~65_combout\,
+	datab => \vga_0|videoGen|pixelDraw~22_combout\,
+	datac => \vga_0|videoGen|colorAddress~102_combout\,
+	datad => \vga_0|videoGen|colorAddress~101_combout\,
+	combout => \vga_0|videoGen|colorAddress~103_combout\);
 
--- Location: LCCOMB_X23_Y24_N14
-\vga_0|videoGen|colorAddress~118\ : cycloneii_lcell_comb
+-- Location: LCCOMB_X29_Y23_N26
+\vga_0|videoGen|colorAddress~105\ : cycloneii_lcell_comb
 -- Equation(s):
--- \vga_0|videoGen|colorAddress~118_combout\ = (!\vga_0|videoGen|colorAddress~117_combout\ & (\vga_0|videoGen|colorAddress~197_combout\ & ((!\vga_0|videoGen|pixelDraw~32_combout\) # (!\vga_0|videoGen|pixelDraw~58_combout\))))
+-- \vga_0|videoGen|colorAddress~105_combout\ = (\vga_0|videoGen|colorAddress~103_combout\ & (((!\vga_0|videoGen|colorAddress~104_combout\ & !\vga_0|videoGen|pixelDraw~79_combout\)) # (!\vga_0|videoGen|pixelDraw~65_combout\)))
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "0001001100000000",
+	lut_mask => "0101000001110000",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \vga_0|videoGen|pixelDraw~58_combout\,
-	datab => \vga_0|videoGen|colorAddress~117_combout\,
-	datac => \vga_0|videoGen|pixelDraw~32_combout\,
-	datad => \vga_0|videoGen|colorAddress~197_combout\,
-	combout => \vga_0|videoGen|colorAddress~118_combout\);
+	dataa => \vga_0|videoGen|pixelDraw~65_combout\,
+	datab => \vga_0|videoGen|colorAddress~104_combout\,
+	datac => \vga_0|videoGen|colorAddress~103_combout\,
+	datad => \vga_0|videoGen|pixelDraw~79_combout\,
+	combout => \vga_0|videoGen|colorAddress~105_combout\);
 
--- Location: LCCOMB_X24_Y24_N28
-\vga_0|videoGen|colorAddress~199\ : cycloneii_lcell_comb
+-- Location: LCCOMB_X29_Y23_N12
+\vga_0|videoGen|colorAddress~190\ : cycloneii_lcell_comb
 -- Equation(s):
--- \vga_0|videoGen|colorAddress~199_combout\ = (\vga_0|videoGen|colorAddress~118_combout\ & (((!\vga_0|videoGen|colorAddress~105_combout\ & !\vga_0|videoGen|colorAddress~198_combout\)) # (!\vga_0|videoGen|pixelDraw~58_combout\)))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0011011100000000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \vga_0|videoGen|colorAddress~105_combout\,
-	datab => \vga_0|videoGen|pixelDraw~58_combout\,
-	datac => \vga_0|videoGen|colorAddress~198_combout\,
-	datad => \vga_0|videoGen|colorAddress~118_combout\,
-	combout => \vga_0|videoGen|colorAddress~199_combout\);
-
--- Location: LCCOMB_X24_Y24_N10
-\vga_0|videoGen|colorAddress~120\ : cycloneii_lcell_comb
--- Equation(s):
--- \vga_0|videoGen|colorAddress~120_combout\ = (\vga_0|videoGen|colorAddress~199_combout\ & ((!\vga_0|videoGen|colorAddress~119_combout\) # (!\vga_0|videoGen|pixelDraw~58_combout\)))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0011111100000000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	datab => \vga_0|videoGen|pixelDraw~58_combout\,
-	datac => \vga_0|videoGen|colorAddress~119_combout\,
-	datad => \vga_0|videoGen|colorAddress~199_combout\,
-	combout => \vga_0|videoGen|colorAddress~120_combout\);
-
--- Location: LCCOMB_X24_Y24_N26
-\vga_0|videoGen|colorAddress~200\ : cycloneii_lcell_comb
--- Equation(s):
--- \vga_0|videoGen|colorAddress~200_combout\ = (\vga_0|videoGen|colorAddress~120_combout\ & (((!\vga_0|videoGen|colorAddress~112_combout\ & !\vga_0|videoGen|colorAddress~111_combout\)) # (!\vga_0|videoGen|pixelDraw~57_combout\)))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0101011100000000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \vga_0|videoGen|pixelDraw~57_combout\,
-	datab => \vga_0|videoGen|colorAddress~112_combout\,
-	datac => \vga_0|videoGen|colorAddress~111_combout\,
-	datad => \vga_0|videoGen|colorAddress~120_combout\,
-	combout => \vga_0|videoGen|colorAddress~200_combout\);
-
--- Location: LCCOMB_X24_Y24_N2
-\vga_0|videoGen|colorAddress~122\ : cycloneii_lcell_comb
--- Equation(s):
--- \vga_0|videoGen|colorAddress~122_combout\ = (\vga_0|videoGen|colorAddress~200_combout\ & (((!\vga_0|videoGen|pixelDraw~77_combout\ & !\vga_0|videoGen|pixelDraw~16_combout\)) # (!\vga_0|videoGen|pixelDraw~57_combout\)))
+-- \vga_0|videoGen|colorAddress~190_combout\ = (\vga_0|videoGen|colorAddress~105_combout\ & (((!\vga_0|videoGen|colorAddress~106_combout\ & !\vga_0|videoGen|colorAddress~107_combout\)) # (!\vga_0|videoGen|pixelDraw~63_combout\)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -8208,33 +8123,167 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \vga_0|videoGen|pixelDraw~77_combout\,
-	datab => \vga_0|videoGen|pixelDraw~16_combout\,
-	datac => \vga_0|videoGen|pixelDraw~57_combout\,
-	datad => \vga_0|videoGen|colorAddress~200_combout\,
-	combout => \vga_0|videoGen|colorAddress~122_combout\);
+	dataa => \vga_0|videoGen|colorAddress~106_combout\,
+	datab => \vga_0|videoGen|colorAddress~107_combout\,
+	datac => \vga_0|videoGen|pixelDraw~63_combout\,
+	datad => \vga_0|videoGen|colorAddress~105_combout\,
+	combout => \vga_0|videoGen|colorAddress~190_combout\);
 
--- Location: LCCOMB_X24_Y24_N0
-\vga_0|videoGen|colorAddress~123\ : cycloneii_lcell_comb
+-- Location: LCCOMB_X29_Y23_N28
+\vga_0|videoGen|colorAddress~108\ : cycloneii_lcell_comb
 -- Equation(s):
--- \vga_0|videoGen|colorAddress~123_combout\ = (\vga_0|videoGen|colorAddress~100_combout\ & (\vga_0|videoGen|colorAddress~122_combout\ & ((!\vga_0|videoGen|pixelDraw~27_combout\) # (!\vga_0|videoGen|pixelDraw~57_combout\))))
+-- \vga_0|videoGen|colorAddress~108_combout\ = (\vga_0|videoGen|colorAddress~190_combout\ & ((!\vga_0|videoGen|pixelDraw~63_combout\) # (!\vga_0|videoGen|colorAddress~191_combout\)))
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "0111000000000000",
+	lut_mask => "0011111100000000",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \vga_0|videoGen|pixelDraw~57_combout\,
-	datab => \vga_0|videoGen|pixelDraw~27_combout\,
-	datac => \vga_0|videoGen|colorAddress~100_combout\,
-	datad => \vga_0|videoGen|colorAddress~122_combout\,
-	combout => \vga_0|videoGen|colorAddress~123_combout\);
+	datab => \vga_0|videoGen|colorAddress~191_combout\,
+	datac => \vga_0|videoGen|pixelDraw~63_combout\,
+	datad => \vga_0|videoGen|colorAddress~190_combout\,
+	combout => \vga_0|videoGen|colorAddress~108_combout\);
 
--- Location: LCCOMB_X24_Y24_N18
-\vga_0|videoGen|colorAddress~134\ : cycloneii_lcell_comb
+-- Location: LCCOMB_X29_Y23_N2
+\vga_0|videoGen|colorAddress~110\ : cycloneii_lcell_comb
 -- Equation(s):
--- \vga_0|videoGen|colorAddress~134_combout\ = (\vga_0|videoGen|colorAddress~133_combout\ & (\vga_0|videoGen|colorAddress~129_combout\ & (\vga_0|videoGen|colorAddress~125_combout\ & \vga_0|videoGen|colorAddress~123_combout\)))
+-- \vga_0|videoGen|colorAddress~110_combout\ = (!\vga_0|videoGen|colorAddress~109_combout\ & (\vga_0|videoGen|colorAddress~108_combout\ & ((!\vga_0|videoGen|pixelDraw~63_combout\) # (!\vga_0|videoGen|pixelDraw~46_combout\))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0000011100000000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \vga_0|videoGen|pixelDraw~46_combout\,
+	datab => \vga_0|videoGen|pixelDraw~63_combout\,
+	datac => \vga_0|videoGen|colorAddress~109_combout\,
+	datad => \vga_0|videoGen|colorAddress~108_combout\,
+	combout => \vga_0|videoGen|colorAddress~110_combout\);
+
+-- Location: LCCOMB_X29_Y23_N18
+\vga_0|videoGen|colorAddress~193\ : cycloneii_lcell_comb
+-- Equation(s):
+-- \vga_0|videoGen|colorAddress~193_combout\ = (\vga_0|videoGen|colorAddress~110_combout\ & (((!\vga_0|videoGen|colorAddress~111_combout\ & !\vga_0|videoGen|colorAddress~192_combout\)) # (!\vga_0|videoGen|pixelDraw~62_combout\)))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0001111100000000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \vga_0|videoGen|colorAddress~111_combout\,
+	datab => \vga_0|videoGen|colorAddress~192_combout\,
+	datac => \vga_0|videoGen|pixelDraw~62_combout\,
+	datad => \vga_0|videoGen|colorAddress~110_combout\,
+	combout => \vga_0|videoGen|colorAddress~193_combout\);
+
+-- Location: LCCOMB_X29_Y23_N4
+\vga_0|videoGen|colorAddress~113\ : cycloneii_lcell_comb
+-- Equation(s):
+-- \vga_0|videoGen|colorAddress~113_combout\ = (!\vga_0|videoGen|colorAddress~112_combout\ & (\vga_0|videoGen|colorAddress~193_combout\ & ((!\vga_0|videoGen|pixelDraw~61_combout\) # (!\vga_0|videoGen|pixelDraw~36_combout\))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0000011100000000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \vga_0|videoGen|pixelDraw~36_combout\,
+	datab => \vga_0|videoGen|pixelDraw~61_combout\,
+	datac => \vga_0|videoGen|colorAddress~112_combout\,
+	datad => \vga_0|videoGen|colorAddress~193_combout\,
+	combout => \vga_0|videoGen|colorAddress~113_combout\);
+
+-- Location: LCCOMB_X28_Y23_N28
+\vga_0|videoGen|colorAddress~195\ : cycloneii_lcell_comb
+-- Equation(s):
+-- \vga_0|videoGen|colorAddress~195_combout\ = (\vga_0|videoGen|colorAddress~113_combout\ & (((!\vga_0|videoGen|colorAddress~100_combout\ & !\vga_0|videoGen|colorAddress~194_combout\)) # (!\vga_0|videoGen|pixelDraw~61_combout\)))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0011011100000000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \vga_0|videoGen|colorAddress~100_combout\,
+	datab => \vga_0|videoGen|pixelDraw~61_combout\,
+	datac => \vga_0|videoGen|colorAddress~194_combout\,
+	datad => \vga_0|videoGen|colorAddress~113_combout\,
+	combout => \vga_0|videoGen|colorAddress~195_combout\);
+
+-- Location: LCCOMB_X28_Y23_N12
+\vga_0|videoGen|colorAddress~116\ : cycloneii_lcell_comb
+-- Equation(s):
+-- \vga_0|videoGen|colorAddress~116_combout\ = (\vga_0|videoGen|colorAddress~195_combout\ & ((!\vga_0|videoGen|colorAddress~115_combout\) # (!\vga_0|videoGen|pixelDraw~61_combout\)))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0011111100000000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	datab => \vga_0|videoGen|pixelDraw~61_combout\,
+	datac => \vga_0|videoGen|colorAddress~115_combout\,
+	datad => \vga_0|videoGen|colorAddress~195_combout\,
+	combout => \vga_0|videoGen|colorAddress~116_combout\);
+
+-- Location: LCCOMB_X28_Y23_N10
+\vga_0|videoGen|colorAddress~196\ : cycloneii_lcell_comb
+-- Equation(s):
+-- \vga_0|videoGen|colorAddress~196_combout\ = (\vga_0|videoGen|colorAddress~116_combout\ & (((!\vga_0|videoGen|colorAddress~107_combout\ & !\vga_0|videoGen|colorAddress~106_combout\)) # (!\vga_0|videoGen|pixelDraw~60_combout\)))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0101011100000000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \vga_0|videoGen|pixelDraw~60_combout\,
+	datab => \vga_0|videoGen|colorAddress~107_combout\,
+	datac => \vga_0|videoGen|colorAddress~106_combout\,
+	datad => \vga_0|videoGen|colorAddress~116_combout\,
+	combout => \vga_0|videoGen|colorAddress~196_combout\);
+
+-- Location: LCCOMB_X28_Y23_N0
+\vga_0|videoGen|colorAddress~118\ : cycloneii_lcell_comb
+-- Equation(s):
+-- \vga_0|videoGen|colorAddress~118_combout\ = (\vga_0|videoGen|colorAddress~196_combout\ & (((!\vga_0|videoGen|pixelDraw~79_combout\ & !\vga_0|videoGen|pixelDraw~21_combout\)) # (!\vga_0|videoGen|pixelDraw~60_combout\)))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0101011100000000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \vga_0|videoGen|pixelDraw~60_combout\,
+	datab => \vga_0|videoGen|pixelDraw~79_combout\,
+	datac => \vga_0|videoGen|pixelDraw~21_combout\,
+	datad => \vga_0|videoGen|colorAddress~196_combout\,
+	combout => \vga_0|videoGen|colorAddress~118_combout\);
+
+-- Location: LCCOMB_X28_Y23_N2
+\vga_0|videoGen|colorAddress~119\ : cycloneii_lcell_comb
+-- Equation(s):
+-- \vga_0|videoGen|colorAddress~119_combout\ = (\vga_0|videoGen|colorAddress~95_combout\ & (\vga_0|videoGen|colorAddress~118_combout\ & ((!\vga_0|videoGen|pixelDraw~31_combout\) # (!\vga_0|videoGen|pixelDraw~60_combout\))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0100110000000000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \vga_0|videoGen|pixelDraw~60_combout\,
+	datab => \vga_0|videoGen|colorAddress~95_combout\,
+	datac => \vga_0|videoGen|pixelDraw~31_combout\,
+	datad => \vga_0|videoGen|colorAddress~118_combout\,
+	combout => \vga_0|videoGen|colorAddress~119_combout\);
+
+-- Location: LCCOMB_X28_Y23_N16
+\vga_0|videoGen|colorAddress~130\ : cycloneii_lcell_comb
+-- Equation(s):
+-- \vga_0|videoGen|colorAddress~130_combout\ = (\vga_0|videoGen|colorAddress~121_combout\ & (\vga_0|videoGen|colorAddress~129_combout\ & (\vga_0|videoGen|colorAddress~125_combout\ & \vga_0|videoGen|colorAddress~119_combout\)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -8242,16 +8291,132 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \vga_0|videoGen|colorAddress~133_combout\,
+	dataa => \vga_0|videoGen|colorAddress~121_combout\,
 	datab => \vga_0|videoGen|colorAddress~129_combout\,
 	datac => \vga_0|videoGen|colorAddress~125_combout\,
-	datad => \vga_0|videoGen|colorAddress~123_combout\,
-	combout => \vga_0|videoGen|colorAddress~134_combout\);
+	datad => \vga_0|videoGen|colorAddress~119_combout\,
+	combout => \vga_0|videoGen|colorAddress~130_combout\);
 
--- Location: LCCOMB_X25_Y24_N8
-\vga_0|videoGen|colorAddress~142\ : cycloneii_lcell_comb
+-- Location: LCCOMB_X31_Y25_N20
+\vga_0|videoGen|LessThan54~1\ : cycloneii_lcell_comb
 -- Equation(s):
--- \vga_0|videoGen|colorAddress~142_combout\ = (\vga_0|videoGen|colorAddress~141_combout\ & (\vga_0|videoGen|colorAddress~139_combout\ & \vga_0|videoGen|colorAddress~134_combout\))
+-- \vga_0|videoGen|LessThan54~1_combout\ = (\vga_0|videoSync|pixel_column\(6) & ((\vga_0|videoGen|LessThan54~0_combout\) # ((\vga_0|videoSync|pixel_column\(3)) # (!\vga_0|videoGen|LessThan373~2_combout\))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1010100010101010",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \vga_0|videoSync|pixel_column\(6),
+	datab => \vga_0|videoGen|LessThan54~0_combout\,
+	datac => \vga_0|videoSync|pixel_column\(3),
+	datad => \vga_0|videoGen|LessThan373~2_combout\,
+	combout => \vga_0|videoGen|LessThan54~1_combout\);
+
+-- Location: LCCOMB_X30_Y22_N12
+\vga_0|videoGen|pixelDraw~72\ : cycloneii_lcell_comb
+-- Equation(s):
+-- \vga_0|videoGen|pixelDraw~72_combout\ = (\vga_0|videoGen|LessThan133~2_combout\ & (!\vga_0|videoGen|LessThan54~1_combout\ & ((!\vga_0|videoGen|LessThan53~1_combout\) # (!\vga_0|videoGen|LessThan13~0_combout\))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0000000001001100",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \vga_0|videoGen|LessThan13~0_combout\,
+	datab => \vga_0|videoGen|LessThan133~2_combout\,
+	datac => \vga_0|videoGen|LessThan53~1_combout\,
+	datad => \vga_0|videoGen|LessThan54~1_combout\,
+	combout => \vga_0|videoGen|pixelDraw~72_combout\);
+
+-- Location: LCCOMB_X30_Y22_N14
+\vga_0|videoGen|pixelDraw~73\ : cycloneii_lcell_comb
+-- Equation(s):
+-- \vga_0|videoGen|pixelDraw~73_combout\ = (!\vga_0|videoGen|pixelDraw~70_combout\) # (!\vga_0|videoGen|pixelDraw~46_combout\)
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0000111111111111",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	datac => \vga_0|videoGen|pixelDraw~46_combout\,
+	datad => \vga_0|videoGen|pixelDraw~70_combout\,
+	combout => \vga_0|videoGen|pixelDraw~73_combout\);
+
+-- Location: LCCOMB_X30_Y22_N24
+\vga_0|videoGen|colorAddress~131\ : cycloneii_lcell_comb
+-- Equation(s):
+-- \vga_0|videoGen|colorAddress~131_combout\ = (\vga_0|videoGen|pixelDraw~73_combout\ & (((!\vga_0|videoGen|pixelDraw~36_combout\ & !\vga_0|videoGen|pixelDraw~41_combout\)) # (!\vga_0|videoGen|pixelDraw~72_combout\)))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0100010001001100",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \vga_0|videoGen|pixelDraw~72_combout\,
+	datab => \vga_0|videoGen|pixelDraw~73_combout\,
+	datac => \vga_0|videoGen|pixelDraw~36_combout\,
+	datad => \vga_0|videoGen|pixelDraw~41_combout\,
+	combout => \vga_0|videoGen|colorAddress~131_combout\);
+
+-- Location: LCCOMB_X29_Y22_N22
+\vga_0|videoGen|colorAddress~132\ : cycloneii_lcell_comb
+-- Equation(s):
+-- \vga_0|videoGen|colorAddress~132_combout\ = (\vga_0|videoGen|colorAddress~131_combout\ & (((!\vga_0|videoGen|pixelDraw~34_combout\ & !\vga_0|videoGen|pixelDraw~38_combout\)) # (!\vga_0|videoGen|pixelDraw~72_combout\)))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0001111100000000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \vga_0|videoGen|pixelDraw~34_combout\,
+	datab => \vga_0|videoGen|pixelDraw~38_combout\,
+	datac => \vga_0|videoGen|pixelDraw~72_combout\,
+	datad => \vga_0|videoGen|colorAddress~131_combout\,
+	combout => \vga_0|videoGen|colorAddress~132_combout\);
+
+-- Location: LCCOMB_X29_Y22_N26
+\vga_0|videoGen|colorAddress~133\ : cycloneii_lcell_comb
+-- Equation(s):
+-- \vga_0|videoGen|colorAddress~133_combout\ = (\vga_0|videoGen|colorAddress~132_combout\ & ((!\vga_0|videoGen|pixelDraw~72_combout\) # (!\vga_0|videoGen|pixelDraw~33_combout\)))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0011111100000000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	datab => \vga_0|videoGen|pixelDraw~33_combout\,
+	datac => \vga_0|videoGen|pixelDraw~72_combout\,
+	datad => \vga_0|videoGen|colorAddress~132_combout\,
+	combout => \vga_0|videoGen|colorAddress~133_combout\);
+
+-- Location: LCCOMB_X29_Y22_N2
+\vga_0|videoGen|colorAddress~135\ : cycloneii_lcell_comb
+-- Equation(s):
+-- \vga_0|videoGen|colorAddress~135_combout\ = (\vga_0|videoGen|colorAddress~133_combout\ & (((!\vga_0|videoGen|colorAddress~134_combout\ & !\vga_0|videoGen|pixelDraw~46_combout\)) # (!\vga_0|videoGen|pixelDraw~72_combout\)))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0001111100000000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \vga_0|videoGen|colorAddress~134_combout\,
+	datab => \vga_0|videoGen|pixelDraw~46_combout\,
+	datac => \vga_0|videoGen|pixelDraw~72_combout\,
+	datad => \vga_0|videoGen|colorAddress~133_combout\,
+	combout => \vga_0|videoGen|colorAddress~135_combout\);
+
+-- Location: LCCOMB_X28_Y23_N30
+\vga_0|videoGen|colorAddress~138\ : cycloneii_lcell_comb
+-- Equation(s):
+-- \vga_0|videoGen|colorAddress~138_combout\ = (\vga_0|videoGen|colorAddress~137_combout\ & (\vga_0|videoGen|colorAddress~130_combout\ & \vga_0|videoGen|colorAddress~135_combout\))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -8259,30 +8424,15 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \vga_0|videoGen|colorAddress~141_combout\,
-	datac => \vga_0|videoGen|colorAddress~139_combout\,
-	datad => \vga_0|videoGen|colorAddress~134_combout\,
-	combout => \vga_0|videoGen|colorAddress~142_combout\);
+	dataa => \vga_0|videoGen|colorAddress~137_combout\,
+	datac => \vga_0|videoGen|colorAddress~130_combout\,
+	datad => \vga_0|videoGen|colorAddress~135_combout\,
+	combout => \vga_0|videoGen|colorAddress~138_combout\);
 
--- Location: LCCOMB_X25_Y25_N10
-\vga_0|videoGen|pixelDraw~18\ : cycloneii_lcell_comb
+-- Location: LCCOMB_X25_Y23_N14
+\vga_0|videoGen|colorAddress~139\ : cycloneii_lcell_comb
 -- Equation(s):
--- \vga_0|videoGen|pixelDraw~18_combout\ = (!\vga_0|videoGen|pixelDraw~13_combout\) # (!\vga_0|videoGen|pixelDraw~17_combout\)
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0011001111111111",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	datab => \vga_0|videoGen|pixelDraw~17_combout\,
-	datad => \vga_0|videoGen|pixelDraw~13_combout\,
-	combout => \vga_0|videoGen|pixelDraw~18_combout\);
-
--- Location: LCCOMB_X25_Y24_N14
-\vga_0|videoGen|colorAddress~143\ : cycloneii_lcell_comb
--- Equation(s):
--- \vga_0|videoGen|colorAddress~143_combout\ = (\vga_0|videoGen|pixelDraw~78_combout\ & (\vga_0|videoGen|pixelDraw~14_combout\ & (\vga_0|videoGen|colorAddress~142_combout\ & \vga_0|videoGen|pixelDraw~18_combout\)))
+-- \vga_0|videoGen|colorAddress~139_combout\ = (\vga_0|videoGen|pixelDraw~80_combout\ & (\vga_0|videoGen|pixelDraw~81_combout\ & (\vga_0|videoGen|pixelDraw~82_combout\ & \vga_0|videoGen|colorAddress~138_combout\)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -8290,83 +8440,16 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \vga_0|videoGen|pixelDraw~78_combout\,
-	datab => \vga_0|videoGen|pixelDraw~14_combout\,
-	datac => \vga_0|videoGen|colorAddress~142_combout\,
-	datad => \vga_0|videoGen|pixelDraw~18_combout\,
-	combout => \vga_0|videoGen|colorAddress~143_combout\);
+	dataa => \vga_0|videoGen|pixelDraw~80_combout\,
+	datab => \vga_0|videoGen|pixelDraw~81_combout\,
+	datac => \vga_0|videoGen|pixelDraw~82_combout\,
+	datad => \vga_0|videoGen|colorAddress~138_combout\,
+	combout => \vga_0|videoGen|colorAddress~139_combout\);
 
--- Location: LCCOMB_X22_Y24_N30
-\vga_0|videoGen|colorAddress~146\ : cycloneii_lcell_comb
+-- Location: LCCOMB_X27_Y26_N12
+\vga_0|videoGen|pixelDraw~59\ : cycloneii_lcell_comb
 -- Equation(s):
--- \vga_0|videoGen|colorAddress~146_combout\ = (!\vga_0|videoGen|colorAddress~145_combout\ & (\vga_0|videoGen|pixelDraw~66_combout\ & (\vga_0|videoGen|colorAddress~125_combout\ & \vga_0|videoGen|colorAddress~123_combout\)))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0100000000000000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \vga_0|videoGen|colorAddress~145_combout\,
-	datab => \vga_0|videoGen|pixelDraw~66_combout\,
-	datac => \vga_0|videoGen|colorAddress~125_combout\,
-	datad => \vga_0|videoGen|colorAddress~123_combout\,
-	combout => \vga_0|videoGen|colorAddress~146_combout\);
-
--- Location: LCCOMB_X23_Y25_N18
-\vga_0|videoGen|colorAddress~201\ : cycloneii_lcell_comb
--- Equation(s):
--- \vga_0|videoGen|colorAddress~201_combout\ = (\vga_0|videoGen|pixelDraw~70_combout\ & ((\vga_0|videoGen|pixelDraw~17_combout\) # ((!\vga_0|videoGen|LessThan23~2_combout\ & \vga_0|videoGen|pixelDraw~15_combout\))))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1101110000000000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \vga_0|videoGen|LessThan23~2_combout\,
-	datab => \vga_0|videoGen|pixelDraw~17_combout\,
-	datac => \vga_0|videoGen|pixelDraw~15_combout\,
-	datad => \vga_0|videoGen|pixelDraw~70_combout\,
-	combout => \vga_0|videoGen|colorAddress~201_combout\);
-
--- Location: LCCOMB_X23_Y24_N4
-\vga_0|videoGen|colorAddress~144\ : cycloneii_lcell_comb
--- Equation(s):
--- \vga_0|videoGen|colorAddress~144_combout\ = (!\vga_0|videoGen|colorAddress~201_combout\ & (\vga_0|videoGen|colorAddress~137_combout\ & \vga_0|videoGen|colorAddress~134_combout\))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0011000000000000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	datab => \vga_0|videoGen|colorAddress~201_combout\,
-	datac => \vga_0|videoGen|colorAddress~137_combout\,
-	datad => \vga_0|videoGen|colorAddress~134_combout\,
-	combout => \vga_0|videoGen|colorAddress~144_combout\);
-
--- Location: LCCOMB_X22_Y24_N2
-\vga_0|videoGen|colorAddress~207\ : cycloneii_lcell_comb
--- Equation(s):
--- \vga_0|videoGen|colorAddress~207_combout\ = (!\vga_0|videoGen|colorAddress~144_combout\ & (((\vga_0|videoGen|pixelDraw~30_combout\ & \vga_0|videoGen|pixelDraw~65_combout\)) # (!\vga_0|videoGen|colorAddress~146_combout\)))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0000000010110011",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \vga_0|videoGen|pixelDraw~30_combout\,
-	datab => \vga_0|videoGen|colorAddress~146_combout\,
-	datac => \vga_0|videoGen|pixelDraw~65_combout\,
-	datad => \vga_0|videoGen|colorAddress~144_combout\,
-	combout => \vga_0|videoGen|colorAddress~207_combout\);
-
--- Location: LCCOMB_X23_Y24_N10
-\vga_0|videoGen|colorAddress~202\ : cycloneii_lcell_comb
--- Equation(s):
--- \vga_0|videoGen|colorAddress~202_combout\ = (\vga_0|videoGen|colorAddress~123_combout\ & (\vga_0|videoGen|colorAddress~125_combout\ & ((!\vga_0|videoGen|pixelDraw~57_combout\) # (!\vga_0|videoGen|pixelDraw~42_combout\))))
+-- \vga_0|videoGen|pixelDraw~59_combout\ = (\vga_0|videoSync|pixel_column\(7) & (\vga_0|videoGen|LessThan13~3_combout\ & ((!\vga_0|videoGen|LessThan13~1_combout\) # (!\vga_0|videoGen|LessThan173~0_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -8374,17 +8457,133 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \vga_0|videoGen|pixelDraw~42_combout\,
-	datab => \vga_0|videoGen|pixelDraw~57_combout\,
-	datac => \vga_0|videoGen|colorAddress~123_combout\,
-	datad => \vga_0|videoGen|colorAddress~125_combout\,
-	combout => \vga_0|videoGen|colorAddress~202_combout\);
+	dataa => \vga_0|videoGen|LessThan173~0_combout\,
+	datab => \vga_0|videoGen|LessThan13~1_combout\,
+	datac => \vga_0|videoSync|pixel_column\(7),
+	datad => \vga_0|videoGen|LessThan13~3_combout\,
+	combout => \vga_0|videoGen|pixelDraw~59_combout\);
 
--- Location: LCCOMB_X22_Y24_N8
-\vga_0|videoGen|colorAddress~167\ : cycloneii_lcell_comb
+-- Location: LCCOMB_X27_Y26_N26
+\vga_0|videoGen|pixelDraw~60\ : cycloneii_lcell_comb
 -- Equation(s):
--- \vga_0|videoGen|colorAddress~167_combout\ = (\vga_0|videoGen|colorAddress~127_combout\ & (!\vga_0|videoGen|colorAddress~146_combout\ & ((!\vga_0|videoGen|colorAddress~134_combout\) # (!\vga_0|videoGen|colorAddress~135_combout\)))) # 
--- (!\vga_0|videoGen|colorAddress~127_combout\ & (((!\vga_0|videoGen|colorAddress~134_combout\)) # (!\vga_0|videoGen|colorAddress~135_combout\)))
+-- \vga_0|videoGen|pixelDraw~60_combout\ = (\vga_0|videoGen|pixelDraw~59_combout\ & (((!\vga_0|videoSync|pixel_column\(6) & !\vga_0|videoSync|pixel_column\(5))) # (!\vga_0|videoSync|pixel_column\(7))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0101011100000000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \vga_0|videoSync|pixel_column\(7),
+	datab => \vga_0|videoSync|pixel_column\(6),
+	datac => \vga_0|videoSync|pixel_column\(5),
+	datad => \vga_0|videoGen|pixelDraw~59_combout\,
+	combout => \vga_0|videoGen|pixelDraw~60_combout\);
+
+-- Location: LCCOMB_X27_Y22_N0
+\vga_0|videoGen|colorAddress~120\ : cycloneii_lcell_comb
+-- Equation(s):
+-- \vga_0|videoGen|colorAddress~120_combout\ = (!\vga_0|videoSync|pixel_column\(9) & ((\vga_0|videoGen|Equal3~1_combout\) # (\vga_0|videoGen|Equal2~0_combout\)))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0000111100001010",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \vga_0|videoGen|Equal3~1_combout\,
+	datac => \vga_0|videoSync|pixel_column\(9),
+	datad => \vga_0|videoGen|Equal2~0_combout\,
+	combout => \vga_0|videoGen|colorAddress~120_combout\);
+
+-- Location: LCCOMB_X31_Y24_N28
+\vga_0|videoGen|pixelDraw~66\ : cycloneii_lcell_comb
+-- Equation(s):
+-- \vga_0|videoGen|pixelDraw~66_combout\ = (\vga_0|videoGen|pixelDraw~36_combout\ & \vga_0|videoGen|pixelDraw~44_combout\)
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1111000000000000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	datac => \vga_0|videoGen|pixelDraw~36_combout\,
+	datad => \vga_0|videoGen|pixelDraw~44_combout\,
+	combout => \vga_0|videoGen|pixelDraw~66_combout\);
+
+-- Location: LCCOMB_X27_Y23_N10
+\vga_0|videoGen|colorAddress~121\ : cycloneii_lcell_comb
+-- Equation(s):
+-- \vga_0|videoGen|colorAddress~121_combout\ = (!\vga_0|videoGen|pixelDraw~66_combout\ & (((!\vga_0|videoGen|placeShip_on~combout\ & !\vga_0|videoGen|colorAddress~120_combout\)) # (!\vga_0|videoGen|Mux653~4_combout\)))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0000000100001111",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \vga_0|videoGen|placeShip_on~combout\,
+	datab => \vga_0|videoGen|colorAddress~120_combout\,
+	datac => \vga_0|videoGen|pixelDraw~66_combout\,
+	datad => \vga_0|videoGen|Mux653~4_combout\,
+	combout => \vga_0|videoGen|colorAddress~121_combout\);
+
+-- Location: LCCOMB_X28_Y22_N14
+\vga_0|videoGen|colorAddress~198\ : cycloneii_lcell_comb
+-- Equation(s):
+-- \vga_0|videoGen|colorAddress~198_combout\ = (\vga_0|videoGen|colorAddress~121_combout\ & (\vga_0|videoGen|colorAddress~119_combout\ & ((!\vga_0|videoGen|pixelDraw~60_combout\) # (!\vga_0|videoGen|pixelDraw~46_combout\))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0111000000000000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \vga_0|videoGen|pixelDraw~46_combout\,
+	datab => \vga_0|videoGen|pixelDraw~60_combout\,
+	datac => \vga_0|videoGen|colorAddress~121_combout\,
+	datad => \vga_0|videoGen|colorAddress~119_combout\,
+	combout => \vga_0|videoGen|colorAddress~198_combout\);
+
+-- Location: LCCOMB_X30_Y22_N0
+\vga_0|videoGen|colorAddress~141\ : cycloneii_lcell_comb
+-- Equation(s):
+-- \vga_0|videoGen|colorAddress~141_combout\ = (\vga_0|videoGen|pixelDraw~68_combout\ & ((\vga_0|videoGen|pixelDraw~38_combout\) # ((\vga_0|videoGen|pixelDraw~41_combout\) # (\vga_0|videoGen|pixelDraw~36_combout\))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1111111000000000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \vga_0|videoGen|pixelDraw~38_combout\,
+	datab => \vga_0|videoGen|pixelDraw~41_combout\,
+	datac => \vga_0|videoGen|pixelDraw~36_combout\,
+	datad => \vga_0|videoGen|pixelDraw~68_combout\,
+	combout => \vga_0|videoGen|colorAddress~141_combout\);
+
+-- Location: LCCOMB_X28_Y22_N28
+\vga_0|videoGen|colorAddress~142\ : cycloneii_lcell_comb
+-- Equation(s):
+-- \vga_0|videoGen|colorAddress~142_combout\ = (\vga_0|videoGen|pixelDraw~69_combout\ & (\vga_0|videoGen|colorAddress~121_combout\ & (!\vga_0|videoGen|colorAddress~141_combout\ & \vga_0|videoGen|colorAddress~119_combout\)))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0000100000000000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \vga_0|videoGen|pixelDraw~69_combout\,
+	datab => \vga_0|videoGen|colorAddress~121_combout\,
+	datac => \vga_0|videoGen|colorAddress~141_combout\,
+	datad => \vga_0|videoGen|colorAddress~119_combout\,
+	combout => \vga_0|videoGen|colorAddress~142_combout\);
+
+-- Location: LCCOMB_X28_Y22_N20
+\vga_0|videoGen|colorAddress~164\ : cycloneii_lcell_comb
+-- Equation(s):
+-- \vga_0|videoGen|colorAddress~164_combout\ = (\vga_0|videoGen|colorAddress~123_combout\ & (!\vga_0|videoGen|colorAddress~142_combout\ & ((!\vga_0|videoGen|colorAddress~130_combout\) # (!\vga_0|videoGen|colorAddress~131_combout\)))) # 
+-- (!\vga_0|videoGen|colorAddress~123_combout\ & (((!\vga_0|videoGen|colorAddress~130_combout\)) # (!\vga_0|videoGen|colorAddress~131_combout\)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -8392,65 +8591,33 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \vga_0|videoGen|colorAddress~127_combout\,
-	datab => \vga_0|videoGen|colorAddress~135_combout\,
-	datac => \vga_0|videoGen|colorAddress~134_combout\,
-	datad => \vga_0|videoGen|colorAddress~146_combout\,
-	combout => \vga_0|videoGen|colorAddress~167_combout\);
+	dataa => \vga_0|videoGen|colorAddress~123_combout\,
+	datab => \vga_0|videoGen|colorAddress~131_combout\,
+	datac => \vga_0|videoGen|colorAddress~130_combout\,
+	datad => \vga_0|videoGen|colorAddress~142_combout\,
+	combout => \vga_0|videoGen|colorAddress~164_combout\);
 
--- Location: LCCOMB_X23_Y25_N24
-\vga_0|videoGen|pixelDraw~68\ : cycloneii_lcell_comb
+-- Location: LCCOMB_X28_Y22_N22
+\vga_0|videoGen|colorAddress~166\ : cycloneii_lcell_comb
 -- Equation(s):
--- \vga_0|videoGen|pixelDraw~68_combout\ = (!\vga_0|videoGen|pixelDraw~65_combout\) # (!\vga_0|videoGen|pixelDraw~42_combout\)
+-- \vga_0|videoGen|colorAddress~166_combout\ = (\vga_0|videoGen|colorAddress~121_combout\ & (\vga_0|videoGen|colorAddress~125_combout\ & \vga_0|videoGen|colorAddress~119_combout\))
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "0101010111111111",
+	lut_mask => "1000100000000000",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \vga_0|videoGen|pixelDraw~42_combout\,
-	datad => \vga_0|videoGen|pixelDraw~65_combout\,
-	combout => \vga_0|videoGen|pixelDraw~68_combout\);
+	dataa => \vga_0|videoGen|colorAddress~121_combout\,
+	datab => \vga_0|videoGen|colorAddress~125_combout\,
+	datad => \vga_0|videoGen|colorAddress~119_combout\,
+	combout => \vga_0|videoGen|colorAddress~166_combout\);
 
--- Location: LCCOMB_X24_Y25_N28
-\vga_0|videoGen|colorAddress~130\ : cycloneii_lcell_comb
+-- Location: LCCOMB_X28_Y22_N6
+\vga_0|videoGen|colorAddress~167\ : cycloneii_lcell_comb
 -- Equation(s):
--- \vga_0|videoGen|colorAddress~130_combout\ = (\vga_0|videoGen|pixelDraw~68_combout\ & (((!\vga_0|videoGen|pixelDraw~37_combout\ & !\vga_0|videoGen|pixelDraw~32_combout\)) # (!\vga_0|videoGen|pixelDraw~67_combout\)))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0000110001001100",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \vga_0|videoGen|pixelDraw~37_combout\,
-	datab => \vga_0|videoGen|pixelDraw~68_combout\,
-	datac => \vga_0|videoGen|pixelDraw~67_combout\,
-	datad => \vga_0|videoGen|pixelDraw~32_combout\,
-	combout => \vga_0|videoGen|colorAddress~130_combout\);
-
--- Location: LCCOMB_X22_Y24_N12
-\vga_0|videoGen|colorAddress~169\ : cycloneii_lcell_comb
--- Equation(s):
--- \vga_0|videoGen|colorAddress~169_combout\ = (\vga_0|videoGen|colorAddress~129_combout\ & (\vga_0|videoGen|colorAddress~125_combout\ & \vga_0|videoGen|colorAddress~123_combout\))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1010000000000000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \vga_0|videoGen|colorAddress~129_combout\,
-	datac => \vga_0|videoGen|colorAddress~125_combout\,
-	datad => \vga_0|videoGen|colorAddress~123_combout\,
-	combout => \vga_0|videoGen|colorAddress~169_combout\);
-
--- Location: LCCOMB_X22_Y24_N18
-\vga_0|videoGen|colorAddress~170\ : cycloneii_lcell_comb
--- Equation(s):
--- \vga_0|videoGen|colorAddress~170_combout\ = (\vga_0|videoGen|colorAddress~137_combout\ & (!\vga_0|videoGen|colorAddress~134_combout\ & ((!\vga_0|videoGen|colorAddress~169_combout\) # (!\vga_0|videoGen|colorAddress~130_combout\)))) # 
--- (!\vga_0|videoGen|colorAddress~137_combout\ & (((!\vga_0|videoGen|colorAddress~169_combout\)) # (!\vga_0|videoGen|colorAddress~130_combout\)))
+-- \vga_0|videoGen|colorAddress~167_combout\ = (\vga_0|videoGen|colorAddress~133_combout\ & (!\vga_0|videoGen|colorAddress~130_combout\ & ((!\vga_0|videoGen|colorAddress~166_combout\) # (!\vga_0|videoGen|colorAddress~126_combout\)))) # 
+-- (!\vga_0|videoGen|colorAddress~133_combout\ & (((!\vga_0|videoGen|colorAddress~166_combout\)) # (!\vga_0|videoGen|colorAddress~126_combout\)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -8458,16 +8625,16 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \vga_0|videoGen|colorAddress~137_combout\,
-	datab => \vga_0|videoGen|colorAddress~130_combout\,
-	datac => \vga_0|videoGen|colorAddress~134_combout\,
-	datad => \vga_0|videoGen|colorAddress~169_combout\,
-	combout => \vga_0|videoGen|colorAddress~170_combout\);
+	dataa => \vga_0|videoGen|colorAddress~133_combout\,
+	datab => \vga_0|videoGen|colorAddress~126_combout\,
+	datac => \vga_0|videoGen|colorAddress~130_combout\,
+	datad => \vga_0|videoGen|colorAddress~166_combout\,
+	combout => \vga_0|videoGen|colorAddress~167_combout\);
 
--- Location: LCCOMB_X22_Y24_N0
-\vga_0|videoGen|colorAddress~171\ : cycloneii_lcell_comb
+-- Location: LCCOMB_X28_Y22_N0
+\vga_0|videoGen|colorAddress~168\ : cycloneii_lcell_comb
 -- Equation(s):
--- \vga_0|videoGen|colorAddress~171_combout\ = (\vga_0|videoGen|colorAddress~168_combout\ & (!\vga_0|videoGen|colorAddress~202_combout\ & (\vga_0|videoGen|colorAddress~167_combout\ & \vga_0|videoGen|colorAddress~170_combout\)))
+-- \vga_0|videoGen|colorAddress~168_combout\ = (\vga_0|videoGen|colorAddress~165_combout\ & (!\vga_0|videoGen|colorAddress~198_combout\ & (\vga_0|videoGen|colorAddress~164_combout\ & \vga_0|videoGen|colorAddress~167_combout\)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -8475,316 +8642,33 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \vga_0|videoGen|colorAddress~168_combout\,
-	datab => \vga_0|videoGen|colorAddress~202_combout\,
-	datac => \vga_0|videoGen|colorAddress~167_combout\,
-	datad => \vga_0|videoGen|colorAddress~170_combout\,
-	combout => \vga_0|videoGen|colorAddress~171_combout\);
+	dataa => \vga_0|videoGen|colorAddress~165_combout\,
+	datab => \vga_0|videoGen|colorAddress~198_combout\,
+	datac => \vga_0|videoGen|colorAddress~164_combout\,
+	datad => \vga_0|videoGen|colorAddress~167_combout\,
+	combout => \vga_0|videoGen|colorAddress~168_combout\);
 
--- Location: LCCOMB_X24_Y24_N24
-\vga_0|videoGen|colorAddress~121\ : cycloneii_lcell_comb
+-- Location: LCCOMB_X30_Y22_N6
+\vga_0|videoGen|colorAddress~197\ : cycloneii_lcell_comb
 -- Equation(s):
--- \vga_0|videoGen|colorAddress~121_combout\ = (\vga_0|videoGen|colorAddress~120_combout\ & ((!\vga_0|videoGen|pixelDraw~57_combout\) # (!\vga_0|videoGen|colorAddress~111_combout\)))
+-- \vga_0|videoGen|colorAddress~197_combout\ = (\vga_0|videoGen|pixelDraw~72_combout\ & ((\vga_0|videoGen|pixelDraw~22_combout\) # ((!\vga_0|videoGen|LessThan23~2_combout\ & \vga_0|videoGen|pixelDraw~20_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "0011111100000000",
+	lut_mask => "1010001010100000",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	datab => \vga_0|videoGen|colorAddress~111_combout\,
-	datac => \vga_0|videoGen|pixelDraw~57_combout\,
-	datad => \vga_0|videoGen|colorAddress~120_combout\,
-	combout => \vga_0|videoGen|colorAddress~121_combout\);
+	dataa => \vga_0|videoGen|pixelDraw~72_combout\,
+	datab => \vga_0|videoGen|LessThan23~2_combout\,
+	datac => \vga_0|videoGen|pixelDraw~22_combout\,
+	datad => \vga_0|videoGen|pixelDraw~20_combout\,
+	combout => \vga_0|videoGen|colorAddress~197_combout\);
 
--- Location: LCCOMB_X24_Y24_N8
-\vga_0|videoGen|colorAddress~158\ : cycloneii_lcell_comb
+-- Location: LCCOMB_X28_Y22_N18
+\vga_0|videoGen|colorAddress~140\ : cycloneii_lcell_comb
 -- Equation(s):
--- \vga_0|videoGen|colorAddress~158_combout\ = (\vga_0|videoGen|colorAddress~120_combout\) # ((\vga_0|videoGen|colorAddress~200_combout\) # ((\vga_0|videoGen|colorAddress~121_combout\) # (\vga_0|videoGen|colorAddress~122_combout\)))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1111111111111110",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \vga_0|videoGen|colorAddress~120_combout\,
-	datab => \vga_0|videoGen|colorAddress~200_combout\,
-	datac => \vga_0|videoGen|colorAddress~121_combout\,
-	datad => \vga_0|videoGen|colorAddress~122_combout\,
-	combout => \vga_0|videoGen|colorAddress~158_combout\);
-
--- Location: LCCOMB_X25_Y24_N30
-\vga_0|videoGen|colorAddress~205\ : cycloneii_lcell_comb
--- Equation(s):
--- \vga_0|videoGen|colorAddress~205_combout\ = (((!\vga_0|videoGen|colorAddress~118_combout\ & !\vga_0|videoGen|colorAddress~158_combout\)) # (!\vga_0|videoGen|colorAddress~99_combout\)) # (!\vga_0|videoGen|colorAddress~149_combout\)
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0111011101111111",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \vga_0|videoGen|colorAddress~149_combout\,
-	datab => \vga_0|videoGen|colorAddress~99_combout\,
-	datac => \vga_0|videoGen|colorAddress~118_combout\,
-	datad => \vga_0|videoGen|colorAddress~158_combout\,
-	combout => \vga_0|videoGen|colorAddress~205_combout\);
-
--- Location: LCCOMB_X24_Y24_N30
-\vga_0|videoGen|colorAddress~159\ : cycloneii_lcell_comb
--- Equation(s):
--- \vga_0|videoGen|colorAddress~159_combout\ = (\vga_0|videoGen|pixelDraw~68_combout\ & (\vga_0|videoGen|colorAddress~129_combout\ & (\vga_0|videoGen|colorAddress~125_combout\ & \vga_0|videoGen|colorAddress~123_combout\)))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1000000000000000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \vga_0|videoGen|pixelDraw~68_combout\,
-	datab => \vga_0|videoGen|colorAddress~129_combout\,
-	datac => \vga_0|videoGen|colorAddress~125_combout\,
-	datad => \vga_0|videoGen|colorAddress~123_combout\,
-	combout => \vga_0|videoGen|colorAddress~159_combout\);
-
--- Location: LCCOMB_X22_Y24_N20
-\vga_0|videoGen|colorAddress~204\ : cycloneii_lcell_comb
--- Equation(s):
--- \vga_0|videoGen|colorAddress~204_combout\ = (\vga_0|videoGen|colorAddress~110_combout\ & ((!\vga_0|videoGen|colorAddress~111_combout\) # (!\vga_0|videoGen|pixelDraw~60_combout\)))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0011000011110000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	datab => \vga_0|videoGen|pixelDraw~60_combout\,
-	datac => \vga_0|videoGen|colorAddress~110_combout\,
-	datad => \vga_0|videoGen|colorAddress~111_combout\,
-	combout => \vga_0|videoGen|colorAddress~204_combout\);
-
--- Location: LCCOMB_X24_Y23_N14
-\vga_0|videoGen|colorAddress~147\ : cycloneii_lcell_comb
--- Equation(s):
--- \vga_0|videoGen|colorAddress~147_combout\ = (\vga_0|videoGen|pixelDraw~55_combout\ & ((\vga_0|videoGen|pixelDraw~29_combout\) # (\vga_0|videoGen|pixelDraw~32_combout\)))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1100100011001000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \vga_0|videoGen|pixelDraw~29_combout\,
-	datab => \vga_0|videoGen|pixelDraw~55_combout\,
-	datac => \vga_0|videoGen|pixelDraw~32_combout\,
-	combout => \vga_0|videoGen|colorAddress~147_combout\);
-
--- Location: LCCOMB_X24_Y23_N20
-\vga_0|videoGen|colorAddress~148\ : cycloneii_lcell_comb
--- Equation(s):
--- \vga_0|videoGen|colorAddress~148_combout\ = (((\vga_0|videoGen|colorAddress~147_combout\) # (!\vga_0|videoGen|colorAddress~125_combout\)) # (!\vga_0|videoGen|colorAddress~101_combout\)) # (!\vga_0|videoGen|colorAddress~99_combout\)
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1111011111111111",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \vga_0|videoGen|colorAddress~99_combout\,
-	datab => \vga_0|videoGen|colorAddress~101_combout\,
-	datac => \vga_0|videoGen|colorAddress~147_combout\,
-	datad => \vga_0|videoGen|colorAddress~125_combout\,
-	combout => \vga_0|videoGen|colorAddress~148_combout\);
-
--- Location: LCCOMB_X24_Y23_N2
-\vga_0|videoGen|colorAddress~149\ : cycloneii_lcell_comb
--- Equation(s):
--- \vga_0|videoGen|colorAddress~149_combout\ = (\vga_0|videoGen|colorAddress~125_combout\ & ((!\vga_0|videoGen|pixelDraw~32_combout\) # (!\vga_0|videoGen|pixelDraw~55_combout\)))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0011111100000000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	datab => \vga_0|videoGen|pixelDraw~55_combout\,
-	datac => \vga_0|videoGen|pixelDraw~32_combout\,
-	datad => \vga_0|videoGen|colorAddress~125_combout\,
-	combout => \vga_0|videoGen|colorAddress~149_combout\);
-
--- Location: LCCOMB_X24_Y23_N28
-\vga_0|videoGen|colorAddress~150\ : cycloneii_lcell_comb
--- Equation(s):
--- \vga_0|videoGen|colorAddress~150_combout\ = (\vga_0|videoGen|colorAddress~148_combout\ & (((!\vga_0|videoGen|colorAddress~149_combout\) # (!\vga_0|videoGen|colorAddress~99_combout\)) # (!\vga_0|videoGen|colorAddress~102_combout\)))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0111000011110000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \vga_0|videoGen|colorAddress~102_combout\,
-	datab => \vga_0|videoGen|colorAddress~99_combout\,
-	datac => \vga_0|videoGen|colorAddress~148_combout\,
-	datad => \vga_0|videoGen|colorAddress~149_combout\,
-	combout => \vga_0|videoGen|colorAddress~150_combout\);
-
--- Location: LCCOMB_X24_Y23_N22
-\vga_0|videoGen|colorAddress~151\ : cycloneii_lcell_comb
--- Equation(s):
--- \vga_0|videoGen|colorAddress~151_combout\ = ((!\vga_0|videoGen|colorAddress~99_combout\ & (!\vga_0|videoGen|colorAddress~78_combout\ & !\vga_0|videoGen|colorAddress~100_combout\))) # (!\vga_0|videoGen|colorAddress~125_combout\)
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0000000111111111",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \vga_0|videoGen|colorAddress~99_combout\,
-	datab => \vga_0|videoGen|colorAddress~78_combout\,
-	datac => \vga_0|videoGen|colorAddress~100_combout\,
-	datad => \vga_0|videoGen|colorAddress~125_combout\,
-	combout => \vga_0|videoGen|colorAddress~151_combout\);
-
--- Location: LCCOMB_X25_Y24_N4
-\vga_0|videoGen|colorAddress~152\ : cycloneii_lcell_comb
--- Equation(s):
--- \vga_0|videoGen|colorAddress~152_combout\ = (\vga_0|videoGen|Mux653~4_combout\ & (\vga_0|videoGen|colorAddress~151_combout\ & ((\vga_0|videoGen|placeShip_on~combout\) # (\vga_0|videoGen|colorAddress~124_combout\))))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1110000000000000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \vga_0|videoGen|placeShip_on~combout\,
-	datab => \vga_0|videoGen|colorAddress~124_combout\,
-	datac => \vga_0|videoGen|Mux653~4_combout\,
-	datad => \vga_0|videoGen|colorAddress~151_combout\,
-	combout => \vga_0|videoGen|colorAddress~152_combout\);
-
--- Location: LCCOMB_X25_Y24_N18
-\vga_0|videoGen|colorAddress~153\ : cycloneii_lcell_comb
--- Equation(s):
--- \vga_0|videoGen|colorAddress~153_combout\ = (\vga_0|videoGen|colorAddress~152_combout\ & ((!\vga_0|videoGen|colorAddress~125_combout\) # (!\vga_0|videoGen|colorAddress~99_combout\)))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0011000011110000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	datab => \vga_0|videoGen|colorAddress~99_combout\,
-	datac => \vga_0|videoGen|colorAddress~152_combout\,
-	datad => \vga_0|videoGen|colorAddress~125_combout\,
-	combout => \vga_0|videoGen|colorAddress~153_combout\);
-
--- Location: LCCOMB_X25_Y24_N12
-\vga_0|videoGen|colorAddress~155\ : cycloneii_lcell_comb
--- Equation(s):
--- \vga_0|videoGen|colorAddress~155_combout\ = (\vga_0|videoGen|colorAddress~150_combout\ & (\vga_0|videoGen|colorAddress~153_combout\ & ((!\vga_0|videoGen|colorAddress~99_combout\) # (!\vga_0|videoGen|colorAddress~154_combout\))))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0111000000000000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \vga_0|videoGen|colorAddress~154_combout\,
-	datab => \vga_0|videoGen|colorAddress~99_combout\,
-	datac => \vga_0|videoGen|colorAddress~150_combout\,
-	datad => \vga_0|videoGen|colorAddress~153_combout\,
-	combout => \vga_0|videoGen|colorAddress~155_combout\);
-
--- Location: LCCOMB_X25_Y24_N22
-\vga_0|videoGen|colorAddress~156\ : cycloneii_lcell_comb
--- Equation(s):
--- \vga_0|videoGen|colorAddress~156_combout\ = (\vga_0|videoGen|colorAddress~155_combout\ & (((!\vga_0|videoGen|colorAddress~204_combout\) # (!\vga_0|videoGen|colorAddress~99_combout\)) # (!\vga_0|videoGen|colorAddress~149_combout\)))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0111111100000000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \vga_0|videoGen|colorAddress~149_combout\,
-	datab => \vga_0|videoGen|colorAddress~99_combout\,
-	datac => \vga_0|videoGen|colorAddress~204_combout\,
-	datad => \vga_0|videoGen|colorAddress~155_combout\,
-	combout => \vga_0|videoGen|colorAddress~156_combout\);
-
--- Location: LCCOMB_X25_Y24_N28
-\vga_0|videoGen|colorAddress~157\ : cycloneii_lcell_comb
--- Equation(s):
--- \vga_0|videoGen|colorAddress~157_combout\ = (\vga_0|videoGen|colorAddress~156_combout\ & (((!\vga_0|videoGen|colorAddress~115_combout\) # (!\vga_0|videoGen|colorAddress~99_combout\)) # (!\vga_0|videoGen|colorAddress~149_combout\)))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0111111100000000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \vga_0|videoGen|colorAddress~149_combout\,
-	datab => \vga_0|videoGen|colorAddress~99_combout\,
-	datac => \vga_0|videoGen|colorAddress~115_combout\,
-	datad => \vga_0|videoGen|colorAddress~156_combout\,
-	combout => \vga_0|videoGen|colorAddress~157_combout\);
-
--- Location: LCCOMB_X25_Y24_N0
-\vga_0|videoGen|colorAddress~206\ : cycloneii_lcell_comb
--- Equation(s):
--- \vga_0|videoGen|colorAddress~206_combout\ = (!\vga_0|videoGen|colorAddress~161_combout\ & (\vga_0|videoGen|colorAddress~205_combout\ & (!\vga_0|videoGen|colorAddress~159_combout\ & \vga_0|videoGen|colorAddress~157_combout\)))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0000010000000000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \vga_0|videoGen|colorAddress~161_combout\,
-	datab => \vga_0|videoGen|colorAddress~205_combout\,
-	datac => \vga_0|videoGen|colorAddress~159_combout\,
-	datad => \vga_0|videoGen|colorAddress~157_combout\,
-	combout => \vga_0|videoGen|colorAddress~206_combout\);
-
--- Location: LCCOMB_X25_Y24_N2
-\vga_0|videoGen|colorAddress~162\ : cycloneii_lcell_comb
--- Equation(s):
--- \vga_0|videoGen|colorAddress~162_combout\ = (\vga_0|videoGen|colorAddress~206_combout\ & ((!\vga_0|videoGen|colorAddress~136_combout\) # (!\vga_0|videoGen|colorAddress~134_combout\)))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0011111100000000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	datab => \vga_0|videoGen|colorAddress~134_combout\,
-	datac => \vga_0|videoGen|colorAddress~136_combout\,
-	datad => \vga_0|videoGen|colorAddress~206_combout\,
-	combout => \vga_0|videoGen|colorAddress~162_combout\);
-
--- Location: LCCOMB_X25_Y24_N24
-\vga_0|videoGen|colorAddress~172\ : cycloneii_lcell_comb
--- Equation(s):
--- \vga_0|videoGen|colorAddress~172_combout\ = (\vga_0|videoGen|colorAddress~166_combout\ & (\vga_0|videoGen|colorAddress~207_combout\ & (\vga_0|videoGen|colorAddress~171_combout\ & \vga_0|videoGen|colorAddress~162_combout\)))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1000000000000000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \vga_0|videoGen|colorAddress~166_combout\,
-	datab => \vga_0|videoGen|colorAddress~207_combout\,
-	datac => \vga_0|videoGen|colorAddress~171_combout\,
-	datad => \vga_0|videoGen|colorAddress~162_combout\,
-	combout => \vga_0|videoGen|colorAddress~172_combout\);
-
--- Location: LCCOMB_X27_Y24_N26
-\vga_0|videoGen|colorAddress~173\ : cycloneii_lcell_comb
--- Equation(s):
--- \vga_0|videoGen|colorAddress~173_combout\ = (\vga_0|videoSync|pixel_column\(8) & (!\vga_0|videoSync|pixel_column\(9) & \vga_0|videoGen|Equal3~1_combout\))
+-- \vga_0|videoGen|colorAddress~140_combout\ = (\vga_0|videoGen|colorAddress~133_combout\ & (!\vga_0|videoGen|colorAddress~197_combout\ & \vga_0|videoGen|colorAddress~130_combout\))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -8792,83 +8676,167 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \vga_0|videoSync|pixel_column\(8),
-	datab => \vga_0|videoSync|pixel_column\(9),
-	datac => \vga_0|videoGen|Equal3~1_combout\,
-	combout => \vga_0|videoGen|colorAddress~173_combout\);
+	dataa => \vga_0|videoGen|colorAddress~133_combout\,
+	datab => \vga_0|videoGen|colorAddress~197_combout\,
+	datac => \vga_0|videoGen|colorAddress~130_combout\,
+	combout => \vga_0|videoGen|colorAddress~140_combout\);
 
--- Location: LCCOMB_X25_Y24_N6
-\vga_0|videoGen|colorAddress~174\ : cycloneii_lcell_comb
+-- Location: LCCOMB_X28_Y22_N8
+\vga_0|videoGen|colorAddress~201\ : cycloneii_lcell_comb
 -- Equation(s):
--- \vga_0|videoGen|colorAddress~174_combout\ = (!\vga_0|videoGen|colorAddress~142_combout\ & (\vga_0|videoGen|colorAddress~172_combout\ & \vga_0|videoGen|colorAddress~173_combout\))
+-- \vga_0|videoGen|colorAddress~201_combout\ = (!\vga_0|videoGen|colorAddress~140_combout\ & (((\vga_0|videoGen|pixelDraw~34_combout\ & \vga_0|videoGen|pixelDraw~68_combout\)) # (!\vga_0|videoGen|colorAddress~142_combout\)))
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "0011000000000000",
+	lut_mask => "0000000010110011",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
+	dataa => \vga_0|videoGen|pixelDraw~34_combout\,
 	datab => \vga_0|videoGen|colorAddress~142_combout\,
-	datac => \vga_0|videoGen|colorAddress~172_combout\,
-	datad => \vga_0|videoGen|colorAddress~173_combout\,
-	combout => \vga_0|videoGen|colorAddress~174_combout\);
+	datac => \vga_0|videoGen|pixelDraw~68_combout\,
+	datad => \vga_0|videoGen|colorAddress~140_combout\,
+	combout => \vga_0|videoGen|colorAddress~201_combout\);
 
--- Location: LCCOMB_X25_Y24_N16
+-- Location: LCCOMB_X28_Y22_N4
+\vga_0|videoGen|colorAddress~160\ : cycloneii_lcell_comb
+-- Equation(s):
+-- \vga_0|videoGen|colorAddress~160_combout\ = (\vga_0|videoGen|colorAddress~121_combout\ & (((!\vga_0|videoGen|pixelDraw~21_combout\ & !\vga_0|videoGen|pixelDraw~22_combout\)) # (!\vga_0|videoGen|pixelDraw~70_combout\)))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0001000011110000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \vga_0|videoGen|pixelDraw~21_combout\,
+	datab => \vga_0|videoGen|pixelDraw~22_combout\,
+	datac => \vga_0|videoGen|colorAddress~121_combout\,
+	datad => \vga_0|videoGen|pixelDraw~70_combout\,
+	combout => \vga_0|videoGen|colorAddress~160_combout\);
+
+-- Location: LCCOMB_X28_Y22_N26
+\vga_0|videoGen|colorAddress~161\ : cycloneii_lcell_comb
+-- Equation(s):
+-- \vga_0|videoGen|colorAddress~161_combout\ = (\vga_0|videoGen|colorAddress~127_combout\ & (\vga_0|videoGen|colorAddress~125_combout\ & (\vga_0|videoGen|colorAddress~160_combout\ & \vga_0|videoGen|colorAddress~119_combout\)))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1000000000000000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \vga_0|videoGen|colorAddress~127_combout\,
+	datab => \vga_0|videoGen|colorAddress~125_combout\,
+	datac => \vga_0|videoGen|colorAddress~160_combout\,
+	datad => \vga_0|videoGen|colorAddress~119_combout\,
+	combout => \vga_0|videoGen|colorAddress~161_combout\);
+
+-- Location: LCCOMB_X28_Y22_N30
+\vga_0|videoGen|colorAddress~162\ : cycloneii_lcell_comb
+-- Equation(s):
+-- \vga_0|videoGen|colorAddress~162_combout\ = (\vga_0|videoGen|colorAddress~161_combout\ & ((!\vga_0|videoGen|pixelDraw~79_combout\) # (!\vga_0|videoGen|pixelDraw~70_combout\)))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0011111100000000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	datab => \vga_0|videoGen|pixelDraw~70_combout\,
+	datac => \vga_0|videoGen|pixelDraw~79_combout\,
+	datad => \vga_0|videoGen|colorAddress~161_combout\,
+	combout => \vga_0|videoGen|colorAddress~162_combout\);
+
+-- Location: LCCOMB_X28_Y22_N12
+\vga_0|videoGen|colorAddress~163\ : cycloneii_lcell_comb
+-- Equation(s):
+-- \vga_0|videoGen|colorAddress~163_combout\ = (!\vga_0|videoGen|colorAddress~162_combout\ & (((!\vga_0|videoGen|colorAddress~135_combout\ & !\vga_0|videoGen|pixelDraw~73_combout\)) # (!\vga_0|videoGen|colorAddress~130_combout\)))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0000000000011111",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \vga_0|videoGen|colorAddress~135_combout\,
+	datab => \vga_0|videoGen|pixelDraw~73_combout\,
+	datac => \vga_0|videoGen|colorAddress~130_combout\,
+	datad => \vga_0|videoGen|colorAddress~162_combout\,
+	combout => \vga_0|videoGen|colorAddress~163_combout\);
+
+-- Location: LCCOMB_X28_Y23_N6
+\vga_0|videoGen|colorAddress~169\ : cycloneii_lcell_comb
+-- Equation(s):
+-- \vga_0|videoGen|colorAddress~169_combout\ = (\vga_0|videoGen|colorAddress~159_combout\ & (\vga_0|videoGen|colorAddress~168_combout\ & (\vga_0|videoGen|colorAddress~201_combout\ & \vga_0|videoGen|colorAddress~163_combout\)))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1000000000000000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \vga_0|videoGen|colorAddress~159_combout\,
+	datab => \vga_0|videoGen|colorAddress~168_combout\,
+	datac => \vga_0|videoGen|colorAddress~201_combout\,
+	datad => \vga_0|videoGen|colorAddress~163_combout\,
+	combout => \vga_0|videoGen|colorAddress~169_combout\);
+
+-- Location: LCCOMB_X28_Y23_N4
+\vga_0|videoGen|colorAddress~171\ : cycloneii_lcell_comb
+-- Equation(s):
+-- \vga_0|videoGen|colorAddress~171_combout\ = (\vga_0|videoGen|colorAddress~170_combout\ & (!\vga_0|videoGen|colorAddress~138_combout\ & \vga_0|videoGen|colorAddress~169_combout\))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0010001000000000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \vga_0|videoGen|colorAddress~170_combout\,
+	datab => \vga_0|videoGen|colorAddress~138_combout\,
+	datad => \vga_0|videoGen|colorAddress~169_combout\,
+	combout => \vga_0|videoGen|colorAddress~171_combout\);
+
+-- Location: LCCOMB_X25_Y23_N6
+\vga_0|videoGen|colorAddress~175\ : cycloneii_lcell_comb
+-- Equation(s):
+-- \vga_0|videoGen|colorAddress~175_combout\ = (\vga_0|videoGen|colorAddress~139_combout\ & (\vga_0|videoGen|colorAddress~199_combout\ & ((\vga_0|videoGen|colorAddress~172_combout\) # (\vga_0|videoGen|colorAddress~171_combout\)))) # 
+-- (!\vga_0|videoGen|colorAddress~139_combout\ & (((\vga_0|videoGen|colorAddress~171_combout\))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1100111110000000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \vga_0|videoGen|colorAddress~172_combout\,
+	datab => \vga_0|videoGen|colorAddress~199_combout\,
+	datac => \vga_0|videoGen|colorAddress~139_combout\,
+	datad => \vga_0|videoGen|colorAddress~171_combout\,
+	combout => \vga_0|videoGen|colorAddress~175_combout\);
+
+-- Location: LCCOMB_X28_Y23_N26
+\vga_0|videoGen|colorAddress~177\ : cycloneii_lcell_comb
+-- Equation(s):
+-- \vga_0|videoGen|colorAddress~177_combout\ = (!\vga_0|videoGen|colorAddress~176_combout\ & (!\vga_0|videoGen|colorAddress~138_combout\ & \vga_0|videoGen|colorAddress~169_combout\))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0001000100000000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \vga_0|videoGen|colorAddress~176_combout\,
+	datab => \vga_0|videoGen|colorAddress~138_combout\,
+	datad => \vga_0|videoGen|colorAddress~169_combout\,
+	combout => \vga_0|videoGen|colorAddress~177_combout\);
+
+-- Location: LCCOMB_X25_Y23_N20
 \vga_0|videoGen|colorAddress~178\ : cycloneii_lcell_comb
 -- Equation(s):
--- \vga_0|videoGen|colorAddress~178_combout\ = (\vga_0|videoGen|colorAddress~143_combout\ & (\vga_0|videoGen|colorAddress~203_combout\ & ((\vga_0|videoGen|colorAddress~175_combout\) # (\vga_0|videoGen|colorAddress~174_combout\)))) # 
--- (!\vga_0|videoGen|colorAddress~143_combout\ & (((\vga_0|videoGen|colorAddress~174_combout\))))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1010111110000000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \vga_0|videoGen|colorAddress~203_combout\,
-	datab => \vga_0|videoGen|colorAddress~175_combout\,
-	datac => \vga_0|videoGen|colorAddress~143_combout\,
-	datad => \vga_0|videoGen|colorAddress~174_combout\,
-	combout => \vga_0|videoGen|colorAddress~178_combout\);
-
--- Location: LCCOMB_X27_Y20_N30
-\vga_0|videoGen|colorAddress~179\ : cycloneii_lcell_comb
--- Equation(s):
--- \vga_0|videoGen|colorAddress~179_combout\ = (\vga_0|videoSync|pixel_column\(9)) # ((\vga_0|videoGen|Equal2~0_combout\ & ((\vga_0|videoSync|pixel_column\(8)))) # (!\vga_0|videoGen|Equal2~0_combout\ & (!\vga_0|videoGen|Equal3~1_combout\)))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1111101010111011",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \vga_0|videoSync|pixel_column\(9),
-	datab => \vga_0|videoGen|Equal3~1_combout\,
-	datac => \vga_0|videoSync|pixel_column\(8),
-	datad => \vga_0|videoGen|Equal2~0_combout\,
-	combout => \vga_0|videoGen|colorAddress~179_combout\);
-
--- Location: LCCOMB_X25_Y24_N10
-\vga_0|videoGen|colorAddress~180\ : cycloneii_lcell_comb
--- Equation(s):
--- \vga_0|videoGen|colorAddress~180_combout\ = (!\vga_0|videoGen|colorAddress~142_combout\ & (\vga_0|videoGen|colorAddress~172_combout\ & !\vga_0|videoGen|colorAddress~179_combout\))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0000000000110000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	datab => \vga_0|videoGen|colorAddress~142_combout\,
-	datac => \vga_0|videoGen|colorAddress~172_combout\,
-	datad => \vga_0|videoGen|colorAddress~179_combout\,
-	combout => \vga_0|videoGen|colorAddress~180_combout\);
-
--- Location: LCCOMB_X25_Y24_N20
-\vga_0|videoGen|colorAddress~181\ : cycloneii_lcell_comb
--- Equation(s):
--- \vga_0|videoGen|colorAddress~181_combout\ = (\vga_0|videoGen|colorAddress~143_combout\ & (((!\vga_0|videoGen|colorAddress~175_combout\)) # (!\vga_0|videoGen|colorAddress~177_combout\))) # (!\vga_0|videoGen|colorAddress~143_combout\ & 
--- (((!\vga_0|videoGen|colorAddress~180_combout\))))
+-- \vga_0|videoGen|colorAddress~178_combout\ = (\vga_0|videoGen|colorAddress~139_combout\ & (((!\vga_0|videoGen|colorAddress~174_combout\)) # (!\vga_0|videoGen|colorAddress~172_combout\))) # (!\vga_0|videoGen|colorAddress~139_combout\ & 
+-- (((!\vga_0|videoGen|colorAddress~177_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -8876,131 +8844,82 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \vga_0|videoGen|colorAddress~177_combout\,
-	datab => \vga_0|videoGen|colorAddress~175_combout\,
-	datac => \vga_0|videoGen|colorAddress~143_combout\,
-	datad => \vga_0|videoGen|colorAddress~180_combout\,
-	combout => \vga_0|videoGen|colorAddress~181_combout\);
+	dataa => \vga_0|videoGen|colorAddress~172_combout\,
+	datab => \vga_0|videoGen|colorAddress~174_combout\,
+	datac => \vga_0|videoGen|colorAddress~139_combout\,
+	datad => \vga_0|videoGen|colorAddress~177_combout\,
+	combout => \vga_0|videoGen|colorAddress~178_combout\);
 
--- Location: LCCOMB_X25_Y23_N4
-\vga_0|videoGen|colorAddress~187\ : cycloneii_lcell_comb
+-- Location: LCCOMB_X25_Y25_N0
+\vga_0|videoGen|colorAddress~179\ : cycloneii_lcell_comb
 -- Equation(s):
--- \vga_0|videoGen|colorAddress~187_combout\ = (!\vga_0|videoSync|pixel_column\(9) & ((\vga_0|videoGen|bit_addr\(2) & (\vga_0|videoGen|Mux653~1_combout\)) # (!\vga_0|videoGen|bit_addr\(2) & ((\vga_0|videoGen|Mux653~3_combout\)))))
+-- \vga_0|videoGen|colorAddress~179_combout\ = (\vga_0|videoGen|Equal3~1_combout\ & ((\vga_0|videoSync|pixel_column\(8)))) # (!\vga_0|videoGen|Equal3~1_combout\ & (\vga_0|videoGen|Equal2~0_combout\))
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "0100010101000000",
+	lut_mask => "1110010011100100",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \vga_0|videoSync|pixel_column\(9),
-	datab => \vga_0|videoGen|Mux653~1_combout\,
-	datac => \vga_0|videoGen|bit_addr\(2),
-	datad => \vga_0|videoGen|Mux653~3_combout\,
-	combout => \vga_0|videoGen|colorAddress~187_combout\);
+	dataa => \vga_0|videoGen|Equal3~1_combout\,
+	datab => \vga_0|videoGen|Equal2~0_combout\,
+	datac => \vga_0|videoSync|pixel_column\(8),
+	combout => \vga_0|videoGen|colorAddress~179_combout\);
 
--- Location: LCCOMB_X25_Y25_N8
+-- Location: LCCOMB_X28_Y22_N16
+\vga_0|videoGen|colorAddress~182\ : cycloneii_lcell_comb
+-- Equation(s):
+-- \vga_0|videoGen|colorAddress~182_combout\ = (\vga_0|videoGen|colorAddress~181_combout\ & (\vga_0|videoGen|colorAddress~125_combout\ & (\vga_0|videoGen|colorAddress~129_combout\ & \vga_0|videoGen|colorAddress~135_combout\)))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1000000000000000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \vga_0|videoGen|colorAddress~181_combout\,
+	datab => \vga_0|videoGen|colorAddress~125_combout\,
+	datac => \vga_0|videoGen|colorAddress~129_combout\,
+	datad => \vga_0|videoGen|colorAddress~135_combout\,
+	combout => \vga_0|videoGen|colorAddress~182_combout\);
+
+-- Location: LCCOMB_X25_Y23_N28
 \vga_0|videoGen|colorAddress~183\ : cycloneii_lcell_comb
 -- Equation(s):
--- \vga_0|videoGen|colorAddress~183_combout\ = (!\vga_0|videoGen|pixelDraw~63_combout\ & (\vga_0|videoGen|pixelDraw~14_combout\ & (\vga_0|videoGen|colorAddress~175_combout\ & \vga_0|videoGen|pixelDraw~18_combout\)))
+-- \vga_0|videoGen|colorAddress~183_combout\ = (\vga_0|videoGen|placeShip_on~combout\ & ((\vga_0|videoGen|Mux653~4_combout\) # ((\vga_0|videoGen|colorAddress~182_combout\ & \vga_0|videoGen|colorAddress~119_combout\)))) # 
+-- (!\vga_0|videoGen|placeShip_on~combout\ & (\vga_0|videoGen|colorAddress~182_combout\ & ((\vga_0|videoGen|colorAddress~119_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "0100000000000000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \vga_0|videoGen|pixelDraw~63_combout\,
-	datab => \vga_0|videoGen|pixelDraw~14_combout\,
-	datac => \vga_0|videoGen|colorAddress~175_combout\,
-	datad => \vga_0|videoGen|pixelDraw~18_combout\,
-	combout => \vga_0|videoGen|colorAddress~183_combout\);
-
--- Location: LCCOMB_X25_Y25_N28
-\vga_0|videoGen|pixelDraw~78\ : cycloneii_lcell_comb
--- Equation(s):
--- \vga_0|videoGen|pixelDraw~78_combout\ = (\vga_0|videoGen|LessThan23~2_combout\) # ((!\vga_0|videoGen|pixelDraw~13_combout\) # (!\vga_0|videoGen|pixelDraw~15_combout\))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1010111111111111",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \vga_0|videoGen|LessThan23~2_combout\,
-	datac => \vga_0|videoGen|pixelDraw~15_combout\,
-	datad => \vga_0|videoGen|pixelDraw~13_combout\,
-	combout => \vga_0|videoGen|pixelDraw~78_combout\);
-
--- Location: LCCOMB_X25_Y25_N26
-\vga_0|videoGen|colorAddress~184\ : cycloneii_lcell_comb
--- Equation(s):
--- \vga_0|videoGen|colorAddress~184_combout\ = (\vga_0|videoGen|colorAddress~141_combout\ & (\vga_0|videoGen|colorAddress~139_combout\ & (\vga_0|videoGen|colorAddress~183_combout\ & \vga_0|videoGen|pixelDraw~78_combout\)))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1000000000000000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \vga_0|videoGen|colorAddress~141_combout\,
-	datab => \vga_0|videoGen|colorAddress~139_combout\,
-	datac => \vga_0|videoGen|colorAddress~183_combout\,
-	datad => \vga_0|videoGen|pixelDraw~78_combout\,
-	combout => \vga_0|videoGen|colorAddress~184_combout\);
-
--- Location: LCCOMB_X24_Y24_N6
-\vga_0|videoGen|colorAddress~185\ : cycloneii_lcell_comb
--- Equation(s):
--- \vga_0|videoGen|colorAddress~185_combout\ = (\vga_0|videoGen|colorAddress~133_combout\ & (\vga_0|videoGen|colorAddress~129_combout\ & (\vga_0|videoGen|colorAddress~123_combout\ & \vga_0|videoGen|colorAddress~184_combout\)))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1000000000000000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \vga_0|videoGen|colorAddress~133_combout\,
-	datab => \vga_0|videoGen|colorAddress~129_combout\,
-	datac => \vga_0|videoGen|colorAddress~123_combout\,
-	datad => \vga_0|videoGen|colorAddress~184_combout\,
-	combout => \vga_0|videoGen|colorAddress~185_combout\);
-
--- Location: LCCOMB_X24_Y24_N20
-\vga_0|videoGen|colorAddress~186\ : cycloneii_lcell_comb
--- Equation(s):
--- \vga_0|videoGen|colorAddress~186_combout\ = (\vga_0|videoGen|colorAddress~185_combout\) # ((\vga_0|videoGen|placeShip_on~combout\ & \vga_0|videoGen|Mux653~4_combout\))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1111111110100000",
+	lut_mask => "1110110010100000",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
 	dataa => \vga_0|videoGen|placeShip_on~combout\,
+	datab => \vga_0|videoGen|colorAddress~182_combout\,
 	datac => \vga_0|videoGen|Mux653~4_combout\,
-	datad => \vga_0|videoGen|colorAddress~185_combout\,
-	combout => \vga_0|videoGen|colorAddress~186_combout\);
+	datad => \vga_0|videoGen|colorAddress~119_combout\,
+	combout => \vga_0|videoGen|colorAddress~183_combout\);
 
--- Location: LCCOMB_X24_Y24_N22
-\vga_0|videoGen|colorAddress~188\ : cycloneii_lcell_comb
+-- Location: LCCOMB_X25_Y23_N18
+\vga_0|videoGen|colorAddress~185\ : cycloneii_lcell_comb
 -- Equation(s):
--- \vga_0|videoGen|colorAddress~188_combout\ = (\vga_0|videoGen|colorAddress~187_combout\ & ((\vga_0|videoGen|colorAddress~182_combout\) # ((!\vga_0|videoGen|Equal3~1_combout\ & \vga_0|videoGen|colorAddress~186_combout\)))) # 
--- (!\vga_0|videoGen|colorAddress~187_combout\ & (((\vga_0|videoGen|colorAddress~186_combout\))))
+-- \vga_0|videoGen|colorAddress~185_combout\ = (\vga_0|videoGen|colorAddress~184_combout\ & ((\vga_0|videoGen|colorAddress~179_combout\) # ((!\vga_0|videoGen|Equal3~1_combout\ & \vga_0|videoGen|colorAddress~183_combout\)))) # 
+-- (!\vga_0|videoGen|colorAddress~184_combout\ & (((\vga_0|videoGen|colorAddress~183_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "1011111110001000",
+	lut_mask => "1111011110100000",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \vga_0|videoGen|colorAddress~182_combout\,
-	datab => \vga_0|videoGen|colorAddress~187_combout\,
-	datac => \vga_0|videoGen|Equal3~1_combout\,
-	datad => \vga_0|videoGen|colorAddress~186_combout\,
-	combout => \vga_0|videoGen|colorAddress~188_combout\);
+	dataa => \vga_0|videoGen|colorAddress~184_combout\,
+	datab => \vga_0|videoGen|Equal3~1_combout\,
+	datac => \vga_0|videoGen|colorAddress~179_combout\,
+	datad => \vga_0|videoGen|colorAddress~183_combout\,
+	combout => \vga_0|videoGen|colorAddress~185_combout\);
 
--- Location: M4K_X26_Y24
+-- Location: M4K_X26_Y23
 \vga_0|videoGen|colors|altsyncram_component|auto_generated|ram_block1a0\ : cycloneii_ram_block
 -- pragma translate_off
 GENERIC MAP (
@@ -9038,41 +8957,41 @@ PORT MAP (
 	devpor => ww_devpor,
 	portadataout => \vga_0|videoGen|colors|altsyncram_component|auto_generated|ram_block1a0_PORTADATAOUT_bus\);
 
--- Location: LCCOMB_X21_Y22_N30
+-- Location: LCCOMB_X25_Y26_N4
 \vga_0|videoSync|process_1~3\ : cycloneii_lcell_comb
 -- Equation(s):
--- \vga_0|videoSync|process_1~3_combout\ = (\vga_0|videoSync|h_count\(8)) # (((\vga_0|videoSync|process_1~2_combout\) # (!\vga_0|videoSync|h_count\(9))) # (!\vga_0|videoSync|h_count\(7)))
+-- \vga_0|videoSync|process_1~3_combout\ = (\vga_0|videoSync|process_1~2_combout\) # (((\vga_0|videoSync|h_count\(8)) # (!\vga_0|videoSync|h_count\(7))) # (!\vga_0|videoSync|h_count\(9)))
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "1111111110111111",
+	lut_mask => "1111101111111111",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \vga_0|videoSync|h_count\(8),
-	datab => \vga_0|videoSync|h_count\(7),
-	datac => \vga_0|videoSync|h_count\(9),
-	datad => \vga_0|videoSync|process_1~2_combout\,
+	dataa => \vga_0|videoSync|process_1~2_combout\,
+	datab => \vga_0|videoSync|h_count\(9),
+	datac => \vga_0|videoSync|h_count\(8),
+	datad => \vga_0|videoSync|h_count\(7),
 	combout => \vga_0|videoSync|process_1~3_combout\);
 
--- Location: LCCOMB_X21_Y22_N0
+-- Location: LCCOMB_X25_Y26_N30
 \vga_0|videoSync|process_1~6\ : cycloneii_lcell_comb
 -- Equation(s):
 -- \vga_0|videoSync|process_1~6_combout\ = (\vga_0|videoSync|process_1~3_combout\) # ((\vga_0|videoSync|process_1~4_combout\ & (\vga_0|videoSync|process_1~5_combout\ & \vga_0|videoSync|h_count\(6))))
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "1111111110000000",
+	lut_mask => "1111100011110000",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
 	dataa => \vga_0|videoSync|process_1~4_combout\,
 	datab => \vga_0|videoSync|process_1~5_combout\,
-	datac => \vga_0|videoSync|h_count\(6),
-	datad => \vga_0|videoSync|process_1~3_combout\,
+	datac => \vga_0|videoSync|process_1~3_combout\,
+	datad => \vga_0|videoSync|h_count\(6),
 	combout => \vga_0|videoSync|process_1~6_combout\);
 
--- Location: LCFF_X21_Y22_N1
+-- Location: LCFF_X25_Y26_N31
 \vga_0|videoSync|horiz_sync\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \vga_0|videoSync|pixel_clock_int~clkctrl_outclk\,
@@ -9081,34 +9000,64 @@ PORT MAP (
 	devpor => ww_devpor,
 	regout => \vga_0|videoSync|horiz_sync~regout\);
 
--- Location: LCFF_X20_Y22_N21
+-- Location: LCCOMB_X24_Y26_N20
+\vga_0|videoSync|horiz_sync_out~feeder\ : cycloneii_lcell_comb
+-- Equation(s):
+-- \vga_0|videoSync|horiz_sync_out~feeder_combout\ = \vga_0|videoSync|horiz_sync~regout\
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1111111100000000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	datad => \vga_0|videoSync|horiz_sync~regout\,
+	combout => \vga_0|videoSync|horiz_sync_out~feeder_combout\);
+
+-- Location: LCFF_X24_Y26_N21
 \vga_0|videoSync|horiz_sync_out\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \vga_0|videoSync|pixel_clock_int~clkctrl_outclk\,
-	sdata => \vga_0|videoSync|horiz_sync~regout\,
-	sload => VCC,
+	datain => \vga_0|videoSync|horiz_sync_out~feeder_combout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
 	regout => \vga_0|videoSync|horiz_sync_out~regout\);
 
--- Location: LCCOMB_X21_Y21_N22
-\vga_0|videoSync|process_1~8\ : cycloneii_lcell_comb
+-- Location: LCCOMB_X28_Y27_N4
+\vga_0|videoSync|process_1~7\ : cycloneii_lcell_comb
 -- Equation(s):
--- \vga_0|videoSync|process_1~8_combout\ = (\vga_0|videoSync|process_1~7_combout\) # ((\vga_0|videoSync|v_count\(9)) # ((\vga_0|videoSync|v_count\(4)) # (!\vga_0|videoSync|LessThan6~0_combout\)))
+-- \vga_0|videoSync|process_1~7_combout\ = ((\vga_0|videoSync|v_count\(1) & ((\vga_0|videoSync|v_count\(2)) # (!\vga_0|videoSync|v_count\(0)))) # (!\vga_0|videoSync|v_count\(1) & ((!\vga_0|videoSync|v_count\(2))))) # (!\vga_0|videoSync|v_count\(3))
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "1111111011111111",
+	lut_mask => "1011101101111111",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \vga_0|videoSync|process_1~7_combout\,
-	datab => \vga_0|videoSync|v_count\(9),
-	datac => \vga_0|videoSync|v_count\(4),
-	datad => \vga_0|videoSync|LessThan6~0_combout\,
+	dataa => \vga_0|videoSync|v_count\(1),
+	datab => \vga_0|videoSync|v_count\(3),
+	datac => \vga_0|videoSync|v_count\(0),
+	datad => \vga_0|videoSync|v_count\(2),
+	combout => \vga_0|videoSync|process_1~7_combout\);
+
+-- Location: LCCOMB_X28_Y27_N20
+\vga_0|videoSync|process_1~8\ : cycloneii_lcell_comb
+-- Equation(s):
+-- \vga_0|videoSync|process_1~8_combout\ = (\vga_0|videoSync|v_count\(4)) # (((\vga_0|videoSync|process_1~7_combout\) # (\vga_0|videoSync|v_count\(9))) # (!\vga_0|videoSync|LessThan6~0_combout\))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1111111111111011",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \vga_0|videoSync|v_count\(4),
+	datab => \vga_0|videoSync|LessThan6~0_combout\,
+	datac => \vga_0|videoSync|process_1~7_combout\,
+	datad => \vga_0|videoSync|v_count\(9),
 	combout => \vga_0|videoSync|process_1~8_combout\);
 
--- Location: LCFF_X21_Y21_N23
+-- Location: LCFF_X28_Y27_N21
 \vga_0|videoSync|vert_sync\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \vga_0|videoSync|pixel_clock_int~clkctrl_outclk\,
@@ -9117,7 +9066,7 @@ PORT MAP (
 	devpor => ww_devpor,
 	regout => \vga_0|videoSync|vert_sync~regout\);
 
--- Location: LCCOMB_X21_Y21_N16
+-- Location: LCCOMB_X24_Y27_N28
 \vga_0|videoSync|vert_sync_out~feeder\ : cycloneii_lcell_comb
 -- Equation(s):
 -- \vga_0|videoSync|vert_sync_out~feeder_combout\ = \vga_0|videoSync|vert_sync~regout\
@@ -9131,7 +9080,7 @@ PORT MAP (
 	datad => \vga_0|videoSync|vert_sync~regout\,
 	combout => \vga_0|videoSync|vert_sync_out~feeder_combout\);
 
--- Location: LCFF_X21_Y21_N17
+-- Location: LCFF_X24_Y27_N29
 \vga_0|videoSync|vert_sync_out\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \vga_0|videoSync|pixel_clock_int~clkctrl_outclk\,
@@ -9140,7 +9089,7 @@ PORT MAP (
 	devpor => ww_devpor,
 	regout => \vga_0|videoSync|vert_sync_out~regout\);
 
--- Location: LCFF_X21_Y22_N11
+-- Location: LCFF_X25_Y26_N17
 \vga_0|videoSync|video_on_h\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \vga_0|videoSync|pixel_clock_int~clkctrl_outclk\,
@@ -9150,30 +9099,17 @@ PORT MAP (
 	devpor => ww_devpor,
 	regout => \vga_0|videoSync|video_on_h~regout\);
 
--- Location: LCCOMB_X21_Y22_N12
-\vga_0|videoSync|video_on_v~feeder\ : cycloneii_lcell_comb
--- Equation(s):
--- \vga_0|videoSync|video_on_v~feeder_combout\ = \vga_0|videoSync|LessThan6~2_combout\
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1111111100000000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	datad => \vga_0|videoSync|LessThan6~2_combout\,
-	combout => \vga_0|videoSync|video_on_v~feeder_combout\);
-
--- Location: LCFF_X21_Y22_N13
+-- Location: LCFF_X28_Y26_N5
 \vga_0|videoSync|video_on_v\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \vga_0|videoSync|pixel_clock_int~clkctrl_outclk\,
-	datain => \vga_0|videoSync|video_on_v~feeder_combout\,
+	sdata => \vga_0|videoSync|LessThan6~2_combout\,
+	sload => VCC,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
 	regout => \vga_0|videoSync|video_on_v~regout\);
 
--- Location: LCCOMB_X21_Y22_N10
+-- Location: LCCOMB_X25_Y26_N16
 \vga_0|videoSync|video_on\ : cycloneii_lcell_comb
 -- Equation(s):
 -- \vga_0|videoSync|video_on~combout\ = (\vga_0|videoSync|video_on_h~regout\ & \vga_0|videoSync|video_on_v~regout\)

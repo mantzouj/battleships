@@ -3,20 +3,20 @@ TimeQuest Timing Analyzer Summary
 ------------------------------------------------------------
 
 Type  : Slow Model Setup 'VGA_top_level:vga_0|VGA_SYNC:videoSync|pixel_clock_int'
-Slack : -14.173
-TNS   : -132.935
-
-Type  : Slow Model Setup 'VGA_top_level:vga_0|VGA_SYNC:videoSync|pixel_column[8]'
-Slack : -3.470
-TNS   : -25.448
+Slack : -14.106
+TNS   : -151.088
 
 Type  : Slow Model Setup 'clk'
-Slack : -2.972
-TNS   : -117.782
+Slack : -3.099
+TNS   : -125.046
+
+Type  : Slow Model Setup 'VGA_top_level:vga_0|VGA_SYNC:videoSync|pixel_column[8]'
+Slack : -1.969
+TNS   : -12.813
 
 Type  : Slow Model Hold 'VGA_top_level:vga_0|VGA_SYNC:videoSync|pixel_column[8]'
-Slack : -3.252
-TNS   : -25.791
+Slack : -3.108
+TNS   : -24.844
 
 Type  : Slow Model Hold 'clk'
 Slack : -2.549
@@ -35,32 +35,32 @@ Slack : -1.423
 TNS   : -53.538
 
 Type  : Slow Model Minimum Pulse Width 'VGA_top_level:vga_0|VGA_SYNC:videoSync|pixel_column[8]'
-Slack : -0.475
-TNS   : -29.450
+Slack : 0.493
+TNS   : 0.000
 
 Type  : Fast Model Setup 'VGA_top_level:vga_0|VGA_SYNC:videoSync|pixel_clock_int'
-Slack : -5.622
-TNS   : -38.635
-
-Type  : Fast Model Setup 'VGA_top_level:vga_0|VGA_SYNC:videoSync|pixel_column[8]'
-Slack : -1.341
-TNS   : -9.066
+Slack : -5.554
+TNS   : -47.137
 
 Type  : Fast Model Setup 'clk'
-Slack : -0.877
-TNS   : -32.482
+Slack : -0.938
+TNS   : -35.974
+
+Type  : Fast Model Setup 'VGA_top_level:vga_0|VGA_SYNC:videoSync|pixel_column[8]'
+Slack : -0.664
+TNS   : -4.106
 
 Type  : Fast Model Hold 'VGA_top_level:vga_0|VGA_SYNC:videoSync|pixel_column[8]'
-Slack : -1.785
-TNS   : -12.845
+Slack : -1.786
+TNS   : -13.150
 
 Type  : Fast Model Hold 'clk'
 Slack : -1.590
 TNS   : -1.590
 
 Type  : Fast Model Hold 'VGA_top_level:vga_0|VGA_SYNC:videoSync|pixel_clock_int'
-Slack : -0.039
-TNS   : -0.053
+Slack : -0.174
+TNS   : -0.202
 
 Type  : Fast Model Minimum Pulse Width 'clk'
 Slack : -1.423
@@ -71,7 +71,7 @@ Slack : -1.423
 TNS   : -53.538
 
 Type  : Fast Model Minimum Pulse Width 'VGA_top_level:vga_0|VGA_SYNC:videoSync|pixel_column[8]'
-Slack : 0.060
+Slack : 0.497
 TNS   : 0.000
 
 ------------------------------------------------------------

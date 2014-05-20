@@ -1,5 +1,5 @@
 Fitter report for battleships
-Mon May 19 12:35:22 2014
+Mon May 19 19:20:36 2014
 Quartus II 32-bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -65,15 +65,15 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Fitter Summary                                                                       ;
 +------------------------------------+-------------------------------------------------+
-; Fitter Status                      ; Successful - Mon May 19 12:35:22 2014           ;
+; Fitter Status                      ; Successful - Mon May 19 19:20:36 2014           ;
 ; Quartus II 32-bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; battleships                                     ;
 ; Top-level Entity Name              ; battleships                                     ;
 ; Family                             ; Cyclone II                                      ;
 ; Device                             ; EP2C35F672C6                                    ;
 ; Timing Models                      ; Final                                           ;
-; Total logic elements               ; 455 / 33,216 ( 1 % )                            ;
-;     Total combinational functions  ; 453 / 33,216 ( 1 % )                            ;
+; Total logic elements               ; 451 / 33,216 ( 1 % )                            ;
+;     Total combinational functions  ; 449 / 33,216 ( 1 % )                            ;
 ;     Dedicated logic registers      ; 46 / 33,216 ( < 1 % )                           ;
 ; Total registers                    ; 46                                              ;
 ; Total pins                         ; 129 / 475 ( 27 % )                              ;
@@ -161,8 +161,8 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ; Type                ; Value                  ;
 +---------------------+------------------------+
 ; Placement (by node) ;                        ;
-;     -- Requested    ; 0 / 673 ( 0.00 % )     ;
-;     -- Achieved     ; 0 / 673 ( 0.00 % )     ;
+;     -- Requested    ; 0 / 669 ( 0.00 % )     ;
+;     -- Achieved     ; 0 / 669 ( 0.00 % )     ;
 ;                     ;                        ;
 ; Routing (by net)    ;                        ;
 ;     -- Requested    ; 0 / 0 ( 0.00 % )       ;
@@ -185,7 +185,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +--------------------------------+---------+-------------------+-------------------------+-------------------+
 ; Partition Name                 ; # Nodes ; # Preserved Nodes ; Preservation Level Used ; Netlist Type Used ;
 +--------------------------------+---------+-------------------+-------------------------+-------------------+
-; Top                            ; 670     ; 0                 ; N/A                     ; Source File       ;
+; Top                            ; 666     ; 0                 ; N/A                     ; Source File       ;
 ; hard_block:auto_generated_inst ; 3       ; 0                 ; N/A                     ; Source File       ;
 +--------------------------------+---------+-------------------+-------------------------+-------------------+
 
@@ -201,26 +201,26 @@ The pin-out file can be found in C:/Users/BrianL/Documents/GitHub/battleships/ou
 +---------------------------------------------+--------------------------+
 ; Resource                                    ; Usage                    ;
 +---------------------------------------------+--------------------------+
-; Total logic elements                        ; 455 / 33,216 ( 1 % )     ;
-;     -- Combinational with no register       ; 409                      ;
+; Total logic elements                        ; 451 / 33,216 ( 1 % )     ;
+;     -- Combinational with no register       ; 405                      ;
 ;     -- Register only                        ; 2                        ;
 ;     -- Combinational with a register        ; 44                       ;
 ;                                             ;                          ;
 ; Logic element usage by number of LUT inputs ;                          ;
 ;     -- 4 input functions                    ; 304                      ;
-;     -- 3 input functions                    ; 97                       ;
-;     -- <=2 input functions                  ; 52                       ;
+;     -- 3 input functions                    ; 99                       ;
+;     -- <=2 input functions                  ; 46                       ;
 ;     -- Register only                        ; 2                        ;
 ;                                             ;                          ;
 ; Logic elements by mode                      ;                          ;
-;     -- normal mode                          ; 435                      ;
+;     -- normal mode                          ; 431                      ;
 ;     -- arithmetic mode                      ; 18                       ;
 ;                                             ;                          ;
 ; Total registers*                            ; 46 / 34,593 ( < 1 % )    ;
 ;     -- Dedicated logic registers            ; 46 / 33,216 ( < 1 % )    ;
 ;     -- I/O registers                        ; 0 / 1,377 ( 0 % )        ;
 ;                                             ;                          ;
-; Total LABs:  partially or completely used   ; 33 / 2,076 ( 2 % )       ;
+; Total LABs:  partially or completely used   ; 35 / 2,076 ( 2 % )       ;
 ; Virtual pins                                ; 0                        ;
 ; I/O pins                                    ; 129 / 475 ( 27 % )       ;
 ;     -- Clock pins                           ; 3 / 8 ( 38 % )           ;
@@ -236,11 +236,11 @@ The pin-out file can be found in C:/Users/BrianL/Documents/GitHub/battleships/ou
 ; ASMI blocks                                 ; 0 / 1 ( 0 % )            ;
 ; CRC blocks                                  ; 0 / 1 ( 0 % )            ;
 ; Average interconnect usage (total/H/V)      ; 0% / 0% / 0%             ;
-; Peak interconnect usage (total/H/V)         ; 4% / 4% / 5%             ;
-; Maximum fan-out                             ; 50                       ;
-; Highest non-global fan-out                  ; 50                       ;
-; Total fan-out                               ; 1813                     ;
-; Average fan-out                             ; 2.83                     ;
+; Peak interconnect usage (total/H/V)         ; 5% / 4% / 7%             ;
+; Maximum fan-out                             ; 57                       ;
+; Highest non-global fan-out                  ; 57                       ;
+; Total fan-out                               ; 1807                     ;
+; Average fan-out                             ; 2.84                     ;
 +---------------------------------------------+--------------------------+
 *  Register count does not include registers inside RAM blocks or DSP blocks.
 
@@ -253,25 +253,25 @@ The pin-out file can be found in C:/Users/BrianL/Documents/GitHub/battleships/ou
 +---------------------------------------------+----------------------+--------------------------------+
 ; Difficulty Clustering Region                ; Low                  ; Low                            ;
 ;                                             ;                      ;                                ;
-; Total logic elements                        ; 455 / 33216 ( 1 % )  ; 0 / 33216 ( 0 % )              ;
-;     -- Combinational with no register       ; 409                  ; 0                              ;
+; Total logic elements                        ; 451 / 33216 ( 1 % )  ; 0 / 33216 ( 0 % )              ;
+;     -- Combinational with no register       ; 405                  ; 0                              ;
 ;     -- Register only                        ; 2                    ; 0                              ;
 ;     -- Combinational with a register        ; 44                   ; 0                              ;
 ;                                             ;                      ;                                ;
 ; Logic element usage by number of LUT inputs ;                      ;                                ;
 ;     -- 4 input functions                    ; 304                  ; 0                              ;
-;     -- 3 input functions                    ; 97                   ; 0                              ;
-;     -- <=2 input functions                  ; 52                   ; 0                              ;
+;     -- 3 input functions                    ; 99                   ; 0                              ;
+;     -- <=2 input functions                  ; 46                   ; 0                              ;
 ;     -- Register only                        ; 2                    ; 0                              ;
 ;                                             ;                      ;                                ;
 ; Logic elements by mode                      ;                      ;                                ;
-;     -- normal mode                          ; 435                  ; 0                              ;
+;     -- normal mode                          ; 431                  ; 0                              ;
 ;     -- arithmetic mode                      ; 18                   ; 0                              ;
 ;                                             ;                      ;                                ;
 ; Total registers                             ; 46                   ; 0                              ;
 ;     -- Dedicated logic registers            ; 46 / 33216 ( < 1 % ) ; 0 / 33216 ( 0 % )              ;
 ;                                             ;                      ;                                ;
-; Total LABs:  partially or completely used   ; 33 / 2076 ( 2 % )    ; 0 / 2076 ( 0 % )               ;
+; Total LABs:  partially or completely used   ; 35 / 2076 ( 2 % )    ; 0 / 2076 ( 0 % )               ;
 ;                                             ;                      ;                                ;
 ; Virtual pins                                ; 0                    ; 0                              ;
 ; I/O pins                                    ; 129                  ; 0                              ;
@@ -288,8 +288,8 @@ The pin-out file can be found in C:/Users/BrianL/Documents/GitHub/battleships/ou
 ;     -- Registered Output Connections        ; 0                    ; 0                              ;
 ;                                             ;                      ;                                ;
 ; Internal Connections                        ;                      ;                                ;
-;     -- Total Connections                    ; 1813                 ; 0                              ;
-;     -- Registered Connections               ; 580                  ; 0                              ;
+;     -- Total Connections                    ; 1807                 ; 0                              ;
+;     -- Registered Connections               ; 584                  ; 0                              ;
 ;                                             ;                      ;                                ;
 ; External Connections                        ;                      ;                                ;
 ;     -- Top                                  ; 0                    ; 0                              ;
@@ -1208,10 +1208,10 @@ Note: User assignments will override these defaults. The user specified values a
 +-------------------------------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+-----------------------------------------------------------------------------------------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node                      ; Logic Cells ; Dedicated Logic Registers ; I/O Registers ; Memory Bits ; M4Ks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Full Hierarchy Name                                                                                                                     ; Library Name ;
 +-------------------------------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+-----------------------------------------------------------------------------------------------------------------------------------------+--------------+
-; |battleships                                    ; 455 (0)     ; 46 (0)                    ; 0 (0)         ; 16624       ; 5    ; 0            ; 0       ; 0         ; 129  ; 0            ; 409 (0)      ; 2 (0)             ; 44 (0)           ; |battleships                                                                                                                            ; work         ;
-;    |VGA_top_level:vga_0|                        ; 455 (0)     ; 46 (0)                    ; 0 (0)         ; 16624       ; 5    ; 0            ; 0       ; 0         ; 0    ; 0            ; 409 (0)      ; 2 (0)             ; 44 (0)           ; |battleships|VGA_top_level:vga_0                                                                                                        ; work         ;
+; |battleships                                    ; 451 (0)     ; 46 (0)                    ; 0 (0)         ; 16624       ; 5    ; 0            ; 0       ; 0         ; 129  ; 0            ; 405 (0)      ; 2 (0)             ; 44 (0)           ; |battleships                                                                                                                            ; work         ;
+;    |VGA_top_level:vga_0|                        ; 451 (0)     ; 46 (0)                    ; 0 (0)         ; 16624       ; 5    ; 0            ; 0       ; 0         ; 0    ; 0            ; 405 (0)      ; 2 (0)             ; 44 (0)           ; |battleships|VGA_top_level:vga_0                                                                                                        ; work         ;
 ;       |VGA_SYNC:videoSync|                      ; 79 (79)     ; 46 (46)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 33 (33)      ; 2 (2)             ; 44 (44)          ; |battleships|VGA_top_level:vga_0|VGA_SYNC:videoSync                                                                                     ; work         ;
-;       |pixelGenerator:videoGen|                 ; 395 (395)   ; 0 (0)                     ; 0 (0)         ; 16624       ; 5    ; 0            ; 0       ; 0         ; 0    ; 0            ; 376 (376)    ; 0 (0)             ; 19 (19)          ; |battleships|VGA_top_level:vga_0|pixelGenerator:videoGen                                                                                ; work         ;
+;       |pixelGenerator:videoGen|                 ; 391 (391)   ; 0 (0)                     ; 0 (0)         ; 16624       ; 5    ; 0            ; 0       ; 0         ; 0    ; 0            ; 372 (372)    ; 0 (0)             ; 19 (19)          ; |battleships|VGA_top_level:vga_0|pixelGenerator:videoGen                                                                                ; work         ;
 ;          |colorROM:colors|                      ; 0 (0)       ; 0 (0)                     ; 0 (0)         ; 240         ; 1    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; |battleships|VGA_top_level:vga_0|pixelGenerator:videoGen|colorROM:colors                                                                ; work         ;
 ;             |altsyncram:altsyncram_component|   ; 0 (0)       ; 0 (0)                     ; 0 (0)         ; 240         ; 1    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; |battleships|VGA_top_level:vga_0|pixelGenerator:videoGen|colorROM:colors|altsyncram:altsyncram_component                                ; work         ;
 ;                |altsyncram_pv71:auto_generated| ; 0 (0)       ; 0 (0)                     ; 0 (0)         ; 240         ; 1    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; |battleships|VGA_top_level:vga_0|pixelGenerator:videoGen|colorROM:colors|altsyncram:altsyncram_component|altsyncram_pv71:auto_generated ; work         ;
@@ -1396,12 +1396,12 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +------------------------------------------------------------+--------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
 ; Name                                                       ; Location           ; Fan-Out ; Usage        ; Global ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
 +------------------------------------------------------------+--------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
-; VGA_top_level:vga_0|VGA_SYNC:videoSync|LessThan5~0         ; LCCOMB_X21_Y22_N14 ; 11      ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; VGA_top_level:vga_0|VGA_SYNC:videoSync|LessThan6~2         ; LCCOMB_X21_Y21_N0  ; 10      ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; VGA_top_level:vga_0|VGA_SYNC:videoSync|pixel_clock_int     ; LCFF_X28_Y22_N17   ; 8       ; Clock        ; no     ; --                   ; --               ; --                        ;
-; VGA_top_level:vga_0|VGA_SYNC:videoSync|pixel_clock_int     ; LCFF_X28_Y22_N17   ; 41      ; Clock        ; yes    ; Global Clock         ; GCLK10           ; --                        ;
-; VGA_top_level:vga_0|VGA_SYNC:videoSync|v_count[9]~0        ; LCCOMB_X21_Y21_N14 ; 10      ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; VGA_top_level:vga_0|pixelGenerator:videoGen|char_addr[5]~7 ; LCCOMB_X25_Y22_N20 ; 14      ; Latch enable ; yes    ; Global Clock         ; GCLK11           ; --                        ;
+; VGA_top_level:vga_0|VGA_SYNC:videoSync|LessThan5~0         ; LCCOMB_X25_Y26_N8  ; 11      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; VGA_top_level:vga_0|VGA_SYNC:videoSync|LessThan6~2         ; LCCOMB_X28_Y27_N26 ; 10      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; VGA_top_level:vga_0|VGA_SYNC:videoSync|pixel_clock_int     ; LCFF_X29_Y22_N15   ; 8       ; Clock        ; no     ; --                   ; --               ; --                        ;
+; VGA_top_level:vga_0|VGA_SYNC:videoSync|pixel_clock_int     ; LCFF_X29_Y22_N15   ; 41      ; Clock        ; yes    ; Global Clock         ; GCLK11           ; --                        ;
+; VGA_top_level:vga_0|VGA_SYNC:videoSync|v_count[9]~0        ; LCCOMB_X28_Y27_N28 ; 10      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; VGA_top_level:vga_0|pixelGenerator:videoGen|char_addr[5]~7 ; LCCOMB_X27_Y22_N24 ; 14      ; Latch enable ; yes    ; Global Clock         ; GCLK10           ; --                        ;
 ; clk                                                        ; PIN_N2             ; 5       ; Clock        ; yes    ; Global Clock         ; GCLK2            ; --                        ;
 +------------------------------------------------------------+--------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
 
@@ -1411,8 +1411,8 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +------------------------------------------------------------+--------------------+---------+----------------------+------------------+---------------------------+
 ; Name                                                       ; Location           ; Fan-Out ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
 +------------------------------------------------------------+--------------------+---------+----------------------+------------------+---------------------------+
-; VGA_top_level:vga_0|VGA_SYNC:videoSync|pixel_clock_int     ; LCFF_X28_Y22_N17   ; 41      ; Global Clock         ; GCLK10           ; --                        ;
-; VGA_top_level:vga_0|pixelGenerator:videoGen|char_addr[5]~7 ; LCCOMB_X25_Y22_N20 ; 14      ; Global Clock         ; GCLK11           ; --                        ;
+; VGA_top_level:vga_0|VGA_SYNC:videoSync|pixel_clock_int     ; LCFF_X29_Y22_N15   ; 41      ; Global Clock         ; GCLK11           ; --                        ;
+; VGA_top_level:vga_0|pixelGenerator:videoGen|char_addr[5]~7 ; LCCOMB_X27_Y22_N24 ; 14      ; Global Clock         ; GCLK10           ; --                        ;
 ; clk                                                        ; PIN_N2             ; 5       ; Global Clock         ; GCLK2            ; --                        ;
 +------------------------------------------------------------+--------------------+---------+----------------------+------------------+---------------------------+
 
@@ -1422,79 +1422,75 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +------------------------------------------------------------------------------------------------------------------------------------+---------+
 ; Name                                                                                                                               ; Fan-Out ;
 +------------------------------------------------------------------------------------------------------------------------------------+---------+
-; VGA_top_level:vga_0|VGA_SYNC:videoSync|pixel_column[6]                                                                             ; 50      ;
-; VGA_top_level:vga_0|VGA_SYNC:videoSync|pixel_column[5]                                                                             ; 49      ;
-; VGA_top_level:vga_0|VGA_SYNC:videoSync|pixel_column[7]                                                                             ; 47      ;
-; VGA_top_level:vga_0|VGA_SYNC:videoSync|pixel_column[4]                                                                             ; 40      ;
-; VGA_top_level:vga_0|VGA_SYNC:videoSync|pixel_column[9]                                                                             ; 37      ;
+; VGA_top_level:vga_0|VGA_SYNC:videoSync|pixel_column[5]                                                                             ; 57      ;
+; VGA_top_level:vga_0|VGA_SYNC:videoSync|pixel_column[6]                                                                             ; 52      ;
+; VGA_top_level:vga_0|VGA_SYNC:videoSync|pixel_column[7]                                                                             ; 45      ;
+; VGA_top_level:vga_0|VGA_SYNC:videoSync|pixel_column[4]                                                                             ; 43      ;
+; VGA_top_level:vga_0|VGA_SYNC:videoSync|pixel_column[9]                                                                             ; 35      ;
 ; VGA_top_level:vga_0|VGA_SYNC:videoSync|pixel_column[8]                                                                             ; 28      ;
-; VGA_top_level:vga_0|VGA_SYNC:videoSync|pixel_row[5]                                                                                ; 24      ;
-; VGA_top_level:vga_0|pixelGenerator:videoGen|pixelDraw~32                                                                           ; 23      ;
-; VGA_top_level:vga_0|pixelGenerator:videoGen|pixelDraw~77                                                                           ; 21      ;
-; VGA_top_level:vga_0|pixelGenerator:videoGen|pixelDraw~27                                                                           ; 21      ;
-; VGA_top_level:vga_0|VGA_SYNC:videoSync|pixel_column[3]                                                                             ; 20      ;
+; VGA_top_level:vga_0|VGA_SYNC:videoSync|pixel_row[5]                                                                                ; 25      ;
+; VGA_top_level:vga_0|pixelGenerator:videoGen|pixelDraw~36                                                                           ; 23      ;
+; VGA_top_level:vga_0|pixelGenerator:videoGen|pixelDraw~79                                                                           ; 21      ;
+; VGA_top_level:vga_0|pixelGenerator:videoGen|pixelDraw~31                                                                           ; 20      ;
 ; VGA_top_level:vga_0|VGA_SYNC:videoSync|pixel_row[4]                                                                                ; 20      ;
-; VGA_top_level:vga_0|pixelGenerator:videoGen|pixelDraw~37                                                                           ; 19      ;
-; VGA_top_level:vga_0|pixelGenerator:videoGen|pixelDraw~29                                                                           ; 19      ;
+; VGA_top_level:vga_0|pixelGenerator:videoGen|pixelDraw~41                                                                           ; 19      ;
+; VGA_top_level:vga_0|pixelGenerator:videoGen|pixelDraw~33                                                                           ; 19      ;
+; VGA_top_level:vga_0|pixelGenerator:videoGen|pixelDraw~38                                                                           ; 18      ;
 ; VGA_top_level:vga_0|pixelGenerator:videoGen|pixelDraw~34                                                                           ; 18      ;
-; VGA_top_level:vga_0|pixelGenerator:videoGen|pixelDraw~30                                                                           ; 18      ;
-; VGA_top_level:vga_0|pixelGenerator:videoGen|pixelDraw~17                                                                           ; 18      ;
-; VGA_top_level:vga_0|pixelGenerator:videoGen|pixelDraw~42                                                                           ; 17      ;
+; VGA_top_level:vga_0|pixelGenerator:videoGen|pixelDraw~22                                                                           ; 18      ;
+; VGA_top_level:vga_0|VGA_SYNC:videoSync|pixel_column[3]                                                                             ; 18      ;
+; VGA_top_level:vga_0|pixelGenerator:videoGen|pixelDraw~46                                                                           ; 17      ;
 ; VGA_top_level:vga_0|VGA_SYNC:videoSync|pixel_row[3]                                                                                ; 17      ;
 ; VGA_top_level:vga_0|VGA_SYNC:videoSync|pixel_row[8]                                                                                ; 17      ;
 ; VGA_top_level:vga_0|VGA_SYNC:videoSync|pixel_row[6]                                                                                ; 17      ;
 ; VGA_top_level:vga_0|VGA_SYNC:videoSync|pixel_row[7]                                                                                ; 17      ;
 ; VGA_top_level:vga_0|VGA_SYNC:videoSync|pixel_row[2]                                                                                ; 16      ;
-; VGA_top_level:vga_0|pixelGenerator:videoGen|LessThan13~0                                                                           ; 14      ;
+; VGA_top_level:vga_0|pixelGenerator:videoGen|LessThan13~3                                                                           ; 15      ;
+; VGA_top_level:vga_0|pixelGenerator:videoGen|pixelDraw~21                                                                           ; 15      ;
+; VGA_top_level:vga_0|pixelGenerator:videoGen|Equal2~0                                                                               ; 14      ;
 ; VGA_top_level:vga_0|VGA_SYNC:videoSync|pixel_row[1]                                                                                ; 14      ;
-; VGA_top_level:vga_0|pixelGenerator:videoGen|placeShip_on                                                                           ; 13      ;
-; VGA_top_level:vga_0|pixelGenerator:videoGen|Equal3~1                                                                               ; 13      ;
 ; VGA_top_level:vga_0|VGA_SYNC:videoSync|pixel_column[2]                                                                             ; 13      ;
-; VGA_top_level:vga_0|pixelGenerator:videoGen|colorAddress~125                                                                       ; 12      ;
-; VGA_top_level:vga_0|pixelGenerator:videoGen|pixelDraw~16                                                                           ; 12      ;
-; VGA_top_level:vga_0|VGA_SYNC:videoSync|pixel_column[1]                                                                             ; 12      ;
+; VGA_top_level:vga_0|pixelGenerator:videoGen|colorAddress~121                                                                       ; 12      ;
+; VGA_top_level:vga_0|pixelGenerator:videoGen|Equal3~1                                                                               ; 12      ;
 ; VGA_top_level:vga_0|VGA_SYNC:videoSync|LessThan5~0                                                                                 ; 11      ;
-; VGA_top_level:vga_0|pixelGenerator:videoGen|LessThan23~2                                                                           ; 11      ;
-; VGA_top_level:vga_0|pixelGenerator:videoGen|pixelDraw~15                                                                           ; 11      ;
-; VGA_top_level:vga_0|pixelGenerator:videoGen|char_addr[0]~9                                                                         ; 10      ;
+; VGA_top_level:vga_0|VGA_SYNC:videoSync|pixel_column[1]                                                                             ; 11      ;
+; VGA_top_level:vga_0|pixelGenerator:videoGen|char_addr[1]~8                                                                         ; 10      ;
 ; VGA_top_level:vga_0|VGA_SYNC:videoSync|v_count[9]~0                                                                                ; 10      ;
 ; VGA_top_level:vga_0|VGA_SYNC:videoSync|h_count[8]                                                                                  ; 10      ;
 ; VGA_top_level:vga_0|VGA_SYNC:videoSync|LessThan6~2                                                                                 ; 10      ;
-; VGA_top_level:vga_0|pixelGenerator:videoGen|gameOverT_on                                                                           ; 10      ;
-; VGA_top_level:vga_0|pixelGenerator:videoGen|Equal2~0                                                                               ; 10      ;
-; VGA_top_level:vga_0|pixelGenerator:videoGen|colorAddress~99                                                                        ; 10      ;
-; VGA_top_level:vga_0|pixelGenerator:videoGen|char_addr[1]~8                                                                         ; 9       ;
-; VGA_top_level:vga_0|VGA_SYNC:videoSync|pixel_column[0]                                                                             ; 9       ;
+; VGA_top_level:vga_0|pixelGenerator:videoGen|placeShip_on                                                                           ; 10      ;
+; VGA_top_level:vga_0|pixelGenerator:videoGen|gameOverT_on                                                                           ; 9       ;
+; VGA_top_level:vga_0|pixelGenerator:videoGen|colorAddress~94                                                                        ; 9       ;
+; VGA_top_level:vga_0|pixelGenerator:videoGen|LessThan23~2                                                                           ; 9       ;
+; VGA_top_level:vga_0|pixelGenerator:videoGen|pixelDraw~20                                                                           ; 9       ;
 ; VGA_top_level:vga_0|VGA_SYNC:videoSync|pixel_row[0]                                                                                ; 9       ;
 ; VGA_top_level:vga_0|VGA_SYNC:videoSync|process_1~11                                                                                ; 8       ;
-; VGA_top_level:vga_0|pixelGenerator:videoGen|colorAddress~123                                                                       ; 8       ;
-; VGA_top_level:vga_0|pixelGenerator:videoGen|char_addr[6]~6                                                                         ; 8       ;
+; VGA_top_level:vga_0|pixelGenerator:videoGen|colorAddress~119                                                                       ; 8       ;
+; VGA_top_level:vga_0|pixelGenerator:videoGen|char_addr[5]~6                                                                         ; 7       ;
 ; VGA_top_level:vga_0|VGA_SYNC:videoSync|h_count[7]                                                                                  ; 7       ;
-; VGA_top_level:vga_0|pixelGenerator:videoGen|pixelDraw~67                                                                           ; 7       ;
-; VGA_top_level:vga_0|pixelGenerator:videoGen|pixelDraw~57                                                                           ; 7       ;
-; VGA_top_level:vga_0|pixelGenerator:videoGen|pixelDraw~55                                                                           ; 7       ;
-; VGA_top_level:vga_0|pixelGenerator:videoGen|pixelDraw~50                                                                           ; 7       ;
-; VGA_top_level:vga_0|pixelGenerator:videoGen|pixelDraw~41                                                                           ; 7       ;
-; VGA_top_level:vga_0|pixelGenerator:videoGen|pixelDraw~40                                                                           ; 7       ;
-; VGA_top_level:vga_0|pixelGenerator:videoGen|LessThan54~0                                                                           ; 7       ;
-; VGA_top_level:vga_0|pixelGenerator:videoGen|pixelDraw~19                                                                           ; 7       ;
+; VGA_top_level:vga_0|pixelGenerator:videoGen|pixelDraw~70                                                                           ; 7       ;
+; VGA_top_level:vga_0|pixelGenerator:videoGen|pixelDraw~58                                                                           ; 7       ;
+; VGA_top_level:vga_0|pixelGenerator:videoGen|pixelDraw~45                                                                           ; 7       ;
+; VGA_top_level:vga_0|pixelGenerator:videoGen|pixelDraw~44                                                                           ; 7       ;
+; VGA_top_level:vga_0|pixelGenerator:videoGen|pixelDraw~23                                                                           ; 7       ;
 ; VGA_top_level:vga_0|VGA_SYNC:videoSync|pixel_clock_int                                                                             ; 7       ;
-; VGA_top_level:vga_0|pixelGenerator:videoGen|char_addr[5]~56                                                                        ; 6       ;
-; VGA_top_level:vga_0|pixelGenerator:videoGen|illegal_on                                                                             ; 6       ;
-; VGA_top_level:vga_0|pixelGenerator:videoGen|char_addr[5]~38                                                                        ; 6       ;
+; VGA_top_level:vga_0|pixelGenerator:videoGen|char_addr[5]~35                                                                        ; 6       ;
 ; VGA_top_level:vga_0|VGA_SYNC:videoSync|h_count[5]                                                                                  ; 6       ;
 ; VGA_top_level:vga_0|VGA_SYNC:videoSync|h_count[9]                                                                                  ; 6       ;
 ; VGA_top_level:vga_0|VGA_SYNC:videoSync|v_count[3]                                                                                  ; 6       ;
 ; VGA_top_level:vga_0|VGA_SYNC:videoSync|v_count[2]                                                                                  ; 6       ;
 ; VGA_top_level:vga_0|VGA_SYNC:videoSync|v_count[4]                                                                                  ; 6       ;
 ; VGA_top_level:vga_0|VGA_SYNC:videoSync|v_count[8]                                                                                  ; 6       ;
-; VGA_top_level:vga_0|pixelGenerator:videoGen|colorAddress~134                                                                       ; 6       ;
-; VGA_top_level:vga_0|pixelGenerator:videoGen|colorAddress~129                                                                       ; 6       ;
-; VGA_top_level:vga_0|pixelGenerator:videoGen|pixelDraw~65                                                                           ; 6       ;
-; VGA_top_level:vga_0|pixelGenerator:videoGen|pixelDraw~52                                                                           ; 6       ;
-; VGA_top_level:vga_0|pixelGenerator:videoGen|pixelDraw~24                                                                           ; 6       ;
-; VGA_top_level:vga_0|pixelGenerator:videoGen|pixelDraw~13                                                                           ; 6       ;
-; VGA_top_level:vga_0|pixelGenerator:videoGen|LessThan13~1                                                                           ; 6       ;
+; VGA_top_level:vga_0|pixelGenerator:videoGen|LessThan13~4                                                                           ; 6       ;
+; VGA_top_level:vga_0|pixelGenerator:videoGen|colorAddress~130                                                                       ; 6       ;
+; VGA_top_level:vga_0|pixelGenerator:videoGen|colorAddress~125                                                                       ; 6       ;
+; VGA_top_level:vga_0|pixelGenerator:videoGen|pixelDraw~68                                                                           ; 6       ;
+; VGA_top_level:vga_0|pixelGenerator:videoGen|pixelDraw~60                                                                           ; 6       ;
+; VGA_top_level:vga_0|pixelGenerator:videoGen|pixelDraw~56                                                                           ; 6       ;
+; VGA_top_level:vga_0|pixelGenerator:videoGen|pixelDraw~28                                                                           ; 6       ;
+; VGA_top_level:vga_0|pixelGenerator:videoGen|LessThan334~0                                                                          ; 6       ;
+; VGA_top_level:vga_0|pixelGenerator:videoGen|LessThan53~0                                                                           ; 6       ;
+; VGA_top_level:vga_0|VGA_SYNC:videoSync|pixel_column[0]                                                                             ; 6       ;
 ; VGA_top_level:vga_0|pixelGenerator:videoGen|char_addr[6]                                                                           ; 5       ;
 ; VGA_top_level:vga_0|pixelGenerator:videoGen|char_addr[5]                                                                           ; 5       ;
 ; VGA_top_level:vga_0|pixelGenerator:videoGen|char_addr[4]                                                                           ; 5       ;
@@ -1507,6 +1503,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; VGA_top_level:vga_0|pixelGenerator:videoGen|row_addr[1]                                                                            ; 5       ;
 ; VGA_top_level:vga_0|pixelGenerator:videoGen|row_addr[0]                                                                            ; 5       ;
 ; VGA_top_level:vga_0|pixelGenerator:videoGen|hit_on                                                                                 ; 5       ;
+; VGA_top_level:vga_0|pixelGenerator:videoGen|char_addr[0]~12                                                                        ; 5       ;
 ; VGA_top_level:vga_0|VGA_SYNC:videoSync|Equal0~1                                                                                    ; 5       ;
 ; VGA_top_level:vga_0|VGA_SYNC:videoSync|h_count[4]                                                                                  ; 5       ;
 ; VGA_top_level:vga_0|VGA_SYNC:videoSync|h_count[3]                                                                                  ; 5       ;
@@ -1517,103 +1514,110 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; VGA_top_level:vga_0|VGA_SYNC:videoSync|v_count[6]                                                                                  ; 5       ;
 ; VGA_top_level:vga_0|VGA_SYNC:videoSync|v_count[5]                                                                                  ; 5       ;
 ; VGA_top_level:vga_0|VGA_SYNC:videoSync|v_count[9]                                                                                  ; 5       ;
-; VGA_top_level:vga_0|pixelGenerator:videoGen|colorAddress~149                                                                       ; 5       ;
-; VGA_top_level:vga_0|pixelGenerator:videoGen|pixelDraw~70                                                                           ; 5       ;
+; VGA_top_level:vga_0|pixelGenerator:videoGen|pixelDraw~72                                                                           ; 5       ;
+; VGA_top_level:vga_0|pixelGenerator:videoGen|pixelDraw~54                                                                           ; 5       ;
+; VGA_top_level:vga_0|pixelGenerator:videoGen|LessThan54~0                                                                           ; 5       ;
 ; VGA_top_level:vga_0|pixelGenerator:videoGen|LessThan534~0                                                                          ; 5       ;
+; VGA_top_level:vga_0|pixelGenerator:videoGen|LessThan13~2                                                                           ; 5       ;
+; VGA_top_level:vga_0|pixelGenerator:videoGen|LessThan13~0                                                                           ; 5       ;
 ; VGA_top_level:vga_0|pixelGenerator:videoGen|bit_addr[1]                                                                            ; 4       ;
 ; VGA_top_level:vga_0|pixelGenerator:videoGen|bit_addr[0]                                                                            ; 4       ;
-; VGA_top_level:vga_0|pixelGenerator:videoGen|char_addr[5]~45                                                                        ; 4       ;
+; VGA_top_level:vga_0|pixelGenerator:videoGen|char_addr[5]~42                                                                        ; 4       ;
 ; VGA_top_level:vga_0|VGA_SYNC:videoSync|Equal0~2                                                                                    ; 4       ;
 ; VGA_top_level:vga_0|VGA_SYNC:videoSync|process_1~10                                                                                ; 4       ;
 ; VGA_top_level:vga_0|VGA_SYNC:videoSync|h_count[2]                                                                                  ; 4       ;
 ; VGA_top_level:vga_0|VGA_SYNC:videoSync|h_count[1]                                                                                  ; 4       ;
 ; VGA_top_level:vga_0|VGA_SYNC:videoSync|h_count[0]                                                                                  ; 4       ;
+; VGA_top_level:vga_0|pixelGenerator:videoGen|colorAddress~145                                                                       ; 4       ;
 ; VGA_top_level:vga_0|pixelGenerator:videoGen|Mux653~4                                                                               ; 4       ;
-; VGA_top_level:vga_0|pixelGenerator:videoGen|colorAddress~111                                                                       ; 4       ;
-; VGA_top_level:vga_0|pixelGenerator:videoGen|pixelDraw~62                                                                           ; 4       ;
-; VGA_top_level:vga_0|pixelGenerator:videoGen|pixelDraw~60                                                                           ; 4       ;
-; VGA_top_level:vga_0|pixelGenerator:videoGen|pixelDraw~47                                                                           ; 4       ;
-; VGA_top_level:vga_0|pixelGenerator:videoGen|pixelDraw~45                                                                           ; 4       ;
-; VGA_top_level:vga_0|pixelGenerator:videoGen|pixelDraw~28                                                                           ; 4       ;
+; VGA_top_level:vga_0|pixelGenerator:videoGen|colorAddress~106                                                                       ; 4       ;
+; VGA_top_level:vga_0|pixelGenerator:videoGen|pixelDraw~65                                                                           ; 4       ;
+; VGA_top_level:vga_0|pixelGenerator:videoGen|pixelDraw~63                                                                           ; 4       ;
+; VGA_top_level:vga_0|pixelGenerator:videoGen|pixelDraw~61                                                                           ; 4       ;
+; VGA_top_level:vga_0|pixelGenerator:videoGen|pixelDraw~51                                                                           ; 4       ;
+; VGA_top_level:vga_0|pixelGenerator:videoGen|pixelDraw~49                                                                           ; 4       ;
+; VGA_top_level:vga_0|pixelGenerator:videoGen|pixelDraw~32                                                                           ; 4       ;
 ; VGA_top_level:vga_0|pixelGenerator:videoGen|LessThan12~0                                                                           ; 4       ;
-; VGA_top_level:vga_0|pixelGenerator:videoGen|pixelDraw~22                                                                           ; 4       ;
+; VGA_top_level:vga_0|pixelGenerator:videoGen|LessThan93~0                                                                           ; 4       ;
+; VGA_top_level:vga_0|pixelGenerator:videoGen|pixelDraw~26                                                                           ; 4       ;
+; VGA_top_level:vga_0|pixelGenerator:videoGen|LessThan613~1                                                                          ; 4       ;
 ; VGA_top_level:vga_0|pixelGenerator:videoGen|LessThan613~0                                                                          ; 4       ;
 ; VGA_top_level:vga_0|pixelGenerator:videoGen|Equal3~0                                                                               ; 4       ;
+; VGA_top_level:vga_0|pixelGenerator:videoGen|pixelDraw~19                                                                           ; 4       ;
 ; VGA_top_level:vga_0|pixelGenerator:videoGen|bit_addr[2]                                                                            ; 3       ;
 ; VGA_top_level:vga_0|VGA_SYNC:videoSync|LessThan1~2                                                                                 ; 3       ;
-; VGA_top_level:vga_0|pixelGenerator:videoGen|colorAddress~175                                                                       ; 3       ;
-; VGA_top_level:vga_0|pixelGenerator:videoGen|colorAddress~142                                                                       ; 3       ;
-; VGA_top_level:vga_0|pixelGenerator:videoGen|colorAddress~139                                                                       ; 3       ;
-; VGA_top_level:vga_0|pixelGenerator:videoGen|colorAddress~137                                                                       ; 3       ;
-; VGA_top_level:vga_0|pixelGenerator:videoGen|colorAddress~131                                                                       ; 3       ;
-; VGA_top_level:vga_0|pixelGenerator:videoGen|colorAddress~122                                                                       ; 3       ;
-; VGA_top_level:vga_0|pixelGenerator:videoGen|colorAddress~120                                                                       ; 3       ;
-; VGA_top_level:vga_0|pixelGenerator:videoGen|colorAddress~110                                                                       ; 3       ;
-; VGA_top_level:vga_0|pixelGenerator:videoGen|pixelDraw~59                                                                           ; 3       ;
+; VGA_top_level:vga_0|pixelGenerator:videoGen|colorAddress~172                                                                       ; 3       ;
+; VGA_top_level:vga_0|pixelGenerator:videoGen|colorAddress~138                                                                       ; 3       ;
+; VGA_top_level:vga_0|pixelGenerator:videoGen|colorAddress~135                                                                       ; 3       ;
+; VGA_top_level:vga_0|pixelGenerator:videoGen|colorAddress~133                                                                       ; 3       ;
+; VGA_top_level:vga_0|pixelGenerator:videoGen|colorAddress~127                                                                       ; 3       ;
+; VGA_top_level:vga_0|pixelGenerator:videoGen|LessThan133~2                                                                          ; 3       ;
+; VGA_top_level:vga_0|pixelGenerator:videoGen|colorAddress~116                                                                       ; 3       ;
+; VGA_top_level:vga_0|pixelGenerator:videoGen|colorAddress~113                                                                       ; 3       ;
+; VGA_top_level:vga_0|pixelGenerator:videoGen|colorAddress~105                                                                       ; 3       ;
+; VGA_top_level:vga_0|pixelGenerator:videoGen|colorAddress~100                                                                       ; 3       ;
+; VGA_top_level:vga_0|pixelGenerator:videoGen|pixelDraw~62                                                                           ; 3       ;
 ; VGA_top_level:vga_0|pixelGenerator:videoGen|LessThan294~1                                                                          ; 3       ;
-; VGA_top_level:vga_0|pixelGenerator:videoGen|pixelDraw~58                                                                           ; 3       ;
-; VGA_top_level:vga_0|pixelGenerator:videoGen|LessThan173~0                                                                          ; 3       ;
+; VGA_top_level:vga_0|pixelGenerator:videoGen|LessThan373~2                                                                          ; 3       ;
 ; VGA_top_level:vga_0|pixelGenerator:videoGen|LessThan773~0                                                                          ; 3       ;
-; VGA_top_level:vga_0|pixelGenerator:videoGen|LessThan43~1                                                                           ; 3       ;
-; VGA_top_level:vga_0|pixelGenerator:videoGen|LessThan334~0                                                                          ; 3       ;
+; VGA_top_level:vga_0|pixelGenerator:videoGen|placeShip_on~0                                                                         ; 3       ;
 ; VGA_top_level:vga_0|pixelGenerator:videoGen|LessThan15~1                                                                           ; 3       ;
-; VGA_top_level:vga_0|pixelGenerator:videoGen|LessThan613~1                                                                          ; 3       ;
-; VGA_top_level:vga_0|pixelGenerator:videoGen|LessThan13~2                                                                           ; 3       ;
-; VGA_top_level:vga_0|pixelGenerator:videoGen|colorAddress~200                                                                       ; 2       ;
-; VGA_top_level:vga_0|pixelGenerator:videoGen|LessThan53~3                                                                           ; 2       ;
+; VGA_top_level:vga_0|pixelGenerator:videoGen|LessThan13~1                                                                           ; 3       ;
+; VGA_top_level:vga_0|pixelGenerator:videoGen|illegal_on                                                                             ; 2       ;
+; VGA_top_level:vga_0|pixelGenerator:videoGen|colorAddress~196                                                                       ; 2       ;
+; VGA_top_level:vga_0|pixelGenerator:videoGen|colorAddress~195                                                                       ; 2       ;
 ; VGA_top_level:vga_0|pixelGenerator:videoGen|LessThan333~2                                                                          ; 2       ;
-; VGA_top_level:vga_0|pixelGenerator:videoGen|pixelDraw~78                                                                           ; 2       ;
-; VGA_top_level:vga_0|pixelGenerator:videoGen|char_addr[5]~42                                                                        ; 2       ;
+; VGA_top_level:vga_0|pixelGenerator:videoGen|LessThan653~2                                                                          ; 2       ;
+; VGA_top_level:vga_0|pixelGenerator:videoGen|pixelDraw~82                                                                           ; 2       ;
+; VGA_top_level:vga_0|pixelGenerator:videoGen|pixelDraw~80                                                                           ; 2       ;
 ; VGA_top_level:vga_0|pixelGenerator:videoGen|Mux37~0                                                                                ; 2       ;
-; VGA_top_level:vga_0|pixelGenerator:videoGen|char_addr[1]~20                                                                        ; 2       ;
-; VGA_top_level:vga_0|pixelGenerator:videoGen|char_addr[1]~17                                                                        ; 2       ;
-; VGA_top_level:vga_0|pixelGenerator:videoGen|char_addr[0]~11                                                                        ; 2       ;
+; VGA_top_level:vga_0|pixelGenerator:videoGen|char_addr[0]~10                                                                        ; 2       ;
 ; VGA_top_level:vga_0|VGA_SYNC:videoSync|LessThan1~1                                                                                 ; 2       ;
 ; VGA_top_level:vga_0|VGA_SYNC:videoSync|LessThan1~0                                                                                 ; 2       ;
 ; VGA_top_level:vga_0|VGA_SYNC:videoSync|process_1~5                                                                                 ; 2       ;
 ; VGA_top_level:vga_0|VGA_SYNC:videoSync|process_1~2                                                                                 ; 2       ;
 ; VGA_top_level:vga_0|VGA_SYNC:videoSync|LessThan6~0                                                                                 ; 2       ;
-; VGA_top_level:vga_0|pixelGenerator:videoGen|colorAddress~177                                                                       ; 2       ;
+; VGA_top_level:vga_0|pixelGenerator:videoGen|colorAddress~174                                                                       ; 2       ;
+; VGA_top_level:vga_0|pixelGenerator:videoGen|placeShip_on~1                                                                         ; 2       ;
 ; VGA_top_level:vga_0|pixelGenerator:videoGen|LessThan6~0                                                                            ; 2       ;
 ; VGA_top_level:vga_0|pixelGenerator:videoGen|LessThan5~0                                                                            ; 2       ;
-; VGA_top_level:vga_0|pixelGenerator:videoGen|LessThan373~2                                                                          ; 2       ;
-; VGA_top_level:vga_0|pixelGenerator:videoGen|colorAddress~172                                                                       ; 2       ;
-; VGA_top_level:vga_0|pixelGenerator:videoGen|colorAddress~146                                                                       ; 2       ;
-; VGA_top_level:vga_0|pixelGenerator:videoGen|colorAddress~143                                                                       ; 2       ;
-; VGA_top_level:vga_0|pixelGenerator:videoGen|colorAddress~141                                                                       ; 2       ;
-; VGA_top_level:vga_0|pixelGenerator:videoGen|colorAddress~136                                                                       ; 2       ;
-; VGA_top_level:vga_0|pixelGenerator:videoGen|colorAddress~135                                                                       ; 2       ;
+; VGA_top_level:vga_0|pixelGenerator:videoGen|colorAddress~169                                                                       ; 2       ;
+; VGA_top_level:vga_0|pixelGenerator:videoGen|colorAddress~154                                                                       ; 2       ;
+; VGA_top_level:vga_0|pixelGenerator:videoGen|colorAddress~142                                                                       ; 2       ;
+; VGA_top_level:vga_0|pixelGenerator:videoGen|colorAddress~139                                                                       ; 2       ;
+; VGA_top_level:vga_0|pixelGenerator:videoGen|colorAddress~137                                                                       ; 2       ;
+; VGA_top_level:vga_0|pixelGenerator:videoGen|colorAddress~132                                                                       ; 2       ;
+; VGA_top_level:vga_0|pixelGenerator:videoGen|colorAddress~131                                                                       ; 2       ;
+; VGA_top_level:vga_0|pixelGenerator:videoGen|pixelDraw~73                                                                           ; 2       ;
+; VGA_top_level:vga_0|pixelGenerator:videoGen|colorAddress~129                                                                       ; 2       ;
+; VGA_top_level:vga_0|pixelGenerator:videoGen|colorAddress~126                                                                       ; 2       ;
 ; VGA_top_level:vga_0|pixelGenerator:videoGen|pixelDraw~71                                                                           ; 2       ;
-; VGA_top_level:vga_0|pixelGenerator:videoGen|colorAddress~133                                                                       ; 2       ;
-; VGA_top_level:vga_0|pixelGenerator:videoGen|colorAddress~130                                                                       ; 2       ;
-; VGA_top_level:vga_0|pixelGenerator:videoGen|pixelDraw~68                                                                           ; 2       ;
-; VGA_top_level:vga_0|pixelGenerator:videoGen|colorAddress~127                                                                       ; 2       ;
+; VGA_top_level:vga_0|pixelGenerator:videoGen|colorAddress~123                                                                       ; 2       ;
+; VGA_top_level:vga_0|pixelGenerator:videoGen|pixelDraw~69                                                                           ; 2       ;
 ; VGA_top_level:vga_0|pixelGenerator:videoGen|pixelDraw~66                                                                           ; 2       ;
-; VGA_top_level:vga_0|pixelGenerator:videoGen|LessThan133~2                                                                          ; 2       ;
-; VGA_top_level:vga_0|pixelGenerator:videoGen|pixelDraw~63                                                                           ; 2       ;
 ; VGA_top_level:vga_0|pixelGenerator:videoGen|Mux653~3                                                                               ; 2       ;
 ; VGA_top_level:vga_0|pixelGenerator:videoGen|Mux653~1                                                                               ; 2       ;
-; VGA_top_level:vga_0|pixelGenerator:videoGen|colorAddress~124                                                                       ; 2       ;
+; VGA_top_level:vga_0|pixelGenerator:videoGen|colorAddress~120                                                                       ; 2       ;
 ; VGA_top_level:vga_0|pixelGenerator:videoGen|colorAddress~118                                                                       ; 2       ;
-; VGA_top_level:vga_0|pixelGenerator:videoGen|colorAddress~116                                                                       ; 2       ;
-; VGA_top_level:vga_0|pixelGenerator:videoGen|colorAddress~115                                                                       ; 2       ;
-; VGA_top_level:vga_0|pixelGenerator:videoGen|colorAddress~112                                                                       ; 2       ;
-; VGA_top_level:vga_0|pixelGenerator:videoGen|colorAddress~108                                                                       ; 2       ;
-; VGA_top_level:vga_0|pixelGenerator:videoGen|colorAddress~105                                                                       ; 2       ;
+; VGA_top_level:vga_0|pixelGenerator:videoGen|colorAddress~111                                                                       ; 2       ;
+; VGA_top_level:vga_0|pixelGenerator:videoGen|colorAddress~110                                                                       ; 2       ;
+; VGA_top_level:vga_0|pixelGenerator:videoGen|colorAddress~107                                                                       ; 2       ;
+; VGA_top_level:vga_0|pixelGenerator:videoGen|colorAddress~103                                                                       ; 2       ;
 ; VGA_top_level:vga_0|pixelGenerator:videoGen|LessThan11~3                                                                           ; 2       ;
-; VGA_top_level:vga_0|pixelGenerator:videoGen|colorAddress~102                                                                       ; 2       ;
-; VGA_top_level:vga_0|pixelGenerator:videoGen|colorAddress~101                                                                       ; 2       ;
-; VGA_top_level:vga_0|pixelGenerator:videoGen|colorAddress~100                                                                       ; 2       ;
+; VGA_top_level:vga_0|pixelGenerator:videoGen|colorAddress~97                                                                        ; 2       ;
+; VGA_top_level:vga_0|pixelGenerator:videoGen|colorAddress~96                                                                        ; 2       ;
+; VGA_top_level:vga_0|pixelGenerator:videoGen|colorAddress~95                                                                        ; 2       ;
 ; VGA_top_level:vga_0|pixelGenerator:videoGen|LessThan374~1                                                                          ; 2       ;
 ; VGA_top_level:vga_0|pixelGenerator:videoGen|LessThan134~0                                                                          ; 2       ;
 ; VGA_top_level:vga_0|pixelGenerator:videoGen|LessThan133~1                                                                          ; 2       ;
-; VGA_top_level:vga_0|pixelGenerator:videoGen|LessThan173~1                                                                          ; 2       ;
+; VGA_top_level:vga_0|pixelGenerator:videoGen|LessThan53~1                                                                           ; 2       ;
+; VGA_top_level:vga_0|pixelGenerator:videoGen|LessThan173~0                                                                          ; 2       ;
 ; VGA_top_level:vga_0|pixelGenerator:videoGen|LessThan94~0                                                                           ; 2       ;
-; VGA_top_level:vga_0|pixelGenerator:videoGen|colorAddress~78                                                                        ; 2       ;
+; VGA_top_level:vga_0|pixelGenerator:videoGen|colorAddress~73                                                                        ; 2       ;
 ; VGA_top_level:vga_0|pixelGenerator:videoGen|LessThan11~2                                                                           ; 2       ;
+; VGA_top_level:vga_0|pixelGenerator:videoGen|LessThan374~0                                                                          ; 2       ;
 ; VGA_top_level:vga_0|pixelGenerator:videoGen|LessThan373~1                                                                          ; 2       ;
 ; VGA_top_level:vga_0|pixelGenerator:videoGen|LessThan373~0                                                                          ; 2       ;
-; VGA_top_level:vga_0|pixelGenerator:videoGen|LessThan374~0                                                                          ; 2       ;
 ; VGA_top_level:vga_0|pixelGenerator:videoGen|LessThan11~0                                                                           ; 2       ;
 ; VGA_top_level:vga_0|pixelGenerator:videoGen|LessThan3~0                                                                            ; 2       ;
 ; VGA_top_level:vga_0|pixelGenerator:videoGen|LessThan47~0                                                                           ; 2       ;
@@ -1626,83 +1630,75 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; VGA_top_level:vga_0|pixelGenerator:videoGen|LessThan48~0                                                                           ; 2       ;
 ; VGA_top_level:vga_0|pixelGenerator:videoGen|LessThan15~0                                                                           ; 2       ;
 ; VGA_top_level:vga_0|pixelGenerator:videoGen|LessThan254~0                                                                          ; 2       ;
-; VGA_top_level:vga_0|pixelGenerator:videoGen|LessThan653~0                                                                          ; 2       ;
-; VGA_top_level:vga_0|pixelGenerator:videoGen|pixelDraw~18                                                                           ; 2       ;
 ; VGA_top_level:vga_0|pixelGenerator:videoGen|LessThan28~0                                                                           ; 2       ;
-; VGA_top_level:vga_0|pixelGenerator:videoGen|pixelDraw~14                                                                           ; 2       ;
-; VGA_top_level:vga_0|pixelGenerator:videoGen|LessThan53~2                                                                           ; 2       ;
-; VGA_top_level:vga_0|pixelGenerator:videoGen|LessThan13~3                                                                           ; 2       ;
 ; data_in                                                                                                                            ; 1       ;
 ; VGA_top_level:vga_0|VGA_SYNC:videoSync|pixel_clock_int~0                                                                           ; 1       ;
-; VGA_top_level:vga_0|pixelGenerator:videoGen|colorAddress~207                                                                       ; 1       ;
-; VGA_top_level:vga_0|pixelGenerator:videoGen|colorAddress~206                                                                       ; 1       ;
-; VGA_top_level:vga_0|pixelGenerator:videoGen|colorAddress~205                                                                       ; 1       ;
-; VGA_top_level:vga_0|pixelGenerator:videoGen|colorAddress~204                                                                       ; 1       ;
-; VGA_top_level:vga_0|pixelGenerator:videoGen|char_addr[4]~55                                                                        ; 1       ;
-; VGA_top_level:vga_0|pixelGenerator:videoGen|char_addr[5]~54                                                                        ; 1       ;
-; VGA_top_level:vga_0|pixelGenerator:videoGen|colorAddress~203                                                                       ; 1       ;
-; VGA_top_level:vga_0|pixelGenerator:videoGen|colorAddress~202                                                                       ; 1       ;
 ; VGA_top_level:vga_0|pixelGenerator:videoGen|colorAddress~201                                                                       ; 1       ;
-; VGA_top_level:vga_0|pixelGenerator:videoGen|LessThan493~2                                                                          ; 1       ;
+; VGA_top_level:vga_0|pixelGenerator:videoGen|char_addr[2]~56                                                                        ; 1       ;
+; VGA_top_level:vga_0|pixelGenerator:videoGen|char_addr[2]~55                                                                        ; 1       ;
+; VGA_top_level:vga_0|pixelGenerator:videoGen|char_addr[6]~54                                                                        ; 1       ;
+; VGA_top_level:vga_0|pixelGenerator:videoGen|char_addr[6]~53                                                                        ; 1       ;
+; VGA_top_level:vga_0|pixelGenerator:videoGen|colorAddress~200                                                                       ; 1       ;
+; VGA_top_level:vga_0|pixelGenerator:videoGen|char_addr[4]~52                                                                        ; 1       ;
+; VGA_top_level:vga_0|pixelGenerator:videoGen|char_addr[0]~51                                                                        ; 1       ;
+; VGA_top_level:vga_0|pixelGenerator:videoGen|char_addr[5]~50                                                                        ; 1       ;
 ; VGA_top_level:vga_0|pixelGenerator:videoGen|colorAddress~199                                                                       ; 1       ;
 ; VGA_top_level:vga_0|pixelGenerator:videoGen|colorAddress~198                                                                       ; 1       ;
 ; VGA_top_level:vga_0|pixelGenerator:videoGen|colorAddress~197                                                                       ; 1       ;
-; VGA_top_level:vga_0|pixelGenerator:videoGen|colorAddress~196                                                                       ; 1       ;
-; VGA_top_level:vga_0|pixelGenerator:videoGen|colorAddress~195                                                                       ; 1       ;
 ; VGA_top_level:vga_0|pixelGenerator:videoGen|colorAddress~194                                                                       ; 1       ;
 ; VGA_top_level:vga_0|pixelGenerator:videoGen|colorAddress~193                                                                       ; 1       ;
 ; VGA_top_level:vga_0|pixelGenerator:videoGen|colorAddress~192                                                                       ; 1       ;
 ; VGA_top_level:vga_0|pixelGenerator:videoGen|colorAddress~191                                                                       ; 1       ;
 ; VGA_top_level:vga_0|pixelGenerator:videoGen|colorAddress~190                                                                       ; 1       ;
 ; VGA_top_level:vga_0|pixelGenerator:videoGen|colorAddress~189                                                                       ; 1       ;
-; VGA_top_level:vga_0|pixelGenerator:videoGen|pixelDraw~80                                                                           ; 1       ;
-; VGA_top_level:vga_0|pixelGenerator:videoGen|pixelDraw~79                                                                           ; 1       ;
-; VGA_top_level:vga_0|pixelGenerator:videoGen|char_addr[6]~53                                                                        ; 1       ;
-; VGA_top_level:vga_0|pixelGenerator:videoGen|char_addr[6]~52                                                                        ; 1       ;
-; VGA_top_level:vga_0|pixelGenerator:videoGen|Mux40~0                                                                                ; 1       ;
-; VGA_top_level:vga_0|pixelGenerator:videoGen|char_addr[6]~51                                                                        ; 1       ;
-; VGA_top_level:vga_0|pixelGenerator:videoGen|char_addr[6]~50                                                                        ; 1       ;
+; VGA_top_level:vga_0|pixelGenerator:videoGen|colorAddress~188                                                                       ; 1       ;
+; VGA_top_level:vga_0|pixelGenerator:videoGen|colorAddress~187                                                                       ; 1       ;
+; VGA_top_level:vga_0|pixelGenerator:videoGen|colorAddress~186                                                                       ; 1       ;
+; VGA_top_level:vga_0|pixelGenerator:videoGen|pixelDraw~84                                                                           ; 1       ;
+; VGA_top_level:vga_0|pixelGenerator:videoGen|pixelDraw~83                                                                           ; 1       ;
+; VGA_top_level:vga_0|pixelGenerator:videoGen|pixelDraw~81                                                                           ; 1       ;
 ; VGA_top_level:vga_0|pixelGenerator:videoGen|char_addr[6]~49                                                                        ; 1       ;
 ; VGA_top_level:vga_0|pixelGenerator:videoGen|char_addr[6]~48                                                                        ; 1       ;
 ; VGA_top_level:vga_0|pixelGenerator:videoGen|char_addr[6]~47                                                                        ; 1       ;
-; VGA_top_level:vga_0|pixelGenerator:videoGen|char_addr[5]~46                                                                        ; 1       ;
-; VGA_top_level:vga_0|pixelGenerator:videoGen|char_addr[5]~44                                                                        ; 1       ;
+; VGA_top_level:vga_0|pixelGenerator:videoGen|char_addr[6]~46                                                                        ; 1       ;
+; VGA_top_level:vga_0|pixelGenerator:videoGen|char_addr[6]~45                                                                        ; 1       ;
+; VGA_top_level:vga_0|pixelGenerator:videoGen|char_addr[6]~44                                                                        ; 1       ;
 ; VGA_top_level:vga_0|pixelGenerator:videoGen|char_addr[5]~43                                                                        ; 1       ;
 ; VGA_top_level:vga_0|pixelGenerator:videoGen|char_addr[5]~41                                                                        ; 1       ;
 ; VGA_top_level:vga_0|pixelGenerator:videoGen|char_addr[5]~40                                                                        ; 1       ;
 ; VGA_top_level:vga_0|pixelGenerator:videoGen|char_addr[5]~39                                                                        ; 1       ;
+; VGA_top_level:vga_0|pixelGenerator:videoGen|char_addr[5]~38                                                                        ; 1       ;
 ; VGA_top_level:vga_0|pixelGenerator:videoGen|char_addr[5]~37                                                                        ; 1       ;
+; VGA_top_level:vga_0|pixelGenerator:videoGen|char_addr[5]~36                                                                        ; 1       ;
 ; VGA_top_level:vga_0|pixelGenerator:videoGen|Mux35~0                                                                                ; 1       ;
-; VGA_top_level:vga_0|pixelGenerator:videoGen|char_addr[4]~36                                                                        ; 1       ;
-; VGA_top_level:vga_0|pixelGenerator:videoGen|char_addr[4]~35                                                                        ; 1       ;
 ; VGA_top_level:vga_0|pixelGenerator:videoGen|char_addr[4]~34                                                                        ; 1       ;
+; VGA_top_level:vga_0|pixelGenerator:videoGen|char_addr[4]~33                                                                        ; 1       ;
+; VGA_top_level:vga_0|pixelGenerator:videoGen|char_addr[4]~32                                                                        ; 1       ;
+; VGA_top_level:vga_0|pixelGenerator:videoGen|char_addr[4]~31                                                                        ; 1       ;
 ; VGA_top_level:vga_0|pixelGenerator:videoGen|Mux23~0                                                                                ; 1       ;
 ; VGA_top_level:vga_0|pixelGenerator:videoGen|Mux9~0                                                                                 ; 1       ;
 ; VGA_top_level:vga_0|pixelGenerator:videoGen|Mux36~0                                                                                ; 1       ;
-; VGA_top_level:vga_0|pixelGenerator:videoGen|char_addr[3]~33                                                                        ; 1       ;
-; VGA_top_level:vga_0|pixelGenerator:videoGen|char_addr[3]~32                                                                        ; 1       ;
-; VGA_top_level:vga_0|pixelGenerator:videoGen|char_addr[3]~31                                                                        ; 1       ;
-; VGA_top_level:vga_0|pixelGenerator:videoGen|Mux30~0                                                                                ; 1       ;
 ; VGA_top_level:vga_0|pixelGenerator:videoGen|char_addr[3]~30                                                                        ; 1       ;
 ; VGA_top_level:vga_0|pixelGenerator:videoGen|char_addr[3]~29                                                                        ; 1       ;
-; VGA_top_level:vga_0|pixelGenerator:videoGen|Mux17~0                                                                                ; 1       ;
+; VGA_top_level:vga_0|pixelGenerator:videoGen|char_addr[3]~28                                                                        ; 1       ;
+; VGA_top_level:vga_0|pixelGenerator:videoGen|Mux30~0                                                                                ; 1       ;
+; VGA_top_level:vga_0|pixelGenerator:videoGen|char_addr[3]~27                                                                        ; 1       ;
+; VGA_top_level:vga_0|pixelGenerator:videoGen|char_addr[3]~26                                                                        ; 1       ;
 ; VGA_top_level:vga_0|pixelGenerator:videoGen|Mux24~0                                                                                ; 1       ;
-; VGA_top_level:vga_0|pixelGenerator:videoGen|char_addr[2]~28                                                                        ; 1       ;
-; VGA_top_level:vga_0|pixelGenerator:videoGen|char_addr[2]~27                                                                        ; 1       ;
-; VGA_top_level:vga_0|pixelGenerator:videoGen|char_addr[2]~26                                                                        ; 1       ;
-; VGA_top_level:vga_0|pixelGenerator:videoGen|Mux31~0                                                                                ; 1       ;
 ; VGA_top_level:vga_0|pixelGenerator:videoGen|char_addr[2]~25                                                                        ; 1       ;
 ; VGA_top_level:vga_0|pixelGenerator:videoGen|char_addr[2]~24                                                                        ; 1       ;
-; VGA_top_level:vga_0|pixelGenerator:videoGen|Mux11~0                                                                                ; 1       ;
+; VGA_top_level:vga_0|pixelGenerator:videoGen|char_addr[2]~23                                                                        ; 1       ;
+; VGA_top_level:vga_0|pixelGenerator:videoGen|Mux31~0                                                                                ; 1       ;
+; VGA_top_level:vga_0|pixelGenerator:videoGen|char_addr[2]~22                                                                        ; 1       ;
 ; VGA_top_level:vga_0|pixelGenerator:videoGen|Mux25~0                                                                                ; 1       ;
-; VGA_top_level:vga_0|pixelGenerator:videoGen|char_addr[1]~23                                                                        ; 1       ;
-; VGA_top_level:vga_0|pixelGenerator:videoGen|char_addr[1]~22                                                                        ; 1       ;
 ; VGA_top_level:vga_0|pixelGenerator:videoGen|char_addr[1]~21                                                                        ; 1       ;
+; VGA_top_level:vga_0|pixelGenerator:videoGen|char_addr[1]~20                                                                        ; 1       ;
 ; VGA_top_level:vga_0|pixelGenerator:videoGen|char_addr[1]~19                                                                        ; 1       ;
-; VGA_top_level:vga_0|pixelGenerator:videoGen|char_addr[1]~18                                                                        ; 1       ;
 ; VGA_top_level:vga_0|pixelGenerator:videoGen|Mux12~0                                                                                ; 1       ;
 ; VGA_top_level:vga_0|pixelGenerator:videoGen|Mux26~0                                                                                ; 1       ;
-; VGA_top_level:vga_0|pixelGenerator:videoGen|char_addr[0]~16                                                                        ; 1       ;
+; VGA_top_level:vga_0|pixelGenerator:videoGen|char_addr[1]~18                                                                        ; 1       ;
+; VGA_top_level:vga_0|pixelGenerator:videoGen|char_addr[1]~17                                                                        ; 1       ;
+; VGA_top_level:vga_0|pixelGenerator:videoGen|char_addr[1]~16                                                                        ; 1       ;
 ; VGA_top_level:vga_0|pixelGenerator:videoGen|char_addr[0]~15                                                                        ; 1       ;
 ; VGA_top_level:vga_0|pixelGenerator:videoGen|Mux33~0                                                                                ; 1       ;
 ; VGA_top_level:vga_0|pixelGenerator:videoGen|char_addr[0]~14                                                                        ; 1       ;
@@ -1710,8 +1706,8 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; VGA_top_level:vga_0|pixelGenerator:videoGen|char_addr[0]~13                                                                        ; 1       ;
 ; VGA_top_level:vga_0|pixelGenerator:videoGen|Mux13~1                                                                                ; 1       ;
 ; VGA_top_level:vga_0|pixelGenerator:videoGen|Mux13~0                                                                                ; 1       ;
-; VGA_top_level:vga_0|pixelGenerator:videoGen|char_addr[0]~12                                                                        ; 1       ;
-; VGA_top_level:vga_0|pixelGenerator:videoGen|char_addr[0]~10                                                                        ; 1       ;
+; VGA_top_level:vga_0|pixelGenerator:videoGen|char_addr[0]~11                                                                        ; 1       ;
+; VGA_top_level:vga_0|pixelGenerator:videoGen|char_addr[0]~9                                                                         ; 1       ;
 ; VGA_top_level:vga_0|VGA_SYNC:videoSync|h_count~3                                                                                   ; 1       ;
 ; VGA_top_level:vga_0|VGA_SYNC:videoSync|h_count~2                                                                                   ; 1       ;
 ; VGA_top_level:vga_0|VGA_SYNC:videoSync|h_count~1                                                                                   ; 1       ;
@@ -1737,9 +1733,6 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; VGA_top_level:vga_0|VGA_SYNC:videoSync|LessThan6~1                                                                                 ; 1       ;
 ; VGA_top_level:vga_0|VGA_SYNC:videoSync|vert_sync                                                                                   ; 1       ;
 ; VGA_top_level:vga_0|VGA_SYNC:videoSync|horiz_sync                                                                                  ; 1       ;
-; VGA_top_level:vga_0|pixelGenerator:videoGen|colorAddress~188                                                                       ; 1       ;
-; VGA_top_level:vga_0|pixelGenerator:videoGen|colorAddress~187                                                                       ; 1       ;
-; VGA_top_level:vga_0|pixelGenerator:videoGen|colorAddress~186                                                                       ; 1       ;
 ; VGA_top_level:vga_0|pixelGenerator:videoGen|colorAddress~185                                                                       ; 1       ;
 ; VGA_top_level:vga_0|pixelGenerator:videoGen|colorAddress~184                                                                       ; 1       ;
 ; VGA_top_level:vga_0|pixelGenerator:videoGen|colorAddress~183                                                                       ; 1       ;
@@ -1748,20 +1741,19 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; VGA_top_level:vga_0|pixelGenerator:videoGen|colorAddress~180                                                                       ; 1       ;
 ; VGA_top_level:vga_0|pixelGenerator:videoGen|colorAddress~179                                                                       ; 1       ;
 ; VGA_top_level:vga_0|pixelGenerator:videoGen|colorAddress~178                                                                       ; 1       ;
-; VGA_top_level:vga_0|pixelGenerator:videoGen|gameOverT_on~0                                                                         ; 1       ;
+; VGA_top_level:vga_0|pixelGenerator:videoGen|colorAddress~177                                                                       ; 1       ;
 ; VGA_top_level:vga_0|pixelGenerator:videoGen|colorAddress~176                                                                       ; 1       ;
-; VGA_top_level:vga_0|pixelGenerator:videoGen|pixelDraw~76                                                                           ; 1       ;
+; VGA_top_level:vga_0|pixelGenerator:videoGen|colorAddress~175                                                                       ; 1       ;
+; VGA_top_level:vga_0|pixelGenerator:videoGen|colorAddress~173                                                                       ; 1       ;
+; VGA_top_level:vga_0|pixelGenerator:videoGen|pixelDraw~78                                                                           ; 1       ;
 ; VGA_top_level:vga_0|pixelGenerator:videoGen|LessThan4~1                                                                            ; 1       ;
 ; VGA_top_level:vga_0|pixelGenerator:videoGen|LessThan3~1                                                                            ; 1       ;
+; VGA_top_level:vga_0|pixelGenerator:videoGen|pixelDraw~77                                                                           ; 1       ;
+; VGA_top_level:vga_0|pixelGenerator:videoGen|pixelDraw~76                                                                           ; 1       ;
 ; VGA_top_level:vga_0|pixelGenerator:videoGen|pixelDraw~75                                                                           ; 1       ;
 ; VGA_top_level:vga_0|pixelGenerator:videoGen|pixelDraw~74                                                                           ; 1       ;
-; VGA_top_level:vga_0|pixelGenerator:videoGen|pixelDraw~73                                                                           ; 1       ;
-; VGA_top_level:vga_0|pixelGenerator:videoGen|pixelDraw~72                                                                           ; 1       ;
-; VGA_top_level:vga_0|pixelGenerator:videoGen|colorAddress~174                                                                       ; 1       ;
-; VGA_top_level:vga_0|pixelGenerator:videoGen|colorAddress~173                                                                       ; 1       ;
 ; VGA_top_level:vga_0|pixelGenerator:videoGen|colorAddress~171                                                                       ; 1       ;
 ; VGA_top_level:vga_0|pixelGenerator:videoGen|colorAddress~170                                                                       ; 1       ;
-; VGA_top_level:vga_0|pixelGenerator:videoGen|colorAddress~169                                                                       ; 1       ;
 ; VGA_top_level:vga_0|pixelGenerator:videoGen|colorAddress~168                                                                       ; 1       ;
 ; VGA_top_level:vga_0|pixelGenerator:videoGen|colorAddress~167                                                                       ; 1       ;
 ; VGA_top_level:vga_0|pixelGenerator:videoGen|colorAddress~166                                                                       ; 1       ;
@@ -1776,47 +1768,46 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; VGA_top_level:vga_0|pixelGenerator:videoGen|colorAddress~157                                                                       ; 1       ;
 ; VGA_top_level:vga_0|pixelGenerator:videoGen|colorAddress~156                                                                       ; 1       ;
 ; VGA_top_level:vga_0|pixelGenerator:videoGen|colorAddress~155                                                                       ; 1       ;
-; VGA_top_level:vga_0|pixelGenerator:videoGen|colorAddress~154                                                                       ; 1       ;
 ; VGA_top_level:vga_0|pixelGenerator:videoGen|colorAddress~153                                                                       ; 1       ;
 ; VGA_top_level:vga_0|pixelGenerator:videoGen|colorAddress~152                                                                       ; 1       ;
 ; VGA_top_level:vga_0|pixelGenerator:videoGen|colorAddress~151                                                                       ; 1       ;
 ; VGA_top_level:vga_0|pixelGenerator:videoGen|colorAddress~150                                                                       ; 1       ;
+; VGA_top_level:vga_0|pixelGenerator:videoGen|colorAddress~149                                                                       ; 1       ;
 ; VGA_top_level:vga_0|pixelGenerator:videoGen|colorAddress~148                                                                       ; 1       ;
 ; VGA_top_level:vga_0|pixelGenerator:videoGen|colorAddress~147                                                                       ; 1       ;
-; VGA_top_level:vga_0|pixelGenerator:videoGen|colorAddress~145                                                                       ; 1       ;
+; VGA_top_level:vga_0|pixelGenerator:videoGen|colorAddress~146                                                                       ; 1       ;
 ; VGA_top_level:vga_0|pixelGenerator:videoGen|colorAddress~144                                                                       ; 1       ;
+; VGA_top_level:vga_0|pixelGenerator:videoGen|colorAddress~143                                                                       ; 1       ;
+; VGA_top_level:vga_0|pixelGenerator:videoGen|colorAddress~141                                                                       ; 1       ;
 ; VGA_top_level:vga_0|pixelGenerator:videoGen|colorAddress~140                                                                       ; 1       ;
-; VGA_top_level:vga_0|pixelGenerator:videoGen|colorAddress~138                                                                       ; 1       ;
-; VGA_top_level:vga_0|pixelGenerator:videoGen|pixelDraw~69                                                                           ; 1       ;
-; VGA_top_level:vga_0|pixelGenerator:videoGen|colorAddress~132                                                                       ; 1       ;
+; VGA_top_level:vga_0|pixelGenerator:videoGen|colorAddress~136                                                                       ; 1       ;
+; VGA_top_level:vga_0|pixelGenerator:videoGen|colorAddress~134                                                                       ; 1       ;
+; VGA_top_level:vga_0|pixelGenerator:videoGen|LessThan54~1                                                                           ; 1       ;
 ; VGA_top_level:vga_0|pixelGenerator:videoGen|colorAddress~128                                                                       ; 1       ;
-; VGA_top_level:vga_0|pixelGenerator:videoGen|colorAddress~126                                                                       ; 1       ;
-; VGA_top_level:vga_0|pixelGenerator:videoGen|pixelDraw~64                                                                           ; 1       ;
+; VGA_top_level:vga_0|pixelGenerator:videoGen|LessThan493~0                                                                          ; 1       ;
+; VGA_top_level:vga_0|pixelGenerator:videoGen|colorAddress~124                                                                       ; 1       ;
+; VGA_top_level:vga_0|pixelGenerator:videoGen|colorAddress~122                                                                       ; 1       ;
+; VGA_top_level:vga_0|pixelGenerator:videoGen|pixelDraw~67                                                                           ; 1       ;
 ; VGA_top_level:vga_0|pixelGenerator:videoGen|Mux653~2                                                                               ; 1       ;
 ; VGA_top_level:vga_0|pixelGenerator:videoGen|Mux653~0                                                                               ; 1       ;
-; VGA_top_level:vga_0|pixelGenerator:videoGen|colorAddress~121                                                                       ; 1       ;
-; VGA_top_level:vga_0|pixelGenerator:videoGen|colorAddress~119                                                                       ; 1       ;
 ; VGA_top_level:vga_0|pixelGenerator:videoGen|colorAddress~117                                                                       ; 1       ;
+; VGA_top_level:vga_0|pixelGenerator:videoGen|colorAddress~115                                                                       ; 1       ;
 ; VGA_top_level:vga_0|pixelGenerator:videoGen|colorAddress~114                                                                       ; 1       ;
-; VGA_top_level:vga_0|pixelGenerator:videoGen|colorAddress~113                                                                       ; 1       ;
+; VGA_top_level:vga_0|pixelGenerator:videoGen|colorAddress~112                                                                       ; 1       ;
 ; VGA_top_level:vga_0|pixelGenerator:videoGen|colorAddress~109                                                                       ; 1       ;
-; VGA_top_level:vga_0|pixelGenerator:videoGen|colorAddress~107                                                                       ; 1       ;
-; VGA_top_level:vga_0|pixelGenerator:videoGen|colorAddress~106                                                                       ; 1       ;
+; VGA_top_level:vga_0|pixelGenerator:videoGen|colorAddress~108                                                                       ; 1       ;
 ; VGA_top_level:vga_0|pixelGenerator:videoGen|colorAddress~104                                                                       ; 1       ;
-; VGA_top_level:vga_0|pixelGenerator:videoGen|colorAddress~103                                                                       ; 1       ;
-; VGA_top_level:vga_0|pixelGenerator:videoGen|pixelDraw~61                                                                           ; 1       ;
+; VGA_top_level:vga_0|pixelGenerator:videoGen|colorAddress~102                                                                       ; 1       ;
+; VGA_top_level:vga_0|pixelGenerator:videoGen|colorAddress~101                                                                       ; 1       ;
+; VGA_top_level:vga_0|pixelGenerator:videoGen|colorAddress~99                                                                        ; 1       ;
+; VGA_top_level:vga_0|pixelGenerator:videoGen|colorAddress~98                                                                        ; 1       ;
+; VGA_top_level:vga_0|pixelGenerator:videoGen|pixelDraw~64                                                                           ; 1       ;
 ; VGA_top_level:vga_0|pixelGenerator:videoGen|LessThan253~0                                                                          ; 1       ;
 ; VGA_top_level:vga_0|pixelGenerator:videoGen|LessThan214~0                                                                          ; 1       ;
 ; VGA_top_level:vga_0|pixelGenerator:videoGen|LessThan213~0                                                                          ; 1       ;
-; VGA_top_level:vga_0|pixelGenerator:videoGen|pixelDraw~56                                                                           ; 1       ;
+; VGA_top_level:vga_0|pixelGenerator:videoGen|pixelDraw~59                                                                           ; 1       ;
+; VGA_top_level:vga_0|pixelGenerator:videoGen|pixelDraw~57                                                                           ; 1       ;
 ; VGA_top_level:vga_0|pixelGenerator:videoGen|LessThan413~0                                                                          ; 1       ;
-; VGA_top_level:vga_0|pixelGenerator:videoGen|pixelDraw~54                                                                           ; 1       ;
-; VGA_top_level:vga_0|pixelGenerator:videoGen|pixelDraw~53                                                                           ; 1       ;
-; VGA_top_level:vga_0|pixelGenerator:videoGen|colorAddress~98                                                                        ; 1       ;
-; VGA_top_level:vga_0|pixelGenerator:videoGen|colorAddress~97                                                                        ; 1       ;
-; VGA_top_level:vga_0|pixelGenerator:videoGen|colorAddress~96                                                                        ; 1       ;
-; VGA_top_level:vga_0|pixelGenerator:videoGen|colorAddress~95                                                                        ; 1       ;
-; VGA_top_level:vga_0|pixelGenerator:videoGen|colorAddress~94                                                                        ; 1       ;
 ; VGA_top_level:vga_0|pixelGenerator:videoGen|colorAddress~93                                                                        ; 1       ;
 ; VGA_top_level:vga_0|pixelGenerator:videoGen|colorAddress~92                                                                        ; 1       ;
 ; VGA_top_level:vga_0|pixelGenerator:videoGen|colorAddress~91                                                                        ; 1       ;
@@ -1827,74 +1818,79 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; VGA_top_level:vga_0|pixelGenerator:videoGen|colorAddress~86                                                                        ; 1       ;
 ; VGA_top_level:vga_0|pixelGenerator:videoGen|colorAddress~85                                                                        ; 1       ;
 ; VGA_top_level:vga_0|pixelGenerator:videoGen|colorAddress~84                                                                        ; 1       ;
-; VGA_top_level:vga_0|pixelGenerator:videoGen|pixelDraw~51                                                                           ; 1       ;
-; VGA_top_level:vga_0|pixelGenerator:videoGen|LessThan133~0                                                                          ; 1       ;
 ; VGA_top_level:vga_0|pixelGenerator:videoGen|colorAddress~83                                                                        ; 1       ;
 ; VGA_top_level:vga_0|pixelGenerator:videoGen|colorAddress~82                                                                        ; 1       ;
 ; VGA_top_level:vga_0|pixelGenerator:videoGen|colorAddress~81                                                                        ; 1       ;
-; VGA_top_level:vga_0|pixelGenerator:videoGen|pixelDraw~49                                                                           ; 1       ;
-; VGA_top_level:vga_0|pixelGenerator:videoGen|pixelDraw~48                                                                           ; 1       ;
-; VGA_top_level:vga_0|pixelGenerator:videoGen|pixelDraw~46                                                                           ; 1       ;
 ; VGA_top_level:vga_0|pixelGenerator:videoGen|colorAddress~80                                                                        ; 1       ;
 ; VGA_top_level:vga_0|pixelGenerator:videoGen|colorAddress~79                                                                        ; 1       ;
-; VGA_top_level:vga_0|pixelGenerator:videoGen|pixelDraw~44                                                                           ; 1       ;
-; VGA_top_level:vga_0|pixelGenerator:videoGen|pixelDraw~43                                                                           ; 1       ;
+; VGA_top_level:vga_0|pixelGenerator:videoGen|pixelDraw~55                                                                           ; 1       ;
+; VGA_top_level:vga_0|pixelGenerator:videoGen|LessThan133~0                                                                          ; 1       ;
+; VGA_top_level:vga_0|pixelGenerator:videoGen|colorAddress~78                                                                        ; 1       ;
 ; VGA_top_level:vga_0|pixelGenerator:videoGen|colorAddress~77                                                                        ; 1       ;
 ; VGA_top_level:vga_0|pixelGenerator:videoGen|colorAddress~76                                                                        ; 1       ;
+; VGA_top_level:vga_0|pixelGenerator:videoGen|pixelDraw~53                                                                           ; 1       ;
+; VGA_top_level:vga_0|pixelGenerator:videoGen|pixelDraw~52                                                                           ; 1       ;
+; VGA_top_level:vga_0|pixelGenerator:videoGen|pixelDraw~50                                                                           ; 1       ;
 ; VGA_top_level:vga_0|pixelGenerator:videoGen|colorAddress~75                                                                        ; 1       ;
 ; VGA_top_level:vga_0|pixelGenerator:videoGen|colorAddress~74                                                                        ; 1       ;
-; VGA_top_level:vga_0|pixelGenerator:videoGen|colorAddress~73                                                                        ; 1       ;
+; VGA_top_level:vga_0|pixelGenerator:videoGen|pixelDraw~48                                                                           ; 1       ;
+; VGA_top_level:vga_0|pixelGenerator:videoGen|pixelDraw~47                                                                           ; 1       ;
 ; VGA_top_level:vga_0|pixelGenerator:videoGen|colorAddress~72                                                                        ; 1       ;
 ; VGA_top_level:vga_0|pixelGenerator:videoGen|colorAddress~71                                                                        ; 1       ;
 ; VGA_top_level:vga_0|pixelGenerator:videoGen|colorAddress~70                                                                        ; 1       ;
 ; VGA_top_level:vga_0|pixelGenerator:videoGen|colorAddress~69                                                                        ; 1       ;
 ; VGA_top_level:vga_0|pixelGenerator:videoGen|colorAddress~68                                                                        ; 1       ;
 ; VGA_top_level:vga_0|pixelGenerator:videoGen|colorAddress~67                                                                        ; 1       ;
-; VGA_top_level:vga_0|pixelGenerator:videoGen|LessThan11~1                                                                           ; 1       ;
 ; VGA_top_level:vga_0|pixelGenerator:videoGen|colorAddress~66                                                                        ; 1       ;
 ; VGA_top_level:vga_0|pixelGenerator:videoGen|colorAddress~65                                                                        ; 1       ;
 ; VGA_top_level:vga_0|pixelGenerator:videoGen|colorAddress~64                                                                        ; 1       ;
 ; VGA_top_level:vga_0|pixelGenerator:videoGen|colorAddress~63                                                                        ; 1       ;
 ; VGA_top_level:vga_0|pixelGenerator:videoGen|colorAddress~62                                                                        ; 1       ;
 ; VGA_top_level:vga_0|pixelGenerator:videoGen|colorAddress~61                                                                        ; 1       ;
+; VGA_top_level:vga_0|pixelGenerator:videoGen|LessThan11~1                                                                           ; 1       ;
 ; VGA_top_level:vga_0|pixelGenerator:videoGen|colorAddress~60                                                                        ; 1       ;
 ; VGA_top_level:vga_0|pixelGenerator:videoGen|colorAddress~59                                                                        ; 1       ;
 ; VGA_top_level:vga_0|pixelGenerator:videoGen|colorAddress~58                                                                        ; 1       ;
 ; VGA_top_level:vga_0|pixelGenerator:videoGen|colorAddress~57                                                                        ; 1       ;
-; VGA_top_level:vga_0|pixelGenerator:videoGen|LessThan734~0                                                                          ; 1       ;
 ; VGA_top_level:vga_0|pixelGenerator:videoGen|colorAddress~56                                                                        ; 1       ;
-; VGA_top_level:vga_0|pixelGenerator:videoGen|pixelDraw~39                                                                           ; 1       ;
-; VGA_top_level:vga_0|pixelGenerator:videoGen|pixelDraw~38                                                                           ; 1       ;
 ; VGA_top_level:vga_0|pixelGenerator:videoGen|colorAddress~55                                                                        ; 1       ;
 ; VGA_top_level:vga_0|pixelGenerator:videoGen|colorAddress~54                                                                        ; 1       ;
 ; VGA_top_level:vga_0|pixelGenerator:videoGen|colorAddress~53                                                                        ; 1       ;
-; VGA_top_level:vga_0|pixelGenerator:videoGen|pixelDraw~36                                                                           ; 1       ;
-; VGA_top_level:vga_0|pixelGenerator:videoGen|pixelDraw~35                                                                           ; 1       ;
-; VGA_top_level:vga_0|pixelGenerator:videoGen|pixelDraw~33                                                                           ; 1       ;
-; VGA_top_level:vga_0|pixelGenerator:videoGen|LessThan47~1                                                                           ; 1       ;
-; VGA_top_level:vga_0|pixelGenerator:videoGen|pixelDraw~31                                                                           ; 1       ;
 ; VGA_top_level:vga_0|pixelGenerator:videoGen|colorAddress~52                                                                        ; 1       ;
+; VGA_top_level:vga_0|pixelGenerator:videoGen|colorAddress~51                                                                        ; 1       ;
+; VGA_top_level:vga_0|pixelGenerator:videoGen|LessThan734~0                                                                          ; 1       ;
+; VGA_top_level:vga_0|pixelGenerator:videoGen|colorAddress~50                                                                        ; 1       ;
+; VGA_top_level:vga_0|pixelGenerator:videoGen|pixelDraw~43                                                                           ; 1       ;
+; VGA_top_level:vga_0|pixelGenerator:videoGen|pixelDraw~42                                                                           ; 1       ;
+; VGA_top_level:vga_0|pixelGenerator:videoGen|colorAddress~49                                                                        ; 1       ;
+; VGA_top_level:vga_0|pixelGenerator:videoGen|colorAddress~48                                                                        ; 1       ;
+; VGA_top_level:vga_0|pixelGenerator:videoGen|colorAddress~47                                                                        ; 1       ;
+; VGA_top_level:vga_0|pixelGenerator:videoGen|pixelDraw~40                                                                           ; 1       ;
+; VGA_top_level:vga_0|pixelGenerator:videoGen|pixelDraw~39                                                                           ; 1       ;
+; VGA_top_level:vga_0|pixelGenerator:videoGen|pixelDraw~37                                                                           ; 1       ;
+; VGA_top_level:vga_0|pixelGenerator:videoGen|LessThan47~1                                                                           ; 1       ;
+; VGA_top_level:vga_0|pixelGenerator:videoGen|pixelDraw~35                                                                           ; 1       ;
+; VGA_top_level:vga_0|pixelGenerator:videoGen|colorAddress~46                                                                        ; 1       ;
 ; VGA_top_level:vga_0|pixelGenerator:videoGen|LessThan36~0                                                                           ; 1       ;
 ; VGA_top_level:vga_0|pixelGenerator:videoGen|LessThan35~1                                                                           ; 1       ;
 ; VGA_top_level:vga_0|pixelGenerator:videoGen|LessThan32~0                                                                           ; 1       ;
 ; VGA_top_level:vga_0|pixelGenerator:videoGen|LessThan31~0                                                                           ; 1       ;
-; VGA_top_level:vga_0|pixelGenerator:videoGen|colorAddress~51                                                                        ; 1       ;
-; VGA_top_level:vga_0|pixelGenerator:videoGen|pixelDraw~26                                                                           ; 1       ;
+; VGA_top_level:vga_0|pixelGenerator:videoGen|colorAddress~45                                                                        ; 1       ;
+; VGA_top_level:vga_0|pixelGenerator:videoGen|pixelDraw~30                                                                           ; 1       ;
+; VGA_top_level:vga_0|pixelGenerator:videoGen|pixelDraw~29                                                                           ; 1       ;
+; VGA_top_level:vga_0|pixelGenerator:videoGen|colorAddress~44                                                                        ; 1       ;
+; VGA_top_level:vga_0|pixelGenerator:videoGen|pixelDraw~27                                                                           ; 1       ;
 ; VGA_top_level:vga_0|pixelGenerator:videoGen|pixelDraw~25                                                                           ; 1       ;
-; VGA_top_level:vga_0|pixelGenerator:videoGen|colorAddress~50                                                                        ; 1       ;
-; VGA_top_level:vga_0|pixelGenerator:videoGen|pixelDraw~23                                                                           ; 1       ;
-; VGA_top_level:vga_0|pixelGenerator:videoGen|LessThan614~0                                                                          ; 1       ;
-; VGA_top_level:vga_0|pixelGenerator:videoGen|pixelDraw~21                                                                           ; 1       ;
-; VGA_top_level:vga_0|pixelGenerator:videoGen|pixelDraw~20                                                                           ; 1       ;
+; VGA_top_level:vga_0|pixelGenerator:videoGen|pixelDraw~24                                                                           ; 1       ;
 ; VGA_top_level:vga_0|pixelGenerator:videoGen|LessThan573~0                                                                          ; 1       ;
 ; VGA_top_level:vga_0|pixelGenerator:videoGen|LessThan27~1                                                                           ; 1       ;
 ; VGA_top_level:vga_0|pixelGenerator:videoGen|LessThan27~0                                                                           ; 1       ;
 ; VGA_top_level:vga_0|pixelGenerator:videoGen|LessThan23~1                                                                           ; 1       ;
 ; VGA_top_level:vga_0|pixelGenerator:videoGen|LessThan23~0                                                                           ; 1       ;
 ; VGA_top_level:vga_0|pixelGenerator:videoGen|LessThan24~0                                                                           ; 1       ;
-; VGA_top_level:vga_0|pixelGenerator:videoGen|pixelDraw~12                                                                           ; 1       ;
-; VGA_top_level:vga_0|pixelGenerator:videoGen|pixelDraw~11                                                                           ; 1       ;
-; VGA_top_level:vga_0|pixelGenerator:videoGen|pixelDraw~10                                                                           ; 1       ;
+; VGA_top_level:vga_0|pixelGenerator:videoGen|pixelDraw~18                                                                           ; 1       ;
+; VGA_top_level:vga_0|pixelGenerator:videoGen|pixelDraw~17                                                                           ; 1       ;
+; VGA_top_level:vga_0|pixelGenerator:videoGen|pixelDraw~16                                                                           ; 1       ;
 ; VGA_top_level:vga_0|pixelGenerator:videoGen|LessThan43~0                                                                           ; 1       ;
 ; VGA_top_level:vga_0|VGA_SYNC:videoSync|video_on                                                                                    ; 1       ;
 ; VGA_top_level:vga_0|VGA_SYNC:videoSync|video_on_h                                                                                  ; 1       ;
@@ -1985,8 +1981,8 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +---------------------------------------------------------------------------------------------------------------------------------------+------+------+--------------+--------------+--------------+--------------+--------------+------------------------+-------------------------+------------------------+-------------------------+-------+-----------------------------+-----------------------------+-----------------------------+-----------------------------+---------------------+------+----------------------------------------------+----------------------------------------------------+----------------------+-----------------+-----------------+
 ; Name                                                                                                                                  ; Type ; Mode ; Clock Mode   ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Port A Input Registers ; Port A Output Registers ; Port B Input Registers ; Port B Output Registers ; Size  ; Implementation Port A Depth ; Implementation Port A Width ; Implementation Port B Depth ; Implementation Port B Width ; Implementation Bits ; M4Ks ; MIF                                          ; Location                                           ; Mixed Width RDW Mode ; Port A RDW Mode ; Port B RDW Mode ;
 +---------------------------------------------------------------------------------------------------------------------------------------+------+------+--------------+--------------+--------------+--------------+--------------+------------------------+-------------------------+------------------------+-------------------------+-------+-----------------------------+-----------------------------+-----------------------------+-----------------------------+---------------------+------+----------------------------------------------+----------------------------------------------------+----------------------+-----------------+-----------------+
-; VGA_top_level:vga_0|pixelGenerator:videoGen|colorROM:colors|altsyncram:altsyncram_component|altsyncram_pv71:auto_generated|ALTSYNCRAM ; AUTO ; ROM  ; Single Clock ; 8            ; 30           ; --           ; --           ; yes                    ; no                      ; --                     ; --                      ; 240   ; 8                           ; 30                          ; --                          ; --                          ; 240                 ; 1    ; colorROM.mif                                 ; M4K_X26_Y24                                        ; Don't care           ; Don't care      ; Don't care      ;
-; VGA_top_level:vga_0|pixelGenerator:videoGen|fontROM:font_unit|altsyncram:ROM_rtl_0|altsyncram_0771:auto_generated|ALTSYNCRAM          ; AUTO ; ROM  ; Single Clock ; 2048         ; 8            ; --           ; --           ; yes                    ; no                      ; --                     ; --                      ; 16384 ; 2048                        ; 8                           ; --                          ; --                          ; 16384               ; 4    ; db/battleships.ram0_fontROM_16852496.hdl.mif ; M4K_X26_Y21, M4K_X26_Y20, M4K_X26_Y22, M4K_X26_Y23 ; Don't care           ; Don't care      ; Don't care      ;
+; VGA_top_level:vga_0|pixelGenerator:videoGen|colorROM:colors|altsyncram:altsyncram_component|altsyncram_pv71:auto_generated|ALTSYNCRAM ; AUTO ; ROM  ; Single Clock ; 8            ; 30           ; --           ; --           ; yes                    ; no                      ; --                     ; --                      ; 240   ; 8                           ; 30                          ; --                          ; --                          ; 240                 ; 1    ; colorROM.mif                                 ; M4K_X26_Y23                                        ; Don't care           ; Don't care      ; Don't care      ;
+; VGA_top_level:vga_0|pixelGenerator:videoGen|fontROM:font_unit|altsyncram:ROM_rtl_0|altsyncram_0771:auto_generated|ALTSYNCRAM          ; AUTO ; ROM  ; Single Clock ; 2048         ; 8            ; --           ; --           ; yes                    ; no                      ; --                     ; --                      ; 16384 ; 2048                        ; 8                           ; --                          ; --                          ; 16384               ; 4    ; db/battleships.ram0_fontROM_16852496.hdl.mif ; M4K_X26_Y26, M4K_X26_Y24, M4K_X26_Y22, M4K_X26_Y25 ; Don't care           ; Don't care      ; Don't care      ;
 +---------------------------------------------------------------------------------------------------------------------------------------+------+------+--------------+--------------+--------------+--------------+--------------+------------------------+-------------------------+------------------------+-------------------------+-------+-----------------------------+-----------------------------+-----------------------------+-----------------------------+---------------------+------+----------------------------------------------+----------------------------------------------------+----------------------+-----------------+-----------------+
 Note: Fitter may spread logical memories into multiple blocks to improve timing. The actual required RAM blocks can be found in the Fitter Resource Usage section.
 
@@ -1996,154 +1992,152 @@ Note: Fitter may spread logical memories into multiple blocks to improve timing.
 +-----------------------------+------------------------+
 ; Other Routing Resource Type ; Usage                  ;
 +-----------------------------+------------------------+
-; Block interconnects         ; 784 / 94,460 ( < 1 % ) ;
-; C16 interconnects           ; 6 / 3,315 ( < 1 % )    ;
-; C4 interconnects            ; 452 / 60,840 ( < 1 % ) ;
-; Direct links                ; 137 / 94,460 ( < 1 % ) ;
+; Block interconnects         ; 805 / 94,460 ( < 1 % ) ;
+; C16 interconnects           ; 7 / 3,315 ( < 1 % )    ;
+; C4 interconnects            ; 491 / 60,840 ( < 1 % ) ;
+; Direct links                ; 129 / 94,460 ( < 1 % ) ;
 ; Global clocks               ; 3 / 16 ( 19 % )        ;
-; Local interconnects         ; 324 / 33,216 ( < 1 % ) ;
+; Local interconnects         ; 321 / 33,216 ( < 1 % ) ;
 ; R24 interconnects           ; 4 / 3,091 ( < 1 % )    ;
-; R4 interconnects            ; 431 / 81,294 ( < 1 % ) ;
+; R4 interconnects            ; 470 / 81,294 ( < 1 % ) ;
 +-----------------------------+------------------------+
 
 
 +----------------------------------------------------------------------------+
 ; LAB Logic Elements                                                         ;
 +---------------------------------------------+------------------------------+
-; Number of Logic Elements  (Average = 13.79) ; Number of LABs  (Total = 33) ;
+; Number of Logic Elements  (Average = 12.89) ; Number of LABs  (Total = 35) ;
 +---------------------------------------------+------------------------------+
-; 1                                           ; 0                            ;
-; 2                                           ; 1                            ;
+; 1                                           ; 2                            ;
+; 2                                           ; 2                            ;
 ; 3                                           ; 1                            ;
 ; 4                                           ; 0                            ;
-; 5                                           ; 2                            ;
+; 5                                           ; 0                            ;
 ; 6                                           ; 0                            ;
-; 7                                           ; 0                            ;
-; 8                                           ; 0                            ;
-; 9                                           ; 1                            ;
+; 7                                           ; 2                            ;
+; 8                                           ; 1                            ;
+; 9                                           ; 0                            ;
 ; 10                                          ; 1                            ;
 ; 11                                          ; 0                            ;
-; 12                                          ; 1                            ;
+; 12                                          ; 0                            ;
 ; 13                                          ; 0                            ;
-; 14                                          ; 1                            ;
-; 15                                          ; 5                            ;
-; 16                                          ; 20                           ;
+; 14                                          ; 3                            ;
+; 15                                          ; 0                            ;
+; 16                                          ; 23                           ;
 +---------------------------------------------+------------------------------+
 
 
 +-------------------------------------------------------------------+
 ; LAB-wide Signals                                                  ;
 +------------------------------------+------------------------------+
-; LAB-wide Signals  (Average = 0.39) ; Number of LABs  (Total = 33) ;
+; LAB-wide Signals  (Average = 0.54) ; Number of LABs  (Total = 35) ;
 +------------------------------------+------------------------------+
-; 1 Clock                            ; 8                            ;
-; 1 Clock enable                     ; 3                            ;
+; 1 Clock                            ; 11                           ;
+; 1 Clock enable                     ; 5                            ;
 ; 2 Clock enables                    ; 1                            ;
-; 2 Clocks                           ; 1                            ;
+; 2 Clocks                           ; 2                            ;
 +------------------------------------+------------------------------+
 
 
 +-----------------------------------------------------------------------------+
 ; LAB Signals Sourced                                                         ;
 +----------------------------------------------+------------------------------+
-; Number of Signals Sourced  (Average = 15.18) ; Number of LABs  (Total = 33) ;
+; Number of Signals Sourced  (Average = 14.20) ; Number of LABs  (Total = 35) ;
 +----------------------------------------------+------------------------------+
 ; 0                                            ; 0                            ;
 ; 1                                            ; 0                            ;
-; 2                                            ; 1                            ;
+; 2                                            ; 4                            ;
 ; 3                                            ; 1                            ;
 ; 4                                            ; 0                            ;
-; 5                                            ; 1                            ;
-; 6                                            ; 1                            ;
-; 7                                            ; 0                            ;
-; 8                                            ; 0                            ;
-; 9                                            ; 1                            ;
+; 5                                            ; 0                            ;
+; 6                                            ; 0                            ;
+; 7                                            ; 2                            ;
+; 8                                            ; 1                            ;
+; 9                                            ; 0                            ;
 ; 10                                           ; 1                            ;
 ; 11                                           ; 0                            ;
 ; 12                                           ; 0                            ;
 ; 13                                           ; 0                            ;
-; 14                                           ; 1                            ;
-; 15                                           ; 5                            ;
-; 16                                           ; 14                           ;
-; 17                                           ; 0                            ;
-; 18                                           ; 0                            ;
+; 14                                           ; 2                            ;
+; 15                                           ; 0                            ;
+; 16                                           ; 13                           ;
+; 17                                           ; 2                            ;
+; 18                                           ; 2                            ;
 ; 19                                           ; 1                            ;
-; 20                                           ; 1                            ;
+; 20                                           ; 3                            ;
 ; 21                                           ; 1                            ;
-; 22                                           ; 3                            ;
+; 22                                           ; 1                            ;
 ; 23                                           ; 0                            ;
 ; 24                                           ; 0                            ;
 ; 25                                           ; 0                            ;
-; 26                                           ; 0                            ;
-; 27                                           ; 1                            ;
+; 26                                           ; 1                            ;
 +----------------------------------------------+------------------------------+
 
 
 +--------------------------------------------------------------------------------+
 ; LAB Signals Sourced Out                                                        ;
 +-------------------------------------------------+------------------------------+
-; Number of Signals Sourced Out  (Average = 8.00) ; Number of LABs  (Total = 33) ;
+; Number of Signals Sourced Out  (Average = 7.43) ; Number of LABs  (Total = 35) ;
 +-------------------------------------------------+------------------------------+
 ; 0                                               ; 0                            ;
-; 1                                               ; 0                            ;
-; 2                                               ; 2                            ;
-; 3                                               ; 5                            ;
+; 1                                               ; 2                            ;
+; 2                                               ; 6                            ;
+; 3                                               ; 2                            ;
 ; 4                                               ; 3                            ;
-; 5                                               ; 0                            ;
-; 6                                               ; 4                            ;
-; 7                                               ; 4                            ;
+; 5                                               ; 2                            ;
+; 6                                               ; 2                            ;
+; 7                                               ; 2                            ;
 ; 8                                               ; 2                            ;
-; 9                                               ; 4                            ;
+; 9                                               ; 2                            ;
 ; 10                                              ; 2                            ;
-; 11                                              ; 0                            ;
-; 12                                              ; 2                            ;
-; 13                                              ; 1                            ;
-; 14                                              ; 1                            ;
-; 15                                              ; 0                            ;
+; 11                                              ; 1                            ;
+; 12                                              ; 5                            ;
+; 13                                              ; 0                            ;
+; 14                                              ; 0                            ;
+; 15                                              ; 2                            ;
 ; 16                                              ; 0                            ;
 ; 17                                              ; 0                            ;
 ; 18                                              ; 1                            ;
-; 19                                              ; 0                            ;
-; 20                                              ; 2                            ;
+; 19                                              ; 1                            ;
 +-------------------------------------------------+------------------------------+
 
 
 +-----------------------------------------------------------------------------+
 ; LAB Distinct Inputs                                                         ;
 +----------------------------------------------+------------------------------+
-; Number of Distinct Inputs  (Average = 17.91) ; Number of LABs  (Total = 33) ;
+; Number of Distinct Inputs  (Average = 17.20) ; Number of LABs  (Total = 35) ;
 +----------------------------------------------+------------------------------+
 ; 0                                            ; 0                            ;
 ; 1                                            ; 0                            ;
-; 2                                            ; 0                            ;
+; 2                                            ; 2                            ;
 ; 3                                            ; 1                            ;
-; 4                                            ; 2                            ;
+; 4                                            ; 0                            ;
 ; 5                                            ; 0                            ;
-; 6                                            ; 0                            ;
-; 7                                            ; 2                            ;
-; 8                                            ; 0                            ;
+; 6                                            ; 2                            ;
+; 7                                            ; 3                            ;
+; 8                                            ; 1                            ;
 ; 9                                            ; 0                            ;
 ; 10                                           ; 0                            ;
 ; 11                                           ; 0                            ;
-; 12                                           ; 2                            ;
-; 13                                           ; 1                            ;
+; 12                                           ; 0                            ;
+; 13                                           ; 0                            ;
 ; 14                                           ; 2                            ;
-; 15                                           ; 2                            ;
-; 16                                           ; 1                            ;
-; 17                                           ; 3                            ;
+; 15                                           ; 1                            ;
+; 16                                           ; 3                            ;
+; 17                                           ; 1                            ;
 ; 18                                           ; 2                            ;
 ; 19                                           ; 3                            ;
-; 20                                           ; 2                            ;
+; 20                                           ; 1                            ;
 ; 21                                           ; 1                            ;
-; 22                                           ; 0                            ;
+; 22                                           ; 1                            ;
 ; 23                                           ; 0                            ;
-; 24                                           ; 2                            ;
-; 25                                           ; 0                            ;
-; 26                                           ; 0                            ;
+; 24                                           ; 3                            ;
+; 25                                           ; 1                            ;
+; 26                                           ; 2                            ;
 ; 27                                           ; 1                            ;
-; 28                                           ; 1                            ;
-; 29                                           ; 3                            ;
-; 30                                           ; 2                            ;
+; 28                                           ; 3                            ;
+; 29                                           ; 0                            ;
+; 30                                           ; 1                            ;
 +----------------------------------------------+------------------------------+
 
 
@@ -2224,11 +2218,11 @@ Info (170137): Fitter placement was successful
 Info (170192): Fitter placement operations ending: elapsed time is 00:00:02
 Info (170193): Fitter routing operations beginning
 Info (170195): Router estimated average interconnect usage is 0% of the available device resources
-    Info (170196): Router estimated peak interconnect usage is 3% of the available device resources in the region that extends from location X22_Y12 to location X32_Y23
+    Info (170196): Router estimated peak interconnect usage is 4% of the available device resources in the region that extends from location X22_Y24 to location X32_Y36
 Info (170194): Fitter routing operations ending: elapsed time is 00:00:02
 Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were skipped to reduce compilation time.
     Info (170201): Optimizations that may affect the design's routability were skipped
-Info (11888): Total time spent on timing analysis during the Fitter is 0.76 seconds.
+Info (11888): Total time spent on timing analysis during the Fitter is 0.62 seconds.
 Info (306004): Started post-fitting delay annotation
 Warning (306006): Found 118 output pins without output pin load capacitance assignment
     Info (306007): Pin "AUD_BCLK" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
@@ -2371,10 +2365,10 @@ Warning (169064): Following 12 pins have no output enable or a GND or VCC output
 Warning (169174): The Reserve All Unused Pins setting has not been specified, and will default to 'As output driving ground'.
 Info (144001): Generated suppressed messages file C:/Users/BrianL/Documents/GitHub/battleships/output_files/battleships.fit.smsg
 Info: Quartus II 32-bit Fitter was successful. 0 errors, 10 warnings
-    Info: Peak virtual memory: 497 megabytes
-    Info: Processing ended: Mon May 19 12:35:23 2014
+    Info: Peak virtual memory: 498 megabytes
+    Info: Processing ended: Mon May 19 19:20:37 2014
     Info: Elapsed time: 00:00:12
-    Info: Total CPU time (on all processors): 00:00:11
+    Info: Total CPU time (on all processors): 00:00:12
 
 
 +----------------------------+
