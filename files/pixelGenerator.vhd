@@ -104,6 +104,12 @@ signal row_addr_m : std_logic_vector(3 downto 0);
 signal bit_addr_m : std_logic_vector(2 downto 0);
 signal miss_on : std_logic;
 
+-- signals for illegal legend
+signal char_addr_a : std_logic_vector(6 downto 0);
+signal row_addr_a : std_logic_vector(3 downto 0);
+signal bit_addr_a : std_logic_vector(2 downto 0);
+signal active_on : std_logic;
+
 
 
 component fontROM is
@@ -276,6 +282,24 @@ with pixel_column(7 downto 4) select
 		"1110011" when "0010", -- s
 		"1110011" when "0011", -- s
 		"0000000" when others;
+		
+--------------------------------------------------------------------------------------------
+
+active_on <= '1' when unsigned(pixel_row)(9 downto 5) = 13 and 
+								unsigned(pixel_column)(9 downto 4) > 31 and  
+								unsigned(pixel_column)(9 downto 4) < 48 else
+					'0';
+row_addr_a <= std_logic_vector(pixel_row(4 downto 1));
+bit_addr_a <= std_logic_vector(pixel_column(3 downto 1));
+with pixel_column(7 downto 4) select
+	char_addr_a <=
+		"1000001" when "0000", -- A
+		"1100011" when "0001", -- c
+		"1110100" when "0010", -- t
+		"1101001" when "0011", -- i
+		"1110110" when "0100", -- v
+		"1100101" when "0101", -- e
+		"0000000" when others;
 	
 --------------------------------------------------------------------------------------------
 	
@@ -423,6 +447,15 @@ with pixel_column(7 downto 4) select
 			bit_addr <= bit_addr_m;
 			if font_bit = '1' then
 				colorAddress <= color_cyan;
+			end if;
+		end if;
+		
+		if active_on = '1' then
+			char_addr <= char_addr_a;
+			row_addr <= row_addr_a;
+			bit_addr <= bit_addr_a;
+			if font_bit = '1' then
+				colorAddress <= color_yellow;
 			end if;
 		end if;
 	end if;
