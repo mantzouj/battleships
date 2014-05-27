@@ -13,26 +13,13 @@ entity battleships is
 			AUD_XCK, AUD_DACDAT, I2C_SCLK : out std_logic;
  
  --Outputs 
-			LCD_RS, LCD_E, LCD_ON, RESET_LED, SEC_LED			: OUT	STD_LOGIC;
-			LCD_RW														: BUFFER STD_LOGIC;
-			DATA_BUS														: INOUT	STD_LOGIC_VECTOR(7 DOWNTO 0);
 			VGA_RED, VGA_GREEN, VGA_BLUE 							: out std_logic_vector(9 downto 0); 
 			HORIZ_SYNC, VERT_SYNC, VGA_BLANK, VGA_CLK			: out std_logic;
-			data_out 													: out std_logic;
-			test0, test1, test2, test3, test4, test11			: out std_logic; --, test5, test6, test7, test8, test9, test10, test11, test12, test13, test14 
-			led_seq														: out std_logic_vector (55 downto 0)
-			
+			data_out 													: out std_logic
  ); 
 end entity battleships; 
 
 architecture behavioral of battleships is 
-
-component de2lcd IS
-	PORT(tie, waiting, reset, clk_50Mhz, game_over, winner					: IN	STD_LOGIC;
-		 LCD_RS, LCD_E, LCD_ON, RESET_LED, SEC_LED			: OUT	STD_LOGIC;
-		 LCD_RW															: BUFFER STD_LOGIC;
-		 DATA_BUS														: INOUT	STD_LOGIC_VECTOR(7 DOWNTO 0));
-END component;
 
 component DE2_Audio_Example is
 	port (
@@ -111,7 +98,7 @@ signal game_over      : std_logic;
 signal done           : std_logic;
 signal LEDs				 : std_logic_vector (55 downto 0);
 signal tie, select_s	 : std_logic;
-signal init,waiting,res_lcd : std_logic; --,a,b,c,d,e,f
+signal init,waiting : std_logic; --,a,b,c,d,e,f
 signal sound_explosion : std_logic;
 
 signal go, S2_overlap, S3_overlap, S4_overlap, S5_overlap	: std_logic;
@@ -123,20 +110,12 @@ signal legend_on : std_logic;
 begin 
 
 Sounds : DE2_Audio_Example port map (CLOCK_50 => clk, CLOCK_27 => CLOCK_27, KEY => KEY, AUD_ADCDAT => AUD_ADCDAT, AUD_BCLK => AUD_BCLK, AUD_ADCLRCK => AUD_ADCLRCK, AUD_DACLRCK => AUD_DACLRCK, I2C_SDAT => I2C_SDAT, AUD_XCK => AUD_XCK, AUD_DACDAT => AUD_DACDAT, I2C_SCLK => I2C_SCLK, SW => sound_explosion, select_s => select_s);
-LCDscreen : de2lcd port map (tie, waiting, res_lcd, clk, game_over, winner, LCD_RS, LCD_E, LCD_ON, RESET_LED, SEC_LED,LCD_RW,DATA_BUS);
 keyboard_0 : ps2 port map (keyboard_clk, keyboard_data, clk, '1', hist1, hist0, LEDs);
 vga_0 : VGA_top_level port map (clk, game_over, winner, tie, VGA_RED, VGA_GREEN, VGA_BLUE, HORIZ_SYNC, VERT_SYNC, VGA_BLANK, VGA_CLK, myVGA, oppVGA, placing_on, placeShip_num, legend_on);
-conv0 : leddcd port map (ship1_y_vector,led_seq(48 downto 42));
-conv1 : leddcd port map (opp_ship1_y_vector,led_seq(34 downto 28));
-conv2 : leddcd port map (ship1_x_vector,led_seq(55 downto 49));
-conv3 : leddcd port map (opp_ship1_x_vector,led_seq(41 downto 35));
-led_seq(27 downto 0) <= LEDs(27 downto 0);
-
 
 key_press : process(hist0,clk,done,hist1) is --determine if there is keypress and what should happen
 begin
 if (rising_edge(clk)) then
-	res_lcd <= '1';
 	init <= '1';
 	waiting <= '0';
 	
@@ -167,7 +146,6 @@ if (rising_edge(clk)) then
 			      enter_press <= '1';
 			WHEN X"66" => 					--reset button (backspace)
 					init <= '0';
-					res_lcd <= '0';
 			WHEN others =>
 					null;
 	   end CASE;
@@ -223,11 +201,7 @@ game: process(init,data_in,ship1_or,clk,done) is
   
   begin
 	done <= '0';
-		if (data_in='0') then
-			test4 <= '0';
-		else
-			test4 <= '1';
-		end if;
+
   if (init='0') then
 		ship1_x 	:= 0;
 		ship1_y 	:= 0;
@@ -250,9 +224,7 @@ game: process(init,data_in,ship1_or,clk,done) is
 		counter  <= 0; myHits <= 0; oppHits <= 0;
 		sound_explosion <= '0'; select_s <= '0'; --0 is hit, 1 is miss
 		phase <= 0;
-		test11 <= '0';
 		data_out <= '1';
-		test0		<= '0'; test1		<= '0'; test2		<= '0'; test3		<= '0'; test4 <= '0';
 
 		tie <= '0';
 		winner <= '0';
@@ -386,7 +358,6 @@ game: process(init,data_in,ship1_or,clk,done) is
 				end if;
 				
 				if (counter=DELAY) then
-					test2 <= '1';
 					state <= COMM_S1_1;
 					counter <= 0;
 					phase <= 0;
@@ -571,7 +542,7 @@ game: process(init,data_in,ship1_or,clk,done) is
 				end if;			
 
 				--temp start0---------------------
-				if (enter_press='1') then
+				if (enter_press='1' and S2_overlap='0') then
 					--data_out	<= '0';
 					state		<= PLACE_S3;
 					saved1 <= myVGA(cursor_x + 10*cursor_y);
@@ -766,9 +737,9 @@ game: process(init,data_in,ship1_or,clk,done) is
 					S3_index_2 := ship3_x + 10*(ship3_y+1);
 					S3_index_3 := ship3_x + 10*(ship3_y+2);
 					myVGA <= (others => WATER);
-					myVGA(S3_index_1) <= SHIP;
-					myVGA(S3_index_2) <= SHIP;
-					myVGA(S3_index_3) <= SHIP;
+					myVGA(S3_index_1) <= CURSOR;
+					myVGA(S3_index_2) <= CURSOR;
+					myVGA(S3_index_3) <= CURSOR;
 					myVGA(S2_index_1) <= SHIP;
 					myVGA(S2_index_2) <= SHIP;
 					myVGA(S2_index_3) <= SHIP;
@@ -779,9 +750,9 @@ game: process(init,data_in,ship1_or,clk,done) is
 					S3_index_2 := ship3_x + 1 + 10*ship3_y;
 					S3_index_3 := ship3_x + 2 + 10*ship3_y;
 					myVGA <= (others => WATER);
-					myVGA(S3_index_1) <= SHIP;
-					myVGA(S3_index_2) <= SHIP;
-					myVGA(S3_index_3) <= SHIP;
+					myVGA(S3_index_1) <= CURSOR;
+					myVGA(S3_index_2) <= CURSOR;
+					myVGA(S3_index_3) <= CURSOR;
 					myVGA(S2_index_1) <= SHIP;
 					myVGA(S2_index_2) <= SHIP;
 					myVGA(S2_index_3) <= SHIP;
@@ -797,9 +768,12 @@ game: process(init,data_in,ship1_or,clk,done) is
 				end if;
 				
 				--temp start0---------------------
-				if (enter_press='1') then
+				if (enter_press='1' and S3_overlap='0') then
 					--data_out	<= '0';
 					state		<= PLACE_S4;
+					myVGA(S3_index_1) <= SHIP;
+					myVGA(S3_index_2) <= SHIP;
+					myVGA(S3_index_3) <= SHIP;
 					saved1 <= myVGA(cursor_x + 10*cursor_y);
 				end if;
 				
@@ -993,10 +967,10 @@ game: process(init,data_in,ship1_or,clk,done) is
 					S4_index_3 := ship4_x + 10*(ship4_y+2);
 					S4_index_4 := ship4_x + 10*(ship4_y+3);
 					myVGA <= (others => WATER);
-					myVGA(S4_index_1) <= SHIP;
-					myVGA(S4_index_2) <= SHIP;
-					myVGA(S4_index_3) <= SHIP;
-					myVGA(S4_index_4) <= SHIP;
+					myVGA(S4_index_1) <= CURSOR;
+					myVGA(S4_index_2) <= CURSOR;
+					myVGA(S4_index_3) <= CURSOR;
+					myVGA(S4_index_4) <= CURSOR;
 					myVGA(S3_index_1) <= SHIP;
 					myVGA(S3_index_2) <= SHIP;
 					myVGA(S3_index_3) <= SHIP;
@@ -1011,10 +985,10 @@ game: process(init,data_in,ship1_or,clk,done) is
 					S4_index_3 := ship4_x + 2 + 10*ship4_y;
 					S4_index_4 := ship4_x + 3 + 10*ship4_y;
 					myVGA <= (others => WATER);
-					myVGA(S4_index_1) <= SHIP;
-					myVGA(S4_index_2) <= SHIP;
-					myVGA(S4_index_3) <= SHIP;
-					myVGA(S4_index_4) <= SHIP;
+					myVGA(S4_index_1) <= CURSOR;
+					myVGA(S4_index_2) <= CURSOR;
+					myVGA(S4_index_3) <= CURSOR;
+					myVGA(S4_index_4) <= CURSOR;
 					myVGA(S3_index_1) <= SHIP;
 					myVGA(S3_index_2) <= SHIP;
 					myVGA(S3_index_3) <= SHIP;
@@ -1035,9 +1009,13 @@ game: process(init,data_in,ship1_or,clk,done) is
 				end if;
 
 				--temp start0---------------------
-				if (enter_press='1') then
+				if (enter_press='1' and S4_overlap='0') then
 					--data_out	<= '0';
 					state		<= PLACE_S5;
+					myVGA(S4_index_1) <= SHIP;
+					myVGA(S4_index_2) <= SHIP;
+					myVGA(S4_index_3) <= SHIP;
+					myVGA(S4_index_4) <= SHIP;
 					saved1 <= myVGA(cursor_x + 10*cursor_y);
 				end if;
 				
@@ -1230,11 +1208,11 @@ game: process(init,data_in,ship1_or,clk,done) is
 					S5_index_4 := ship5_x + 10*(ship5_y+3);
 					S5_index_5 := ship5_x + 10*(ship5_y+4);
 					myVGA <= (others => WATER);
-					myVGA(S5_index_1) <= SHIP;
-					myVGA(S5_index_2) <= SHIP;
-					myVGA(S5_index_3) <= SHIP;
-					myVGA(S5_index_4) <= SHIP;
-					myVGA(S5_index_5) <= SHIP;
+					myVGA(S5_index_1) <= CURSOR;
+					myVGA(S5_index_2) <= CURSOR;
+					myVGA(S5_index_3) <= CURSOR;
+					myVGA(S5_index_4) <= CURSOR;
+					myVGA(S5_index_5) <= CURSOR;
 					myVGA(S4_index_1) <= SHIP;
 					myVGA(S4_index_2) <= SHIP;
 					myVGA(S4_index_3) <= SHIP;
@@ -1254,11 +1232,11 @@ game: process(init,data_in,ship1_or,clk,done) is
 					S5_index_4 := ship5_x + 3 + 10*ship5_y;
 					S5_index_5 := ship5_x + 4 + 10*ship5_y;
 					myVGA <= (others => WATER);
-					myVGA(S5_index_1) <= SHIP;		--move outside of if (same as before)
-					myVGA(S5_index_2) <= SHIP;
-					myVGA(S5_index_3) <= SHIP;
-					myVGA(S5_index_4) <= SHIP;
-					myVGA(S5_index_5) <= SHIP;
+					myVGA(S5_index_1) <= CURSOR;		--move outside of if (same as before)
+					myVGA(S5_index_2) <= CURSOR;
+					myVGA(S5_index_3) <= CURSOR;
+					myVGA(S5_index_4) <= CURSOR;
+					myVGA(S5_index_5) <= CURSOR;
 					myVGA(S4_index_1) <= SHIP;
 					myVGA(S4_index_2) <= SHIP;
 					myVGA(S4_index_3) <= SHIP;
@@ -1284,7 +1262,13 @@ game: process(init,data_in,ship1_or,clk,done) is
 
 				if (enter_press='1' and S5_overlap='0') then
 					data_out	<= '0';
+					placing_on <= '0';
 					state		<= PRE_COMM_S1;
+					myVGA(S5_index_1) <= SHIP;
+					myVGA(S5_index_2) <= SHIP;
+					myVGA(S5_index_3) <= SHIP;
+					myVGA(S5_index_4) <= SHIP;
+					myVGA(S5_index_5) <= SHIP;
 					saved1 <= myVGA(cursor_x + 10*cursor_y);
 				end if;
 	
@@ -1434,6 +1418,7 @@ game: process(init,data_in,ship1_or,clk,done) is
 				cursor_index := cursor_x + 10*cursor_y;
 				if (myHits=17 or oppHits=17) then
 					state <= GAME_DONE;
+					legend_on <= '0';
 				else
 					oppVGA(cursor_index) <= CURSOR;
 				end if;
@@ -1485,7 +1470,7 @@ game: process(init,data_in,ship1_or,clk,done) is
 
 				
 			WHEN PRE_COMM_SHOT =>
-				test1 <= '0'; sound_explosion <= '0';
+				sound_explosion <= '0';
 				if (data_in='0') then
 					phase <= 1;
 				end if;
@@ -1500,7 +1485,6 @@ game: process(init,data_in,ship1_or,clk,done) is
 				end if;
 				
 				if (counter=DELAY) then --data0
-					test2 <= '1';
 					--data_out <= ship1_x_vector(3);--useful info
 					state <= COMM_SHOT_1;
 					counter <= 0;
@@ -1508,7 +1492,6 @@ game: process(init,data_in,ship1_or,clk,done) is
 				end if;
 				
 			WHEN COMM_SHOT_1 =>
-				test3 <= '0';
 				data_out <= cursor_x_vector(2);-------------------
 				if (counter=(DELAY/2)) then
 					opp_cursor_x_vector(2) <= data_in;
@@ -1613,7 +1596,6 @@ game: process(init,data_in,ship1_or,clk,done) is
 			
 			WHEN GAME_DONE =>
 				game_over <= '1';
-				test11 <= '1';
 				if (myHits=17 and oppHits<17) then
 					winner <= '0';	--I win
 				end if;
