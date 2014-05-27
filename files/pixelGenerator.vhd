@@ -134,8 +134,8 @@ writeEnableA <= '0';
 
 
 gameOverW_on <= '1' when unsigned(pixel_row)(9 downto 5) = 1 and
-								unsigned(pixel_column)(9 downto 4) < 32 and 
-								unsigned(pixel_column)(9 downto 4) > 15 else
+								unsigned(pixel_column)(9 downto 4) > 15 and 
+								unsigned(pixel_column)(9 downto 4) < 32 else
 					'0';
 row_addr_w <= std_logic_vector(pixel_row(4 downto 1));
 bit_addr_w <= std_logic_vector(pixel_column(3 downto 1));
@@ -153,8 +153,8 @@ with pixel_column(7 downto 4) select
 		
 --------------------------------------------------------------------------------------------
 gameOverL_on <= '1' when unsigned(pixel_row)(9 downto 5) = 1 and
-								unsigned(pixel_column)(9 downto 4) < 32 and 
-								unsigned(pixel_column)(9 downto 4) > 15 else
+								unsigned(pixel_column)(9 downto 4) > 15 and 
+								unsigned(pixel_column)(9 downto 4) < 32 else
 					'0';
 row_addr_l <= std_logic_vector(pixel_row(4 downto 1));
 bit_addr_l <= std_logic_vector(pixel_column(3 downto 1));
