@@ -341,14 +341,14 @@ game: process(init,data_in,ship1_or,clk,done) is
 					S1_index_1 := ship1_x + 10*ship1_y;
 					S1_index_2 := ship1_x + 10*(ship1_y+1);
 					myVGA <= (others => WATER);
-					myVGA(S1_index_1) <= SHIP;
-					myVGA(S1_index_2) <= SHIP;
+					myVGA(S1_index_1) <= CURSOR; --was SHIP
+					myVGA(S1_index_2) <= CURSOR; --was SHIP
 				else
 					S1_index_1 := ship1_x + 10*ship1_y;
 					S1_index_2 := ship1_x + 1 + 10*ship1_y;
 					myVGA <= (others => WATER);
-					myVGA(S1_index_1) <= SHIP;
-					myVGA(S1_index_2) <= SHIP;
+					myVGA(S1_index_1) <= CURSOR; --was SHIP
+					myVGA(S1_index_2) <= CURSOR; --was SHIP
 				end if;			
 
 				--temp start0---------------------
@@ -356,6 +356,8 @@ game: process(init,data_in,ship1_or,clk,done) is
 					--data_out	<= '0';
 					state		<= PLACE_S2;
 					saved1 <= myVGA(cursor_x + 10*cursor_y);
+					myVGA(S1_index_1) <= SHIP; --was SHIP
+					myVGA(S1_index_2) <= SHIP; --was SHIP
 				end if;
 				
 				
@@ -544,9 +546,9 @@ game: process(init,data_in,ship1_or,clk,done) is
 					S2_index_2 := ship2_x + 10*(ship2_y+1);
 					S2_index_3 := ship2_x + 10*(ship2_y+2);
 					myVGA <= (others => WATER);
-					myVGA(S2_index_1) <= SHIP;
-					myVGA(S2_index_2) <= SHIP;
-					myVGA(S2_index_3) <= SHIP;
+					myVGA(S2_index_1) <= CURSOR;
+					myVGA(S2_index_2) <= CURSOR;
+					myVGA(S2_index_3) <= CURSOR;
 					myVGA(S1_index_1) <= SHIP;
 					myVGA(S1_index_2) <= SHIP;
 				else
@@ -554,9 +556,9 @@ game: process(init,data_in,ship1_or,clk,done) is
 					S2_index_2 := ship2_x + 1 + 10*ship2_y;
 					S2_index_3 := ship2_x + 2 + 10*ship2_y;
 					myVGA <= (others => WATER);
-					myVGA(S2_index_1) <= SHIP;
-					myVGA(S2_index_2) <= SHIP;
-					myVGA(S2_index_3) <= SHIP;
+					myVGA(S2_index_1) <= CURSOR;
+					myVGA(S2_index_2) <= CURSOR;
+					myVGA(S2_index_3) <= CURSOR;
 					myVGA(S1_index_1) <= SHIP;
 					myVGA(S1_index_2) <= SHIP;
 				end if;
@@ -573,6 +575,9 @@ game: process(init,data_in,ship1_or,clk,done) is
 					--data_out	<= '0';
 					state		<= PLACE_S3;
 					saved1 <= myVGA(cursor_x + 10*cursor_y);
+					myVGA(S2_index_1) <= SHIP;
+					myVGA(S2_index_2) <= SHIP;
+					myVGA(S2_index_3) <= SHIP;
 				end if;
 				
 				
