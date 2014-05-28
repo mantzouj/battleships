@@ -7,7 +7,7 @@ entity battleships is
  port( 
  --Inputs 
 			data_in, AUD_ADCDAT, switch									: in std_logic;
-			keyboard_clk, keyboard_data, clk, CLOCK_27 : in std_logic;
+			keyboard_clk, keyboard_data, clk : in std_logic;
 			AUD_BCLK, AUD_ADCLRCK, AUD_DACLRCK, I2C_SDAT : inout std_logic;
 			KEY : in std_logic_vector(3 downto 0);
 			AUD_XCK, AUD_DACDAT, I2C_SCLK : out std_logic;
@@ -23,7 +23,7 @@ architecture behavioral of battleships is
 
 component DE2_Audio_Example is
 	port (
-			CLOCK_50, CLOCK_27 : in std_logic;
+			CLOCK_50 : in std_logic;
 			KEY : in std_logic_vector(3 downto 0);
 			AUD_ADCDAT : in std_logic;
 			AUD_BCLK, AUD_ADCLRCK, AUD_DACLRCK, I2C_SDAT : inout std_logic;
@@ -62,8 +62,7 @@ component ps2 is
 			--hist3 : out std_logic_vector(7 downto 0);
 			--hist2 : out std_logic_vector(7 downto 0);
 			hist1 : out std_logic_vector(7 downto 0);
-			hist0 : out std_logic_vector(7 downto 0);
-			led_seq: out std_logic_vector (55 downto 0)
+			hist0 : out std_logic_vector(7 downto 0)
 		);  
 end component;
 
@@ -89,16 +88,12 @@ signal opp_ship5_x_vector, opp_ship5_y_vector: std_logic_vector(3 downto 0);
 signal saved1			: integer;
 signal myHits, oppHits : integer;
 
---signal scan_code : std_logic_vector(7 downto 0);
---signal scan_readyo : std_logic;
---signal hist3, hist2 : std_logic_vector(7 downto 0);
 signal hist1, hist0 : std_logic_vector(7 downto 0);
 signal winner         : std_logic;
 signal game_over      : std_logic;
 signal done           : std_logic;
-signal LEDs				 : std_logic_vector (55 downto 0);
 signal tie, select_s	 : std_logic;
-signal init,waiting : std_logic; --,a,b,c,d,e,f
+signal init : std_logic;
 signal sound_explosion : std_logic;
 
 signal go, S2_overlap, S3_overlap, S4_overlap, S5_overlap	: std_logic;
@@ -109,20 +104,18 @@ signal legend_on : std_logic;
 
 begin 
 
-Sounds : DE2_Audio_Example port map (CLOCK_50 => clk, CLOCK_27 => CLOCK_27, KEY => KEY, AUD_ADCDAT => AUD_ADCDAT, AUD_BCLK => AUD_BCLK, AUD_ADCLRCK => AUD_ADCLRCK, AUD_DACLRCK => AUD_DACLRCK, I2C_SDAT => I2C_SDAT, AUD_XCK => AUD_XCK, AUD_DACDAT => AUD_DACDAT, I2C_SCLK => I2C_SCLK, SW => sound_explosion, select_s => select_s);
-keyboard_0 : ps2 port map (keyboard_clk, keyboard_data, clk, '1', hist1, hist0, LEDs);
+Sounds : DE2_Audio_Example port map (CLOCK_50 => clk, KEY => KEY, AUD_ADCDAT => AUD_ADCDAT, AUD_BCLK => AUD_BCLK, AUD_ADCLRCK => AUD_ADCLRCK, AUD_DACLRCK => AUD_DACLRCK, I2C_SDAT => I2C_SDAT, AUD_XCK => AUD_XCK, AUD_DACDAT => AUD_DACDAT, I2C_SCLK => I2C_SCLK, SW => sound_explosion, select_s => select_s);
+keyboard_0 : ps2 port map (keyboard_clk, keyboard_data, clk, '1', hist1, hist0);
 vga_0 : VGA_top_level port map (clk, game_over, winner, tie, VGA_RED, VGA_GREEN, VGA_BLUE, HORIZ_SYNC, VERT_SYNC, VGA_BLANK, VGA_CLK, myVGA, oppVGA, placing_on, placeShip_num, legend_on);
 
 key_press : process(hist0,clk,done,hist1) is --determine if there is keypress and what should happen
 begin
 if (rising_edge(clk)) then
 	init <= '1';
-	waiting <= '0';
 	
 	if (hist1=X"00") then
 	 init <= '0';
 	 enter_press <= '0';
-	 waiting <= '1';
 	end if;
   
  	if (hist1/=X"F0") then
@@ -193,8 +186,6 @@ game: process(init,data_in,ship1_or,clk,done) is
   variable opp_ship3_x, opp_ship3_y : natural;  
   variable opp_ship4_x, opp_ship4_y : natural;
   variable opp_ship5_x, opp_ship5_y : natural;
-  --variable S1_placed : std_logic;
-  --variable S2_placed : std_logic;
   variable cursor_x, cursor_y, cursor_index : natural;
   variable S1_index_1, S1_index_2, S2_index_1, S2_index_2, S2_index_3, S3_index_1, S3_index_2, S3_index_3, S4_index_1, S4_index_2, S4_index_3, S4_index_4, S5_index_1, S5_index_2, S5_index_3, S5_index_4, S5_index_5 : natural;
   variable opp_S1_index_1, opp_S1_index_2, opp_S2_index_1, opp_S2_index_2, opp_S2_index_3, opp_S3_index_1, opp_S3_index_2, opp_S3_index_3, opp_S4_index_1, opp_S4_index_2, opp_S4_index_3, opp_S4_index_4, opp_S5_index_1, opp_S5_index_2, opp_S5_index_3, opp_S5_index_4, opp_S5_index_5 : natural;
@@ -213,7 +204,7 @@ game: process(init,data_in,ship1_or,clk,done) is
 		ship4_y 	:= 0;
 		ship5_x 	:= 0;
 		ship5_y 	:= 0;		
-		cursor_x	:= 4;	cursor_y := 4;	
+		cursor_x	:= 4;	cursor_y := 4;
 		
 		placing_on <= '1'; --place ship on
 		
@@ -266,17 +257,7 @@ game: process(init,data_in,ship1_or,clk,done) is
 	  
     --Phases-----------------------------------------------------------    
   elsif (rising_edge(clk)) then
---		a	<='0';
---		b	<='0';
---		c  <='0';
---		d  <='0';
---		e	<='0';
---		f	<='0';
-
----initialize myVGA here, and create an ack signal to never do again
-		
-		--data_out <= data1;		
-		
+				
 		case state is
 			WHEN PLACE_S1 =>
 			placeShip_num <= "001"; --place ship one 
@@ -327,21 +308,10 @@ game: process(init,data_in,ship1_or,clk,done) is
 				if (enter_press='1') then
 					--data_out	<= '0';
 					state		<= PLACE_S2;
-					saved1 <= myVGA(cursor_x + 10*cursor_y);
 					myVGA(S1_index_1) <= SHIP; --was SHIP
 					myVGA(S1_index_2) <= SHIP; --was SHIP
 				end if;
-				
-				
-				--temp end0---------------------
-				
-				
---				if (enter_press='1') then
---					data_out	<= '0';
---					state		<= PRE_COMM_S1;
---					saved1 <= myVGA(cursor_x + 10*cursor_y);
---				end if;
-				
+								
 			
 			WHEN PRE_COMM_S1 =>
 				if (data_in='0') then
@@ -541,25 +511,12 @@ game: process(init,data_in,ship1_or,clk,done) is
 					myVGA(S2_index_3) <= OVERLAP;
 				end if;			
 
-				--temp start0---------------------
 				if (enter_press='1' and S2_overlap='0') then
-					--data_out	<= '0';
 					state		<= PLACE_S3;
-					saved1 <= myVGA(cursor_x + 10*cursor_y);
 					myVGA(S2_index_1) <= SHIP;
 					myVGA(S2_index_2) <= SHIP;
 					myVGA(S2_index_3) <= SHIP;
 				end if;
-				
-				
-				--temp end0---------------------
-				
---				if (enter_press='1' and S2_overlap='0') then
---					data_out	<= '0';
---					state		<= PRE_COMM_S1;
---					saved1 <= myVGA(cursor_x + 10*cursor_y);
---				end if;
-	
 			
 			WHEN PRE_COMM_S2 =>
 				if (data_in='0') then
@@ -701,7 +658,7 @@ game: process(init,data_in,ship1_or,clk,done) is
 
 	
 			WHEN PLACE_S3 =>
-			placeShip_num <= "011"; --place ship one 
+			placeShip_num <= "011"; --place ship 3 
 				if (left_press='1') and (ship3_x>0) then
 						ship3_x := ship3_x - 1;
 						S3_overlap <= '0';
@@ -767,27 +724,12 @@ game: process(init,data_in,ship1_or,clk,done) is
 					myVGA(S3_index_3) <= OVERLAP;
 				end if;
 				
-				--temp start0---------------------
 				if (enter_press='1' and S3_overlap='0') then
-					--data_out	<= '0';
 					state		<= PLACE_S4;
 					myVGA(S3_index_1) <= SHIP;
 					myVGA(S3_index_2) <= SHIP;
 					myVGA(S3_index_3) <= SHIP;
-					saved1 <= myVGA(cursor_x + 10*cursor_y);
 				end if;
-				
-				
-				--temp end0---------------------		
-				
-				
-				
-				
---				if (enter_press='1' and S3_overlap='0') then
---					data_out	<= '0';
---					state		<= PRE_COMM_S3;
---					saved1 <= myVGA(cursor_x + 10*cursor_y);
---				end if;
 	
 			
 			WHEN PRE_COMM_S3 =>
@@ -1010,24 +952,13 @@ game: process(init,data_in,ship1_or,clk,done) is
 
 				--temp start0---------------------
 				if (enter_press='1' and S4_overlap='0') then
-					--data_out	<= '0';
 					state		<= PLACE_S5;
 					myVGA(S4_index_1) <= SHIP;
 					myVGA(S4_index_2) <= SHIP;
 					myVGA(S4_index_3) <= SHIP;
 					myVGA(S4_index_4) <= SHIP;
-					saved1 <= myVGA(cursor_x + 10*cursor_y);
 				end if;
 				
-				
-				--temp end0---------------------
-				
---				if (enter_press='1' and S4_overlap='0') then
---					data_out	<= '0';
---					state		<= PRE_COMM_S4;
---					saved1 <= myVGA(cursor_x + 10*cursor_y);
---				end if;
-	
 			
 			WHEN PRE_COMM_S4 =>
 				if (data_in='0') then
@@ -1269,7 +1200,7 @@ game: process(init,data_in,ship1_or,clk,done) is
 					myVGA(S5_index_3) <= SHIP;
 					myVGA(S5_index_4) <= SHIP;
 					myVGA(S5_index_5) <= SHIP;
-					saved1 <= myVGA(cursor_x + 10*cursor_y);
+					saved1 <= WATER;
 				end if;
 	
 			

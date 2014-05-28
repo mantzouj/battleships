@@ -12,8 +12,7 @@ entity ps2 is
 			--hist3 : out std_logic_vector(7 downto 0);
 			--hist2 : out std_logic_vector(7 downto 0);
 			hist1 : out std_logic_vector(7 downto 0);
-			hist0 : out std_logic_vector(7 downto 0);
-			led_seq: out std_logic_vector (55 downto 0)
+			hist0 : out std_logic_vector(7 downto 0)
 		);
 end entity ps2;
 
@@ -43,22 +42,12 @@ end component oneshot;
 
 signal scan2 : std_logic;
 signal scan_code2 : std_logic_vector( 7 downto 0 );
-signal history3 : std_logic_vector(7 downto 0);
 signal history2 : std_logic_vector(7 downto 0);
 signal history1 : std_logic_vector(7 downto 0);
 signal history0 : std_logic_vector(7 downto 0);
 signal read : std_logic;
 
 begin
-
-l1: leddcd port map (data_in=>history0(3 downto 0), segments_out=>led_seq(6 downto 0));
-l2: leddcd port map (data_in=>history0(7 downto 4), segments_out=>led_seq(13 downto 7));
-l3: leddcd port map (data_in=>history1(3 downto 0), segments_out=>led_seq(20 downto 14));
-l4: leddcd port map (data_in=>history1(7 downto 4), segments_out=>led_seq(27 downto 21));
-l5: leddcd port map (data_in=>history2(3 downto 0), segments_out=>led_seq(34 downto 28));
-l6: leddcd port map (data_in=>history2(7 downto 4), segments_out=>led_seq(41 downto 35));
-l7: leddcd port map (data_in=>history3(3 downto 0), segments_out=>led_seq(48 downto 42));
-l8: leddcd port map (data_in=>history3(7 downto 4), segments_out=>led_seq(55 downto 49));
 
 
 u1: keyboard port map(	
@@ -82,13 +71,10 @@ pulser: oneshot port map(
 
 hist0<=history0;
 hist1<=history1;
---hist2<=history2;
---hist3<=history3;
 
 a1 : process(scan2)
 begin
 	if(rising_edge(scan2)) then
-	history3 <= history2;
 	history2 <= history1;
 	history1 <= history0;
 	history0 <= scan_code2;
