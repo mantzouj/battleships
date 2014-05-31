@@ -248,11 +248,11 @@ game: process(init,data_in,ship1_or,clk,done) is
 		done 		<= '1';
 		state 	<= PLACE_S1;
 		if (ship1_or='1') then	--potentially unecessary
-			myVGA(ship1_x + 10*ship1_y) <= SHIP;
-			myVGA(ship1_x + 10*(ship1_y+1)) <= SHIP;
+			myVGA(ship1_x + 10*ship1_y) <= CURSOR;
+		myVGA(ship1_x + 10*(ship1_y+1)) <= CURSOR;
 		else
-			myVGA(ship1_x + 10*ship1_y) <= SHIP;
-			myVGA(ship1_x + 1 + 10*ship1_y) <= SHIP;		
+			myVGA(ship1_x + 10*ship1_y) <= CURSOR;
+			myVGA(ship1_x + 1 + 10*ship1_y) <= CURSOR;		
 		end if;
 	  
     --Phases-----------------------------------------------------------    

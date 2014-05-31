@@ -1,5 +1,5 @@
 Analysis & Synthesis report for battleships
-Tue May 27 13:33:24 2014
+Fri May 30 20:56:36 2014
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -85,13 +85,13 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Tue May 27 13:33:23 2014           ;
+; Analysis & Synthesis Status        ; Successful - Fri May 30 20:56:36 2014           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; battleships                                     ;
 ; Top-level Entity Name              ; battleships                                     ;
 ; Family                             ; Cyclone II                                      ;
-; Total logic elements               ; 20,508                                          ;
-;     Total combinational functions  ; 20,362                                          ;
+; Total logic elements               ; 20,191                                          ;
+;     Total combinational functions  ; 20,045                                          ;
 ;     Dedicated logic registers      ; 2,112                                           ;
 ; Total registers                    ; 2112                                            ;
 ; Total pins                         ; 52                                              ;
@@ -203,26 +203,26 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------------------------------------+-----------------+-------------------------------------------------------+---------------------------------------------------------------------------------------------------------+---------+
 ; File Name with User-Entered Path                         ; Used in Netlist ; File Type                                             ; File Name with Absolute Path                                                                            ; Library ;
 +----------------------------------------------------------+-----------------+-------------------------------------------------------+---------------------------------------------------------------------------------------------------------+---------+
-; files/fontROM.vhd                                        ; yes             ; User VHDL File                                        ; C:/Users/mantzouj/Documents/GitHub/battleships/files/fontROM.vhd                                        ;         ;
-; files/DE2_Audio_Example.v                                ; yes             ; User Verilog HDL File                                 ; C:/Users/mantzouj/Documents/GitHub/battleships/files/DE2_Audio_Example.v                                ;         ;
-; files/avconf/I2C_Controller.v                            ; yes             ; User Verilog HDL File                                 ; C:/Users/mantzouj/Documents/GitHub/battleships/files/avconf/I2C_Controller.v                            ;         ;
-; files/avconf/avconf.v                                    ; yes             ; User Verilog HDL File                                 ; C:/Users/mantzouj/Documents/GitHub/battleships/files/avconf/avconf.v                                    ;         ;
-; files/Audio_Controller/Audio_Controller.v                ; yes             ; User Verilog HDL File                                 ; C:/Users/mantzouj/Documents/GitHub/battleships/files/Audio_Controller/Audio_Controller.v                ;         ;
-; files/Audio_Controller/Audio_Clock.v                     ; yes             ; User Wizard-Generated File                            ; C:/Users/mantzouj/Documents/GitHub/battleships/files/Audio_Controller/Audio_Clock.v                     ;         ;
-; files/Audio_Controller/Altera_UP_SYNC_FIFO.v             ; yes             ; User Verilog HDL File                                 ; C:/Users/mantzouj/Documents/GitHub/battleships/files/Audio_Controller/Altera_UP_SYNC_FIFO.v             ;         ;
-; files/Audio_Controller/Altera_UP_Clock_Edge.v            ; yes             ; User Verilog HDL File                                 ; C:/Users/mantzouj/Documents/GitHub/battleships/files/Audio_Controller/Altera_UP_Clock_Edge.v            ;         ;
-; files/Audio_Controller/Altera_UP_Audio_Out_Serializer.v  ; yes             ; User Verilog HDL File                                 ; C:/Users/mantzouj/Documents/GitHub/battleships/files/Audio_Controller/Altera_UP_Audio_Out_Serializer.v  ;         ;
-; files/Audio_Controller/Altera_UP_Audio_In_Deserializer.v ; yes             ; User Verilog HDL File                                 ; C:/Users/mantzouj/Documents/GitHub/battleships/files/Audio_Controller/Altera_UP_Audio_In_Deserializer.v ;         ;
-; files/Audio_Controller/Altera_UP_Audio_Bit_Counter.v     ; yes             ; User Verilog HDL File                                 ; C:/Users/mantzouj/Documents/GitHub/battleships/files/Audio_Controller/Altera_UP_Audio_Bit_Counter.v     ;         ;
-; files/VGA_top_level.vhd                                  ; yes             ; User VHDL File                                        ; C:/Users/mantzouj/Documents/GitHub/battleships/files/VGA_top_level.vhd                                  ;         ;
-; files/vga_sync.vhd                                       ; yes             ; User VHDL File                                        ; C:/Users/mantzouj/Documents/GitHub/battleships/files/vga_sync.vhd                                       ;         ;
-; files/ps2.vhd                                            ; yes             ; User VHDL File                                        ; C:/Users/mantzouj/Documents/GitHub/battleships/files/ps2.vhd                                            ;         ;
-; files/pixelGenerator.vhd                                 ; yes             ; User VHDL File                                        ; C:/Users/mantzouj/Documents/GitHub/battleships/files/pixelGenerator.vhd                                 ;         ;
-; files/oneshot.vhd                                        ; yes             ; User VHDL File                                        ; C:/Users/mantzouj/Documents/GitHub/battleships/files/oneshot.vhd                                        ;         ;
-; files/keyboard.vhd                                       ; yes             ; User VHDL File                                        ; C:/Users/mantzouj/Documents/GitHub/battleships/files/keyboard.vhd                                       ;         ;
-; files/colorROM.vhd                                       ; yes             ; User Wizard-Generated File                            ; C:/Users/mantzouj/Documents/GitHub/battleships/files/colorROM.vhd                                       ;         ;
-; files/battleships_const.vhd                              ; yes             ; User VHDL File                                        ; C:/Users/mantzouj/Documents/GitHub/battleships/files/battleships_const.vhd                              ;         ;
-; files/battleships.vhd                                    ; yes             ; User VHDL File                                        ; C:/Users/mantzouj/Documents/GitHub/battleships/files/battleships.vhd                                    ;         ;
+; files/fontROM.vhd                                        ; yes             ; User VHDL File                                        ; C:/Users/mantzouj/Documents/GitHub/Battleships/files/fontROM.vhd                                        ;         ;
+; files/DE2_Audio_Example.v                                ; yes             ; User Verilog HDL File                                 ; C:/Users/mantzouj/Documents/GitHub/Battleships/files/DE2_Audio_Example.v                                ;         ;
+; files/avconf/I2C_Controller.v                            ; yes             ; User Verilog HDL File                                 ; C:/Users/mantzouj/Documents/GitHub/Battleships/files/avconf/I2C_Controller.v                            ;         ;
+; files/avconf/avconf.v                                    ; yes             ; User Verilog HDL File                                 ; C:/Users/mantzouj/Documents/GitHub/Battleships/files/avconf/avconf.v                                    ;         ;
+; files/Audio_Controller/Audio_Controller.v                ; yes             ; User Verilog HDL File                                 ; C:/Users/mantzouj/Documents/GitHub/Battleships/files/Audio_Controller/Audio_Controller.v                ;         ;
+; files/Audio_Controller/Audio_Clock.v                     ; yes             ; User Wizard-Generated File                            ; C:/Users/mantzouj/Documents/GitHub/Battleships/files/Audio_Controller/Audio_Clock.v                     ;         ;
+; files/Audio_Controller/Altera_UP_SYNC_FIFO.v             ; yes             ; User Verilog HDL File                                 ; C:/Users/mantzouj/Documents/GitHub/Battleships/files/Audio_Controller/Altera_UP_SYNC_FIFO.v             ;         ;
+; files/Audio_Controller/Altera_UP_Clock_Edge.v            ; yes             ; User Verilog HDL File                                 ; C:/Users/mantzouj/Documents/GitHub/Battleships/files/Audio_Controller/Altera_UP_Clock_Edge.v            ;         ;
+; files/Audio_Controller/Altera_UP_Audio_Out_Serializer.v  ; yes             ; User Verilog HDL File                                 ; C:/Users/mantzouj/Documents/GitHub/Battleships/files/Audio_Controller/Altera_UP_Audio_Out_Serializer.v  ;         ;
+; files/Audio_Controller/Altera_UP_Audio_In_Deserializer.v ; yes             ; User Verilog HDL File                                 ; C:/Users/mantzouj/Documents/GitHub/Battleships/files/Audio_Controller/Altera_UP_Audio_In_Deserializer.v ;         ;
+; files/Audio_Controller/Altera_UP_Audio_Bit_Counter.v     ; yes             ; User Verilog HDL File                                 ; C:/Users/mantzouj/Documents/GitHub/Battleships/files/Audio_Controller/Altera_UP_Audio_Bit_Counter.v     ;         ;
+; files/VGA_top_level.vhd                                  ; yes             ; User VHDL File                                        ; C:/Users/mantzouj/Documents/GitHub/Battleships/files/VGA_top_level.vhd                                  ;         ;
+; files/vga_sync.vhd                                       ; yes             ; User VHDL File                                        ; C:/Users/mantzouj/Documents/GitHub/Battleships/files/vga_sync.vhd                                       ;         ;
+; files/ps2.vhd                                            ; yes             ; User VHDL File                                        ; C:/Users/mantzouj/Documents/GitHub/Battleships/files/ps2.vhd                                            ;         ;
+; files/pixelGenerator.vhd                                 ; yes             ; User VHDL File                                        ; C:/Users/mantzouj/Documents/GitHub/Battleships/files/pixelGenerator.vhd                                 ;         ;
+; files/oneshot.vhd                                        ; yes             ; User VHDL File                                        ; C:/Users/mantzouj/Documents/GitHub/Battleships/files/oneshot.vhd                                        ;         ;
+; files/keyboard.vhd                                       ; yes             ; User VHDL File                                        ; C:/Users/mantzouj/Documents/GitHub/Battleships/files/keyboard.vhd                                       ;         ;
+; files/colorROM.vhd                                       ; yes             ; User Wizard-Generated File                            ; C:/Users/mantzouj/Documents/GitHub/Battleships/files/colorROM.vhd                                       ;         ;
+; files/battleships_const.vhd                              ; yes             ; User VHDL File                                        ; C:/Users/mantzouj/Documents/GitHub/Battleships/files/battleships_const.vhd                              ;         ;
+; files/battleships.vhd                                    ; yes             ; User VHDL File                                        ; C:/Users/mantzouj/Documents/GitHub/Battleships/files/battleships.vhd                                    ;         ;
 ; scfifo.tdf                                               ; yes             ; Megafunction                                          ; c:/altera/13.0sp1/quartus/libraries/megafunctions/scfifo.tdf                                            ;         ;
 ; a_regfifo.inc                                            ; yes             ; Megafunction                                          ; c:/altera/13.0sp1/quartus/libraries/megafunctions/a_regfifo.inc                                         ;         ;
 ; a_dpfifo.inc                                             ; yes             ; Megafunction                                          ; c:/altera/13.0sp1/quartus/libraries/megafunctions/a_dpfifo.inc                                          ;         ;
@@ -230,13 +230,13 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ; a_fffifo.inc                                             ; yes             ; Megafunction                                          ; c:/altera/13.0sp1/quartus/libraries/megafunctions/a_fffifo.inc                                          ;         ;
 ; a_f2fifo.inc                                             ; yes             ; Megafunction                                          ; c:/altera/13.0sp1/quartus/libraries/megafunctions/a_f2fifo.inc                                          ;         ;
 ; aglobal130.inc                                           ; yes             ; Megafunction                                          ; c:/altera/13.0sp1/quartus/libraries/megafunctions/aglobal130.inc                                        ;         ;
-; db/scfifo_3041.tdf                                       ; yes             ; Auto-Generated Megafunction                           ; C:/Users/mantzouj/Documents/GitHub/battleships/db/scfifo_3041.tdf                                       ;         ;
-; db/a_dpfifo_mn31.tdf                                     ; yes             ; Auto-Generated Megafunction                           ; C:/Users/mantzouj/Documents/GitHub/battleships/db/a_dpfifo_mn31.tdf                                     ;         ;
-; db/altsyncram_nc81.tdf                                   ; yes             ; Auto-Generated Megafunction                           ; C:/Users/mantzouj/Documents/GitHub/battleships/db/altsyncram_nc81.tdf                                   ;         ;
-; db/cmpr_2o8.tdf                                          ; yes             ; Auto-Generated Megafunction                           ; C:/Users/mantzouj/Documents/GitHub/battleships/db/cmpr_2o8.tdf                                          ;         ;
-; db/cntr_d5b.tdf                                          ; yes             ; Auto-Generated Megafunction                           ; C:/Users/mantzouj/Documents/GitHub/battleships/db/cntr_d5b.tdf                                          ;         ;
-; db/cntr_q57.tdf                                          ; yes             ; Auto-Generated Megafunction                           ; C:/Users/mantzouj/Documents/GitHub/battleships/db/cntr_q57.tdf                                          ;         ;
-; db/cntr_e5b.tdf                                          ; yes             ; Auto-Generated Megafunction                           ; C:/Users/mantzouj/Documents/GitHub/battleships/db/cntr_e5b.tdf                                          ;         ;
+; db/scfifo_3041.tdf                                       ; yes             ; Auto-Generated Megafunction                           ; C:/Users/mantzouj/Documents/GitHub/Battleships/db/scfifo_3041.tdf                                       ;         ;
+; db/a_dpfifo_mn31.tdf                                     ; yes             ; Auto-Generated Megafunction                           ; C:/Users/mantzouj/Documents/GitHub/Battleships/db/a_dpfifo_mn31.tdf                                     ;         ;
+; db/altsyncram_nc81.tdf                                   ; yes             ; Auto-Generated Megafunction                           ; C:/Users/mantzouj/Documents/GitHub/Battleships/db/altsyncram_nc81.tdf                                   ;         ;
+; db/cmpr_2o8.tdf                                          ; yes             ; Auto-Generated Megafunction                           ; C:/Users/mantzouj/Documents/GitHub/Battleships/db/cmpr_2o8.tdf                                          ;         ;
+; db/cntr_d5b.tdf                                          ; yes             ; Auto-Generated Megafunction                           ; C:/Users/mantzouj/Documents/GitHub/Battleships/db/cntr_d5b.tdf                                          ;         ;
+; db/cntr_q57.tdf                                          ; yes             ; Auto-Generated Megafunction                           ; C:/Users/mantzouj/Documents/GitHub/Battleships/db/cntr_q57.tdf                                          ;         ;
+; db/cntr_e5b.tdf                                          ; yes             ; Auto-Generated Megafunction                           ; C:/Users/mantzouj/Documents/GitHub/Battleships/db/cntr_e5b.tdf                                          ;         ;
 ; altpll.tdf                                               ; yes             ; Megafunction                                          ; c:/altera/13.0sp1/quartus/libraries/megafunctions/altpll.tdf                                            ;         ;
 ; stratix_pll.inc                                          ; yes             ; Megafunction                                          ; c:/altera/13.0sp1/quartus/libraries/megafunctions/stratix_pll.inc                                       ;         ;
 ; stratixii_pll.inc                                        ; yes             ; Megafunction                                          ; c:/altera/13.0sp1/quartus/libraries/megafunctions/stratixii_pll.inc                                     ;         ;
@@ -249,13 +249,14 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ; altrom.inc                                               ; yes             ; Megafunction                                          ; c:/altera/13.0sp1/quartus/libraries/megafunctions/altrom.inc                                            ;         ;
 ; altram.inc                                               ; yes             ; Megafunction                                          ; c:/altera/13.0sp1/quartus/libraries/megafunctions/altram.inc                                            ;         ;
 ; altdpram.inc                                             ; yes             ; Megafunction                                          ; c:/altera/13.0sp1/quartus/libraries/megafunctions/altdpram.inc                                          ;         ;
-; db/altsyncram_pv71.tdf                                   ; yes             ; Auto-Generated Megafunction                           ; C:/Users/mantzouj/Documents/GitHub/battleships/db/altsyncram_pv71.tdf                                   ;         ;
-; db/altsyncram_0771.tdf                                   ; yes             ; Auto-Generated Megafunction                           ; C:/Users/mantzouj/Documents/GitHub/battleships/db/altsyncram_0771.tdf                                   ;         ;
-; db/battleships.ram0_fontrom_16852496.hdl.mif             ; yes             ; Auto-Generated Auto-Found Memory Initialization File  ; C:/Users/mantzouj/Documents/GitHub/battleships/db/battleships.ram0_fontrom_16852496.hdl.mif             ;         ;
-; db/altsyncram_i491.tdf                                   ; yes             ; Auto-Generated Megafunction                           ; C:/Users/mantzouj/Documents/GitHub/battleships/db/altsyncram_i491.tdf                                   ;         ;
-; db/battleships.rom0_de2_audio_example_d06796cf.hdl.mif   ; yes             ; Auto-Generated Auto-Found Memory Initialization File  ; C:/Users/mantzouj/Documents/GitHub/battleships/db/battleships.rom0_de2_audio_example_d06796cf.hdl.mif   ;         ;
-; db/decode_1oa.tdf                                        ; yes             ; Auto-Generated Megafunction                           ; C:/Users/mantzouj/Documents/GitHub/battleships/db/decode_1oa.tdf                                        ;         ;
-; db/mux_sjb.tdf                                           ; yes             ; Auto-Generated Megafunction                           ; C:/Users/mantzouj/Documents/GitHub/battleships/db/mux_sjb.tdf                                           ;         ;
+; db/altsyncram_pv71.tdf                                   ; yes             ; Auto-Generated Megafunction                           ; C:/Users/mantzouj/Documents/GitHub/Battleships/db/altsyncram_pv71.tdf                                   ;         ;
+; files/colorROM.mif                                       ; yes             ; Auto-Found Memory Initialization File                 ; C:/Users/mantzouj/Documents/GitHub/Battleships/files/colorROM.mif                                       ;         ;
+; db/altsyncram_0771.tdf                                   ; yes             ; Auto-Generated Megafunction                           ; C:/Users/mantzouj/Documents/GitHub/Battleships/db/altsyncram_0771.tdf                                   ;         ;
+; db/battleships.ram0_fontROM_16852496.hdl.mif             ; yes             ; Auto-Generated Auto-Found Memory Initialization File  ; C:/Users/mantzouj/Documents/GitHub/Battleships/db/battleships.ram0_fontROM_16852496.hdl.mif             ;         ;
+; db/altsyncram_i491.tdf                                   ; yes             ; Auto-Generated Megafunction                           ; C:/Users/mantzouj/Documents/GitHub/Battleships/db/altsyncram_i491.tdf                                   ;         ;
+; db/battleships.rom0_DE2_Audio_Example_d06796cf.hdl.mif   ; yes             ; Auto-Generated Auto-Found Memory Initialization File  ; C:/Users/mantzouj/Documents/GitHub/Battleships/db/battleships.rom0_DE2_Audio_Example_d06796cf.hdl.mif   ;         ;
+; db/decode_1oa.tdf                                        ; yes             ; Auto-Generated Megafunction                           ; C:/Users/mantzouj/Documents/GitHub/Battleships/db/decode_1oa.tdf                                        ;         ;
+; db/mux_sjb.tdf                                           ; yes             ; Auto-Generated Megafunction                           ; C:/Users/mantzouj/Documents/GitHub/Battleships/db/mux_sjb.tdf                                           ;         ;
 +----------------------------------------------------------+-----------------+-------------------------------------------------------+---------------------------------------------------------------------------------------------------------+---------+
 
 
@@ -264,16 +265,16 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +---------------------------------------------+--------+
 ; Resource                                    ; Usage  ;
 +---------------------------------------------+--------+
-; Estimated Total logic elements              ; 20,508 ;
+; Estimated Total logic elements              ; 20,191 ;
 ;                                             ;        ;
-; Total combinational functions               ; 20362  ;
+; Total combinational functions               ; 20045  ;
 ; Logic element usage by number of LUT inputs ;        ;
-;     -- 4 input functions                    ; 13958  ;
-;     -- 3 input functions                    ; 4092   ;
-;     -- <=2 input functions                  ; 2312   ;
+;     -- 4 input functions                    ; 13573  ;
+;     -- 3 input functions                    ; 4169   ;
+;     -- <=2 input functions                  ; 2303   ;
 ;                                             ;        ;
 ; Logic elements by mode                      ;        ;
-;     -- normal mode                          ; 17240  ;
+;     -- normal mode                          ; 16923  ;
 ;     -- arithmetic mode                      ; 3122   ;
 ;                                             ;        ;
 ; Total registers                             ; 2112   ;
@@ -288,8 +289,8 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ;                                             ;        ;
 ; Maximum fan-out node                        ; clk    ;
 ; Maximum fan-out                             ; 2106   ;
-; Total fan-out                               ; 82037  ;
-; Average fan-out                             ; 3.62   ;
+; Total fan-out                               ; 80710  ;
+; Average fan-out                             ; 3.61   ;
 +---------------------------------------------+--------+
 
 
@@ -298,9 +299,9 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +------------------------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node                                       ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                                                                                                                                                    ; Library Name ;
 +------------------------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
-; |battleships                                                     ; 20362 (18036)     ; 2112 (1709)  ; 199408      ; 0            ; 0       ; 0         ; 52   ; 0            ; |battleships                                                                                                                                                                                                                                                           ; work         ;
-;    |DE2_Audio_Example:Sounds|                                    ; 598 (87)          ; 305 (31)     ; 182784      ; 0            ; 0       ; 0         ; 0    ; 0            ; |battleships|DE2_Audio_Example:Sounds                                                                                                                                                                                                                                  ; work         ;
-;       |Audio_Controller:Audio_Controller|                        ; 300 (4)           ; 200 (4)      ; 10752       ; 0            ; 0       ; 0         ; 0    ; 0            ; |battleships|DE2_Audio_Example:Sounds|Audio_Controller:Audio_Controller                                                                                                                                                                                                ; work         ;
+; |battleships                                                     ; 20045 (17718)     ; 2112 (1709)  ; 199408      ; 0            ; 0       ; 0         ; 52   ; 0            ; |battleships                                                                                                                                                                                                                                                           ; work         ;
+;    |DE2_Audio_Example:Sounds|                                    ; 604 (92)          ; 305 (31)     ; 182784      ; 0            ; 0       ; 0         ; 0    ; 0            ; |battleships|DE2_Audio_Example:Sounds                                                                                                                                                                                                                                  ; work         ;
+;       |Audio_Controller:Audio_Controller|                        ; 301 (4)           ; 200 (4)      ; 10752       ; 0            ; 0       ; 0         ; 0    ; 0            ; |battleships|DE2_Audio_Example:Sounds|Audio_Controller:Audio_Controller                                                                                                                                                                                                ; work         ;
 ;          |Altera_UP_Audio_In_Deserializer:Audio_In_Deserializer| ; 144 (30)          ; 97 (25)      ; 5376        ; 0            ; 0       ; 0         ; 0    ; 0            ; |battleships|DE2_Audio_Example:Sounds|Audio_Controller:Audio_Controller|Altera_UP_Audio_In_Deserializer:Audio_In_Deserializer                                                                                                                                          ; work         ;
 ;             |Altera_UP_Audio_Bit_Counter:Audio_Out_Bit_Counter|  ; 10 (10)           ; 6 (6)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |battleships|DE2_Audio_Example:Sounds|Audio_Controller:Audio_Controller|Altera_UP_Audio_In_Deserializer:Audio_In_Deserializer|Altera_UP_Audio_Bit_Counter:Audio_Out_Bit_Counter                                                                                        ; work         ;
 ;             |Altera_UP_SYNC_FIFO:Audio_In_Left_Channel_FIFO|     ; 52 (0)            ; 33 (0)       ; 2688        ; 0            ; 0       ; 0         ; 0    ; 0            ; |battleships|DE2_Audio_Example:Sounds|Audio_Controller:Audio_Controller|Altera_UP_Audio_In_Deserializer:Audio_In_Deserializer|Altera_UP_SYNC_FIFO:Audio_In_Left_Channel_FIFO                                                                                           ; work         ;
@@ -319,7 +320,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ;                         |cntr_d5b:rd_ptr_msb|                    ; 7 (7)             ; 6 (6)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |battleships|DE2_Audio_Example:Sounds|Audio_Controller:Audio_Controller|Altera_UP_Audio_In_Deserializer:Audio_In_Deserializer|Altera_UP_SYNC_FIFO:Audio_In_Right_Channel_FIFO|scfifo:Sync_FIFO|scfifo_3041:auto_generated|a_dpfifo_mn31:dpfifo|cntr_d5b:rd_ptr_msb     ; work         ;
 ;                         |cntr_e5b:wr_ptr|                        ; 8 (8)             ; 7 (7)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |battleships|DE2_Audio_Example:Sounds|Audio_Controller:Audio_Controller|Altera_UP_Audio_In_Deserializer:Audio_In_Deserializer|Altera_UP_SYNC_FIFO:Audio_In_Right_Channel_FIFO|scfifo:Sync_FIFO|scfifo_3041:auto_generated|a_dpfifo_mn31:dpfifo|cntr_e5b:wr_ptr         ; work         ;
 ;                         |cntr_q57:usedw_counter|                 ; 8 (8)             ; 7 (7)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |battleships|DE2_Audio_Example:Sounds|Audio_Controller:Audio_Controller|Altera_UP_Audio_In_Deserializer:Audio_In_Deserializer|Altera_UP_SYNC_FIFO:Audio_In_Right_Channel_FIFO|scfifo:Sync_FIFO|scfifo_3041:auto_generated|a_dpfifo_mn31:dpfifo|cntr_q57:usedw_counter  ; work         ;
-;          |Altera_UP_Audio_Out_Serializer:Audio_Out_Serializer|   ; 151 (46)          ; 93 (27)      ; 5376        ; 0            ; 0       ; 0         ; 0    ; 0            ; |battleships|DE2_Audio_Example:Sounds|Audio_Controller:Audio_Controller|Altera_UP_Audio_Out_Serializer:Audio_Out_Serializer                                                                                                                                            ; work         ;
+;          |Altera_UP_Audio_Out_Serializer:Audio_Out_Serializer|   ; 152 (46)          ; 93 (27)      ; 5376        ; 0            ; 0       ; 0         ; 0    ; 0            ; |battleships|DE2_Audio_Example:Sounds|Audio_Controller:Audio_Controller|Altera_UP_Audio_Out_Serializer:Audio_Out_Serializer                                                                                                                                            ; work         ;
 ;             |Altera_UP_SYNC_FIFO:Audio_Out_Left_Channel_FIFO|    ; 53 (0)            ; 33 (0)       ; 2688        ; 0            ; 0       ; 0         ; 0    ; 0            ; |battleships|DE2_Audio_Example:Sounds|Audio_Controller:Audio_Controller|Altera_UP_Audio_Out_Serializer:Audio_Out_Serializer|Altera_UP_SYNC_FIFO:Audio_Out_Left_Channel_FIFO                                                                                            ; work         ;
 ;                |scfifo:Sync_FIFO|                                ; 53 (0)            ; 33 (0)       ; 2688        ; 0            ; 0       ; 0         ; 0    ; 0            ; |battleships|DE2_Audio_Example:Sounds|Audio_Controller:Audio_Controller|Altera_UP_Audio_Out_Serializer:Audio_Out_Serializer|Altera_UP_SYNC_FIFO:Audio_Out_Left_Channel_FIFO|scfifo:Sync_FIFO                                                                           ; work         ;
 ;                   |scfifo_3041:auto_generated|                   ; 53 (0)            ; 33 (0)       ; 2688        ; 0            ; 0       ; 0         ; 0    ; 0            ; |battleships|DE2_Audio_Example:Sounds|Audio_Controller:Audio_Controller|Altera_UP_Audio_Out_Serializer:Audio_Out_Serializer|Altera_UP_SYNC_FIFO:Audio_Out_Left_Channel_FIFO|scfifo:Sync_FIFO|scfifo_3041:auto_generated                                                ; work         ;
@@ -328,10 +329,10 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ;                         |cntr_d5b:rd_ptr_msb|                    ; 7 (7)             ; 6 (6)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |battleships|DE2_Audio_Example:Sounds|Audio_Controller:Audio_Controller|Altera_UP_Audio_Out_Serializer:Audio_Out_Serializer|Altera_UP_SYNC_FIFO:Audio_Out_Left_Channel_FIFO|scfifo:Sync_FIFO|scfifo_3041:auto_generated|a_dpfifo_mn31:dpfifo|cntr_d5b:rd_ptr_msb       ; work         ;
 ;                         |cntr_e5b:wr_ptr|                        ; 8 (8)             ; 7 (7)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |battleships|DE2_Audio_Example:Sounds|Audio_Controller:Audio_Controller|Altera_UP_Audio_Out_Serializer:Audio_Out_Serializer|Altera_UP_SYNC_FIFO:Audio_Out_Left_Channel_FIFO|scfifo:Sync_FIFO|scfifo_3041:auto_generated|a_dpfifo_mn31:dpfifo|cntr_e5b:wr_ptr           ; work         ;
 ;                         |cntr_q57:usedw_counter|                 ; 8 (8)             ; 7 (7)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |battleships|DE2_Audio_Example:Sounds|Audio_Controller:Audio_Controller|Altera_UP_Audio_Out_Serializer:Audio_Out_Serializer|Altera_UP_SYNC_FIFO:Audio_Out_Left_Channel_FIFO|scfifo:Sync_FIFO|scfifo_3041:auto_generated|a_dpfifo_mn31:dpfifo|cntr_q57:usedw_counter    ; work         ;
-;             |Altera_UP_SYNC_FIFO:Audio_Out_Right_Channel_FIFO|   ; 52 (0)            ; 33 (0)       ; 2688        ; 0            ; 0       ; 0         ; 0    ; 0            ; |battleships|DE2_Audio_Example:Sounds|Audio_Controller:Audio_Controller|Altera_UP_Audio_Out_Serializer:Audio_Out_Serializer|Altera_UP_SYNC_FIFO:Audio_Out_Right_Channel_FIFO                                                                                           ; work         ;
-;                |scfifo:Sync_FIFO|                                ; 52 (0)            ; 33 (0)       ; 2688        ; 0            ; 0       ; 0         ; 0    ; 0            ; |battleships|DE2_Audio_Example:Sounds|Audio_Controller:Audio_Controller|Altera_UP_Audio_Out_Serializer:Audio_Out_Serializer|Altera_UP_SYNC_FIFO:Audio_Out_Right_Channel_FIFO|scfifo:Sync_FIFO                                                                          ; work         ;
-;                   |scfifo_3041:auto_generated|                   ; 52 (0)            ; 33 (0)       ; 2688        ; 0            ; 0       ; 0         ; 0    ; 0            ; |battleships|DE2_Audio_Example:Sounds|Audio_Controller:Audio_Controller|Altera_UP_Audio_Out_Serializer:Audio_Out_Serializer|Altera_UP_SYNC_FIFO:Audio_Out_Right_Channel_FIFO|scfifo:Sync_FIFO|scfifo_3041:auto_generated                                               ; work         ;
-;                      |a_dpfifo_mn31:dpfifo|                      ; 52 (29)           ; 33 (13)      ; 2688        ; 0            ; 0       ; 0         ; 0    ; 0            ; |battleships|DE2_Audio_Example:Sounds|Audio_Controller:Audio_Controller|Altera_UP_Audio_Out_Serializer:Audio_Out_Serializer|Altera_UP_SYNC_FIFO:Audio_Out_Right_Channel_FIFO|scfifo:Sync_FIFO|scfifo_3041:auto_generated|a_dpfifo_mn31:dpfifo                          ; work         ;
+;             |Altera_UP_SYNC_FIFO:Audio_Out_Right_Channel_FIFO|   ; 53 (0)            ; 33 (0)       ; 2688        ; 0            ; 0       ; 0         ; 0    ; 0            ; |battleships|DE2_Audio_Example:Sounds|Audio_Controller:Audio_Controller|Altera_UP_Audio_Out_Serializer:Audio_Out_Serializer|Altera_UP_SYNC_FIFO:Audio_Out_Right_Channel_FIFO                                                                                           ; work         ;
+;                |scfifo:Sync_FIFO|                                ; 53 (0)            ; 33 (0)       ; 2688        ; 0            ; 0       ; 0         ; 0    ; 0            ; |battleships|DE2_Audio_Example:Sounds|Audio_Controller:Audio_Controller|Altera_UP_Audio_Out_Serializer:Audio_Out_Serializer|Altera_UP_SYNC_FIFO:Audio_Out_Right_Channel_FIFO|scfifo:Sync_FIFO                                                                          ; work         ;
+;                   |scfifo_3041:auto_generated|                   ; 53 (0)            ; 33 (0)       ; 2688        ; 0            ; 0       ; 0         ; 0    ; 0            ; |battleships|DE2_Audio_Example:Sounds|Audio_Controller:Audio_Controller|Altera_UP_Audio_Out_Serializer:Audio_Out_Serializer|Altera_UP_SYNC_FIFO:Audio_Out_Right_Channel_FIFO|scfifo:Sync_FIFO|scfifo_3041:auto_generated                                               ; work         ;
+;                      |a_dpfifo_mn31:dpfifo|                      ; 53 (30)           ; 33 (13)      ; 2688        ; 0            ; 0       ; 0         ; 0    ; 0            ; |battleships|DE2_Audio_Example:Sounds|Audio_Controller:Audio_Controller|Altera_UP_Audio_Out_Serializer:Audio_Out_Serializer|Altera_UP_SYNC_FIFO:Audio_Out_Right_Channel_FIFO|scfifo:Sync_FIFO|scfifo_3041:auto_generated|a_dpfifo_mn31:dpfifo                          ; work         ;
 ;                         |altsyncram_nc81:FIFOram|                ; 0 (0)             ; 0 (0)        ; 2688        ; 0            ; 0       ; 0         ; 0    ; 0            ; |battleships|DE2_Audio_Example:Sounds|Audio_Controller:Audio_Controller|Altera_UP_Audio_Out_Serializer:Audio_Out_Serializer|Altera_UP_SYNC_FIFO:Audio_Out_Right_Channel_FIFO|scfifo:Sync_FIFO|scfifo_3041:auto_generated|a_dpfifo_mn31:dpfifo|altsyncram_nc81:FIFOram  ; work         ;
 ;                         |cntr_d5b:rd_ptr_msb|                    ; 7 (7)             ; 6 (6)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |battleships|DE2_Audio_Example:Sounds|Audio_Controller:Audio_Controller|Altera_UP_Audio_Out_Serializer:Audio_Out_Serializer|Altera_UP_SYNC_FIFO:Audio_Out_Right_Channel_FIFO|scfifo:Sync_FIFO|scfifo_3041:auto_generated|a_dpfifo_mn31:dpfifo|cntr_d5b:rd_ptr_msb      ; work         ;
 ;                         |cntr_e5b:wr_ptr|                        ; 8 (8)             ; 7 (7)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |battleships|DE2_Audio_Example:Sounds|Audio_Controller:Audio_Controller|Altera_UP_Audio_Out_Serializer:Audio_Out_Serializer|Altera_UP_SYNC_FIFO:Audio_Out_Right_Channel_FIFO|scfifo:Sync_FIFO|scfifo_3041:auto_generated|a_dpfifo_mn31:dpfifo|cntr_e5b:wr_ptr          ; work         ;
@@ -347,9 +348,9 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ;             |mux_sjb:mux2|                                       ; 21 (21)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |battleships|DE2_Audio_Example:Sounds|altsyncram:Ram0_rtl_0|altsyncram_i491:auto_generated|mux_sjb:mux2                                                                                                                                                                ; work         ;
 ;       |avconf:avc|                                               ; 188 (139)         ; 73 (44)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |battleships|DE2_Audio_Example:Sounds|avconf:avc                                                                                                                                                                                                                       ; work         ;
 ;          |I2C_Controller:u0|                                     ; 49 (49)           ; 29 (29)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |battleships|DE2_Audio_Example:Sounds|avconf:avc|I2C_Controller:u0                                                                                                                                                                                                     ; work         ;
-;    |VGA_top_level:vga_0|                                         ; 1712 (0)          ; 46 (0)       ; 16624       ; 0            ; 0       ; 0         ; 0    ; 0            ; |battleships|VGA_top_level:vga_0                                                                                                                                                                                                                                       ; work         ;
+;    |VGA_top_level:vga_0|                                         ; 1707 (0)          ; 46 (0)       ; 16624       ; 0            ; 0       ; 0         ; 0    ; 0            ; |battleships|VGA_top_level:vga_0                                                                                                                                                                                                                                       ; work         ;
 ;       |VGA_SYNC:videoSync|                                       ; 58 (58)           ; 46 (46)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |battleships|VGA_top_level:vga_0|VGA_SYNC:videoSync                                                                                                                                                                                                                    ; work         ;
-;       |pixelGenerator:videoGen|                                  ; 1654 (1654)       ; 0 (0)        ; 16624       ; 0            ; 0       ; 0         ; 0    ; 0            ; |battleships|VGA_top_level:vga_0|pixelGenerator:videoGen                                                                                                                                                                                                               ; work         ;
+;       |pixelGenerator:videoGen|                                  ; 1649 (1649)       ; 0 (0)        ; 16624       ; 0            ; 0       ; 0         ; 0    ; 0            ; |battleships|VGA_top_level:vga_0|pixelGenerator:videoGen                                                                                                                                                                                                               ; work         ;
 ;          |colorROM:colors|                                       ; 0 (0)             ; 0 (0)        ; 240         ; 0            ; 0       ; 0         ; 0    ; 0            ; |battleships|VGA_top_level:vga_0|pixelGenerator:videoGen|colorROM:colors                                                                                                                                                                                               ; work         ;
 ;             |altsyncram:altsyncram_component|                    ; 0 (0)             ; 0 (0)        ; 240         ; 0            ; 0       ; 0         ; 0    ; 0            ; |battleships|VGA_top_level:vga_0|pixelGenerator:videoGen|colorROM:colors|altsyncram:altsyncram_component                                                                                                                                                               ; work         ;
 ;                |altsyncram_pv71:auto_generated|                  ; 0 (0)             ; 0 (0)        ; 240         ; 0            ; 0       ; 0         ; 0    ; 0            ; |battleships|VGA_top_level:vga_0|pixelGenerator:videoGen|colorROM:colors|altsyncram:altsyncram_component|altsyncram_pv71:auto_generated                                                                                                                                ; work         ;
@@ -383,8 +384,8 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------+--------------+---------+--------------+--------------+-------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------+
 ; Vendor ; IP Core Name ; Version ; Release Date ; License Type ; Entity Instance                                                                                 ; IP Include File                                                                     ;
 +--------+--------------+---------+--------------+--------------+-------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------+
-; Altera ; ALTPLL       ; N/A     ; N/A          ; N/A          ; |battleships|DE2_Audio_Example:Sounds|Audio_Controller:Audio_Controller|Audio_Clock:Audio_Clock ; C:/Users/mantzouj/Documents/GitHub/battleships/files/Audio_Controller/Audio_Clock.v ;
-; Altera ; ROM: 1-PORT  ; N/A     ; N/A          ; N/A          ; |battleships|VGA_top_level:vga_0|pixelGenerator:videoGen|colorROM:colors                        ; C:/Users/mantzouj/Documents/GitHub/battleships/files/colorROM.vhd                   ;
+; Altera ; ALTPLL       ; N/A     ; N/A          ; N/A          ; |battleships|DE2_Audio_Example:Sounds|Audio_Controller:Audio_Controller|Audio_Clock:Audio_Clock ; C:/Users/mantzouj/Documents/GitHub/Battleships/files/Audio_Controller/Audio_Clock.v ;
+; Altera ; ROM: 1-PORT  ; N/A     ; N/A          ; N/A          ; |battleships|VGA_top_level:vga_0|pixelGenerator:videoGen|colorROM:colors                        ; C:/Users/mantzouj/Documents/GitHub/Battleships/files/colorROM.vhd                   ;
 +--------+--------------+---------+--------------+--------------+-------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------+
 
 
@@ -661,16 +662,16 @@ Note: All latches listed above may not be present at the end of synthesis due to
 ; data_out~reg0                                                       ; 2       ;
 ; legend_on                                                           ; 12      ;
 ; placing_on                                                          ; 2       ;
-; myVGA[0][0]                                                         ; 6       ;
+; myVGA[0][2]                                                         ; 6       ;
 ; saved1[31]                                                          ; 2       ;
 ; saved1[0]                                                           ; 4       ;
-; ship5_or                                                            ; 531     ;
-; ship2_or                                                            ; 198     ;
-; ship1_or                                                            ; 96      ;
-; ship3_or                                                            ; 259     ;
+; ship5_or                                                            ; 472     ;
+; ship2_or                                                            ; 200     ;
+; ship1_or                                                            ; 98      ;
+; ship3_or                                                            ; 258     ;
 ; \game:cursor_y[2]                                                   ; 7       ;
-; \game:cursor_x[2]                                                   ; 7       ;
-; ship4_or                                                            ; 377     ;
+; \game:cursor_x[2]                                                   ; 6       ;
+; ship4_or                                                            ; 390     ;
 ; DE2_Audio_Example:Sounds|avconf:avc|I2C_Controller:u0|END           ; 5       ;
 ; DE2_Audio_Example:Sounds|avconf:avc|I2C_Controller:u0|SDO           ; 4       ;
 ; Total number of inverted registers = 22                             ;         ;
@@ -798,13 +799,13 @@ Note: All latches listed above may not be present at the end of synthesis due to
 ; 6:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |battleships|oppVGA[2][1]                                                                                                                                                                      ;
 ; 6:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |battleships|oppVGA[1][1]                                                                                                                                                                      ;
 ; 6:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |battleships|oppVGA[0][1]                                                                                                                                                                      ;
-; 6:1                ; 30 bits   ; 120 LEs       ; 30 LEs               ; 90 LEs                 ; Yes        ; |battleships|counter[26]                                                                                                                                                                       ;
-; 18:1               ; 2 bits    ; 24 LEs        ; 6 LEs                ; 18 LEs                 ; Yes        ; |battleships|state[7]                                                                                                                                                                          ;
-; 410:1              ; 2 bits    ; 546 LEs       ; 268 LEs              ; 278 LEs                ; Yes        ; |battleships|saved1[2]                                                                                                                                                                         ;
-; 3:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |battleships|DE2_Audio_Example:Sounds|avconf:avc|I2C_Controller:u0|SD_COUNTER[3]                                                                                                               ;
-; 4:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |battleships|phase[0]                                                                                                                                                                          ;
-; 6:1                ; 2 bits    ; 8 LEs         ; 2 LEs                ; 6 LEs                  ; Yes        ; |battleships|counter[0]                                                                                                                                                                        ;
-; 100:1              ; 3 bits    ; 198 LEs       ; 198 LEs              ; 0 LEs                  ; No         ; |battleships|Mux24                                                                                                                                                                             ;
+; 6:1                ; 30 bits   ; 120 LEs       ; 30 LEs               ; 90 LEs                 ; Yes        ; |battleships|counter[30]                                                                                                                                                                       ;
+; 18:1               ; 2 bits    ; 24 LEs        ; 6 LEs                ; 18 LEs                 ; Yes        ; |battleships|state[10]                                                                                                                                                                         ;
+; 306:1              ; 2 bits    ; 408 LEs       ; 134 LEs              ; 274 LEs                ; Yes        ; |battleships|saved1[1]                                                                                                                                                                         ;
+; 3:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |battleships|DE2_Audio_Example:Sounds|avconf:avc|I2C_Controller:u0|SD_COUNTER[2]                                                                                                               ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |battleships|phase[31]                                                                                                                                                                         ;
+; 6:1                ; 2 bits    ; 8 LEs         ; 2 LEs                ; 6 LEs                  ; Yes        ; |battleships|counter[31]                                                                                                                                                                       ;
+; 100:1              ; 3 bits    ; 198 LEs       ; 198 LEs              ; 0 LEs                  ; No         ; |battleships|Mux21                                                                                                                                                                             ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 
@@ -1840,7 +1841,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:03:39     ;
+; Top            ; 00:04:14     ;
 +----------------+--------------+
 
 
@@ -1850,8 +1851,10 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Tue May 27 13:29:31 2014
+    Info: Processing started: Fri May 30 20:52:09 2014
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off battleships -c battleships
+Warning (125092): Tcl Script File colorROM.qip not found
+    Info (125063): set_global_assignment -name QIP_FILE colorROM.qip
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 2 design units, including 1 entities, in source file files/fontrom.vhd
     Info (12022): Found design unit 1: fontROM-Behavioral
@@ -5541,53 +5544,53 @@ Info (12128): Elaborating entity "keyboard" for hierarchy "ps2:keyboard_0|keyboa
 Info (12128): Elaborating entity "oneshot" for hierarchy "ps2:keyboard_0|oneshot:pulser"
 Info (12128): Elaborating entity "VGA_top_level" for hierarchy "VGA_top_level:vga_0"
 Info (12128): Elaborating entity "pixelGenerator" for hierarchy "VGA_top_level:vga_0|pixelGenerator:videoGen"
-Warning (10492): VHDL Process Statement warning at pixelGenerator.vhd(330): signal "gameOverW_on" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at pixelGenerator.vhd(331): signal "char_addr_w" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at pixelGenerator.vhd(332): signal "row_addr_w" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at pixelGenerator.vhd(333): signal "bit_addr_w" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at pixelGenerator.vhd(334): signal "font_bit" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at pixelGenerator.vhd(340): signal "gameOverL_on" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at pixelGenerator.vhd(341): signal "char_addr_l" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at pixelGenerator.vhd(342): signal "row_addr_l" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at pixelGenerator.vhd(343): signal "bit_addr_l" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at pixelGenerator.vhd(344): signal "font_bit" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at pixelGenerator.vhd(351): signal "gameOverT_on" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at pixelGenerator.vhd(352): signal "char_addr_t" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at pixelGenerator.vhd(353): signal "row_addr_t" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at pixelGenerator.vhd(354): signal "bit_addr_t" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at pixelGenerator.vhd(355): signal "font_bit" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at pixelGenerator.vhd(405): signal "placing_on" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at pixelGenerator.vhd(406): signal "placeShip_on" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at pixelGenerator.vhd(407): signal "char_addr_p" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at pixelGenerator.vhd(408): signal "row_addr_p" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at pixelGenerator.vhd(409): signal "bit_addr_p" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at pixelGenerator.vhd(410): signal "font_bit" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at pixelGenerator.vhd(416): signal "legend_on" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at pixelGenerator.vhd(417): signal "illegal_on" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at pixelGenerator.vhd(418): signal "char_addr_i" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at pixelGenerator.vhd(419): signal "row_addr_i" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at pixelGenerator.vhd(420): signal "bit_addr_i" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at pixelGenerator.vhd(421): signal "font_bit" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at pixelGenerator.vhd(426): signal "ship_on" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at pixelGenerator.vhd(427): signal "char_addr_s" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at pixelGenerator.vhd(428): signal "row_addr_s" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at pixelGenerator.vhd(429): signal "bit_addr_s" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at pixelGenerator.vhd(430): signal "font_bit" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at pixelGenerator.vhd(435): signal "hit_on" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at pixelGenerator.vhd(436): signal "char_addr_h" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at pixelGenerator.vhd(437): signal "row_addr_h" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at pixelGenerator.vhd(438): signal "bit_addr_h" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at pixelGenerator.vhd(439): signal "font_bit" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at pixelGenerator.vhd(444): signal "miss_on" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at pixelGenerator.vhd(445): signal "char_addr_m" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at pixelGenerator.vhd(446): signal "row_addr_m" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at pixelGenerator.vhd(447): signal "bit_addr_m" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at pixelGenerator.vhd(448): signal "font_bit" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at pixelGenerator.vhd(453): signal "active_on" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at pixelGenerator.vhd(454): signal "char_addr_a" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at pixelGenerator.vhd(455): signal "row_addr_a" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at pixelGenerator.vhd(456): signal "bit_addr_a" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at pixelGenerator.vhd(457): signal "font_bit" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at pixelGenerator.vhd(365): signal "gameOverW_on" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at pixelGenerator.vhd(366): signal "char_addr_w" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at pixelGenerator.vhd(367): signal "row_addr_w" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at pixelGenerator.vhd(368): signal "bit_addr_w" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at pixelGenerator.vhd(369): signal "font_bit" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at pixelGenerator.vhd(375): signal "gameOverL_on" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at pixelGenerator.vhd(376): signal "char_addr_l" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at pixelGenerator.vhd(377): signal "row_addr_l" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at pixelGenerator.vhd(378): signal "bit_addr_l" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at pixelGenerator.vhd(379): signal "font_bit" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at pixelGenerator.vhd(386): signal "gameOverT_on" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at pixelGenerator.vhd(387): signal "char_addr_t" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at pixelGenerator.vhd(388): signal "row_addr_t" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at pixelGenerator.vhd(389): signal "bit_addr_t" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at pixelGenerator.vhd(390): signal "font_bit" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at pixelGenerator.vhd(440): signal "placing_on" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at pixelGenerator.vhd(441): signal "placeShip_on" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at pixelGenerator.vhd(442): signal "char_addr_p" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at pixelGenerator.vhd(443): signal "row_addr_p" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at pixelGenerator.vhd(444): signal "bit_addr_p" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at pixelGenerator.vhd(445): signal "font_bit" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at pixelGenerator.vhd(451): signal "legend_on" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at pixelGenerator.vhd(452): signal "illegal_on" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at pixelGenerator.vhd(453): signal "char_addr_i" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at pixelGenerator.vhd(454): signal "row_addr_i" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at pixelGenerator.vhd(455): signal "bit_addr_i" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at pixelGenerator.vhd(456): signal "font_bit" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at pixelGenerator.vhd(461): signal "ship_on" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at pixelGenerator.vhd(462): signal "char_addr_s" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at pixelGenerator.vhd(463): signal "row_addr_s" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at pixelGenerator.vhd(464): signal "bit_addr_s" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at pixelGenerator.vhd(465): signal "font_bit" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at pixelGenerator.vhd(470): signal "hit_on" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at pixelGenerator.vhd(471): signal "char_addr_h" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at pixelGenerator.vhd(472): signal "row_addr_h" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at pixelGenerator.vhd(473): signal "bit_addr_h" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at pixelGenerator.vhd(474): signal "font_bit" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at pixelGenerator.vhd(479): signal "miss_on" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at pixelGenerator.vhd(480): signal "char_addr_m" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at pixelGenerator.vhd(481): signal "row_addr_m" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at pixelGenerator.vhd(482): signal "bit_addr_m" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at pixelGenerator.vhd(483): signal "font_bit" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at pixelGenerator.vhd(488): signal "active_on" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at pixelGenerator.vhd(489): signal "char_addr_a" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at pixelGenerator.vhd(490): signal "row_addr_a" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at pixelGenerator.vhd(491): signal "bit_addr_a" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at pixelGenerator.vhd(492): signal "font_bit" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
 Warning (10631): VHDL Process Statement warning at pixelGenerator.vhd(324): inferring latch(es) for signal or variable "char_addr", which holds its previous value in one or more paths through the process
 Warning (10631): VHDL Process Statement warning at pixelGenerator.vhd(324): inferring latch(es) for signal or variable "row_addr", which holds its previous value in one or more paths through the process
 Warning (10631): VHDL Process Statement warning at pixelGenerator.vhd(324): inferring latch(es) for signal or variable "bit_addr", which holds its previous value in one or more paths through the process
@@ -5732,10 +5735,10 @@ Warning (13012): Latch DE2_Audio_Example:Sounds|avconf:avc|LUT_DATA[12] has unsa
 Info (13000): Registers with preset signals will power-up high
 Info (13003): DEV_CLRn pin will set, and not reset, register with preset signal due to NOT Gate Push-Back
 Warning (13004): Presettable and clearable registers converted to equivalent circuits with latches. Registers power-up to an undefined state, and DEVCLRn places the registers in an undefined state.
-    Warning (13310): Register "myVGA[10][0]" is converted into an equivalent circuit using register "myVGA[10][0]~_emulated" and latch "myVGA[10][0]~1"
-    Warning (13310): Register "myVGA[1][0]" is converted into an equivalent circuit using register "myVGA[1][0]~_emulated" and latch "myVGA[1][0]~5"
+    Warning (13310): Register "myVGA[10][2]" is converted into an equivalent circuit using register "myVGA[10][2]~_emulated" and latch "myVGA[10][2]~1"
+    Warning (13310): Register "myVGA[1][2]" is converted into an equivalent circuit using register "myVGA[1][2]~_emulated" and latch "myVGA[1][2]~5"
 Critical Warning (18061): Ignored Power-Up Level option on the following registers
-    Critical Warning (18010): Register myVGA[0][0] will power up to High
+    Critical Warning (18010): Register myVGA[0][2] will power up to High
     Critical Warning (18010): Register state[0] will power up to Low
     Critical Warning (18010): Register state[31] will power up to Low
     Critical Warning (18010): Register \game:cursor_y[2] will power up to High
@@ -5756,17 +5759,17 @@ Warning (21074): Design contains 4 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "KEY[1]"
     Warning (15610): No output dependent on input pin "KEY[2]"
     Warning (15610): No output dependent on input pin "KEY[3]"
-Info (21057): Implemented 21379 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 21062 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 10 input pins
     Info (21059): Implemented 38 output pins
     Info (21060): Implemented 4 bidirectional pins
-    Info (21061): Implemented 21162 logic cells
+    Info (21061): Implemented 20845 logic cells
     Info (21064): Implemented 164 RAM segments
     Info (21065): Implemented 1 PLLs
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 3630 warnings
-    Info: Peak virtual memory: 621 megabytes
-    Info: Processing ended: Tue May 27 13:33:24 2014
-    Info: Elapsed time: 00:03:53
-    Info: Total CPU time (on all processors): 00:03:50
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 3631 warnings
+    Info: Peak virtual memory: 598 megabytes
+    Info: Processing ended: Fri May 30 20:56:37 2014
+    Info: Elapsed time: 00:04:28
+    Info: Total CPU time (on all processors): 00:04:19
 
 

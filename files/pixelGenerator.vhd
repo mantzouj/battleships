@@ -324,7 +324,42 @@ with pixel_column(7 downto 4) select
 	pixelDraw : process(clk, myVGA, oppVGA, pixel_row_int, pixel_column_int, game_over, winner, tie) is
 	variable my_x_index, my_y_index, my_index, opp_x_index, opp_y_index, opp_index : integer;
 	begin
-	if (game_over='1') then
+--		colorAddress <= color_white;
+--	if (game_over='1' and winner='0') then
+--			colorAddress <= color_green;
+--			if gameOverW_on = '1' then
+--				char_addr <= char_addr_w;
+--				row_addr <= row_addr_w;
+--				bit_addr <= bit_addr_w;
+--				if font_bit = '1' then
+--					colorAddress <= color_black;
+--				end if;
+--			end if;
+--	end if;
+--	if (game_over='1' and winner='1') then
+--			colorAddress <= color_red;
+--			if gameOverL_on = '1' then
+--				char_addr <= char_addr_l;
+--				row_addr <= row_addr_l;
+--				bit_addr <= bit_addr_l;
+--				if font_bit = '1' then
+--					colorAddress <= color_black;
+--				end if;
+--			end if;
+--	end if;
+--	if (tie='1') then
+--		colorAddress <= color_cyan;
+--		if gameOverT_on = '1' then
+--			char_addr <= char_addr_t;
+--			row_addr <= row_addr_t;
+--			bit_addr <= bit_addr_t;
+--			if font_bit = '1' then
+--				colorAddress <= color_black;
+--			end if;
+--		end if;
+--	end if;
+
+if (game_over='1') then
 		if (winner='0') then
 			colorAddress <= color_green;
 			if gameOverW_on = '1' then
