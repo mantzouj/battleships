@@ -1,5 +1,5 @@
 Flow report for battleships
-Fri May 30 21:20:18 2014
+Wed Jun 04 21:33:08 2014
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -40,20 +40,20 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Flow Summary                                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Flow Status                        ; Successful - Fri May 30 21:20:18 2014           ;
+; Flow Status                        ; Successful - Wed Jun 04 21:33:08 2014           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; battleships                                     ;
 ; Top-level Entity Name              ; battleships                                     ;
 ; Family                             ; Cyclone II                                      ;
 ; Device                             ; EP2C35F672C6                                    ;
 ; Timing Models                      ; Final                                           ;
-; Total logic elements               ; 20,271 / 33,216 ( 61 % )                        ;
-;     Total combinational functions  ; 20,047 / 33,216 ( 60 % )                        ;
-;     Dedicated logic registers      ; 2,112 / 33,216 ( 6 % )                          ;
-; Total registers                    ; 2112                                            ;
-; Total pins                         ; 52 / 475 ( 11 % )                               ;
+; Total logic elements               ; 20,186 / 33,216 ( 61 % )                        ;
+;     Total combinational functions  ; 20,045 / 33,216 ( 60 % )                        ;
+;     Dedicated logic registers      ; 2,116 / 33,216 ( 6 % )                          ;
+; Total registers                    ; 2116                                            ;
+; Total pins                         ; 51 / 475 ( 11 % )                               ;
 ; Total virtual pins                 ; 0                                               ;
-; Total memory bits                  ; 199,408 / 483,840 ( 41 % )                      ;
+; Total memory bits                  ; 216,816 / 483,840 ( 45 % )                      ;
 ; Embedded Multiplier 9-bit elements ; 0 / 70 ( 0 % )                                  ;
 ; Total PLLs                         ; 1 / 4 ( 25 % )                                  ;
 +------------------------------------+-------------------------------------------------+
@@ -64,7 +64,7 @@ applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 05/30/2014 20:52:10 ;
+; Start date & time ; 06/04/2014 21:17:51 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; battleships         ;
 +-------------------+---------------------+
@@ -75,7 +75,7 @@ applicable agreement for further details.
 +-------------------------------------+---------------------------------------+---------------+-------------+----------------+
 ; Assignment Name                     ; Value                                 ; Default Value ; Entity Name ; Section Id     ;
 +-------------------------------------+---------------------------------------+---------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID               ; 128527083372397.140150112916656       ; --            ; --          ; --             ;
+; COMPILER_SIGNATURE_ID               ; 128527083372397.140193466320976       ; --            ; --          ; --             ;
 ; EDA_OUTPUT_DATA_FORMAT              ; Vhdl                                  ; --            ; --          ; eda_simulation ;
 ; EDA_SIMULATION_TOOL                 ; ModelSim-Altera (VHDL)                ; <None>        ; --          ; --             ;
 ; MAX_CORE_JUNCTION_TEMP              ; 85                                    ; --            ; --          ; --             ;
@@ -95,12 +95,12 @@ applicable agreement for further details.
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis      ; 00:04:24     ; 1.0                     ; 598 MB              ; 00:04:16                           ;
-; Fitter                    ; 00:23:02     ; 1.0                     ; 883 MB              ; 00:22:16                           ;
-; Assembler                 ; 00:00:04     ; 1.0                     ; 479 MB              ; 00:00:04                           ;
-; TimeQuest Timing Analyzer ; 00:00:08     ; 1.0                     ; 637 MB              ; 00:00:08                           ;
-; EDA Netlist Writer        ; 00:00:15     ; 1.0                     ; 597 MB              ; 00:00:14                           ;
-; Total                     ; 00:27:53     ; --                      ; --                  ; 00:26:58                           ;
+; Analysis & Synthesis      ; 00:04:29     ; 1.0                     ; 631 MB              ; 00:04:01                           ;
+; Fitter                    ; 00:09:57     ; 1.0                     ; 877 MB              ; 00:09:40                           ;
+; Assembler                 ; 00:00:04     ; 1.0                     ; 473 MB              ; 00:00:04                           ;
+; TimeQuest Timing Analyzer ; 00:00:08     ; 1.0                     ; 659 MB              ; 00:00:07                           ;
+; EDA Netlist Writer        ; 00:00:15     ; 1.0                     ; 603 MB              ; 00:00:12                           ;
+; Total                     ; 00:14:53     ; --                      ; --                  ; 00:14:04                           ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

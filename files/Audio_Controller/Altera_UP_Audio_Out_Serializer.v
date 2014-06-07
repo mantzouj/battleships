@@ -35,7 +35,7 @@ module Altera_UP_Audio_Out_Serializer (
  *                           Parameter Declarations                          *
  *****************************************************************************/
 
-parameter AUDIO_DATA_WIDTH	= 21;
+parameter AUDIO_DATA_WIDTH	= 23;
 
 /*****************************************************************************
  *                             Port Declarations                             *

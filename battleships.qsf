@@ -124,7 +124,6 @@ set_global_assignment -name VHDL_FILE files/vga_sync.vhd
 set_global_assignment -name VHDL_FILE files/ps2.vhd
 set_global_assignment -name VHDL_FILE files/pixelGenerator.vhd
 set_global_assignment -name VHDL_FILE files/oneshot.vhd
-set_global_assignment -name VHDL_FILE files/leddcd.vhd
 set_global_assignment -name VHDL_FILE files/keyboard.vhd
 set_global_assignment -name VHDL_FILE files/colorROM.vhd
 set_global_assignment -name VHDL_FILE files/battleships_const.vhd

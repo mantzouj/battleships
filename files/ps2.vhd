@@ -19,13 +19,6 @@ end entity ps2;
 
 architecture structural of ps2 is
 
-component leddcd is
-	port(
-		 data_in : in std_logic_vector(3 downto 0);
-		 segments_out : out std_logic_vector(6 downto 0)
-		);
-end component leddcd;		
-
 component keyboard IS
 	PORT( keyboard_clk, keyboard_data, clock_50MHz,
 			reset, read : IN STD_LOGIC;

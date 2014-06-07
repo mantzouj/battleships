@@ -54,19 +54,19 @@ output				I2C_SCLK;
  *****************************************************************************/
 // Internal Wires
 wire				audio_in_available;
-wire		[20:0]	left_channel_audio_in;
-wire		[20:0]	right_channel_audio_in;
+wire		[22:0]	left_channel_audio_in;
+wire		[22:0]	right_channel_audio_in;
 wire				read_audio_in;
 
 wire				audio_out_allowed;
-wire		[20:0]	left_channel_audio_out;
-wire		[20:0]	right_channel_audio_out;
+wire		[22:0]	left_channel_audio_out;
+wire		[22:0]	right_channel_audio_out;
 wire				write_audio_out;
 
 // Internal Registers
 
 reg [16:0] delay_cnt;
-reg signed [20:0] sound1;
+reg signed [22:0] sound1;
 reg [12:0] counter;
 reg snd, start;
 
@@ -87,11 +87,7 @@ always @(posedge CLOCK_50) begin
 		counter <= 13'd0;
 		delay_cnt <= 17'd0;
 		start <= 1'b1;
-	end// else start <= 1'b1;
-//	if(SW == 0) begin
-//		counter <= 13'd0;
-//		delay_cnt <= 17'd0;
-//	end else start <= 1'b1;
+	end
 	
 	if (start == 1) begin
 	
@@ -8314,9 +8310,7 @@ end
  *                            Combinational Logic                            *
  *****************************************************************************/
 
-//assign delay = {SW[3:0], 15'd3000};
-
-wire [20:0] sound = sound1;//(test == 0) ? 0 : 500*sound1;
+wire [22:0] sound = sound1;
 
 assign read_audio_in			= audio_in_available & audio_out_allowed;
 

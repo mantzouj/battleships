@@ -6,7 +6,7 @@ use WORK.battleships_const.all;
 entity battleships is 
  port( 
  --Inputs 
-			data_in, AUD_ADCDAT, switch									: in std_logic;
+			data_in, AUD_ADCDAT								: in std_logic;
 			keyboard_clk, keyboard_data, clk : in std_logic;
 			AUD_BCLK, AUD_ADCLRCK, AUD_DACLRCK, I2C_SDAT : inout std_logic;
 			KEY : in std_logic_vector(3 downto 0);
@@ -47,20 +47,9 @@ component VGA_top_level is
 		);
 end component;
 
-component leddcd is
-	port(
-		 data_in : in std_logic_vector(3 downto 0);
-		 segments_out : out std_logic_vector(6 downto 0)
-		);
-end component leddcd;	
-
 component ps2 is 
 	port( 	keyboard_clk, keyboard_data, clock_50MHz ,
 			reset : in std_logic;
-			--scan_code : out std_logic_vector( 7 downto 0 );
-			--scan_readyo : out std_logic;
-			--hist3 : out std_logic_vector(7 downto 0);
-			--hist2 : out std_logic_vector(7 downto 0);
 			hist1 : out std_logic_vector(7 downto 0);
 			hist0 : out std_logic_vector(7 downto 0)
 		);  
@@ -210,8 +199,8 @@ game: process(init,data_in,ship1_or,clk,done) is
 		
 		legend_on <= '1';-- legend on
 		
-		myVGA 	<= (others => WATER); --potentially unecessary
-		oppVGA 	<= (others => WATER); --potentially unecessary
+		myVGA 	<= (others => WATER);
+		oppVGA 	<= (others => WATER);
 		counter  <= 0; myHits <= 0; oppHits <= 0;
 		sound_explosion <= '0'; select_s <= '0'; --0 is hit, 1 is miss
 		phase <= 0;
@@ -247,7 +236,7 @@ game: process(init,data_in,ship1_or,clk,done) is
 		ship1_or <= '1'; ship2_or <= '1'; ship3_or <= '1'; ship4_or <= '1'; ship5_or <= '1';
 		done 		<= '1';
 		state 	<= PLACE_S1;
-		if (ship1_or='1') then	--potentially unecessary
+		if (ship1_or='1') then
 			myVGA(ship1_x + 10*ship1_y) <= CURSOR;
 		myVGA(ship1_x + 10*(ship1_y+1)) <= CURSOR;
 		else
@@ -263,53 +252,47 @@ game: process(init,data_in,ship1_or,clk,done) is
 			placeShip_num <= "001"; --place ship one 
 				if ((left_press='1') and (ship1_x>0)) then
 						ship1_x := ship1_x - 1;
-						--placeShip_num <= "001"; --place ship one 
 				end if;				
 
 				if ((right_press='1') and ((ship1_x<8 and ship1_or='0') or (ship1_x<9 and ship1_or='1'))) then
 						ship1_x := ship1_x + 1;
-						--placeShip_num <= "010"; --place ship one 
 				end if;	
 
 				if (up_press='1') and (ship1_y>0) then
 						ship1_y := ship1_y - 1;
-						--placeShip_num <= "011"; --place ship one 
 				end if;	
 
 				if (down_press='1') and ((ship1_y<9 and ship1_or='0') or (ship1_y<8 and ship1_or='1')) then
 						ship1_y := ship1_y + 1;
-						--placeShip_num <= "100"; --place ship one 
 				end if;
 				
-				if (flip='1') and (ship1_or='1') and (ship1_x<9) then			--potentially make ship1_or a variable
+				if (flip='1') and (ship1_or='1') and (ship1_x<9) then
 						ship1_or<='0';
-						--placeShip_num <= "101"; --place ship one 
 				end if;
 				if (flip='1') and (ship1_or='0') and (ship1_y<9) then
 						ship1_or<='1';
-						--placeShip_num <= "101"; --place ship one 
 				end if;
 				
 				if (ship1_or='1') then
 					S1_index_1 := ship1_x + 10*ship1_y;
 					S1_index_2 := ship1_x + 10*(ship1_y+1);
 					myVGA <= (others => WATER);
-					myVGA(S1_index_1) <= CURSOR; --was SHIP
-					myVGA(S1_index_2) <= CURSOR; --was SHIP
+					myVGA(S1_index_1) <= CURSOR;
+					myVGA(S1_index_2) <= CURSOR;
 				else
 					S1_index_1 := ship1_x + 10*ship1_y;
 					S1_index_2 := ship1_x + 1 + 10*ship1_y;
 					myVGA <= (others => WATER);
-					myVGA(S1_index_1) <= CURSOR; --was SHIP
-					myVGA(S1_index_2) <= CURSOR; --was SHIP
+					myVGA(S1_index_1) <= CURSOR;
+					myVGA(S1_index_2) <= CURSOR;
 				end if;			
 
 				--temp start0---------------------
 				if (enter_press='1') then
 					--data_out	<= '0';
 					state		<= PLACE_S2;
-					myVGA(S1_index_1) <= SHIP; --was SHIP
-					myVGA(S1_index_2) <= SHIP; --was SHIP
+					myVGA(S1_index_1) <= SHIP;
+					myVGA(S1_index_2) <= SHIP;
 				end if;
 								
 			
@@ -1163,7 +1146,7 @@ game: process(init,data_in,ship1_or,clk,done) is
 					S5_index_4 := ship5_x + 3 + 10*ship5_y;
 					S5_index_5 := ship5_x + 4 + 10*ship5_y;
 					myVGA <= (others => WATER);
-					myVGA(S5_index_1) <= CURSOR;		--move outside of if (same as before)
+					myVGA(S5_index_1) <= CURSOR;
 					myVGA(S5_index_2) <= CURSOR;
 					myVGA(S5_index_3) <= CURSOR;
 					myVGA(S5_index_4) <= CURSOR;
@@ -1416,7 +1399,6 @@ game: process(init,data_in,ship1_or,clk,done) is
 				end if;
 				
 				if (counter=DELAY) then --data0
-					--data_out <= ship1_x_vector(3);--useful info
 					state <= COMM_SHOT_1;
 					counter <= 0;
 					phase <= 0;
@@ -1516,7 +1498,6 @@ game: process(init,data_in,ship1_or,clk,done) is
 				if (myVGA(opp_cursor_x + 10*opp_cursor_y)=SHIP) then
 					myVGA(opp_cursor_x + 10*opp_cursor_y)<=HIT;
 					oppHits <= oppHits + 1;
-					--sound_explosion <= '1';
 				else
 					myVGA(opp_cursor_x + 10*opp_cursor_y)<=MISS;
 				end if;

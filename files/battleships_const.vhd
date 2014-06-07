@@ -2,11 +2,6 @@ library IEEE;
 use IEEE.std_logic_1164.all;
 --Additional standard or custom libraries go here
 package battleships_const is
-constant T_SIZE : integer := 30;
-constant C_LENGTH : integer := 20;
-constant C_WIDTH : integer := 14;
-constant B_WIDTH : integer := 5;
-constant BULLET_TRAVEL : integer := 8; --must be <= T_SIZE
 
 constant SQUARE_SIZE : integer := 9;
 constant HIT		: integer := 2;
